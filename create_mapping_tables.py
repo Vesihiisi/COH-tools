@@ -46,21 +46,25 @@ def saveToFile(filename, content):
         out.write(content)
         print("Saved file: {}".format(filename))
 
+
 def addToFile(filename, content):
     with open(filename, "a") as out:
         out.write(content + "\n")
 
+
 def addTablenameToList(tablename, filename):
     tablenameArr = tablename.split("_")[1:]
     tablenameShort = "_".join(tablenameArr)
-    template = "* [[Wikidata:WikiProject_WLM/Mapping_tables/{}|{}]]".format(tablenameShort, tablenameShort)
+    template = "* [[Wikidata:WikiProject_WLM/Mapping_tables/{}|{}]]".format(
+        tablenameShort, tablenameShort)
     addToFile(filename, template)
     print("Added table to list: {}".format(tablenameShort))
+
 
 def getExampleValueFromColumn(connection, column, table):
     cursor = connection.cursor()
     query = "SELECT `" + column + "` FROM `" + \
-                        table + "` WHERE trim(`" + column + "`) > ''"
+        table + "` WHERE trim(`" + column + "`) > ''"
     cursor.execute(query)
     result = cursor.fetchall()
     try:
@@ -72,6 +76,7 @@ def getExampleValueFromColumn(connection, column, table):
     return content
 
 TABLE_NAMES = "_tablenames.txt"
+
 
 def main(arguments):
     connection = pymysql.connect(
@@ -90,7 +95,8 @@ def main(arguments):
                 headerList = getTableHeaders(connection, tablename)
                 headersWithContent = []
                 for header in headerList:
-                    content = getExampleValueFromColumn(connection, header, tablename)
+                    content = getExampleValueFromColumn(
+                        connection, header, tablename)
                     headersWithContent.append((header, content))
                 wikiTable = tableHeadersToWikitable(headersWithContent)
                 saveToFile("{}.txt".format(tablename), wikiTable)
