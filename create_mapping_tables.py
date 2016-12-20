@@ -69,8 +69,9 @@ def getExampleValueFromColumn(connection, column, table):
     result = cursor.fetchall()
     try:
         content = result[1][0]
-        if isinstance(content, str) and "[[" in content:
-            content = "<nowiki>" + content + "</nowiki>"
+        if isinstance(content, str):
+            if "[" in content or "{{" in content:
+                content = "<nowiki>" + content + "</nowiki>"
     except IndexError:
         content = ""
     return content
