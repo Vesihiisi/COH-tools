@@ -78,7 +78,8 @@ def main(arguments):
         host=arguments.host,
         user=arguments.user,
         password=arguments.password,
-        db=arguments.db)
+        db=arguments.db,
+        charset="utf8")
     allTables = showTables(connection)
     open(TABLE_NAMES, 'w').close()
     for table in allTables:
