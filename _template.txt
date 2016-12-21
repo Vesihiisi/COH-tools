@@ -1,0 +1,191 @@
+== Step 1. Implicit values == 
+{| class="wikitable" 
+|+Implicit data
+|'''required'''
+|'''field name'''
+|'''value'''
+|'''Wikidata property'''
+|'''comment'''
+|-
+|Y
+|heritage status
+|
+|{{P|P1435}}
+|
+|-
+|Y
+|country
+|
+|
+|
+|-
+|Y
+|wikiproject
+|
+| 
+|used for getting wikidata items from wikilinks
+|-
+|Y
+|is a(n)
+|
+|Can be either {{Q|Q1497375}} or a subclass of {{Q|Q811979}}?
+|
+|}
+
+== Step 2. analyze and map specific data ==
+=== Step 2.1 monuments_all - harmonized data for all countries ===
+{| class="wikitable"
+! required
+! heritage field
+! example value
+! Wikidata property
+! Conversion
+! comment
+|-
+|
+| country
+| 
+|
+| 
+| 
+|-
+|
+| lang
+| 
+|
+| 
+| 
+|-
+| Y
+| id
+| 
+| 
+| 
+| 
+|-
+|
+| project
+| 
+| 
+| 
+| 
+|-
+|
+| adm0
+| 
+|
+| 
+| 
+|-
+|
+| adm1
+| 
+| 
+| 
+| 
+|-
+| Y?
+| adm2
+| 
+|
+| 
+| 
+|-
+|
+| adm3
+| 
+| 
+| 
+| 
+|-
+|
+| adm4
+| 
+| 
+| 
+| 
+|-
+| Y
+| name
+| 
+| 
+| 
+| 
+|-
+| Y
+| adress
+| 
+| 
+| 
+| 
+|-
+| 
+| municipality
+| 
+|
+| 
+| 
+|-
+| Y
+| lat
+| 
+| {{P|P625}}
+| 
+| Combines the value of both lat and lon
+|-
+| Y
+| lon
+| 
+| see lat
+| 
+| see lat
+|-
+|
+| image
+| 
+| {{P|P18}}
+| 
+| 
+|-
+|
+| commonscat
+| 
+| {{P|P373}}
+| 
+| 
+|-
+|
+| source
+| 
+| 
+| 
+| 
+|-
+|
+| monument_article
+| 
+| 
+| 
+| 
+|-
+|
+| registrant_url
+| 
+| 
+| 
+| 
+|-
+|
+| changed
+|
+| see comment
+| 
+| if statements are sourced then this might be useful to store
+|}
+
+=== Step 2.2. country-specific data – %s ===
+
+%s
+
+
+[[Category:WLM Wikidata mapping]]
