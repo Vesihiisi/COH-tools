@@ -12,23 +12,21 @@ OUTPUT_FILE = "status.txt"
 
 def createPage(connection):
     tables = wlmhelpers.getNonEmptyCountryTables(connection)
-    tableTop = "{| class='wikitable sortable'\n"
-    tableBottom = "|}\n"
+    tableTop = "{{Wikidata:WikiProject WLM/Mapping tables/Template:Status-head}}\n"
     tableContent = ""
-    for header in tableHeaders:
-        tableTop += "! {}\n".format(header)
     for table in tables:
-        tableContent += "|- \n"
+        tableContent += "{{Wikidata:WikiProject WLM/Mapping tables/Template:Status\n"
         for header in tableHeaders:
             if header == "dataset":
                 shortName = wlmhelpers.shortenTablename(table[0])
-                tableContent += "| [[Wikidata:WikiProject_WLM/Mapping_tables/{}|{}]]\n".format(
-                    shortName, shortName)
+                tableContent += "| {} = [[Wikidata:WikiProject_WLM/Mapping_tables/{}|{}]]\n".format(
+                    header, shortName, shortName)
             elif header == "rows":
-                tableContent += "| {}\n".format(table[1])
+                tableContent += "| {} = {}\n".format(header, table[1])
             else:
-                tableContent += "| \n"
-    wholeTable = tableTop + tableContent + tableBottom
+                tableContent += "| {} = \n".format(header)
+        tableContent += "}}\n"
+    wholeTable = tableTop + tableContent
     wlmhelpers.saveToFile(OUTPUT_FILE, wholeTable)
 
 
