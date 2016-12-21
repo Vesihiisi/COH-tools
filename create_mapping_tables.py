@@ -52,9 +52,17 @@ def addToFile(filename, content):
         out.write(content + "\n")
 
 
-def addTablenameToList(tablename, filename):
+def fileToString(filename):
+    return open(filename, 'r').read()
+
+
+def shortenTablename(tablename):
     tablenameArr = tablename.split("_")[1:]
-    tablenameShort = "_".join(tablenameArr)
+    return "_".join(tablenameArr)
+
+
+def addTablenameToList(tablename, filename):
+    tablenameShort = shortenTablename(tablename)
     template = "* [[Wikidata:WikiProject_WLM/Mapping_tables/{}|{}]]".format(
         tablenameShort, tablenameShort)
     addToFile(filename, template)
@@ -76,7 +84,13 @@ def getExampleValueFromColumn(connection, column, table):
         content = ""
     return content
 
+
+def insertWikitableIntoTemplate(tabletitle, wikitable, templateFile):
+    template = fileToString(templateFile)
+    return template % (tabletitle, wikitable)
+
 TABLE_NAMES = "_tablenames.txt"
+TEMPLATE = "_template.txt"
 
 
 def main(arguments):
@@ -100,7 +114,9 @@ def main(arguments):
                         connection, header, tablename)
                     headersWithContent.append((header, content))
                 wikiTable = tableHeadersToWikitable(headersWithContent)
-                saveToFile("{}.txt".format(tablename), wikiTable)
+                wikiPage = insertWikitableIntoTemplate(
+                    shortenTablename(tablename), wikiTable, TEMPLATE)
+                saveToFile("{}.txt".format(tablename), wikiPage)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
