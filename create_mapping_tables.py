@@ -71,17 +71,8 @@ def insertWikitableIntoTemplate(tabletitle, wikitable, templateFile):
     template = fileToString(templateFile)
     return template % (tabletitle, wikitable)
 
-TABLE_NAMES = "_tablenames.txt"
-TEMPLATE = "_template.txt"
 
-
-def main(arguments):
-    connection = pymysql.connect(
-        host=arguments.host,
-        user=arguments.user,
-        password=arguments.password,
-        db=arguments.db,
-        charset="utf8")
+def createTables(connection):
     open(TABLE_NAMES, 'w').close()
     countryTables = wlmhelpers.getNonEmptyCountryTables(connection)
     for tablename in countryTables:
@@ -96,6 +87,19 @@ def main(arguments):
         wikiPage = insertWikitableIntoTemplate(
             shortenTablename(tablename), wikiTable, TEMPLATE)
         saveToFile("{}.txt".format(tablename), wikiPage)
+
+TABLE_NAMES = "_tablenames.txt"
+TEMPLATE = "_template.txt"
+
+
+def main(arguments):
+    connection = pymysql.connect(
+        host=arguments.host,
+        user=arguments.user,
+        password=arguments.password,
+        db=arguments.db,
+        charset="utf8")
+    createTables(connection)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
