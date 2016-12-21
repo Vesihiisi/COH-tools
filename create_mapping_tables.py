@@ -1,24 +1,6 @@
 import pymysql
 import argparse
-
-
-def showTables(connection):
-    cursor = connection.cursor()
-    cursor.execute("show tables")
-    return cursor.fetchall()
-
-
-def getNumberOfRows(connection, tablename):
-    cursor = connection.cursor()
-    query = "SELECT COUNT(*) FROM `" + tablename + "`"
-    cursor.execute(query)
-    result = cursor.fetchone()
-    return result[0]
-
-
-def tableIsEmpty(connection, tablename):
-    numberOfRows = getNumberOfRows(connection, tablename)
-    return numberOfRows == 0
+import wlmhelpers
 
 
 def getTableHeaders(connection, tablename):
@@ -100,23 +82,20 @@ def main(arguments):
         password=arguments.password,
         db=arguments.db,
         charset="utf8")
-    allTables = showTables(connection)
     open(TABLE_NAMES, 'w').close()
-    for table in allTables:
-        tablename = table[0]
-        if tablename.startswith("monuments_") and tablename != "monuments_all":
-            if tableIsEmpty(connection, tablename) == False:
-                addTablenameToList(tablename, TABLE_NAMES)
-                headerList = getTableHeaders(connection, tablename)
-                headersWithContent = []
-                for header in headerList:
-                    content = getExampleValueFromColumn(
-                        connection, header, tablename)
-                    headersWithContent.append((header, content))
-                wikiTable = tableHeadersToWikitable(headersWithContent)
-                wikiPage = insertWikitableIntoTemplate(
-                    shortenTablename(tablename), wikiTable, TEMPLATE)
-                saveToFile("{}.txt".format(tablename), wikiPage)
+    countryTables = wlmhelpers.getNonEmptyCountryTables(connection)
+    for tablename in countryTables:
+        addTablenameToList(tablename, TABLE_NAMES)
+        headerList = getTableHeaders(connection, tablename)
+        headersWithContent = []
+        for header in headerList:
+            content = getExampleValueFromColumn(
+                connection, header, tablename)
+            headersWithContent.append((header, content))
+        wikiTable = tableHeadersToWikitable(headersWithContent)
+        wikiPage = insertWikitableIntoTemplate(
+            shortenTablename(tablename), wikiTable, TEMPLATE)
+        saveToFile("{}.txt".format(tablename), wikiPage)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
