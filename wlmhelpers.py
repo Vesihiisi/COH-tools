@@ -27,5 +27,12 @@ def getNonEmptyCountryTables(connection):
         tablename = table[0]
         if tablename.startswith("monuments_") and tablename != "monuments_all":
             if tableIsEmpty(connection, tablename) == False:
-                countryTables.append(tablename)
+                countryTables.append((tablename, getNumberOfRows(connection, tablename)))
     return countryTables
+
+
+def getRowStats():
+    tables = getNonEmptyCountryTables(connection)
+    for tablename in tables:
+        rows = getNumberOfRows(connection, tablename)
+        print(tablename, rows)

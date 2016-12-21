@@ -76,6 +76,7 @@ def createTables(connection):
     open(TABLE_NAMES, 'w').close()
     countryTables = wlmhelpers.getNonEmptyCountryTables(connection)
     for tablename in countryTables:
+        tablename = tablename[0]
         addTablenameToList(tablename, TABLE_NAMES)
         headerList = getTableHeaders(connection, tablename)
         headersWithContent = []
