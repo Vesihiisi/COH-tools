@@ -23,12 +23,6 @@ def tableHeadersToWikitable(headersWithContentTuple):
     return wikitableTop + wikitext + wikitableBottom
 
 
-def saveToFile(filename, content):
-    with open(filename, "w") as out:
-        out.write(content)
-        print("Saved file: {}".format(filename))
-
-
 def addToFile(filename, content):
     with open(filename, "a") as out:
         out.write(content + "\n")
@@ -82,7 +76,7 @@ def createTables(connection):
         wikiTable = tableHeadersToWikitable(headersWithContent)
         wikiPage = insertWikitableIntoTemplate(
             wlmhelpers.shortenTablename(tablename), wikiTable, TEMPLATE)
-        saveToFile("{}.txt".format(tablename), wikiPage)
+        wlmhelpers.saveToFile("{}.txt".format(tablename), wikiPage)
 
 TABLE_NAMES = "_tablenames.txt"
 TEMPLATE = "_template.txt"
