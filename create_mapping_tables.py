@@ -38,13 +38,8 @@ def fileToString(filename):
     return open(filename, 'r').read()
 
 
-def shortenTablename(tablename):
-    tablenameArr = tablename.split("_")[1:]
-    return "_".join(tablenameArr)
-
-
 def addTablenameToList(tablename, filename):
-    tablenameShort = shortenTablename(tablename)
+    tablenameShort = wlmhelpers.shortenTablename(tablename)
     template = "* [[Wikidata:WikiProject_WLM/Mapping_tables/{}|{}]]".format(
         tablenameShort, tablenameShort)
     addToFile(filename, template)
@@ -86,7 +81,7 @@ def createTables(connection):
             headersWithContent.append((header, content))
         wikiTable = tableHeadersToWikitable(headersWithContent)
         wikiPage = insertWikitableIntoTemplate(
-            shortenTablename(tablename), wikiTable, TEMPLATE)
+            wlmhelpers.shortenTablename(tablename), wikiTable, TEMPLATE)
         saveToFile("{}.txt".format(tablename), wikiPage)
 
 TABLE_NAMES = "_tablenames.txt"

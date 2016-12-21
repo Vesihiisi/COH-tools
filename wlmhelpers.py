@@ -36,3 +36,7 @@ def getRowStats():
     for tablename in tables:
         rows = getNumberOfRows(connection, tablename)
         print(tablename, rows)
+
+def shortenTablename(tablename):
+    tablenameArr = tablename.split("_")[1:]
+    return "_".join(tablenameArr)
