@@ -1,6 +1,13 @@
 import pymysql
 
 
+def selectQuery(query, connection):
+    cursor = connection.cursor()
+    cursor.execute(query)
+    result = cursor.fetchall()
+    return result
+
+
 def getNumberOfRows(connection, tablename):
     cursor = connection.cursor()
     query = "SELECT COUNT(*) FROM `" + tablename + "`"
@@ -48,3 +55,7 @@ def saveToFile(filename, content):
     with open(filename, "w") as out:
         out.write(content)
         print("Saved file: {}".format(filename))
+
+
+def getLanguage(tablename):
+    return tablename.split('(', 1)[1].split(')')[0]
