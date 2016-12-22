@@ -19,8 +19,8 @@ def main(args):
     site = pwb.Site("wikidata", "wikidata")
     rawText = pwb.Page(site, BASE_URL + tablename).get()
     parsed = mwp.parse(rawText)
-    table = parsed.get(0)
-    rows = table.contents.filter(recursive=False, matches=filter_tr)
+    table = parsed.filter_tags(matches=lambda node: node.tag == "table")
+    rows = table[0].contents.filter(recursive=False, matches=filter_tr)
     for row in rows:
         cells = row.contents.filter(recursive=False, matches=filter_td)
         parsedWdItems = mwp.parse(cells[2].contents).filter_templates()
