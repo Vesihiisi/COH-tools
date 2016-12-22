@@ -28,7 +28,9 @@ def main(args):
             dictKey = cells[0].contents.title().strip()
             for index, item in enumerate(parsedWdItems):
                 parsedWdItems[index] = item.params[0].title()
-            lookupDict[dictKey] = parsedWdItems
+            lookupDict[dictKey] = {}
+            lookupDict[dictKey]["items"] = parsedWdItems
+            lookupDict[dictKey]["count"] = cells[1].contents.title().strip()
     with open('result.json', 'w') as fp:
         json.dump(lookupDict, fp, indent=4, ensure_ascii=False)
 
