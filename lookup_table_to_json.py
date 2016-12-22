@@ -30,7 +30,7 @@ def main(args):
                 parsedWdItems[index] = item.params[0].title()
             lookupDict[dictKey] = parsedWdItems
     with open('result.json', 'w') as fp:
-        json.dump(lookupDict, fp, indent=4)
+        json.dump(lookupDict, fp, indent=4, ensure_ascii=False)
 
 
 if __name__ == "__main__":
