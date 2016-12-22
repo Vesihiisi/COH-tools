@@ -1,5 +1,5 @@
 import pymysql
-
+import json
 
 def selectQuery(query, connection):
     cursor = connection.cursor()
@@ -55,6 +55,11 @@ def saveToFile(filename, content):
     with open(filename, "w") as out:
         out.write(content)
         print("Saved file: {}".format(filename))
+
+
+def saveToJson(filename, content):
+    with open(filename, 'w') as fp:
+        json.dump(content, fp, indent=4, ensure_ascii=False)
 
 
 def getLanguage(tablename):

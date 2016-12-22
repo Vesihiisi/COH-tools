@@ -2,6 +2,7 @@ import argparse
 import pywikibot as pwb
 import mwparserfromhell as mwp
 import json
+import wlmhelpers
 
 BASE_URL = "Wikidata:WikiProject WLM/Mapping tables/"
 
@@ -15,8 +16,8 @@ def filter_td(node):
 
 
 def createFilename(tablename):
-    tablename = tablename.replace (" ", "_")
-    tablename = tablename.replace ("/", "_")
+    tablename = tablename.replace(" ", "_")
+    tablename = tablename.replace("/", "_")
     return "{}.json".format(tablename)
 
 
@@ -41,8 +42,7 @@ def main(args):
             lookupDict[dictKey] = {}
             lookupDict[dictKey]["items"] = parsedWdItems
             lookupDict[dictKey]["count"] = cells[1].contents.title().strip()
-    with open(createFilename(tablename), 'w') as fp:
-        json.dump(lookupDict, fp, indent=4, ensure_ascii=False)
+    wlmhelpers.saveToJson(createFilename(tablename), lookupDict)
 
 
 if __name__ == "__main__":
