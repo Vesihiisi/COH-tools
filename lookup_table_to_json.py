@@ -9,8 +9,15 @@ BASE_URL = "Wikidata:WikiProject WLM/Mapping tables/"
 def filter_tr(node):
     return isinstance(node, mwp.nodes.tag.Tag) and node.tag == 'tr'
 
+
 def filter_td(node):
     return isinstance(node, mwp.nodes.tag.Tag) and node.tag == 'td'
+
+
+def createFilename(tablename):
+    tablename = tablename.replace (" ", "_")
+    tablename = tablename.replace ("/", "_")
+    return "{}.json".format(tablename)
 
 
 def main(args):
@@ -34,7 +41,7 @@ def main(args):
             lookupDict[dictKey] = {}
             lookupDict[dictKey]["items"] = parsedWdItems
             lookupDict[dictKey]["count"] = cells[1].contents.title().strip()
-    with open('result.json', 'w') as fp:
+    with open(createFilename(tablename), 'w') as fp:
         json.dump(lookupDict, fp, indent=4, ensure_ascii=False)
 
 
