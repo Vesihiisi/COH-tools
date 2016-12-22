@@ -27,7 +27,10 @@ def main(args):
         if len(parsedWdItems) > 0:
             dictKey = cells[0].contents.title().strip()
             for index, item in enumerate(parsedWdItems):
-                parsedWdItems[index] = item.params[0].title()
+                itemID = item.params[0].title()
+                if itemID[0] != "Q":
+                    itemID = "Q" + itemID
+                parsedWdItems[index] = itemID
             lookupDict[dictKey] = {}
             lookupDict[dictKey]["items"] = parsedWdItems
             lookupDict[dictKey]["count"] = cells[1].contents.title().strip()
