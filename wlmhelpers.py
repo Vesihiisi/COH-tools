@@ -60,6 +60,7 @@ def saveToFile(filename, content):
 def saveToJson(filename, content):
     with open(filename, 'w') as fp:
         json.dump(content, fp, indent=4, ensure_ascii=False)
+        print("Saved file: {}".format(filename))
 
 
 def getLanguage(tablename):
