@@ -16,8 +16,7 @@ def filter_td(node):
 
 
 def createFilename(tablename):
-    tablename = tablename.replace(" ", "_")
-    tablename = tablename.replace("/", "_")
+    tablename = tablename.replace(" ", "_").replace("/", "_")
     return "{}.json".format(tablename)
 
 
