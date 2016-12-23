@@ -22,10 +22,14 @@ def createFilename(tablename):
 
 def main(args):
     lookupDict = {}
+    lookupDict["mappings"] = {}
     tablename = args.name
     site = pwb.Site("wikidata", "wikidata")
-    rawText = pwb.Page(site, BASE_URL + tablename).get()
-    parsed = mwp.parse(rawText)
+    page = pwb.Page(site, BASE_URL + tablename)
+    timestamp = page.editTime().isoformat()
+    permalink = page.permalink()
+    parsed = mwp.parse(page.get())
+    lookupDict["@meta"] = {'permalink': permalink, 'timestamp': timestamp}
     table = parsed.filter_tags(matches=lambda node: node.tag == "table")
     rows = table[0].contents.filter(recursive=False, matches=filter_tr)
     for row in rows:
@@ -38,9 +42,7 @@ def main(args):
                 if itemID[0] != "Q":
                     itemID = "Q" + itemID
                 parsedWdItems[index] = itemID
-            lookupDict[dictKey] = {}
-            lookupDict[dictKey]["items"] = parsedWdItems
-            lookupDict[dictKey]["count"] = cells[1].contents.title().strip()
+            lookupDict["mappings"][dictKey] = {"items" : parsedWdItems, "count" : cells[1].contents.title().strip()}
     wlmhelpers.saveToJson(createFilename(tablename), lookupDict)
 
 
