@@ -26,7 +26,8 @@ def get_specific_table_name(countryname, languagename):
 
 
 def load_mapping_file(countryname, languagename):
-    filename = path.relpath(MAPPING_DIR + "{}_({}).json".format(countryname, languagename))
+    filename = path.relpath(
+        MAPPING_DIR + "{}_({}).json".format(countryname, languagename))
     try:
         with open(filename) as f:
             data = json.load(f)
@@ -35,13 +36,16 @@ def load_mapping_file(countryname, languagename):
         print("File {} does not exist.".format(filename))
 
 
-def main(arguments):
-    db = sqlalchemy.create_engine('mysql://{}:{}@{}/{}?charset=utf8'.format(
+def create_database(arguments):
+    return sqlalchemy.create_engine('mysql://{}:{}@{}/{}?charset=utf8'.format(
         arguments.user,
         arguments.password,
         arguments.host,
         arguments.db), encoding='utf8')
-    db.echo = False
+
+
+def main(arguments):
+    db = create_database(arguments)
     try:
         metadata = sqlalchemy.MetaData(db)
         all_monuments = sqlalchemy.Table(
