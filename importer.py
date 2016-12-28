@@ -10,16 +10,15 @@ def run(stmt):
     return stmt.execute()
 
 
-
 def get_monuments_in_country(countryname, languagename, all_monuments):
     return run(all_monuments.select(sqlalchemy.and_(
         all_monuments.c.country == countryname,
         all_monuments.c.lang == languagename)
     ))
 
+
 def get_specific_table_name(countryname, languagename):
     return "monuments_{}_({})".format(countryname, languagename)
-
 
 
 def main(arguments):
@@ -31,13 +30,14 @@ def main(arguments):
     db.echo = False
     try:
         metadata = sqlalchemy.MetaData(db)
-        all_monuments = sqlalchemy.Table("monuments_all", metadata, autoload=True)
-        associated_table = get_specific_table_name(arguments.country, arguments.language)
+        all_monuments = sqlalchemy.Table(
+            "monuments_all", metadata, autoload=True)
+        associated_table = get_specific_table_name(
+            arguments.country, arguments.language)
         monuments_country = get_monuments_in_country(
             arguments.country, arguments.language, all_monuments)
         for x in monuments_country:
             print(x.id, x.name)
-
 
     except sqlalchemy.exc.SQLAlchemyError as exc:
         print("{} does not exist.".format(arguments.table))
