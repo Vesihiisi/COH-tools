@@ -12,18 +12,37 @@ def get_specific_table_name(countryname, languagename):
     return "monuments_{}_({})".format(countryname, languagename)
 
 
-def load_mapping_file(countryname, languagename):
-    filename = path.relpath(
-        MAPPING_DIR + "{}_({}).json".format(countryname, languagename))
-    try:
-        with open(filename) as f:
-            try:
-                data = json.load(f)
-                return data
-            except ValueError:
-                print("Failed to decode file {}.".format(filename))
-    except OSError as e:
-        print("File {} does not exist.".format(filename))
+class Mapping(object):
+
+    def join_id(self):
+        return self.file_content["_id"]
+
+    def load_mapping_file(self, countryname, languagename):
+        filename = path.relpath(
+            MAPPING_DIR + "{}_({}).json".format(countryname, languagename))
+        try:
+            with open(filename) as f:
+                try:
+                    data = json.load(f)
+                    return data
+                except ValueError:
+                    print("Failed to decode file {}.".format(filename))
+        except OSError as e:
+            print("File {} does not exist.".format(filename))
+
+    def __init__(self, countryname, languagename):
+        self.file_content = self.load_mapping_file(countryname, languagename)
+
+
+class Monument(object):
+
+    def __init__(self, db_row_dict):
+        for k, v in db_row_dict.items():
+            if not k.startswith("m_spec."):
+                setattr(self, k, v)
+
+    def get_fields(self):
+        return sorted(list(self.__dict__.keys()))
 
 
 def make_query(country, language, specific_table, join_id):
@@ -42,13 +61,16 @@ def main(arguments):
         charset="utf8")
     country = arguments.country
     language = arguments.language
-    mapping_file = load_mapping_file(country, language)
+    mapping = Mapping(country, language)
     query = make_query(country,
                        language,
                        get_specific_table_name(country, language),
-                       mapping_file["_id"])
+                       mapping.join_id())
     results = wlmhelpers.selectQuery(query, connection)
-    print("Fetched {} items from {}".format(len(results), get_specific_table_name(country, language)))
+    print("Fetched {} items from {}".format(
+        len(results), get_specific_table_name(country, language)))
+    for n, i in enumerate(results):
+        results[n] = Monument(i)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
