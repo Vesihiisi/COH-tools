@@ -52,25 +52,35 @@ def make_query(country, language, specific_table, join_id):
             ).format(MONUMENTS_ALL, specific_table, join_id, country, language)
 
 
-def main(arguments):
-    connection = pymysql.connect(
+def create_connection(arguments):
+    return pymysql.connect(
         host=arguments.host,
         user=arguments.user,
         password=arguments.password,
         db=arguments.db,
         charset="utf8")
-    country = arguments.country
-    language = arguments.language
+
+
+def get_items(connection, country, language):
     mapping = Mapping(country, language)
     query = make_query(country,
                        language,
                        get_specific_table_name(country, language),
                        mapping.join_id())
-    results = wlmhelpers.selectQuery(query, connection)
+    results = []
+    for n, i in enumerate(wlmhelpers.selectQuery(query, connection)):
+        results.append(Monument(i))
+    return results
+
+
+def main(arguments):
+    connection = create_connection(arguments)
+    country = arguments.country
+    language = arguments.language
+    results = get_items(connection, country, language)
     print("Fetched {} items from {}".format(
         len(results), get_specific_table_name(country, language)))
-    for n, i in enumerate(results):
-        results[n] = Monument(i)
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
