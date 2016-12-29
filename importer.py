@@ -8,6 +8,7 @@ from os import path
 Base = declarative_base()
 
 MAPPING_DIR = "mappings/"
+MONUMENTS_ALL = "monuments_all"
 
 
 def run(stmt):
@@ -48,12 +49,16 @@ def table_exists(engine, tablename):
     return engine.dialect.has_table(engine, tablename)
 
 
+def get_table_autoload(metadata, tablename):
+    return sqlalchemy.Table(
+        tablename, metadata, autoload=True)
+
+
 def main(arguments):
     db = create_database(arguments)
     try:
         metadata = sqlalchemy.MetaData(db)
-        all_monuments = sqlalchemy.Table(
-            "monuments_all", metadata, autoload=True)
+        all_monuments = get_table_autoload(metadata, MONUMENTS_ALL)
         associated_table = get_specific_table_name(
             arguments.country, arguments.language)
         if not table_exists(db, associated_table):
