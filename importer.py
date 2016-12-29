@@ -3,6 +3,9 @@ import pymysql
 import json
 from os import path
 import wlmhelpers
+import wikidataStuff
+import wikidataStuff.helpers as helpers
+from wikidataStuff.WikidataStuff import WikidataStuff as WD
 
 MAPPING_DIR = "mappings/"
 MONUMENTS_ALL = "monuments_all"
@@ -77,9 +80,9 @@ def main(arguments):
     connection = create_connection(arguments)
     country = arguments.country
     language = arguments.language
-    results = get_items(connection, country, language)
-    print("Fetched {} items from {}".format(
-        len(results), get_specific_table_name(country, language)))
+    #results = get_items(connection, country, language)
+    #print("Fetched {} items from {}".format(
+    #    len(results), get_specific_table_name(country, language)))
 
 
 if __name__ == "__main__":
