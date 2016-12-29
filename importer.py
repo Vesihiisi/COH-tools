@@ -1,7 +1,6 @@
 import argparse
 import sqlalchemy
 from sqlalchemy.ext.declarative import declarative_base
-import wlmhelpers
 import json
 from os import path
 
@@ -76,7 +75,6 @@ if __name__ == "__main__":
     parser.add_argument("--user", default="root")
     parser.add_argument("--password", default="")
     parser.add_argument("--db", default="wlm")
-    parser.add_argument("--table")
     parser.add_argument("--language", default="sv")
     parser.add_argument("--country", default="se-ship")
     args = parser.parse_args()
