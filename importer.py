@@ -44,6 +44,10 @@ def create_database(arguments):
         arguments.db), encoding='utf8')
 
 
+def table_exists(engine, tablename):
+    return engine.dialect.has_table(engine, tablename)
+
+
 def main(arguments):
     db = create_database(arguments)
     try:
@@ -52,9 +56,11 @@ def main(arguments):
             "monuments_all", metadata, autoload=True)
         associated_table = get_specific_table_name(
             arguments.country, arguments.language)
+        if not table_exists(db, associated_table):
+            print("Table {} does not exist.".format(associated_table))
         monuments_country = get_monuments_in_country(
             arguments.country, arguments.language, all_monuments)
-        mapping_file = load_mapping_file(arguments.country, arguments.language)
+        #mapping_file = load_mapping_file(arguments.country, arguments.language)
 
     except sqlalchemy.exc.SQLAlchemyError as exc:
         print("{} does not exist.".format(arguments.table))
