@@ -31,8 +31,11 @@ def load_mapping_file(countryname, languagename):
         MAPPING_DIR + "{}_({}).json".format(countryname, languagename))
     try:
         with open(filename) as f:
-            data = json.load(f)
-        return data
+            try:
+                data = json.load(f)
+                return data
+            except ValueError:
+                print("Failed to decode file {}.".format(filename))
     except OSError as e:
         print("File {} does not exist.".format(filename))
 
@@ -56,19 +59,16 @@ def get_table_autoload(metadata, tablename):
 
 def main(arguments):
     db = create_database(arguments)
-    try:
-        metadata = sqlalchemy.MetaData(db)
-        all_monuments = get_table_autoload(metadata, MONUMENTS_ALL)
-        associated_table = get_specific_table_name(
-            arguments.country, arguments.language)
-        if not table_exists(db, associated_table):
-            print("Table {} does not exist.".format(associated_table))
+    metadata = sqlalchemy.MetaData(db)
+    all_monuments = get_table_autoload(metadata, MONUMENTS_ALL)
+    associated_table = get_specific_table_name(
+        arguments.country, arguments.language)
+    if not table_exists(db, associated_table):
+        print("Table {} does not exist.".format(associated_table))
+    else:
         monuments_country = get_monuments_in_country(
             arguments.country, arguments.language, all_monuments)
-        #mapping_file = load_mapping_file(arguments.country, arguments.language)
-
-    except sqlalchemy.exc.SQLAlchemyError as exc:
-        print("{} does not exist.".format(arguments.table))
+        mapping_file = load_mapping_file(arguments.country, arguments.language)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
