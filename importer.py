@@ -62,15 +62,19 @@ def main(arguments):
     language = arguments.language
     metadata = sqlalchemy.MetaData(db)
     all_monuments = get_table_autoload(metadata, MONUMENTS_ALL)
-    associated_table = get_specific_table_name(
+    associated_table_name = get_specific_table_name(
         country, language)
-    if not table_exists(db, associated_table):
-        print("Table {} does not exist.".format(associated_table))
+    if not table_exists(db, associated_table_name):
+        print("Table {} does not exist.".format(associated_table_name))
     else:
         monuments_country = get_monuments_in_country(
             country, language, all_monuments)
-        print("Fetched {} entries for {}_({}).".format(
+        print("Fetched {} entries from monuments_all for {}_({}).".format(
             len(monuments_country), country, language))
+        associated_table = get_table_autoload(metadata, associated_table_name)
+        monuments_specific = run(associated_table.select()).fetchall()
+        print("Fetched {} entries from {}).".format(
+            len(monuments_specific), associated_table_name))
         mapping_file = load_mapping_file(country, language)
 
 if __name__ == "__main__":
