@@ -1,11 +1,20 @@
 import pymysql
 import json
 
+
 def selectQuery(query, connection):
-    cursor = connection.cursor()
+    cursor = connection.cursor(pymysql.cursors.DictCursor)
     cursor.execute(query)
     result = cursor.fetchall()
     return result
+
+
+def tableExists(connection, tablename):
+    try:
+        if tableIsEmpty(connection, tablename) == False:
+            return True
+    except pymysql.ProgrammingError as e:
+        return False
 
 
 def getNumberOfRows(connection, tablename):
