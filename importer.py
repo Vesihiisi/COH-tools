@@ -66,14 +66,18 @@ def create_connection(arguments):
 
 
 def get_items(connection, country, language):
+    specific_table_name = get_specific_table_name(country, language)
+    if not wlmhelpers.tableExists(connection, specific_table_name):
+        print("Table does not exist.")
+        return
     mapping = Mapping(country, language)
     query = make_query(country,
                        language,
-                       get_specific_table_name(country, language),
+                       specific_table_name,
                        mapping.join_id())
-    results = []
-    for n, i in enumerate(wlmhelpers.selectQuery(query, connection)):
-        results.append(Monument(i))
+    results = [Monument(table_row) for table_row in wlmhelpers.selectQuery(query, connection)]
+    print("Fetched {} items from {}".format(
+        len(results), get_specific_table_name(country, language)))
     return results
 
 
@@ -82,8 +86,6 @@ def main(arguments):
     country = arguments.country
     language = arguments.language
     results = get_items(connection, country, language)
-    print("Fetched {} items from {}".format(
-        len(results), get_specific_table_name(country, language)))
 
 
 if __name__ == "__main__":
