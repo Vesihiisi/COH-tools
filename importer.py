@@ -85,7 +85,13 @@ class Monument(object):
             if page.exists():
                 if page.isRedirectPage():
                     page = page.getRedirectTarget()
-                item = pywikibot.ItemPage.fromPage(page)
+                try:
+                    item = pywikibot.ItemPage.fromPage(page)
+                except pywikibot.NoPage:
+                    print("Failed to get page for {} - {}."
+                        "It probably does not exist.".format(
+                        self.lang, self.monument_article))
+                    return
                 self.wd_item["_itemID"] = item.getID()
 
     def construct_wd_item(self, mapping):
@@ -114,16 +120,32 @@ class SeFornminSv(Monument):
     def update_labels(self):
         if len(self.namn) == 0:
             self.wd_item["label"]["sv"] = self.raa_nr
-        print(self.wd_item)
-        print("---")
+
+    def set_raa(self):
+        self.wd_item["raa-nr"] = {PROPS["raa-nr"]: [self.raa_nr]}
+
+    def set_adm_location(self):
+        municip_dict = wlmhelpers.load_json(
+            MAPPING_DIR + "sweden_municipalities_en.json")
+        pattern = self.adm2.lower() + " municipality"
+        try:
+            municipality = [x["municipality"] for x in municip_dict if x[
+                "municipality"].lower() == pattern][0]
+            ## TODO: Check if target item is valid municipality ##
+            self.wd_item["located_adm"] = {
+                PROPS["located_adm"]: [municipality]}
+        except IndexError:
+            print("Could not parse municipality: {}.".format(self.adm2))
+            return
 
     def update_wd_item(self):
         self.update_labels()
+        self.set_raa()
+        self.set_adm_location()
 
     def __init__(self, db_row_dict, mapping):
         Monument.__init__(self, db_row_dict, mapping)
         self.update_wd_item()
-
 
 
 def make_query(country, language, specific_table, join_id):
