@@ -1,5 +1,9 @@
 {
-    "_id" : "signal",
-    "country" : "Sweden",
-    "wikipedia" : "sv"
+  "_id": "signal",
+  "country": "Sweden",
+  "default_is": {
+    "item": "Q1229765",
+    "name": "watercraft"
+  },
+  "language": "sv"
 }
