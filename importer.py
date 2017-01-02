@@ -9,18 +9,11 @@ import wikidataStuff
 import wikidataStuff.helpers as helpers
 import wlmhelpers
 
-SHORT = 100
+SHORT = 10
 MAPPING_DIR = "mappings/"
 MONUMENTS_ALL = "monuments_all"
 ADM0 = wlmhelpers.load_json(MAPPING_DIR + "adm0.json")
-PROPS = {
-    "coordinates": "P625",
-    "commonscat": "P373",
-    "country": "P17",
-    "heritage_status": "P1435",
-    "image": "P18",
-    "is": "P31"
-}
+PROPS = wlmhelpers.load_json(MAPPING_DIR + "props_general.json")
 
 
 def get_specific_table_name(countryname, languagename):
