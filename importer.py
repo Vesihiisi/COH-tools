@@ -109,12 +109,28 @@ class Monument(object):
     def __init__(self, db_row_dict, mapping):
         for k, v in db_row_dict.items():
             if not k.startswith("m_spec."):
-                setattr(self, k, v)
+                setattr(self, k.replace("-", "_"), v)
         self.construct_wd_item(mapping)
-        print(self.wd_item)
 
     def get_fields(self):
         return sorted(list(self.__dict__.keys()))
+
+
+class SeFornminSv(Monument):
+
+    def update_labels(self):
+        if len(self.namn) == 0:
+            self.wd_item["label"]["sv"] = self.raa_nr
+        print(self.wd_item)
+        print("---")
+
+    def update_wd_item(self):
+        self.update_labels()
+
+    def __init__(self, db_row_dict, mapping):
+        Monument.__init__(self, db_row_dict, mapping)
+        self.update_wd_item()
+
 
 
 def make_query(country, language, specific_table, join_id):
@@ -133,6 +149,9 @@ def create_connection(arguments):
         charset="utf8")
 
 
+SPECIFIC_TABLES = {"monuments_se-fornmin_(sv)": SeFornminSv}
+
+
 def get_items(connection, country, language, short=False):
     specific_table_name = get_specific_table_name(country, language)
     if not wlmhelpers.tableExists(connection, specific_table_name):
@@ -145,8 +164,12 @@ def get_items(connection, country, language, short=False):
                        mapping.join_id())
     if short:
         query += " LIMIT " + str(SHORT)
-    results = [Monument(table_row, mapping)
-               for table_row in wlmhelpers.selectQuery(query, connection)]
+    if specific_table_name in SPECIFIC_TABLES.keys():
+        results = [SPECIFIC_TABLES[specific_table_name](
+            table_row, mapping) for table_row in wlmhelpers.selectQuery(query, connection)]
+    else:
+        results = [Monument(table_row, mapping)
+                   for table_row in wlmhelpers.selectQuery(query, connection)]
     print("Fetched {} items from {}".format(
         len(results), get_specific_table_name(country, language)))
     return results
