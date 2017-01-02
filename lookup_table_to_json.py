@@ -20,12 +20,16 @@ def createFilename(tablename):
     return "{}.json".format(tablename)
 
 
-def main(args):
-    lookupDict = {}
-    lookupDict["mappings"] = {}
-    tablename = args.name
+def fetch_page(tablename):
     site = pwb.Site("wikidata", "wikidata")
     page = pwb.Page(site, BASE_URL + tablename)
+    return page
+
+
+def table_to_json(tablename):
+    lookupDict = {}
+    lookupDict["mappings"] = {}
+    page = fetch_page(tablename)
     timestamp = page.editTime().isoformat()
     permalink = page.permalink()
     parsed = mwp.parse(page.get())
@@ -42,8 +46,14 @@ def main(args):
                 if itemID[0] != "Q":
                     itemID = "Q" + itemID
                 parsedWdItems[index] = itemID
-            lookupDict["mappings"][dictKey] = {"items" : parsedWdItems, "count" : cells[1].contents.title().strip()}
-    wlmhelpers.saveToJson(createFilename(tablename), lookupDict)
+            lookupDict["mappings"][dictKey] = {
+                "items": parsedWdItems,
+                "count": cells[1].contents.title().strip()}
+    return lookupDict
+
+
+def main(args):
+    wlmhelpers.saveToJson(createFilename(args.name), table_to_json(args.name))
 
 
 if __name__ == "__main__":
