@@ -89,8 +89,8 @@ class Monument(object):
                     item = pywikibot.ItemPage.fromPage(page)
                 except pywikibot.NoPage:
                     print("Failed to get page for {} - {}."
-                        "It probably does not exist.".format(
-                        self.lang, self.monument_article))
+                          "It probably does not exist.".format(
+                              self.lang, self.monument_article))
                     return
                 self.wd_item["_itemID"] = item.getID()
 
@@ -120,6 +120,10 @@ class SeFornminSv(Monument):
     def update_labels(self):
         if len(self.namn) == 0:
             self.wd_item["label"]["sv"] = self.raa_nr
+        else:
+            self.wd_item["label"]["sv"] = self.namn
+        if len(self.typ) > 0:
+            self.wd_item["description"] = {self.lang: self.typ.lower()}
 
     def set_raa(self):
         self.wd_item["raa-nr"] = {PROPS["raa-nr"]: [self.raa_nr]}
@@ -181,7 +185,8 @@ def get_items(connection, country, language, short=False):
         query += " LIMIT " + str(SHORT)
     if specific_table_name in SPECIFIC_TABLES.keys():
         results = [SPECIFIC_TABLES[specific_table_name](
-            table_row, mapping) for table_row in wlmhelpers.selectQuery(query, connection)]
+            table_row, mapping) for table_row
+            in wlmhelpers.selectQuery(query, connection)]
     else:
         results = [Monument(table_row, mapping)
                    for table_row in wlmhelpers.selectQuery(query, connection)]
