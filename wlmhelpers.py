@@ -74,3 +74,14 @@ def saveToJson(filename, content):
 
 def getLanguage(tablename):
     return tablename.split('(', 1)[1].split(')')[0]
+
+
+def load_json(filename):
+    try:
+        with open(filename) as f:
+            try:
+                return json.load(f)
+            except ValueError:
+                print("Failed to decode file {}.".format(filename))
+    except OSError as e:
+        print("File {} does not exist.".format(filename))

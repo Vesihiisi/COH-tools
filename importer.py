@@ -1,15 +1,25 @@
-import argparse
-import pymysql
-import json
 from os import path
-import wlmhelpers
+from wikidataStuff.WikidataStuff import WikidataStuff as WD
+import argparse
+import json
+import mwparserfromhell as wparser
+import pymysql
 import pywikibot
 import wikidataStuff
 import wikidataStuff.helpers as helpers
-from wikidataStuff.WikidataStuff import WikidataStuff as WD
+import wlmhelpers
 
+SHORT = 100
 MAPPING_DIR = "mappings/"
 MONUMENTS_ALL = "monuments_all"
+ADM0 = wlmhelpers.load_json(MAPPING_DIR + "adm0.json")
+PROPS = {
+    "coordinates": "P625",
+    "country": "P17",
+    "heritage_status": "P1435",
+    "image": "P18",
+    "is": "P31"
+}
 
 
 def get_specific_table_name(countryname, languagename):
@@ -24,15 +34,7 @@ class Mapping(object):
     def load_mapping_file(self, countryname, languagename):
         filename = path.relpath(
             MAPPING_DIR + "{}_({}).json".format(countryname, languagename))
-        try:
-            with open(filename) as f:
-                try:
-                    data = json.load(f)
-                    return data
-                except ValueError:
-                    print("Failed to decode file {}.".format(filename))
-        except OSError as e:
-            print("File {} does not exist.".format(filename))
+        return wlmhelpers.load_json(filename)
 
     def __init__(self, countryname, languagename):
         self.file_content = self.load_mapping_file(countryname, languagename)
@@ -40,10 +42,68 @@ class Mapping(object):
 
 class Monument(object):
 
-    def __init__(self, db_row_dict):
+    def set_country(self):
+        country = [item["item"]
+                   for item in ADM0 if item["code"].lower() == self.adm0]
+        self.wd_item["country"] = {PROPS["country"]: country}
+
+    def set_is(self, mapping):
+        default_is = mapping.file_content["default_is"]
+        self.wd_item["is"] = {PROPS["is"]: [default_is["item"]]}
+
+    def set_labels(self):
+        if "[" in self.name:
+            text = wparser.parse(self.name)
+            name = text.strip_code()
+        else:
+            name = self.name
+        self.wd_item["label"] = {self.lang: name.strip()}
+
+    def set_heritage(self, mapping):
+        heritage = mapping.file_content["heritage"]
+        self.wd_item["heritage"] = {
+            PROPS["heritage_status"]: helpers.listify(heritage["item"])}
+
+    def set_coords(self):
+        if self.lat and self.lon:
+            self.wd_item["coordinates"] = {
+                PROPS["coordinates"]: (self.lat, self.lon)}
+        else:
+            self.wd_item["coordinates"] = None
+
+    def set_image(self):
+        if self.image:
+            self.wd_item["image"] = {PROPS["image"]: self.image}
+        else:
+            self.wd_item["image"] = None
+
+    def exists(self, mapping):
+        self.wd_item["wd-item"] = None
+        if self.monument_article:
+            site = pywikibot.Site(self.lang, "wikipedia")
+            page = pywikibot.Page(site, self.monument_article)
+            if page.exists():
+                if page.isRedirectPage():
+                    page = page.getRedirectTarget()
+                item = pywikibot.ItemPage.fromPage(page)
+                self.wd_item["_itemID"] = item.getID()
+
+    def construct_wd_item(self, mapping):
+        self.wd_item = {}
+        self.set_labels()
+        self.set_country()
+        self.set_is(mapping)
+        self.set_heritage(mapping)
+        self.set_coords()
+        self.set_image()
+        self.exists(mapping)
+
+    def __init__(self, db_row_dict, mapping):
         for k, v in db_row_dict.items():
             if not k.startswith("m_spec."):
                 setattr(self, k, v)
+        self.construct_wd_item(mapping)
+        print(self.wd_item)
 
     def get_fields(self):
         return sorted(list(self.__dict__.keys()))
@@ -65,7 +125,7 @@ def create_connection(arguments):
         charset="utf8")
 
 
-def get_items(connection, country, language):
+def get_items(connection, country, language, short=False):
     specific_table_name = get_specific_table_name(country, language)
     if not wlmhelpers.tableExists(connection, specific_table_name):
         print("Table does not exist.")
@@ -75,7 +135,10 @@ def get_items(connection, country, language):
                        language,
                        specific_table_name,
                        mapping.join_id())
-    results = [Monument(table_row) for table_row in wlmhelpers.selectQuery(query, connection)]
+    if short:
+        query += " LIMIT " + str(SHORT)
+    results = [Monument(table_row, mapping)
+               for table_row in wlmhelpers.selectQuery(query, connection)]
     print("Fetched {} items from {}".format(
         len(results), get_specific_table_name(country, language)))
     return results
@@ -85,7 +148,7 @@ def main(arguments):
     connection = create_connection(arguments)
     country = arguments.country
     language = arguments.language
-    results = get_items(connection, country, language)
+    results = get_items(connection, country, language, arguments.short)
 
 
 if __name__ == "__main__":
@@ -96,5 +159,6 @@ if __name__ == "__main__":
     parser.add_argument("--db", default="wlm")
     parser.add_argument("--language", default="sv")
     parser.add_argument("--country", default="se-ship")
+    parser.add_argument("--short", action='store_true')
     args = parser.parse_args()
     main(args)

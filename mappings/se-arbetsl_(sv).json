@@ -1,4 +1,16 @@
 {
     "_id" : "id",
-    "country" : "Sweden"
+    "country": {
+        "item": "Q34",
+        "name": "Sweden"
+    },
+    "heritage": {
+        "item": "Q10416961",
+        "name": "working life museum"
+    },
+    "default_is": {
+        "item": "Q33506",
+        "name": "museum"
+    },
+    "language": "sv"
 }

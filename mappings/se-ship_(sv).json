@@ -1,9 +1,15 @@
 {
-  "_id": "signal",
-  "country": "Sweden",
-  "default_is": {
-    "item": "Q1229765",
-    "name": "watercraft"
-  },
-  "language": "sv"
+    "_id": "signal",
+    "country": {
+        "item": "Q34",
+        "name": "Sweden"
+    },
+    "default_is": {
+        "item": "Q1229765",
+        "name": "watercraft"
+    },
+    "heritage": {
+        "item": "Q16501309"
+    },
+    "language": "sv"
 }
