@@ -142,14 +142,37 @@ class SeFornminSv(Monument):
             print("Could not parse municipality: {}.".format(self.adm2))
             return
 
+    def set_type(self):
+        # TODO: import type with lookup_table_to_json
+        # This should be done on a global level, when parsing table name
+        return
+
+    def set_location(self):
+        # TODO: check self.address and map it to P276.
+        # This only makes sense if it's a wikilinked item,
+        # and also if there's exactly 1 item
+        # because stuff like
+        # [[Sundsbruk]] - [[Sköns Prästbord]] (Nordväst om [[Sköns kyrka]])
+        # NOTE: adm3 always empty for this table
+        return
+
+    def set_inception(self):
+        # TODO
+        # This is messy and not super prioritized...
+        return
+
     def update_wd_item(self):
         self.update_labels()
         self.set_raa()
         self.set_adm_location()
+        self.set_type()
+        self.set_location()
+        self.set_inception()
 
     def __init__(self, db_row_dict, mapping):
         Monument.__init__(self, db_row_dict, mapping)
         self.update_wd_item()
+        print(self.address)
 
 
 def make_query(country, language, specific_table, join_id):
