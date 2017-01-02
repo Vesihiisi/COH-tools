@@ -26,14 +26,18 @@ def fetch_page(tablename):
     return page
 
 
+def get_page_metadata(page):
+    timestamp = page.editTime().isoformat()
+    permalink = page.permalink()
+    return {'permalink': permalink, 'timestamp': timestamp}
+
+
 def table_to_json(tablename):
     lookupDict = {}
     lookupDict["mappings"] = {}
     page = fetch_page(tablename)
-    timestamp = page.editTime().isoformat()
-    permalink = page.permalink()
+    lookupDict["@meta"] = get_page_metadata(page)
     parsed = mwp.parse(page.get())
-    lookupDict["@meta"] = {'permalink': permalink, 'timestamp': timestamp}
     table = parsed.filter_tags(matches=lambda node: node.tag == "table")
     rows = table[0].contents.filter(recursive=False, matches=filter_tr)
     for row in rows:
