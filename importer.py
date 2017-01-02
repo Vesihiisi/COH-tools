@@ -15,6 +15,7 @@ MONUMENTS_ALL = "monuments_all"
 ADM0 = wlmhelpers.load_json(MAPPING_DIR + "adm0.json")
 PROPS = {
     "coordinates": "P625",
+    "commonscat": "P373",
     "country": "P17",
     "heritage_status": "P1435",
     "image": "P18",
@@ -77,6 +78,12 @@ class Monument(object):
         else:
             self.wd_item["image"] = None
 
+    def set_commonscat(self):
+        if self.commonscat:
+            self.wd_item["commonscat"] = {PROPS["commonscat"]: self.commonscat}
+        else:
+            self.wd_item["commonscat"] = None
+
     def exists(self, mapping):
         self.wd_item["wd-item"] = None
         if self.monument_article:
@@ -96,6 +103,7 @@ class Monument(object):
         self.set_heritage(mapping)
         self.set_coords()
         self.set_image()
+        self.set_commonscat()
         self.exists(mapping)
 
     def __init__(self, db_row_dict, mapping):
