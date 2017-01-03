@@ -74,7 +74,7 @@ class Monument(object):
                           "It probably does not exist.".format(
                               self.lang, self.monument_article))
                     return
-                self.wd_item["_itemID"] = item.getID()
+                self.wd_item["wd-item"] = item.getID()
 
     def construct_wd_item(self, mapping, data_files=None):
         self.wd_item = {}
@@ -126,8 +126,8 @@ class SeFornminSv(Monument):
         try:
             municipality = [x["item"] for x in municip_dict if x[
                 "municipality"].lower() == pattern][0]
-            ## TODO: Check if target item is valid municipality
-            ## I guess this could be done on the adding stage?
+            # TODO: Check if target item is valid municipality
+            # I guess this could be done on the adding stage?
             self.wd_item["statements"][
                 PROPS["located_adm"]] = helpers.listify(municipality)
         except IndexError:
@@ -189,7 +189,6 @@ class SeArbetslSv(Monument):
 
     def add_location_to_desc(self, municipality):
         self.wd_item["descriptions"][self.lang] += " i " + municipality
-        print(self.wd_item["descriptions"])
 
     def set_adm_location(self):
         municip_dict_en = self.data_files["municipalities_en"]
