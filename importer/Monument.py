@@ -126,7 +126,8 @@ class SeFornminSv(Monument):
         try:
             municipality = [x["item"] for x in municip_dict if x[
                 "municipality"].lower() == pattern][0]
-            ## TODO: Check if target item is valid municipality ##
+            ## TODO: Check if target item is valid municipality
+            ## I guess this could be done on the adding stage?
             self.wd_item["statements"][
                 PROPS["located_adm"]] = helpers.listify(municipality)
         except IndexError:
@@ -134,9 +135,17 @@ class SeFornminSv(Monument):
             return
 
     def set_type(self):
-        # TODO: import type with lookup_table_to_json
-        # This should be done on a global level, when parsing table name
-        return
+        if self.typ:
+            table = self.data_files["types"]["mappings"]
+            type_to_search_for = self.typ.lower()
+            try:
+                special_type = [table[x]["items"]
+                                for x in table
+                                if x.lower() == type_to_search_for][0]
+                self.wd_item["statements"]["P31"] = special_type
+                print("Changed default P31 to " + self.typ)
+            except IndexError:
+                return
 
     def set_location(self):
         # TODO: check self.address and map it to P276.

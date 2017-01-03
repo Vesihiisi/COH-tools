@@ -46,7 +46,8 @@ SPECIFIC_TABLES = {"monuments_se-fornmin_(sv)":
                    {"class": SeFornminSv,
                     "data_files":
                     {"municipalities_en": "sweden_municipalities_en.json",
-                     "municipalities_sv": "sweden_municipalities.json"}},
+                     "municipalities_sv": "sweden_municipalities.json",
+                     "types": "se-fornmin_(sv)_types.json"}},
                    "monuments_se-arbetsl_(sv)":
                    {"class":
                     SeArbetslSv,
