@@ -221,11 +221,36 @@ def get_items(connection, country, language, short=False):
     return results
 
 
+def run_test(monuments):
+    site = pywikibot.Site("test", "wikidata")
+    sample_item = monuments[9].wd_item
+    repo = site.data_repository()
+    wd = WD(repo, "test")
+    data = {}
+    data["labels"] = {}
+    data["descriptions"] = {}
+    print(sample_item)
+    for x in sample_item["label"]:
+        data["labels"][x] = {"language": x, "value": sample_item["label"][x]}
+        print(x, sample_item["label"][x])
+    print(data)
+    item = wd.make_new_item(data, "x")
+    item.exists()
+    claims = {}
+    claims['P17'] = wd.Statement(
+        wd.QtoItemPage(sample_item["country"]["P17"][0]))
+    for c in claims:
+        wd.addNewClaim(c, claims[c], item, None)
+    print(claims)
+
+
 def main(arguments):
     connection = create_connection(arguments)
     country = arguments.country
     language = arguments.language
     results = get_items(connection, country, language, arguments.short)
+    if arguments.testrun:
+        run_test(results)
 
 
 if __name__ == "__main__":
@@ -237,5 +262,6 @@ if __name__ == "__main__":
     parser.add_argument("--language", default="sv")
     parser.add_argument("--country", default="se-ship")
     parser.add_argument("--short", action='store_true')
+    parser.add_argument("--testrun", action='store_true')
     args = parser.parse_args()
     main(args)
