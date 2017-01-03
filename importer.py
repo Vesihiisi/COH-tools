@@ -36,6 +36,7 @@ class Mapping(object):
 
 
 class Monument(object):
+
     def print_wd(self):
         print(json.dumps(self.wd_item, sort_keys=True, indent=4))
 
@@ -125,9 +126,12 @@ class SeFornminSv(Monument):
             self.wd_item["labels"][self.lang] = self.namn
         if len(self.typ) > 0:
             self.wd_item["descriptions"] = {self.lang: self.typ.lower()}
+        else:
+            self.wd_item["descriptions"] = {self.lang: "fornminne"}
 
     def set_raa(self):
-        self.wd_item["statements"][PROPS["raa-nr"]] = helpers.listify(self.raa_nr)
+        self.wd_item["statements"][
+            PROPS["raa-nr"]] = helpers.listify(self.raa_nr)
 
     def set_adm_location(self):
         municip_dict = wlmhelpers.load_json(path.join(
@@ -137,7 +141,8 @@ class SeFornminSv(Monument):
             municipality = [x["item"] for x in municip_dict if x[
                 "municipality"].lower() == pattern][0]
             ## TODO: Check if target item is valid municipality ##
-            self.wd_item["statements"][PROPS["located_adm"]] = helpers.listify(municipality)
+            self.wd_item["statements"][
+                PROPS["located_adm"]] = helpers.listify(municipality)
         except IndexError:
             print("Could not parse municipality: {}.".format(self.adm2))
             return
@@ -174,6 +179,45 @@ class SeFornminSv(Monument):
         self.update_wd_item()
 
 
+class SeArbetslSv(Monument):
+
+    def update_labels(self):
+        self.wd_item["descriptions"] = {self.lang : "arbetslivsmuseum"}
+
+    def set_adm_location(self):
+        municip_dict = wlmhelpers.load_json(path.join(
+            MAPPING_DIR, "sweden_municipalities_en.json"))
+        pattern = self.adm2.lower() + " municipality"
+        try:
+            municipality = [x["item"] for x in municip_dict if x[
+                "municipality"].lower() == pattern][0]
+            ## TODO: Check if target item is valid municipality ##
+            self.wd_item["statements"][
+                PROPS["located_adm"]] = helpers.listify(municipality)
+        except IndexError:
+            print("Could not parse municipality: {}.".format(self.adm2))
+            return
+
+    def set_type(self):
+        # TODO: import type with lookup_table_to_json
+        # This should be done on a global level, when parsing table name
+        return
+
+    def set_location(self):
+        # TODO: this table has both ort and address..
+        return
+
+    def update_wd_item(self):
+        self.update_labels()
+        self.set_adm_location()
+        self.set_type()
+        self.set_location()
+
+    def __init__(self, db_row_dict, mapping):
+        Monument.__init__(self, db_row_dict, mapping)
+        self.update_wd_item()
+
+
 def make_query(country, language, specific_table, join_id):
     return ('select *  from {} as m_all JOIN `{}` '
             'as m_spec on m_all.id = m_spec.{} '
@@ -190,7 +234,8 @@ def create_connection(arguments):
         charset="utf8")
 
 
-SPECIFIC_TABLES = {"monuments_se-fornmin_(sv)": SeFornminSv}
+SPECIFIC_TABLES = {"monuments_se-fornmin_(sv)": SeFornminSv,
+                   "monuments_se-arbetsl_(sv)": SeArbetslSv}
 
 
 def get_items(connection, country, language, short=False):
@@ -220,6 +265,7 @@ def get_items(connection, country, language, short=False):
 def run_test(monuments):
     sample_item = monuments[9]
     sample_item.print_wd()
+
 
 def main(arguments):
     connection = create_connection(arguments)
