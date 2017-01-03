@@ -8,6 +8,7 @@ import pywikibot
 import wikidataStuff
 import wikidataStuff.helpers as helpers
 import wlmhelpers
+import re
 
 SHORT = 10
 MAPPING_DIR = "mappings"
@@ -36,6 +37,14 @@ class Mapping(object):
 
 class Monument(object):
 
+    def remove_markup(self, string):
+        remove_br = re.compile('\W*<br.*?>\W*', re.I)
+        string = remove_br.sub(' ', string)
+        if "[" in string:
+            string = wparser.parse(string)
+            string = string.strip_code()
+        return string.strip()
+
     def set_country(self):
         country = [item["item"]
                    for item in ADM0 if item["code"].lower() == self.adm0]
@@ -46,13 +55,7 @@ class Monument(object):
         self.wd_item["is"] = {PROPS["is"]: [default_is["item"]]}
 
     def set_labels(self):
-        if "[" in self.name:
-            # TODO separate out wikicode splitter
-            text = wparser.parse(self.name)
-            name = text.strip_code()
-        else:
-            name = self.name
-        self.wd_item["label"] = {self.lang: name.strip()}
+        self.wd_item["label"] = {self.lang: self.remove_markup(self.name)}
 
     def set_heritage(self, mapping):
         heritage = mapping.file_content["heritage"]
@@ -120,9 +123,9 @@ class SeFornminSv(Monument):
 
     def update_labels(self):
         if len(self.namn) == 0:
-            self.wd_item["label"]["sv"] = self.raa_nr
+            self.wd_item["label"][self.lang] = self.raa_nr
         else:
-            self.wd_item["label"]["sv"] = self.namn
+            self.wd_item["label"][self.lang] = self.namn
         if len(self.typ) > 0:
             self.wd_item["description"] = {self.lang: self.typ.lower()}
 
@@ -130,8 +133,8 @@ class SeFornminSv(Monument):
         self.wd_item["raa-nr"] = {PROPS["raa-nr"]: [self.raa_nr]}
 
     def set_adm_location(self):
-        municip_dict = wlmhelpers.load_json(
-            MAPPING_DIR + "sweden_municipalities_en.json")
+        municip_dict = wlmhelpers.load_json(path.join(
+            MAPPING_DIR, "sweden_municipalities_en.json"))
         pattern = self.adm2.lower() + " municipality"
         try:
             municipality = [x["municipality"] for x in municip_dict if x[
@@ -173,7 +176,6 @@ class SeFornminSv(Monument):
     def __init__(self, db_row_dict, mapping):
         Monument.__init__(self, db_row_dict, mapping)
         self.update_wd_item()
-        print(self.address)
 
 
 def make_query(country, language, specific_table, join_id):
