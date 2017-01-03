@@ -36,6 +36,8 @@ class Mapping(object):
 
 
 class Monument(object):
+    def print_wd(self):
+        print(json.dumps(self.wd_item, sort_keys=True, indent=4))
 
     def remove_markup(self, string):
         remove_br = re.compile('\W*<br.*?>\W*', re.I)
@@ -48,38 +50,32 @@ class Monument(object):
     def set_country(self):
         country = [item["item"]
                    for item in ADM0 if item["code"].lower() == self.adm0]
-        self.wd_item[PROPS["country"]] = country
+        self.wd_item["statements"][PROPS["country"]] = country
 
     def set_is(self, mapping):
         default_is = mapping.file_content["default_is"]
-        self.wd_item[PROPS["is"]] = [default_is["item"]]
+        self.wd_item["statements"][PROPS["is"]] = [default_is["item"]]
 
     def set_labels(self):
         self.wd_item["labels"] = {self.lang: self.remove_markup(self.name)}
 
     def set_heritage(self, mapping):
         heritage = mapping.file_content["heritage"]
-        self.wd_item[PROPS["heritage_status"]] = helpers.listify(
+        self.wd_item["statements"][PROPS["heritage_status"]] = helpers.listify(
             heritage["item"])
 
     def set_coords(self):
         if self.lat and self.lon:
-            self.wd_item[PROPS["coordinates"]] = helpers.listify(
+            self.wd_item["statements"][PROPS["coordinates"]] = helpers.listify(
                 (self.lat, self.lon))
-        else:
-            self.wd_item[PROPS["coordinates"]] = None
 
     def set_image(self):
         if self.image:
-            self.wd_item[PROPS["image"]] = self.image
-        else:
-            self.wd_item[PROPS["image"]] = None
+            self.wd_item["statements"][PROPS["image"]] = self.image
 
     def set_commonscat(self):
         if self.commonscat:
-            self.wd_item[PROPS["commonscat"]] = self.commonscat
-        else:
-            self.wd_item[PROPS["commonscat"]] = None
+            self.wd_item["statements"][PROPS["commonscat"]] = self.commonscat
 
     def exists(self, mapping):
         self.wd_item["wd-item"] = None
@@ -100,6 +96,7 @@ class Monument(object):
 
     def construct_wd_item(self, mapping):
         self.wd_item = {}
+        self.wd_item["statements"] = {}
         self.set_labels()
         self.set_country()
         self.set_is(mapping)
@@ -130,7 +127,7 @@ class SeFornminSv(Monument):
             self.wd_item["descriptions"] = {self.lang: self.typ.lower()}
 
     def set_raa(self):
-        self.wd_item[PROPS["raa-nr"]] = helpers.listify(self.raa_nr)
+        self.wd_item["statements"][PROPS["raa-nr"]] = helpers.listify(self.raa_nr)
 
     def set_adm_location(self):
         municip_dict = wlmhelpers.load_json(path.join(
@@ -140,7 +137,7 @@ class SeFornminSv(Monument):
             municipality = [x["item"] for x in municip_dict if x[
                 "municipality"].lower() == pattern][0]
             ## TODO: Check if target item is valid municipality ##
-            self.wd_item[PROPS["located_adm"]] = helpers.listify(municipality)
+            self.wd_item["statements"][PROPS["located_adm"]] = helpers.listify(municipality)
         except IndexError:
             print("Could not parse municipality: {}.".format(self.adm2))
             return
@@ -221,27 +218,8 @@ def get_items(connection, country, language, short=False):
 
 
 def run_test(monuments):
-    site = pywikibot.Site("test", "wikidata")
-    sample_item = monuments[9].wd_item
-    repo = site.data_repository()
-    wd = WD(repo, "test")
-    data = {}
-    data["labels"] = {}
-    data["descriptions"] = {}
-    print(sample_item)
-    for x in sample_item["label"]:
-        data["labels"][x] = {"language": x, "value": sample_item["label"][x]}
-        print(x, sample_item["label"][x])
-    print(data)
-    item = wd.make_new_item(data, "x")
-    item.exists()
-    claims = {}
-    claims['P17'] = wd.Statement(
-        wd.QtoItemPage(sample_item["country"]["P17"][0]))
-    for c in claims:
-        wd.addNewClaim(c, claims[c], item, None)
-    print(claims)
-
+    sample_item = monuments[9]
+    sample_item.print_wd()
 
 def main(arguments):
     connection = create_connection(arguments)
