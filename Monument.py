@@ -14,7 +14,12 @@ PROPS = wlmhelpers.load_json(path.join(MAPPING_DIR, "props_general.json"))
 class Monument(object):
 
     def print_wd(self):
-        print(json.dumps(self.wd_item, sort_keys=True, indent=4))
+        print(
+            json.dumps(self.wd_item,
+                       sort_keys=True,
+                       indent=4,
+                       ensure_ascii=False)
+        )
 
     def remove_markup(self, string):
         remove_br = re.compile('\W*<br.*?>\W*', re.I)
@@ -100,10 +105,13 @@ class SeFornminSv(Monument):
             self.wd_item["labels"][self.lang] = self.raa_nr
         else:
             self.wd_item["labels"][self.lang] = self.namn
+
+    def set_descriptions(self):
+        DESC_BASE = "fornminne"
         if len(self.typ) > 0:
             self.wd_item["descriptions"] = {self.lang: self.typ.lower()}
         else:
-            self.wd_item["descriptions"] = {self.lang: "fornminne"}
+            self.wd_item["descriptions"] = {self.lang: DESC_BASE}
 
     def set_raa(self):
         self.wd_item["statements"][
@@ -144,6 +152,7 @@ class SeFornminSv(Monument):
 
     def update_wd_item(self):
         self.update_labels()
+        self.set_descriptions()
         self.set_raa()
         self.set_adm_location()
         self.set_type()
@@ -158,11 +167,30 @@ class SeFornminSv(Monument):
 class SeArbetslSv(Monument):
 
     def update_labels(self):
-        self.wd_item["descriptions"] = {self.lang: "arbetslivsmuseum"}
+        return
+
+    def set_descriptions(self):
+        DESC_BASE = "arbetslivsmuseum"
+        if len(self.typ) > 0:
+            self.wd_item["descriptions"] = {self.lang: self.typ.lower()}
+        else:
+            self.wd_item["descriptions"] = {self.lang: DESC_BASE}
+
+    def add_location_to_desc(self, municipality):
+        self.wd_item["descriptions"][self.lang] += " i " + municipality
+        print(self.wd_item["descriptions"])
 
     def set_adm_location(self):
+        """
+        Note: These should not be loaded every time the class is initiated!
+        There should be a separate bot class for every table,
+        which first loads all the necessary files
+        and then processes the rows.
+        """
         municip_dict = wlmhelpers.load_json(path.join(
             MAPPING_DIR, "sweden_municipalities_en.json"))
+        municip_dict_sv = wlmhelpers.load_json(path.join(
+            MAPPING_DIR, "sweden_municipalities.json"))
         pattern = self.adm2.lower() + " municipality"
         try:
             municipality = [x["item"] for x in municip_dict if x[
@@ -170,6 +198,10 @@ class SeArbetslSv(Monument):
             ## TODO: Check if target item is valid municipality ##
             self.wd_item["statements"][
                 PROPS["located_adm"]] = helpers.listify(municipality)
+            swedish_name = [x["municipality"]
+                            for x in municip_dict_sv
+                            if x["item"] == municipality][0]
+            self.add_location_to_desc(swedish_name)
         except IndexError:
             print("Could not parse municipality: {}.".format(self.adm2))
             return
@@ -185,6 +217,7 @@ class SeArbetslSv(Monument):
 
     def update_wd_item(self):
         self.update_labels()
+        self.set_descriptions()
         self.set_adm_location()
         self.set_type()
         self.set_location()
