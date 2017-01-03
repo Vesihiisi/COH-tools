@@ -76,7 +76,7 @@ class Monument(object):
                     return
                 self.wd_item["_itemID"] = item.getID()
 
-    def construct_wd_item(self, mapping):
+    def construct_wd_item(self, mapping, data_files=None):
         self.wd_item = {}
         self.wd_item["statements"] = {}
         self.set_labels()
@@ -88,11 +88,12 @@ class Monument(object):
         self.set_commonscat()
         self.exists(mapping)
 
-    def __init__(self, db_row_dict, mapping):
+    def __init__(self, db_row_dict, mapping, data_files):
         for k, v in db_row_dict.items():
             if not k.startswith("m_spec."):
                 setattr(self, k.replace("-", "_"), v)
         self.construct_wd_item(mapping)
+        self.data_files = data_files
 
     def get_fields(self):
         return sorted(list(self.__dict__.keys()))
@@ -160,8 +161,8 @@ class SeFornminSv(Monument):
         self.set_location()
         self.set_inception()
 
-    def __init__(self, db_row_dict, mapping):
-        Monument.__init__(self, db_row_dict, mapping)
+    def __init__(self, db_row_dict, mapping, data_files):
+        Monument.__init__(self, db_row_dict, mapping, data_files)
         self.update_wd_item()
 
 
@@ -182,19 +183,11 @@ class SeArbetslSv(Monument):
         print(self.wd_item["descriptions"])
 
     def set_adm_location(self):
-        """
-        Note: These should not be loaded every time the class is initiated!
-        There should be a separate bot class for every table,
-        which first loads all the necessary files
-        and then processes the rows.
-        """
-        municip_dict = load_json(path.join(
-            MAPPING_DIR, "sweden_municipalities_en.json"))
-        municip_dict_sv = load_json(path.join(
-            MAPPING_DIR, "sweden_municipalities.json"))
+        municip_dict_en = self.data_files["municipalities_en"]
         pattern = self.adm2.lower() + " municipality"
+        municip_dict_sv = self.data_files["municipalities_sv"]
         try:
-            municipality = [x["item"] for x in municip_dict if x[
+            municipality = [x["item"] for x in municip_dict_en if x[
                 "municipality"].lower() == pattern][0]
             ## TODO: Check if target item is valid municipality ##
             self.wd_item["statements"][
@@ -223,6 +216,6 @@ class SeArbetslSv(Monument):
         self.set_type()
         self.set_location()
 
-    def __init__(self, db_row_dict, mapping):
-        Monument.__init__(self, db_row_dict, mapping)
+    def __init__(self, db_row_dict, mapping, data_files=None):
+        Monument.__init__(self, db_row_dict, mapping, data_files)
         self.update_wd_item()

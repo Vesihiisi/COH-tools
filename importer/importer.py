@@ -42,8 +42,18 @@ def create_connection(arguments):
         charset="utf8")
 
 
-SPECIFIC_TABLES = {"monuments_se-fornmin_(sv)": SeFornminSv,
-                   "monuments_se-arbetsl_(sv)": SeArbetslSv}
+SPECIFIC_TABLES = {"monuments_se-fornmin_(sv)":
+                   {"class": SeFornminSv,
+                    "data_files":
+                    {"municipalities_en": "sweden_municipalities_en.json",
+                     "municipalities_sv": "sweden_municipalities.json"}},
+                   "monuments_se-arbetsl_(sv)":
+                   {"class":
+                    SeArbetslSv,
+                    "data_files":
+                    {"municipalities_en": "sweden_municipalities_en.json",
+                     "municipalities_sv": "sweden_municipalities.json"}}
+                   }
 
 
 def select_query(query, connection):
@@ -51,6 +61,12 @@ def select_query(query, connection):
     cursor.execute(query)
     result = cursor.fetchall()
     return result
+
+
+def load_data_files(file_dict):
+    for key in file_dict.keys():
+        file_dict[key] = load_json(path.join(MAPPING_DIR, file_dict[key]))
+    return file_dict
 
 
 def get_items(connection, country, language, short=False):
@@ -66,12 +82,14 @@ def get_items(connection, country, language, short=False):
     if short:
         query += " LIMIT " + str(SHORT)
     if specific_table_name in SPECIFIC_TABLES.keys():
-        results = [SPECIFIC_TABLES[specific_table_name](
-            table_row, mapping) for table_row
-            in select_query(query, connection)]
+        class_to_use = SPECIFIC_TABLES[specific_table_name]["class"]
+        data_files = load_data_files(
+            SPECIFIC_TABLES[specific_table_name]["data_files"])
     else:
-        results = [Monument(table_row, mapping)
-                   for table_row in select_query(query, connection)]
+        class_to_use = Monument
+        data_files = None
+    results = [class_to_use(table_row, mapping, data_files)
+               for table_row in select_query(query, connection)]
     print("Fetched {} items from {}".format(
         len(results), get_specific_table_name(country, language)))
     return results
