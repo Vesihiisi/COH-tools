@@ -48,38 +48,38 @@ class Monument(object):
     def set_country(self):
         country = [item["item"]
                    for item in ADM0 if item["code"].lower() == self.adm0]
-        self.wd_item["country"] = {PROPS["country"]: country}
+        self.wd_item[PROPS["country"]] = country
 
     def set_is(self, mapping):
         default_is = mapping.file_content["default_is"]
-        self.wd_item["is"] = {PROPS["is"]: [default_is["item"]]}
+        self.wd_item[PROPS["is"]] = [default_is["item"]]
 
     def set_labels(self):
-        self.wd_item["label"] = {self.lang: self.remove_markup(self.name)}
+        self.wd_item["labels"] = {self.lang: self.remove_markup(self.name)}
 
     def set_heritage(self, mapping):
         heritage = mapping.file_content["heritage"]
-        self.wd_item["heritage"] = {
-            PROPS["heritage_status"]: helpers.listify(heritage["item"])}
+        self.wd_item[PROPS["heritage_status"]] = helpers.listify(
+            heritage["item"])
 
     def set_coords(self):
         if self.lat and self.lon:
-            self.wd_item["coordinates"] = {
-                PROPS["coordinates"]: (self.lat, self.lon)}
+            self.wd_item[PROPS["coordinates"]] = helpers.listify(
+                (self.lat, self.lon))
         else:
-            self.wd_item["coordinates"] = None
+            self.wd_item[PROPS["coordinates"]] = None
 
     def set_image(self):
         if self.image:
-            self.wd_item["image"] = {PROPS["image"]: self.image}
+            self.wd_item[PROPS["image"]] = self.image
         else:
-            self.wd_item["image"] = None
+            self.wd_item[PROPS["image"]] = None
 
     def set_commonscat(self):
         if self.commonscat:
-            self.wd_item["commonscat"] = {PROPS["commonscat"]: self.commonscat}
+            self.wd_item[PROPS["commonscat"]] = self.commonscat
         else:
-            self.wd_item["commonscat"] = None
+            self.wd_item[PROPS["commonscat"]] = None
 
     def exists(self, mapping):
         self.wd_item["wd-item"] = None
@@ -123,25 +123,24 @@ class SeFornminSv(Monument):
 
     def update_labels(self):
         if len(self.namn) == 0:
-            self.wd_item["label"][self.lang] = self.raa_nr
+            self.wd_item["labels"][self.lang] = self.raa_nr
         else:
-            self.wd_item["label"][self.lang] = self.namn
+            self.wd_item["labels"][self.lang] = self.namn
         if len(self.typ) > 0:
-            self.wd_item["description"] = {self.lang: self.typ.lower()}
+            self.wd_item["descriptions"] = {self.lang: self.typ.lower()}
 
     def set_raa(self):
-        self.wd_item["raa-nr"] = {PROPS["raa-nr"]: [self.raa_nr]}
+        self.wd_item[PROPS["raa-nr"]] = helpers.listify(self.raa_nr)
 
     def set_adm_location(self):
         municip_dict = wlmhelpers.load_json(path.join(
             MAPPING_DIR, "sweden_municipalities_en.json"))
         pattern = self.adm2.lower() + " municipality"
         try:
-            municipality = [x["municipality"] for x in municip_dict if x[
+            municipality = [x["item"] for x in municip_dict if x[
                 "municipality"].lower() == pattern][0]
             ## TODO: Check if target item is valid municipality ##
-            self.wd_item["located_adm"] = {
-                PROPS["located_adm"]: [municipality]}
+            self.wd_item[PROPS["located_adm"]] = helpers.listify(municipality)
         except IndexError:
             print("Could not parse municipality: {}.".format(self.adm2))
             return
