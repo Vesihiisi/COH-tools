@@ -5,7 +5,7 @@ import argparse
 import pymysql
 import wikidataStuff
 import wlmhelpers
-
+import random
 
 SHORT = 10
 MAPPING_DIR = "mappings"
@@ -75,7 +75,7 @@ def get_items(connection, country, language, short=False):
 
 
 def run_test(monuments):
-    sample_item = monuments[9]
+    sample_item = random.choice(monuments)
     sample_item.print_wd()
 
 
