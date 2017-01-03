@@ -10,10 +10,10 @@ import wikidataStuff.helpers as helpers
 import wlmhelpers
 
 SHORT = 10
-MAPPING_DIR = "mappings/"
+MAPPING_DIR = "mappings"
 MONUMENTS_ALL = "monuments_all"
-ADM0 = wlmhelpers.load_json(MAPPING_DIR + "adm0.json")
-PROPS = wlmhelpers.load_json(MAPPING_DIR + "props_general.json")
+ADM0 = wlmhelpers.load_json(path.join(MAPPING_DIR, "adm0.json"))
+PROPS = wlmhelpers.load_json(path.join(MAPPING_DIR, "props_general.json"))
 
 
 def get_specific_table_name(countryname, languagename):
@@ -26,8 +26,8 @@ class Mapping(object):
         return self.file_content["_id"]
 
     def load_mapping_file(self, countryname, languagename):
-        filename = path.relpath(
-            MAPPING_DIR + "{}_({}).json".format(countryname, languagename))
+        filename = path.join(
+            MAPPING_DIR, "{}_({}).json".format(countryname, languagename))
         return wlmhelpers.load_json(filename)
 
     def __init__(self, countryname, languagename):
@@ -47,6 +47,7 @@ class Monument(object):
 
     def set_labels(self):
         if "[" in self.name:
+            # TODO separate out wikicode splitter
             text = wparser.parse(self.name)
             name = text.strip_code()
         else:
