@@ -4,11 +4,11 @@ import mwparserfromhell as wparser
 import pywikibot
 import re
 import wikidataStuff.helpers as helpers
-import wlmhelpers
+from importer_utils import *
 
 MAPPING_DIR = "mappings"
-ADM0 = wlmhelpers.load_json(path.join(MAPPING_DIR, "adm0.json"))
-PROPS = wlmhelpers.load_json(path.join(MAPPING_DIR, "props_general.json"))
+ADM0 = load_json(path.join(MAPPING_DIR, "adm0.json"))
+PROPS = load_json(path.join(MAPPING_DIR, "props_general.json"))
 
 
 class Monument(object):
@@ -109,16 +109,17 @@ class SeFornminSv(Monument):
     def set_descriptions(self):
         DESC_BASE = "fornminne"
         if len(self.typ) > 0:
-            self.wd_item["descriptions"] = {self.lang: self.typ.lower()}
+            self.wd_item["descriptions"] = {"sv": self.typ.lower()}
         else:
-            self.wd_item["descriptions"] = {self.lang: DESC_BASE}
+            self.wd_item["descriptions"] = {"sv": DESC_BASE}
+        self.wd_item["descriptions"]["sv"] += " i " + self.landskap
 
     def set_raa(self):
         self.wd_item["statements"][
             PROPS["raa-nr"]] = helpers.listify(self.raa_nr)
 
     def set_adm_location(self):
-        municip_dict = wlmhelpers.load_json(path.join(
+        municip_dict = load_json(path.join(
             MAPPING_DIR, "sweden_municipalities_en.json"))
         pattern = self.adm2.lower() + " municipality"
         try:
@@ -187,9 +188,9 @@ class SeArbetslSv(Monument):
         which first loads all the necessary files
         and then processes the rows.
         """
-        municip_dict = wlmhelpers.load_json(path.join(
+        municip_dict = load_json(path.join(
             MAPPING_DIR, "sweden_municipalities_en.json"))
-        municip_dict_sv = wlmhelpers.load_json(path.join(
+        municip_dict_sv = load_json(path.join(
             MAPPING_DIR, "sweden_municipalities.json"))
         pattern = self.adm2.lower() + " municipality"
         try:
