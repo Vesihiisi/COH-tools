@@ -4,7 +4,6 @@ from wikidataStuff.WikidataStuff import WikidataStuff as WD
 import argparse
 import pymysql
 import wikidataStuff
-import wlmhelpers
 import random
 
 SHORT = 10
@@ -16,6 +15,33 @@ def get_specific_table_name(countryname, languagename):
     return "monuments_{}_({})".format(countryname, languagename)
 
 
+def get_number_of_rows(connection, tablename):
+    cursor = connection.cursor()
+    query = "SELECT COUNT(*) FROM `" + tablename + "`"
+    cursor.execute(query)
+    result = cursor.fetchone()
+    return result[0]
+
+
+def table_exists(connection, tablename):
+    try:
+        if get_number_of_rows(connection, tablename) > 0:
+            return True
+    except pymysql.ProgrammingError as e:
+        return False
+
+
+def load_json(filename):
+    try:
+        with open(filename) as f:
+            try:
+                return json.load(f)
+            except ValueError:
+                print("Failed to decode file {}.".format(filename))
+    except OSError as e:
+        print("File {} does not exist.".format(filename))
+
+
 class Mapping(object):
 
     def join_id(self):
@@ -24,7 +50,7 @@ class Mapping(object):
     def load_mapping_file(self, countryname, languagename):
         filename = path.join(
             MAPPING_DIR, "{}_({}).json".format(countryname, languagename))
-        return wlmhelpers.load_json(filename)
+        return load_json(filename)
 
     def __init__(self, countryname, languagename):
         self.file_content = self.load_mapping_file(countryname, languagename)
@@ -50,9 +76,16 @@ SPECIFIC_TABLES = {"monuments_se-fornmin_(sv)": SeFornminSv,
                    "monuments_se-arbetsl_(sv)": SeArbetslSv}
 
 
+def select_query(query, connection):
+    cursor = connection.cursor(pymysql.cursors.DictCursor)
+    cursor.execute(query)
+    result = cursor.fetchall()
+    return result
+
+
 def get_items(connection, country, language, short=False):
     specific_table_name = get_specific_table_name(country, language)
-    if not wlmhelpers.tableExists(connection, specific_table_name):
+    if not table_exists(connection, specific_table_name):
         print("Table does not exist.")
         return
     mapping = Mapping(country, language)
@@ -65,10 +98,10 @@ def get_items(connection, country, language, short=False):
     if specific_table_name in SPECIFIC_TABLES.keys():
         results = [SPECIFIC_TABLES[specific_table_name](
             table_row, mapping) for table_row
-            in wlmhelpers.selectQuery(query, connection)]
+            in select_query(query, connection)]
     else:
         results = [Monument(table_row, mapping)
-                   for table_row in wlmhelpers.selectQuery(query, connection)]
+                   for table_row in select_query(query, connection)]
     print("Fetched {} items from {}".format(
         len(results), get_specific_table_name(country, language)))
     return results
