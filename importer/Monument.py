@@ -86,7 +86,7 @@ class Monument(object):
         self.set_coords()
         self.set_image()
         self.set_commonscat()
-        self.exists(mapping)
+        #self.exists(mapping)
 
     def __init__(self, db_row_dict, mapping, data_files):
         for k, v in db_row_dict.items():
@@ -208,8 +208,17 @@ class SeArbetslSv(Monument):
             return
 
     def set_type(self):
-        # TODO: import type with lookup_table_to_json
-        # This should be done on a global level, when parsing table name
+        if self.typ:
+            table = self.data_files["types"]["mappings"]
+            type_to_search_for = self.typ.lower()
+            try:
+                special_type = [table[x]["items"]
+                                for x in table
+                                if x.lower() == type_to_search_for][0]
+                self.wd_item["statements"]["P31"] = special_type
+                print("Changed default P31 to " + self.typ)
+            except IndexError:
+                return
         return
 
     def set_location(self):

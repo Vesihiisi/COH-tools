@@ -1,6 +1,7 @@
 from Monument import *
 from os import path
 from wikidataStuff.WikidataStuff import WikidataStuff as WD
+from wikidataStuff import wdqsLookup as lookup
 import argparse
 import pymysql
 import wikidataStuff
@@ -51,7 +52,8 @@ SPECIFIC_TABLES = {"monuments_se-fornmin_(sv)":
                    {"class":
                     SeArbetslSv,
                     "data_files":
-                    {"municipalities": "sweden_municipalities.json"}}
+                    {"municipalities": "sweden_municipalities.json",
+                    "types" : "se-arbetsl_(sv)_types.json"}}
                    }
 
 
@@ -62,15 +64,13 @@ def select_query(query, connection):
     return result
 
 
-def load_data_files(file_dict, live):
+def load_data_files(file_dict):
     for key in file_dict.keys():
-        if live:
-            print("Live data will be requested: " + file_dict[key])
         file_dict[key] = load_json(path.join(MAPPING_DIR, file_dict[key]))
     return file_dict
 
 
-def get_items(connection, country, language, short=False, live=False):
+def get_items(connection, country, language, short=False):
     specific_table_name = get_specific_table_name(country, language)
     if not table_exists(connection, specific_table_name):
         print("Table does not exist.")
@@ -85,7 +85,7 @@ def get_items(connection, country, language, short=False, live=False):
     if specific_table_name in SPECIFIC_TABLES.keys():
         class_to_use = SPECIFIC_TABLES[specific_table_name]["class"]
         data_files = load_data_files(
-            SPECIFIC_TABLES[specific_table_name]["data_files"], live)
+            SPECIFIC_TABLES[specific_table_name]["data_files"])
     else:
         class_to_use = Monument
         data_files = None
@@ -105,7 +105,7 @@ def main(arguments):
     connection = create_connection(arguments)
     country = arguments.country
     language = arguments.language
-    results = get_items(connection, country, language, arguments.short, arguments.livedata)
+    results = get_items(connection, country, language, arguments.short)
     if arguments.testrun:
         run_test(results)
 
@@ -120,6 +120,5 @@ if __name__ == "__main__":
     parser.add_argument("--country", default="se-ship")
     parser.add_argument("--short", action='store_true')
     parser.add_argument("--testrun", action='store_true')
-    parser.add_argument("--livedata", action='store_true', default='false')
     args = parser.parse_args()
     main(args)
