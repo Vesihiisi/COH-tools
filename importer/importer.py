@@ -45,15 +45,13 @@ def create_connection(arguments):
 SPECIFIC_TABLES = {"monuments_se-fornmin_(sv)":
                    {"class": SeFornminSv,
                     "data_files":
-                    {"municipalities_en": "sweden_municipalities_en.json",
-                     "municipalities_sv": "sweden_municipalities.json",
+                    {"municipalities": "sweden_municipalities.json",
                      "types": "se-fornmin_(sv)_types.json"}},
                    "monuments_se-arbetsl_(sv)":
                    {"class":
                     SeArbetslSv,
                     "data_files":
-                    {"municipalities_en": "sweden_municipalities_en.json",
-                     "municipalities_sv": "sweden_municipalities.json"}}
+                    {"municipalities": "sweden_municipalities.json"}}
                    }
 
 
@@ -64,7 +62,7 @@ def select_query(query, connection):
     return result
 
 
-def load_data_files(file_dict):
+def load_data_files(file_dict, live=False):
     for key in file_dict.keys():
         file_dict[key] = load_json(path.join(MAPPING_DIR, file_dict[key]))
     return file_dict
@@ -120,5 +118,6 @@ if __name__ == "__main__":
     parser.add_argument("--country", default="se-ship")
     parser.add_argument("--short", action='store_true')
     parser.add_argument("--testrun", action='store_true')
+    parser.add_argument("--livedata", action='store_true')
     args = parser.parse_args()
     main(args)

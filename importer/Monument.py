@@ -121,11 +121,11 @@ class SeFornminSv(Monument):
 
     def set_adm_location(self):
         municip_dict = load_json(path.join(
-            MAPPING_DIR, "sweden_municipalities_en.json"))
-        pattern = self.adm2.lower() + " municipality"
+            MAPPING_DIR, "sweden_municipalities.json"))
+        pattern_en = self.adm2.lower() + " municipality"
         try:
             municipality = [x["item"] for x in municip_dict if x[
-                "municipality"].lower() == pattern][0]
+                "en"].lower() == pattern_en][0]
             # TODO: Check if target item is valid municipality
             # I guess this could be done on the adding stage?
             self.wd_item["statements"][
@@ -191,17 +191,16 @@ class SeArbetslSv(Monument):
         self.wd_item["descriptions"][self.lang] += " i " + municipality
 
     def set_adm_location(self):
-        municip_dict_en = self.data_files["municipalities_en"]
+        municip_dict = self.data_files["municipalities"]
         pattern = self.adm2.lower() + " municipality"
-        municip_dict_sv = self.data_files["municipalities_sv"]
         try:
-            municipality = [x["item"] for x in municip_dict_en if x[
-                "municipality"].lower() == pattern][0]
+            municipality = [x["item"] for x in municip_dict if x[
+                "en"].lower() == pattern][0]
             ## TODO: Check if target item is valid municipality ##
             self.wd_item["statements"][
                 PROPS["located_adm"]] = helpers.listify(municipality)
-            swedish_name = [x["municipality"]
-                            for x in municip_dict_sv
+            swedish_name = [x["sv"]
+                            for x in municip_dict
                             if x["item"] == municipality][0]
             self.add_location_to_desc(swedish_name)
         except IndexError:

@@ -1,1598 +1,1987 @@
 [
     {
-        "item": "Q498470",
-        "municipality": "Ale kommun"
-    },
-    {
-        "item": "Q503162",
-        "municipality": "Alingsås kommun"
-    },
-    {
-        "item": "Q182007",
-        "municipality": "Alvesta kommun"
-    },
-    {
-        "item": "Q15149386",
-        "municipality": "Anderstorps kommun"
-    },
-    {
-        "item": "Q503167",
-        "municipality": "Aneby kommun"
-    },
-    {
-        "item": "Q431271",
-        "municipality": "Arboga kommun"
-    },
-    {
-        "item": "Q493855",
-        "municipality": "Arjeplogs kommun"
-    },
-    {
-        "item": "Q499404",
-        "municipality": "Arvidsjaurs kommun"
-    },
-    {
-        "item": "Q511365",
-        "municipality": "Arvika kommun"
-    },
-    {
-        "item": "Q15132549",
-        "municipality": "Aska kommun"
-    },
-    {
-        "item": "Q509501",
-        "municipality": "Askersunds kommun"
-    },
-    {
-        "item": "Q500071",
-        "municipality": "Avesta kommun"
-    },
-    {
-        "item": "Q15729603",
-        "municipality": "Bara kommun"
-    },
-    {
-        "item": "Q267462",
-        "municipality": "Bengtsfors kommun"
-    },
-    {
-        "item": "Q845930",
-        "municipality": "Bergs kommun"
-    },
-    {
-        "item": "Q15731381",
-        "municipality": "Billesholms kommun"
-    },
-    {
-        "item": "Q376003",
-        "municipality": "Bjurholms kommun"
-    },
-    {
-        "item": "Q511310",
-        "municipality": "Bjuvs kommun"
-    },
-    {
-        "item": "Q15120913",
-        "municipality": "Bjärnums kommun"
-    },
-    {
-        "item": "Q15733186",
-        "municipality": "Bjärsjölagårds kommun"
-    },
-    {
-        "item": "Q14856970",
-        "municipality": "Bjärtrå kommun"
-    },
-    {
-        "item": "Q15736013",
-        "municipality": "Blentarps kommun"
-    },
-    {
-        "item": "Q509476",
-        "municipality": "Bodens kommun"
-    },
-    {
-        "item": "Q503102",
-        "municipality": "Bollebygds kommun"
-    },
-    {
-        "item": "Q62469",
-        "municipality": "Bollnäs kommun"
-    },
-    {
-        "item": "Q509546",
-        "municipality": "Borgholms kommun"
-    },
-    {
-        "item": "Q503209",
-        "municipality": "Borlänge kommun"
-    },
-    {
-        "item": "Q894327",
-        "municipality": "Borås kommun"
-    },
-    {
-        "item": "Q14900304",
-        "municipality": "Boteå kommun"
-    },
-    {
-        "item": "Q113718",
-        "municipality": "Botkyrka kommun"
-    },
-    {
-        "item": "Q509514",
-        "municipality": "Boxholms kommun"
-    },
-    {
-        "item": "Q15057053",
-        "municipality": "Broby kommun"
-    },
-    {
-        "item": "Q514830",
-        "municipality": "Bromölla kommun"
-    },
-    {
-        "item": "Q504261",
-        "municipality": "Bräcke kommun"
-    },
-    {
-        "item": "Q186662",
-        "municipality": "Burlövs kommun"
-    },
-    {
-        "item": "Q15155587",
-        "municipality": "Burseryds kommun"
-    },
-    {
-        "item": "Q499464",
-        "municipality": "Båstads kommun"
-    },
-    {
-        "item": "Q15060406",
-        "municipality": "Daga kommun"
-    },
-    {
-        "item": "Q15740742",
-        "municipality": "Dalby kommun"
-    },
-    {
-        "item": "Q10466253",
-        "municipality": "Dals landskommun"
-    },
-    {
-        "item": "Q503132",
-        "municipality": "Dals-Eds kommun"
-    },
-    {
-        "item": "Q113679",
-        "municipality": "Danderyds kommun"
-    },
-    {
-        "item": "Q14914665",
-        "municipality": "Dannemora kommun"
-    },
-    {
-        "item": "Q15471602",
-        "municipality": "Degeberga kommun"
-    },
-    {
-        "item": "Q509469",
-        "municipality": "Degerfors kommun"
-    },
-    {
-        "item": "Q14943049",
-        "municipality": "Djurö kommun"
-    },
-    {
-        "item": "Q132334",
-        "municipality": "Dorotea kommun"
-    },
-    {
-        "item": "Q498447",
-        "municipality": "Eda kommun"
-    },
-    {
-        "item": "Q15762648",
-        "municipality": "Ekeby kommun"
-    },
-    {
-        "item": "Q492614",
-        "municipality": "Ekerö kommun"
-    },
-    {
-        "item": "Q512035",
-        "municipality": "Eksjö kommun"
-    },
-    {
-        "item": "Q15940883",
-        "municipality": "Eldsberga kommun"
-    },
-    {
-        "item": "Q509452",
-        "municipality": "Emmaboda kommun"
-    },
-    {
-        "item": "Q509568",
-        "municipality": "Enköpings kommun"
-    },
-    {
-        "item": "Q15950157",
-        "municipality": "Enslövs kommun"
-    },
-    {
-        "item": "Q503144",
-        "municipality": "Eskilstuna kommun"
-    },
-    {
-        "item": "Q1130264",
-        "municipality": "Eslövs kommun"
-    },
-    {
-        "item": "Q503127",
-        "municipality": "Essunga kommun"
-    },
-    {
-        "item": "Q47018",
-        "municipality": "Fagersta kommun"
-    },
-    {
-        "item": "Q508168",
-        "municipality": "Falkenbergs kommun"
-    },
-    {
-        "item": "Q503214",
-        "municipality": "Falköpings kommun"
-    },
-    {
-        "item": "Q501545",
-        "municipality": "Falu kommun"
-    },
-    {
-        "item": "Q503204",
-        "municipality": "Filipstads kommun"
-    },
-    {
-        "item": "Q503180",
-        "municipality": "Finspångs kommun"
-    },
-    {
-        "item": "Q14911768",
-        "municipality": "Fjällsjö kommun"
-    },
-    {
-        "item": "Q10496101",
-        "municipality": "Fjärestads landskommun"
-    },
-    {
-        "item": "Q15958772",
-        "municipality": "Fjärås kommun"
-    },
-    {
-        "item": "Q27982",
-        "municipality": "Flens kommun"
-    },
-    {
-        "item": "Q15240496",
-        "municipality": "Fliseryds kommun"
-    },
-    {
-        "item": "Q499385",
-        "municipality": "Forshaga kommun"
-    },
-    {
-        "item": "Q15354356",
-        "municipality": "Fridlevstads kommun"
-    },
-    {
-        "item": "Q499441",
-        "municipality": "Färgelanda kommun"
-    },
-    {
-        "item": "Q2642771",
-        "municipality": "Gagnefs kommun"
-    },
-    {
-        "item": "Q15782113",
-        "municipality": "Genarps kommun"
-    },
-    {
-        "item": "Q15962221",
-        "municipality": "Getinge kommun"
-    },
-    {
-        "item": "Q505259",
-        "municipality": "Gislaveds kommun"
-    },
-    {
-        "item": "Q15058334",
-        "municipality": "Glimåkra kommun"
-    },
-    {
-        "item": "Q239332",
-        "municipality": "Gnesta kommun"
-    },
-    {
-        "item": "Q15088430",
-        "municipality": "Gnesta kommun"
-    },
-    {
-        "item": "Q509609",
-        "municipality": "Gnosjö kommun"
-    },
-    {
-        "item": "Q374794",
-        "municipality": "Gotlands kommun"
-    },
-    {
-        "item": "Q503122",
-        "municipality": "Grums kommun"
-    },
-    {
-        "item": "Q503148",
-        "municipality": "Grästorps kommun"
-    },
-    {
-        "item": "Q503193",
-        "municipality": "Gullspångs kommun"
-    },
-    {
-        "item": "Q14948372",
-        "municipality": "Gustavsbergs kommun"
-    },
-    {
-        "item": "Q493815",
-        "municipality": "Gällivare kommun"
-    },
-    {
-        "item": "Q510010",
-        "municipality": "Gävle kommun"
-    },
-    {
-        "item": "Q52502",
-        "municipality": "Göteborgs kommun"
-    },
-    {
-        "item": "Q511281",
-        "municipality": "Götene kommun"
-    },
-    {
-        "item": "Q503198",
-        "municipality": "Habo kommun"
-    },
-    {
-        "item": "Q511407",
-        "municipality": "Hagfors kommun"
-    },
-    {
-        "item": "Q508180",
-        "municipality": "Hallsbergs kommun"
-    },
-    {
-        "item": "Q47019",
-        "municipality": "Hallstahammars kommun"
-    },
-    {
-        "item": "Q504692",
-        "municipality": "Halmstads kommun"
-    },
-    {
-        "item": "Q499359",
-        "municipality": "Hammarö kommun"
-    },
-    {
-        "item": "Q113692",
-        "municipality": "Haninge kommun"
-    },
-    {
-        "item": "Q510310",
-        "municipality": "Haparanda kommun"
-    },
-    {
-        "item": "Q10518332",
-        "municipality": "Harstads landskommun"
-    },
-    {
-        "item": "Q15373523",
-        "municipality": "Hasslö kommun"
-    },
-    {
-        "item": "Q516308",
-        "municipality": "Heby kommun"
-    },
-    {
-        "item": "Q507684",
-        "municipality": "Hedemora kommun"
-    },
-    {
-        "item": "Q487648",
-        "municipality": "Helsingborgs kommun"
-    },
-    {
-        "item": "Q503111",
-        "municipality": "Herrljunga kommun"
-    },
-    {
-        "item": "Q428749",
-        "municipality": "Hjo kommun"
-    },
-    {
-        "item": "Q15176463",
-        "municipality": "Hjälmseryds kommun"
-    },
-    {
-        "item": "Q15063037",
-        "municipality": "Hjärsås kommun"
-    },
-    {
-        "item": "Q62464",
-        "municipality": "Hofors kommun"
-    },
-    {
-        "item": "Q492575",
-        "municipality": "Huddinge kommun"
-    },
-    {
-        "item": "Q29963",
-        "municipality": "Hudiksvalls kommun"
-    },
-    {
-        "item": "Q512002",
-        "municipality": "Hultsfreds kommun"
-    },
-    {
-        "item": "Q498477",
-        "municipality": "Hylte kommun"
-    },
-    {
-        "item": "Q511253",
-        "municipality": "Håbo kommun"
-    },
-    {
-        "item": "Q14916455",
-        "municipality": "Hållnäs kommun"
-    },
-    {
-        "item": "Q220881",
-        "municipality": "Hällefors kommun"
-    },
-    {
-        "item": "Q513421",
-        "municipality": "Härjedalens kommun"
-    },
-    {
-        "item": "Q209634",
-        "municipality": "Härnösands kommun"
-    },
-    {
-        "item": "Q500125",
-        "municipality": "Härryda kommun"
-    },
-    {
-        "item": "Q15122662",
-        "municipality": "Härslövs kommun"
-    },
-    {
-        "item": "Q508125",
-        "municipality": "Hässleholms kommun"
-    },
-    {
-        "item": "Q15484676",
-        "municipality": "Hästveda kommun"
-    },
-    {
-        "item": "Q505013",
-        "municipality": "Höganäs kommun"
-    },
-    {
-        "item": "Q510233",
-        "municipality": "Högsby kommun"
-    },
-    {
-        "item": "Q504619",
-        "municipality": "Hörby kommun"
-    },
-    {
-        "item": "Q266401",
-        "municipality": "Höörs kommun"
-    },
-    {
-        "item": "Q14912483",
-        "municipality": "Indals-Lidens kommun"
-    },
-    {
-        "item": "Q512048",
-        "municipality": "Jokkmokks kommun"
-    },
-    {
-        "item": "Q15389301",
-        "municipality": "Jämjö kommun"
-    },
-    {
-        "item": "Q301259",
-        "municipality": "Järfälla kommun"
-    },
-    {
-        "item": "Q504689",
-        "municipality": "Jönköpings kommun"
-    },
-    {
-        "item": "Q117091",
-        "municipality": "Kalix kommun"
-    },
-    {
-        "item": "Q508153",
-        "municipality": "Kalmar kommun"
-    },
-    {
-        "item": "Q18291150",
-        "municipality": "Karesuando landskommun"
-    },
-    {
-        "item": "Q499435",
-        "municipality": "Karlsborgs kommun"
-    },
-    {
-        "item": "Q510223",
-        "municipality": "Karlshamns kommun"
-    },
-    {
-        "item": "Q509634",
-        "municipality": "Karlskoga kommun"
-    },
-    {
-        "item": "Q1128384",
-        "municipality": "Karlskrona kommun"
-    },
-    {
-        "item": "Q498453",
-        "municipality": "Karlstads kommun"
-    },
-    {
-        "item": "Q508140",
-        "municipality": "Katrineholms kommun"
-    },
-    {
-        "item": "Q499393",
-        "municipality": "Kils kommun"
-    },
-    {
-        "item": "Q515299",
-        "municipality": "Kinda kommun"
-    },
-    {
-        "item": "Q499474",
-        "municipality": "Kiruna kommun"
-    },
-    {
-        "item": "Q10545810",
-        "municipality": "Kiruna stad"
-    },
-    {
-        "item": "Q15528601",
-        "municipality": "Kiviks kommun"
-    },
-    {
-        "item": "Q504614",
-        "municipality": "Klippans kommun"
-    },
-    {
-        "item": "Q15072261",
-        "municipality": "Knislinge kommun"
-    },
-    {
-        "item": "Q504465",
-        "municipality": "Knivsta kommun"
-    },
-    {
-        "item": "Q514815",
-        "municipality": "Kramfors kommun"
-    },
-    {
-        "item": "Q498857",
-        "municipality": "Kristianstads kommun"
-    },
-    {
-        "item": "Q510364",
-        "municipality": "Kristinehamns kommun"
-    },
-    {
-        "item": "Q514707",
-        "municipality": "Krokoms kommun"
-    },
-    {
-        "item": "Q504988",
-        "municipality": "Kumla kommun"
-    },
-    {
-        "item": "Q499380",
-        "municipality": "Kungsbacka kommun"
-    },
-    {
-        "item": "Q47169",
-        "municipality": "Kungsörs kommun"
-    },
-    {
-        "item": "Q511394",
-        "municipality": "Kungälvs kommun"
-    },
-    {
-        "item": "Q15621679",
-        "municipality": "Kvidinge kommun"
-    },
-    {
-        "item": "Q513370",
-        "municipality": "Kävlinge kommun"
-    },
-    {
-        "item": "Q42009",
-        "municipality": "Köpings kommun"
-    },
-    {
-        "item": "Q487502",
-        "municipality": "Laholms kommun"
-    },
-    {
-        "item": "Q502298",
-        "municipality": "Landskrona kommun"
-    },
-    {
-        "item": "Q515326",
-        "municipality": "Laxå kommun"
-    },
-    {
-        "item": "Q515282",
-        "municipality": "Lekebergs kommun"
-    },
-    {
-        "item": "Q509651",
-        "municipality": "Leksands kommun"
-    },
-    {
-        "item": "Q503188",
-        "municipality": "Lerums kommun"
-    },
-    {
-        "item": "Q509488",
-        "municipality": "Lessebo kommun"
-    },
-    {
-        "item": "Q3120654",
-        "municipality": "Lidingö kommun"
-    },
-    {
-        "item": "Q515358",
-        "municipality": "Lidköpings kommun"
-    },
-    {
-        "item": "Q511241",
-        "municipality": "Lilla Edets kommun"
-    },
-    {
-        "item": "Q514858",
-        "municipality": "Lindesbergs kommun"
-    },
-    {
-        "item": "Q499410",
-        "municipality": "Linköpings kommun"
-    },
-    {
-        "item": "Q504235",
-        "municipality": "Ljungby kommun"
-    },
-    {
-        "item": "Q515235",
-        "municipality": "Ljusdals kommun"
-    },
-    {
-        "item": "Q514739",
-        "municipality": "Ljusnarsbergs kommun"
-    },
-    {
-        "item": "Q427991",
-        "municipality": "Lomma kommun"
-    },
-    {
-        "item": "Q15622699",
-        "municipality": "Loshults kommun"
-    },
-    {
-        "item": "Q503184",
-        "municipality": "Ludvika kommun"
-    },
-    {
-        "item": "Q177019",
-        "municipality": "Luleå kommun"
-    },
-    {
-        "item": "Q505018",
-        "municipality": "Lunds kommun"
-    },
-    {
-        "item": "Q948462",
-        "municipality": "Lycksele kommun"
-    },
-    {
-        "item": "Q503173",
-        "municipality": "Lysekils kommun"
-    },
-    {
-        "item": "Q10572409",
-        "municipality": "Lästringe landskommun"
-    },
-    {
-        "item": "Q15814213",
-        "municipality": "Löddeköpinge kommun"
-    },
-    {
-        "item": "Q503361",
-        "municipality": "Malmö kommun"
-    },
-    {
-        "item": "Q504266",
-        "municipality": "Malung-Sälens kommun"
-    },
-    {
-        "item": "Q501540",
-        "municipality": "Malå kommun"
-    },
-    {
-        "item": "Q427422",
-        "municipality": "Mariestads kommun"
-    },
-    {
-        "item": "Q240574",
-        "municipality": "Markaryds kommun"
-    },
-    {
-        "item": "Q500153",
-        "municipality": "Marks kommun"
-    },
-    {
-        "item": "Q14928074",
-        "municipality": "Matfors kommun"
-    },
-    {
-        "item": "Q501438",
-        "municipality": "Melleruds kommun"
-    },
-    {
-        "item": "Q267030",
-        "municipality": "Mjölby kommun"
-    },
-    {
-        "item": "Q504239",
-        "municipality": "Mora kommun"
+        "item": "Q507709",
+        "en": "Umeå Municipality",
+        "sv": "Umeå kommun"
     },
     {
         "item": "Q508108",
-        "municipality": "Motala kommun"
+        "en": "Motala Municipality",
+        "sv": "Motala kommun"
     },
     {
-        "item": "Q505076",
-        "municipality": "Mullsjö kommun"
-    },
-    {
-        "item": "Q389040",
-        "municipality": "Munkedals kommun"
-    },
-    {
-        "item": "Q501494",
-        "municipality": "Munkfors kommun"
-    },
-    {
-        "item": "Q15831729",
-        "municipality": "Månstorps kommun"
-    },
-    {
-        "item": "Q511270",
-        "municipality": "Mölndals kommun"
-    },
-    {
-        "item": "Q515250",
-        "municipality": "Mönsterås kommun"
-    },
-    {
-        "item": "Q514756",
-        "municipality": "Mörbylånga kommun"
-    },
-    {
-        "item": "Q946647",
-        "municipality": "Nacka kommun"
-    },
-    {
-        "item": "Q14927304",
-        "municipality": "Njurunda kommun"
-    },
-    {
-        "item": "Q285894",
-        "municipality": "Nora kommun"
-    },
-    {
-        "item": "Q14877250",
-        "municipality": "Noraströms kommun"
-    },
-    {
-        "item": "Q37404",
-        "municipality": "Norbergs kommun"
-    },
-    {
-        "item": "Q514805",
-        "municipality": "Nordanstigs kommun"
-    },
-    {
-        "item": "Q14878334",
-        "municipality": "Nordingrå kommun"
-    },
-    {
-        "item": "Q514722",
-        "municipality": "Nordmalings kommun"
-    },
-    {
-        "item": "Q15130388",
-        "municipality": "Norra Kinda kommun"
-    },
-    {
-        "item": "Q10602772",
-        "municipality": "Norrfjärdens landskommun"
-    },
-    {
-        "item": "Q504676",
-        "municipality": "Norrköpings kommun"
-    },
-    {
-        "item": "Q214048",
-        "municipality": "Norrtälje kommun"
-    },
-    {
-        "item": "Q10602968",
-        "municipality": "Norrtälje stad"
-    },
-    {
-        "item": "Q507644",
-        "municipality": "Norsjö kommun"
-    },
-    {
-        "item": "Q515318",
-        "municipality": "Nybro kommun"
-    },
-    {
-        "item": "Q499460",
-        "municipality": "Nykvarns kommun"
-    },
-    {
-        "item": "Q500267",
-        "municipality": "Nyköpings kommun"
-    },
-    {
-        "item": "Q505090",
-        "municipality": "Nynäshamns kommun"
-    },
-    {
-        "item": "Q505096",
-        "municipality": "Nässjö kommun"
-    },
-    {
-        "item": "Q15623555",
-        "municipality": "Näsums kommun"
-    },
-    {
-        "item": "Q15400678",
-        "municipality": "Nättraby kommun"
-    },
-    {
-        "item": "Q505109",
-        "municipality": "Ockelbo kommun"
-    },
-    {
-        "item": "Q13883038",
-        "municipality": "Olands kommun"
-    },
-    {
-        "item": "Q504257",
-        "municipality": "Olofströms kommun"
-    },
-    {
-        "item": "Q15633360",
-        "municipality": "Oppmanna och Vånga kommun"
-    },
-    {
-        "item": "Q15058802",
-        "municipality": "Ore kommun"
-    },
-    {
-        "item": "Q504630",
-        "municipality": "Orsa kommun"
-    },
-    {
-        "item": "Q338752",
-        "municipality": "Orusts kommun"
-    },
-    {
-        "item": "Q504594",
-        "municipality": "Osby kommun"
-    },
-    {
-        "item": "Q505006",
-        "municipality": "Oskarshamns kommun"
-    },
-    {
-        "item": "Q505085",
-        "municipality": "Ovanåkers kommun"
-    },
-    {
-        "item": "Q505246",
-        "municipality": "Oxelösunds kommun"
-    },
-    {
-        "item": "Q186230",
-        "municipality": "Pajala kommun"
-    },
-    {
-        "item": "Q125222",
-        "municipality": "Partille kommun"
-    },
-    {
-        "item": "Q504249",
-        "municipality": "Perstorps kommun"
-    },
-    {
-        "item": "Q507656",
-        "municipality": "Piteå kommun"
-    },
-    {
-        "item": "Q515342",
-        "municipality": "Ragunda kommun"
-    },
-    {
-        "item": "Q14905983",
-        "municipality": "Ramsele kommun"
-    },
-    {
-        "item": "Q15179611",
-        "municipality": "Reftele kommun"
-    },
-    {
-        "item": "Q15645716",
-        "municipality": "Riseberga kommun"
-    },
-    {
-        "item": "Q507670",
-        "municipality": "Robertsfors kommun"
-    },
-    {
-        "item": "Q515373",
-        "municipality": "Ronneby kommun"
-    },
-    {
-        "item": "Q15839302",
-        "municipality": "Rängs kommun"
-    },
-    {
-        "item": "Q504244",
-        "municipality": "Rättviks kommun"
-    },
-    {
-        "item": "Q15406473",
-        "municipality": "Rödeby kommun"
-    },
-    {
-        "item": "Q10658966",
-        "municipality": "Rödöns landskommun"
-    },
-    {
-        "item": "Q37399",
-        "municipality": "Sala kommun"
-    },
-    {
-        "item": "Q516080",
-        "municipality": "Salems kommun"
-    },
-    {
-        "item": "Q14943851",
-        "municipality": "Salems kommun"
-    },
-    {
-        "item": "Q149539",
-        "municipality": "Sandvikens kommun"
-    },
-    {
-        "item": "Q216915",
-        "municipality": "Sigtuna kommun"
-    },
-    {
-        "item": "Q504626",
-        "municipality": "Simrishamns kommun"
-    },
-    {
-        "item": "Q504601",
-        "municipality": "Sjöbo kommun"
-    },
-    {
-        "item": "Q15846450",
-        "municipality": "Skanör med Falsterbo kommun"
-    },
-    {
-        "item": "Q499421",
-        "municipality": "Skara kommun"
-    },
-    {
-        "item": "Q430780",
-        "municipality": "Skellefteå kommun"
-    },
-    {
-        "item": "Q37462",
-        "municipality": "Skinnskattebergs kommun"
-    },
-    {
-        "item": "Q515266",
-        "municipality": "Skurups kommun"
-    },
-    {
-        "item": "Q501452",
-        "municipality": "Skövde kommun"
-    },
-    {
-        "item": "Q505046",
-        "municipality": "Smedjebackens kommun"
-    },
-    {
-        "item": "Q221990",
-        "municipality": "Sollefteå kommun"
-    },
-    {
-        "item": "Q503746",
-        "municipality": "Sollentuna kommun"
-    },
-    {
-        "item": "Q109010",
-        "municipality": "Solna kommun"
-    },
-    {
-        "item": "Q501463",
-        "municipality": "Sorsele kommun"
-    },
-    {
-        "item": "Q15042000",
-        "municipality": "Sorunda kommun"
-    },
-    {
-        "item": "Q501420",
-        "municipality": "Sotenäs kommun"
-    },
-    {
-        "item": "Q2261863",
-        "municipality": "stad i Sverige"
-    },
-    {
-        "item": "Q504609",
-        "municipality": "Staffanstorps kommun"
-    },
-    {
-        "item": "Q15137290",
-        "municipality": "Stegeborgs kommun"
-    },
-    {
-        "item": "Q511438",
-        "municipality": "Stenungsunds kommun"
-    },
-    {
-        "item": "Q506250",
-        "municipality": "Stockholms kommun"
-    },
-    {
-        "item": "Q505936",
-        "municipality": "Storfors kommun"
-    },
-    {
-        "item": "Q499415",
-        "municipality": "Storumans kommun"
-    },
-    {
-        "item": "Q501532",
-        "municipality": "Strängnäs kommun"
-    },
-    {
-        "item": "Q501424",
-        "municipality": "Strömstads kommun"
-    },
-    {
-        "item": "Q514770",
-        "municipality": "Strömsunds kommun"
-    },
-    {
-        "item": "Q14930439",
-        "municipality": "Stöde kommun"
-    },
-    {
-        "item": "Q972564",
-        "municipality": "Sundbybergs kommun"
-    },
-    {
-        "item": "Q504994",
-        "municipality": "Sundsvalls kommun"
-    },
-    {
-        "item": "Q501205",
-        "municipality": "Sunne kommun"
-    },
-    {
-        "item": "Q34078",
-        "municipality": "Surahammars kommun"
-    },
-    {
-        "item": "Q504227",
-        "municipality": "Svalövs kommun"
-    },
-    {
-        "item": "Q515706",
-        "municipality": "Svedala kommun"
-    },
-    {
-        "item": "Q501487",
-        "municipality": "Svenljunga kommun"
-    },
-    {
-        "item": "Q511326",
-        "municipality": "Säffle kommun"
-    },
-    {
-        "item": "Q1345439",
-        "municipality": "Säters kommun"
-    },
-    {
-        "item": "Q15114213",
-        "municipality": "Sävars kommun"
-    },
-    {
-        "item": "Q505239",
-        "municipality": "Sävsjö kommun"
-    },
-    {
-        "item": "Q14920380",
-        "municipality": "Söderfors kommun"
-    },
-    {
-        "item": "Q145835",
-        "municipality": "Söderhamns kommun"
-    },
-    {
-        "item": "Q515680",
-        "municipality": "Söderköpings kommun"
-    },
-    {
-        "item": "Q516336",
-        "municipality": "Södertälje kommun"
-    },
-    {
-        "item": "Q15138617",
-        "municipality": "Södra Kinda kommun"
-    },
-    {
-        "item": "Q15197720",
-        "municipality": "Södra Mo kommun"
-    },
-    {
-        "item": "Q15894293",
-        "municipality": "Södra Sandby kommun"
-    },
-    {
-        "item": "Q515409",
-        "municipality": "Sölvesborgs kommun"
-    },
-    {
-        "item": "Q15648262",
-        "municipality": "Sösdala kommun"
-    },
-    {
-        "item": "Q511228",
-        "municipality": "Tanums kommun"
-    },
-    {
-        "item": "Q501432",
-        "municipality": "Tibro kommun"
-    },
-    {
-        "item": "Q501459",
-        "municipality": "Tidaholms kommun"
-    },
-    {
-        "item": "Q510198",
-        "municipality": "Tierps kommun"
-    },
-    {
-        "item": "Q13853453",
-        "municipality": "Tierpsbygdens kommun"
-    },
-    {
-        "item": "Q504983",
-        "municipality": "Timrå kommun"
-    },
-    {
-        "item": "Q515491",
-        "municipality": "Tingsryds kommun"
-    },
-    {
-        "item": "Q15140047",
-        "municipality": "Tjällmo kommun"
-    },
-    {
-        "item": "Q501448",
-        "municipality": "Tjörns kommun"
-    },
-    {
-        "item": "Q15663506",
-        "municipality": "Tollarps kommun"
-    },
-    {
-        "item": "Q515519",
-        "municipality": "Tomelilla kommun"
-    },
-    {
-        "item": "Q510135",
-        "municipality": "Torsby kommun"
-    },
-    {
-        "item": "Q15243279",
-        "municipality": "Torslunda kommun"
-    },
-    {
-        "item": "Q10700445",
-        "municipality": "Torsåkers landskommun, Ångermanland"
-    },
-    {
-        "item": "Q515551",
-        "municipality": "Torsås kommun"
-    },
-    {
-        "item": "Q15303537",
-        "municipality": "Torups kommun"
-    },
-    {
-        "item": "Q501479",
-        "municipality": "Tranemo kommun"
-    },
-    {
-        "item": "Q505071",
-        "municipality": "Tranås kommun"
-    },
-    {
-        "item": "Q504219",
-        "municipality": "Trelleborgs kommun"
-    },
-    {
-        "item": "Q28532",
-        "municipality": "Trollhättans kommun"
-    },
-    {
-        "item": "Q505064",
-        "municipality": "Trosa kommun"
-    },
-    {
-        "item": "Q15093355",
-        "municipality": "Trosa kommun"
-    },
-    {
-        "item": "Q113730",
-        "municipality": "Tyresö kommun"
-    },
-    {
-        "item": "Q15703031",
-        "municipality": "Tyringe kommun"
-    },
-    {
-        "item": "Q493066",
-        "municipality": "Täby kommun"
-    },
-    {
-        "item": "Q501470",
-        "municipality": "Töreboda kommun"
-    },
-    {
-        "item": "Q501442",
-        "municipality": "Uddevalla kommun"
-    },
-    {
-        "item": "Q14898904",
-        "municipality": "Ullångers kommun"
-    },
-    {
-        "item": "Q382808",
-        "municipality": "Ulricehamns kommun"
-    },
-    {
-        "item": "Q507709",
-        "municipality": "Umeå kommun"
-    },
-    {
-        "item": "Q15205707",
-        "municipality": "Unnaryds kommun"
-    },
-    {
-        "item": "Q499425",
-        "municipality": "Upplands Väsby kommun"
-    },
-    {
-        "item": "Q113673",
-        "municipality": "Upplands-Bro kommun"
-    },
-    {
-        "item": "Q59091",
-        "municipality": "Uppsala kommun"
-    },
-    {
-        "item": "Q515505",
-        "municipality": "Uppvidinge kommun"
-    },
-    {
-        "item": "Q515969",
-        "municipality": "Vadstena kommun"
-    },
-    {
-        "item": "Q15155416",
-        "municipality": "Vadstena kommun"
-    },
-    {
-        "item": "Q605329",
-        "municipality": "Vaggeryds kommun"
-    },
-    {
-        "item": "Q15093364",
-        "municipality": "Vagnhärads kommun"
-    },
-    {
-        "item": "Q509997",
-        "municipality": "Valdemarsviks kommun"
-    },
-    {
-        "item": "Q501526",
-        "municipality": "Vallentuna kommun"
-    },
-    {
-        "item": "Q501551",
-        "municipality": "Vansbro kommun"
-    },
-    {
-        "item": "Q501428",
-        "municipality": "Vara kommun"
-    },
-    {
-        "item": "Q179180",
-        "municipality": "Varbergs kommun"
-    },
-    {
-        "item": "Q500090",
-        "municipality": "Vaxholms kommun"
-    },
-    {
-        "item": "Q15903687",
-        "municipality": "Veberöds kommun"
-    },
-    {
-        "item": "Q511338",
-        "municipality": "Vellinge kommun"
-    },
-    {
-        "item": "Q14915592",
-        "municipality": "Vendels kommun"
-    },
-    {
-        "item": "Q505052",
-        "municipality": "Vetlanda kommun"
-    },
-    {
-        "item": "Q15142515",
-        "municipality": "Vikbolandets kommun"
-    },
-    {
-        "item": "Q515861",
-        "municipality": "Vilhelmina kommun"
-    },
-    {
-        "item": "Q15214217",
-        "municipality": "Villstads kommun"
-    },
-    {
-        "item": "Q505057",
-        "municipality": "Vimmerby kommun"
-    },
-    {
-        "item": "Q504505",
-        "municipality": "Vindelns kommun"
-    },
-    {
-        "item": "Q249378",
-        "municipality": "Vingåkers kommun"
-    },
-    {
-        "item": "Q15709121",
-        "municipality": "Vinslövs centralkommun"
-    },
-    {
-        "item": "Q15707051",
-        "municipality": "Vinslövs kommun"
-    },
-    {
-        "item": "Q15710218",
-        "municipality": "Vittsjö kommun"
-    },
-    {
-        "item": "Q15920022",
-        "municipality": "Vollsjö kommun"
-    },
-    {
-        "item": "Q511297",
-        "municipality": "Vårgårda kommun"
-    },
-    {
-        "item": "Q511426",
-        "municipality": "Vänersborgs kommun"
-    },
-    {
-        "item": "Q500210",
-        "municipality": "Vännäs kommun"
-    },
-    {
-        "item": "Q493841",
-        "municipality": "Värmdö kommun"
-    },
-    {
-        "item": "Q280562",
-        "municipality": "Värnamo kommun"
-    },
-    {
-        "item": "Q515477",
-        "municipality": "Västerviks kommun"
+        "item": "Q508125",
+        "en": "Hässleholm Municipality",
+        "sv": "Hässleholms kommun"
     },
     {
         "item": "Q34550",
-        "municipality": "Västerås kommun"
+        "en": "Västerås Municipality",
+        "sv": "Västerås kommun"
     },
     {
-        "item": "Q14919771",
-        "municipality": "Västlands kommun"
+        "item": "Q37399",
+        "en": "Sala Municipality",
+        "sv": "Sala kommun"
     },
     {
-        "item": "Q14934211",
-        "municipality": "Västra Kinda kommun"
+        "item": "Q37404",
+        "en": "Norberg Municipality",
+        "sv": "Norbergs kommun"
     },
     {
-        "item": "Q500217",
-        "municipality": "Växjö kommun"
+        "item": "Q499464",
+        "en": "Båstad Municipality",
+        "sv": "Båstads kommun"
     },
     {
-        "item": "Q515699",
-        "municipality": "Ydre kommun"
+        "item": "Q499474",
+        "en": "Kiruna Municipality",
+        "sv": "Kiruna kommun"
     },
     {
-        "item": "Q505102",
-        "municipality": "Ystads kommun"
+        "item": "Q500071",
+        "en": "Avesta Municipality",
+        "sv": "Avesta kommun"
+    },
+    {
+        "item": "Q500090",
+        "en": "Vaxholm Municipality",
+        "sv": "Vaxholms kommun"
+    },
+    {
+        "item": "Q500125",
+        "en": "Härryda Municipality",
+        "sv": "Härryda kommun"
+    },
+    {
+        "item": "Q500153",
+        "en": "Mark Municipality",
+        "sv": "Marks kommun"
+    },
+    {
+        "item": "Q37462",
+        "en": "Skinnskatteberg Municipality",
+        "sv": "Skinnskattebergs kommun"
+    },
+    {
+        "item": "Q27982",
+        "en": "Flen Municipality",
+        "sv": "Flens kommun"
+    },
+    {
+        "item": "Q28532",
+        "en": "Trollhättan Municipality",
+        "sv": "Trollhättans kommun"
+    },
+    {
+        "item": "Q29963",
+        "en": "Hudiksvall Municipality",
+        "sv": "Hudiksvalls kommun"
+    },
+    {
+        "item": "Q499435",
+        "en": "Karlsborg Municipality",
+        "sv": "Karlsborgs kommun"
+    },
+    {
+        "item": "Q499441",
+        "en": "Färgelanda Municipality",
+        "sv": "Färgelanda kommun"
+    },
+    {
+        "item": "Q499460",
+        "en": "Nykvarn Municipality",
+        "sv": "Nykvarns kommun"
+    },
+    {
+        "item": "Q508180",
+        "en": "Hallsberg Municipality",
+        "sv": "Hallsbergs kommun"
+    },
+    {
+        "item": "Q509452",
+        "en": "Emmaboda Municipality",
+        "sv": "Emmaboda kommun"
+    },
+    {
+        "item": "Q509469",
+        "en": "Degerfors Municipality",
+        "sv": "Degerfors kommun"
+    },
+    {
+        "item": "Q508140",
+        "en": "Katrineholm Municipality",
+        "sv": "Katrineholms kommun"
+    },
+    {
+        "item": "Q508153",
+        "en": "Kalmar Municipality",
+        "sv": "Kalmar kommun"
+    },
+    {
+        "item": "Q508168",
+        "en": "Falkenberg Municipality",
+        "sv": "Falkenbergs kommun"
+    },
+    {
+        "item": "Q509546",
+        "en": "Borgholm Municipality",
+        "sv": "Borgholms kommun"
+    },
+    {
+        "item": "Q509568",
+        "en": "Enköping Municipality",
+        "sv": "Enköpings kommun"
+    },
+    {
+        "item": "Q509609",
+        "en": "Gnosjö Municipality",
+        "sv": "Gnosjö kommun"
+    },
+    {
+        "item": "Q34078",
+        "en": "Surahammar Municipality",
+        "sv": "Surahammars kommun"
+    },
+    {
+        "item": "Q42009",
+        "en": "Köping Municipality",
+        "sv": "Köpings kommun"
+    },
+    {
+        "item": "Q47018",
+        "en": "Fagersta Municipality",
+        "sv": "Fagersta kommun"
+    },
+    {
+        "item": "Q47019",
+        "en": "Hallstahammar Municipality",
+        "sv": "Hallstahammars kommun"
+    },
+    {
+        "item": "Q109010",
+        "en": "Solna Municipality",
+        "sv": "Solna kommun"
+    },
+    {
+        "item": "Q113673",
+        "en": "Upplands-Bro Municipality",
+        "sv": "Upplands-Bro kommun"
+    },
+    {
+        "item": "Q509476",
+        "en": "Boden Municipality",
+        "sv": "Bodens kommun"
+    },
+    {
+        "item": "Q47169",
+        "en": "Kungsör Municipality",
+        "sv": "Kungsörs kommun"
+    },
+    {
+        "item": "Q52502",
+        "en": "Gothenburg Municipality",
+        "sv": "Göteborgs kommun"
+    },
+    {
+        "item": "Q59091",
+        "en": "Uppsala Municipality",
+        "sv": "Uppsala kommun"
+    },
+    {
+        "item": "Q15176463",
+        "en": "Hjälmseryd Municipality",
+        "sv": "Hjälmseryds kommun"
+    },
+    {
+        "item": "Q15179611",
+        "en": "Reftele municipality",
+        "sv": "Reftele kommun"
+    },
+    {
+        "item": "Q15197720",
+        "en": "Södra Mo municipality",
+        "sv": "Södra Mo kommun"
+    },
+    {
+        "item": "Q15205707",
+        "en": "Unnaryd municipality",
+        "sv": "Unnaryds kommun"
+    },
+    {
+        "item": "Q15214217",
+        "en": "Villstads municipality",
+        "sv": "Villstads kommun"
+    },
+    {
+        "item": "Q15240496",
+        "en": "Flieseryd municipality",
+        "sv": "Fliseryds kommun"
+    },
+    {
+        "item": "Q15243279",
+        "en": "Torslunda municipality",
+        "sv": "Torslunda kommun"
     },
     {
         "item": "Q15253362",
-        "municipality": "Ålems kommun"
-    },
-    {
-        "item": "Q271079",
-        "municipality": "Åmåls kommun"
-    },
-    {
-        "item": "Q271107",
-        "municipality": "Ånge kommun"
-    },
-    {
-        "item": "Q271153",
-        "municipality": "Åre kommun"
-    },
-    {
-        "item": "Q2777887",
-        "municipality": "Årjängs kommun"
-    },
-    {
-        "item": "Q271274",
-        "municipality": "Åsele kommun"
-    },
-    {
-        "item": "Q201813",
-        "municipality": "Åstorps kommun"
-    },
-    {
-        "item": "Q271340",
-        "municipality": "Åtvidabergs kommun"
-    },
-    {
-        "item": "Q254799",
-        "municipality": "Älmhults kommun"
-    },
-    {
-        "item": "Q123855",
-        "municipality": "Älvdalens kommun"
-    },
-    {
-        "item": "Q59858",
-        "municipality": "Älvkarleby kommun"
-    },
-    {
-        "item": "Q255025",
-        "municipality": "Älvsbyns kommun"
-    },
-    {
-        "item": "Q255206",
-        "municipality": "Ängelholms kommun"
-    },
-    {
-        "item": "Q293928",
-        "municipality": "Öckerö kommun"
-    },
-    {
-        "item": "Q293970",
-        "municipality": "Ödeshögs kommun"
+        "en": "Ålem municipality",
+        "sv": "Ålems kommun"
     },
     {
         "item": "Q15272214",
-        "municipality": "Ölands-Åkerbo kommun"
+        "en": "Ölands-Åkerbo municipality",
+        "sv": "Ölands-Åkerbo kommun"
     },
     {
-        "item": "Q297718",
-        "municipality": "Örebro kommun"
+        "item": "Q15303537",
+        "en": "Torup Municipality",
+        "sv": "Torups kommun"
     },
     {
-        "item": "Q297936",
-        "municipality": "Örkelljunga kommun"
+        "item": "Q15354356",
+        "en": "Fridlevstad municipality",
+        "sv": "Fridlevstads kommun"
     },
     {
-        "item": "Q15726251",
-        "municipality": "Örkeneds kommun"
+        "item": "Q15373523",
+        "en": "Hasslö municipality",
+        "sv": "Hasslö kommun"
     },
     {
-        "item": "Q298003",
-        "municipality": "Örnsköldsviks kommun"
+        "item": "Q15389301",
+        "en": "Jämjö municipality",
+        "sv": "Jämjö kommun"
     },
     {
-        "item": "Q15042003",
-        "municipality": "Ösmo kommun"
+        "item": "Q15400678",
+        "en": "Nättraby municipality",
+        "sv": "Nättraby kommun"
+    },
+    {
+        "item": "Q15406473",
+        "en": "Rödeby municipality",
+        "sv": "Rödeby kommun"
+    },
+    {
+        "item": "Q15471602",
+        "en": "Degeberga municipality",
+        "sv": "Degeberga kommun"
+    },
+    {
+        "item": "Q15484676",
+        "en": "Hästveda municipality",
+        "sv": "Hästveda kommun"
+    },
+    {
+        "item": "Q15528601",
+        "en": "Kivik municipality",
+        "sv": "Kiviks kommun"
+    },
+    {
+        "item": "Q15621679",
+        "en": "Kvidinge municipality",
+        "sv": "Kvidinge kommun"
+    },
+    {
+        "item": "Q15622699",
+        "en": "Loshult municipality",
+        "sv": "Loshults kommun"
+    },
+    {
+        "item": "Q15623555",
+        "en": "Näsum municipality",
+        "sv": "Näsums kommun"
+    },
+    {
+        "item": "Q15633360",
+        "en": "Oppmanna och Vånga municipality",
+        "sv": "Oppmanna och Vånga kommun"
+    },
+    {
+        "item": "Q15645716",
+        "en": "Riseberga Municipality",
+        "sv": "Riseberga kommun"
+    },
+    {
+        "item": "Q15648262",
+        "en": "Sösdala municipality",
+        "sv": "Sösdala kommun"
+    },
+    {
+        "item": "Q500210",
+        "en": "Vännäs Municipality",
+        "sv": "Vännäs kommun"
+    },
+    {
+        "item": "Q500217",
+        "en": "Växjö Municipality",
+        "sv": "Växjö kommun"
+    },
+    {
+        "item": "Q500267",
+        "en": "Nyköping Municipality",
+        "sv": "Nyköpings kommun"
+    },
+    {
+        "item": "Q510364",
+        "en": "Kristinehamn Municipality",
+        "sv": "Kristinehamns kommun"
+    },
+    {
+        "item": "Q511228",
+        "en": "Tanum Municipality",
+        "sv": "Tanums kommun"
+    },
+    {
+        "item": "Q511241",
+        "en": "Lilla Edet Municipality",
+        "sv": "Lilla Edets kommun"
+    },
+    {
+        "item": "Q13853453",
+        "en": "Tierpsbygden Municipality",
+        "sv": "Tierpsbygdens kommun"
+    },
+    {
+        "item": "Q13883038",
+        "en": "Oland Municipality",
+        "sv": "Olands kommun"
+    },
+    {
+        "item": "Q14856970",
+        "en": "Bjärtrå Municipality",
+        "sv": "Bjärtrå kommun"
+    },
+    {
+        "item": "Q14877250",
+        "en": "Noraström Municipality",
+        "sv": "Noraströms kommun"
+    },
+    {
+        "item": "Q14878334",
+        "en": "Nordingrå Municipality",
+        "sv": "Nordingrå kommun"
+    },
+    {
+        "item": "Q14898904",
+        "en": "Ullånger Municipality",
+        "sv": "Ullångers kommun"
+    },
+    {
+        "item": "Q14900304",
+        "en": "Boteå Municipality",
+        "sv": "Boteå kommun"
+    },
+    {
+        "item": "Q14905983",
+        "en": "Ramsele Municipality",
+        "sv": "Ramsele kommun"
+    },
+    {
+        "item": "Q14911768",
+        "en": "Fjällsjö Municipality",
+        "sv": "Fjällsjö kommun"
+    },
+    {
+        "item": "Q14912483",
+        "en": "Indals-Liden Municipality",
+        "sv": "Indals-Lidens kommun"
+    },
+    {
+        "item": "Q14914665",
+        "en": "Dannemora Municipality",
+        "sv": "Dannemora kommun"
+    },
+    {
+        "item": "Q14915592",
+        "en": "Vendel Municipality",
+        "sv": "Vendels kommun"
+    },
+    {
+        "item": "Q14916455",
+        "en": "Hållnäs Municipality",
+        "sv": "Hållnäs kommun"
     },
     {
         "item": "Q14917255",
-        "municipality": "Österlövsta kommun"
+        "en": "Överlövsta Municipality",
+        "sv": "Österlövsta kommun"
     },
     {
-        "item": "Q306789",
-        "municipality": "Östersunds kommun"
+        "item": "Q14919771",
+        "en": "Västland Municipality",
+        "sv": "Västlands kommun"
+    },
+    {
+        "item": "Q14920380",
+        "en": "Söderfors Municipality",
+        "sv": "Söderfors kommun"
+    },
+    {
+        "item": "Q14927304",
+        "en": "Njurunda Municipality",
+        "sv": "Njurunda kommun"
+    },
+    {
+        "item": "Q14928074",
+        "en": "Matfors Municipality",
+        "sv": "Matfors kommun"
+    },
+    {
+        "item": "Q14930439",
+        "en": "Stöde Municipality",
+        "sv": "Stöde kommun"
+    },
+    {
+        "item": "Q14934211",
+        "en": "Västra Kinda Municipality",
+        "sv": "Västra Kinda kommun"
+    },
+    {
+        "item": "Q14943049",
+        "en": "Djurö Municipality",
+        "sv": "Djurö kommun"
+    },
+    {
+        "item": "Q14943851",
+        "en": "Salem Municipality",
+        "sv": "Salems kommun"
+    },
+    {
+        "item": "Q510233",
+        "en": "Högsby Municipality",
+        "sv": "Högsby kommun"
+    },
+    {
+        "item": "Q510310",
+        "en": "Haparanda Municipality",
+        "sv": "Haparanda kommun"
+    },
+    {
+        "item": "Q501532",
+        "en": "Strängnäs Municipality",
+        "sv": "Strängnäs kommun"
+    },
+    {
+        "item": "Q501540",
+        "en": "Malå Municipality",
+        "sv": "Malå kommun"
+    },
+    {
+        "item": "Q501545",
+        "en": "Falun Municipality",
+        "sv": "Falu kommun"
+    },
+    {
+        "item": "Q501428",
+        "en": "Vara Municipality",
+        "sv": "Vara kommun"
+    },
+    {
+        "item": "Q501432",
+        "en": "Tibro Municipality",
+        "sv": "Tibro kommun"
+    },
+    {
+        "item": "Q501438",
+        "en": "Mellerud Municipality",
+        "sv": "Melleruds kommun"
+    },
+    {
+        "item": "Q14948372",
+        "en": "Gustavsberg Municipality",
+        "sv": "Gustavsbergs kommun"
+    },
+    {
+        "item": "Q15042000",
+        "en": "Sorunda Municipality",
+        "sv": "Sorunda kommun"
+    },
+    {
+        "item": "Q15042003",
+        "en": "Ösmo Municipality",
+        "sv": "Ösmo kommun"
+    },
+    {
+        "item": "Q15057053",
+        "en": "Broby Municipality",
+        "sv": "Broby kommun"
+    },
+    {
+        "item": "Q113679",
+        "en": "Danderyd Municipality",
+        "sv": "Danderyds kommun"
+    },
+    {
+        "item": "Q113692",
+        "en": "Haninge Municipality",
+        "sv": "Haninge kommun"
+    },
+    {
+        "item": "Q509488",
+        "en": "Lessebo Municipality",
+        "sv": "Lessebo kommun"
+    },
+    {
+        "item": "Q509501",
+        "en": "Askersund Municipality",
+        "sv": "Askersunds kommun"
+    },
+    {
+        "item": "Q509514",
+        "en": "Boxholm Municipality",
+        "sv": "Boxholms kommun"
+    },
+    {
+        "item": "Q177019",
+        "en": "Luleå Municipality",
+        "sv": "Luleå kommun"
+    },
+    {
+        "item": "Q179180",
+        "en": "Varberg Municipality",
+        "sv": "Varbergs kommun"
+    },
+    {
+        "item": "Q182007",
+        "en": "Alvesta Municipality",
+        "sv": "Alvesta kommun"
+    },
+    {
+        "item": "Q510223",
+        "en": "Karlshamn Municipality",
+        "sv": "Karlshamns kommun"
+    },
+    {
+        "item": "Q510010",
+        "en": "Gävle Municipality",
+        "sv": "Gävle kommun"
+    },
+    {
+        "item": "Q510135",
+        "en": "Torsby Municipality",
+        "sv": "Torsby kommun"
+    },
+    {
+        "item": "Q510198",
+        "en": "Tierp Municipality",
+        "sv": "Tierps kommun"
+    },
+    {
+        "item": "Q511253",
+        "en": "Håbo Municipality",
+        "sv": "Håbo kommun"
+    },
+    {
+        "item": "Q501459",
+        "en": "Tidaholm Municipality",
+        "sv": "Tidaholms kommun"
+    },
+    {
+        "item": "Q501463",
+        "en": "Sorsele Municipality",
+        "sv": "Sorsele kommun"
+    },
+    {
+        "item": "Q503144",
+        "en": "Eskilstuna Municipality",
+        "sv": "Eskilstuna kommun"
+    },
+    {
+        "item": "Q503148",
+        "en": "Grästorp Municipality",
+        "sv": "Grästorps kommun"
+    },
+    {
+        "item": "Q503162",
+        "en": "Alingsås Municipality",
+        "sv": "Alingsås kommun"
+    },
+    {
+        "item": "Q501205",
+        "en": "Sunne Municipality",
+        "sv": "Sunne kommun"
+    },
+    {
+        "item": "Q501420",
+        "en": "Sotenäs Municipality",
+        "sv": "Sotenäs kommun"
+    },
+    {
+        "item": "Q501424",
+        "en": "Strömstad Municipality",
+        "sv": "Strömstads kommun"
+    },
+    {
+        "item": "Q501470",
+        "en": "Töreboda Municipality",
+        "sv": "Töreboda kommun"
+    },
+    {
+        "item": "Q501479",
+        "en": "Tranemo Municipality",
+        "sv": "Tranemo kommun"
+    },
+    {
+        "item": "Q509634",
+        "en": "Karlskoga Municipality",
+        "sv": "Karlskoga kommun"
+    },
+    {
+        "item": "Q509651",
+        "en": "Leksand Municipality",
+        "sv": "Leksands kommun"
+    },
+    {
+        "item": "Q113718",
+        "en": "Botkyrka Municipality",
+        "sv": "Botkyrka kommun"
+    },
+    {
+        "item": "Q113730",
+        "en": "Tyresö Municipality",
+        "sv": "Tyresö kommun"
+    },
+    {
+        "item": "Q501551",
+        "en": "Vansbro Municipality",
+        "sv": "Vansbro kommun"
+    },
+    {
+        "item": "Q502298",
+        "en": "Landskrona Municipality",
+        "sv": "Landskrona kommun"
+    },
+    {
+        "item": "Q503102",
+        "en": "Bollebygd Municipality",
+        "sv": "Bollebygds kommun"
+    },
+    {
+        "item": "Q216915",
+        "en": "Sigtuna Municipality",
+        "sv": "Sigtuna kommun"
+    },
+    {
+        "item": "Q220881",
+        "en": "Hällefors Municipality",
+        "sv": "Hällefors kommun"
+    },
+    {
+        "item": "Q221990",
+        "en": "Sollefteå Municipality",
+        "sv": "Sollefteå kommun"
+    },
+    {
+        "item": "Q501442",
+        "en": "Uddevalla Municipality",
+        "sv": "Uddevalla kommun"
+    },
+    {
+        "item": "Q501448",
+        "en": "Tjörn Municipality",
+        "sv": "Tjörns kommun"
+    },
+    {
+        "item": "Q501452",
+        "en": "Skövde Municipality",
+        "sv": "Skövde kommun"
+    },
+    {
+        "item": "Q125222",
+        "en": "Partille Municipality",
+        "sv": "Partille kommun"
+    },
+    {
+        "item": "Q132334",
+        "en": "Dorotea Municipality",
+        "sv": "Dorotea kommun"
+    },
+    {
+        "item": "Q145835",
+        "en": "Söderhamn Municipality",
+        "sv": "Söderhamns kommun"
+    },
+    {
+        "item": "Q149539",
+        "en": "Sandviken Municipality",
+        "sv": "Sandvikens kommun"
+    },
+    {
+        "item": "Q511407",
+        "en": "Hagfors Municipality",
+        "sv": "Hagfors kommun"
+    },
+    {
+        "item": "Q511310",
+        "en": "Bjuv Municipality",
+        "sv": "Bjuvs kommun"
+    },
+    {
+        "item": "Q511326",
+        "en": "Säffle Municipality",
+        "sv": "Säffle kommun"
+    },
+    {
+        "item": "Q511338",
+        "en": "Vellinge Municipality",
+        "sv": "Vellinge kommun"
+    },
+    {
+        "item": "Q511365",
+        "en": "Arvika Municipality",
+        "sv": "Arvika kommun"
+    },
+    {
+        "item": "Q511394",
+        "en": "Kungälv Municipality",
+        "sv": "Kungälvs kommun"
+    },
+    {
+        "item": "Q209634",
+        "en": "Härnösand Municipality",
+        "sv": "Härnösands kommun"
+    },
+    {
+        "item": "Q214048",
+        "en": "Norrtälje Municipality",
+        "sv": "Norrtälje kommun"
+    },
+    {
+        "item": "Q117091",
+        "en": "Kalix Municipality",
+        "sv": "Kalix kommun"
     },
     {
         "item": "Q117728",
-        "municipality": "Österåkers kommun"
+        "en": "Österåker Municipality",
+        "sv": "Österåkers kommun"
+    },
+    {
+        "item": "Q123855",
+        "en": "Älvdalen Municipality",
+        "sv": "Älvdalens kommun"
+    },
+    {
+        "item": "Q15058334",
+        "en": "Glimåkra Municipality",
+        "sv": "Glimåkra kommun"
+    },
+    {
+        "item": "Q15058802",
+        "en": "Ore Municipality",
+        "sv": "Ore kommun"
+    },
+    {
+        "item": "Q15060406",
+        "en": "Daga Municipality",
+        "sv": "Daga kommun"
+    },
+    {
+        "item": "Q15063037",
+        "en": "Hjärsås Municipality",
+        "sv": "Hjärsås kommun"
+    },
+    {
+        "item": "Q15072261",
+        "en": "Knislinge Municipality",
+        "sv": "Knislinge kommun"
     },
     {
         "item": "Q15079364",
-        "municipality": "Österåkers kommun"
+        "en": "Österåker Municipality",
+        "sv": "Österåkers kommun"
+    },
+    {
+        "item": "Q15088430",
+        "en": "Gnesta Municipality",
+        "sv": "Gnesta kommun"
+    },
+    {
+        "item": "Q15093355",
+        "en": "Trosa Municipality",
+        "sv": "Trosa kommun"
+    },
+    {
+        "item": "Q15093364",
+        "en": "Vagnhärad Municipality",
+        "sv": "Vagnhärads kommun"
+    },
+    {
+        "item": "Q15114213",
+        "en": "Sävar Municipality",
+        "sv": "Sävars kommun"
+    },
+    {
+        "item": "Q15120913",
+        "en": "Bjärnum Municipality",
+        "sv": "Bjärnums kommun"
+    },
+    {
+        "item": "Q15122662",
+        "en": "Härslöv municipality",
+        "sv": "Härslövs kommun"
+    },
+    {
+        "item": "Q15130388",
+        "en": "Norra Kinda Municipality",
+        "sv": "Norra Kinda kommun"
+    },
+    {
+        "item": "Q15132549",
+        "en": "Aska Municipality",
+        "sv": "Aska kommun"
+    },
+    {
+        "item": "Q15137290",
+        "en": "Stegeborg Municipality",
+        "sv": "Stegeborgs kommun"
+    },
+    {
+        "item": "Q15138617",
+        "en": "Södra Kinda Municipality",
+        "sv": "Södra Kinda kommun"
+    },
+    {
+        "item": "Q15140047",
+        "en": "Tjällmo Municipality",
+        "sv": "Tjällmo kommun"
+    },
+    {
+        "item": "Q15142515",
+        "en": "Vikbolandet Municipality",
+        "sv": "Vikbolandets kommun"
+    },
+    {
+        "item": "Q15149386",
+        "en": "Anderstorp Municipality",
+        "sv": "Anderstorps kommun"
+    },
+    {
+        "item": "Q15155416",
+        "en": "Vadstena Municipality",
+        "sv": "Vadstena kommun"
+    },
+    {
+        "item": "Q15155587",
+        "en": "Burseryd Municipality",
+        "sv": "Burseryds kommun"
+    },
+    {
+        "item": "Q501526",
+        "en": "Vallentuna Municipality",
+        "sv": "Vallentuna kommun"
     },
     {
         "item": "Q59093",
-        "municipality": "Östhammars kommun"
+        "en": "Östhammar Municipality",
+        "sv": "Östhammars kommun"
     },
     {
-        "item": "Q15934585",
-        "municipality": "Östra Färs kommun"
+        "item": "Q59858",
+        "en": "Älvkarleby Municipality",
+        "sv": "Älvkarleby kommun"
     },
     {
-        "item": "Q307370",
-        "municipality": "Östra Göinge kommun"
+        "item": "Q511426",
+        "en": "Vänersborg Municipality",
+        "sv": "Vänersborgs kommun"
+    },
+    {
+        "item": "Q511438",
+        "en": "Stenungsund Municipality",
+        "sv": "Stenungsunds kommun"
+    },
+    {
+        "item": "Q512002",
+        "en": "Hultsfred Municipality",
+        "sv": "Hultsfreds kommun"
+    },
+    {
+        "item": "Q186230",
+        "en": "Pajala Municipality",
+        "sv": "Pajala kommun"
+    },
+    {
+        "item": "Q503180",
+        "en": "Finspång Municipality",
+        "sv": "Finspångs kommun"
+    },
+    {
+        "item": "Q503184",
+        "en": "Ludvika Municipality",
+        "sv": "Ludvika kommun"
+    },
+    {
+        "item": "Q503188",
+        "en": "Lerum Municipality",
+        "sv": "Lerums kommun"
+    },
+    {
+        "item": "Q503193",
+        "en": "Gullspång Municipality",
+        "sv": "Gullspångs kommun"
+    },
+    {
+        "item": "Q503198",
+        "en": "Habo Municipality",
+        "sv": "Habo kommun"
+    },
+    {
+        "item": "Q503204",
+        "en": "Filipstad Municipality",
+        "sv": "Filipstads kommun"
+    },
+    {
+        "item": "Q255206",
+        "en": "Ängelholm Municipality",
+        "sv": "Ängelholms kommun"
+    },
+    {
+        "item": "Q266401",
+        "en": "Höör Municipality",
+        "sv": "Höörs kommun"
+    },
+    {
+        "item": "Q267030",
+        "en": "Mjölby Municipality",
+        "sv": "Mjölby kommun"
+    },
+    {
+        "item": "Q511270",
+        "en": "Mölndal Municipality",
+        "sv": "Mölndals kommun"
+    },
+    {
+        "item": "Q511281",
+        "en": "Götene Municipality",
+        "sv": "Götene kommun"
+    },
+    {
+        "item": "Q511297",
+        "en": "Vårgårda Municipality",
+        "sv": "Vårgårda kommun"
+    },
+    {
+        "item": "Q503746",
+        "en": "Sollentuna Municipality",
+        "sv": "Sollentuna kommun"
+    },
+    {
+        "item": "Q504219",
+        "en": "Trelleborg Municipality",
+        "sv": "Trelleborgs kommun"
+    },
+    {
+        "item": "Q15663506",
+        "en": "Tollarp municipality",
+        "sv": "Tollarps kommun"
+    },
+    {
+        "item": "Q15703031",
+        "en": "Tyringe municipality",
+        "sv": "Tyringe kommun"
+    },
+    {
+        "item": "Q15707051",
+        "en": "Vinslöv municipality",
+        "sv": "Vinslövs kommun"
+    },
+    {
+        "item": "Q15709121",
+        "en": "Vinslöv central municipality",
+        "sv": "Vinslövs centralkommun"
+    },
+    {
+        "item": "Q15710218",
+        "en": "Vittsjö municipality",
+        "sv": "Vittsjö kommun"
+    },
+    {
+        "item": "Q15726251",
+        "en": "Örkened municipality",
+        "sv": "Örkeneds kommun"
     },
     {
         "item": "Q15728774",
-        "municipality": "Östra Ljungby kommun"
+        "en": "Östra Ljungby municipality",
+        "sv": "Östra Ljungby kommun"
     },
     {
-        "item": "Q307569",
-        "municipality": "Överkalix kommun"
+        "item": "Q15729603",
+        "en": "Bara municipality",
+        "sv": "Bara kommun"
+    },
+    {
+        "item": "Q15731381",
+        "en": "Billesholm municipality",
+        "sv": "Billesholms kommun"
+    },
+    {
+        "item": "Q15733186",
+        "en": "Bjärsjölagård Municipality",
+        "sv": "Bjärsjölagårds kommun"
+    },
+    {
+        "item": "Q15736013",
+        "en": "Blentarp Municipality",
+        "sv": "Blentarps kommun"
+    },
+    {
+        "item": "Q15740742",
+        "en": "Dalby Municipality",
+        "sv": "Dalby kommun"
+    },
+    {
+        "item": "Q15762648",
+        "en": "Ekeby Municipality",
+        "sv": "Ekeby kommun"
+    },
+    {
+        "item": "Q15782113",
+        "en": "Genarp municipality",
+        "sv": "Genarps kommun"
+    },
+    {
+        "item": "Q15814213",
+        "en": "Löddeköpinge municipality",
+        "sv": "Löddeköpinge kommun"
+    },
+    {
+        "item": "Q15831729",
+        "en": "Månstorp municipality",
+        "sv": "Månstorps kommun"
+    },
+    {
+        "item": "Q15839302",
+        "en": "Räng municipality",
+        "sv": "Rängs kommun"
+    },
+    {
+        "item": "Q15846450",
+        "en": "Skanör med Falsterbo municipality",
+        "sv": "Skanör med Falsterbo kommun"
+    },
+    {
+        "item": "Q15894293",
+        "en": "Södra Sandby municipality",
+        "sv": "Södra Sandby kommun"
+    },
+    {
+        "item": "Q15903687",
+        "en": "Veberöd Municipality",
+        "sv": "Veberöds kommun"
+    },
+    {
+        "item": "Q15920022",
+        "en": "Vollsjö municipality",
+        "sv": "Vollsjö kommun"
+    },
+    {
+        "item": "Q15934585",
+        "en": "Östra Färs municipality",
+        "sv": "Östra Färs kommun"
+    },
+    {
+        "item": "Q15940883",
+        "en": "Eldsberga municipality",
+        "sv": "Eldsberga kommun"
+    },
+    {
+        "item": "Q509997",
+        "en": "Valdemarsvik Municipality",
+        "sv": "Valdemarsviks kommun"
+    },
+    {
+        "item": "Q501487",
+        "en": "Svenljunga Municipality",
+        "sv": "Svenljunga kommun"
+    },
+    {
+        "item": "Q501494",
+        "en": "Munkfors Municipality",
+        "sv": "Munkfors kommun"
+    },
+    {
+        "item": "Q239332",
+        "en": "Gnesta Municipality",
+        "sv": "Gnesta kommun"
+    },
+    {
+        "item": "Q240574",
+        "en": "Markaryd Municipality",
+        "sv": "Markaryds kommun"
+    },
+    {
+        "item": "Q249378",
+        "en": "Vingåker Municipality",
+        "sv": "Vingåkers kommun"
+    },
+    {
+        "item": "Q254799",
+        "en": "Älmhult Municipality",
+        "sv": "Älmhults kommun"
+    },
+    {
+        "item": "Q503167",
+        "en": "Aneby Municipality",
+        "sv": "Aneby kommun"
+    },
+    {
+        "item": "Q503173",
+        "en": "Lysekil Municipality",
+        "sv": "Lysekils kommun"
+    },
+    {
+        "item": "Q503209",
+        "en": "Borlänge Municipality",
+        "sv": "Borlänge kommun"
+    },
+    {
+        "item": "Q503111",
+        "en": "Herrljunga Municipality",
+        "sv": "Herrljunga kommun"
+    },
+    {
+        "item": "Q503122",
+        "en": "Grums Municipality",
+        "sv": "Grums kommun"
+    },
+    {
+        "item": "Q503127",
+        "en": "Essunga Municipality",
+        "sv": "Essunga kommun"
+    },
+    {
+        "item": "Q186662",
+        "en": "Burlöv Municipality",
+        "sv": "Burlövs kommun"
+    },
+    {
+        "item": "Q201813",
+        "en": "Åstorp Municipality",
+        "sv": "Åstorps kommun"
+    },
+    {
+        "item": "Q15950157",
+        "en": "Enslöv municipality",
+        "sv": "Enslövs kommun"
+    },
+    {
+        "item": "Q504594",
+        "en": "Osby Municipality",
+        "sv": "Osby kommun"
+    },
+    {
+        "item": "Q15958772",
+        "en": "Fjärås municipality",
+        "sv": "Fjärås kommun"
+    },
+    {
+        "item": "Q15962221",
+        "en": "Getinge municipality",
+        "sv": "Getinge kommun"
+    },
+    {
+        "item": "Q18291150",
+        "en": "Karesuando Municipality",
+        "sv": "Karesuando landskommun"
     },
     {
         "item": "Q27691309",
-        "municipality": "Överkalix landskommun"
+        "en": "Överkalix landskommun",
+        "sv": "Överkalix landskommun"
+    },
+    {
+        "item": "Q503214",
+        "en": "Falköping Municipality",
+        "sv": "Falköpings kommun"
+    },
+    {
+        "item": "Q503361",
+        "en": "Malmö Municipality",
+        "sv": "Malmö kommun"
+    },
+    {
+        "item": "Q504266",
+        "en": "Malung-Sälen Municipality",
+        "sv": "Malung-Sälens kommun"
+    },
+    {
+        "item": "Q504465",
+        "en": "Knivsta Municipality",
+        "sv": "Knivsta kommun"
+    },
+    {
+        "item": "Q504505",
+        "en": "Vindeln Municipality",
+        "sv": "Vindelns kommun"
+    },
+    {
+        "item": "Q514707",
+        "en": "Krokom Municipality",
+        "sv": "Krokoms kommun"
+    },
+    {
+        "item": "Q514722",
+        "en": "Nordmaling Municipality",
+        "sv": "Nordmalings kommun"
+    },
+    {
+        "item": "Q255025",
+        "en": "Älvsbyn Municipality",
+        "sv": "Älvsbyns kommun"
+    },
+    {
+        "item": "Q62464",
+        "en": "Hofors Municipality",
+        "sv": "Hofors kommun"
+    },
+    {
+        "item": "Q62469",
+        "en": "Bollnäs Municipality",
+        "sv": "Bollnäs kommun"
+    },
+    {
+        "item": "Q503132",
+        "en": "Dals-Ed Municipality",
+        "sv": "Dals-Eds kommun"
+    },
+    {
+        "item": "Q514739",
+        "en": "Ljusnarsberg Municipality",
+        "sv": "Ljusnarsbergs kommun"
+    },
+    {
+        "item": "Q514756",
+        "en": "Mörbylånga Municipality",
+        "sv": "Mörbylånga kommun"
+    },
+    {
+        "item": "Q514770",
+        "en": "Strömsund Municipality",
+        "sv": "Strömsunds kommun"
+    },
+    {
+        "item": "Q285894",
+        "en": "Nora Municipality",
+        "sv": "Nora kommun"
+    },
+    {
+        "item": "Q293928",
+        "en": "Öckerö Municipality",
+        "sv": "Öckerö kommun"
+    },
+    {
+        "item": "Q293970",
+        "en": "Ödeshög Municipality",
+        "sv": "Ödeshögs kommun"
+    },
+    {
+        "item": "Q297718",
+        "en": "Örebro Municipality",
+        "sv": "Örebro kommun"
+    },
+    {
+        "item": "Q504601",
+        "en": "Sjöbo Municipality",
+        "sv": "Sjöbo kommun"
+    },
+    {
+        "item": "Q504609",
+        "en": "Staffanstorp Municipality",
+        "sv": "Staffanstorps kommun"
+    },
+    {
+        "item": "Q504614",
+        "en": "Klippan Municipality",
+        "sv": "Klippans kommun"
+    },
+    {
+        "item": "Q512035",
+        "en": "Eksjö Municipality",
+        "sv": "Eksjö kommun"
+    },
+    {
+        "item": "Q512048",
+        "en": "Jokkmokk Municipality",
+        "sv": "Jokkmokks kommun"
+    },
+    {
+        "item": "Q513370",
+        "en": "Kävlinge Municipality",
+        "sv": "Kävlinge kommun"
+    },
+    {
+        "item": "Q513421",
+        "en": "Härjedalen Municipality",
+        "sv": "Härjedalens kommun"
+    },
+    {
+        "item": "Q505090",
+        "en": "Nynäshamn Municipality",
+        "sv": "Nynäshamns kommun"
+    },
+    {
+        "item": "Q505096",
+        "en": "Nässjö Municipality",
+        "sv": "Nässjö kommun"
+    },
+    {
+        "item": "Q505102",
+        "en": "Ystad Municipality",
+        "sv": "Ystads kommun"
+    },
+    {
+        "item": "Q515282",
+        "en": "Lekeberg Municipality",
+        "sv": "Lekebergs kommun"
+    },
+    {
+        "item": "Q515299",
+        "en": "Kinda Municipality",
+        "sv": "Kinda kommun"
+    },
+    {
+        "item": "Q515318",
+        "en": "Nybro Municipality",
+        "sv": "Nybro kommun"
+    },
+    {
+        "item": "Q515326",
+        "en": "Laxå Municipality",
+        "sv": "Laxå kommun"
+    },
+    {
+        "item": "Q505013",
+        "en": "Höganäs Municipality",
+        "sv": "Höganäs kommun"
+    },
+    {
+        "item": "Q505018",
+        "en": "Lund Municipality",
+        "sv": "Lunds kommun"
+    },
+    {
+        "item": "Q297936",
+        "en": "Örkelljunga Municipality",
+        "sv": "Örkelljunga kommun"
+    },
+    {
+        "item": "Q298003",
+        "en": "Örnsköldsvik Municipality",
+        "sv": "Örnsköldsviks kommun"
+    },
+    {
+        "item": "Q301259",
+        "en": "Järfälla Municipality",
+        "sv": "Järfälla kommun"
+    },
+    {
+        "item": "Q504244",
+        "en": "Rättvik Municipality",
+        "sv": "Rättviks kommun"
+    },
+    {
+        "item": "Q493815",
+        "en": "Gällivare Municipality",
+        "sv": "Gällivare kommun"
+    },
+    {
+        "item": "Q493841",
+        "en": "Värmdö Municipality",
+        "sv": "Värmdö kommun"
+    },
+    {
+        "item": "Q493855",
+        "en": "Arjeplog Municipality",
+        "sv": "Arjeplogs kommun"
+    },
+    {
+        "item": "Q514805",
+        "en": "Nordanstig Municipality",
+        "sv": "Nordanstigs kommun"
+    },
+    {
+        "item": "Q504227",
+        "en": "Svalöv Municipality",
+        "sv": "Svalövs kommun"
+    },
+    {
+        "item": "Q504235",
+        "en": "Ljungby Municipality",
+        "sv": "Ljungby kommun"
+    },
+    {
+        "item": "Q504239",
+        "en": "Mora Municipality",
+        "sv": "Mora kommun"
+    },
+    {
+        "item": "Q271274",
+        "en": "Åsele Municipality",
+        "sv": "Åsele kommun"
+    },
+    {
+        "item": "Q271340",
+        "en": "Åtvidaberg Municipality",
+        "sv": "Åtvidabergs kommun"
+    },
+    {
+        "item": "Q280562",
+        "en": "Värnamo Municipality",
+        "sv": "Värnamo kommun"
+    },
+    {
+        "item": "Q514815",
+        "en": "Kramfors Municipality",
+        "sv": "Kramfors kommun"
+    },
+    {
+        "item": "Q514830",
+        "en": "Bromölla Municipality",
+        "sv": "Bromölla kommun"
+    },
+    {
+        "item": "Q514858",
+        "en": "Lindesberg Municipality",
+        "sv": "Lindesbergs kommun"
+    },
+    {
+        "item": "Q504676",
+        "en": "Norrköping Municipality",
+        "sv": "Norrköpings kommun"
+    },
+    {
+        "item": "Q504689",
+        "en": "Jönköping Municipality",
+        "sv": "Jönköpings kommun"
+    },
+    {
+        "item": "Q504692",
+        "en": "Halmstad Municipality",
+        "sv": "Halmstads kommun"
+    },
+    {
+        "item": "Q504249",
+        "en": "Perstorp Municipality",
+        "sv": "Perstorps kommun"
+    },
+    {
+        "item": "Q504257",
+        "en": "Olofström Municipality",
+        "sv": "Olofströms kommun"
+    },
+    {
+        "item": "Q504261",
+        "en": "Bräcke Municipality",
+        "sv": "Bräcke kommun"
+    },
+    {
+        "item": "Q267462",
+        "en": "Bengtsfors Municipality",
+        "sv": "Bengtsfors kommun"
+    },
+    {
+        "item": "Q271079",
+        "en": "Åmål Municipality",
+        "sv": "Åmåls kommun"
+    },
+    {
+        "item": "Q271107",
+        "en": "Ånge Municipality",
+        "sv": "Ånge kommun"
+    },
+    {
+        "item": "Q271153",
+        "en": "Åre Municipality",
+        "sv": "Åre kommun"
+    },
+    {
+        "item": "Q515699",
+        "en": "Ydre Municipality",
+        "sv": "Ydre kommun"
+    },
+    {
+        "item": "Q515706",
+        "en": "Svedala Municipality",
+        "sv": "Svedala kommun"
+    },
+    {
+        "item": "Q505046",
+        "en": "Smedjebacken Municipality",
+        "sv": "Smedjebackens kommun"
+    },
+    {
+        "item": "Q505052",
+        "en": "Vetlanda Municipality",
+        "sv": "Vetlanda kommun"
+    },
+    {
+        "item": "Q505057",
+        "en": "Vimmerby Municipality",
+        "sv": "Vimmerby kommun"
+    },
+    {
+        "item": "Q1128384",
+        "en": "Karlskrona Municipality",
+        "sv": "Karlskrona kommun"
+    },
+    {
+        "item": "Q1130264",
+        "en": "Eslöv Municipality",
+        "sv": "Eslövs kommun"
+    },
+    {
+        "item": "Q505936",
+        "en": "Storfors Municipality",
+        "sv": "Storfors kommun"
+    },
+    {
+        "item": "Q515505",
+        "en": "Uppvidinge Municipality",
+        "sv": "Uppvidinge kommun"
+    },
+    {
+        "item": "Q515519",
+        "en": "Tomelilla Municipality",
+        "sv": "Tomelilla kommun"
+    },
+    {
+        "item": "Q515551",
+        "en": "Torsås Municipality",
+        "sv": "Torsås kommun"
+    },
+    {
+        "item": "Q515680",
+        "en": "Söderköping Municipality",
+        "sv": "Söderköpings kommun"
+    },
+    {
+        "item": "Q505064",
+        "en": "Trosa Municipality",
+        "sv": "Trosa kommun"
+    },
+    {
+        "item": "Q428749",
+        "en": "Hjo Municipality",
+        "sv": "Hjo kommun"
+    },
+    {
+        "item": "Q430780",
+        "en": "Skellefteå Municipality",
+        "sv": "Skellefteå kommun"
+    },
+    {
+        "item": "Q431271",
+        "en": "Arboga Municipality",
+        "sv": "Arboga kommun"
+    },
+    {
+        "item": "Q515342",
+        "en": "Ragunda Municipality",
+        "sv": "Ragunda kommun"
+    },
+    {
+        "item": "Q515358",
+        "en": "Lidköping Municipality",
+        "sv": "Lidköpings kommun"
+    },
+    {
+        "item": "Q515373",
+        "en": "Ronneby Municipality",
+        "sv": "Ronneby kommun"
     },
     {
         "item": "Q307603",
-        "municipality": "Övertorneå kommun"
+        "en": "Övertorneå Municipality",
+        "sv": "Övertorneå kommun"
+    },
+    {
+        "item": "Q338752",
+        "en": "Orust Municipality",
+        "sv": "Orusts kommun"
+    },
+    {
+        "item": "Q374794",
+        "en": "Gotland Municipality",
+        "sv": "Gotlands kommun"
+    },
+    {
+        "item": "Q376003",
+        "en": "Bjurholm Municipality",
+        "sv": "Bjurholms kommun"
+    },
+    {
+        "item": "Q504619",
+        "en": "Hörby Municipality",
+        "sv": "Hörby kommun"
+    },
+    {
+        "item": "Q504626",
+        "en": "Simrishamn Municipality",
+        "sv": "Simrishamns kommun"
+    },
+    {
+        "item": "Q504630",
+        "en": "Orsa Municipality",
+        "sv": "Orsa kommun"
+    },
+    {
+        "item": "Q505071",
+        "en": "Tranås Municipality",
+        "sv": "Tranås kommun"
+    },
+    {
+        "item": "Q505076",
+        "en": "Mullsjö Municipality",
+        "sv": "Mullsjö kommun"
+    },
+    {
+        "item": "Q505085",
+        "en": "Ovanåker Municipality",
+        "sv": "Ovanåkers kommun"
+    },
+    {
+        "item": "Q306789",
+        "en": "Östersund Municipality",
+        "sv": "Östersunds kommun"
+    },
+    {
+        "item": "Q307370",
+        "en": "Östra Göinge Municipality",
+        "sv": "Östra Göinge kommun"
+    },
+    {
+        "item": "Q307569",
+        "en": "Överkalix Municipality",
+        "sv": "Överkalix kommun"
+    },
+    {
+        "item": "Q605329",
+        "en": "Vaggeryd Municipality",
+        "sv": "Vaggeryds kommun"
+    },
+    {
+        "item": "Q845930",
+        "en": "Berg Municipality",
+        "sv": "Bergs kommun"
+    },
+    {
+        "item": "Q894327",
+        "en": "Borås Municipality",
+        "sv": "Borås kommun"
+    },
+    {
+        "item": "Q515235",
+        "en": "Ljusdal Municipality",
+        "sv": "Ljusdals kommun"
+    },
+    {
+        "item": "Q515250",
+        "en": "Mönsterås Municipality",
+        "sv": "Mönsterås kommun"
+    },
+    {
+        "item": "Q515266",
+        "en": "Skurup Municipality",
+        "sv": "Skurups kommun"
+    },
+    {
+        "item": "Q492614",
+        "en": "Ekerö Municipality",
+        "sv": "Ekerö kommun"
+    },
+    {
+        "item": "Q493066",
+        "en": "Täby Municipality",
+        "sv": "Täby kommun"
+    },
+    {
+        "item": "Q10466253",
+        "en": "Dals Rural Municipality",
+        "sv": "Dals landskommun"
+    },
+    {
+        "item": "Q10496101",
+        "en": "Fjärestads Rural Municipality",
+        "sv": "Fjärestads landskommun"
+    },
+    {
+        "item": "Q10518332",
+        "en": "Harstad Rural Municipality",
+        "sv": "Harstads landskommun"
+    },
+    {
+        "item": "Q10545810",
+        "en": "City of Kiruna",
+        "sv": "Kiruna stad"
+    },
+    {
+        "item": "Q10572409",
+        "en": "Lästringe Rural Municipality",
+        "sv": "Lästringe landskommun"
+    },
+    {
+        "item": "Q10602772",
+        "en": "Norrfjärdens Rural Municipality",
+        "sv": "Norrfjärdens landskommun"
+    },
+    {
+        "item": "Q498470",
+        "en": "Ale Municipality",
+        "sv": "Ale kommun"
+    },
+    {
+        "item": "Q498477",
+        "en": "Hylte Municipality",
+        "sv": "Hylte kommun"
+    },
+    {
+        "item": "Q506250",
+        "en": "Stockholm Municipality",
+        "sv": "Stockholms kommun"
+    },
+    {
+        "item": "Q507644",
+        "en": "Norsjö Municipality",
+        "sv": "Norsjö kommun"
+    },
+    {
+        "item": "Q946647",
+        "en": "Nacka Municipality",
+        "sv": "Nacka kommun"
+    },
+    {
+        "item": "Q10658966",
+        "en": "Rödön",
+        "sv": "Rödöns landskommun"
+    },
+    {
+        "item": "Q498447",
+        "en": "Eda Municipality",
+        "sv": "Eda kommun"
+    },
+    {
+        "item": "Q498453",
+        "en": "Karlstad Municipality",
+        "sv": "Karlstads kommun"
+    },
+    {
+        "item": "Q948462",
+        "en": "Lycksele municipality",
+        "sv": "Lycksele kommun"
+    },
+    {
+        "item": "Q972564",
+        "en": "Sundbyberg Municipality",
+        "sv": "Sundbybergs kommun"
+    },
+    {
+        "item": "Q487502",
+        "en": "Laholm Municipality",
+        "sv": "Laholms kommun"
+    },
+    {
+        "item": "Q487648",
+        "en": "Helsingborg Municipality",
+        "sv": "Helsingborgs kommun"
+    },
+    {
+        "item": "Q492575",
+        "en": "Huddinge Municipality",
+        "sv": "Huddinge kommun"
+    },
+    {
+        "item": "Q507656",
+        "en": "Piteå Municipality",
+        "sv": "Piteå kommun"
+    },
+    {
+        "item": "Q507670",
+        "en": "Robertsfors Municipality",
+        "sv": "Robertsfors kommun"
+    },
+    {
+        "item": "Q507684",
+        "en": "Hedemora Municipality",
+        "sv": "Hedemora kommun"
+    },
+    {
+        "item": "Q1345439",
+        "en": "Säter Municipality",
+        "sv": "Säters kommun"
+    },
+    {
+        "item": "Q2261863",
+        "en": "stad in Sweden",
+        "sv": "stad i Sverige"
+    },
+    {
+        "item": "Q2642771",
+        "en": "Gagnef Municipality",
+        "sv": "Gagnefs kommun"
+    },
+    {
+        "item": "Q2777887",
+        "en": "Årjäng Municipality",
+        "sv": "Årjängs kommun"
+    },
+    {
+        "item": "Q504983",
+        "en": "Timrå Municipality",
+        "sv": "Timrå kommun"
+    },
+    {
+        "item": "Q504988",
+        "en": "Kumla Municipality",
+        "sv": "Kumla kommun"
+    },
+    {
+        "item": "Q504994",
+        "en": "Sundsvall Municipality",
+        "sv": "Sundsvalls kommun"
+    },
+    {
+        "item": "Q505006",
+        "en": "Oskarshamn Municipality",
+        "sv": "Oskarshamns kommun"
+    },
+    {
+        "item": "Q498857",
+        "en": "Kristianstad Municipality",
+        "sv": "Kristianstads kommun"
+    },
+    {
+        "item": "Q515409",
+        "en": "Sölvesborg Municipality",
+        "sv": "Sölvesborgs kommun"
+    },
+    {
+        "item": "Q515477",
+        "en": "Västervik Municipality",
+        "sv": "Västerviks kommun"
+    },
+    {
+        "item": "Q382808",
+        "en": "Ulricehamn Municipality",
+        "sv": "Ulricehamns kommun"
+    },
+    {
+        "item": "Q389040",
+        "en": "Munkedal Municipality",
+        "sv": "Munkedals kommun"
+    },
+    {
+        "item": "Q427422",
+        "en": "Mariestad Municipality",
+        "sv": "Mariestads kommun"
+    },
+    {
+        "item": "Q427991",
+        "en": "Lomma Municipality",
+        "sv": "Lomma kommun"
+    },
+    {
+        "item": "Q3120654",
+        "en": "Lidingö Municipality",
+        "sv": "Lidingö kommun"
+    },
+    {
+        "item": "Q505259",
+        "en": "Gislaved Municipality",
+        "sv": "Gislaveds kommun"
+    },
+    {
+        "item": "Q499359",
+        "en": "Hammarö Municipality",
+        "sv": "Hammarö kommun"
+    },
+    {
+        "item": "Q499380",
+        "en": "Kungsbacka Municipality",
+        "sv": "Kungsbacka kommun"
+    },
+    {
+        "item": "Q499385",
+        "en": "Forshaga Municipality",
+        "sv": "Forshaga kommun"
+    },
+    {
+        "item": "Q515491",
+        "en": "Tingsryd Municipality",
+        "sv": "Tingsryds kommun"
+    },
+    {
+        "item": "Q516336",
+        "en": "Södertälje Municipality",
+        "sv": "Södertälje kommun"
+    },
+    {
+        "item": "Q499393",
+        "en": "Kil Municipality",
+        "sv": "Kils kommun"
+    },
+    {
+        "item": "Q499404",
+        "en": "Arvidsjaur Municipality",
+        "sv": "Arvidsjaurs kommun"
+    },
+    {
+        "item": "Q499410",
+        "en": "Linköping Municipality",
+        "sv": "Linköpings kommun"
+    },
+    {
+        "item": "Q505109",
+        "en": "Ockelbo Municipality",
+        "sv": "Ockelbo kommun"
+    },
+    {
+        "item": "Q505239",
+        "en": "Sävsjö Municipality",
+        "sv": "Sävsjö kommun"
+    },
+    {
+        "item": "Q505246",
+        "en": "Oxelösund Municipality",
+        "sv": "Oxelösunds kommun"
+    },
+    {
+        "item": "Q516308",
+        "en": "Heby Municipality",
+        "sv": "Heby kommun"
+    },
+    {
+        "item": "Q499415",
+        "en": "Storuman Municipality",
+        "sv": "Storumans kommun"
+    },
+    {
+        "item": "Q499421",
+        "en": "Skara Municipality",
+        "sv": "Skara kommun"
+    },
+    {
+        "item": "Q499425",
+        "en": "Upplands Väsby Municipality",
+        "sv": "Upplands Väsby kommun"
+    },
+    {
+        "item": "Q515861",
+        "en": "Vilhelmina Municipality",
+        "sv": "Vilhelmina kommun"
+    },
+    {
+        "item": "Q515969",
+        "en": "Vadstena Municipality",
+        "sv": "Vadstena kommun"
+    },
+    {
+        "item": "Q516080",
+        "en": "Salem Municipality",
+        "sv": "Salems kommun"
     }
 ]
