@@ -62,13 +62,15 @@ def select_query(query, connection):
     return result
 
 
-def load_data_files(file_dict, live=False):
+def load_data_files(file_dict, live):
     for key in file_dict.keys():
+        if live:
+            print("Live data will be requested: " + file_dict[key])
         file_dict[key] = load_json(path.join(MAPPING_DIR, file_dict[key]))
     return file_dict
 
 
-def get_items(connection, country, language, short=False):
+def get_items(connection, country, language, short=False, live=False):
     specific_table_name = get_specific_table_name(country, language)
     if not table_exists(connection, specific_table_name):
         print("Table does not exist.")
@@ -83,7 +85,7 @@ def get_items(connection, country, language, short=False):
     if specific_table_name in SPECIFIC_TABLES.keys():
         class_to_use = SPECIFIC_TABLES[specific_table_name]["class"]
         data_files = load_data_files(
-            SPECIFIC_TABLES[specific_table_name]["data_files"])
+            SPECIFIC_TABLES[specific_table_name]["data_files"], live)
     else:
         class_to_use = Monument
         data_files = None
@@ -103,7 +105,7 @@ def main(arguments):
     connection = create_connection(arguments)
     country = arguments.country
     language = arguments.language
-    results = get_items(connection, country, language, arguments.short)
+    results = get_items(connection, country, language, arguments.short, arguments.livedata)
     if arguments.testrun:
         run_test(results)
 
@@ -118,6 +120,6 @@ if __name__ == "__main__":
     parser.add_argument("--country", default="se-ship")
     parser.add_argument("--short", action='store_true')
     parser.add_argument("--testrun", action='store_true')
-    parser.add_argument("--livedata", action='store_true')
+    parser.add_argument("--livedata", action='store_true', default='false')
     args = parser.parse_args()
     main(args)
