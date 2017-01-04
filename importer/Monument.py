@@ -13,6 +13,10 @@ PROPS = load_json(path.join(MAPPING_DIR, "props_general.json"))
 
 class Monument(object):
 
+    def get_wikilinks(self, text):
+        parsed = wparser.parse(text)
+        return parsed.filter_wikilinks()
+
     def q_from_wikipedia(self, language, page_title):
         site = pywikibot.Site(language, "wikipedia")
         page = pywikibot.Page(site, page_title)
@@ -91,7 +95,7 @@ class Monument(object):
         self.set_coords()
         self.set_image()
         self.set_commonscat()
-        #self.exists(mapping)
+        # self.exists(mapping)
 
     def __init__(self, db_row_dict, mapping, data_files):
         for k, v in db_row_dict.items():
@@ -162,9 +166,9 @@ class SeFornminSv(Monument):
         # datafile
         if self.address:
             if "[[" in self.address:
-                parsed = wparser.parse(self.address)
-                if len(parsed.filter_wikilinks()) == 1:
-                    target_page = parsed.filter_wikilinks()[0].title
+                wikilinks = self.get_wikilinks(self.address)
+                if len(wikilinks) == 1:
+                    target_page = wikilinks[0].title
                     print(self.address)
                     print(target_page)
                     wd_item = self.q_from_wikipedia(self.lang, target_page)
