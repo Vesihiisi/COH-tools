@@ -79,6 +79,25 @@ class Monument(object):
         if self.commonscat:
             self.wd_item["statements"][PROPS["commonscat"]] = self.commonscat
 
+    def set_street_address(self):
+        """
+        NOTE: P:located at street address says "Include building number through to post code"
+        In most cases, there's no post code in the data!
+        In practice though, it's often omitted....
+        Compare with located on street (P669) and its qualifier street number (P670).
+        """
+        if self.address:
+            print(self.remove_markup(self.address))
+            if self.lang == "sv":
+                # Try to see if it's a legit-ish street address
+                # "gatan", "vägen", " väg", " gata", " torg", "torget", " plats", "platsen", " gränd"
+                # numbers like 3, 3A, 2-4
+                # oh, and sometimes it's not a _street_ name: "Norra Kik 7"
+                # street names can consist of several words: "Nils Ahlins gata 19"
+                # how about: "Östra skolan, Bergaliden 24"
+                return
+        return
+
     def exists(self, mapping):
         self.wd_item["wd-item"] = None
         if self.monument_article:
@@ -95,7 +114,8 @@ class Monument(object):
         self.set_coords()
         self.set_image()
         self.set_commonscat()
-        # self.exists(mapping)
+        self.set_street_address()
+        #self.exists(mapping)
 
     def __init__(self, db_row_dict, mapping, data_files):
         for k, v in db_row_dict.items():
@@ -135,8 +155,6 @@ class SeFornminSv(Monument):
         try:
             municipality = [x["item"] for x in municip_dict if x[
                 "en"].lower() == pattern_en][0]
-            # TODO: Check if target item is valid municipality
-            # I guess this could be done on the adding stage?
             self.wd_item["statements"][
                 PROPS["located_adm"]] = helpers.listify(municipality)
         except IndexError:
@@ -156,14 +174,6 @@ class SeFornminSv(Monument):
                 return
 
     def set_location(self):
-        # TODO: check self.address (same as self.plats) and map it to P276.
-        # This only makes sense if it's a wikilinked item,
-        # and also if there's exactly 1 item
-        # because stuff like
-        # [[Sundsbruk]] - [[Sköns Prästbord]] (Nordväst om [[Sköns kyrka]])
-        # NOTE: adm3 always empty for this table
-        # ALSO if not wikilinked, check if it could be a settlement in the
-        # datafile
         if self.address:
             if "[[" in self.address:
                 wikilinks = self.get_wikilinks(self.address)
@@ -214,7 +224,6 @@ class SeArbetslSv(Monument):
         try:
             municipality = [x["item"] for x in municip_dict if x[
                 "en"].lower() == pattern][0]
-            ## TODO: Check if target item is valid municipality ##
             self.wd_item["statements"][
                 PROPS["located_adm"]] = helpers.listify(municipality)
             swedish_name = [x["sv"]
@@ -239,15 +248,6 @@ class SeArbetslSv(Monument):
         return
 
     def set_location(self):
-        """
-        Items in this table have both ort and address.
-        Address is sometimes a valid street address like Värdshusgatan 8
-        Ort is usually not wikilinked.
-        It can be an urban area or småort and possibly something else...
-        In any case, it's a subtype of 'human settlement' in Sweden.
-        There are about 12 000 of these, and querying it live would be slow.
-        Maybe just download all of them?
-        """
         settlements_dict = self.data_files["settlements"]
         if self.ort:
             try:

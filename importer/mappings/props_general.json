@@ -10,5 +10,6 @@
     "is": "P31",
     "located_adm": "P131",
     "location": "P276",
+    "located_street": "P969",
     "raa-nr": "P1262"
 }
