@@ -154,27 +154,29 @@ def test_get_street_address_8():
         "Norra Finnskoga Hembygdsgård , Höljes, Solrosvägen 2,", "sv") == "Solrosvägen 2"
 
 
+def get_wikilinks(text):
+    parsed = wparser.parse(text)
+    return parsed.filter_wikilinks()
+
+
+def q_from_wikipedia(language, page_title):
+    site = pywikibot.Site(language, "wikipedia")
+    page = pywikibot.Page(site, page_title)
+    if page.exists():
+        if page.isRedirectPage():
+            page = page.getRedirectTarget()
+        try:
+            item = pywikibot.ItemPage.fromPage(page)
+            return item.getID()
+        except pywikibot.NoPage:
+            print("Failed to get page for {} - {}."
+                  "It probably does not exist.".format(
+                      language, page_title)
+                  )
+            return
+
+
 class Monument(object):
-
-    def get_wikilinks(self, text):
-        parsed = wparser.parse(text)
-        return parsed.filter_wikilinks()
-
-    def q_from_wikipedia(self, language, page_title):
-        site = pywikibot.Site(language, "wikipedia")
-        page = pywikibot.Page(site, page_title)
-        if page.exists():
-            if page.isRedirectPage():
-                page = page.getRedirectTarget()
-            try:
-                item = pywikibot.ItemPage.fromPage(page)
-                return item.getID()
-            except pywikibot.NoPage:
-                print("Failed to get page for {} - {}."
-                      "It probably does not exist.".format(
-                          language, page_title)
-                      )
-                return
 
     def print_wd(self):
         print(
@@ -223,12 +225,13 @@ class Monument(object):
         """
         if self.address:
             self.wd_item["statements"][
-                PROPS["located_street"]] = get_street_address(self.address, self.lang)
+                PROPS["located_street"]] = get_street_address(
+                    self.address, self.lang)
 
     def exists(self, mapping):
         self.wd_item["wd-item"] = None
         if self.monument_article:
-            wd_item = self.q_from_wikipedia(self.lang, self.monument_article)
+            wd_item = q_from_wikipedia(self.lang, self.monument_article)
             self.wd_item["wd-item"] = wd_item
 
     def construct_wd_item(self, mapping, data_files=None):
@@ -303,12 +306,12 @@ class SeFornminSv(Monument):
     def set_location(self):
         if self.address:
             if "[[" in self.address:
-                wikilinks = self.get_wikilinks(self.address)
+                wikilinks = get_wikilinks(self.address)
                 if len(wikilinks) == 1:
                     target_page = wikilinks[0].title
                     print(self.address)
                     print(target_page)
-                    wd_item = self.q_from_wikipedia(self.lang, target_page)
+                    wd_item = q_from_wikipedia(self.lang, target_page)
                     self.wd_item["statements"][PROPS["location"]] = wd_item
 
     def set_inception(self):
