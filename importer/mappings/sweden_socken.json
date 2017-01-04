@@ -1,0 +1,9807 @@
+[
+    {
+        "en": "Rök",
+        "item": "Q2262155",
+        "sv": "Röks socken"
+    },
+    {
+        "en": "Askome",
+        "item": "Q4807238",
+        "sv": "Askome socken"
+    },
+    {
+        "en": "Flo Parish",
+        "item": "Q130422",
+        "sv": "Flo socken"
+    },
+    {
+        "en": "Å, Sweden",
+        "item": "Q2099588",
+        "sv": "Å socken"
+    },
+    {
+        "en": "Brännkyrka",
+        "item": "Q4981807",
+        "sv": "Brännkyrka socken"
+    },
+    {
+        "en": "Alsen (Jämtland)",
+        "item": "Q934920",
+        "sv": "Alsens socken"
+    },
+    {
+        "en": "Lojsta socken",
+        "item": "Q1556137",
+        "sv": "Lojsta socken"
+    },
+    {
+        "en": "Brämhult",
+        "item": "Q4981802",
+        "sv": "Brämhults socken"
+    },
+    {
+        "en": "Offerdal",
+        "item": "Q2015712",
+        "sv": "Offerdals socken"
+    },
+    {
+        "en": "Boge socken",
+        "item": "Q2535159",
+        "sv": "Boge socken"
+    },
+    {
+        "en": "Ljungby, Falkenberg",
+        "item": "Q6660995",
+        "sv": "Ljungby socken, Halland"
+    },
+    {
+        "en": "Abild",
+        "item": "Q4667745",
+        "sv": "Abilds socken"
+    },
+    {
+        "en": "Algutsboda, Sweden",
+        "item": "Q4724391",
+        "sv": "Algutsboda socken"
+    },
+    {
+        "en": "Anundsjö parish",
+        "item": "Q2857809",
+        "sv": "Anundsjö socken"
+    },
+    {
+        "en": "Bellö",
+        "item": "Q10427916",
+        "sv": "Bellö socken"
+    },
+    {
+        "en": "Balingsta socken",
+        "item": "Q10425283",
+        "sv": "Balingsta socken"
+    },
+    {
+        "en": "Barlingbo socken",
+        "item": "Q10426443",
+        "sv": "Barlingbo socken"
+    },
+    {
+        "en": "Björke socken, Gotland",
+        "item": "Q10430540",
+        "sv": "Björke socken"
+    },
+    {
+        "en": "Atlingbo socken",
+        "item": "Q10421683",
+        "sv": "Atlingbo socken"
+    },
+    {
+        "en": "Bara socken, Gotland",
+        "item": "Q10426247",
+        "sv": "Bara socken, Gotland"
+    },
+    {
+        "en": "Bjärtrå",
+        "item": "Q10430509",
+        "sv": "Bjärtrå socken"
+    },
+    {
+        "en": "Böda socken",
+        "item": "Q10438671",
+        "sv": "Böda socken"
+    },
+    {
+        "en": "Bäl socken",
+        "item": "Q10438498",
+        "sv": "Bäls socken"
+    },
+    {
+        "en": "Bredsättra socken",
+        "item": "Q10435057",
+        "sv": "Bredsättra socken"
+    },
+    {
+        "en": "Breareds socken",
+        "item": "Q10434968",
+        "sv": "Breareds socken"
+    },
+    {
+        "en": "Bro socken, Gotland",
+        "item": "Q10435878",
+        "sv": "Bro socken, Gotland"
+    },
+    {
+        "en": "Bunge socken",
+        "item": "Q10437751",
+        "sv": "Bunge socken"
+    },
+    {
+        "en": "Buttle socken",
+        "item": "Q10438089",
+        "sv": "Buttle socken"
+    },
+    {
+        "en": "Burs socken",
+        "item": "Q10437944",
+        "sv": "Burs socken"
+    },
+    {
+        "en": "Bromma socken",
+        "item": "Q10436031",
+        "sv": "Bromma socken"
+    },
+    {
+        "en": "Viker, Sweden",
+        "item": "Q7929417",
+        "sv": "Vikers socken"
+    },
+    {
+        "en": "Östra Eneby",
+        "item": "Q8079080",
+        "sv": "Östra Eneby socken"
+    },
+    {
+        "en": "Arjeplogs socken",
+        "item": "Q10417990",
+        "sv": "Arjeplogs socken"
+    },
+    {
+        "en": "Ala socken",
+        "item": "Q10404194",
+        "sv": "Ala socken"
+    },
+    {
+        "en": "Anga socken",
+        "item": "Q10411696",
+        "sv": "Anga socken"
+    },
+    {
+        "en": "Ardre socken",
+        "item": "Q10417390",
+        "sv": "Ardre socken"
+    },
+    {
+        "en": "Alva socken, Gotland",
+        "item": "Q10407079",
+        "sv": "Alva socken"
+    },
+    {
+        "en": "Etelhem socken",
+        "item": "Q10489264",
+        "sv": "Etelhems socken"
+    },
+    {
+        "en": "Fide socken",
+        "item": "Q10494945",
+        "sv": "Fide socken"
+    },
+    {
+        "en": "Follingbo socken",
+        "item": "Q10497522",
+        "sv": "Follingbo socken"
+    },
+    {
+        "en": "Akebäck socken",
+        "item": "Q10403977",
+        "sv": "Akebäcks socken"
+    },
+    {
+        "en": "Fole socken",
+        "item": "Q10497299",
+        "sv": "Fole socken"
+    },
+    {
+        "en": "Endre socken",
+        "item": "Q10484052",
+        "sv": "Endre socken"
+    },
+    {
+        "en": "Eskelhem socken",
+        "item": "Q10489066",
+        "sv": "Eskelhems socken"
+    },
+    {
+        "en": "Fardhem socken",
+        "item": "Q10494056",
+        "sv": "Fardhems socken"
+    },
+    {
+        "en": "Fleringe socken",
+        "item": "Q10496665",
+        "sv": "Fleringe socken"
+    },
+    {
+        "en": "Alboga parish",
+        "item": "Q10404380",
+        "sv": "Alboga socken"
+    },
+    {
+        "en": "Askeby parish",
+        "item": "Q10419785",
+        "sv": "Askeby socken"
+    },
+    {
+        "en": "Fogdö parish",
+        "item": "Q10497275",
+        "sv": "Fogdö socken"
+    },
+    {
+        "en": "Spånga",
+        "item": "Q7581833",
+        "sv": "Spånga socken"
+    },
+    {
+        "en": "Fittja parish",
+        "item": "Q10495915",
+        "sv": "Fittja socken"
+    },
+    {
+        "en": "Västra Skrävlinge",
+        "item": "Q7944450",
+        "sv": "Västra Skrävlinge socken"
+    },
+    {
+        "en": "Stenkyrka socken, Gotland",
+        "item": "Q7607588",
+        "sv": "Stenkyrka socken, Gotland"
+    },
+    {
+        "en": "Svartrå",
+        "item": "Q7651721",
+        "sv": "Svartrå socken"
+    },
+    {
+        "en": "Ekeby socken, Uppland",
+        "item": "Q10480545",
+        "sv": "Ekeby socken"
+    },
+    {
+        "en": "Ekers socken",
+        "item": "Q10480595",
+        "sv": "Ekers socken"
+    },
+    {
+        "en": "Ekeby socken, Närke",
+        "item": "Q10480543",
+        "sv": "Ekeby socken, Närke"
+    },
+    {
+        "en": "Fröjel socken",
+        "item": "Q10499707",
+        "sv": "Fröjels socken"
+    },
+    {
+        "en": "Ekeby socken, Östergötland",
+        "item": "Q10480546",
+        "sv": "Ekeby socken, Östergötland"
+    },
+    {
+        "en": "Ekeby socken, Gotland",
+        "item": "Q10480542",
+        "sv": "Ekeby socken, Gotland"
+    },
+    {
+        "en": "Ekeby socken, Scania",
+        "item": "Q10480544",
+        "sv": "Ekeby socken, Skåne"
+    },
+    {
+        "en": "Dalhem socken, Gotland",
+        "item": "Q10466194",
+        "sv": "Dalhems socken, Gotland"
+    },
+    {
+        "en": "Eke socken",
+        "item": "Q10480494",
+        "sv": "Eke socken"
+    },
+    {
+        "en": "Eksta socken",
+        "item": "Q10480790",
+        "sv": "Eksta socken"
+    },
+    {
+        "en": "Skederids socken",
+        "item": "Q10669917",
+        "sv": "Skederids socken"
+    },
+    {
+        "en": "Sankt Nicolai",
+        "item": "Q10661432",
+        "sv": "Sankt Nicolai socken"
+    },
+    {
+        "en": "Rölanda socken",
+        "item": "Q10659016",
+        "sv": "Rölanda socken"
+    },
+    {
+        "en": "Sanda socken",
+        "item": "Q10661114",
+        "sv": "Sanda socken"
+    },
+    {
+        "en": "Silote socken",
+        "item": "Q10667868",
+        "sv": "Silte socken"
+    },
+    {
+        "en": "Sjonhem socken",
+        "item": "Q10669220",
+        "sv": "Sjonhems socken"
+    },
+    {
+        "en": "Grödinge Socken",
+        "item": "Q10509950",
+        "sv": "Grödinge socken"
+    },
+    {
+        "en": "Fårö socken",
+        "item": "Q10501029",
+        "sv": "Fårö socken"
+    },
+    {
+        "en": "Gerum socken",
+        "item": "Q10504511",
+        "sv": "Gerums socken"
+    },
+    {
+        "en": "Gothem socken",
+        "item": "Q10507663",
+        "sv": "Gothems socken"
+    },
+    {
+        "en": "Ganthem socken",
+        "item": "Q10502836",
+        "sv": "Ganthems socken"
+    },
+    {
+        "en": "Gammelgarn socken",
+        "item": "Q10502591",
+        "sv": "Gammelgarns socken"
+    },
+    {
+        "en": "Garde socken",
+        "item": "Q10502871",
+        "sv": "Garde socken"
+    },
+    {
+        "en": "Förkärla",
+        "item": "Q10501351",
+        "sv": "Förkärla socken"
+    },
+    {
+        "en": "Stjärnorps socken",
+        "item": "Q10680361",
+        "sv": "Stjärnorps socken"
+    },
+    {
+        "en": "Stenkumla socken",
+        "item": "Q10678558",
+        "sv": "Stenkumla socken"
+    },
+    {
+        "en": "Sproge socken",
+        "item": "Q10676615",
+        "sv": "Sproge socken"
+    },
+    {
+        "en": "Sollentuna Parish",
+        "item": "Q10673274",
+        "sv": "Sollentuna socken"
+    },
+    {
+        "en": "Södra Björke socken",
+        "item": "Q10688869",
+        "sv": "Södra Björke socken"
+    },
+    {
+        "en": "Sundre socken",
+        "item": "Q10683799",
+        "sv": "Sundre socken"
+    },
+    {
+        "en": "Stånga socken",
+        "item": "Q10682933",
+        "sv": "Stånga socken"
+    },
+    {
+        "en": "Styra socken",
+        "item": "Q10682775",
+        "sv": "Styra socken"
+    },
+    {
+        "en": "Särna",
+        "item": "Q10688119",
+        "sv": "Särna socken"
+    },
+    {
+        "en": "Tofta socken, Gotland",
+        "item": "Q10699230",
+        "sv": "Tofta socken, Gotland"
+    },
+    {
+        "en": "Tofta socken, Scania",
+        "item": "Q10699231",
+        "sv": "Tofta socken, Skåne"
+    },
+    {
+        "en": "Tingstäde socken",
+        "item": "Q10698281",
+        "sv": "Tingstäde socken"
+    },
+    {
+        "en": "Södra Vrams",
+        "item": "Q10689041",
+        "sv": "Södra Vrams socken"
+    },
+    {
+        "en": "Träkumla socken",
+        "item": "Q10705576",
+        "sv": "Träkumla socken"
+    },
+    {
+        "en": "Guldrupe socken",
+        "item": "Q10510575",
+        "sv": "Guldrupe socken"
+    },
+    {
+        "en": "Grötlingbo socken",
+        "item": "Q10510112",
+        "sv": "Grötlingbo socken"
+    },
+    {
+        "en": "Hablingbo socken",
+        "item": "Q10515389",
+        "sv": "Hablingbo socken"
+    },
+    {
+        "en": "Halla socken, Södermanland",
+        "item": "Q10516309",
+        "sv": "Halla socken, Södermanland"
+    },
+    {
+        "en": "Halla socken, Gotland",
+        "item": "Q10516307",
+        "sv": "Halla socken, Gotland"
+    },
+    {
+        "en": "Hall socken",
+        "item": "Q10516415",
+        "sv": "Halls socken"
+    },
+    {
+        "en": "Hangvar socken",
+        "item": "Q10517219",
+        "sv": "Hangvars socken"
+    },
+    {
+        "en": "Gunnilbo parish",
+        "item": "Q10510904",
+        "sv": "Gunnilbo socken"
+    },
+    {
+        "en": "Heds socken",
+        "item": "Q10519244",
+        "sv": "Heds socken"
+    },
+    {
+        "en": "Helgesta socken",
+        "item": "Q10519543",
+        "sv": "Helgesta socken"
+    },
+    {
+        "en": "Havdhem socken",
+        "item": "Q10518609",
+        "sv": "Havdhems socken"
+    },
+    {
+        "en": "Hellvi socken",
+        "item": "Q10520363",
+        "sv": "Hellvi socken"
+    },
+    {
+        "en": "Hemse socken",
+        "item": "Q10521836",
+        "sv": "Hemse socken"
+    },
+    {
+        "en": "Hejde socken",
+        "item": "Q10519389",
+        "sv": "Hejde socken"
+    },
+    {
+        "en": "Hejnum socken",
+        "item": "Q10519397",
+        "sv": "Hejnums socken"
+    },
+    {
+        "en": "Hogrän socken",
+        "item": "Q10525081",
+        "sv": "Hogräns socken"
+    },
+    {
+        "en": "Hejdeby socken",
+        "item": "Q10519394",
+        "sv": "Hejdeby socken"
+    },
+    {
+        "en": "Hornborga socken",
+        "item": "Q10526374",
+        "sv": "Hornborga socken"
+    },
+    {
+        "en": "Vallstena socken",
+        "item": "Q10712395",
+        "sv": "Vallstena socken"
+    },
+    {
+        "en": "Vall socken",
+        "item": "Q10712383",
+        "sv": "Valls socken"
+    },
+    {
+        "en": "Vamlingbo socken",
+        "item": "Q10712518",
+        "sv": "Vamlingbo socken"
+    },
+    {
+        "en": "Viklau socken",
+        "item": "Q10715271",
+        "sv": "Viklau socken"
+    },
+    {
+        "en": "Villstads",
+        "item": "Q10715589",
+        "sv": "Villstads socken"
+    },
+    {
+        "en": "Valleberga",
+        "item": "Q10712332",
+        "sv": "Valleberga socken"
+    },
+    {
+        "en": "Högsjö parish",
+        "item": "Q10532384",
+        "sv": "Högsjö socken"
+    },
+    {
+        "en": "Väskinde socken",
+        "item": "Q10717810",
+        "sv": "Väskinde socken"
+    },
+    {
+        "en": "Västerhejde socken",
+        "item": "Q10717944",
+        "sv": "Västerhejde socken"
+    },
+    {
+        "en": "Vänge socken, Gotland",
+        "item": "Q10717384",
+        "sv": "Vänge socken, Gotland"
+    },
+    {
+        "en": "Västergarn socken",
+        "item": "Q10717917",
+        "sv": "Västergarns socken"
+    },
+    {
+        "en": "Västra Gerum socken",
+        "item": "Q10718242",
+        "sv": "Västra Gerums socken"
+    },
+    {
+        "en": "Västra Sallerups socken",
+        "item": "Q10718346",
+        "sv": "Västra Sallerups socken"
+    },
+    {
+        "en": "Ytterselö",
+        "item": "Q10723863",
+        "sv": "Ytterselö socken"
+    },
+    {
+        "en": "Öja socken, Gotland",
+        "item": "Q10727176",
+        "sv": "Öja socken, Gotland"
+    },
+    {
+        "en": "Väte socken",
+        "item": "Q10718483",
+        "sv": "Väte socken"
+    },
+    {
+        "en": "Kattnäs parish",
+        "item": "Q10544457",
+        "sv": "Kattnäs socken"
+    },
+    {
+        "en": "Kalmar socken",
+        "item": "Q10542868",
+        "sv": "Kalmar socken"
+    },
+    {
+        "en": "Källunge socken",
+        "item": "Q10551686",
+        "sv": "Källunge socken"
+    },
+    {
+        "en": "Klinte socken",
+        "item": "Q10546294",
+        "sv": "Klinte socken"
+    },
+    {
+        "en": "Kräklingbo socken",
+        "item": "Q10549674",
+        "sv": "Kräklingbo socken"
+    },
+    {
+        "en": "Vendel",
+        "item": "Q13719518",
+        "sv": "Vendels socken"
+    },
+    {
+        "en": "Östergarn socken",
+        "item": "Q10727854",
+        "sv": "Östergarns socken"
+    },
+    {
+        "en": "Östra Gerum socken",
+        "item": "Q10728287",
+        "sv": "Östra Gerums socken"
+    },
+    {
+        "en": "Arnäs socken",
+        "item": "Q16497148",
+        "sv": "Arnäs socken"
+    },
+    {
+        "en": "Härslövs",
+        "item": "Q14293709",
+        "sv": "Härslövs socken"
+    },
+    {
+        "en": "Hamra socken, Gotland",
+        "item": "Q18290490",
+        "sv": "Hamra socken, Gotland"
+    },
+    {
+        "en": "Linde socken, Gotland",
+        "item": "Q18291813",
+        "sv": "Linde socken, Gotland"
+    },
+    {
+        "en": "Norrlanda socken",
+        "item": "Q18292628",
+        "sv": "Norrlanda socken"
+    },
+    {
+        "en": "Hörsne-Bara socken",
+        "item": "Q18290861",
+        "sv": "Hörsne socken"
+    },
+    {
+        "en": "Alskog socken",
+        "item": "Q16496436",
+        "sv": "Alskogs socken"
+    },
+    {
+        "en": "Lau socken",
+        "item": "Q10554979",
+        "sv": "Lau socken"
+    },
+    {
+        "en": "Levide socken",
+        "item": "Q10560709",
+        "sv": "Levide socken"
+    },
+    {
+        "en": "Lummelunda socken",
+        "item": "Q10570685",
+        "sv": "Lummelunda socken"
+    },
+    {
+        "en": "Lye socken",
+        "item": "Q10571404",
+        "sv": "Lye socken"
+    },
+    {
+        "en": "Lärbro socken",
+        "item": "Q10572371",
+        "sv": "Lärbro socken"
+    },
+    {
+        "en": "Lokrume socken",
+        "item": "Q10568959",
+        "sv": "Lokrume socken"
+    },
+    {
+        "en": "Ludgo Parish",
+        "item": "Q10570457",
+        "sv": "Ludgo socken"
+    },
+    {
+        "en": "Löts socken",
+        "item": "Q10572937",
+        "sv": "Löts socken, Östergötland"
+    },
+    {
+        "en": "Luttra",
+        "item": "Q10571081",
+        "sv": "Luttra socken"
+    },
+    {
+        "en": "Martebo socken",
+        "item": "Q10577795",
+        "sv": "Martebo socken"
+    },
+    {
+        "en": "Mästerby socken",
+        "item": "Q10593273",
+        "sv": "Mästerby socken"
+    },
+    {
+        "en": "Mjölby socken",
+        "item": "Q10586850",
+        "sv": "Mjölby socken"
+    },
+    {
+        "en": "Nora socken",
+        "item": "Q10601915",
+        "sv": "Nora socken, Ångermanland"
+    },
+    {
+        "en": "Norrbärke",
+        "item": "Q10602760",
+        "sv": "Norrbärke socken"
+    },
+    {
+        "en": "Näs socken, Gotland",
+        "item": "Q10605293",
+        "sv": "Näs socken, Gotland"
+    },
+    {
+        "en": "När socken",
+        "item": "Q10605258",
+        "sv": "Närs socken"
+    },
+    {
+        "en": "Norra Björke socken",
+        "item": "Q10602412",
+        "sv": "Norra Björke socken"
+    },
+    {
+        "en": "Resteröds socken",
+        "item": "Q10651281",
+        "sv": "Resteröds socken"
+    },
+    {
+        "en": "Roasjö socken",
+        "item": "Q10656114",
+        "sv": "Roasjö socken"
+    },
+    {
+        "en": "Rone socken",
+        "item": "Q10656760",
+        "sv": "Rone socken"
+    },
+    {
+        "en": "Othem socken",
+        "item": "Q10613233",
+        "sv": "Othems socken"
+    },
+    {
+        "en": "Rute socken",
+        "item": "Q10658109",
+        "sv": "Rute socken"
+    },
+    {
+        "en": "Roma socken",
+        "item": "Q10656502",
+        "sv": "Roma socken"
+    },
+    {
+        "en": "Ryssby",
+        "item": "Q10658319",
+        "sv": "Ryssby socken"
+    },
+    {
+        "item": "Q969678",
+        "sv": "Gällinge socken"
+    },
+    {
+        "item": "Q2313061",
+        "sv": "Näshults socken"
+    },
+    {
+        "item": "Q2462454",
+        "sv": "Näshulta socken"
+    },
+    {
+        "item": "Q3563941",
+        "sv": "Värö socken"
+    },
+    {
+        "item": "Q3725253",
+        "sv": "Frostvikens socken"
+    },
+    {
+        "item": "Q4164315",
+        "sv": "Hamrånge socken"
+    },
+    {
+        "item": "Q3267570",
+        "sv": "Sparlösa socken"
+    },
+    {
+        "item": "Q2788890",
+        "sv": "Solberga socken, Bohuslän"
+    },
+    {
+        "item": "Q3532652",
+        "sv": "Tossene socken"
+    },
+    {
+        "item": "Q1643497",
+        "sv": "Högby socken, Öland"
+    },
+    {
+        "item": "Q3593687",
+        "sv": "Ölmevalla socken"
+    },
+    {
+        "item": "Q1168272",
+        "sv": "Kungslena socken"
+    },
+    {
+        "item": "Q5406645",
+        "sv": "Örberga socken"
+    },
+    {
+        "item": "Q3498206",
+        "sv": "Stenbrohults socken"
+    },
+    {
+        "item": "Q4357733",
+        "sv": "Orlunda socken"
+    },
+    {
+        "item": "Q2517188",
+        "sv": "Spekeröds socken"
+    },
+    {
+        "item": "Q2943713",
+        "sv": "Frösö socken"
+    },
+    {
+        "item": "Q3073180",
+        "sv": "Fjärås socken"
+    },
+    {
+        "item": "Q9352844",
+        "sv": "Söndrums socken"
+    },
+    {
+        "item": "Q3346779",
+        "sv": "Näsinge socken"
+    },
+    {
+        "item": "Q3547041",
+        "sv": "Törnevalla socken"
+    },
+    {
+        "item": "Q10403626",
+        "sv": "Agunnaryds socken"
+    },
+    {
+        "item": "Q10405171",
+        "sv": "Algutsrums socken"
+    },
+    {
+        "item": "Q10406535",
+        "sv": "Almby socken"
+    },
+    {
+        "item": "Q10406625",
+        "sv": "Alnö socken"
+    },
+    {
+        "item": "Q10407673",
+        "sv": "Ambjörnarps socken"
+    },
+    {
+        "item": "Q10411448",
+        "sv": "Andrarums socken"
+    },
+    {
+        "item": "Q10411784",
+        "sv": "Angereds socken"
+    },
+    {
+        "item": "Q10419716",
+        "sv": "Asige socken"
+    },
+    {
+        "item": "Q10419795",
+        "sv": "Askers socken"
+    },
+    {
+        "item": "Q10419850",
+        "sv": "Asks socken, Östergötland"
+    },
+    {
+        "item": "Q10420452",
+        "sv": "Aspås socken"
+    },
+    {
+        "item": "Q10422201",
+        "sv": "Attmars socken"
+    },
+    {
+        "item": "Q10425214",
+        "sv": "Baldringe socken"
+    },
+    {
+        "item": "Q10426438",
+        "sv": "Barkåkra socken"
+    },
+    {
+        "item": "Q10426480",
+        "sv": "Barnarps socken"
+    },
+    {
+        "item": "Q10401139",
+        "sv": "Adelövs socken"
+    },
+    {
+        "item": "Q10404224",
+        "sv": "Alanäs socken"
+    },
+    {
+        "item": "Q10405176",
+        "sv": "Algutstorps socken"
+    },
+    {
+        "item": "Q10405297",
+        "sv": "Alingsås socken"
+    },
+    {
+        "item": "Q10406550",
+        "sv": "Almesåkra socken"
+    },
+    {
+        "item": "Q10411712",
+        "sv": "Angarns socken"
+    },
+    {
+        "item": "Q10411769",
+        "sv": "Angelstads socken"
+    },
+    {
+        "item": "Q10416213",
+        "sv": "Appuna socken"
+    },
+    {
+        "item": "Q10418970",
+        "sv": "Arvidsjaurs socken"
+    },
+    {
+        "item": "Q10418987",
+        "sv": "Arvika socken"
+    },
+    {
+        "item": "Q10419137",
+        "sv": "Asby socken"
+    },
+    {
+        "item": "Q10419826",
+        "sv": "Asklanda socken"
+    },
+    {
+        "item": "Q10419849",
+        "sv": "Asks socken, Skåne"
+    },
+    {
+        "item": "Q10419898",
+        "sv": "Aspeboda socken"
+    },
+    {
+        "item": "Q10423532",
+        "sv": "Avesta socken"
+    },
+    {
+        "item": "Q10423675",
+        "sv": "Axbergs socken"
+    },
+    {
+        "item": "Q10424141",
+        "sv": "Backa socken"
+    },
+    {
+        "item": "Q10425327",
+        "sv": "Balkåkra socken"
+    },
+    {
+        "item": "Q10426050",
+        "sv": "Bankekinds socken"
+    },
+    {
+        "item": "Q10426706",
+        "sv": "Barva socken"
+    },
+    {
+        "item": "Q10427533",
+        "sv": "Beatebergs socken"
+    },
+    {
+        "item": "Q10399594",
+        "sv": "Acklinga socken"
+    },
+    {
+        "item": "Q10403297",
+        "sv": "Agnetorps socken"
+    },
+    {
+        "item": "Q10404616",
+        "sv": "Ale-Skövde socken"
+    },
+    {
+        "item": "Q10405120",
+        "sv": "Alfshögs socken"
+    },
+    {
+        "item": "Q10405130",
+        "sv": "Alfta socken"
+    },
+    {
+        "item": "Q10405603",
+        "sv": "Allerums socken"
+    },
+    {
+        "item": "Q10405622",
+        "sv": "Allhelgona socken"
+    },
+    {
+        "item": "Q10406584",
+        "sv": "Almunge socken"
+    },
+    {
+        "item": "Q10406820",
+        "sv": "Alsters socken"
+    },
+    {
+        "item": "Q10411538",
+        "sv": "Aneboda socken"
+    },
+    {
+        "item": "Q10411775",
+        "sv": "Angerdshestra socken"
+    },
+    {
+        "item": "Q10412448",
+        "sv": "Annelövs socken"
+    },
+    {
+        "item": "Q10412457",
+        "sv": "Annerstads socken"
+    },
+    {
+        "item": "Q10417112",
+        "sv": "Arbrå socken"
+    },
+    {
+        "item": "Q10418492",
+        "sv": "Arrie socken"
+    },
+    {
+        "item": "Q10419807",
+        "sv": "Askeryds socken"
+    },
+    {
+        "item": "Q10419872",
+        "sv": "Asmundtorps socken"
+    },
+    {
+        "item": "Q10420465",
+        "sv": "Aspö socken, Blekinge"
+    },
+    {
+        "item": "Q10422365",
+        "sv": "Augerums socken"
+    },
+    {
+        "item": "Q10424152",
+        "sv": "Backaryds socken"
+    },
+    {
+        "item": "Q10424498",
+        "sv": "Badelunda socken"
+    },
+    {
+        "item": "Q10426059",
+        "sv": "Bankeryds socken"
+    },
+    {
+        "item": "Q10426249",
+        "sv": "Bara socken, Skåne"
+    },
+    {
+        "item": "Q10426500",
+        "sv": "Barne-Åsaka socken"
+    },
+    {
+        "item": "Q10426659",
+        "sv": "Barsebäcks socken"
+    },
+    {
+        "item": "Q10401127",
+        "sv": "Adelsö socken"
+    },
+    {
+        "item": "Q10406578",
+        "sv": "Almundsryds socken"
+    },
+    {
+        "item": "Q10406791",
+        "sv": "Alsike socken"
+    },
+    {
+        "item": "Q10407037",
+        "sv": "Altuna socken"
+    },
+    {
+        "item": "Q10411219",
+        "sv": "Anderslövs socken"
+    },
+    {
+        "item": "Q10411242",
+        "sv": "Anderstorps socken"
+    },
+    {
+        "item": "Q10417021",
+        "sv": "Arboga socken"
+    },
+    {
+        "item": "Q10417122",
+        "sv": "Arby socken"
+    },
+    {
+        "item": "Q10417904",
+        "sv": "Aringsås socken"
+    },
+    {
+        "item": "Q10418326",
+        "sv": "Arnö socken"
+    },
+    {
+        "item": "Q10419084",
+        "sv": "Asa socken"
+    },
+    {
+        "item": "Q10419125",
+        "sv": "Asarums socken"
+    },
+    {
+        "item": "Q10419819",
+        "sv": "Askims socken"
+    },
+    {
+        "item": "Q10419856",
+        "sv": "Askums socken"
+    },
+    {
+        "item": "Q10420466",
+        "sv": "Aspö socken, Södermanland"
+    },
+    {
+        "item": "Q10423375",
+        "sv": "Ausås socken"
+    },
+    {
+        "item": "Q10425705",
+        "sv": "Baltaks socken"
+    },
+    {
+        "item": "Q10426413",
+        "sv": "Barkeryds socken"
+    },
+    {
+        "item": "Q10428414",
+        "sv": "Berghems socken"
+    },
+    {
+        "item": "Q10428484",
+        "sv": "Bergs socken, Småland"
+    },
+    {
+        "item": "Q10428576",
+        "sv": "Bergstena socken"
+    },
+    {
+        "item": "Q10428605",
+        "sv": "Bergums socken"
+    },
+    {
+        "item": "Q10429052",
+        "sv": "Bettna socken"
+    },
+    {
+        "item": "Q10430422",
+        "sv": "Bjurtjärns socken"
+    },
+    {
+        "item": "Q10430429",
+        "sv": "Bjurums socken, Kinne härad"
+    },
+    {
+        "item": "Q10430451",
+        "sv": "Bjälbo socken"
+    },
+    {
+        "item": "Q10430473",
+        "sv": "Bjäresjö socken"
+    },
+    {
+        "item": "Q10430480",
+        "sv": "Bjärka socken"
+    },
+    {
+        "item": "Q10430588",
+        "sv": "Björklinge socken"
+    },
+    {
+        "item": "Q10430615",
+        "sv": "Björksta socken"
+    },
+    {
+        "item": "Q10430636",
+        "sv": "Björkängs socken"
+    },
+    {
+        "item": "Q10430690",
+        "sv": "Björna socken"
+    },
+    {
+        "item": "Q10431329",
+        "sv": "Blidsbergs socken"
+    },
+    {
+        "item": "Q10431944",
+        "sv": "Boda socken, Dalarna"
+    },
+    {
+        "item": "Q10432623",
+        "sv": "Bolmsö socken"
+    },
+    {
+        "item": "Q10432850",
+        "sv": "Bonderups socken"
+    },
+    {
+        "item": "Q10433195",
+        "sv": "Borgsjö socken"
+    },
+    {
+        "item": "Q10433201",
+        "sv": "Borgstena socken"
+    },
+    {
+        "item": "Q10433205",
+        "sv": "Borgunda socken"
+    },
+    {
+        "item": "Q10433212",
+        "sv": "Borgviks socken"
+    },
+    {
+        "item": "Q10433418",
+        "sv": "Bosarps socken"
+    },
+    {
+        "item": "Q10433728",
+        "sv": "Botkyrka socken"
+    },
+    {
+        "item": "Q10428349",
+        "sv": "Berga socken, Småland"
+    },
+    {
+        "item": "Q10428486",
+        "sv": "Bergs socken, Västmanland"
+    },
+    {
+        "item": "Q10428507",
+        "sv": "Bergshammars socken"
+    },
+    {
+        "item": "Q10430103",
+        "sv": "Biskopskulla socken"
+    },
+    {
+        "item": "Q10430501",
+        "sv": "Bjärshögs socken"
+    },
+    {
+        "item": "Q10430663",
+        "sv": "Björlanda socken"
+    },
+    {
+        "item": "Q10430779",
+        "sv": "Björskogs socken"
+    },
+    {
+        "item": "Q10430792",
+        "sv": "Björsäters socken, Västergötland"
+    },
+    {
+        "item": "Q10430871",
+        "sv": "Blacksta socken"
+    },
+    {
+        "item": "Q10431335",
+        "sv": "Blidö socken"
+    },
+    {
+        "item": "Q10431776",
+        "sv": "Blåviks socken"
+    },
+    {
+        "item": "Q10431814",
+        "sv": "Bo socken"
+    },
+    {
+        "item": "Q10431959",
+        "sv": "Bodarps socken"
+    },
+    {
+        "item": "Q10432006",
+        "sv": "Bodums socken"
+    },
+    {
+        "item": "Q10432070",
+        "sv": "Bogens socken"
+    },
+    {
+        "item": "Q10432582",
+        "sv": "Bollebygds socken"
+    },
+    {
+        "item": "Q10432586",
+        "sv": "Bollerups socken"
+    },
+    {
+        "item": "Q10432598",
+        "sv": "Bollnäs socken"
+    },
+    {
+        "item": "Q10432679",
+        "sv": "Bolstads socken"
+    },
+    {
+        "item": "Q10432867",
+        "sv": "Bondkyrka socken"
+    },
+    {
+        "item": "Q10432970",
+        "sv": "Boo socken"
+    },
+    {
+        "item": "Q10433188",
+        "sv": "Borgs socken"
+    },
+    {
+        "item": "Q10433311",
+        "sv": "Borrby socken"
+    },
+    {
+        "item": "Q10433926",
+        "sv": "Bottna socken"
+    },
+    {
+        "item": "Q10434707",
+        "sv": "Brandalsund"
+    },
+    {
+        "item": "Q10434753",
+        "sv": "Brandstads socken"
+    },
+    {
+        "item": "Q10434891",
+        "sv": "Brattfors socken"
+    },
+    {
+        "item": "Q10428483",
+        "sv": "Bergs socken, Jämtland"
+    },
+    {
+        "item": "Q10428521",
+        "sv": "Bergsjö socken"
+    },
+    {
+        "item": "Q10428611",
+        "sv": "Bergunda socken"
+    },
+    {
+        "item": "Q10429640",
+        "sv": "Billinge socken"
+    },
+    {
+        "item": "Q10429730",
+        "sv": "Binnebergs socken"
+    },
+    {
+        "item": "Q10430393",
+        "sv": "Bjurbäcks socken"
+    },
+    {
+        "item": "Q10430417",
+        "sv": "Bjursås socken"
+    },
+    {
+        "item": "Q10430446",
+        "sv": "Bjuvs socken"
+    },
+    {
+        "item": "Q10430522",
+        "sv": "Björka socken"
+    },
+    {
+        "item": "Q10430565",
+        "sv": "Björketorps socken"
+    },
+    {
+        "item": "Q10430632",
+        "sv": "Björkviks socken"
+    },
+    {
+        "item": "Q10430793",
+        "sv": "Björsäters socken, Östergötland"
+    },
+    {
+        "item": "Q10430876",
+        "sv": "Blackstads socken"
+    },
+    {
+        "item": "Q10430908",
+        "sv": "Bladåkers socken"
+    },
+    {
+        "item": "Q10431632",
+        "sv": "Blädinge socken"
+    },
+    {
+        "item": "Q10431945",
+        "sv": "Boda socken, Värmland"
+    },
+    {
+        "item": "Q10432702",
+        "sv": "Bolums socken, Kinne härad"
+    },
+    {
+        "item": "Q10433243",
+        "sv": "Borlunda socken"
+    },
+    {
+        "item": "Q10433434",
+        "sv": "Bosebo socken"
+    },
+    {
+        "item": "Q10433445",
+        "sv": "Bosjöklosters socken"
+    },
+    {
+        "item": "Q10433715",
+        "sv": "Botilsäters socken"
+    },
+    {
+        "item": "Q10433932",
+        "sv": "Bottnaryds socken"
+    },
+    {
+        "item": "Q10428059",
+        "sv": "Benestads socken"
+    },
+    {
+        "item": "Q10428348",
+        "sv": "Berga socken, Västergötland"
+    },
+    {
+        "item": "Q10428485",
+        "sv": "Bergs socken, Västergötland"
+    },
+    {
+        "item": "Q10429620",
+        "sv": "Billeberga socken"
+    },
+    {
+        "item": "Q10430399",
+        "sv": "Bjurholms socken"
+    },
+    {
+        "item": "Q10430428",
+        "sv": "Bjurums socken"
+    },
+    {
+        "item": "Q10430435",
+        "sv": "Bjuråkers socken"
+    },
+    {
+        "item": "Q10430457",
+        "sv": "Bjällerups socken"
+    },
+    {
+        "item": "Q10430464",
+        "sv": "Bjärby socken"
+    },
+    {
+        "item": "Q10430545",
+        "sv": "Björkebergs socken"
+    },
+    {
+        "item": "Q10430655",
+        "sv": "Björkö socken"
+    },
+    {
+        "item": "Q10430711",
+        "sv": "Björnekulla socken"
+    },
+    {
+        "item": "Q10430738",
+        "sv": "Björnlunda socken"
+    },
+    {
+        "item": "Q10431281",
+        "sv": "Blentarps socken"
+    },
+    {
+        "item": "Q10431499",
+        "sv": "Blomskogs socken"
+    },
+    {
+        "item": "Q10432088",
+        "sv": "Boglösa socken"
+    },
+    {
+        "item": "Q10432105",
+        "sv": "Bogsta socken"
+    },
+    {
+        "item": "Q10432191",
+        "sv": "Bokenäs socken"
+    },
+    {
+        "item": "Q10432673",
+        "sv": "Bolshögs socken"
+    },
+    {
+        "item": "Q10432703",
+        "sv": "Bolums socken"
+    },
+    {
+        "item": "Q10432875",
+        "sv": "Bondstorps socken"
+    },
+    {
+        "item": "Q10433148",
+        "sv": "Borgeby socken"
+    },
+    {
+        "item": "Q10433208",
+        "sv": "Borgvattnets socken"
+    },
+    {
+        "item": "Q10433320",
+        "sv": "Borrie socken"
+    },
+    {
+        "item": "Q10433567",
+        "sv": "Boteå socken"
+    },
+    {
+        "item": "Q10434760",
+        "sv": "Brandstorps socken"
+    },
+    {
+        "item": "Q10434846",
+        "sv": "Brastads socken"
+    },
+    {
+        "item": "Q10435002",
+        "sv": "Bredareds socken"
+    },
+    {
+        "item": "Q10435024",
+        "sv": "Bredestads socken"
+    },
+    {
+        "item": "Q10435188",
+        "sv": "Breviks socken"
+    },
+    {
+        "item": "Q10436433",
+        "sv": "Brunnhems socken"
+    },
+    {
+        "item": "Q10436440",
+        "sv": "Brunns socken"
+    },
+    {
+        "item": "Q10436496",
+        "sv": "Brunskogs socken"
+    },
+    {
+        "item": "Q10437011",
+        "sv": "Brågarps socken"
+    },
+    {
+        "item": "Q10437019",
+        "sv": "Brålanda socken"
+    },
+    {
+        "item": "Q10437122",
+        "sv": "Brösarps socken"
+    },
+    {
+        "item": "Q10437824",
+        "sv": "Bureå socken"
+    },
+    {
+        "item": "Q10438524",
+        "sv": "Bärebergs socken"
+    },
+    {
+        "item": "Q10438756",
+        "sv": "Börrums socken"
+    },
+    {
+        "item": "Q10466081",
+        "sv": "Dalarö socken"
+    },
+    {
+        "item": "Q10466283",
+        "sv": "Dalstorps socken"
+    },
+    {
+        "item": "Q10466625",
+        "sv": "Dannemora socken"
+    },
+    {
+        "item": "Q10466851",
+        "sv": "Daretorps socken"
+    },
+    {
+        "item": "Q10467701",
+        "sv": "Degerfors socken, Västerbotten"
+    },
+    {
+        "item": "Q10474973",
+        "sv": "Djurröds socken"
+    },
+    {
+        "item": "Q10475003",
+        "sv": "Djurö socken"
+    },
+    {
+        "item": "Q10435623",
+        "sv": "Bringetofta socken"
+    },
+    {
+        "item": "Q10436032",
+        "sv": "Bromma socken, Skåne"
+    },
+    {
+        "item": "Q10436391",
+        "sv": "Brunnby socken"
+    },
+    {
+        "item": "Q10437865",
+        "sv": "Burlövs socken"
+    },
+    {
+        "item": "Q10438123",
+        "sv": "By socken, Dalarna"
+    },
+    {
+        "item": "Q10438164",
+        "sv": "Bygdeå socken"
+    },
+    {
+        "item": "Q10438376",
+        "sv": "Bäckaby socken"
+    },
+    {
+        "item": "Q10438284",
+        "sv": "Byske socken"
+    },
+    {
+        "item": "Q10438393",
+        "sv": "Bäcke socken"
+    },
+    {
+        "item": "Q10438431",
+        "sv": "Bäcks socken"
+    },
+    {
+        "item": "Q10438437",
+        "sv": "Bäckseda socken"
+    },
+    {
+        "item": "Q10438481",
+        "sv": "Bälinge socken, Västergötland"
+    },
+    {
+        "item": "Q10438575",
+        "sv": "Bäve socken"
+    },
+    {
+        "item": "Q10438611",
+        "sv": "Båraryds socken"
+    },
+    {
+        "item": "Q10438618",
+        "sv": "Bårslövs socken"
+    },
+    {
+        "item": "Q10438772",
+        "sv": "Börstigs socken"
+    },
+    {
+        "item": "Q10466124",
+        "sv": "Dalby socken, Skåne"
+    },
+    {
+        "item": "Q10466125",
+        "sv": "Dalby socken, Värmland"
+    },
+    {
+        "item": "Q10466212",
+        "sv": "Dalköpinge socken"
+    },
+    {
+        "item": "Q10466245",
+        "sv": "Dals-Eds socken"
+    },
+    {
+        "item": "Q10466255",
+        "sv": "Dals socken"
+    },
+    {
+        "item": "Q10466265",
+        "sv": "Dalskogs socken"
+    },
+    {
+        "item": "Q10466526",
+        "sv": "Danderyds socken"
+    },
+    {
+        "item": "Q10472679",
+        "sv": "Dillnäs socken"
+    },
+    {
+        "item": "Q10472786",
+        "sv": "Dimbo socken"
+    },
+    {
+        "item": "Q10476823",
+        "sv": "Drevs socken"
+    },
+    {
+        "item": "Q10477577",
+        "sv": "Dunkers socken"
+    },
+    {
+        "item": "Q10435037",
+        "sv": "Breds socken"
+    },
+    {
+        "item": "Q10435879",
+        "sv": "Bro socken, Uppland"
+    },
+    {
+        "item": "Q10435877",
+        "sv": "Bro socken, Bohuslän"
+    },
+    {
+        "item": "Q10435910",
+        "sv": "Broby socken"
+    },
+    {
+        "item": "Q10436354",
+        "sv": "Brunflo socken"
+    },
+    {
+        "item": "Q10437985",
+        "sv": "Burträsks socken"
+    },
+    {
+        "item": "Q10438122",
+        "sv": "By socken, Värmland"
+    },
+    {
+        "item": "Q10438480",
+        "sv": "Bälinge socken, Södermanland"
+    },
+    {
+        "item": "Q10438490",
+        "sv": "Bällefors socken"
+    },
+    {
+        "item": "Q10438516",
+        "sv": "Bärbo socken"
+    },
+    {
+        "item": "Q10438629",
+        "sv": "Båstads socken"
+    },
+    {
+        "item": "Q10438719",
+        "sv": "Böne socken"
+    },
+    {
+        "item": "Q10438777",
+        "sv": "Börstils socken"
+    },
+    {
+        "item": "Q10465965",
+        "sv": "Dagsås socken"
+    },
+    {
+        "item": "Q10466048",
+        "sv": "Dala socken"
+    },
+    {
+        "item": "Q10466633",
+        "sv": "Dannike socken"
+    },
+    {
+        "item": "Q10466640",
+        "sv": "Dannäs socken"
+    },
+    {
+        "item": "Q10467686",
+        "sv": "Degeberga socken"
+    },
+    {
+        "item": "Q10468283",
+        "sv": "Delsbo socken"
+    },
+    {
+        "item": "Q10476077",
+        "sv": "Dorotea socken"
+    },
+    {
+        "item": "Q10476955",
+        "sv": "Drothems socken"
+    },
+    {
+        "item": "Q10435006",
+        "sv": "Bredaryds socken"
+    },
+    {
+        "item": "Q10435052",
+        "sv": "Bredsäters socken"
+    },
+    {
+        "item": "Q10435880",
+        "sv": "Bro socken, Västmanland"
+    },
+    {
+        "item": "Q10435881",
+        "sv": "Bro socken, Värmland"
+    },
+    {
+        "item": "Q10435950",
+        "sv": "Broddarps socken"
+    },
+    {
+        "item": "Q10435956",
+        "sv": "Broddetorps socken"
+    },
+    {
+        "item": "Q10436399",
+        "sv": "Brunneby socken"
+    },
+    {
+        "item": "Q10436903",
+        "sv": "Bräcke socken"
+    },
+    {
+        "item": "Q10436928",
+        "sv": "Bräkne-Hoby socken"
+    },
+    {
+        "item": "Q10437026",
+        "sv": "Bråttensby socken"
+    },
+    {
+        "item": "Q10437115",
+        "sv": "Brönnestads socken"
+    },
+    {
+        "item": "Q10437758",
+        "sv": "Bunkeflo socken"
+    },
+    {
+        "item": "Q10437952",
+        "sv": "Burseryds socken"
+    },
+    {
+        "item": "Q10438138",
+        "sv": "Byarums socken"
+    },
+    {
+        "item": "Q10438397",
+        "sv": "Bäckebo socken"
+    },
+    {
+        "item": "Q10438459",
+        "sv": "Bälaryds socken"
+    },
+    {
+        "item": "Q10438482",
+        "sv": "Bälinge socken, Uppland"
+    },
+    {
+        "item": "Q10438528",
+        "sv": "Bärfendals socken"
+    },
+    {
+        "item": "Q10438692",
+        "sv": "Böja socken"
+    },
+    {
+        "item": "Q10438740",
+        "sv": "Börje socken"
+    },
+    {
+        "item": "Q10438747",
+        "sv": "Börringe socken"
+    },
+    {
+        "item": "Q10438786",
+        "sv": "Bösarps socken"
+    },
+    {
+        "item": "Q10465945",
+        "sv": "Dagsbergs socken"
+    },
+    {
+        "item": "Q10465958",
+        "sv": "Dagstorps socken"
+    },
+    {
+        "item": "Q10466123",
+        "sv": "Dalby socken, Uppland"
+    },
+    {
+        "item": "Q10466195",
+        "sv": "Dalhems socken, Småland"
+    },
+    {
+        "item": "Q10466297",
+        "sv": "Dalums socken"
+    },
+    {
+        "item": "Q10466617",
+        "sv": "Danmarks socken"
+    },
+    {
+        "item": "Q10467702",
+        "sv": "Degerfors socken, Värmland"
+    },
+    {
+        "item": "Q10473020",
+        "sv": "Dingtuna socken"
+    },
+    {
+        "item": "Q10474978",
+        "sv": "Djursdala socken"
+    },
+    {
+        "item": "Q10476442",
+        "sv": "Dragsmarks socken"
+    },
+    {
+        "item": "Q10477223",
+        "sv": "Drängsereds socken"
+    },
+    {
+        "item": "Q10478565",
+        "sv": "Dänningelanda socken"
+    },
+    {
+        "item": "Q10479954",
+        "sv": "Eds socken, Uppland"
+    },
+    {
+        "item": "Q10479987",
+        "sv": "Edshults socken"
+    },
+    {
+        "item": "Q10479994",
+        "sv": "Edsleskogs socken"
+    },
+    {
+        "item": "Q10480008",
+        "sv": "Edsvära socken"
+    },
+    {
+        "item": "Q10481147",
+        "sv": "Eldsberga socken"
+    },
+    {
+        "item": "Q10481542",
+        "sv": "Elings socken"
+    },
+    {
+        "item": "Q10481545",
+        "sv": "Elins socken"
+    },
+    {
+        "item": "Q10481772",
+        "sv": "Elleholms socken"
+    },
+    {
+        "item": "Q10482300",
+        "sv": "Emmislövs socken"
+    },
+    {
+        "item": "Q10488491",
+        "sv": "Ervalla socken"
+    },
+    {
+        "item": "Q10489203",
+        "sv": "Essunga socken"
+    },
+    {
+        "item": "Q10492766",
+        "sv": "Everlövs socken"
+    },
+    {
+        "item": "Q10493549",
+        "sv": "Fagereds socken"
+    },
+    {
+        "item": "Q10493561",
+        "sv": "Fagerhults socken"
+    },
+    {
+        "item": "Q10493564",
+        "sv": "Fagerlids socken"
+    },
+    {
+        "item": "Q10493716",
+        "sv": "Falekvarna socken"
+    },
+    {
+        "item": "Q10493768",
+        "sv": "Falköpings östra socken"
+    },
+    {
+        "item": "Q10494074",
+        "sv": "Farhults socken"
+    },
+    {
+        "item": "Q10496193",
+        "sv": "Flackarps socken"
+    },
+    {
+        "item": "Q10496651",
+        "sv": "Fleninge socken"
+    },
+    {
+        "item": "Q10496832",
+        "sv": "Flisby socken"
+    },
+    {
+        "item": "Q10496850",
+        "sv": "Flistads socken, Västergötland"
+    },
+    {
+        "item": "Q10496851",
+        "sv": "Flistads socken, Östergötland"
+    },
+    {
+        "item": "Q10497173",
+        "sv": "Fläckebo socken"
+    },
+    {
+        "item": "Q10498030",
+        "sv": "Fornåsa socken"
+    },
+    {
+        "item": "Q10498058",
+        "sv": "Fors socken, Jämtland"
+    },
+    {
+        "item": "Q10478558",
+        "sv": "Dädesjö socken"
+    },
+    {
+        "item": "Q10478700",
+        "sv": "Dörarps socken"
+    },
+    {
+        "item": "Q10479829",
+        "sv": "Eda socken"
+    },
+    {
+        "item": "Q10479854",
+        "sv": "Edebo socken"
+    },
+    {
+        "item": "Q10480137",
+        "sv": "Edåsa socken"
+    },
+    {
+        "item": "Q10480202",
+        "sv": "Eftra socken"
+    },
+    {
+        "item": "Q10480488",
+        "sv": "Ekby socken"
+    },
+    {
+        "item": "Q10480499",
+        "sv": "Ekeberga socken"
+    },
+    {
+        "item": "Q10480759",
+        "sv": "Eks socken"
+    },
+    {
+        "item": "Q10480775",
+        "sv": "Eksjö socken"
+    },
+    {
+        "item": "Q10481538",
+        "sv": "Elinghems socken"
+    },
+    {
+        "item": "Q10487723",
+        "sv": "Eriksbergs socken"
+    },
+    {
+        "item": "Q10493766",
+        "sv": "Falköpings västra socken"
+    },
+    {
+        "item": "Q10494080",
+        "sv": "Faringe socken"
+    },
+    {
+        "item": "Q10494537",
+        "sv": "Felestads socken"
+    },
+    {
+        "item": "Q10494616",
+        "sv": "Femsjö socken"
+    },
+    {
+        "item": "Q10495522",
+        "sv": "Finnerödja socken"
+    },
+    {
+        "item": "Q10495939",
+        "sv": "Fivelstads socken"
+    },
+    {
+        "item": "Q10495953",
+        "sv": "Fjelie socken"
+    },
+    {
+        "item": "Q10495998",
+        "sv": "Fjälkestads socken"
+    },
+    {
+        "item": "Q10496102",
+        "sv": "Fjärestads socken"
+    },
+    {
+        "item": "Q10496837",
+        "sv": "Fliseryds socken"
+    },
+    {
+        "item": "Q10498060",
+        "sv": "Fors socken, Södermanland"
+    },
+    {
+        "item": "Q10498061",
+        "sv": "Fors socken, Västergötland"
+    },
+    {
+        "item": "Q10498098",
+        "sv": "Forsby socken"
+    },
+    {
+        "item": "Q10498119",
+        "sv": "Forsheda socken"
+    },
+    {
+        "item": "Q10478661",
+        "sv": "Döderhults socken"
+    },
+    {
+        "item": "Q10478719",
+        "sv": "Döve socken"
+    },
+    {
+        "item": "Q10479895",
+        "sv": "Edestads socken"
+    },
+    {
+        "item": "Q10479955",
+        "sv": "Eds socken, Värmland"
+    },
+    {
+        "item": "Q10479956",
+        "sv": "Eds socken, Ångermanland"
+    },
+    {
+        "item": "Q10479964",
+        "sv": "Edsbergs socken"
+    },
+    {
+        "item": "Q10480265",
+        "sv": "Eggvena socken"
+    },
+    {
+        "item": "Q10480551",
+        "sv": "Ekebyborna socken"
+    },
+    {
+        "item": "Q10480602",
+        "sv": "Ekerö socken"
+    },
+    {
+        "item": "Q10480611",
+        "sv": "Ekeskogs socken"
+    },
+    {
+        "item": "Q10480764",
+        "sv": "Ekshärads socken"
+    },
+    {
+        "item": "Q10481757",
+        "sv": "Eljaröds socken"
+    },
+    {
+        "item": "Q10484292",
+        "sv": "Enköpings-Näs socken"
+    },
+    {
+        "item": "Q10485126",
+        "sv": "Enåkers socken"
+    },
+    {
+        "item": "Q10485139",
+        "sv": "Enåsa socken"
+    },
+    {
+        "item": "Q10488440",
+        "sv": "Erska socken"
+    },
+    {
+        "item": "Q10489106",
+        "sv": "Eskilsäters socken"
+    },
+    {
+        "item": "Q10494178",
+        "sv": "Farstorps socken"
+    },
+    {
+        "item": "Q10494566",
+        "sv": "Fellingsbro socken"
+    },
+    {
+        "item": "Q10495205",
+        "sv": "Films socken"
+    },
+    {
+        "item": "Q10496657",
+        "sv": "Flens socken"
+    },
+    {
+        "item": "Q10496890",
+        "sv": "Floda socken, Dalarna"
+    },
+    {
+        "item": "Q10497512",
+        "sv": "Folkärna socken"
+    },
+    {
+        "item": "Q10498074",
+        "sv": "Forsa socken"
+    },
+    {
+        "item": "Q10498133",
+        "sv": "Forshälla socken"
+    },
+    {
+        "item": "Q10478705",
+        "sv": "Dörby socken"
+    },
+    {
+        "item": "Q10479866",
+        "sv": "Edefors socken"
+    },
+    {
+        "item": "Q10479981",
+        "sv": "Edsele socken"
+    },
+    {
+        "item": "Q10480210",
+        "sv": "Egby socken"
+    },
+    {
+        "item": "Q10480253",
+        "sv": "Eggby socken"
+    },
+    {
+        "item": "Q10484434",
+        "sv": "Enslövs socken"
+    },
+    {
+        "item": "Q10485085",
+        "sv": "Envikens socken"
+    },
+    {
+        "item": "Q10485132",
+        "sv": "Enångers socken"
+    },
+    {
+        "item": "Q10487777",
+        "sv": "Eringsboda socken"
+    },
+    {
+        "item": "Q10489002",
+        "sv": "Esarps socken"
+    },
+    {
+        "item": "Q10489073",
+        "sv": "Eskilstorps socken"
+    },
+    {
+        "item": "Q10489254",
+        "sv": "Estuna socken"
+    },
+    {
+        "item": "Q10492821",
+        "sv": "Everöds socken"
+    },
+    {
+        "item": "Q10495353",
+        "sv": "Finja socken"
+    },
+    {
+        "item": "Q10495517",
+        "sv": "Finnekumla socken"
+    },
+    {
+        "item": "Q10495944",
+        "sv": "Fivlereds socken"
+    },
+    {
+        "item": "Q10496003",
+        "sv": "Fjälkinge socken"
+    },
+    {
+        "item": "Q10496263",
+        "sv": "Flakebergs socken"
+    },
+    {
+        "item": "Q10496864",
+        "sv": "Floby socken"
+    },
+    {
+        "item": "Q10497203",
+        "sv": "Flädie socken"
+    },
+    {
+        "item": "Q10498106",
+        "sv": "Forserums socken"
+    },
+    {
+        "item": "Q10498124",
+        "sv": "Forshems socken"
+    },
+    {
+        "item": "Q10498171",
+        "sv": "Forssa socken"
+    },
+    {
+        "item": "Q10498250",
+        "sv": "Fosie socken"
+    },
+    {
+        "item": "Q10499179",
+        "sv": "Frillestads socken"
+    },
+    {
+        "item": "Q10499200",
+        "sv": "Frinnaryds socken"
+    },
+    {
+        "item": "Q10499624",
+        "sv": "Frändefors socken"
+    },
+    {
+        "item": "Q10499758",
+        "sv": "Fröskogs socken"
+    },
+    {
+        "item": "Q10499836",
+        "sv": "Fuglie socken"
+    },
+    {
+        "item": "Q10500091",
+        "sv": "Funbo socken"
+    },
+    {
+        "item": "Q10500211",
+        "sv": "Furingstads socken"
+    },
+    {
+        "item": "Q10500683",
+        "sv": "Fägre socken"
+    },
+    {
+        "item": "Q10500810",
+        "sv": "Färgelanda socken"
+    },
+    {
+        "item": "Q10500840",
+        "sv": "Färingtofta socken"
+    },
+    {
+        "item": "Q10501480",
+        "sv": "Förslövs socken"
+    },
+    {
+        "item": "Q10504549",
+        "sv": "Gessie socken"
+    },
+    {
+        "item": "Q10505078",
+        "sv": "Gislövs socken"
+    },
+    {
+        "item": "Q10505095",
+        "sv": "Gistads socken"
+    },
+    {
+        "item": "Q10505328",
+        "sv": "Glava socken"
+    },
+    {
+        "item": "Q10505471",
+        "sv": "Glimåkra socken"
+    },
+    {
+        "item": "Q10506154",
+        "sv": "Glumslövs socken"
+    },
+    {
+        "item": "Q10506567",
+        "sv": "Gnosjö socken"
+    },
+    {
+        "item": "Q10508106",
+        "sv": "Graninge socken"
+    },
+    {
+        "item": "Q10508458",
+        "sv": "Grava socken"
+    },
+    {
+        "item": "Q10508521",
+        "sv": "Grebo socken"
+    },
+    {
+        "item": "Q10508814",
+        "sv": "Grimetons socken"
+    },
+    {
+        "item": "Q10498789",
+        "sv": "Fredsbergs socken"
+    },
+    {
+        "item": "Q10498914",
+        "sv": "Fresta socken"
+    },
+    {
+        "item": "Q10499071",
+        "sv": "Friels socken"
+    },
+    {
+        "item": "Q10499117",
+        "sv": "Friggeråkers socken"
+    },
+    {
+        "item": "Q10499240",
+        "sv": "Fristads socken"
+    },
+    {
+        "item": "Q10499288",
+        "sv": "Fritsla socken"
+    },
+    {
+        "item": "Q10499551",
+        "sv": "Fryele socken"
+    },
+    {
+        "item": "Q10499580",
+        "sv": "Fryksände socken"
+    },
+    {
+        "item": "Q10499712",
+        "sv": "Fröjereds socken"
+    },
+    {
+        "item": "Q10499784",
+        "sv": "Frösve socken"
+    },
+    {
+        "item": "Q10500770",
+        "sv": "Fänneslunda socken"
+    },
+    {
+        "item": "Q10500791",
+        "sv": "Färentuna socken"
+    },
+    {
+        "item": "Q10500834",
+        "sv": "Färila socken"
+    },
+    {
+        "item": "Q10501055",
+        "sv": "Fölene socken"
+    },
+    {
+        "item": "Q10501389",
+        "sv": "Förlösa socken"
+    },
+    {
+        "item": "Q10501935",
+        "sv": "Gagnefs socken"
+    },
+    {
+        "item": "Q10502444",
+        "sv": "Gamla Uppsala socken"
+    },
+    {
+        "item": "Q10502529",
+        "sv": "Gammalkils socken"
+    },
+    {
+        "item": "Q10503762",
+        "sv": "Genarps socken"
+    },
+    {
+        "item": "Q10504914",
+        "sv": "Gillberga socken, Södermanland"
+    },
+    {
+        "item": "Q10508742",
+        "sv": "Grevie socken"
+    },
+    {
+        "item": "Q10508857",
+        "sv": "Grinneröds socken"
+    },
+    {
+        "item": "Q10508864",
+        "sv": "Grinstads socken"
+    },
+    {
+        "item": "Q10508958",
+        "sv": "Grolanda socken"
+    },
+    {
+        "item": "Q10500881",
+        "sv": "Färnebo socken"
+    },
+    {
+        "item": "Q10498160",
+        "sv": "Forsmarks socken"
+    },
+    {
+        "item": "Q10498260",
+        "sv": "Foss socken"
+    },
+    {
+        "item": "Q10498346",
+        "sv": "Fotskäls socken"
+    },
+    {
+        "item": "Q10498999",
+        "sv": "Fridene socken"
+    },
+    {
+        "item": "Q10499184",
+        "sv": "Frillesås socken"
+    },
+    {
+        "item": "Q10499568",
+        "sv": "Frykeruds socken"
+    },
+    {
+        "item": "Q10499693",
+        "sv": "Fröderyds socken"
+    },
+    {
+        "item": "Q10499698",
+        "sv": "Frödinge socken"
+    },
+    {
+        "item": "Q10499771",
+        "sv": "Frösthults socken"
+    },
+    {
+        "item": "Q10500015",
+        "sv": "Fullösa socken"
+    },
+    {
+        "item": "Q10500239",
+        "sv": "Furuby socken"
+    },
+    {
+        "item": "Q10500651",
+        "sv": "Fyrunga socken"
+    },
+    {
+        "item": "Q10500893",
+        "sv": "Fässbergs socken"
+    },
+    {
+        "item": "Q10500923",
+        "sv": "Fågelfors socken"
+    },
+    {
+        "item": "Q10500952",
+        "sv": "Fågeltofta socken"
+    },
+    {
+        "item": "Q10501068",
+        "sv": "Föllinge socken"
+    },
+    {
+        "item": "Q10501138",
+        "sv": "Föra socken"
+    },
+    {
+        "item": "Q10502539",
+        "sv": "Gammalstorps socken"
+    },
+    {
+        "item": "Q10504805",
+        "sv": "Gideå socken"
+    },
+    {
+        "item": "Q10504953",
+        "sv": "Gillstads socken"
+    },
+    {
+        "item": "Q10505192",
+        "sv": "Gladhammars socken"
+    },
+    {
+        "item": "Q10505220",
+        "sv": "Gladsax socken"
+    },
+    {
+        "item": "Q10505345",
+        "sv": "Glemminge socken"
+    },
+    {
+        "item": "Q10506118",
+        "sv": "Glostorps socken"
+    },
+    {
+        "item": "Q10506445",
+        "sv": "Gnarps socken"
+    },
+    {
+        "item": "Q10498751",
+        "sv": "Fredrika socken"
+    },
+    {
+        "item": "Q10499031",
+        "sv": "Fridlevstads socken"
+    },
+    {
+        "item": "Q10499458",
+        "sv": "Fru Alstads socken"
+    },
+    {
+        "item": "Q10499512",
+        "sv": "Frustuna socken"
+    },
+    {
+        "item": "Q10499619",
+        "sv": "Främmestads socken"
+    },
+    {
+        "item": "Q10499631",
+        "sv": "Fränninge socken"
+    },
+    {
+        "item": "Q10499763",
+        "sv": "Fröslunda socken"
+    },
+    {
+        "item": "Q10499776",
+        "sv": "Frösunda socken"
+    },
+    {
+        "item": "Q10499937",
+        "sv": "Fullestads socken"
+    },
+    {
+        "item": "Q10499996",
+        "sv": "Fulltofta socken"
+    },
+    {
+        "item": "Q10500801",
+        "sv": "Färgaryds socken"
+    },
+    {
+        "item": "Q10500873",
+        "sv": "Färlövs socken"
+    },
+    {
+        "item": "Q10500962",
+        "sv": "Fågelås socken"
+    },
+    {
+        "item": "Q10500971",
+        "sv": "Fåglums socken"
+    },
+    {
+        "item": "Q10503165",
+        "sv": "Garpenbergs socken"
+    },
+    {
+        "item": "Q10504571",
+        "sv": "Gesäters socken"
+    },
+    {
+        "item": "Q10504598",
+        "sv": "Getinge socken"
+    },
+    {
+        "item": "Q10504916",
+        "sv": "Gillberga socken, Värmland"
+    },
+    {
+        "item": "Q10505003",
+        "sv": "Gingri socken"
+    },
+    {
+        "item": "Q10505048",
+        "sv": "Giresta socken"
+    },
+    {
+        "item": "Q10505252",
+        "sv": "Glanshammars socken"
+    },
+    {
+        "item": "Q10506429",
+        "sv": "Glömminge socken"
+    },
+    {
+        "item": "Q10506662",
+        "sv": "Godegårds socken"
+    },
+    {
+        "item": "Q10508084",
+        "sv": "Grangärde socken"
+    },
+    {
+        "item": "Q10508723",
+        "sv": "Grevbäcks socken"
+    },
+    {
+        "item": "Q10508820",
+        "sv": "Grimmareds socken"
+    },
+    {
+        "item": "Q10509669",
+        "sv": "Grytnäs socken"
+    },
+    {
+        "item": "Q10509685",
+        "sv": "Gryts socken, Skåne"
+    },
+    {
+        "item": "Q10509913",
+        "sv": "Gråmanstorps socken"
+    },
+    {
+        "item": "Q10510634",
+        "sv": "Gullabo socken"
+    },
+    {
+        "item": "Q10510760",
+        "sv": "Gumlösa socken"
+    },
+    {
+        "item": "Q10510861",
+        "sv": "Gunnarps socken"
+    },
+    {
+        "item": "Q10510875",
+        "sv": "Gunnarskogs socken"
+    },
+    {
+        "item": "Q10511097",
+        "sv": "Gustafs socken"
+    },
+    {
+        "item": "Q10511127",
+        "sv": "Gustav Adolfs socken, Skåne"
+    },
+    {
+        "item": "Q10512300",
+        "sv": "Gällersta socken"
+    },
+    {
+        "item": "Q10512611",
+        "sv": "Gödelövs socken"
+    },
+    {
+        "item": "Q10512615",
+        "sv": "Gödestads socken"
+    },
+    {
+        "item": "Q10512635",
+        "sv": "Gökhems socken"
+    },
+    {
+        "item": "Q10512699",
+        "sv": "Gösslunda socken"
+    },
+    {
+        "item": "Q10512964",
+        "sv": "Göteve socken"
+    },
+    {
+        "item": "Q10516028",
+        "sv": "Hagshults socken"
+    },
+    {
+        "item": "Q10516097",
+        "sv": "Hajoms socken"
+    },
+    {
+        "item": "Q10516351",
+        "sv": "Hallaryds socken"
+    },
+    {
+        "item": "Q10516533",
+        "sv": "Halna socken"
+    },
+    {
+        "item": "Q10516844",
+        "sv": "Hammarby socken, Uppland"
+    },
+    {
+        "item": "Q10516895",
+        "sv": "Hammars socken"
+    },
+    {
+        "item": "Q10516914",
+        "sv": "Hammarö socken"
+    },
+    {
+        "item": "Q10516929",
+        "sv": "Hammerdals socken"
+    },
+    {
+        "item": "Q10517964",
+        "sv": "Harakers socken"
+    },
+    {
+        "item": "Q10518056",
+        "sv": "Hardemo socken"
+    },
+    {
+        "item": "Q10518126",
+        "sv": "Harlösa socken"
+    },
+    {
+        "item": "Q10509159",
+        "sv": "Grundsunda socken"
+    },
+    {
+        "item": "Q10509790",
+        "sv": "Gräsgårds socken"
+    },
+    {
+        "item": "Q10509840",
+        "sv": "Gräve socken"
+    },
+    {
+        "item": "Q10510283",
+        "sv": "Gudmundrå socken"
+    },
+    {
+        "item": "Q10510651",
+        "sv": "Gullereds socken"
+    },
+    {
+        "item": "Q10510660",
+        "sv": "Gullholmens socken"
+    },
+    {
+        "item": "Q10510878",
+        "sv": "Gunnarsnäs socken"
+    },
+    {
+        "item": "Q10511129",
+        "sv": "Gustav Adolfs socken, Västergötland"
+    },
+    {
+        "item": "Q10511300",
+        "sv": "Gylle socken"
+    },
+    {
+        "item": "Q10512294",
+        "sv": "Gällaryds socken"
+    },
+    {
+        "item": "Q10512379",
+        "sv": "Gärdslösa socken"
+    },
+    {
+        "item": "Q10512554",
+        "sv": "Gårdveda socken"
+    },
+    {
+        "item": "Q10512565",
+        "sv": "Gåsborns socken"
+    },
+    {
+        "item": "Q10512582",
+        "sv": "Gåsinge socken"
+    },
+    {
+        "item": "Q10512954",
+        "sv": "Götene socken"
+    },
+    {
+        "item": "Q10512960",
+        "sv": "Göteryds socken"
+    },
+    {
+        "item": "Q10515885",
+        "sv": "Haga socken"
+    },
+    {
+        "item": "Q10515954",
+        "sv": "Hagebyhöga socken"
+    },
+    {
+        "item": "Q10516421",
+        "sv": "Hallsbergs socken"
+    },
+    {
+        "item": "Q10516842",
+        "sv": "Hammarby socken, Södermanland"
+    },
+    {
+        "item": "Q10517235",
+        "sv": "Hanhals socken"
+    },
+    {
+        "item": "Q10518092",
+        "sv": "Harestads socken"
+    },
+    {
+        "item": "Q10518227",
+        "sv": "Harplinge socken"
+    },
+    {
+        "item": "Q10509081",
+        "sv": "Grude socken"
+    },
+    {
+        "item": "Q10509098",
+        "sv": "Grums socken"
+    },
+    {
+        "item": "Q10509656",
+        "sv": "Gryteryds socken"
+    },
+    {
+        "item": "Q10509737",
+        "sv": "Gränna socken"
+    },
+    {
+        "item": "Q10509808",
+        "sv": "Gräsmarks socken"
+    },
+    {
+        "item": "Q10510144",
+        "sv": "Gualövs socken"
+    },
+    {
+        "item": "Q10510274",
+        "sv": "Gudhems socken"
+    },
+    {
+        "item": "Q10510292",
+        "sv": "Gudmuntorps socken"
+    },
+    {
+        "item": "Q10511128",
+        "sv": "Gustav Adolfs socken, Värmland"
+    },
+    {
+        "item": "Q10511187",
+        "sv": "Gustavsbergs socken"
+    },
+    {
+        "item": "Q10512363",
+        "sv": "Gärdhems socken"
+    },
+    {
+        "item": "Q10512372",
+        "sv": "Gärdserums socken"
+    },
+    {
+        "item": "Q10512384",
+        "sv": "Gärdslövs socken"
+    },
+    {
+        "item": "Q10512532",
+        "sv": "Gårdsby socken"
+    },
+    {
+        "item": "Q10512599",
+        "sv": "Gåxsjö socken"
+    },
+    {
+        "item": "Q10512690",
+        "sv": "Görslövs socken"
+    },
+    {
+        "item": "Q10512990",
+        "sv": "Götlunda socken, Närke"
+    },
+    {
+        "item": "Q10512991",
+        "sv": "Götlunda socken, Västergötland"
+    },
+    {
+        "item": "Q10516356",
+        "sv": "Hallaröds socken"
+    },
+    {
+        "item": "Q10516520",
+        "sv": "Halmstads socken"
+    },
+    {
+        "item": "Q10517210",
+        "sv": "Hangelösa socken"
+    },
+    {
+        "item": "Q10517276",
+        "sv": "Hannas socken"
+    },
+    {
+        "item": "Q10509043",
+        "sv": "Grovare socken"
+    },
+    {
+        "item": "Q10509646",
+        "sv": "Gryta socken"
+    },
+    {
+        "item": "Q10509662",
+        "sv": "Grythyttans socken"
+    },
+    {
+        "item": "Q10509686",
+        "sv": "Gryts socken, Södermanland"
+    },
+    {
+        "item": "Q10509687",
+        "sv": "Gryts socken, Östergötland"
+    },
+    {
+        "item": "Q10509835",
+        "sv": "Gräsö socken"
+    },
+    {
+        "item": "Q10510003",
+        "sv": "Grönahögs socken"
+    },
+    {
+        "item": "Q10510018",
+        "sv": "Grönby socken"
+    },
+    {
+        "item": "Q10512290",
+        "sv": "Gällareds socken"
+    },
+    {
+        "item": "Q10512314",
+        "sv": "Gällivare socken"
+    },
+    {
+        "item": "Q10512516",
+        "sv": "Gårdby socken"
+    },
+    {
+        "item": "Q10512522",
+        "sv": "Gårdeby socken"
+    },
+    {
+        "item": "Q10512548",
+        "sv": "Gårdstånga socken"
+    },
+    {
+        "item": "Q10515481",
+        "sv": "Hacksta socken"
+    },
+    {
+        "item": "Q10515484",
+        "sv": "Hackvads socken"
+    },
+    {
+        "item": "Q10515492",
+        "sv": "Hackås socken"
+    },
+    {
+        "item": "Q10515945",
+        "sv": "Hagby socken, Uppland"
+    },
+    {
+        "item": "Q10515959",
+        "sv": "Hagelbergs socken"
+    },
+    {
+        "item": "Q10516379",
+        "sv": "Hallens socken"
+    },
+    {
+        "item": "Q10516448",
+        "sv": "Halltorps socken"
+    },
+    {
+        "item": "Q10516885",
+        "sv": "Hammarlunda socken"
+    },
+    {
+        "item": "Q10516889",
+        "sv": "Hammarlövs socken"
+    },
+    {
+        "item": "Q10516922",
+        "sv": "Hammenhögs socken"
+    },
+    {
+        "item": "Q10516945",
+        "sv": "Hamneda socken"
+    },
+    {
+        "item": "Q10517199",
+        "sv": "Hanebo socken"
+    },
+    {
+        "item": "Q10517291",
+        "sv": "Hannäs socken"
+    },
+    {
+        "item": "Q10518026",
+        "sv": "Harbo socken"
+    },
+    {
+        "item": "Q10518098",
+        "sv": "Hargs socken"
+    },
+    {
+        "item": "Q10518179",
+        "sv": "Harmångers socken"
+    },
+    {
+        "item": "Q10518430",
+        "sv": "Hassela socken"
+    },
+    {
+        "item": "Q10519163",
+        "sv": "Hedesunda socken"
+    },
+    {
+        "item": "Q10519552",
+        "sv": "Helgona socken"
+    },
+    {
+        "item": "Q10521811",
+        "sv": "Hemmesjö socken"
+    },
+    {
+        "item": "Q10521842",
+        "sv": "Hemsjö socken"
+    },
+    {
+        "item": "Q10522697",
+        "sv": "Herrestads socken, Östergötland"
+    },
+    {
+        "item": "Q10522725",
+        "sv": "Herrljunga socken"
+    },
+    {
+        "item": "Q10523850",
+        "sv": "Hidinge socken"
+    },
+    {
+        "item": "Q10524020",
+        "sv": "Hille socken"
+    },
+    {
+        "item": "Q10524741",
+        "sv": "Hjo socken"
+    },
+    {
+        "item": "Q10524755",
+        "sv": "Hjorteds socken"
+    },
+    {
+        "item": "Q10524786",
+        "sv": "Hjortsberga socken, Blekinge"
+    },
+    {
+        "item": "Q10524787",
+        "sv": "Hjortsberga socken, Småland"
+    },
+    {
+        "item": "Q10524822",
+        "sv": "Hjulsjö socken"
+    },
+    {
+        "item": "Q10524927",
+        "sv": "Hjärsås socken"
+    },
+    {
+        "item": "Q10525051",
+        "sv": "Hofors socken"
+    },
+    {
+        "item": "Q10525085",
+        "sv": "Hogstads socken"
+    },
+    {
+        "item": "Q10525517",
+        "sv": "Holsljunga socken"
+    },
+    {
+        "item": "Q10526515",
+        "sv": "Hossmo socken"
+    },
+    {
+        "item": "Q10526648",
+        "sv": "Hova socken"
+    },
+    {
+        "item": "Q10526721",
+        "sv": "Hovs socken, Östergötland"
+    },
+    {
+        "item": "Q10526849",
+        "sv": "Huddunge socken"
+    },
+    {
+        "item": "Q10527012",
+        "sv": "Hultsjö socken"
+    },
+    {
+        "item": "Q10527214",
+        "sv": "Hunnestads socken"
+    },
+    {
+        "item": "Q10527326",
+        "sv": "Husby-Långhundra socken"
+    },
+    {
+        "item": "Q10527918",
+        "sv": "Hyby socken"
+    },
+    {
+        "item": "Q10518480",
+        "sv": "Hassle socken"
+    },
+    {
+        "item": "Q10518594",
+        "sv": "Haurida socken"
+    },
+    {
+        "item": "Q10519077",
+        "sv": "Heda socken"
+    },
+    {
+        "item": "Q10519121",
+        "sv": "Hedemora socken"
+    },
+    {
+        "item": "Q10519157",
+        "sv": "Hedeskoga socken"
+    },
+    {
+        "item": "Q10523911",
+        "sv": "Hietaniemi socken"
+    },
+    {
+        "item": "Q10524195",
+        "sv": "Himmeta socken"
+    },
+    {
+        "item": "Q10524547",
+        "sv": "Hishults socken"
+    },
+    {
+        "item": "Q10524862",
+        "sv": "Hjälmseryds socken"
+    },
+    {
+        "item": "Q10524887",
+        "sv": "Hjälstads socken"
+    },
+    {
+        "item": "Q10524960",
+        "sv": "Hjärtlanda socken"
+    },
+    {
+        "item": "Q10524972",
+        "sv": "Hjärtums socken"
+    },
+    {
+        "item": "Q10525270",
+        "sv": "Holma socken"
+    },
+    {
+        "item": "Q10525287",
+        "sv": "Holmedals socken"
+    },
+    {
+        "item": "Q10525303",
+        "sv": "Holmestads socken"
+    },
+    {
+        "item": "Q10525330",
+        "sv": "Holms socken, Halland"
+    },
+    {
+        "item": "Q10525331",
+        "sv": "Holms socken, Medelpad"
+    },
+    {
+        "item": "Q10526364",
+        "sv": "Hornaryds socken"
+    },
+    {
+        "item": "Q10526397",
+        "sv": "Horns socken, Östergötland"
+    },
+    {
+        "item": "Q10526545",
+        "sv": "Hotagens socken"
+    },
+    {
+        "item": "Q10526653",
+        "sv": "Hovby socken"
+    },
+    {
+        "item": "Q10526690",
+        "sv": "Hovmantorps socken"
+    },
+    {
+        "item": "Q10526719",
+        "sv": "Hovs socken, Västergötland"
+    },
+    {
+        "item": "Q10527321",
+        "sv": "Husby-Lyhundra socken"
+    },
+    {
+        "item": "Q10527331",
+        "sv": "Husby-Oppunda socken"
+    },
+    {
+        "item": "Q10527346",
+        "sv": "Husby-Ärlinghundra socken"
+    },
+    {
+        "item": "Q10518491",
+        "sv": "Hasslö socken"
+    },
+    {
+        "item": "Q10518619",
+        "sv": "Haverö socken"
+    },
+    {
+        "item": "Q10519100",
+        "sv": "Hede socken, Härjedalen"
+    },
+    {
+        "item": "Q10520558",
+        "sv": "Helsingborgs socken"
+    },
+    {
+        "item": "Q10521857",
+        "sv": "Hemsö socken"
+    },
+    {
+        "item": "Q10524882",
+        "sv": "Hjälsta socken"
+    },
+    {
+        "item": "Q10525279",
+        "sv": "Holmby socken"
+    },
+    {
+        "item": "Q10525328",
+        "sv": "Holms socken, Dalsland"
+    },
+    {
+        "item": "Q10525342",
+        "sv": "Holmsunds socken"
+    },
+    {
+        "item": "Q10526277",
+        "sv": "Horla socken"
+    },
+    {
+        "item": "Q10526731",
+        "sv": "Hovsta socken"
+    },
+    {
+        "item": "Q10526790",
+        "sv": "Huaröds socken"
+    },
+    {
+        "item": "Q10526838",
+        "sv": "Huddinge socken"
+    },
+    {
+        "item": "Q10526946",
+        "sv": "Hulareds socken"
+    },
+    {
+        "item": "Q10527093",
+        "sv": "Humla socken"
+    },
+    {
+        "item": "Q10527281",
+        "sv": "Hurva socken"
+    },
+    {
+        "item": "Q10527924",
+        "sv": "Hycklinge socken"
+    },
+    {
+        "item": "Q10518333",
+        "sv": "Harstads socken"
+    },
+    {
+        "item": "Q10518497",
+        "sv": "Hasslösa socken"
+    },
+    {
+        "item": "Q10518502",
+        "sv": "Hasslövs socken"
+    },
+    {
+        "item": "Q10519099",
+        "sv": "Hede socken, Bohuslän"
+    },
+    {
+        "item": "Q10519513",
+        "sv": "Helgarö socken"
+    },
+    {
+        "item": "Q10519560",
+        "sv": "Helgums socken"
+    },
+    {
+        "item": "Q10521804",
+        "sv": "Hemmesdynge socken"
+    },
+    {
+        "item": "Q10522612",
+        "sv": "Herrberga socken"
+    },
+    {
+        "item": "Q10522696",
+        "sv": "Herrestads socken, Bohuslän"
+    },
+    {
+        "item": "Q10522743",
+        "sv": "Herråkra socken"
+    },
+    {
+        "item": "Q10524014",
+        "sv": "Hillareds socken"
+    },
+    {
+        "item": "Q10524032",
+        "sv": "Hilleshögs socken"
+    },
+    {
+        "item": "Q10524260",
+        "sv": "Hinneryds socken"
+    },
+    {
+        "item": "Q10524909",
+        "sv": "Hjärnarps socken"
+    },
+    {
+        "item": "Q10525058",
+        "sv": "Hofterups socken"
+    },
+    {
+        "item": "Q10525067",
+        "sv": "Hogdals socken"
+    },
+    {
+        "item": "Q10525332",
+        "sv": "Holms socken, Uppland"
+    },
+    {
+        "item": "Q10525359",
+        "sv": "Holmöns socken"
+    },
+    {
+        "item": "Q10526396",
+        "sv": "Horns socken, Västergötland"
+    },
+    {
+        "item": "Q10526438",
+        "sv": "Horreds socken"
+    },
+    {
+        "item": "Q10526470",
+        "sv": "Hortlax socken"
+    },
+    {
+        "item": "Q10526718",
+        "sv": "Hovs socken, Skåne"
+    },
+    {
+        "item": "Q10526813",
+        "sv": "Hubbo socken"
+    },
+    {
+        "item": "Q10526853",
+        "sv": "Hudene socken"
+    },
+    {
+        "item": "Q10526900",
+        "sv": "Huggenäs socken"
+    },
+    {
+        "item": "Q10526986",
+        "sv": "Hulterstads socken"
+    },
+    {
+        "item": "Q10526995",
+        "sv": "Hults socken"
+    },
+    {
+        "item": "Q10527333",
+        "sv": "Husby-Rekarne socken"
+    },
+    {
+        "item": "Q10527341",
+        "sv": "Husby-Sjutolfts socken"
+    },
+    {
+        "item": "Q10527351",
+        "sv": "Husby socken"
+    },
+    {
+        "item": "Q10527402",
+        "sv": "Husie socken"
+    },
+    {
+        "item": "Q10529115",
+        "sv": "Hylletofta socken"
+    },
+    {
+        "item": "Q10531251",
+        "sv": "Hägerstads socken"
+    },
+    {
+        "item": "Q10531274",
+        "sv": "Häggdångers socken"
+    },
+    {
+        "item": "Q10531703",
+        "sv": "Härlunda socken, Västergötland"
+    },
+    {
+        "item": "Q10531710",
+        "sv": "Härlövs socken"
+    },
+    {
+        "item": "Q10531891",
+        "sv": "Hästveda socken"
+    },
+    {
+        "item": "Q10531957",
+        "sv": "Håbo-Tibble socken"
+    },
+    {
+        "item": "Q10532080",
+        "sv": "Hålta socken"
+    },
+    {
+        "item": "Q10532091",
+        "sv": "Hångers socken, Västergötland"
+    },
+    {
+        "item": "Q10532089",
+        "sv": "Hångers socken, Småland"
+    },
+    {
+        "item": "Q10532097",
+        "sv": "Hångsdala socken"
+    },
+    {
+        "item": "Q10532366",
+        "sv": "Högsby socken"
+    },
+    {
+        "item": "Q10532403",
+        "sv": "Högsrums socken"
+    },
+    {
+        "item": "Q10532512",
+        "sv": "Hökhuvuds socken"
+    },
+    {
+        "item": "Q10533559",
+        "sv": "Idenors socken"
+    },
+    {
+        "item": "Q10538101",
+        "sv": "Istrums socken"
+    },
+    {
+        "item": "Q10540797",
+        "sv": "Jonstorps socken"
+    },
+    {
+        "item": "Q10541277",
+        "sv": "Julita socken"
+    },
+    {
+        "item": "Q10541462",
+        "sv": "Junosuando socken"
+    },
+    {
+        "item": "Q10529120",
+        "sv": "Hyllie socken"
+    },
+    {
+        "item": "Q10530909",
+        "sv": "Hyssna socken"
+    },
+    {
+        "item": "Q10531280",
+        "sv": "Häggeby socken"
+    },
+    {
+        "item": "Q10531368",
+        "sv": "Hälleberga socken"
+    },
+    {
+        "item": "Q10531380",
+        "sv": "Hällefors socken"
+    },
+    {
+        "item": "Q10531392",
+        "sv": "Hällesjö socken"
+    },
+    {
+        "item": "Q10531409",
+        "sv": "Hällestads socken, Skåne"
+    },
+    {
+        "item": "Q10531501",
+        "sv": "Hälsingtuna socken"
+    },
+    {
+        "item": "Q10531661",
+        "sv": "Härjevads socken"
+    },
+    {
+        "item": "Q10531909",
+        "sv": "Häverö socken"
+    },
+    {
+        "item": "Q10531977",
+        "sv": "Håcksviks socken"
+    },
+    {
+        "item": "Q10532035",
+        "sv": "Håle socken"
+    },
+    {
+        "item": "Q10532142",
+        "sv": "Håslövs socken"
+    },
+    {
+        "item": "Q10532246",
+        "sv": "Högby socken, Östergötland"
+    },
+    {
+        "item": "Q10532273",
+        "sv": "Högeruds socken"
+    },
+    {
+        "item": "Q10532354",
+        "sv": "Högs socken, Hälsingland"
+    },
+    {
+        "item": "Q10532374",
+        "sv": "Högseröds socken"
+    },
+    {
+        "item": "Q10532418",
+        "sv": "Högstena socken"
+    },
+    {
+        "item": "Q10532432",
+        "sv": "Högsäters socken"
+    },
+    {
+        "item": "Q10532589",
+        "sv": "Hörby socken"
+    },
+    {
+        "item": "Q10532604",
+        "sv": "Hörja socken"
+    },
+    {
+        "item": "Q10532614",
+        "sv": "Hörnefors socken"
+    },
+    {
+        "item": "Q10532631",
+        "sv": "Hörröds socken"
+    },
+    {
+        "item": "Q10532647",
+        "sv": "Hörups socken"
+    },
+    {
+        "item": "Q10533531",
+        "sv": "Idala socken"
+    },
+    {
+        "item": "Q10534112",
+        "sv": "Idre socken"
+    },
+    {
+        "item": "Q10534254",
+        "sv": "Ignaberga socken"
+    },
+    {
+        "item": "Q10534602",
+        "sv": "Ilsbo socken"
+    },
+    {
+        "item": "Q10535445",
+        "sv": "Ingarö socken"
+    },
+    {
+        "item": "Q10535452",
+        "sv": "Ingatorps socken"
+    },
+    {
+        "item": "Q10540711",
+        "sv": "Jokkmokks socken"
+    },
+    {
+        "item": "Q10541331",
+        "sv": "Jumkils socken"
+    },
+    {
+        "item": "Q10529221",
+        "sv": "Hyltinge socken"
+    },
+    {
+        "item": "Q10530894",
+        "sv": "Hyringa socken"
+    },
+    {
+        "item": "Q10531317",
+        "sv": "Häglinge socken"
+    },
+    {
+        "item": "Q10531412",
+        "sv": "Hällestads socken, Östergötland"
+    },
+    {
+        "item": "Q10531546",
+        "sv": "Händene socken"
+    },
+    {
+        "item": "Q10531649",
+        "sv": "Härja socken"
+    },
+    {
+        "item": "Q10531702",
+        "sv": "Härlunda socken, Småland"
+    },
+    {
+        "item": "Q10531730",
+        "sv": "Härnö socken"
+    },
+    {
+        "item": "Q10531837",
+        "sv": "Hässlunda socken"
+    },
+    {
+        "item": "Q10531968",
+        "sv": "Håbols socken"
+    },
+    {
+        "item": "Q10531973",
+        "sv": "Håby socken"
+    },
+    {
+        "item": "Q10532019",
+        "sv": "Håkantorps socken"
+    },
+    {
+        "item": "Q10532458",
+        "sv": "Högås socken"
+    },
+    {
+        "item": "Q10532526",
+        "sv": "Hököpinge socken"
+    },
+    {
+        "item": "Q10532599",
+        "sv": "Höreda socken"
+    },
+    {
+        "item": "Q10532693",
+        "sv": "Höörs socken"
+    },
+    {
+        "item": "Q10534610",
+        "sv": "Ilstorps socken"
+    },
+    {
+        "item": "Q10534929",
+        "sv": "Indals socken"
+    },
+    {
+        "item": "Q10535474",
+        "sv": "Ingelstorps socken"
+    },
+    {
+        "item": "Q10536817",
+        "sv": "Irsta socken"
+    },
+    {
+        "item": "Q10538095",
+        "sv": "Istorps socken"
+    },
+    {
+        "item": "Q10538526",
+        "sv": "Ivö socken"
+    },
+    {
+        "item": "Q10540784",
+        "sv": "Jonsbergs socken"
+    },
+    {
+        "item": "Q10541418",
+        "sv": "Jungs socken"
+    },
+    {
+        "item": "Q10531306",
+        "sv": "Häggums socken"
+    },
+    {
+        "item": "Q10531411",
+        "sv": "Hällestads socken, Västergötland"
+    },
+    {
+        "item": "Q10531449",
+        "sv": "Hällstads socken"
+    },
+    {
+        "item": "Q10531456",
+        "sv": "Hällums socken"
+    },
+    {
+        "item": "Q10531602",
+        "sv": "Härads socken"
+    },
+    {
+        "item": "Q10531610",
+        "sv": "Häradshammars socken"
+    },
+    {
+        "item": "Q10531670",
+        "sv": "Härkeberga socken"
+    },
+    {
+        "item": "Q10531723",
+        "sv": "Härna socken"
+    },
+    {
+        "item": "Q10531727",
+        "sv": "Härnevi socken"
+    },
+    {
+        "item": "Q10531763",
+        "sv": "Härryda socken"
+    },
+    {
+        "item": "Q10531802",
+        "sv": "Hässjö socken"
+    },
+    {
+        "item": "Q10531812",
+        "sv": "Hässleby socken"
+    },
+    {
+        "item": "Q10532065",
+        "sv": "Hållnäs socken"
+    },
+    {
+        "item": "Q10532139",
+        "sv": "Håsjö socken"
+    },
+    {
+        "item": "Q10532157",
+        "sv": "Håtuna socken"
+    },
+    {
+        "item": "Q10532206",
+        "sv": "Höganäs socken"
+    },
+    {
+        "item": "Q10532225",
+        "sv": "Högbo socken"
+    },
+    {
+        "item": "Q10532283",
+        "sv": "Högestads socken"
+    },
+    {
+        "item": "Q10532356",
+        "sv": "Högs socken, Skåne"
+    },
+    {
+        "item": "Q10532469",
+        "sv": "Höja socken"
+    },
+    {
+        "item": "Q10532548",
+        "sv": "Hölö socken"
+    },
+    {
+        "item": "Q10532553",
+        "sv": "Hömbs socken"
+    },
+    {
+        "item": "Q10534226",
+        "sv": "Igelösa socken"
+    },
+    {
+        "item": "Q10538511",
+        "sv": "Ivetofta socken"
+    },
+    {
+        "item": "Q10541123",
+        "sv": "Jukkasjärvi socken"
+    },
+    {
+        "item": "Q10541619",
+        "sv": "Jäders socken"
+    },
+    {
+        "item": "Q10541754",
+        "sv": "Järbo socken, Gästrikland"
+    },
+    {
+        "item": "Q10541771",
+        "sv": "Järfälla socken"
+    },
+    {
+        "item": "Q10541800",
+        "sv": "Järna socken"
+    },
+    {
+        "item": "Q10541954",
+        "sv": "Järpås socken"
+    },
+    {
+        "item": "Q10541967",
+        "sv": "Järsnäs socken"
+    },
+    {
+        "item": "Q10542038",
+        "sv": "Jättendals socken"
+    },
+    {
+        "item": "Q10543790",
+        "sv": "Karleby socken"
+    },
+    {
+        "item": "Q10544257",
+        "sv": "Kastlösa socken"
+    },
+    {
+        "item": "Q10544435",
+        "sv": "Kattarps socken"
+    },
+    {
+        "item": "Q10544464",
+        "sv": "Kattunga socken"
+    },
+    {
+        "item": "Q10545358",
+        "sv": "Kila socken, Värmland"
+    },
+    {
+        "item": "Q10545623",
+        "sv": "Kinna socken"
+    },
+    {
+        "item": "Q10545667",
+        "sv": "Kinne-Vedums socken"
+    },
+    {
+        "item": "Q10545685",
+        "sv": "Kinneveds socken"
+    },
+    {
+        "item": "Q10546553",
+        "sv": "Klövedals socken"
+    },
+    {
+        "item": "Q10546676",
+        "sv": "Knislinge socken"
+    },
+    {
+        "item": "Q10546804",
+        "sv": "Knäreds socken"
+    },
+    {
+        "item": "Q10548188",
+        "sv": "Korsberga socken, Västergötland"
+    },
+    {
+        "item": "Q10549185",
+        "sv": "Kristianopels socken"
+    },
+    {
+        "item": "Q10549358",
+        "sv": "Krogsereds socken"
+    },
+    {
+        "item": "Q10549400",
+        "sv": "Krokstads socken"
+    },
+    {
+        "item": "Q10549709",
+        "sv": "Kråkshults socken"
+    },
+    {
+        "item": "Q10549782",
+        "sv": "Kuddby socken"
+    },
+    {
+        "item": "Q10549914",
+        "sv": "Kullerstads socken"
+    },
+    {
+        "item": "Q10541681",
+        "sv": "Jämshögs socken"
+    },
+    {
+        "item": "Q10541975",
+        "sv": "Järstads socken"
+    },
+    {
+        "item": "Q10542010",
+        "sv": "Järvsö socken"
+    },
+    {
+        "item": "Q10542799",
+        "sv": "Kalls socken"
+    },
+    {
+        "item": "Q10542869",
+        "sv": "Kalmar socken, Uppland"
+    },
+    {
+        "item": "Q10543534",
+        "sv": "Karaby socken"
+    },
+    {
+        "item": "Q10543590",
+        "sv": "Kareby socken"
+    },
+    {
+        "item": "Q10543607",
+        "sv": "Karesuando socken"
+    },
+    {
+        "item": "Q10543686",
+        "sv": "Karl Gustavs socken, Västergötland"
+    },
+    {
+        "item": "Q10543685",
+        "sv": "Karl Gustavs socken, Norrbotten"
+    },
+    {
+        "item": "Q10543762",
+        "sv": "Karlanda socken"
+    },
+    {
+        "item": "Q10543822",
+        "sv": "Karlsborgs socken"
+    },
+    {
+        "item": "Q10543935",
+        "sv": "Karlstads socken"
+    },
+    {
+        "item": "Q10544425",
+        "sv": "Katslösa socken"
+    },
+    {
+        "item": "Q10545359",
+        "sv": "Kila socken, Västmanland"
+    },
+    {
+        "item": "Q10545488",
+        "sv": "Kimstads socken"
+    },
+    {
+        "item": "Q10545822",
+        "sv": "Kisa socken"
+    },
+    {
+        "item": "Q10546508",
+        "sv": "Kläckeberga socken"
+    },
+    {
+        "item": "Q10546515",
+        "sv": "Klädesholmens socken"
+    },
+    {
+        "item": "Q10546696",
+        "sv": "Knivsta socken"
+    },
+    {
+        "item": "Q10547577",
+        "sv": "Konga socken"
+    },
+    {
+        "item": "Q10547885",
+        "sv": "Konungsunds socken"
+    },
+    {
+        "item": "Q10548141",
+        "sv": "Korpilombolo socken"
+    },
+    {
+        "item": "Q10549546",
+        "sv": "Kroppa socken"
+    },
+    {
+        "item": "Q10549920",
+        "sv": "Kullings-Skövde socken"
+    },
+    {
+        "item": "Q10549930",
+        "sv": "Kulltorps socken"
+    },
+    {
+        "item": "Q10541467",
+        "sv": "Junsele socken"
+    },
+    {
+        "item": "Q10541663",
+        "sv": "Jälluntofta socken"
+    },
+    {
+        "item": "Q10541671",
+        "sv": "Jämjö socken"
+    },
+    {
+        "item": "Q10541760",
+        "sv": "Järeda socken"
+    },
+    {
+        "item": "Q10541788",
+        "sv": "Järlåsa socken"
+    },
+    {
+        "item": "Q10541808",
+        "sv": "Järnboås socken"
+    },
+    {
+        "item": "Q10541840",
+        "sv": "Järns socken"
+    },
+    {
+        "item": "Q10541848",
+        "sv": "Järnskogs socken"
+    },
+    {
+        "item": "Q10541961",
+        "sv": "Järrestads socken"
+    },
+    {
+        "item": "Q10541981",
+        "sv": "Järstorps socken"
+    },
+    {
+        "item": "Q10542022",
+        "sv": "Jäts socken"
+    },
+    {
+        "item": "Q10542168",
+        "sv": "Jörns socken"
+    },
+    {
+        "item": "Q10542956",
+        "sv": "Kalvsviks socken"
+    },
+    {
+        "item": "Q10543565",
+        "sv": "Karbennings socken"
+    },
+    {
+        "item": "Q10543863",
+        "sv": "Karlskoga socken"
+    },
+    {
+        "item": "Q10543904",
+        "sv": "Karlslunda socken"
+    },
+    {
+        "item": "Q10543955",
+        "sv": "Karlstorps socken"
+    },
+    {
+        "item": "Q10545268",
+        "sv": "Kiaby socken"
+    },
+    {
+        "item": "Q10545357",
+        "sv": "Kila socken, Södermanland"
+    },
+    {
+        "item": "Q10545650",
+        "sv": "Kinnareds socken"
+    },
+    {
+        "item": "Q10545649",
+        "sv": "Kinnareds socken, Västergötland"
+    },
+    {
+        "item": "Q10545662",
+        "sv": "Kinne-Kleva socken"
+    },
+    {
+        "item": "Q10545971",
+        "sv": "Kjula socken"
+    },
+    {
+        "item": "Q10546757",
+        "sv": "Knutby socken"
+    },
+    {
+        "item": "Q10546809",
+        "sv": "Knästorps socken"
+    },
+    {
+        "item": "Q10548187",
+        "sv": "Korsberga socken, Småland"
+    },
+    {
+        "item": "Q10549147",
+        "sv": "Kristdala socken"
+    },
+    {
+        "item": "Q10549369",
+        "sv": "Krokeks socken"
+    },
+    {
+        "item": "Q10549716",
+        "sv": "Kråksmåla socken"
+    },
+    {
+        "item": "Q10549882",
+        "sv": "Kulla socken"
+    },
+    {
+        "item": "Q10550077",
+        "sv": "Kumla socken, Närke"
+    },
+    {
+        "item": "Q10541650",
+        "sv": "Jäla socken"
+    },
+    {
+        "item": "Q10541659",
+        "sv": "Jällby socken"
+    },
+    {
+        "item": "Q10541753",
+        "sv": "Järbo socken, Dalsland"
+    },
+    {
+        "item": "Q10542164",
+        "sv": "Jörlanda socken"
+    },
+    {
+        "item": "Q10542426",
+        "sv": "Kaga socken"
+    },
+    {
+        "item": "Q10542950",
+        "sv": "Kalvs socken"
+    },
+    {
+        "item": "Q10545170",
+        "sv": "Kestads socken"
+    },
+    {
+        "item": "Q10545366",
+        "sv": "Kilanda socken"
+    },
+    {
+        "item": "Q10545431",
+        "sv": "Kils socken"
+    },
+    {
+        "item": "Q10545655",
+        "sv": "Kinnarumma socken"
+    },
+    {
+        "item": "Q10546401",
+        "sv": "Klockrike socken"
+    },
+    {
+        "item": "Q10546439",
+        "sv": "Klosters socken"
+    },
+    {
+        "item": "Q10546679",
+        "sv": "Knista socken"
+    },
+    {
+        "item": "Q10546813",
+        "sv": "Knätte socken"
+    },
+    {
+        "item": "Q10547065",
+        "sv": "Kolbäcks socken"
+    },
+    {
+        "item": "Q10549141",
+        "sv": "Kristbergs socken"
+    },
+    {
+        "item": "Q10549304",
+        "sv": "Kristvalla socken"
+    },
+    {
+        "item": "Q10549559",
+        "sv": "Kropps socken"
+    },
+    {
+        "item": "Q10551057",
+        "sv": "Kvenneberga socken"
+    },
+    {
+        "item": "Q10551138",
+        "sv": "Kvinnestads socken"
+    },
+    {
+        "item": "Q10551513",
+        "sv": "Kyrkoköpinge socken"
+    },
+    {
+        "item": "Q10551624",
+        "sv": "Källby socken"
+    },
+    {
+        "item": "Q10551637",
+        "sv": "Källeryds socken"
+    },
+    {
+        "item": "Q10551666",
+        "sv": "Källstads socken"
+    },
+    {
+        "item": "Q10551683",
+        "sv": "Källunga socken"
+    },
+    {
+        "item": "Q10552021",
+        "sv": "Kållerstads socken"
+    },
+    {
+        "item": "Q10552034",
+        "sv": "Kånna socken"
+    },
+    {
+        "item": "Q10552102",
+        "sv": "Köinge socken"
+    },
+    {
+        "item": "Q10552174",
+        "sv": "Köpinge socken"
+    },
+    {
+        "item": "Q10553268",
+        "sv": "Lagmansereds socken"
+    },
+    {
+        "item": "Q10553813",
+        "sv": "Landeryds socken"
+    },
+    {
+        "item": "Q10554016",
+        "sv": "Lane-Ryrs socken"
+    },
+    {
+        "item": "Q10554076",
+        "sv": "Lannaskede socken"
+    },
+    {
+        "item": "Q10555296",
+        "sv": "Laxsjö socken"
+    },
+    {
+        "item": "Q10555390",
+        "sv": "Leaby socken"
+    },
+    {
+        "item": "Q10556688",
+        "sv": "Lekaryds socken"
+    },
+    {
+        "item": "Q10556695",
+        "sv": "Lekeryds socken"
+    },
+    {
+        "item": "Q10556843",
+        "sv": "Lemnhults socken"
+    },
+    {
+        "item": "Q10559630",
+        "sv": "Lerums socken"
+    },
+    {
+        "item": "Q10560691",
+        "sv": "Levene socken"
+    },
+    {
+        "item": "Q10561722",
+        "sv": "Lilla Harrie socken"
+    },
+    {
+        "item": "Q10561734",
+        "sv": "Lilla Isie socken"
+    },
+    {
+        "item": "Q10550081",
+        "sv": "Kumla socken, Västmanland"
+    },
+    {
+        "item": "Q10550254",
+        "sv": "Kungs-Husby socken"
+    },
+    {
+        "item": "Q10550307",
+        "sv": "Kungshamns socken"
+    },
+    {
+        "item": "Q10551061",
+        "sv": "Kverrestads socken"
+    },
+    {
+        "item": "Q10551094",
+        "sv": "Kviinge socken"
+    },
+    {
+        "item": "Q10551648",
+        "sv": "Källna socken"
+    },
+    {
+        "item": "Q10551655",
+        "sv": "Källs-Nöbbelövs socken"
+    },
+    {
+        "item": "Q10551675",
+        "sv": "Källstorps socken"
+    },
+    {
+        "item": "Q10551895",
+        "sv": "Kärrbo socken"
+    },
+    {
+        "item": "Q10551969",
+        "sv": "Kävsjö socken"
+    },
+    {
+        "item": "Q10552015",
+        "sv": "Kållereds socken"
+    },
+    {
+        "item": "Q10553377",
+        "sv": "Laholms socken"
+    },
+    {
+        "item": "Q10556919",
+        "sv": "Lena socken, Uppland"
+    },
+    {
+        "item": "Q10556920",
+        "sv": "Lena socken, Västergötland"
+    },
+    {
+        "item": "Q10559573",
+        "sv": "Lerdala socken"
+    },
+    {
+        "item": "Q10561342",
+        "sv": "Lidens socken"
+    },
+    {
+        "item": "Q10561348",
+        "sv": "Lidhults socken"
+    },
+    {
+        "item": "Q10550143",
+        "sv": "Kung Karls socken"
+    },
+    {
+        "item": "Q10550407",
+        "sv": "Kungsåra socken"
+    },
+    {
+        "item": "Q10550950",
+        "sv": "Kvarsebo socken"
+    },
+    {
+        "item": "Q10551087",
+        "sv": "Kvidinge socken"
+    },
+    {
+        "item": "Q10551109",
+        "sv": "Kvillinge socken"
+    },
+    {
+        "item": "Q10551601",
+        "sv": "Källa socken"
+    },
+    {
+        "item": "Q10551766",
+        "sv": "Käringöns socken"
+    },
+    {
+        "item": "Q10551860",
+        "sv": "Kärna socken"
+    },
+    {
+        "item": "Q10551930",
+        "sv": "Kärråkra socken"
+    },
+    {
+        "item": "Q10551948",
+        "sv": "Kättilstads socken"
+    },
+    {
+        "item": "Q10552119",
+        "sv": "Köla socken"
+    },
+    {
+        "item": "Q10552190",
+        "sv": "Köpings socken, Västmanland"
+    },
+    {
+        "item": "Q10552867",
+        "sv": "Lackalänga socken"
+    },
+    {
+        "item": "Q10553788",
+        "sv": "Landa socken, Halland"
+    },
+    {
+        "item": "Q10554008",
+        "sv": "Landvetters socken"
+    },
+    {
+        "item": "Q10554522",
+        "sv": "Larvs socken"
+    },
+    {
+        "item": "Q10555208",
+        "sv": "Lavads socken"
+    },
+    {
+        "item": "Q10556203",
+        "sv": "Ledbergs socken"
+    },
+    {
+        "item": "Q10556319",
+        "sv": "Ledsjö socken"
+    },
+    {
+        "item": "Q10556734",
+        "sv": "Leksands socken"
+    },
+    {
+        "item": "Q10556757",
+        "sv": "Lekvattnets socken"
+    },
+    {
+        "item": "Q10556832",
+        "sv": "Lemmeströ socken"
+    },
+    {
+        "item": "Q10556961",
+        "sv": "Lenhovda socken"
+    },
+    {
+        "item": "Q10559578",
+        "sv": "Lerdals socken"
+    },
+    {
+        "item": "Q10561408",
+        "sv": "Lids socken"
+    },
+    {
+        "item": "Q10550080",
+        "sv": "Kumla socken, Östergötland"
+    },
+    {
+        "item": "Q10550247",
+        "sv": "Kungs-Barkarö socken"
+    },
+    {
+        "item": "Q10550402",
+        "sv": "Kungsäters socken"
+    },
+    {
+        "item": "Q10551101",
+        "sv": "Kville socken"
+    },
+    {
+        "item": "Q10551195",
+        "sv": "Kvistbro socken"
+    },
+    {
+        "item": "Q10551202",
+        "sv": "Kvistofta socken"
+    },
+    {
+        "item": "Q10551231",
+        "sv": "Kvänums socken"
+    },
+    {
+        "item": "Q10551382",
+        "sv": "Kymbo socken"
+    },
+    {
+        "item": "Q10551449",
+        "sv": "Kyrkefalla socken"
+    },
+    {
+        "item": "Q10551459",
+        "sv": "Kyrkheddinge socken"
+    },
+    {
+        "item": "Q10551465",
+        "sv": "Kyrkhults socken"
+    },
+    {
+        "item": "Q10551566",
+        "sv": "Kyrkås socken, Västergötland"
+    },
+    {
+        "item": "Q10551565",
+        "sv": "Kyrkås socken, Jämtland"
+    },
+    {
+        "item": "Q10551659",
+        "sv": "Källsjö socken"
+    },
+    {
+        "item": "Q10551700",
+        "sv": "Kälvene socken"
+    },
+    {
+        "item": "Q10551756",
+        "sv": "Kärda socken"
+    },
+    {
+        "item": "Q10551866",
+        "sv": "Kärnbo socken"
+    },
+    {
+        "item": "Q10551961",
+        "sv": "Kävlinge socken"
+    },
+    {
+        "item": "Q10551987",
+        "sv": "Kågeröds socken"
+    },
+    {
+        "item": "Q10552004",
+        "sv": "Kållands-Åsaka socken"
+    },
+    {
+        "item": "Q10552069",
+        "sv": "Kårsta socken"
+    },
+    {
+        "item": "Q10552127",
+        "sv": "Kölingareds socken"
+    },
+    {
+        "item": "Q10552124",
+        "sv": "Kölaby socken"
+    },
+    {
+        "item": "Q10552192",
+        "sv": "Köpings socken, Öland"
+    },
+    {
+        "item": "Q10553244",
+        "sv": "Lagga socken"
+    },
+    {
+        "item": "Q10553787",
+        "sv": "Landa socken, Västergötland"
+    },
+    {
+        "item": "Q10554703",
+        "sv": "Laske-Vedums socken"
+    },
+    {
+        "item": "Q10555272",
+        "sv": "Laxarby socken"
+    },
+    {
+        "item": "Q10556746",
+        "sv": "Leksbergs socken"
+    },
+    {
+        "item": "Q10559564",
+        "sv": "Lerbo socken"
+    },
+    {
+        "item": "Q10559569",
+        "sv": "Lerbäcks socken"
+    },
+    {
+        "item": "Q10560846",
+        "sv": "Liareds socken"
+    },
+    {
+        "item": "Q10561367",
+        "sv": "Lidingö socken"
+    },
+    {
+        "item": "Q10561703",
+        "sv": "Lilla Beddinge socken"
+    },
+    {
+        "item": "Q10562466",
+        "sv": "Lindbergs socken"
+    },
+    {
+        "item": "Q10562482",
+        "sv": "Linde socken, Västmanland"
+    },
+    {
+        "item": "Q10562606",
+        "sv": "Lindome socken"
+    },
+    {
+        "item": "Q10562650",
+        "sv": "Lindärva socken"
+    },
+    {
+        "item": "Q10568279",
+        "sv": "Ljuders socken"
+    },
+    {
+        "item": "Q10568306",
+        "sv": "Ljungarums socken"
+    },
+    {
+        "item": "Q10568333",
+        "sv": "Ljungby socken, Sunnerbo"
+    },
+    {
+        "item": "Q10568369",
+        "sv": "Ljungs socken, Bohuslän"
+    },
+    {
+        "item": "Q10568426",
+        "sv": "Ljusdals socken"
+    },
+    {
+        "item": "Q10568697",
+        "sv": "Locknevi socken"
+    },
+    {
+        "item": "Q10569216",
+        "sv": "Longs socken"
+    },
+    {
+        "item": "Q10569859",
+        "sv": "Loshults socken"
+    },
+    {
+        "item": "Q10570488",
+        "sv": "Ludvika socken"
+    },
+    {
+        "item": "Q10570774",
+        "sv": "Lundby socken, Västmanland"
+    },
+    {
+        "item": "Q10570773",
+        "sv": "Lundby socken, Västergötland"
+    },
+    {
+        "item": "Q10570846",
+        "sv": "Lunds socken"
+    },
+    {
+        "item": "Q10571211",
+        "sv": "Lycke socken"
+    },
+    {
+        "item": "Q10571248",
+        "sv": "Lycksele socken"
+    },
+    {
+        "item": "Q10571758",
+        "sv": "Lysviks socken"
+    },
+    {
+        "item": "Q10571915",
+        "sv": "Länna socken, Södermanland"
+    },
+    {
+        "item": "Q10572524",
+        "sv": "Långaryds socken"
+    },
+    {
+        "item": "Q10572529",
+        "sv": "Långaröds socken"
+    },
+    {
+        "item": "Q10572568",
+        "sv": "Långelanda socken"
+    },
+    {
+        "item": "Q10572789",
+        "sv": "Löddeköpinge socken"
+    },
+    {
+        "item": "Q10572854",
+        "sv": "Lönneberga socken"
+    },
+    {
+        "item": "Q10572869",
+        "sv": "Lönsås socken"
+    },
+    {
+        "item": "Q10572934",
+        "sv": "Löts socken, Uppland"
+    },
+    {
+        "item": "Q10572936",
+        "sv": "Löts socken, Öland"
+    },
+    {
+        "item": "Q10575269",
+        "sv": "Maglarps socken"
+    },
+    {
+        "item": "Q10575370",
+        "sv": "Magra socken"
+    },
+    {
+        "item": "Q10561890",
+        "sv": "Lillkyrka socken, Närke"
+    },
+    {
+        "item": "Q10562511",
+        "sv": "Linderås socken"
+    },
+    {
+        "item": "Q10567896",
+        "sv": "Lits socken"
+    },
+    {
+        "item": "Q10568370",
+        "sv": "Ljungs socken, Östergötland"
+    },
+    {
+        "item": "Q10568438",
+        "sv": "Ljushults socken"
+    },
+    {
+        "item": "Q10568453",
+        "sv": "Ljusnarsbergs socken"
+    },
+    {
+        "item": "Q10568673",
+        "sv": "Lockarps socken"
+    },
+    {
+        "item": "Q10568686",
+        "sv": "Locketorps socken"
+    },
+    {
+        "item": "Q10568691",
+        "sv": "Lockne socken"
+    },
+    {
+        "item": "Q10570027",
+        "sv": "Lovö socken"
+    },
+    {
+        "item": "Q10571637",
+        "sv": "Lyrestads socken"
+    },
+    {
+        "item": "Q10571878",
+        "sv": "Länghems socken"
+    },
+    {
+        "item": "Q10571883",
+        "sv": "Längjums socken, Vedens härad"
+    },
+    {
+        "item": "Q10571926",
+        "sv": "Lännäs socken"
+    },
+    {
+        "item": "Q10572533",
+        "sv": "Långasjö socken"
+    },
+    {
+        "item": "Q10572643",
+        "sv": "Långsele socken"
+    },
+    {
+        "item": "Q10572647",
+        "sv": "Långseruds socken"
+    },
+    {
+        "item": "Q10572720",
+        "sv": "Låssa socken"
+    },
+    {
+        "item": "Q10561854",
+        "sv": "Lillhärads socken"
+    },
+    {
+        "item": "Q10561859",
+        "sv": "Lillhärdals socken"
+    },
+    {
+        "item": "Q10561893",
+        "sv": "Lillkyrka socken, Östergötland"
+    },
+    {
+        "item": "Q10561942",
+        "sv": "Lima socken"
+    },
+    {
+        "item": "Q10562515",
+        "sv": "Linderöds socken"
+    },
+    {
+        "item": "Q10562849",
+        "sv": "Linneryds socken"
+    },
+    {
+        "item": "Q10563272",
+        "sv": "Lista socken"
+    },
+    {
+        "item": "Q10567480",
+        "sv": "Listerby socken"
+    },
+    {
+        "item": "Q10567906",
+        "sv": "Litslena socken"
+    },
+    {
+        "item": "Q10568334",
+        "sv": "Ljungby socken, Södra Möre"
+    },
+    {
+        "item": "Q10568348",
+        "sv": "Ljunghems socken"
+    },
+    {
+        "item": "Q10568479",
+        "sv": "Ljusterö socken"
+    },
+    {
+        "item": "Q10568832",
+        "sv": "Loftahammars socken"
+    },
+    {
+        "item": "Q10569848",
+        "sv": "Los socken"
+    },
+    {
+        "item": "Q10569981",
+        "sv": "Lovene socken"
+    },
+    {
+        "item": "Q10570891",
+        "sv": "Lungsunds socken"
+    },
+    {
+        "item": "Q10570973",
+        "sv": "Lurs socken"
+    },
+    {
+        "item": "Q10571172",
+        "sv": "Lyby socken"
+    },
+    {
+        "item": "Q10571215",
+        "sv": "Lyckeby socken"
+    },
+    {
+        "item": "Q10571569",
+        "sv": "Lyngsjö socken"
+    },
+    {
+        "item": "Q10571782",
+        "sv": "Läby socken"
+    },
+    {
+        "item": "Q10571682",
+        "sv": "Lyse socken"
+    },
+    {
+        "item": "Q10572410",
+        "sv": "Lästringe socken"
+    },
+    {
+        "item": "Q10572518",
+        "sv": "Långareds socken"
+    },
+    {
+        "item": "Q10572573",
+        "sv": "Långemåla socken"
+    },
+    {
+        "item": "Q10572689",
+        "sv": "Långtora socken"
+    },
+    {
+        "item": "Q10572729",
+        "sv": "Låstads socken"
+    },
+    {
+        "item": "Q10572794",
+        "sv": "Löderups socken"
+    },
+    {
+        "item": "Q10572905",
+        "sv": "Lösens socken"
+    },
+    {
+        "item": "Q10573009",
+        "sv": "Lövångers socken"
+    },
+    {
+        "item": "Q10561750",
+        "sv": "Lilla Malma socken"
+    },
+    {
+        "item": "Q10561769",
+        "sv": "Lilla Slågarps socken"
+    },
+    {
+        "item": "Q10561892",
+        "sv": "Lillkyrka socken, Uppland"
+    },
+    {
+        "item": "Q10562918",
+        "sv": "Linsells socken"
+    },
+    {
+        "item": "Q10568375",
+        "sv": "Ljungsarps socken"
+    },
+    {
+        "item": "Q10568396",
+        "sv": "Ljurs socken"
+    },
+    {
+        "item": "Q10568487",
+        "sv": "Ljustorps socken"
+    },
+    {
+        "item": "Q10568828",
+        "sv": "Lofta socken"
+    },
+    {
+        "item": "Q10569028",
+        "sv": "Lomma socken"
+    },
+    {
+        "item": "Q10569035",
+        "sv": "Lommaryds socken"
+    },
+    {
+        "item": "Q10569039",
+        "sv": "Lommelands socken"
+    },
+    {
+        "item": "Q10570586",
+        "sv": "Lugnås socken"
+    },
+    {
+        "item": "Q10570719",
+        "sv": "Lunda socken, Södermanland"
+    },
+    {
+        "item": "Q10570720",
+        "sv": "Lunda socken, Uppland"
+    },
+    {
+        "item": "Q10571563",
+        "sv": "Lyngby socken"
+    },
+    {
+        "item": "Q10571849",
+        "sv": "Längbro socken"
+    },
+    {
+        "item": "Q10571882",
+        "sv": "Längjums socken"
+    },
+    {
+        "item": "Q10571888",
+        "sv": "Längnums socken"
+    },
+    {
+        "item": "Q10572621",
+        "sv": "Långlöts socken"
+    },
+    {
+        "item": "Q10572957",
+        "sv": "Lövestads socken"
+    },
+    {
+        "item": "Q10575134",
+        "sv": "Madesjö socken"
+    },
+    {
+        "item": "Q10575274",
+        "sv": "Maglehems socken"
+    },
+    {
+        "item": "Q10575865",
+        "sv": "Malexanders socken"
+    },
+    {
+        "item": "Q10576948",
+        "sv": "Marbäcks socken, Småland"
+    },
+    {
+        "item": "Q10578513",
+        "sv": "Matteröds socken"
+    },
+    {
+        "item": "Q10578545",
+        "sv": "Mattmars socken"
+    },
+    {
+        "item": "Q10581249",
+        "sv": "Mellby socken, Västergötland"
+    },
+    {
+        "item": "Q10581307",
+        "sv": "Mellösa socken"
+    },
+    {
+        "item": "Q10585458",
+        "sv": "Millesviks socken"
+    },
+    {
+        "item": "Q10586395",
+        "sv": "Mistelås socken"
+    },
+    {
+        "item": "Q10586400",
+        "sv": "Misterhults socken"
+    },
+    {
+        "item": "Q10586831",
+        "sv": "Mjäldrunga socken"
+    },
+    {
+        "item": "Q10587128",
+        "sv": "Mo socken, Västergötland"
+    },
+    {
+        "item": "Q10587579",
+        "sv": "Molla socken"
+    },
+    {
+        "item": "Q10589640",
+        "sv": "Motala socken"
+    },
+    {
+        "item": "Q10590145",
+        "sv": "Multrå socken"
+    },
+    {
+        "item": "Q10590338",
+        "sv": "Munktorps socken"
+    },
+    {
+        "item": "Q10593429",
+        "sv": "Mårdaklevs socken"
+    },
+    {
+        "item": "Q10593561",
+        "sv": "Möne socken"
+    },
+    {
+        "item": "Q10593585",
+        "sv": "Mörarps socken"
+    },
+    {
+        "item": "Q10593602",
+        "sv": "Mörbylånga socken"
+    },
+    {
+        "item": "Q10593671",
+        "sv": "Mörlunda socken"
+    },
+    {
+        "item": "Q10595639",
+        "sv": "Nederluleå socken"
+    },
+    {
+        "item": "Q10601360",
+        "sv": "Nittorps socken"
+    },
+    {
+        "item": "Q10601916",
+        "sv": "Nora socken, Västmanland"
+    },
+    {
+        "item": "Q10602055",
+        "sv": "Nordingrå socken"
+    },
+    {
+        "item": "Q10602193",
+        "sv": "Nordmalings socken"
+    },
+    {
+        "item": "Q10575929",
+        "sv": "Malingsbo socken"
+    },
+    {
+        "item": "Q10576058",
+        "sv": "Malma socken, Västergötland"
+    },
+    {
+        "item": "Q10576073",
+        "sv": "Malmbäcks socken"
+    },
+    {
+        "item": "Q10576182",
+        "sv": "Malmöns socken"
+    },
+    {
+        "item": "Q10576207",
+        "sv": "Malsta socken"
+    },
+    {
+        "item": "Q10576235",
+        "sv": "Malungs socken"
+    },
+    {
+        "item": "Q10576248",
+        "sv": "Malå socken"
+    },
+    {
+        "item": "Q10577532",
+        "sv": "Markaryds socken"
+    },
+    {
+        "item": "Q10577888",
+        "sv": "Marums socken"
+    },
+    {
+        "item": "Q10579145",
+        "sv": "Medelplana socken"
+    },
+    {
+        "item": "Q10587127",
+        "sv": "Mo socken, Hälsingland"
+    },
+    {
+        "item": "Q10587125",
+        "sv": "Mo socken, Bohuslän"
+    },
+    {
+        "item": "Q10587129",
+        "sv": "Mo socken, Ångermanland"
+    },
+    {
+        "item": "Q10587714",
+        "sv": "Mollösunds socken"
+    },
+    {
+        "item": "Q10588912",
+        "sv": "Mora socken"
+    },
+    {
+        "item": "Q10589479",
+        "sv": "Morups socken"
+    },
+    {
+        "item": "Q10589525",
+        "sv": "Mosjö socken"
+    },
+    {
+        "item": "Q10590046",
+        "sv": "Mularps socken"
+    },
+    {
+        "item": "Q10590087",
+        "sv": "Mulseryds socken"
+    },
+    {
+        "item": "Q10590355",
+        "sv": "Munsö socken"
+    },
+    {
+        "item": "Q10593512",
+        "sv": "Mölleberga socken"
+    },
+    {
+        "item": "Q10593527",
+        "sv": "Mölltorps socken"
+    },
+    {
+        "item": "Q10593687",
+        "sv": "Mörsils socken"
+    },
+    {
+        "item": "Q10593930",
+        "sv": "Nacka socken"
+    },
+    {
+        "item": "Q10595053",
+        "sv": "Naums socken"
+    },
+    {
+        "item": "Q10595675",
+        "sv": "Nedre Ulleruds socken"
+    },
+    {
+        "item": "Q10601466",
+        "sv": "Njutångers socken"
+    },
+    {
+        "item": "Q10602008",
+        "sv": "Norderö socken"
+    },
+    {
+        "item": "Q10602205",
+        "sv": "Nordmarks socken"
+    },
+    {
+        "item": "Q10576932",
+        "sv": "Marby socken"
+    },
+    {
+        "item": "Q10577558",
+        "sv": "Markims socken"
+    },
+    {
+        "item": "Q10581248",
+        "sv": "Mellby socken, Småland"
+    },
+    {
+        "item": "Q10587126",
+        "sv": "Mo socken, Dalsland"
+    },
+    {
+        "item": "Q10587443",
+        "sv": "Mofalla socken"
+    },
+    {
+        "item": "Q10587485",
+        "sv": "Moheda socken"
+    },
+    {
+        "item": "Q10589155",
+        "sv": "Morlanda socken"
+    },
+    {
+        "item": "Q10589455",
+        "sv": "Mortorps socken"
+    },
+    {
+        "item": "Q10589553",
+        "sv": "Mossebo socken"
+    },
+    {
+        "item": "Q10590279",
+        "sv": "Munkarps socken"
+    },
+    {
+        "item": "Q10592052",
+        "sv": "Myresjö socken"
+    },
+    {
+        "item": "Q10592833",
+        "sv": "Myssjö socken"
+    },
+    {
+        "item": "Q10593319",
+        "sv": "Målilla socken"
+    },
+    {
+        "item": "Q10593401",
+        "sv": "Månsarps socken"
+    },
+    {
+        "item": "Q10593425",
+        "sv": "Mårby socken"
+    },
+    {
+        "item": "Q10595110",
+        "sv": "Naverstads socken"
+    },
+    {
+        "item": "Q10595633",
+        "sv": "Nederkalix socken"
+    },
+    {
+        "item": "Q10601460",
+        "sv": "Njurunda socken"
+    },
+    {
+        "item": "Q10601913",
+        "sv": "Nora socken, Uppland"
+    },
+    {
+        "item": "Q10602385",
+        "sv": "Normlösa socken"
+    },
+    {
+        "item": "Q10602433",
+        "sv": "Norra Finnskoga socken"
+    },
+    {
+        "item": "Q10602455",
+        "sv": "Norra Hestra socken"
+    },
+    {
+        "item": "Q10576059",
+        "sv": "Malma socken, Västmanland"
+    },
+    {
+        "item": "Q10576411",
+        "sv": "Mangskogs socken"
+    },
+    {
+        "item": "Q10576949",
+        "sv": "Marbäcks socken, Västergötland"
+    },
+    {
+        "item": "Q10577305",
+        "sv": "Marieby socken"
+    },
+    {
+        "item": "Q10577524",
+        "sv": "Marka socken"
+    },
+    {
+        "item": "Q10579303",
+        "sv": "Medåkers socken"
+    },
+    {
+        "item": "Q10581181",
+        "sv": "Mellan-Grevie socken"
+    },
+    {
+        "item": "Q10586837",
+        "sv": "Mjällby socken"
+    },
+    {
+        "item": "Q10586845",
+        "sv": "Mjöbäcks socken"
+    },
+    {
+        "item": "Q10587460",
+        "sv": "Mogata socken"
+    },
+    {
+        "item": "Q10589151",
+        "sv": "Morkarla socken"
+    },
+    {
+        "item": "Q10590267",
+        "sv": "Munka-Ljungby socken"
+    },
+    {
+        "item": "Q10590460",
+        "sv": "Murums socken"
+    },
+    {
+        "item": "Q10590737",
+        "sv": "Muskö socken"
+    },
+    {
+        "item": "Q10590790",
+        "sv": "Mussla socken"
+    },
+    {
+        "item": "Q10593413",
+        "sv": "Månstads socken"
+    },
+    {
+        "item": "Q10593491",
+        "sv": "Möja socken"
+    },
+    {
+        "item": "Q10593498",
+        "sv": "Möklinta socken"
+    },
+    {
+        "item": "Q10593578",
+        "sv": "Mönsterås socken"
+    },
+    {
+        "item": "Q10593682",
+        "sv": "Mörrums socken"
+    },
+    {
+        "item": "Q10595658",
+        "sv": "Nedertorneå socken"
+    },
+    {
+        "item": "Q10600216",
+        "sv": "Nevishögs socken"
+    },
+    {
+        "item": "Q10600413",
+        "sv": "Nianfors socken"
+    },
+    {
+        "item": "Q10601940",
+        "sv": "Norbergs socken"
+    },
+    {
+        "item": "Q10602467",
+        "sv": "Norra Härene socken"
+    },
+    {
+        "item": "Q10602499",
+        "sv": "Norra Lundby socken"
+    },
+    {
+        "item": "Q10602504",
+        "sv": "Norra Mellby socken"
+    },
+    {
+        "item": "Q10602544",
+        "sv": "Norra Råda socken"
+    },
+    {
+        "item": "Q10602560",
+        "sv": "Norra Sandsjö socken"
+    },
+    {
+        "item": "Q10602600",
+        "sv": "Norra Unnaryds socken"
+    },
+    {
+        "item": "Q10602609",
+        "sv": "Norra Vi socken"
+    },
+    {
+        "item": "Q10602614",
+        "sv": "Norra Vings socken"
+    },
+    {
+        "item": "Q10602668",
+        "sv": "Norra Åsarps socken"
+    },
+    {
+        "item": "Q10602691",
+        "sv": "Norrala socken"
+    },
+    {
+        "item": "Q10602773",
+        "sv": "Norrfjärdens socken"
+    },
+    {
+        "item": "Q10604649",
+        "sv": "Nyeds socken"
+    },
+    {
+        "item": "Q10604742",
+        "sv": "Nykyrka socken, Västergötland"
+    },
+    {
+        "item": "Q10604973",
+        "sv": "Nysunds socken"
+    },
+    {
+        "item": "Q10604986",
+        "sv": "Nysätra socken, Uppland"
+    },
+    {
+        "item": "Q10605052",
+        "sv": "Nämdö socken"
+    },
+    {
+        "item": "Q10605294",
+        "sv": "Näs socken, Jämtland"
+    },
+    {
+        "item": "Q10605426",
+        "sv": "Nättraby socken"
+    },
+    {
+        "item": "Q10605445",
+        "sv": "Nävelsjö socken"
+    },
+    {
+        "item": "Q10605520",
+        "sv": "Nöbbele socken"
+    },
+    {
+        "item": "Q10605532",
+        "sv": "Nödinge socken"
+    },
+    {
+        "item": "Q10606607",
+        "sv": "Ockelbo socken"
+    },
+    {
+        "item": "Q10611868",
+        "sv": "Ornunga socken"
+    },
+    {
+        "item": "Q10613007",
+        "sv": "Oskars socken"
+    },
+    {
+        "item": "Q10602475",
+        "sv": "Norra Kedums socken"
+    },
+    {
+        "item": "Q10602587",
+        "sv": "Norra Strö socken"
+    },
+    {
+        "item": "Q10602619",
+        "sv": "Norra Vrams socken"
+    },
+    {
+        "item": "Q10602672",
+        "sv": "Norra Åsums socken"
+    },
+    {
+        "item": "Q10602947",
+        "sv": "Norrsunda socken"
+    },
+    {
+        "item": "Q10602980",
+        "sv": "Norrvidinge socken"
+    },
+    {
+        "item": "Q10603093",
+        "sv": "Norums socken"
+    },
+    {
+        "item": "Q10604242",
+        "sv": "Ny socken"
+    },
+    {
+        "item": "Q10604296",
+        "sv": "Nya Varvets socken"
+    },
+    {
+        "item": "Q10604632",
+        "sv": "Nydala socken"
+    },
+    {
+        "item": "Q10604741",
+        "sv": "Nykyrka socken, Södermanland"
+    },
+    {
+        "item": "Q10605318",
+        "sv": "Näsby socken, Västmanland"
+    },
+    {
+        "item": "Q10605371",
+        "sv": "Nässjö socken"
+    },
+    {
+        "item": "Q10605581",
+        "sv": "Nöttja socken"
+    },
+    {
+        "item": "Q10606780",
+        "sv": "Odarslövs socken"
+    },
+    {
+        "item": "Q10606818",
+        "sv": "Odensjö socken"
+    },
+    {
+        "item": "Q10606834",
+        "sv": "Odensvi socken, Småland"
+    },
+    {
+        "item": "Q10606836",
+        "sv": "Odensvi socken, Västmanland"
+    },
+    {
+        "item": "Q10606840",
+        "sv": "Odensåkers socken"
+    },
+    {
+        "item": "Q10606847",
+        "sv": "Oderljunga socken"
+    },
+    {
+        "item": "Q10611875",
+        "sv": "Ornö socken"
+    },
+    {
+        "item": "Q10613419",
+        "sv": "Ottarps socken"
+    },
+    {
+        "item": "Q10613438",
+        "sv": "Otterstads socken"
+    },
+    {
+        "item": "Q10602514",
+        "sv": "Norra Möckleby socken"
+    },
+    {
+        "item": "Q10602526",
+        "sv": "Norra Ny socken"
+    },
+    {
+        "item": "Q10602532",
+        "sv": "Norra Nöbbelövs socken"
+    },
+    {
+        "item": "Q10602548",
+        "sv": "Norra Rörums socken"
+    },
+    {
+        "item": "Q10602577",
+        "sv": "Norra Solberga socken"
+    },
+    {
+        "item": "Q10602590",
+        "sv": "Norra Säms socken"
+    },
+    {
+        "item": "Q10602624",
+        "sv": "Norra Vånga socken"
+    },
+    {
+        "item": "Q10602662",
+        "sv": "Norra Åkarps socken"
+    },
+    {
+        "item": "Q10602709",
+        "sv": "Norrbo socken"
+    },
+    {
+        "item": "Q10602744",
+        "sv": "Norrby socken"
+    },
+    {
+        "item": "Q10603001",
+        "sv": "Nors socken"
+    },
+    {
+        "item": "Q10603156",
+        "sv": "Nosaby socken"
+    },
+    {
+        "item": "Q10603787",
+        "sv": "Nottebäck med Granhults socken"
+    },
+    {
+        "item": "Q10604687",
+        "sv": "Nyhems socken"
+    },
+    {
+        "item": "Q10604987",
+        "sv": "Nysätra socken, Västerbotten"
+    },
+    {
+        "item": "Q10605319",
+        "sv": "Näsby socken, Östergötland"
+    },
+    {
+        "item": "Q10605412",
+        "sv": "Nätra socken"
+    },
+    {
+        "item": "Q10605459",
+        "sv": "Nävlinge socken"
+    },
+    {
+        "item": "Q10605509",
+        "sv": "Nås socken"
+    },
+    {
+        "item": "Q10605561",
+        "sv": "Nössemarks socken"
+    },
+    {
+        "item": "Q10606810",
+        "sv": "Odensala socken"
+    },
+    {
+        "item": "Q10607155",
+        "sv": "Ods socken"
+    },
+    {
+        "item": "Q10610171",
+        "sv": "Onsala socken"
+    },
+    {
+        "item": "Q10610183",
+        "sv": "Onslunda socken"
+    },
+    {
+        "item": "Q10610911",
+        "sv": "Oppeby socken"
+    },
+    {
+        "item": "Q10610920",
+        "sv": "Oppmanna socken"
+    },
+    {
+        "item": "Q10611285",
+        "sv": "Ore socken"
+    },
+    {
+        "item": "Q10612982",
+        "sv": "Hålanda socken"
+    },
+    {
+        "item": "Q10612948",
+        "sv": "Osby socken"
+    },
+    {
+        "item": "Q10613466",
+        "sv": "Ottravads socken"
+    },
+    {
+        "item": "Q10613560",
+        "sv": "Ovansjö socken"
+    },
+    {
+        "item": "Q10602486",
+        "sv": "Norra Kyrketorps socken"
+    },
+    {
+        "item": "Q10602493",
+        "sv": "Norra Ljunga socken"
+    },
+    {
+        "item": "Q10602554",
+        "sv": "Norra Sandby socken"
+    },
+    {
+        "item": "Q10602570",
+        "sv": "Norra Skrävlinge socken"
+    },
+    {
+        "item": "Q10602753",
+        "sv": "Norrbyås socken"
+    },
+    {
+        "item": "Q10603024",
+        "sv": "Norsjö socken"
+    },
+    {
+        "item": "Q10604641",
+        "sv": "Nye socken"
+    },
+    {
+        "item": "Q10604723",
+        "sv": "Nykils socken"
+    },
+    {
+        "item": "Q10604852",
+        "sv": "Nymö socken"
+    },
+    {
+        "item": "Q10604943",
+        "sv": "Nyskoga socken"
+    },
+    {
+        "item": "Q10605295",
+        "sv": "Näs socken, Västergötland"
+    },
+    {
+        "item": "Q10605317",
+        "sv": "Näsby socken, Småland"
+    },
+    {
+        "item": "Q10605349",
+        "sv": "Näskotts socken"
+    },
+    {
+        "item": "Q10605363",
+        "sv": "Nässja socken"
+    },
+    {
+        "item": "Q10605397",
+        "sv": "Näsums socken"
+    },
+    {
+        "item": "Q10605501",
+        "sv": "Nårunga socken"
+    },
+    {
+        "item": "Q10605568",
+        "sv": "Nösslinge socken"
+    },
+    {
+        "item": "Q10608121",
+        "sv": "Okome socken"
+    },
+    {
+        "item": "Q10611577",
+        "sv": "Orkesta socken"
+    },
+    {
+        "item": "Q10611665",
+        "sv": "Ormesberga socken"
+    },
+    {
+        "item": "Q10612120",
+        "sv": "Orsa socken"
+    },
+    {
+        "item": "Q10613536",
+        "sv": "Ova socken"
+    },
+    {
+        "item": "Q10613689",
+        "sv": "Oxie socken"
+    },
+    {
+        "item": "Q10621391",
+        "sv": "Partille socken"
+    },
+    {
+        "item": "Q10622305",
+        "sv": "Pelarne socken"
+    },
+    {
+        "item": "Q10648324",
+        "sv": "Rackeby socken"
+    },
+    {
+        "item": "Q10648653",
+        "sv": "Rakereds socken"
+    },
+    {
+        "item": "Q10649083",
+        "sv": "Ramkvilla socken"
+    },
+    {
+        "item": "Q10649171",
+        "sv": "Ramsele socken"
+    },
+    {
+        "item": "Q10649967",
+        "sv": "Raus socken"
+    },
+    {
+        "item": "Q10650064",
+        "sv": "Rebbelberga socken"
+    },
+    {
+        "item": "Q10655477",
+        "sv": "Ringarums socken"
+    },
+    {
+        "item": "Q10655539",
+        "sv": "Rinkaby socken, Skåne"
+    },
+    {
+        "item": "Q10655738",
+        "sv": "Riseberga socken"
+    },
+    {
+        "item": "Q10656398",
+        "sv": "Rogsta socken"
+    },
+    {
+        "item": "Q10656560",
+        "sv": "Romfartuna socken"
+    },
+    {
+        "item": "Q10656784",
+        "sv": "Ronneby socken"
+    },
+    {
+        "item": "Q10657752",
+        "sv": "Rumskulla socken"
+    },
+    {
+        "item": "Q10658176",
+        "sv": "Rya socken"
+    },
+    {
+        "item": "Q10658223",
+        "sv": "Ryds socken, Västergötland"
+    },
+    {
+        "item": "Q10658350",
+        "sv": "Rystads socken"
+    },
+    {
+        "item": "Q10658620",
+        "sv": "Råby-Rönö socken"
+    },
+    {
+        "item": "Q10658646",
+        "sv": "Råda socken, Kållands härad"
+    },
+    {
+        "item": "Q10658706",
+        "sv": "Råggärds socken"
+    },
+    {
+        "item": "Q10658739",
+        "sv": "Rångedala socken"
+    },
+    {
+        "item": "Q10659085",
+        "sv": "Röra socken"
+    },
+    {
+        "item": "Q10660324",
+        "sv": "Sala socken"
+    },
+    {
+        "item": "Q10632510",
+        "sv": "Pjätteryds socken"
+    },
+    {
+        "item": "Q10649051",
+        "sv": "Ramdala socken"
+    },
+    {
+        "item": "Q10649195",
+        "sv": "Ramsta socken"
+    },
+    {
+        "item": "Q10649200",
+        "sv": "Ramsåsa socken"
+    },
+    {
+        "item": "Q10649766",
+        "sv": "Rappestads socken"
+    },
+    {
+        "item": "Q10649798",
+        "sv": "Rasbokils socken"
+    },
+    {
+        "item": "Q10650274",
+        "sv": "Redslareds socken"
+    },
+    {
+        "item": "Q10650856",
+        "sv": "Remmarlövs socken"
+    },
+    {
+        "item": "Q10651183",
+        "sv": "Resele socken"
+    },
+    {
+        "item": "Q10651541",
+        "sv": "Revesjö socken"
+    },
+    {
+        "item": "Q10651549",
+        "sv": "Revinge socken"
+    },
+    {
+        "item": "Q10655538",
+        "sv": "Rinkaby socken, Närke"
+    },
+    {
+        "item": "Q10655743",
+        "sv": "Risekatslösa socken"
+    },
+    {
+        "item": "Q10655763",
+        "sv": "Risinge socken"
+    },
+    {
+        "item": "Q10656545",
+        "sv": "Romelanda socken"
+    },
+    {
+        "item": "Q10657097",
+        "sv": "Roslags-Kulla socken"
+    },
+    {
+        "item": "Q10657852",
+        "sv": "Runtuna socken"
+    },
+    {
+        "item": "Q10658320",
+        "sv": "Ryssby socken"
+    },
+    {
+        "item": "Q10658488",
+        "sv": "Räpplinge socken"
+    },
+    {
+        "item": "Q10658493",
+        "sv": "Rätans socken"
+    },
+    {
+        "item": "Q10658797",
+        "sv": "Rö socken"
+    },
+    {
+        "item": "Q10659129",
+        "sv": "Rörums socken"
+    },
+    {
+        "item": "Q10613621",
+        "sv": "Ovikens socken"
+    },
+    {
+        "item": "Q10624496",
+        "sv": "Persnäs socken"
+    },
+    {
+        "item": "Q10648583",
+        "sv": "Ragunda socken"
+    },
+    {
+        "item": "Q10649184",
+        "sv": "Ramsjö socken"
+    },
+    {
+        "item": "Q10649548",
+        "sv": "Ramundeboda socken"
+    },
+    {
+        "item": "Q10649645",
+        "sv": "Ransbergs socken"
+    },
+    {
+        "item": "Q10649656",
+        "sv": "Ransäters socken"
+    },
+    {
+        "item": "Q10649794",
+        "sv": "Rasbo socken"
+    },
+    {
+        "item": "Q10650003",
+        "sv": "Ravlunda socken"
+    },
+    {
+        "item": "Q10650355",
+        "sv": "Reftele socken"
+    },
+    {
+        "item": "Q10650563",
+        "sv": "Regna socken"
+    },
+    {
+        "item": "Q10650862",
+        "sv": "Remmene socken"
+    },
+    {
+        "item": "Q10650930",
+        "sv": "Rengsjö socken"
+    },
+    {
+        "item": "Q10651240",
+        "sv": "Reslövs socken"
+    },
+    {
+        "item": "Q10651244",
+        "sv": "Resmo socken"
+    },
+    {
+        "item": "Q10651579",
+        "sv": "Revsunds socken"
+    },
+    {
+        "item": "Q10655552",
+        "sv": "Rinna socken"
+    },
+    {
+        "item": "Q10656368",
+        "sv": "Rogberga socken"
+    },
+    {
+        "item": "Q10656392",
+        "sv": "Rogslösa socken"
+    },
+    {
+        "item": "Q10656472",
+        "sv": "Rolfstorps socken"
+    },
+    {
+        "item": "Q10656569",
+        "sv": "Rommele socken"
+    },
+    {
+        "item": "Q10657092",
+        "sv": "Roslags-Bro socken"
+    },
+    {
+        "item": "Q10657631",
+        "sv": "Rudskoga socken"
+    },
+    {
+        "item": "Q10658203",
+        "sv": "Rydaholms socken"
+    },
+    {
+        "item": "Q10658438",
+        "sv": "Rämmens socken"
+    },
+    {
+        "item": "Q10658557",
+        "sv": "Rättviks socken"
+    },
+    {
+        "item": "Q10658578",
+        "sv": "Rävinge socken"
+    },
+    {
+        "item": "Q10658886",
+        "sv": "Rödbo socken"
+    },
+    {
+        "item": "Q10658904",
+        "sv": "Röddinge socken"
+    },
+    {
+        "item": "Q10658916",
+        "sv": "Rödene socken"
+    },
+    {
+        "item": "Q10613564",
+        "sv": "Ovanåkers socken"
+    },
+    {
+        "item": "Q10624546",
+        "sv": "Perstorps socken"
+    },
+    {
+        "item": "Q10632417",
+        "sv": "Piteå socken"
+    },
+    {
+        "item": "Q10649106",
+        "sv": "Ramnäs socken"
+    },
+    {
+        "item": "Q10649162",
+        "sv": "Ramsbergs socken"
+    },
+    {
+        "item": "Q10655469",
+        "sv": "Ringamåla socken"
+    },
+    {
+        "item": "Q10655712",
+        "sv": "Ripsa socken"
+    },
+    {
+        "item": "Q10657843",
+        "sv": "Runstens socken"
+    },
+    {
+        "item": "Q10658199",
+        "sv": "Ryda socken"
+    },
+    {
+        "item": "Q10658368",
+        "sv": "Rytterne socken"
+    },
+    {
+        "item": "Q10658445",
+        "sv": "Rängs socken"
+    },
+    {
+        "item": "Q10658454",
+        "sv": "Rännelanda socken"
+    },
+    {
+        "item": "Q10658461",
+        "sv": "Ränneslövs socken"
+    },
+    {
+        "item": "Q10658613",
+        "sv": "Råby-Rekarne socken"
+    },
+    {
+        "item": "Q10658645",
+        "sv": "Råda socken, Askims härad"
+    },
+    {
+        "item": "Q10658653",
+        "sv": "Rådene socken"
+    },
+    {
+        "item": "Q10658734",
+        "sv": "Råneå socken"
+    },
+    {
+        "item": "Q10658910",
+        "sv": "Rödeby socken"
+    },
+    {
+        "item": "Q10658967",
+        "sv": "Rödöns socken"
+    },
+    {
+        "item": "Q10658995",
+        "sv": "Röke socken"
+    },
+    {
+        "item": "Q10659060",
+        "sv": "Rönnängs socken"
+    },
+    {
+        "item": "Q10659078",
+        "sv": "Rönö socken"
+    },
+    {
+        "item": "Q10659172",
+        "sv": "Röstånga socken"
+    },
+    {
+        "item": "Q10660406",
+        "sv": "Saleby socken"
+    },
+    {
+        "item": "Q10661142",
+        "sv": "Sandby socken"
+    },
+    {
+        "item": "Q10661228",
+        "sv": "Sandseryds socken"
+    },
+    {
+        "item": "Q10661269",
+        "sv": "Sandviks socken"
+    },
+    {
+        "item": "Q10661324",
+        "sv": "Sankt Anna socken"
+    },
+    {
+        "item": "Q10661367",
+        "sv": "Sankt Ibbs socken"
+    },
+    {
+        "item": "Q10661379",
+        "sv": "Sankt Johannes socken"
+    },
+    {
+        "item": "Q10661464",
+        "sv": "Sankt Peders socken"
+    },
+    {
+        "item": "Q10661475",
+        "sv": "Sankt Peters klosters socken"
+    },
+    {
+        "item": "Q10661472",
+        "sv": "Sankt Pers socken, Östergötland"
+    },
+    {
+        "item": "Q10661558",
+        "sv": "Sanne socken"
+    },
+    {
+        "item": "Q10667770",
+        "sv": "Silbodals socken"
+    },
+    {
+        "item": "Q10667800",
+        "sv": "Siljansnäs socken"
+    },
+    {
+        "item": "Q10668785",
+        "sv": "Sireköpinge socken"
+    },
+    {
+        "item": "Q10669216",
+        "sv": "Sjogerstads socken"
+    },
+    {
+        "item": "Q10669654",
+        "sv": "Skallsjö socken"
+    },
+    {
+        "item": "Q10669937",
+        "sv": "Skee socken"
+    },
+    {
+        "item": "Q10670098",
+        "sv": "Skeppsås socken"
+    },
+    {
+        "item": "Q10670176",
+        "sv": "Skillingmarks socken"
+    },
+    {
+        "item": "Q10670562",
+        "sv": "Skredsviks socken"
+    },
+    {
+        "item": "Q10670925",
+        "sv": "Skällviks socken"
+    },
+    {
+        "item": "Q10671010",
+        "sv": "Skärkinds socken"
+    },
+    {
+        "item": "Q10660419",
+        "sv": "Salems socken"
+    },
+    {
+        "item": "Q10660703",
+        "sv": "Sals socken"
+    },
+    {
+        "item": "Q10666794",
+        "sv": "Sevalla socken"
+    },
+    {
+        "item": "Q10667347",
+        "sv": "Sicklaö socken"
+    },
+    {
+        "item": "Q10667986",
+        "sv": "Silvåkra socken"
+    },
+    {
+        "item": "Q10668032",
+        "sv": "Simlinge socken"
+    },
+    {
+        "item": "Q10668115",
+        "sv": "Simonstorps socken"
+    },
+    {
+        "item": "Q10668176",
+        "sv": "Simtuna socken"
+    },
+    {
+        "item": "Q10669512",
+        "sv": "Sjörups socken"
+    },
+    {
+        "item": "Q10669586",
+        "sv": "Skabersjö socken"
+    },
+    {
+        "item": "Q10669650",
+        "sv": "Skallmeja socken"
+    },
+    {
+        "item": "Q10669663",
+        "sv": "Skalunda socken"
+    },
+    {
+        "item": "Q10669763",
+        "sv": "Skara socken"
+    },
+    {
+        "item": "Q10669792",
+        "sv": "Skarhults socken"
+    },
+    {
+        "item": "Q10669819",
+        "sv": "Skarstads socken"
+    },
+    {
+        "item": "Q10669942",
+        "sv": "Skeglinge socken"
+    },
+    {
+        "item": "Q10669947",
+        "sv": "Skegrie socken"
+    },
+    {
+        "item": "Q10670034",
+        "sv": "Skepparslövs socken"
+    },
+    {
+        "item": "Q10670109",
+        "sv": "Skerike socken"
+    },
+    {
+        "item": "Q10670228",
+        "sv": "Skirö socken"
+    },
+    {
+        "item": "Q10670323",
+        "sv": "Skogs socken, Hälsingland"
+    },
+    {
+        "item": "Q10670342",
+        "sv": "Skogsbygdens socken"
+    },
+    {
+        "item": "Q10670433",
+        "sv": "Skoklosters socken"
+    },
+    {
+        "item": "Q10670554",
+        "sv": "Skrea socken"
+    },
+    {
+        "item": "Q10670725",
+        "sv": "Skummeslövs socken"
+    },
+    {
+        "item": "Q10670765",
+        "sv": "Skuttunge socken"
+    },
+    {
+        "item": "Q10670917",
+        "sv": "Skällinge socken"
+    },
+    {
+        "item": "Q10670932",
+        "sv": "Skälvums socken"
+    },
+    {
+        "item": "Q10660408",
+        "sv": "Saleby övra socken"
+    },
+    {
+        "item": "Q10661180",
+        "sv": "Sandhems socken"
+    },
+    {
+        "item": "Q10661186",
+        "sv": "Sandhults socken"
+    },
+    {
+        "item": "Q10661402",
+        "sv": "Sankt Lars socken"
+    },
+    {
+        "item": "Q10661496",
+        "sv": "Sankt Sigfrids socken"
+    },
+    {
+        "item": "Q10662270",
+        "sv": "Saxtorps socken"
+    },
+    {
+        "item": "Q10665074",
+        "sv": "Segersta socken"
+    },
+    {
+        "item": "Q10665092",
+        "sv": "Segerstads socken, Värmland"
+    },
+    {
+        "item": "Q10665452",
+        "sv": "Selångers socken"
+    },
+    {
+        "item": "Q10667451",
+        "sv": "Siene socken"
+    },
+    {
+        "item": "Q10667865",
+        "sv": "Sils socken"
+    },
+    {
+        "item": "Q10669547",
+        "sv": "Sjösås socken"
+    },
+    {
+        "item": "Q10669551",
+        "sv": "Sjötofta socken"
+    },
+    {
+        "item": "Q10669602",
+        "sv": "Skaftö socken"
+    },
+    {
+        "item": "Q10669618",
+        "sv": "Skagershults socken"
+    },
+    {
+        "item": "Q10669900",
+        "sv": "Skeby socken"
+    },
+    {
+        "item": "Q10669906",
+        "sv": "Skeda socken"
+    },
+    {
+        "item": "Q10670045",
+        "sv": "Skepperstads socken"
+    },
+    {
+        "item": "Q10670053",
+        "sv": "Skepplanda socken"
+    },
+    {
+        "item": "Q10670103",
+        "sv": "Skepptuna socken"
+    },
+    {
+        "item": "Q10670238",
+        "sv": "Skivarps socken"
+    },
+    {
+        "item": "Q10670307",
+        "sv": "Skogs-Tibble socken"
+    },
+    {
+        "item": "Q10670324",
+        "sv": "Skogs socken, Ångermanland"
+    },
+    {
+        "item": "Q10670508",
+        "sv": "Skorpeds socken"
+    },
+    {
+        "item": "Q10670718",
+        "sv": "Skultuna socken"
+    },
+    {
+        "item": "Q10670749",
+        "sv": "Skurups socken"
+    },
+    {
+        "item": "Q10671037",
+        "sv": "Skärstads socken"
+    },
+    {
+        "item": "Q10661370",
+        "sv": "Sankt Ilians socken"
+    },
+    {
+        "item": "Q10661454",
+        "sv": "Sankt Olofs socken, Skåne"
+    },
+    {
+        "item": "Q10661456",
+        "sv": "Sankt Olofs socken, Uppland"
+    },
+    {
+        "item": "Q10661471",
+        "sv": "Sankt Pers socken, Uppland"
+    },
+    {
+        "item": "Q10665094",
+        "sv": "Segerstads socken, Öland"
+    },
+    {
+        "item": "Q10665093",
+        "sv": "Segerstads socken, Västergötland"
+    },
+    {
+        "item": "Q10665141",
+        "sv": "Seglora socken"
+    },
+    {
+        "item": "Q10666857",
+        "sv": "Sexdrega socken"
+    },
+    {
+        "item": "Q10667388",
+        "sv": "Sidensjö socken"
+    },
+    {
+        "item": "Q10667821",
+        "sv": "Silleruds socken"
+    },
+    {
+        "item": "Q10667826",
+        "sv": "Sillhövda socken"
+    },
+    {
+        "item": "Q10667884",
+        "sv": "Silvbergs socken"
+    },
+    {
+        "item": "Q10668151",
+        "sv": "Simris socken"
+    },
+    {
+        "item": "Q10668312",
+        "sv": "Singö socken"
+    },
+    {
+        "item": "Q10669334",
+        "sv": "Själevads socken"
+    },
+    {
+        "item": "Q10669430",
+        "sv": "Sjögerås socken"
+    },
+    {
+        "item": "Q10669434",
+        "sv": "Sjögestads socken"
+    },
+    {
+        "item": "Q10669913",
+        "sv": "Skede socken"
+    },
+    {
+        "item": "Q10669922",
+        "sv": "Skedevi socken"
+    },
+    {
+        "item": "Q10669996",
+        "sv": "Skellefteå socken"
+    },
+    {
+        "item": "Q10670019",
+        "sv": "Skephults socken"
+    },
+    {
+        "item": "Q10670213",
+        "sv": "Skinnskattebergs socken"
+    },
+    {
+        "item": "Q10670880",
+        "sv": "Skäfthammars socken"
+    },
+    {
+        "item": "Q10671070",
+        "sv": "Skålleruds socken"
+    },
+    {
+        "item": "Q10671231",
+        "sv": "Sköllersta socken"
+    },
+    {
+        "item": "Q10671255",
+        "sv": "Skönberga socken"
+    },
+    {
+        "item": "Q10671439",
+        "sv": "Slaka socken"
+    },
+    {
+        "item": "Q10671855",
+        "sv": "Slöinge socken"
+    },
+    {
+        "item": "Q10672410",
+        "sv": "Smula socken"
+    },
+    {
+        "item": "Q10673288",
+        "sv": "Solleröns socken"
+    },
+    {
+        "item": "Q10674049",
+        "sv": "Sorunda socken"
+    },
+    {
+        "item": "Q10674343",
+        "sv": "Spannarps socken"
+    },
+    {
+        "item": "Q10674764",
+        "sv": "Spelviks socken"
+    },
+    {
+        "item": "Q10676093",
+        "sv": "Spjutstorps socken"
+    },
+    {
+        "item": "Q10677913",
+        "sv": "Stavnäs socken"
+    },
+    {
+        "item": "Q10678388",
+        "sv": "Stenberga socken"
+    },
+    {
+        "item": "Q10678420",
+        "sv": "Steneby socken"
+    },
+    {
+        "item": "Q10678573",
+        "sv": "Stenkyrka socken, Bohuslän"
+    },
+    {
+        "item": "Q10679263",
+        "sv": "Stensele socken"
+    },
+    {
+        "item": "Q10680074",
+        "sv": "Stigtomta socken"
+    },
+    {
+        "item": "Q10681000",
+        "sv": "Stora Hammars socken"
+    },
+    {
+        "item": "Q10681013",
+        "sv": "Stora Herrestads socken"
+    },
+    {
+        "item": "Q10681059",
+        "sv": "Stora Lundby socken"
+    },
+    {
+        "item": "Q10681368",
+        "sv": "Storsjö socken"
+    },
+    {
+        "item": "Q10682271",
+        "sv": "Strövelstorps socken"
+    },
+    {
+        "item": "Q10682816",
+        "sv": "Styrstads socken"
+    },
+    {
+        "item": "Q10682895",
+        "sv": "Stävie socken"
+    },
+    {
+        "item": "Q10671044",
+        "sv": "Skärvs socken"
+    },
+    {
+        "item": "Q10671109",
+        "sv": "Skånes-Fagerhults socken"
+    },
+    {
+        "item": "Q10671290",
+        "sv": "Skörstorps socken"
+    },
+    {
+        "item": "Q10671310",
+        "sv": "Skövde socken"
+    },
+    {
+        "item": "Q10671925",
+        "sv": "Smeby socken"
+    },
+    {
+        "item": "Q10672767",
+        "sv": "Snårestads socken"
+    },
+    {
+        "item": "Q10673252",
+        "sv": "Sollefteå socken"
+    },
+    {
+        "item": "Q10673310",
+        "sv": "Solna socken"
+    },
+    {
+        "item": "Q10674476",
+        "sv": "Sparrsätra socken"
+    },
+    {
+        "item": "Q10677905",
+        "sv": "Stavby socken"
+    },
+    {
+        "item": "Q10678489",
+        "sv": "Stengårdshults socken"
+    },
+    {
+        "item": "Q10678564",
+        "sv": "Stenkvista socken"
+    },
+    {
+        "item": "Q10679255",
+        "sv": "Stens socken"
+    },
+    {
+        "item": "Q10679324",
+        "sv": "Stenums socken"
+    },
+    {
+        "item": "Q10680068",
+        "sv": "Stigsjö socken"
+    },
+    {
+        "item": "Q10680419",
+        "sv": "Stockaryds socken"
+    },
+    {
+        "item": "Q10680502",
+        "sv": "Stockholms-Näs socken"
+    },
+    {
+        "item": "Q10681007",
+        "sv": "Stora Harrie socken"
+    },
+    {
+        "item": "Q10681063",
+        "sv": "Stora Malms socken"
+    },
+    {
+        "item": "Q10681102",
+        "sv": "Stora Skedvi socken"
+    },
+    {
+        "item": "Q10681111",
+        "sv": "Stora Slågarps socken"
+    },
+    {
+        "item": "Q10682102",
+        "sv": "Strängnäs socken"
+    },
+    {
+        "item": "Q10682132",
+        "sv": "Strå socken"
+    },
+    {
+        "item": "Q10682174",
+        "sv": "Strö socken"
+    },
+    {
+        "item": "Q10682471",
+        "sv": "Sturkö socken"
+    },
+    {
+        "item": "Q10682965",
+        "sv": "Stöde socken"
+    },
+    {
+        "item": "Q10683683",
+        "sv": "Sundals-Ryrs socken"
+    },
+    {
+        "item": "Q10671046",
+        "sv": "Skärvums socken"
+    },
+    {
+        "item": "Q10671193",
+        "sv": "Skårby socken"
+    },
+    {
+        "item": "Q10671750",
+        "sv": "Slädene socken"
+    },
+    {
+        "item": "Q10671832",
+        "sv": "Slätthögs socken"
+    },
+    {
+        "item": "Q10671839",
+        "sv": "Slättåkra socken"
+    },
+    {
+        "item": "Q10671873",
+        "sv": "Slöta socken"
+    },
+    {
+        "item": "Q10671966",
+        "sv": "Smedstorps socken"
+    },
+    {
+        "item": "Q10673115",
+        "sv": "Solberga socken, Skåne"
+    },
+    {
+        "item": "Q10674043",
+        "sv": "Sorsele socken"
+    },
+    {
+        "item": "Q10677267",
+        "sv": "Stafsinge socken"
+    },
+    {
+        "item": "Q10677396",
+        "sv": "Stala socken"
+    },
+    {
+        "item": "Q10677494",
+        "sv": "Stamnareds socken"
+    },
+    {
+        "item": "Q10677590",
+        "sv": "Starby socken"
+    },
+    {
+        "item": "Q10677637",
+        "sv": "Starrkärrs socken"
+    },
+    {
+        "item": "Q10678109",
+        "sv": "Stehags socken"
+    },
+    {
+        "item": "Q10679619",
+        "sv": "Stiby socken"
+    },
+    {
+        "item": "Q10680411",
+        "sv": "Stoby socken"
+    },
+    {
+        "item": "Q10681040",
+        "sv": "Stora Kopparbergs socken"
+    },
+    {
+        "item": "Q10681069",
+        "sv": "Stora Mellby socken"
+    },
+    {
+        "item": "Q10681092",
+        "sv": "Stora Råby socken"
+    },
+    {
+        "item": "Q10681133",
+        "sv": "Stora Tuna socken"
+    },
+    {
+        "item": "Q10681188",
+        "sv": "Stora Åby socken"
+    },
+    {
+        "item": "Q10682222",
+        "sv": "Ströms socken"
+    },
+    {
+        "item": "Q10682425",
+        "sv": "Stuguns socken"
+    },
+    {
+        "item": "Q10682938",
+        "sv": "Stångby socken"
+    },
+    {
+        "item": "Q10671055",
+        "sv": "Skå socken"
+    },
+    {
+        "item": "Q10671102",
+        "sv": "Skånela socken"
+    },
+    {
+        "item": "Q10671138",
+        "sv": "Skånings-Åsaka socken"
+    },
+    {
+        "item": "Q10671217",
+        "sv": "Sköldinge socken"
+    },
+    {
+        "item": "Q10671234",
+        "sv": "Skölvene socken"
+    },
+    {
+        "item": "Q10671272",
+        "sv": "Sköns socken"
+    },
+    {
+        "item": "Q10671580",
+        "sv": "Slimminge socken"
+    },
+    {
+        "item": "Q10671782",
+        "sv": "Släps socken"
+    },
+    {
+        "item": "Q10671934",
+        "sv": "Smedby socken"
+    },
+    {
+        "item": "Q10672645",
+        "sv": "Snavlunda socken"
+    },
+    {
+        "item": "Q10672799",
+        "sv": "Snöstorps socken"
+    },
+    {
+        "item": "Q10673117",
+        "sv": "Solberga socken, Västergötland"
+    },
+    {
+        "item": "Q10678459",
+        "sv": "Stenestads socken"
+    },
+    {
+        "item": "Q10678519",
+        "sv": "Steninge socken"
+    },
+    {
+        "item": "Q10679293",
+        "sv": "Stenstorps socken"
+    },
+    {
+        "item": "Q10679346",
+        "sv": "Stenåsa socken"
+    },
+    {
+        "item": "Q10681036",
+        "sv": "Stora Kils socken"
+    },
+    {
+        "item": "Q10681051",
+        "sv": "Stora Köpinge socken"
+    },
+    {
+        "item": "Q10681074",
+        "sv": "Stora Mellösa socken"
+    },
+    {
+        "item": "Q10682111",
+        "sv": "Strängsereds socken"
+    },
+    {
+        "item": "Q10682169",
+        "sv": "Stråvalla socken"
+    },
+    {
+        "item": "Q10682807",
+        "sv": "Styrnäs socken"
+    },
+    {
+        "item": "Q10682822",
+        "sv": "Styrsö socken"
+    },
+    {
+        "item": "Q10683738",
+        "sv": "Sundborns socken"
+    },
+    {
+        "item": "Q10683804",
+        "sv": "Sunds socken"
+    },
+    {
+        "item": "Q10683935",
+        "sv": "Sunnemo socken"
+    },
+    {
+        "item": "Q10684322",
+        "sv": "Svalövs socken"
+    },
+    {
+        "item": "Q10684366",
+        "sv": "Svanskogs socken"
+    },
+    {
+        "item": "Q10684473",
+        "sv": "Svarteborgs socken"
+    },
+    {
+        "item": "Q10684547",
+        "sv": "Svarttorps socken"
+    },
+    {
+        "item": "Q10684631",
+        "sv": "Svedala socken"
+    },
+    {
+        "item": "Q10685757",
+        "sv": "Svensköps socken"
+    },
+    {
+        "item": "Q10685784",
+        "sv": "Sventorps socken"
+    },
+    {
+        "item": "Q10686338",
+        "sv": "Svinnegarns socken"
+    },
+    {
+        "item": "Q10687497",
+        "sv": "Synnerby socken"
+    },
+    {
+        "item": "Q10688240",
+        "sv": "Sävars socken"
+    },
+    {
+        "item": "Q10688247",
+        "sv": "Säve socken"
+    },
+    {
+        "item": "Q10688498",
+        "sv": "Söderby-Karls socken"
+    },
+    {
+        "item": "Q10688843",
+        "sv": "Södervidinge socken"
+    },
+    {
+        "item": "Q10688852",
+        "sv": "Söderåkra socken"
+    },
+    {
+        "item": "Q10688894",
+        "sv": "Södra Fågelås socken"
+    },
+    {
+        "item": "Q10688956",
+        "sv": "Södra Möckleby socken"
+    },
+    {
+        "item": "Q10688977",
+        "sv": "Södra Råda socken"
+    },
+    {
+        "item": "Q10688986",
+        "sv": "Södra Sallerups socken"
+    },
+    {
+        "item": "Q10688995",
+        "sv": "Södra Sandsjö socken"
+    },
+    {
+        "item": "Q10688992",
+        "sv": "Södra Sandby socken"
+    },
+    {
+        "item": "Q10689003",
+        "sv": "Södra Solberga socken"
+    },
+    {
+        "item": "Q10689201",
+        "sv": "Sörby socken, Östergötland"
+    },
+    {
+        "item": "Q10689273",
+        "sv": "Sövde socken"
+    },
+    {
+        "item": "Q10690716",
+        "sv": "Tanums socken"
+    },
+    {
+        "item": "Q10691166",
+        "sv": "Tarsleds socken"
+    },
+    {
+        "item": "Q10691872",
+        "sv": "Tegneby socken"
+    },
+    {
+        "item": "Q10692691",
+        "sv": "Tengene socken"
+    },
+    {
+        "item": "Q10683751",
+        "sv": "Sundby socken"
+    },
+    {
+        "item": "Q10683928",
+        "sv": "Sunne socken, Värmland"
+    },
+    {
+        "item": "Q10683962",
+        "sv": "Suntaks socken"
+    },
+    {
+        "item": "Q10684178",
+        "sv": "Surteby socken"
+    },
+    {
+        "item": "Q10684360",
+        "sv": "Svanshals socken"
+    },
+    {
+        "item": "Q10684652",
+        "sv": "Svedvi socken"
+    },
+    {
+        "item": "Q10684733",
+        "sv": "Sveneby socken"
+    },
+    {
+        "item": "Q10684754",
+        "sv": "Svenneby socken"
+    },
+    {
+        "item": "Q10687500",
+        "sv": "Synneråls socken"
+    },
+    {
+        "item": "Q10687893",
+        "sv": "Säby socken, Skåne"
+    },
+    {
+        "item": "Q10688172",
+        "sv": "Säters socken, Dalarna"
+    },
+    {
+        "item": "Q10688173",
+        "sv": "Säters socken, Västergötland"
+    },
+    {
+        "item": "Q10688209",
+        "sv": "Sättna socken"
+    },
+    {
+        "item": "Q10688235",
+        "sv": "Sävare socken"
+    },
+    {
+        "item": "Q10688386",
+        "sv": "Sånga socken"
+    },
+    {
+        "item": "Q10688384",
+        "sv": "Sånga socken, Uppland"
+    },
+    {
+        "item": "Q10688885",
+        "sv": "Södra Finnskoga socken"
+    },
+    {
+        "item": "Q10688920",
+        "sv": "Södra Kedums socken"
+    },
+    {
+        "item": "Q10688964",
+        "sv": "Södra Ny socken"
+    },
+    {
+        "item": "Q10689091",
+        "sv": "Södra Åkarps socken"
+    },
+    {
+        "item": "Q10689200",
+        "sv": "Sörby socken, Västergötland"
+    },
+    {
+        "item": "Q10691867",
+        "sv": "Tegnaby socken"
+    },
+    {
+        "item": "Q10683943",
+        "sv": "Sunnersbergs socken"
+    },
+    {
+        "item": "Q10684117",
+        "sv": "Sura socken"
+    },
+    {
+        "item": "Q10684723",
+        "sv": "Svenarums socken"
+    },
+    {
+        "item": "Q10686392",
+        "sv": "Svärdsjö socken"
+    },
+    {
+        "item": "Q10686691",
+        "sv": "Sya socken"
+    },
+    {
+        "item": "Q10687871",
+        "sv": "Säbrå socken"
+    },
+    {
+        "item": "Q10687894",
+        "sv": "Säby socken, Västmanland"
+    },
+    {
+        "item": "Q10687895",
+        "sv": "Säby socken, Småland"
+    },
+    {
+        "item": "Q10687926",
+        "sv": "Säfsnäs socken"
+    },
+    {
+        "item": "Q10688105",
+        "sv": "Särestads socken"
+    },
+    {
+        "item": "Q10688206",
+        "sv": "Sättersta socken"
+    },
+    {
+        "item": "Q10688474",
+        "sv": "Söderala socken"
+    },
+    {
+        "item": "Q10688509",
+        "sv": "Söderbärke socken"
+    },
+    {
+        "item": "Q10688905",
+        "sv": "Södra Hestra socken"
+    },
+    {
+        "item": "Q10688912",
+        "sv": "Södra Härene socken"
+    },
+    {
+        "item": "Q10688927",
+        "sv": "Södra Kyrketorps socken"
+    },
+    {
+        "item": "Q10688939",
+        "sv": "Södra Ljunga socken"
+    },
+    {
+        "item": "Q10689050",
+        "sv": "Södra Vånga socken"
+    },
+    {
+        "item": "Q10689094",
+        "sv": "Södra Åsarps socken"
+    },
+    {
+        "item": "Q10689128",
+        "sv": "Sölvesborgs socken"
+    },
+    {
+        "item": "Q10689170",
+        "sv": "Söne socken"
+    },
+    {
+        "item": "Q10689179",
+        "sv": "Söraby socken"
+    },
+    {
+        "item": "Q10689279",
+        "sv": "Sövestads socken"
+    },
+    {
+        "item": "Q10691573",
+        "sv": "Taxinge socken"
+    },
+    {
+        "item": "Q10691796",
+        "sv": "Teda socken"
+    },
+    {
+        "item": "Q10691839",
+        "sv": "Tegelsmora socken"
+    },
+    {
+        "item": "Q10683929",
+        "sv": "Sunne socken, Jämtland"
+    },
+    {
+        "item": "Q10684660",
+        "sv": "Svegs socken"
+    },
+    {
+        "item": "Q10684740",
+        "sv": "Svenljunga socken"
+    },
+    {
+        "item": "Q10684760",
+        "sv": "Svennevads socken"
+    },
+    {
+        "item": "Q10685777",
+        "sv": "Svenstorps socken"
+    },
+    {
+        "item": "Q10686334",
+        "sv": "Svinhults socken"
+    },
+    {
+        "item": "Q10686412",
+        "sv": "Svärta socken"
+    },
+    {
+        "item": "Q10688054",
+        "sv": "Sällstorps socken"
+    },
+    {
+        "item": "Q10688136",
+        "sv": "Särslövs socken"
+    },
+    {
+        "item": "Q10688154",
+        "sv": "Säterbo socken"
+    },
+    {
+        "item": "Q10688181",
+        "sv": "Sätila socken"
+    },
+    {
+        "item": "Q10688225",
+        "sv": "Sätuna socken"
+    },
+    {
+        "item": "Q10688519",
+        "sv": "Söderfors socken"
+    },
+    {
+        "item": "Q10688943",
+        "sv": "Södra Lundby socken"
+    },
+    {
+        "item": "Q10688982",
+        "sv": "Södra Rörums socken"
+    },
+    {
+        "item": "Q10689016",
+        "sv": "Södra Säms socken"
+    },
+    {
+        "item": "Q10689027",
+        "sv": "Södra Unnaryds socken"
+    },
+    {
+        "item": "Q10689034",
+        "sv": "Södra Vi socken"
+    },
+    {
+        "item": "Q10689040",
+        "sv": "Södra Vings socken"
+    },
+    {
+        "item": "Q10689085",
+        "sv": "Södra Åby socken"
+    },
+    {
+        "item": "Q10689100",
+        "sv": "Södra Åsums socken"
+    },
+    {
+        "item": "Q10689198",
+        "sv": "Sörby socken, Skåne"
+    },
+    {
+        "item": "Q10690665",
+        "sv": "Tannåkers socken"
+    },
+    {
+        "item": "Q10697615",
+        "sv": "Tibergs socken"
+    },
+    {
+        "item": "Q10697804",
+        "sv": "Tierps socken"
+    },
+    {
+        "item": "Q10698216",
+        "sv": "Timrå socken"
+    },
+    {
+        "item": "Q10698642",
+        "sv": "Tirups socken"
+    },
+    {
+        "item": "Q10698949",
+        "sv": "Tjureda socken"
+    },
+    {
+        "item": "Q10699030",
+        "sv": "Tjärby socken"
+    },
+    {
+        "item": "Q10699346",
+        "sv": "Tolfta socken"
+    },
+    {
+        "item": "Q10699354",
+        "sv": "Tolgs socken"
+    },
+    {
+        "item": "Q10700229",
+        "sv": "Torpa socken, Halland"
+    },
+    {
+        "item": "Q10700265",
+        "sv": "Torps socken, Dalsland"
+    },
+    {
+        "item": "Q10700306",
+        "sv": "Torrlösa socken"
+    },
+    {
+        "item": "Q10700314",
+        "sv": "Torrskogs socken"
+    },
+    {
+        "item": "Q10700399",
+        "sv": "Torslunda socken"
+    },
+    {
+        "item": "Q10700557",
+        "sv": "Torö socken"
+    },
+    {
+        "item": "Q10700580",
+        "sv": "Tosterups socken"
+    },
+    {
+        "item": "Q10701329",
+        "sv": "Transtrands socken"
+    },
+    {
+        "item": "Q10701394",
+        "sv": "Tranås socken"
+    },
+    {
+        "item": "Q10701435",
+        "sv": "Traryds socken"
+    },
+    {
+        "item": "Q10704867",
+        "sv": "Trolle-Ljungby socken"
+    },
+    {
+        "item": "Q10704876",
+        "sv": "Trollenäs socken"
+    },
+    {
+        "item": "Q10704898",
+        "sv": "Trollhättans socken"
+    },
+    {
+        "item": "Q10705192",
+        "sv": "Trosa socken"
+    },
+    {
+        "item": "Q10705436",
+        "sv": "Tryde socken"
+    },
+    {
+        "item": "Q10705619",
+        "sv": "Träslövs socken"
+    },
+    {
+        "item": "Q10705630",
+        "sv": "Trästena socken"
+    },
+    {
+        "item": "Q10705681",
+        "sv": "Trökörna socken"
+    },
+    {
+        "item": "Q10706285",
+        "sv": "Tuna socken"
+    },
+    {
+        "item": "Q10706333",
+        "sv": "Tunge socken"
+    },
+    {
+        "item": "Q10706382",
+        "sv": "Tuns socken"
+    },
+    {
+        "item": "Q10697602",
+        "sv": "Tiarps socken"
+    },
+    {
+        "item": "Q10697704",
+        "sv": "Tidersrums socken"
+    },
+    {
+        "item": "Q10698053",
+        "sv": "Tillinge socken"
+    },
+    {
+        "item": "Q10698170",
+        "sv": "Timmele socken"
+    },
+    {
+        "item": "Q10698689",
+        "sv": "Tisselskogs socken"
+    },
+    {
+        "item": "Q10700077",
+        "sv": "Torekovs socken"
+    },
+    {
+        "item": "Q10700105",
+        "sv": "Torhamns socken"
+    },
+    {
+        "item": "Q10700230",
+        "sv": "Torpa socken, Sunnerbo"
+    },
+    {
+        "item": "Q10700231",
+        "sv": "Torpa socken, Södermanland"
+    },
+    {
+        "item": "Q10700233",
+        "sv": "Torpa socken, Östergötland"
+    },
+    {
+        "item": "Q10700423",
+        "sv": "Torstuna socken"
+    },
+    {
+        "item": "Q10700454",
+        "sv": "Torsångs socken"
+    },
+    {
+        "item": "Q10700504",
+        "sv": "Tortuna socken"
+    },
+    {
+        "item": "Q10700619",
+        "sv": "Tottarps socken"
+    },
+    {
+        "item": "Q10701269",
+        "sv": "Tranemo socken"
+    },
+    {
+        "item": "Q10701274",
+        "sv": "Trankils socken"
+    },
+    {
+        "item": "Q10705624",
+        "sv": "Trässbergs socken"
+    },
+    {
+        "item": "Q10706163",
+        "sv": "Tullstorps socken"
+    },
+    {
+        "item": "Q10706203",
+        "sv": "Tumbergs socken"
+    },
+    {
+        "item": "Q10706284",
+        "sv": "Tuna socken, Småland"
+    },
+    {
+        "item": "Q10706767",
+        "sv": "Tveta socken, Småland"
+    },
+    {
+        "item": "Q10697956",
+        "sv": "Tillberga socken"
+    },
+    {
+        "item": "Q10698185",
+        "sv": "Timmersdala socken"
+    },
+    {
+        "item": "Q10698275",
+        "sv": "Tingstads socken"
+    },
+    {
+        "item": "Q10698957",
+        "sv": "Tjurkö socken"
+    },
+    {
+        "item": "Q10699141",
+        "sv": "Toarps socken"
+    },
+    {
+        "item": "Q10699240",
+        "sv": "Tofteryds socken"
+    },
+    {
+        "item": "Q10699385",
+        "sv": "Tollstads socken"
+    },
+    {
+        "item": "Q10699432",
+        "sv": "Tolånga socken"
+    },
+    {
+        "item": "Q10700085",
+        "sv": "Torestorps socken"
+    },
+    {
+        "item": "Q10700089",
+        "sv": "Toresunds socken"
+    },
+    {
+        "item": "Q10700232",
+        "sv": "Torpa socken, Västergötland"
+    },
+    {
+        "item": "Q10700383",
+        "sv": "Torskinge socken"
+    },
+    {
+        "item": "Q10700390",
+        "sv": "Torslanda socken"
+    },
+    {
+        "item": "Q10700450",
+        "sv": "Torsåkers socken, Ångermanland"
+    },
+    {
+        "item": "Q10700449",
+        "sv": "Torsåkers socken, Södermanland"
+    },
+    {
+        "item": "Q10700470",
+        "sv": "Torsö socken"
+    },
+    {
+        "item": "Q10700561",
+        "sv": "Tose socken"
+    },
+    {
+        "item": "Q10701351",
+        "sv": "Tranums socken"
+    },
+    {
+        "item": "Q10701738",
+        "sv": "Trelleborgs socken"
+    },
+    {
+        "item": "Q10705637",
+        "sv": "Trävattna socken"
+    },
+    {
+        "item": "Q10705670",
+        "sv": "Tråvads socken"
+    },
+    {
+        "item": "Q10706208",
+        "sv": "Tumbo socken"
+    },
+    {
+        "item": "Q10706283",
+        "sv": "Tuna socken, Medelpad"
+    },
+    {
+        "item": "Q10706291",
+        "sv": "Tunabergs socken"
+    },
+    {
+        "item": "Q10706548",
+        "sv": "Turinge socken"
+    },
+    {
+        "item": "Q10692742",
+        "sv": "Tensta socken"
+    },
+    {
+        "item": "Q10697680",
+        "sv": "Tidavads socken"
+    },
+    {
+        "item": "Q10698285",
+        "sv": "Tingsås socken"
+    },
+    {
+        "item": "Q10698835",
+        "sv": "Tiveds socken"
+    },
+    {
+        "item": "Q10698997",
+        "sv": "Tjällmo socken"
+    },
+    {
+        "item": "Q10699046",
+        "sv": "Tjärnö socken"
+    },
+    {
+        "item": "Q10699049",
+        "sv": "Tjärstads socken"
+    },
+    {
+        "item": "Q10699062",
+        "sv": "Tjörnarps socken"
+    },
+    {
+        "item": "Q10700066",
+        "sv": "Torbjörntorps socken"
+    },
+    {
+        "item": "Q10700262",
+        "sv": "Torps socken, Bohuslän"
+    },
+    {
+        "item": "Q10700264",
+        "sv": "Torps socken, Medelpad"
+    },
+    {
+        "item": "Q10700372",
+        "sv": "Torshälla socken"
+    },
+    {
+        "item": "Q10700427",
+        "sv": "Torsvi socken"
+    },
+    {
+        "item": "Q10700448",
+        "sv": "Torsåkers socken, Gästrikland"
+    },
+    {
+        "item": "Q10700463",
+        "sv": "Torsås socken, Småland"
+    },
+    {
+        "item": "Q10700536",
+        "sv": "Torups socken"
+    },
+    {
+        "item": "Q10700573",
+        "sv": "Tostareds socken"
+    },
+    {
+        "item": "Q10701704",
+        "sv": "Trehörna socken"
+    },
+    {
+        "item": "Q10701712",
+        "sv": "Trehörningsjö socken"
+    },
+    {
+        "item": "Q10705517",
+        "sv": "Tryserums socken"
+    },
+    {
+        "item": "Q10705588",
+        "sv": "Träne socken"
+    },
+    {
+        "item": "Q10705685",
+        "sv": "Trönninge socken"
+    },
+    {
+        "item": "Q10706286",
+        "sv": "Tuna socken, Södermanland"
+    },
+    {
+        "item": "Q10706712",
+        "sv": "Tuve socken"
+    },
+    {
+        "item": "Q10706766",
+        "sv": "Tveta socken, Södermanland"
+    },
+    {
+        "item": "Q10706802",
+        "sv": "Tvärreds socken"
+    },
+    {
+        "item": "Q10706992",
+        "sv": "Tygelsjö socken"
+    },
+    {
+        "item": "Q10707847",
+        "sv": "Tysslinge socken"
+    },
+    {
+        "item": "Q10707861",
+        "sv": "Tystberga socken"
+    },
+    {
+        "item": "Q10708006",
+        "sv": "Tärendö socken"
+    },
+    {
+        "item": "Q10708047",
+        "sv": "Tävelsås socken"
+    },
+    {
+        "item": "Q10708105",
+        "sv": "Tångeråsa socken"
+    },
+    {
+        "item": "Q10708132",
+        "sv": "Tåsjö socken"
+    },
+    {
+        "item": "Q10708154",
+        "sv": "Töcksmarks socken"
+    },
+    {
+        "item": "Q10708172",
+        "sv": "Tölö socken"
+    },
+    {
+        "item": "Q10708222",
+        "sv": "Törnsfalls socken"
+    },
+    {
+        "item": "Q10708736",
+        "sv": "Ullareds socken"
+    },
+    {
+        "item": "Q10709897",
+        "sv": "Upphärads socken"
+    },
+    {
+        "item": "Q10711624",
+        "sv": "Utö socken"
+    },
+    {
+        "item": "Q10711935",
+        "sv": "Vada socken"
+    },
+    {
+        "item": "Q10712065",
+        "sv": "Vaksala socken"
+    },
+    {
+        "item": "Q10712314",
+        "sv": "Vallby socken, Skåne"
+    },
+    {
+        "item": "Q10712345",
+        "sv": "Vallentuna socken"
+    },
+    {
+        "item": "Q10712353",
+        "sv": "Vallerstads socken"
+    },
+    {
+        "item": "Q10712472",
+        "sv": "Valstads socken"
+    },
+    {
+        "item": "Q10712776",
+        "sv": "Vapnö socken"
+    },
+    {
+        "item": "Q10712817",
+        "sv": "Vara socken"
+    },
+    {
+        "item": "Q10713143",
+        "sv": "Varola socken"
+    },
+    {
+        "item": "Q10713345",
+        "sv": "Vassända-Naglums socken"
+    },
+    {
+        "item": "Q10713588",
+        "sv": "Vederslövs socken"
+    },
+    {
+        "item": "Q10707918",
+        "sv": "Täby socken, Närke"
+    },
+    {
+        "item": "Q10707958",
+        "sv": "Tämta socken"
+    },
+    {
+        "item": "Q10707974",
+        "sv": "Tängs socken"
+    },
+    {
+        "item": "Q10707993",
+        "sv": "Tännäs socken"
+    },
+    {
+        "item": "Q10708057",
+        "sv": "Tåby socken"
+    },
+    {
+        "item": "Q10708062",
+        "sv": "Tådene socken"
+    },
+    {
+        "item": "Q10708117",
+        "sv": "Tånnö socken"
+    },
+    {
+        "item": "Q10708164",
+        "sv": "Töllsjö socken"
+    },
+    {
+        "item": "Q10708396",
+        "sv": "Ucklums socken"
+    },
+    {
+        "item": "Q10708741",
+        "sv": "Ullasjö socken"
+    },
+    {
+        "item": "Q10708788",
+        "sv": "Ullstorps socken"
+    },
+    {
+        "item": "Q10708887",
+        "sv": "Ulrika socken"
+    },
+    {
+        "item": "Q10709440",
+        "sv": "Undersåkers socken"
+    },
+    {
+        "item": "Q10709805",
+        "sv": "Ununge socken"
+    },
+    {
+        "item": "Q10711436",
+        "sv": "Utby socken"
+    },
+    {
+        "item": "Q10711616",
+        "sv": "Utvängstorps socken"
+    },
+    {
+        "item": "Q10712145",
+        "sv": "Valbo-Ryrs socken"
+    },
+    {
+        "item": "Q10712153",
+        "sv": "Valbo socken"
+    },
+    {
+        "item": "Q10712316",
+        "sv": "Vallby socken, Uppland"
+    },
+    {
+        "item": "Q10713136",
+        "sv": "Varnums socken"
+    },
+    {
+        "item": "Q10713222",
+        "sv": "Varvs socken, Västergötland"
+    },
+    {
+        "item": "Q10713223",
+        "sv": "Varvs socken, Östergötland"
+    },
+    {
+        "item": "Q10713340",
+        "sv": "Vassunda socken"
+    },
+    {
+        "item": "Q10713534",
+        "sv": "Veckholms socken"
+    },
+    {
+        "item": "Q10713564",
+        "sv": "Vedby socken"
+    },
+    {
+        "item": "Q10713570",
+        "sv": "Veddige socken"
+    },
+    {
+        "item": "Q10706768",
+        "sv": "Tveta socken, Värmland"
+    },
+    {
+        "item": "Q10706784",
+        "sv": "Tvings socken"
+    },
+    {
+        "item": "Q10707208",
+        "sv": "Tynderö socken"
+    },
+    {
+        "item": "Q10707706",
+        "sv": "Tyresö socken"
+    },
+    {
+        "item": "Q10707919",
+        "sv": "Täby socken, Uppland"
+    },
+    {
+        "item": "Q10708021",
+        "sv": "Tärna socken, Uppland"
+    },
+    {
+        "item": "Q10708145",
+        "sv": "Tåstarps socken"
+    },
+    {
+        "item": "Q10708184",
+        "sv": "Tönnersjö socken"
+    },
+    {
+        "item": "Q10708191",
+        "sv": "Töre socken"
+    },
+    {
+        "item": "Q10708245",
+        "sv": "Tösse socken"
+    },
+    {
+        "item": "Q10708748",
+        "sv": "Ullene socken"
+    },
+    {
+        "item": "Q10710201",
+        "sv": "Uppsala-Näs socken"
+    },
+    {
+        "item": "Q10711154",
+        "sv": "Uråsa socken"
+    },
+    {
+        "item": "Q10711730",
+        "sv": "Uvereds socken"
+    },
+    {
+        "item": "Q10711948",
+        "sv": "Vadensjö socken"
+    },
+    {
+        "item": "Q10711963",
+        "sv": "Vadsbro socken"
+    },
+    {
+        "item": "Q10712016",
+        "sv": "Vagnhärads socken"
+    },
+    {
+        "item": "Q10712182",
+        "sv": "Valdshults socken"
+    },
+    {
+        "item": "Q10712278",
+        "sv": "Valla socken"
+    },
+    {
+        "item": "Q10712315",
+        "sv": "Vallby socken, Södermanland"
+    },
+    {
+        "item": "Q10712325",
+        "sv": "Vallda socken"
+    },
+    {
+        "item": "Q10712369",
+        "sv": "Vallkärra socken"
+    },
+    {
+        "item": "Q10712486",
+        "sv": "Valtorps socken"
+    },
+    {
+        "item": "Q10712692",
+        "sv": "Vanstads socken"
+    },
+    {
+        "item": "Q10713511",
+        "sv": "Veberöds socken"
+    },
+    {
+        "item": "Q10706900",
+        "sv": "Tvååkers socken"
+    },
+    {
+        "item": "Q10706975",
+        "sv": "Tydje socken"
+    },
+    {
+        "item": "Q10708020",
+        "sv": "Tärna socken, Lappland"
+    },
+    {
+        "item": "Q10708158",
+        "sv": "Töftedals socken"
+    },
+    {
+        "item": "Q10708235",
+        "sv": "Törringe socken"
+    },
+    {
+        "item": "Q10708553",
+        "sv": "Ugglums socken"
+    },
+    {
+        "item": "Q10708645",
+        "sv": "Ukna socken"
+    },
+    {
+        "item": "Q10708754",
+        "sv": "Ullervads socken"
+    },
+    {
+        "item": "Q10709197",
+        "sv": "Umeå socken"
+    },
+    {
+        "item": "Q10709323",
+        "sv": "Undenäs socken"
+    },
+    {
+        "item": "Q10709434",
+        "sv": "Undersviks socken"
+    },
+    {
+        "item": "Q10711103",
+        "sv": "Urshults socken"
+    },
+    {
+        "item": "Q10711955",
+        "sv": "Vads socken"
+    },
+    {
+        "item": "Q10712255",
+        "sv": "Valinge socken"
+    },
+    {
+        "item": "Q10712388",
+        "sv": "Vallsjö socken"
+    },
+    {
+        "item": "Q10712511",
+        "sv": "Valö socken"
+    },
+    {
+        "item": "Q10712665",
+        "sv": "Vankiva socken"
+    },
+    {
+        "item": "Q10712696",
+        "sv": "Vansö socken"
+    },
+    {
+        "item": "Q10713116",
+        "sv": "Varnhems socken"
+    },
+    {
+        "item": "Q10713138",
+        "sv": "Varnums socken, Värmland"
+    },
+    {
+        "item": "Q10713643",
+        "sv": "Veinge socken"
+    },
+    {
+        "item": "Q10713825",
+        "sv": "Velinga socken"
+    },
+    {
+        "item": "Q10713849",
+        "sv": "Vellinge socken"
+    },
+    {
+        "item": "Q10713925",
+        "sv": "Vemdalens socken"
+    },
+    {
+        "item": "Q10714557",
+        "sv": "Verums socken"
+    },
+    {
+        "item": "Q10714625",
+        "sv": "Vessige socken"
+    },
+    {
+        "item": "Q10714738",
+        "sv": "Vetlanda socken"
+    },
+    {
+        "item": "Q10714985",
+        "sv": "Vibyggerå socken"
+    },
+    {
+        "item": "Q10715208",
+        "sv": "Vika socken"
+    },
+    {
+        "item": "Q10715608",
+        "sv": "Vilske-Kleva socken"
+    },
+    {
+        "item": "Q10715945",
+        "sv": "Virestads socken"
+    },
+    {
+        "item": "Q10715995",
+        "sv": "Virke socken"
+    },
+    {
+        "item": "Q10716013",
+        "sv": "Virserums socken"
+    },
+    {
+        "item": "Q10716100",
+        "sv": "Visingsö socken"
+    },
+    {
+        "item": "Q10716132",
+        "sv": "Vislanda socken"
+    },
+    {
+        "item": "Q10716204",
+        "sv": "Vists socken, Vilske härad"
+    },
+    {
+        "item": "Q10717299",
+        "sv": "Välluvs socken"
+    },
+    {
+        "item": "Q10717335",
+        "sv": "Väne-Ryrs socken"
+    },
+    {
+        "item": "Q10717385",
+        "sv": "Vänge socken, Uppland"
+    },
+    {
+        "item": "Q10717992",
+        "sv": "Västermo socken"
+    },
+    {
+        "item": "Q10718020",
+        "sv": "Västerstads socken"
+    },
+    {
+        "item": "Q10718058",
+        "sv": "Västeråkers socken"
+    },
+    {
+        "item": "Q10718214",
+        "sv": "Västra Broby socken"
+    },
+    {
+        "item": "Q10718235",
+        "sv": "Västra Fågelviks socken"
+    },
+    {
+        "item": "Q10714580",
+        "sv": "Vesene socken"
+    },
+    {
+        "item": "Q10714978",
+        "sv": "Viby socken, Östergötland"
+    },
+    {
+        "item": "Q10715007",
+        "sv": "Vickleby socken"
+    },
+    {
+        "item": "Q10715087",
+        "sv": "Vidbo socken"
+    },
+    {
+        "item": "Q10715300",
+        "sv": "Viksta socken"
+    },
+    {
+        "item": "Q10716145",
+        "sv": "Visnums-Kils socken"
+    },
+    {
+        "item": "Q10716151",
+        "sv": "Visnums socken"
+    },
+    {
+        "item": "Q10716387",
+        "sv": "Vitsands socken"
+    },
+    {
+        "item": "Q10716435",
+        "sv": "Vittinge socken"
+    },
+    {
+        "item": "Q10716459",
+        "sv": "Vittsjö socken"
+    },
+    {
+        "item": "Q10716463",
+        "sv": "Vittskövle socken"
+    },
+    {
+        "item": "Q10716958",
+        "sv": "Vrena socken"
+    },
+    {
+        "item": "Q10717099",
+        "sv": "Vä socken"
+    },
+    {
+        "item": "Q10717105",
+        "sv": "Väckelsångs socken"
+    },
+    {
+        "item": "Q10717258",
+        "sv": "Välinge socken"
+    },
+    {
+        "item": "Q10717338",
+        "sv": "Väne-Åsaka socken"
+    },
+    {
+        "item": "Q10717373",
+        "sv": "Vänga socken"
+    },
+    {
+        "item": "Q10717402",
+        "sv": "Vännäs socken"
+    },
+    {
+        "item": "Q10717801",
+        "sv": "Väse socken"
+    },
+    {
+        "item": "Q10717870",
+        "sv": "Västerbitterna socken"
+    },
+    {
+        "item": "Q10717961",
+        "sv": "Västerlanda socken"
+    },
+    {
+        "item": "Q10718052",
+        "sv": "Västervåla socken"
+    },
+    {
+        "item": "Q10718162",
+        "sv": "Västlands socken"
+    },
+    {
+        "item": "Q10718221",
+        "sv": "Västra Eds socken"
+    },
+    {
+        "item": "Q10718226",
+        "sv": "Västra Eneby socken"
+    },
+    {
+        "item": "Q10713974",
+        "sv": "Venjans socken"
+    },
+    {
+        "item": "Q10713994",
+        "sv": "Ventlinge socken"
+    },
+    {
+        "item": "Q10715292",
+        "sv": "Viksjö socken"
+    },
+    {
+        "item": "Q10715403",
+        "sv": "Vilhelmina socken"
+    },
+    {
+        "item": "Q10715568",
+        "sv": "Villie socken"
+    },
+    {
+        "item": "Q10715639",
+        "sv": "Vimmerby socken"
+    },
+    {
+        "item": "Q10715783",
+        "sv": "Vinköls socken"
+    },
+    {
+        "item": "Q10715873",
+        "sv": "Vintrosa socken"
+    },
+    {
+        "item": "Q10716060",
+        "sv": "Visby socken"
+    },
+    {
+        "item": "Q10716168",
+        "sv": "Vissefjärda socken"
+    },
+    {
+        "item": "Q10716172",
+        "sv": "Visseltofta socken"
+    },
+    {
+        "item": "Q10716194",
+        "sv": "Vistorps socken"
+    },
+    {
+        "item": "Q10716208",
+        "sv": "Vists socken, Östergötland"
+    },
+    {
+        "item": "Q10716278",
+        "sv": "Vitaby socken"
+    },
+    {
+        "item": "Q10716741",
+        "sv": "Vombs socken"
+    },
+    {
+        "item": "Q10716938",
+        "sv": "Voxtorps socken, Jönköpings län"
+    },
+    {
+        "item": "Q10716939",
+        "sv": "Voxtorps socken, Kalmar län"
+    },
+    {
+        "item": "Q10716982",
+        "sv": "Vrigstads socken"
+    },
+    {
+        "item": "Q10717128",
+        "sv": "Väderstads socken"
+    },
+    {
+        "item": "Q10717244",
+        "sv": "Väla socken"
+    },
+    {
+        "item": "Q10717639",
+        "sv": "Värmdö socken"
+    },
+    {
+        "item": "Q10717699",
+        "sv": "Värna socken"
+    },
+    {
+        "item": "Q10717706",
+        "sv": "Värnamo socken"
+    },
+    {
+        "item": "Q10717973",
+        "sv": "Västerljungs socken"
+    },
+    {
+        "item": "Q10718009",
+        "sv": "Västerplana socken"
+    },
+    {
+        "item": "Q10718064",
+        "sv": "Västerås-Barkarö socken"
+    },
+    {
+        "item": "Q10713937",
+        "sv": "Vena socken"
+    },
+    {
+        "item": "Q10714686",
+        "sv": "Veta socken"
+    },
+    {
+        "item": "Q10714977",
+        "sv": "Viby socken, Närke"
+    },
+    {
+        "item": "Q10715232",
+        "sv": "Vikens socken"
+    },
+    {
+        "item": "Q10715267",
+        "sv": "Vikingstads socken"
+    },
+    {
+        "item": "Q10715553",
+        "sv": "Villberga socken"
+    },
+    {
+        "item": "Q10715660",
+        "sv": "Vinbergs socken"
+    },
+    {
+        "item": "Q10715794",
+        "sv": "Vinnerstads socken"
+    },
+    {
+        "item": "Q10715804",
+        "sv": "Vinslövs socken"
+    },
+    {
+        "item": "Q10715938",
+        "sv": "Vireda socken"
+    },
+    {
+        "item": "Q10716206",
+        "sv": "Vists socken, Västergötland"
+    },
+    {
+        "item": "Q10716414",
+        "sv": "Vittaryds socken"
+    },
+    {
+        "item": "Q10716632",
+        "sv": "Vollsjö socken"
+    },
+    {
+        "item": "Q10716922",
+        "sv": "Voxna socken"
+    },
+    {
+        "item": "Q10716963",
+        "sv": "Vreta klosters socken"
+    },
+    {
+        "item": "Q10717005",
+        "sv": "Vrå socken"
+    },
+    {
+        "item": "Q10717365",
+        "sv": "Vänersnäs socken"
+    },
+    {
+        "item": "Q10717470",
+        "sv": "Värings socken"
+    },
+    {
+        "item": "Q10717693",
+        "sv": "Värmskogs socken"
+    },
+    {
+        "item": "Q10717743",
+        "sv": "Värsås socken"
+    },
+    {
+        "item": "Q10717790",
+        "sv": "Väsby socken"
+    },
+    {
+        "item": "Q10717830",
+        "sv": "Västanfors socken"
+    },
+    {
+        "item": "Q10717912",
+        "sv": "Västerfärnebo socken"
+    },
+    {
+        "item": "Q10717938",
+        "sv": "Västerhaninge socken"
+    },
+    {
+        "item": "Q10717980",
+        "sv": "Västerlösa socken"
+    },
+    {
+        "item": "Q10717984",
+        "sv": "Västerlövsta socken"
+    },
+    {
+        "item": "Q10718028",
+        "sv": "Västertälje socken"
+    },
+    {
+        "item": "Q10718205",
+        "sv": "Västra Alstads socken"
+    },
+    {
+        "item": "Q10718231",
+        "sv": "Västra Frölunda socken"
+    },
+    {
+        "item": "Q10718289",
+        "sv": "Västra Karups socken"
+    },
+    {
+        "item": "Q10718303",
+        "sv": "Västra Kärrstorps socken"
+    },
+    {
+        "item": "Q10718323",
+        "sv": "Västra Nöbbelövs socken"
+    },
+    {
+        "item": "Q10718351",
+        "sv": "Västra Skedvi socken"
+    },
+    {
+        "item": "Q10718365",
+        "sv": "Västra Stenby socken"
+    },
+    {
+        "item": "Q10718370",
+        "sv": "Västra Strö socken"
+    },
+    {
+        "item": "Q10718378",
+        "sv": "Västra Tollstads socken"
+    },
+    {
+        "item": "Q10718390",
+        "sv": "Västra Torsås socken"
+    },
+    {
+        "item": "Q10718412",
+        "sv": "Västra Vemmerlövs socken"
+    },
+    {
+        "item": "Q10718418",
+        "sv": "Västra Vingåkers socken"
+    },
+    {
+        "item": "Q10718449",
+        "sv": "Västra Ämterviks socken"
+    },
+    {
+        "item": "Q10718518",
+        "sv": "Vätö socken"
+    },
+    {
+        "item": "Q10718707",
+        "sv": "Vånga socken, Östergötland"
+    },
+    {
+        "item": "Q10718864",
+        "sv": "Vårfrukyrka socken"
+    },
+    {
+        "item": "Q10718888",
+        "sv": "Vårkumla socken"
+    },
+    {
+        "item": "Q10718941",
+        "sv": "Vårviks socken"
+    },
+    {
+        "item": "Q10718949",
+        "sv": "Våthults socken"
+    },
+    {
+        "item": "Q10723853",
+        "sv": "Ytterlännäs socken"
+    },
+    {
+        "item": "Q10723989",
+        "sv": "Yxnerums socken"
+    },
+    {
+        "item": "Q10725609",
+        "sv": "Älgarås socken"
+    },
+    {
+        "item": "Q10725690",
+        "sv": "Älvdalens socken"
+    },
+    {
+        "item": "Q10725796",
+        "sv": "Älvsåkers socken"
+    },
+    {
+        "item": "Q10725987",
+        "sv": "Äppelbo socken"
+    },
+    {
+        "item": "Q10726032",
+        "sv": "Ärentuna socken"
+    },
+    {
+        "item": "Q10726100",
+        "sv": "Äspinge socken"
+    },
+    {
+        "item": "Q10726204",
+        "sv": "Ådals-Lidens socken"
+    },
+    {
+        "item": "Q10726313",
+        "sv": "Åkerby socken"
+    },
+    {
+        "item": "Q10726347",
+        "sv": "Åkers socken, Småland"
+    },
+    {
+        "item": "Q10726586",
+        "sv": "Ånimskogs socken"
+    },
+    {
+        "item": "Q10726607",
+        "sv": "Årdala socken"
+    },
+    {
+        "item": "Q10726851",
+        "sv": "Åsarne socken"
+    },
+    {
+        "item": "Q10726871",
+        "sv": "Åsbo socken"
+    },
+    {
+        "item": "Q10718282",
+        "sv": "Västra Karaby socken"
+    },
+    {
+        "item": "Q10718341",
+        "sv": "Västra Ryds socken, Uppland"
+    },
+    {
+        "item": "Q10718374",
+        "sv": "Västra Sönnarslövs socken"
+    },
+    {
+        "item": "Q10718406",
+        "sv": "Västra Vemmenhögs socken"
+    },
+    {
+        "item": "Q10718492",
+        "sv": "Vättaks socken"
+    },
+    {
+        "item": "Q10718513",
+        "sv": "Vättlösa socken"
+    },
+    {
+        "item": "Q10718576",
+        "sv": "Växjö socken"
+    },
+    {
+        "item": "Q10718705",
+        "sv": "Vånga socken, Skåne"
+    },
+    {
+        "item": "Q10718958",
+        "sv": "Våxtorps socken"
+    },
+    {
+        "item": "Q10723563",
+        "sv": "Yllestads socken"
+    },
+    {
+        "item": "Q10723773",
+        "sv": "Ysane socken"
+    },
+    {
+        "item": "Q10725649",
+        "sv": "Älmeboda socken"
+    },
+    {
+        "item": "Q10725736",
+        "sv": "Älvsbacka socken"
+    },
+    {
+        "item": "Q10725810",
+        "sv": "Ämmeskogs socken"
+    },
+    {
+        "item": "Q10725949",
+        "sv": "Ängsö socken"
+    },
+    {
+        "item": "Q10726094",
+        "sv": "Äsphults socken"
+    },
+    {
+        "item": "Q10726108",
+        "sv": "Äspö socken"
+    },
+    {
+        "item": "Q10726343",
+        "sv": "Åkers socken"
+    },
+    {
+        "item": "Q10726429",
+        "sv": "Ålands socken"
+    },
+    {
+        "item": "Q10726484",
+        "sv": "Åls socken"
+    },
+    {
+        "item": "Q10726593",
+        "sv": "Ånsta socken"
+    },
+    {
+        "item": "Q10726803",
+        "sv": "Ås socken, Småland"
+    },
+    {
+        "item": "Q10726879",
+        "sv": "Åsbräcka socken"
+    },
+    {
+        "item": "Q10726901",
+        "sv": "Åsele socken"
+    },
+    {
+        "item": "Q10726910",
+        "sv": "Åsenhöga socken"
+    },
+    {
+        "item": "Q10718259",
+        "sv": "Västra Hargs socken"
+    },
+    {
+        "item": "Q10718267",
+        "sv": "Västra Hoby socken"
+    },
+    {
+        "item": "Q10718277",
+        "sv": "Västra Ingelstads socken"
+    },
+    {
+        "item": "Q10718319",
+        "sv": "Västra Ny socken"
+    },
+    {
+        "item": "Q10718342",
+        "sv": "Västra Ryds socken, Östergötland"
+    },
+    {
+        "item": "Q10718357",
+        "sv": "Västra Skrukeby socken"
+    },
+    {
+        "item": "Q10718382",
+        "sv": "Västra Tommarps socken"
+    },
+    {
+        "item": "Q10718393",
+        "sv": "Västra Torups socken"
+    },
+    {
+        "item": "Q10718423",
+        "sv": "Västra Vrams socken"
+    },
+    {
+        "item": "Q10718456",
+        "sv": "Västrums socken"
+    },
+    {
+        "item": "Q10718823",
+        "sv": "Vårdnäs socken"
+    },
+    {
+        "item": "Q10723824",
+        "sv": "Ytterby socken"
+    },
+    {
+        "item": "Q10725618",
+        "sv": "Älghults socken"
+    },
+    {
+        "item": "Q10725713",
+        "sv": "Älvkarleby socken"
+    },
+    {
+        "item": "Q10725881",
+        "sv": "Ängersjö socken"
+    },
+    {
+        "item": "Q10726065",
+        "sv": "Ärtemarks socken"
+    },
+    {
+        "item": "Q10726087",
+        "sv": "Äspereds socken"
+    },
+    {
+        "item": "Q10726750",
+        "sv": "Årstads socken"
+    },
+    {
+        "item": "Q10726774",
+        "sv": "Åryds socken"
+    },
+    {
+        "item": "Q10726802",
+        "sv": "Ås socken, Jämtland"
+    },
+    {
+        "item": "Q10718271",
+        "sv": "Västra Husby socken"
+    },
+    {
+        "item": "Q10718295",
+        "sv": "Västra Klagstorps socken"
+    },
+    {
+        "item": "Q10718398",
+        "sv": "Västra Tunhems socken"
+    },
+    {
+        "item": "Q10718684",
+        "sv": "Våmbs socken"
+    },
+    {
+        "item": "Q10718806",
+        "sv": "Vårdinge socken"
+    },
+    {
+        "item": "Q10723778",
+        "sv": "Ysby socken"
+    },
+    {
+        "item": "Q10723831",
+        "sv": "Ytterenhörna socken"
+    },
+    {
+        "item": "Q10723837",
+        "sv": "Yttergrans socken"
+    },
+    {
+        "item": "Q10723844",
+        "sv": "Ytterhogdals socken"
+    },
+    {
+        "item": "Q10723848",
+        "sv": "Ytterjärna socken"
+    },
+    {
+        "item": "Q10725635",
+        "sv": "Älgå socken"
+    },
+    {
+        "item": "Q10725704",
+        "sv": "Älvestads socken"
+    },
+    {
+        "item": "Q10725728",
+        "sv": "Älvros socken"
+    },
+    {
+        "item": "Q10725766",
+        "sv": "Älvsby socken"
+    },
+    {
+        "item": "Q10726053",
+        "sv": "Ärla socken"
+    },
+    {
+        "item": "Q10726185",
+        "sv": "Åby socken"
+    },
+    {
+        "item": "Q10726261",
+        "sv": "Åhus socken"
+    },
+    {
+        "item": "Q10726463",
+        "sv": "Ålems socken"
+    },
+    {
+        "item": "Q10726617",
+        "sv": "Åre socken"
+    },
+    {
+        "item": "Q10726765",
+        "sv": "Årsunda socken"
+    },
+    {
+        "item": "Q10726804",
+        "sv": "Ås socken, Västergötland"
+    },
+    {
+        "item": "Q10726805",
+        "sv": "Ås socken, Öland"
+    },
+    {
+        "item": "Q10726891",
+        "sv": "Åseda socken"
+    },
+    {
+        "item": "Q10727074",
+        "sv": "Ödeborgs socken"
+    },
+    {
+        "item": "Q10727077",
+        "sv": "Ödeby socken"
+    },
+    {
+        "item": "Q10727100",
+        "sv": "Ödestugu socken"
+    },
+    {
+        "item": "Q10727118",
+        "sv": "Ödskölts socken"
+    },
+    {
+        "item": "Q10727137",
+        "sv": "Öggestorps socken"
+    },
+    {
+        "item": "Q10727144",
+        "sv": "Öglunda socken"
+    },
+    {
+        "item": "Q10727179",
+        "sv": "Öja socken, Södermanland"
+    },
+    {
+        "item": "Q10727186",
+        "sv": "Öjaby socken"
+    },
+    {
+        "item": "Q10727287",
+        "sv": "Öljehults socken"
+    },
+    {
+        "item": "Q10727310",
+        "sv": "Ölmstads socken"
+    },
+    {
+        "item": "Q10727683",
+        "sv": "Örsjö socken, Småland"
+    },
+    {
+        "item": "Q10727681",
+        "sv": "Örsjö socken, Skåne"
+    },
+    {
+        "item": "Q10727712",
+        "sv": "Örtofta socken"
+    },
+    {
+        "item": "Q10727851",
+        "sv": "Österfärnebo socken"
+    },
+    {
+        "item": "Q10728082",
+        "sv": "Österplana socken"
+    },
+    {
+        "item": "Q10728143",
+        "sv": "Östertälje socken"
+    },
+    {
+        "item": "Q10728152",
+        "sv": "Östervallskogs socken"
+    },
+    {
+        "item": "Q10728184",
+        "sv": "Österåkers socken, Södermanland"
+    },
+    {
+        "item": "Q10728274",
+        "sv": "Östra Frölunda socken"
+    },
+    {
+        "item": "Q10728279",
+        "sv": "Östra Fågelviks socken"
+    },
+    {
+        "item": "Q10728310",
+        "sv": "Östra Herrestads socken"
+    },
+    {
+        "item": "Q10728315",
+        "sv": "Östra Hoby socken"
+    },
+    {
+        "item": "Q10728325",
+        "sv": "Östra Ingelstads socken"
+    },
+    {
+        "item": "Q10728336",
+        "sv": "Östra Karups socken"
+    },
+    {
+        "item": "Q10728370",
+        "sv": "Östra Ny socken"
+    },
+    {
+        "item": "Q10728375",
+        "sv": "Östra Nöbbelövs socken"
+    },
+    {
+        "item": "Q10728420",
+        "sv": "Östra Strö socken"
+    },
+    {
+        "item": "Q10728605",
+        "sv": "Överkalix socken"
+    },
+    {
+        "item": "Q10727124",
+        "sv": "Ödsmåls socken"
+    },
+    {
+        "item": "Q10727300",
+        "sv": "Ölme socken"
+    },
+    {
+        "item": "Q10727313",
+        "sv": "Ölseruds socken"
+    },
+    {
+        "item": "Q10727360",
+        "sv": "Önnestads socken"
+    },
+    {
+        "item": "Q10727526",
+        "sv": "Öreryds socken"
+    },
+    {
+        "item": "Q10727703",
+        "sv": "Örsås socken"
+    },
+    {
+        "item": "Q10727748",
+        "sv": "Össeby-Garns socken"
+    },
+    {
+        "item": "Q10727772",
+        "sv": "Östads socken"
+    },
+    {
+        "item": "Q10727823",
+        "sv": "Österbitterna socken"
+    },
+    {
+        "item": "Q10728185",
+        "sv": "Österåkers socken, Uppland"
+    },
+    {
+        "item": "Q10728265",
+        "sv": "Östra Eds socken"
+    },
+    {
+        "item": "Q10728304",
+        "sv": "Östra Hargs socken"
+    },
+    {
+        "item": "Q10728319",
+        "sv": "Östra Husby socken"
+    },
+    {
+        "item": "Q10728351",
+        "sv": "Östra Kärrstorps socken"
+    },
+    {
+        "item": "Q10728357",
+        "sv": "Östra Ljungby socken"
+    },
+    {
+        "item": "Q10728394",
+        "sv": "Östra Ryds socken, Östergötland"
+    },
+    {
+        "item": "Q10728423",
+        "sv": "Östra Sönnarslövs socken"
+    },
+    {
+        "item": "Q10728428",
+        "sv": "Östra Tollstads socken"
+    },
+    {
+        "item": "Q10728444",
+        "sv": "Östra Torsås socken"
+    },
+    {
+        "item": "Q10728460",
+        "sv": "Östra Vemmerlövs socken"
+    },
+    {
+        "item": "Q10728470",
+        "sv": "Östra Vrams socken"
+    },
+    {
+        "item": "Q10728534",
+        "sv": "Öttums socken"
+    },
+    {
+        "item": "Q10728537",
+        "sv": "Öveds socken"
+    },
+    {
+        "item": "Q10728566",
+        "sv": "Överenhörna socken"
+    },
+    {
+        "item": "Q10728591",
+        "sv": "Överhogdals socken"
+    },
+    {
+        "item": "Q10728658",
+        "sv": "Överselö socken"
+    },
+    {
+        "item": "Q10726930",
+        "sv": "Åsle socken"
+    },
+    {
+        "item": "Q10727086",
+        "sv": "Ödenäs socken"
+    },
+    {
+        "item": "Q10727095",
+        "sv": "Ödeshögs socken"
+    },
+    {
+        "item": "Q10727229",
+        "sv": "Ökna socken"
+    },
+    {
+        "item": "Q10727318",
+        "sv": "Ölsremma socken"
+    },
+    {
+        "item": "Q10727334",
+        "sv": "Öms socken"
+    },
+    {
+        "item": "Q10727382",
+        "sv": "Önums socken"
+    },
+    {
+        "item": "Q10727418",
+        "sv": "Öra socken"
+    },
+    {
+        "item": "Q10727432",
+        "sv": "Örby socken"
+    },
+    {
+        "item": "Q10727591",
+        "sv": "Örkeneds socken"
+    },
+    {
+        "item": "Q10727664",
+        "sv": "Örs socken, Småland"
+    },
+    {
+        "item": "Q10727694",
+        "sv": "Örslösa socken"
+    },
+    {
+        "item": "Q10728148",
+        "sv": "Österunda socken"
+    },
+    {
+        "item": "Q10728247",
+        "sv": "Östmarks socken"
+    },
+    {
+        "item": "Q10728257",
+        "sv": "Östra Broby socken"
+    },
+    {
+        "item": "Q10728332",
+        "sv": "Östra Karaby socken"
+    },
+    {
+        "item": "Q10728342",
+        "sv": "Östra Klagstorps socken"
+    },
+    {
+        "item": "Q10728433",
+        "sv": "Östra Tommarps socken"
+    },
+    {
+        "item": "Q10728528",
+        "sv": "Östuna socken"
+    },
+    {
+        "item": "Q10728580",
+        "sv": "Övergrans socken"
+    },
+    {
+        "item": "Q10728603",
+        "sv": "Överjärna socken"
+    },
+    {
+        "item": "Q10728637",
+        "sv": "Överlännäs socken"
+    },
+    {
+        "item": "Q10727012",
+        "sv": "Åtvids socken"
+    },
+    {
+        "item": "Q10727069",
+        "sv": "Öckerö socken"
+    },
+    {
+        "item": "Q10727178",
+        "sv": "Öja socken, Skåne"
+    },
+    {
+        "item": "Q10727177",
+        "sv": "Öja socken, Småland"
+    },
+    {
+        "item": "Q10727568",
+        "sv": "Örgryte socken"
+    },
+    {
+        "item": "Q10727577",
+        "sv": "Örja socken"
+    },
+    {
+        "item": "Q10727584",
+        "sv": "Örkelljunga socken"
+    },
+    {
+        "item": "Q10727663",
+        "sv": "Örs socken, Dalsland"
+    },
+    {
+        "item": "Q10727724",
+        "sv": "Örträsks socken"
+    },
+    {
+        "item": "Q10727742",
+        "sv": "Ösmo socken"
+    },
+    {
+        "item": "Q10727754",
+        "sv": "Össjö socken"
+    },
+    {
+        "item": "Q10728064",
+        "sv": "Österlövsta socken"
+    },
+    {
+        "item": "Q10728113",
+        "sv": "Österslövs socken"
+    },
+    {
+        "item": "Q10728293",
+        "sv": "Östra Grevie socken"
+    },
+    {
+        "item": "Q10728392",
+        "sv": "Östra Ryds socken, Uppland"
+    },
+    {
+        "item": "Q10728403",
+        "sv": "Östra Skrukeby socken"
+    },
+    {
+        "item": "Q10728400",
+        "sv": "Östra Sallerups socken"
+    },
+    {
+        "item": "Q10728440",
+        "sv": "Östra Torps socken"
+    },
+    {
+        "item": "Q10728448",
+        "sv": "Östra Tunhems socken"
+    },
+    {
+        "item": "Q10728454",
+        "sv": "Östra Vemmenhögs socken"
+    },
+    {
+        "item": "Q10728465",
+        "sv": "Östra Vingåkers socken"
+    },
+    {
+        "item": "Q10728502",
+        "sv": "Östra Ämterviks socken"
+    },
+    {
+        "item": "Q10728510",
+        "sv": "Östraby socken"
+    },
+    {
+        "item": "Q10728628",
+        "sv": "Överluleå socken"
+    },
+    {
+        "item": "Q10728683",
+        "sv": "Övertorneå socken"
+    },
+    {
+        "item": "Q10728722",
+        "sv": "Övraby socken, Skåne"
+    },
+    {
+        "item": "Q10728721",
+        "sv": "Övraby socken, Halland"
+    },
+    {
+        "item": "Q10728766",
+        "sv": "Öxabäcks socken"
+    },
+    {
+        "item": "Q10728774",
+        "sv": "Öxnevalla socken"
+    },
+    {
+        "item": "Q15155457",
+        "sv": "Väversunda socken"
+    },
+    {
+        "item": "Q13883049",
+        "sv": "Alunda socken"
+    },
+    {
+        "item": "Q16481744",
+        "sv": "Hakarps socken"
+    },
+    {
+        "item": "Q16496569",
+        "sv": "Amnehärads socken"
+    },
+    {
+        "item": "Q16505457",
+        "sv": "Brismene socken"
+    },
+    {
+        "item": "Q10728695",
+        "sv": "Överums socken"
+    },
+    {
+        "item": "Q10728747",
+        "sv": "Övre Ulleruds socken"
+    },
+    {
+        "item": "Q18289739",
+        "sv": "Fasterna socken"
+    },
+    {
+        "item": "Q18290524",
+        "sv": "Hassle-Bösarps socken"
+    },
+    {
+        "item": "Q18292006",
+        "sv": "Lohärads socken"
+    },
+    {
+        "item": "Q18334126",
+        "sv": "Trosa-Vagnhärads socken"
+    },
+    {
+        "item": "Q18334566",
+        "sv": "Vartofta-Åsaka socken"
+    },
+    {
+        "item": "Q18455083",
+        "sv": "Svartnäs socken"
+    },
+    {
+        "item": "Q18290073",
+        "sv": "Gamleby socken"
+    },
+    {
+        "item": "Q18290346",
+        "sv": "Gåsinge-Dillnäs socken"
+    },
+    {
+        "item": "Q18290416",
+        "sv": "Habo socken"
+    },
+    {
+        "item": "Q18290730",
+        "sv": "Husaby socken"
+    },
+    {
+        "item": "Q18291431",
+        "sv": "Kräcklinge socken"
+    },
+    {
+        "item": "Q18292582",
+        "sv": "Norra Fågelås socken"
+    },
+    {
+        "item": "Q18334251",
+        "sv": "Tåssjö socken"
+    },
+    {
+        "item": "Q18335244",
+        "sv": "Älekulla socken"
+    },
+    {
+        "item": "Q16496090",
+        "sv": "Alböke socken"
+    },
+    {
+        "item": "Q16496408",
+        "sv": "Alseda socken"
+    },
+    {
+        "item": "Q16497236",
+        "sv": "Askersunds socken"
+    },
+    {
+        "item": "Q16502683",
+        "sv": "Björkö-Arholma socken"
+    },
+    {
+        "item": "Q16503548",
+        "sv": "Bodsjö socken"
+    },
+    {
+        "item": "Q19978210",
+        "sv": "Naglums socken"
+    },
+    {
+        "item": "Q18288797",
+        "sv": "Edsbro socken"
+    },
+    {
+        "item": "Q18289807",
+        "sv": "Fjällsjö socken"
+    },
+    {
+        "item": "Q18290362",
+        "sv": "Gällstads socken"
+    },
+    {
+        "item": "Q18290450",
+        "sv": "Hallingebergs socken"
+    },
+    {
+        "item": "Q18290863",
+        "sv": "Hössna socken"
+    },
+    {
+        "item": "Q18334260",
+        "sv": "Tärby socken"
+    },
+    {
+        "item": "Q18334813",
+        "sv": "Väddö socken"
+    },
+    {
+        "item": "Q18335361",
+        "sv": "Österhaninge socken"
+    },
+    {
+        "item": "Q18291523",
+        "sv": "Kvibille socken"
+    },
+    {
+        "item": "Q18332331",
+        "sv": "Rådmansö socken"
+    },
+    {
+        "item": "Q18333750",
+        "sv": "Södra Mellby socken"
+    },
+    {
+        "item": "Q18334780",
+        "sv": "Våmhus socken"
+    },
+    {
+        "item": "Q18335305",
+        "sv": "Önnarps socken"
+    }
+]
