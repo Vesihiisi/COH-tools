@@ -13,6 +13,22 @@ PROPS = load_json(path.join(MAPPING_DIR, "props_general.json"))
 
 class Monument(object):
 
+    def q_from_wikipedia(self, language, page_title):
+        site = pywikibot.Site(language, "wikipedia")
+        page = pywikibot.Page(site, page_title)
+        if page.exists():
+            if page.isRedirectPage():
+                page = page.getRedirectTarget()
+            try:
+                item = pywikibot.ItemPage.fromPage(page)
+                return item.getID()
+            except pywikibot.NoPage:
+                print("Failed to get page for {} - {}."
+                      "It probably does not exist.".format(
+                          language, page_title)
+                      )
+                return
+
     def print_wd(self):
         print(
             json.dumps(self.wd_item,
@@ -62,19 +78,8 @@ class Monument(object):
     def exists(self, mapping):
         self.wd_item["wd-item"] = None
         if self.monument_article:
-            site = pywikibot.Site(self.lang, "wikipedia")
-            page = pywikibot.Page(site, self.monument_article)
-            if page.exists():
-                if page.isRedirectPage():
-                    page = page.getRedirectTarget()
-                try:
-                    item = pywikibot.ItemPage.fromPage(page)
-                except pywikibot.NoPage:
-                    print("Failed to get page for {} - {}."
-                          "It probably does not exist.".format(
-                              self.lang, self.monument_article))
-                    return
-                self.wd_item["wd-item"] = item.getID()
+            wd_item = self.q_from_wikipedia(self.lang, self.monument_article)
+            self.wd_item["wd-item"] = wd_item
 
     def construct_wd_item(self, mapping, data_files=None):
         self.wd_item = {}
@@ -153,7 +158,8 @@ class SeFornminSv(Monument):
         # because stuff like
         # [[Sundsbruk]] - [[Sköns Prästbord]] (Nordväst om [[Sköns kyrka]])
         # NOTE: adm3 always empty for this table
-        # ALSO if not wikilinked, check if it could be a settlement in the datafile
+        # ALSO if not wikilinked, check if it could be a settlement in the
+        # datafile
         if self.address:
             if "[[" in self.address:
                 parsed = wparser.parse(self.address)
@@ -161,23 +167,8 @@ class SeFornminSv(Monument):
                     target_page = parsed.filter_wikilinks()[0].title
                     print(self.address)
                     print(target_page)
-                    site = pywikibot.Site(self.lang, "wikipedia")
-                    page = pywikibot.Page(site, self.monument_article)
-                    if page.exists():
-                        if page.isRedirectPage():
-                            page = page.getRedirectTarget()
-                        try:
-                            item = pywikibot.ItemPage.fromPage(page)
-                            self.wd_item["statements"][PROPS["location"]] = item.getID()
-                            print(item.getID())
-                        except pywikibot.NoPage:
-                            print("Failed to get page for {} - {}."
-                                "It probably does not exist.".format(self.lang, self.monument_article))
-                            return
-
-
-
-        return
+                    wd_item = self.q_from_wikipedia(self.lang, target_page)
+                    self.wd_item["statements"][PROPS["location"]] = wd_item
 
     def set_inception(self):
         # TODO
@@ -257,8 +248,9 @@ class SeArbetslSv(Monument):
         if self.ort:
             try:
                 location = [x["item"] for x in settlements_dict if x[
-                "sv"].strip() == self.remove_markup(self.ort)][0]
-                self.wd_item["statements"][PROPS["location"]] = helpers.listify(location)
+                    "sv"].strip() == self.remove_markup(self.ort)][0]
+                self.wd_item["statements"][
+                    PROPS["location"]] = helpers.listify(location)
             except IndexError:
                 print("Could not find ort: " + self.ort)
                 return
