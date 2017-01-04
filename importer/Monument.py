@@ -143,17 +143,19 @@ class SeFornminSv(Monument):
                                 for x in table
                                 if x.lower() == type_to_search_for][0]
                 self.wd_item["statements"]["P31"] = special_type
-                print("Changed default P31 to " + self.typ)
             except IndexError:
                 return
 
     def set_location(self):
-        # TODO: check self.address and map it to P276.
+        # TODO: check self.address (same as self.plats) and map it to P276.
         # This only makes sense if it's a wikilinked item,
         # and also if there's exactly 1 item
         # because stuff like
         # [[Sundsbruk]] - [[Sköns Prästbord]] (Nordväst om [[Sköns kyrka]])
         # NOTE: adm3 always empty for this table
+        # ALSO if not wikilinked, check if it could be a settlement in the datafile
+        if self.address:
+            print(self.address)
         return
 
     def set_inception(self):
@@ -216,7 +218,6 @@ class SeArbetslSv(Monument):
                                 for x in table
                                 if x.lower() == type_to_search_for][0]
                 self.wd_item["statements"]["P31"] = special_type
-                print("Changed default P31 to " + self.typ)
             except IndexError:
                 return
         return
