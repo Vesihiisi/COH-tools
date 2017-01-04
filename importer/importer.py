@@ -53,7 +53,8 @@ SPECIFIC_TABLES = {"monuments_se-fornmin_(sv)":
                     SeArbetslSv,
                     "data_files":
                     {"municipalities": "sweden_municipalities.json",
-                    "types" : "se-arbetsl_(sv)_types.json"}}
+                    "types" : "se-arbetsl_(sv)_types.json",
+                    "settlements" : "sweden_settlements.json"}}
                    }
 
 

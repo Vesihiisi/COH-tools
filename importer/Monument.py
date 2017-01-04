@@ -222,8 +222,24 @@ class SeArbetslSv(Monument):
         return
 
     def set_location(self):
-        # TODO: this table has both ort and address..
-        return
+        """
+        Items in this table have both ort and address.
+        Address is sometimes a valid street address like Värdshusgatan 8
+        Ort is usually not wikilinked.
+        It can be an urban area or småort and possibly something else...
+        In any case, it's a subtype of 'human settlement' in Sweden.
+        There are about 12 000 of these, and querying it live would be slow.
+        Maybe just download all of them?
+        """
+        settlements_dict = self.data_files["settlements"]
+        if self.ort:
+            try:
+                location = [x["item"] for x in settlements_dict if x[
+                "sv"].strip() == self.remove_markup(self.ort)][0]
+                self.wd_item["statements"][PROPS["location"]] = helpers.listify(location)
+            except IndexError:
+                print("Could not find ort: " + self.ort)
+                return
 
     def update_wd_item(self):
         self.update_labels()

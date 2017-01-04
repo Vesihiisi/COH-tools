@@ -9,5 +9,6 @@
     "inception": "P571",
     "is": "P31",
     "located_adm": "P131",
+    "location": "P276",
     "raa-nr": "P1262"
 }
