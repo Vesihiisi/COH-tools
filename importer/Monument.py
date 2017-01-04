@@ -17,6 +17,9 @@ class Monument(object):
         parsed = wparser.parse(text)
         return parsed.filter_wikilinks()
 
+    def contains_digit(self, text):
+        return any(x.isdigit() for x in text)
+
     def q_from_wikipedia(self, language, page_title):
         site = pywikibot.Site(language, "wikipedia")
         page = pywikibot.Page(site, page_title)
@@ -87,14 +90,37 @@ class Monument(object):
         Compare with located on street (P669) and its qualifier street number (P670).
         """
         if self.address:
-            print(self.remove_markup(self.address))
+            address = self.remove_markup(self.address)
             if self.lang == "sv":
                 # Try to see if it's a legit-ish street address
-                # "gatan", "vägen", " väg", " gata", " torg", "torget", " plats", "platsen", " gränd"
                 # numbers like 3, 3A, 2-4
                 # oh, and sometimes it's not a _street_ name: "Norra Kik 7"
                 # street names can consist of several words: "Nils Ahlins gata 19"
                 # how about: "Östra skolan, Bergaliden 24"
+                # "Västanåvägen 12-6, Näsum"
+                # If there's a comma, order can vary
+                #####
+                # regex should match: 12, 3, 43-45, 34b, 43B, 25 a, 43B-43E
+                interesting_part = ""
+                patterns = ["gatan", "vägen", " väg", " gata",
+                            " torg", "torget", " plats", "platsen", " gränd"]
+                number_regex = re.compile(
+                    '\d{1,3}\s?([A-Z]{1})?((-|–)\d{1,3})?\s?([A-Z]{1})?')
+                if "," in address:
+                    address_split = address.split(",", re.IGNORECASE)
+                    for part in address_split:
+                        if any(substring in part for substring in patterns) and self.contains_digit(part):
+                            interesting_part = part.strip()
+                else:
+                    if any(substring in address for substring in patterns) and self.contains_digit(address):
+                        interesting_part = address
+                if len(interesting_part) > 1:
+                    interesting_part_split = interesting_part.split(" ")
+                    for part in interesting_part_split:
+                        if self.contains_digit(part):
+                            m = number_regex.match(part)
+                            if m:
+                                print(interesting_part)
                 return
         return
 
@@ -115,7 +141,7 @@ class Monument(object):
         self.set_image()
         self.set_commonscat()
         self.set_street_address()
-        #self.exists(mapping)
+        # self.exists(mapping)
 
     def __init__(self, db_row_dict, mapping, data_files):
         for k, v in db_row_dict.items():
@@ -256,7 +282,7 @@ class SeArbetslSv(Monument):
                 self.wd_item["statements"][
                     PROPS["location"]] = helpers.listify(location)
             except IndexError:
-                print("Could not find ort: " + self.ort)
+                #print("Could not find ort: " + self.ort)
                 return
 
     def update_wd_item(self):
