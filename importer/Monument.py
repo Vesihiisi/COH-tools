@@ -29,17 +29,58 @@ def contains_digit(text):
 def test_contains_digit_1():
     assert contains_digit("fna3fs") == True
 
+
 def test_contains_digit_2():
     assert contains_digit("fnas") == False
 
+
 def test_remove_markup_1():
-    assert remove_markup("[[Tegera Arena]], huvudentrén") == "Tegera Arena, huvudentrén"
+    assert remove_markup(
+        "[[Tegera Arena]], huvudentrén") == "Tegera Arena, huvudentrén"
+
 
 def test_remove_markup_2():
-    assert remove_markup("[[Tegera Arena]],<br>huvudentrén") == "Tegera Arena, huvudentrén"
+    assert remove_markup(
+        "[[Tegera Arena]],<br>huvudentrén") == "Tegera Arena, huvudentrén"
+
 
 def test_remove_markup_3():
-    assert remove_markup("[[Tegera Arena]],<br/> huvudentrén") == "Tegera Arena, huvudentrén"
+    assert remove_markup(
+        "[[Tegera Arena]],<br/> huvudentrén") == "Tegera Arena, huvudentrén"
+
+
+def is_legit_house_number(text):
+    number_regex = re.compile(
+        '\d{1,3}\s?([A-Z]{1})?((-|–)\d{1,3})?\s?([A-Z]{1})?')
+    m = number_regex.match(text)
+    if m:
+        return True
+    else:
+        return False
+
+
+def test_is_legit_house_number_1():
+    assert is_legit_house_number("32") == True
+
+
+def test_is_legit_house_number_2():
+    assert is_legit_house_number("2") == True
+
+
+def test_is_legit_house_number_3():
+    assert is_legit_house_number("3b") == True
+
+
+def test_is_legit_house_number_4():
+    assert is_legit_house_number("3 B") == True
+
+
+def test_is_legit_house_number_5():
+    assert is_legit_house_number("3-5") == True
+
+
+def test_is_legit_house_number_6():
+    assert is_legit_house_number("43B-43E") == True
 
 
 def get_street_address(address, language):
@@ -55,11 +96,10 @@ def get_street_address(address, language):
         # If there's a comma, order can vary
         #####
         # regex should match: 12, 3, 43-45, 34b, 43B, 25 a, 43B-43E
+        legit_address = None
         interesting_part = ""
         patterns = ["gatan", "vägen", " väg", " gata",
                     " torg", "torget", " plats", "platsen", " gränd"]
-        number_regex = re.compile(
-            '\d{1,3}\s?([A-Z]{1})?((-|–)\d{1,3})?\s?([A-Z]{1})?')
         if "," in address:
             address_split = address.split(",", re.IGNORECASE)
             for part in address_split:
@@ -71,11 +111,47 @@ def get_street_address(address, language):
         if len(interesting_part) > 1:
             interesting_part_split = interesting_part.split(" ")
             for part in interesting_part_split:
-                if contains_digit(part):
-                    m = number_regex.match(part)
-                    if m:
-                        print(interesting_part)
-        return
+                if contains_digit(part) and is_legit_house_number(part):
+                    legit_address = interesting_part.rstrip(',.-')
+        return legit_address
+
+
+def test_get_street_address_1():
+    assert get_street_address("Bruksvägen 23", "sv") == "Bruksvägen 23"
+
+
+def test_get_street_address_2():
+    assert get_street_address(
+        "Vilhelm Mobergs gata 4", "sv") == "Vilhelm Mobergs gata 4"
+
+
+def test_get_street_address_3():
+    assert get_street_address("Spånhult", "sv") == None
+
+
+def test_get_street_address_4():
+    assert get_street_address(
+        "Virserums station, Södra Järnvägsgatan 20", "sv") == "Södra Järnvägsgatan 20"
+
+
+def test_get_street_address_5():
+    assert get_street_address(
+        "Kyrkogatan 34, Dackestop", "sv") == "Kyrkogatan 34"
+
+
+def test_get_street_address_6():
+    assert get_street_address(
+        "Odlaregatan, Svalöv (Gamla 9:an).", "sv") == None
+
+
+def test_get_street_address_7():
+    assert get_street_address(
+        "Bröderna Nilssons väg 14, Onslunda, 273 95 Tomelilla", "sv") == "Bröderna Nilssons väg 14"
+
+
+def test_get_street_address_8():
+    assert get_street_address(
+        "Norra Finnskoga Hembygdsgård , Höljes, Solrosvägen 2,", "sv") == "Solrosvägen 2"
 
 
 class Monument(object):
