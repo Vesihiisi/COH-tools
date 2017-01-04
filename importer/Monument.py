@@ -84,7 +84,6 @@ def test_is_legit_house_number_6():
 
 
 def get_street_address(address, language):
-    print(address)
     address = remove_markup(address)
     if language == "sv":
         # Try to see if it's a legit-ish street address
@@ -99,7 +98,8 @@ def get_street_address(address, language):
         legit_address = None
         interesting_part = ""
         patterns = ["gatan", "vägen", " väg", " gata",
-                    " torg", "torget", " plats", "platsen", " gränd"]
+                    " torg", "torget", " plats", "platsen", " gränd",
+                    "kajen", "promenaden", "liden", "stigen"]
         if "," in address:
             address_split = address.split(",", re.IGNORECASE)
             for part in address_split:
@@ -131,7 +131,8 @@ def test_get_street_address_3():
 
 def test_get_street_address_4():
     assert get_street_address(
-        "Virserums station, Södra Järnvägsgatan 20", "sv") == "Södra Järnvägsgatan 20"
+        ("Virserums station, Södra "
+            "Järnvägsgatan 20"), "sv") == "Södra Järnvägsgatan 20"
 
 
 def test_get_street_address_5():
@@ -146,13 +147,30 @@ def test_get_street_address_6():
 
 def test_get_street_address_7():
     assert get_street_address(
-        "Bröderna Nilssons väg 14, Onslunda, 273 95 Tomelilla", "sv") == "Bröderna Nilssons väg 14"
+        ("Bröderna Nilssons väg 14, Onslunda, "
+            "273 95 Tomelilla"), "sv") == "Bröderna Nilssons väg 14"
 
 
 def test_get_street_address_8():
     assert get_street_address(
-        "Norra Finnskoga Hembygdsgård , Höljes, Solrosvägen 2,", "sv") == "Solrosvägen 2"
+        ("Norra Finnskoga Hembygdsgård , "
+            "Höljes, Solrosvägen 2,"), "sv") == "Solrosvägen 2"
 
+
+def test_get_street_address_9():
+    assert get_street_address(
+        ("Svaneholms slott ligger i Skurup i Skåne, "
+            "fyra mil öster om Malmö, vid väg E65."), "sv") == None
+
+
+def test_get_street_address_10():
+    assert get_street_address(
+        "Sanatorievägen 8. KVS-museet är inrymt i det s.k. annexet på KVS-området.", "sv") == "Sanatorievägen 8"
+
+
+def test_get_street_address_11():
+    assert get_street_address(
+        "strömvägen 26 982 60 Porjus depån", "sv") == "strömvägen 26"
 
 def get_wikilinks(text):
     parsed = wparser.parse(text)
