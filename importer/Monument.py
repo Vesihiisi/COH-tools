@@ -155,7 +155,28 @@ class SeFornminSv(Monument):
         # NOTE: adm3 always empty for this table
         # ALSO if not wikilinked, check if it could be a settlement in the datafile
         if self.address:
-            print(self.address)
+            if "[[" in self.address:
+                parsed = wparser.parse(self.address)
+                if len(parsed.filter_wikilinks()) == 1:
+                    target_page = parsed.filter_wikilinks()[0].title
+                    print(self.address)
+                    print(target_page)
+                    site = pywikibot.Site(self.lang, "wikipedia")
+                    page = pywikibot.Page(site, self.monument_article)
+                    if page.exists():
+                        if page.isRedirectPage():
+                            page = page.getRedirectTarget()
+                        try:
+                            item = pywikibot.ItemPage.fromPage(page)
+                            self.wd_item["statements"][PROPS["location"]] = item.getID()
+                            print(item.getID())
+                        except pywikibot.NoPage:
+                            print("Failed to get page for {} - {}."
+                                "It probably does not exist.".format(self.lang, self.monument_article))
+                            return
+
+
+
         return
 
     def set_inception(self):
