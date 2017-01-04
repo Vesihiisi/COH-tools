@@ -5,26 +5,45 @@ import pywikibot
 import re
 import wikidataStuff.helpers as helpers
 from importer_utils import *
+import pytest
 
 MAPPING_DIR = "mappings"
 ADM0 = load_json(path.join(MAPPING_DIR, "adm0.json"))
 PROPS = load_json(path.join(MAPPING_DIR, "props_general.json"))
 
 
-def remove_markup(string):
-    remove_br = re.compile('\W*<br.*?>\W*', re.I)
-    string = remove_br.sub(' ', string)
-    if "[" in string:
-        string = wparser.parse(string)
-        string = string.strip_code()
-    return string.strip()
+def remove_markup(text):
+    remove_br = re.compile('<br.*?>\W*', re.I)
+    text = remove_br.sub(' ', text)
+    text = " ".join(text.split())
+    if "[" in text:
+        text = wparser.parse(text)
+        text = text.strip_code()
+    return text.strip()
 
 
 def contains_digit(text):
     return any(x.isdigit() for x in text)
 
 
+def test_contains_digit_1():
+    assert contains_digit("fna3fs") == True
+
+def test_contains_digit_2():
+    assert contains_digit("fnas") == False
+
+def test_remove_markup_1():
+    assert remove_markup("[[Tegera Arena]], huvudentrén") == "Tegera Arena, huvudentrén"
+
+def test_remove_markup_2():
+    assert remove_markup("[[Tegera Arena]],<br>huvudentrén") == "Tegera Arena, huvudentrén"
+
+def test_remove_markup_3():
+    assert remove_markup("[[Tegera Arena]],<br/> huvudentrén") == "Tegera Arena, huvudentrén"
+
+
 def get_street_address(address, language):
+    print(address)
     address = remove_markup(address)
     if language == "sv":
         # Try to see if it's a legit-ish street address
