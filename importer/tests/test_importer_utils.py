@@ -126,3 +126,15 @@ def test_parse_year_6():
 
 def test_parse_year_6():
     assert parse_year("1999-2000-2003") == None
+
+
+def test_remove_characters_1():
+    assert remove_characters("foo-.fdaf.f2,3", ".,") == "foo-fdaff23"
+
+
+def test_remove_characters_2():
+    assert remove_characters(('string with "punctuation" inside of it! '
+                              'Does this work? I hope so.'),
+                             string.punctuation) == ("string with punctuation "
+                                                     "inside of it Does this "
+                                                     "work I hope so")

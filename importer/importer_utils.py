@@ -1,6 +1,7 @@
 import json
 import re
 import mwparserfromhell as wparser
+import string
 
 
 def get_specific_table_name(countryname, languagename):
@@ -146,3 +147,9 @@ def parse_year(text):
     elif ("-") in text:
         year = legit_year_range(text)
     return year
+
+
+def remove_characters(text, string_of_chars_to_remove):
+    translator = str.maketrans(
+        {key: None for key in string_of_chars_to_remove})
+    return text.translate(translator)
