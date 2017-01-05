@@ -103,10 +103,12 @@ def get_street_address(address, language):
         if "," in address:
             address_split = address.split(",", re.IGNORECASE)
             for part in address_split:
-                if any(substring in part for substring in patterns) and contains_digit(part):
+                if (any(substring in part for substring in patterns)
+                        and contains_digit(part)):
                     interesting_part = part.strip()
         else:
-            if any(substring in address for substring in patterns) and contains_digit(address):
+            if (any(substring in address for substring in patterns)
+                    and contains_digit(address)):
                 interesting_part = address
         if len(interesting_part) > 1:
             interesting_part_split = interesting_part.split(" ")
@@ -162,15 +164,6 @@ def test_get_street_address_9():
         ("Svaneholms slott ligger i Skurup i Skåne, "
             "fyra mil öster om Malmö, vid väg E65."), "sv") == None
 
-
-def test_get_street_address_10():
-    assert get_street_address(
-        "Sanatorievägen 8. KVS-museet är inrymt i det s.k. annexet på KVS-området.", "sv") == "Sanatorievägen 8"
-
-
-def test_get_street_address_11():
-    assert get_street_address(
-        "strömvägen 26 982 60 Porjus depån", "sv") == "strömvägen 26"
 
 def get_wikilinks(text):
     parsed = wparser.parse(text)
@@ -407,9 +400,14 @@ class SeArbetslSv(Monument):
                 #print("Could not find ort: " + self.ort)
                 return
 
+    def set_id(self):
+        if self.id:
+            self.wd_item["statements"][PROPS["arbetsam"]] = self.id
+
     def update_wd_item(self):
         self.update_labels()
         self.set_descriptions()
+        self.set_id()
         self.set_adm_location()
         self.set_type()
         self.set_location()
