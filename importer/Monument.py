@@ -239,3 +239,27 @@ class SeArbetslSv(Monument):
     def __init__(self, db_row_dict, mapping, data_files=None):
         Monument.__init__(self, db_row_dict, mapping, data_files)
         self.update_wd_item()
+
+
+class SeShipSv(Monument):
+
+    def update_labels(self):
+        return
+
+    def set_manufacture_year(self):
+        """
+        Possible values:
+        1904
+        1904.
+        1926-27
+        """
+        if self.byggar:
+            print(self.byggar)
+
+    def update_wd_item(self):
+        self.update_labels()
+        self.set_manufacture_year()
+
+    def __init__(self, db_row_dict, mapping, data_files=None):
+        Monument.__init__(self, db_row_dict, mapping, data_files)
+        self.update_wd_item()

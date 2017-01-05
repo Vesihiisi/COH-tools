@@ -43,7 +43,8 @@ def create_connection(arguments):
         charset="utf8")
 
 
-SPECIFIC_TABLES = {"monuments_se-fornmin_(sv)":
+SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv, "data_files": {}, },
+                   "monuments_se-fornmin_(sv)":
                    {"class": SeFornminSv,
                     "data_files":
                     {"municipalities": "sweden_municipalities.json",
@@ -53,8 +54,8 @@ SPECIFIC_TABLES = {"monuments_se-fornmin_(sv)":
                     SeArbetslSv,
                     "data_files":
                     {"municipalities": "sweden_municipalities.json",
-                    "types" : "se-arbetsl_(sv)_types.json",
-                    "settlements" : "sweden_settlements.json"}}
+                     "types": "se-arbetsl_(sv)_types.json",
+                     "settlements": "sweden_settlements.json"}}
                    }
 
 
