@@ -246,6 +246,17 @@ class SeShipSv(Monument):
     def update_labels(self):
         return
 
+    def set_shipyard(self):
+        if self.varv:
+            possible_varv = self.varv
+            print(self.varv)
+            if "<br>" in possible_varv:
+                possible_varv = self.varv.split("<br>")[0]
+            if "[[" in possible_varv:
+                varv = q_from_first_wikilink("sv", possible_varv)
+                self.wd_item["statements"][PROPS["manufacturer"]] = varv
+                print(varv)
+
     def set_manufacture_year(self):
         """
         Possible values:
@@ -260,6 +271,7 @@ class SeShipSv(Monument):
     def update_wd_item(self):
         self.update_labels()
         self.set_manufacture_year()
+        self.set_shipyard()
 
     def __init__(self, db_row_dict, mapping, data_files=None):
         Monument.__init__(self, db_row_dict, mapping, data_files)

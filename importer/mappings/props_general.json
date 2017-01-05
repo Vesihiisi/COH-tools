@@ -12,5 +12,6 @@
     "located_adm": "P131",
     "located_street": "P969",
     "location": "P276",
+    "manufacturer": "P176",
     "raa-nr": "P1262"
 }

@@ -2,7 +2,7 @@ import json
 import re
 import mwparserfromhell as wparser
 import string
-
+import pywikibot
 
 def get_specific_table_name(countryname, languagename):
     return "monuments_{}_({})".format(countryname, languagename)
@@ -114,6 +114,14 @@ def q_from_wikipedia(language, page_title):
                       language, page_title)
                   )
             return
+
+
+def q_from_first_wikilink(language, text):
+    try:
+        wikilink = get_wikilinks(text)[0]
+        return q_from_wikipedia(language, wikilink.title)
+    except IndexError:
+        return
 
 
 def legit_year(text):
