@@ -254,7 +254,8 @@ class SeShipSv(Monument):
         1926-27
         """
         if self.byggar:
-            print(self.byggar)
+            byggar = parse_year(remove_characters(self.byggar, ".,"))
+            self.wd_item["statements"][PROPS["inception"]] = byggar
 
     def update_wd_item(self):
         self.update_labels()
