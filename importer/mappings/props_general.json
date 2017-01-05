@@ -1,4 +1,5 @@
 {
+    "arbetsam": "P3426",
     "architect": "P84",
     "bbr": "P1260",
     "commonscat": "P373",
@@ -9,7 +10,7 @@
     "inception": "P571",
     "is": "P31",
     "located_adm": "P131",
-    "location": "P276",
     "located_street": "P969",
+    "location": "P276",
     "raa-nr": "P1262"
 }
