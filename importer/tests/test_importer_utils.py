@@ -93,3 +93,8 @@ def test_get_street_address_9():
     assert get_street_address(
         ("Svaneholms slott ligger i Skurup i Skåne, "
             "fyra mil öster om Malmö, vid väg E65."), "sv") == None
+
+
+def test_get_specific_table_name_1():
+    assert get_specific_table_name(
+        "se-arbetsl", "sv") == "monuments_se-arbetsl_(sv)"
