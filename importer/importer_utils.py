@@ -161,3 +161,6 @@ def remove_characters(text, string_of_chars_to_remove):
     translator = str.maketrans(
         {key: None for key in string_of_chars_to_remove})
     return text.translate(translator)
+
+def parse_ship_dimensions(text):
+    return

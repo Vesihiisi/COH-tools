@@ -138,3 +138,31 @@ def test_remove_characters_2():
                              string.punctuation) == ("string with punctuation "
                                                      "inside of it Does this "
                                                      "work I hope so")
+
+
+def test_parse_ship_dimensions_1():
+    assert parse_ship_dimensions("Längd: 18,55 Bredd: 4,06 Djup: Brt: 37,78") == {"L": 18.55,
+                                                                                 "W": 4.06,
+                                                                                 "D": None,
+                                                                                 "BRT": 37.78}
+
+
+def test_parse_ship_dimensions_2():
+    assert parse_ship_dimensions("Längd: 17.5 Bredd: 5.8 Djup: 2.50 Brt: 47") == {"L": 17.5,
+                                                                                 "W": 5.8,
+                                                                                 "D": 2.50,
+                                                                                 "BRT": 47}
+
+
+def test_parse_ship_dimensions_3():
+    assert parse_ship_dimensions("Längd:  Bredd:  Djup:  Brt:") == {"L": None,
+                                                                   "W": None,
+                                                                   "D": None,
+                                                                   "BRT": None}
+
+
+def test_parse_ship_dimensions_4():
+    assert parse_ship_dimensions("Längd: 14,76. Bredd: 4,83 Djup: Brt: 22") == {"L": 14.76,
+                                                                               "W": 4.83,
+                                                                               "D": None,
+                                                                               "BRT": 22}

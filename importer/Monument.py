@@ -249,13 +249,11 @@ class SeShipSv(Monument):
     def set_shipyard(self):
         if self.varv:
             possible_varv = self.varv
-            print(self.varv)
             if "<br>" in possible_varv:
                 possible_varv = self.varv.split("<br>")[0]
             if "[[" in possible_varv:
                 varv = q_from_first_wikilink("sv", possible_varv)
                 self.wd_item["statements"][PROPS["manufacturer"]] = varv
-                print(varv)
 
     def set_manufacture_year(self):
         """
@@ -268,10 +266,24 @@ class SeShipSv(Monument):
             byggar = parse_year(remove_characters(self.byggar, ".,"))
             self.wd_item["statements"][PROPS["inception"]] = byggar
 
+    def set_dimensions(self):
+        """
+        Längd: 25,26 Bredd: 6,95 Djup: 2,78 Brt: 99,74
+        Längd:  Bredd:  Djup:  Brt:
+        Längd: 18,55 Bredd: 4,06 Djup: Brt: 37,78
+        Längd: 14,76. Bredd: 4,83 Djup: Brt: 22
+        Längd: 17.5 Bredd: 5.8 Djup: 2.50 Brt: 47
+        Längd: 13,85 Bredd: 3,11
+        Längd: 23,16 bredd: 5,35
+        """
+        if self.dimensioner:
+            print(self.dimensioner)
+
     def update_wd_item(self):
         self.update_labels()
         self.set_manufacture_year()
         self.set_shipyard()
+        self.set_dimensions()
 
     def __init__(self, db_row_dict, mapping, data_files=None):
         Monument.__init__(self, db_row_dict, mapping, data_files)
