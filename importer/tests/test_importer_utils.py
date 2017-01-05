@@ -98,3 +98,31 @@ def test_get_street_address_9():
 def test_get_specific_table_name_1():
     assert get_specific_table_name(
         "se-arbetsl", "sv") == "monuments_se-arbetsl_(sv)"
+
+
+def test_parse_year_1():
+    assert parse_year("1987") == 1987
+
+
+def test_parse_year_2():
+    assert parse_year("1987-88") == (1987, 1988)
+
+
+def test_parse_year_3():
+    assert parse_year("24235423") == None
+
+
+def test_parse_year_4():
+    assert parse_year("1999-2008") == (1999, 2008)
+
+
+def test_parse_year_5():
+    assert parse_year("1999-foo") == None
+
+
+def test_parse_year_6():
+    assert parse_year("1999-1899") == None
+
+
+def test_parse_year_6():
+    assert parse_year("1999-2000-2003") == None

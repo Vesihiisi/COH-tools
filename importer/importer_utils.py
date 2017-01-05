@@ -113,3 +113,36 @@ def q_from_wikipedia(language, page_title):
                       language, page_title)
                   )
             return
+
+
+def legit_year(text):
+    year = None
+    if text and text.isdigit():
+        if int(text) >= 1 and int(text) <= 2020:
+            year = int(text)
+    return year
+
+
+def legit_year_range(text):
+    year_range = None
+    if "-" in text and len(text.split("-")) == 2:
+        part_one = text.split("-")[0]
+        part_two = text.split("-")[1]
+        if parse_year(part_one) and parse_year(part_two):
+            if (len(part_one) == len(part_two)
+                    and int(part_two) > int(part_one)):
+                year_range = (int(part_one), int(part_two))
+            elif len(part_one) == 4 and len(part_two) == 2:
+                full_length_part_two = part_one[:2] + part_two
+                if int(full_length_part_two) > int(part_one):
+                    year_range = (int(part_one), int(full_length_part_two))
+    return year_range
+
+
+def parse_year(text):
+    year = None
+    if legit_year(text):
+        year = legit_year(text)
+    elif ("-") in text:
+        year = legit_year_range(text)
+    return year
