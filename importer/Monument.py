@@ -22,37 +22,41 @@ class Monument(object):
                        default=datetime_convert)
         )
 
+    def add_statement(self, prop_name, value, quals=[], refs=[]):
+        base = self.wd_item["statements"]
+        prop = PROPS[prop_name]
+        if prop not in base:
+            base[prop] = []
+        statement = {"value": value, "quals": quals, "refs": refs}
+        base[prop].append(statement)
+
     def set_country(self):
         country = [item["item"]
-                   for item in ADM0 if item["code"].lower() == self.adm0]
-        self.wd_item["statements"][PROPS["country"]] = country
+                   for item in ADM0 if item["code"].lower() == self.adm0][0]
+        self.add_statement("country", country)
 
     def set_is(self, mapping):
         default_is = mapping.file_content["default_is"]
-        self.wd_item["statements"][PROPS["is"]] = [default_is["item"]]
+        self.add_statement("is", default_is["item"])
 
     def set_labels(self):
         self.wd_item["labels"] = {self.lang: remove_markup(self.name)}
 
     def set_heritage(self, mapping):
         heritage = mapping.file_content["heritage"]
-        self.wd_item["statements"][PROPS["heritage_status"]] = helpers.listify(
-            heritage["item"])
+        self.add_statement("heritage_status", heritage["item"])
 
     def set_coords(self):
         if self.lat and self.lon:
-            self.wd_item["statements"][PROPS["coordinates"]] = helpers.listify(
-                (self.lat, self.lon))
+            self.add_statement("coordinates", (self.lat, self.lon))
 
     def set_image(self):
         if self.image:
-            self.wd_item["statements"][
-                PROPS["image"]] = helpers.listify(self.image)
+            self.add_statement("image", self.image)
 
     def set_commonscat(self):
         if self.commonscat:
-            self.wd_item["statements"][
-                PROPS["commonscat"]] = helpers.listify(self.commonscat)
+            self.add_statement("commonscat", self.commonscat)
 
     def set_registrant_url(self):
         if self.registrant_url:
@@ -69,8 +73,7 @@ class Monument(object):
         if self.address:
             processed_address = get_street_address(self.address, self.lang)
             if processed_address is not None:
-                self.wd_item["statements"][
-                    PROPS["located_street"]] = helpers.listify(processed_address)
+                self.add_statement("located_street", processed_address)
 
     def exists(self, mapping):
         self.wd_item["wd-item"] = None
@@ -130,8 +133,7 @@ class SeFornminSv(Monument):
         self.wd_item["descriptions"]["sv"] += " i " + self.landskap
 
     def set_raa(self):
-        self.wd_item["statements"][
-            PROPS["raa-nr"]] = helpers.listify(self.raa_nr)
+        self.add_statement("raa-nr", self.raa_nr)
 
     def set_adm_location(self):
         municip_dict = load_json(path.join(
@@ -140,8 +142,7 @@ class SeFornminSv(Monument):
         try:
             municipality = [x["item"] for x in municip_dict if x[
                 "en"].lower() == pattern_en][0]
-            self.wd_item["statements"][
-                PROPS["located_adm"]] = helpers.listify(municipality)
+            self.add_statement("located_adm", municipality)
         except IndexError:
             print("Could not parse municipality: {}.".format(self.adm2))
             return
@@ -154,7 +155,7 @@ class SeFornminSv(Monument):
                 special_type = [table[x]["items"]
                                 for x in table
                                 if x.lower() == type_to_search_for][0]
-                self.wd_item["statements"]["P31"] = special_type
+                self.add_statement("is", special_type)
             except IndexError:
                 return
 
@@ -167,7 +168,7 @@ class SeFornminSv(Monument):
                     print(self.address)
                     print(target_page)
                     wd_item = q_from_wikipedia(self.lang, target_page)
-                    self.wd_item["statements"][PROPS["location"]] = wd_item
+                    self.add_statement("location", wd_item)
 
     def set_inception(self):
         # TODO
@@ -209,8 +210,7 @@ class SeArbetslSv(Monument):
         try:
             municipality = [x["item"] for x in municip_dict if x[
                 "en"].lower() == pattern][0]
-            self.wd_item["statements"][
-                PROPS["located_adm"]] = helpers.listify(municipality)
+            self.add_statement("located_adm", municipality)
             swedish_name = [x["sv"]
                             for x in municip_dict
                             if x["item"] == municipality][0]
@@ -227,7 +227,7 @@ class SeArbetslSv(Monument):
                 special_type = [table[x]["items"]
                                 for x in table
                                 if x.lower() == type_to_search_for][0]
-                self.wd_item["statements"]["P31"] = special_type
+                self.add_statement("is", special_type)
             except IndexError:
                 return
         return
@@ -238,15 +238,14 @@ class SeArbetslSv(Monument):
             try:
                 location = [x["item"] for x in settlements_dict if x[
                     "sv"].strip() == remove_markup(self.ort)][0]
-                self.wd_item["statements"][
-                    PROPS["location"]] = helpers.listify(location)
+                self.add_statement("location", location)
             except IndexError:
                 # print("Could not find ort: " + self.ort)
                 return
 
     def set_id(self):
         if self.id:
-            self.wd_item["statements"][PROPS["arbetsam"]] = self.id
+            self.add_statement("arbetsam", self.id)
 
     def update_wd_item(self):
         self.update_labels()
@@ -279,13 +278,12 @@ class SeShipSv(Monument):
                 possible_varv = self.varv.split("<br>")[0]
             if "[[" in possible_varv:
                 varv = q_from_first_wikilink("sv", possible_varv)
-                self.wd_item["statements"][
-                    PROPS["manufacturer"]] = helpers.listify(varv)
+                self.add_statement("manufacturer", varv)
 
     def set_manufacture_year(self):
         if self.byggar:
             byggar = parse_year(remove_characters(self.byggar, ".,"))
-            self.wd_item["statements"][PROPS["inception"]] = byggar
+            self.add_statement("inception", byggar)
 
     def set_dimensions(self):
         if self.dimensioner:
@@ -293,18 +291,16 @@ class SeShipSv(Monument):
             for dimension in dimensions_processed:
                 if dimension in PROPS:
                     value = dimensions_processed[dimension]
-                    self.wd_item["statements"][PROPS[dimension]] = value
+                    self.add_statement(dimension, value)
 
     def set_homeport(self):
         if self.hemmahamn and count_wikilinks(self.hemmahamn) == 1:
             home_port = q_from_first_wikilink("sv", self.hemmahamn)
-            self.wd_item["statements"][
-                PROPS["home_port"]] = helpers.listify(home_port)
+            self.add_statement("home_port", home_port)
 
     def set_call_sign(self):
         if self.signal:
-            self.wd_item["statements"][
-                PROPS["call_sign"]] = helpers.listify(self.signal)
+            self.add_statement("call_sign", self.signal)
 
     def update_wd_item(self):
         self.update_labels()
@@ -336,10 +332,11 @@ class SeBbrSv(Monument):
 
     def set_bbr(self):
         bbr_link = get_bbr_link(self.bbr)
-        self.wd_item["statements"][PROPS["bbr"]] = bbr_link
+        self.add_statement("bbr", bbr_link)
 
     def set_heritage_bbr(self):
         """
+        TODO: Get starts_from from parentheses in byggnadsminne and statligt byggnadsminne
         This needs to be overriden from parent class,
         because there are three possible options that can't be
         mapped automatically:
@@ -361,14 +358,21 @@ class SeBbrSv(Monument):
         data = requests.get(url).json()
         for element in data["@graph"]:
             if "ns5:spec" in element:
-                print(element["ns5:spec"])
+                bbr_type = element["ns5:spec"]
+                if bbr_type.startswith("Kyrkligt kulturminne"):
+                    type_q = "Q24284073"
+                elif bbr_type.startswith("Byggnadsminne"):
+                    type_q = "Q24284072"
+                elif bbr_type.startswith("Statligt byggnadsminne"):
+                    type_q = "Q24284071"
+        print(type_q)
         print("-----")
         return
 
     def update_wd_item(self):
         self.update_labels()
         self.set_bbr()
-        self.set_heritage_bbr()
+        # self.set_heritage_bbr()
 
     def __init__(self, db_row_dict, mapping, data_files=None):
         Monument.__init__(self, db_row_dict, mapping, data_files)
