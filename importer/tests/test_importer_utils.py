@@ -239,3 +239,11 @@ def test_get_text_inside_brackets_1():
 def test_get_text_inside_brackets_2():
     assert get_text_inside_brackets(
         "just text no brackets") == "just text no brackets"
+
+
+def test_get_number_from_string_1():
+    assert get_number_from_string("12 byggnader") == 12
+
+
+def test_get_number_from_string_2():
+    assert get_number_from_string("just text!") == None

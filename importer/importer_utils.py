@@ -241,3 +241,11 @@ def get_text_inside_brackets(text):
         return text[text.find("(")+1:text.find(")")]
     else:
         return text
+
+
+def get_number_from_string(text):
+    try:
+        result = int(''.join(part for part in text if part.isdigit()))
+    except ValueError:
+        result = None
+    return result
