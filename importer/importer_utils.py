@@ -230,4 +230,14 @@ def get_bbr_link(text):
 
 
 def get_rid_of_brackets(text):
-    return re.sub('\(.*?\)', '', text).strip()
+    if "(" in text:
+        return re.sub('\(.*?\)', '', text).strip()
+    else:
+        return text
+
+
+def get_text_inside_brackets(text):
+    if "(" in text:
+        return text[text.find("(")+1:text.find(")")]
+    else:
+        return text

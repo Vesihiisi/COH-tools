@@ -220,5 +220,22 @@ def test_get_bbr_link_1():
 def test_get_bbr_link_2():
     assert get_bbr_link("21300000003265") == "raa/bbr/21300000003265"
 
+
 def test_get_rid_of_brackets_1():
-    assert get_rid_of_brackets("Kulla Gunnarstorps mölla (Kulla Gunnarstorp 1:21)") == "Kulla Gunnarstorps mölla"
+    assert get_rid_of_brackets(
+        "Kulla Gunnarstorps mölla (Kulla Gunnarstorp 1:21)") == "Kulla Gunnarstorps mölla"
+
+
+def test_get_rid_of_brackets_2():
+    assert get_rid_of_brackets(
+        "Kulla Gunnarstorps mölla") == "Kulla Gunnarstorps mölla"
+
+
+def test_get_text_inside_brackets_1():
+    assert get_text_inside_brackets(
+        "Kulla Gunnarstorps mölla (Kulla Gunnarstorp 1:21)") == "Kulla Gunnarstorp 1:21"
+
+
+def test_get_text_inside_brackets_2():
+    assert get_text_inside_brackets(
+        "just text no brackets") == "just text no brackets"
