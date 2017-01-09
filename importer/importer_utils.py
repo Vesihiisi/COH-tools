@@ -216,11 +216,14 @@ def get_http_code(url):
     return r.status_code
 
 
-def get_type_of_bbr(text):
+def get_bbr_link(text):
+    """
+    raa/bbr/21300000003265
+    """
     base_url = "http://kulturarvsdata.se/raa/"
     url_bbr = base_url + "bbr/" + text
     url_bbra = base_url + "bbra/" + text
     if get_http_code(url_bbra) == 200:
-        return "bbra"
+        return "raa/bbra/" + text
     elif get_http_code(url_bbr) == 200:
-        return "bbr"
+        return "raa/bbr/" + text

@@ -1,5 +1,5 @@
 {
-    "_id" : "bbr",
+    "_id": "bbr",
     "country": {
         "item": "Q34",
         "name": "Sweden"
@@ -7,6 +7,9 @@
     "default_is": {
         "item": "Q1497375",
         "name": "item with multiple objects"
+    },
+    "heritage": {
+        "item": ""
     },
     "language": "sv"
 }

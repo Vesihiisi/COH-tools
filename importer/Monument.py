@@ -322,13 +322,13 @@ class SeShipSv(Monument):
 class SeBbrSv(Monument):
 
     def update_labels(self):
-        print(self.wd_item["labels"])
-        print(self.namn)
-        print(self.name)
-        print("----")
         return
 
-    def set_heritage(self, mapping):
+    def set_bbr(self):
+        bbr_link = get_bbr_link(self.bbr)
+        self.wd_item["statements"][PROPS["bbr"]] = bbr_link
+
+    def set_heritage_bbr(self):
         """
         This needs to be overriden from parent class,
         because there are three possible options that can't be
@@ -342,10 +342,22 @@ class SeBbrSv(Monument):
         Which legal protection each monument goes under is not stored in the WLM database.
         We therefore need to look that up by querying the source database via their API.
         """
+        #print(self.wd_item["statements"][PROPS["heritage_status"]])
+        url = "http://kulturarvsdata.se/" + self.wd_item["statements"][PROPS["bbr"]]
+        url_list = url.split("/")
+        url_list.insert(-1, "jsonld")
+        url = "/".join(url_list)
+        data = requests.get(url).json()
+        for element in data["@graph"]:
+            if "ns5:spec" in element:
+                print(element["ns5:spec"])
+        print("-----")
         return
 
     def update_wd_item(self):
         self.update_labels()
+        self.set_bbr()
+        self.set_heritage_bbr()
 
     def __init__(self, db_row_dict, mapping, data_files=None):
         Monument.__init__(self, db_row_dict, mapping, data_files)

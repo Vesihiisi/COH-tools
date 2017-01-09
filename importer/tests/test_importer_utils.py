@@ -213,9 +213,9 @@ def test_get_http_code_2():
         "http://kulturarvsdata.se/raa/bbra/21300000003265") == 404
 
 
-def test_get_type_of_bbr_1():
-    assert get_type_of_bbr("21320000019150") == "bbra"
+def test_get_bbr_link_1():
+    assert get_bbr_link("21320000019150") == "raa/bbra/21320000019150"
 
 
-def test_get_type_of_bbr_2():
-    assert get_type_of_bbr("21300000003265") == "bbr"
+def test_get_bbr_link_2():
+    assert get_bbr_link("21300000003265") == "raa/bbr/21300000003265"
