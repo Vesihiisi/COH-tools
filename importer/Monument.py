@@ -19,7 +19,7 @@ class Monument(object):
                        sort_keys=True,
                        indent=4,
                        ensure_ascii=False,
-                       default = datetime_convert)
+                       default=datetime_convert)
         )
 
     def set_country(self):
@@ -79,6 +79,10 @@ class Monument(object):
         if self.changed:
             self.wd_item["changed"] = self.changed
 
+    def set_source(self):
+        if self.source:
+            self.wd_item["source"] = self.source
+
     def construct_wd_item(self, mapping, data_files=None):
         self.wd_item = {}
         self.wd_item["statements"] = {}
@@ -92,6 +96,7 @@ class Monument(object):
         self.set_street_address()
         self.set_registrant_url()
         self.set_changed()
+        self.set_source()
         # self.exists(mapping)
 
     def __init__(self, db_row_dict, mapping, data_files):
@@ -254,6 +259,12 @@ class SeArbetslSv(Monument):
 
 
 class SeShipSv(Monument):
+    """
+    TODO
+    * handle material (from lookup table)
+    * handle function (from lookup table)
+    * handle callsign
+    """
 
     def update_labels(self):
         return
@@ -268,12 +279,6 @@ class SeShipSv(Monument):
                 self.wd_item["statements"][PROPS["manufacturer"]] = varv
 
     def set_manufacture_year(self):
-        """
-        Possible values:
-        1904
-        1904.
-        1926-27
-        """
         if self.byggar:
             byggar = parse_year(remove_characters(self.byggar, ".,"))
             self.wd_item["statements"][PROPS["inception"]] = byggar
