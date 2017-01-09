@@ -471,6 +471,19 @@ class SeBbrSv(Monument):
         if extracted_no is not None:
             self.add_statement("has_parts_of_class", "Q41176", {"quantity": extracted_no})
 
+    def set_adm_location(self):
+        municip_dict = load_json(path.join(
+            MAPPING_DIR, "sweden_municipalities.json"))
+        pattern_en = self.adm2.lower() + " municipality"
+        try:
+            municipality = [x["item"] for x in municip_dict if x[
+                "en"].lower() == pattern_en][0]
+            print(municipality)
+            self.add_statement("located_adm", municipality)
+        except IndexError:
+            print("Could not parse municipality: {}.".format(self.adm2))
+            return
+
     def update_wd_item(self):
         self.update_labels()
         self.update_descriptions()
@@ -479,6 +492,7 @@ class SeBbrSv(Monument):
         self.set_function()
         self.set_architect()
         self.set_location()
+        self.set_adm_location()
         self.set_no_of_buildings()
 
     def __init__(self, db_row_dict, mapping, data_files=None):
