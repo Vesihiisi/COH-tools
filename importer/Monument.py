@@ -22,13 +22,26 @@ class Monument(object):
                        default=datetime_convert)
         )
 
-    def add_statement(self, prop_name, value, quals=[], refs=[]):
+    def add_statement(self, prop_name, value, quals={}, refs=[]):
         base = self.wd_item["statements"]
         prop = PROPS[prop_name]
+        qualifiers = {}
         if prop not in base:
             base[prop] = []
-        statement = {"value": value, "quals": quals, "refs": refs}
+        if len(quals) > 0:
+            for k in quals:
+                prop_name = PROPS[k]
+                qualifiers[prop_name] = quals[k]
+        statement = {"value": value, "quals": qualifiers, "refs": refs}
         base[prop].append(statement)
+
+    def add_label(self, language, text):
+        base = self.wd_item["labels"]
+        base[language] = text
+
+    def add_description(self, language, text):
+        base = self.wd_item["descriptions"]
+        base[language] = text
 
     def remove_claim(self, prop):
         base = self.wd_item["statements"]
@@ -44,7 +57,7 @@ class Monument(object):
         self.add_statement("is", default_is["item"])
 
     def set_labels(self):
-        self.wd_item["labels"] = {self.lang: remove_markup(self.name)}
+        self.add_label(self.lang, remove_markup(self.name))
 
     def set_heritage(self, mapping):
         heritage = mapping.file_content["heritage"]
@@ -96,6 +109,8 @@ class Monument(object):
     def construct_wd_item(self, mapping, data_files=None):
         self.wd_item = {}
         self.wd_item["statements"] = {}
+        self.wd_item["labels"] = {}
+        self.wd_item["descriptions"] = {}
         self.set_labels()
         self.set_country()
         self.set_is(mapping)
@@ -124,17 +139,19 @@ class SeFornminSv(Monument):
 
     def update_labels(self):
         if len(self.namn) == 0:
-            self.wd_item["labels"][self.lang] = self.raa_nr
+            self.add_label(self.lang, self.raa_nr)
         else:
-            self.wd_item["labels"][self.lang] = self.namn
+            self.add_label(self.lang, self.namn)
 
     def set_descriptions(self):
         DESC_BASE = "fornminne"
+        description = ""
         if len(self.typ) > 0:
-            self.wd_item["descriptions"] = {"sv": self.typ.lower()}
+            description = self.typ.lower()
         else:
-            self.wd_item["descriptions"] = {"sv": DESC_BASE}
-        self.wd_item["descriptions"]["sv"] += " i " + self.landskap
+            description = DESC_BASE
+        description += " i " + self.landskap
+        self.add_description("sv", description)
 
     def set_raa(self):
         self.add_statement("raa-nr", self.raa_nr)
@@ -200,10 +217,12 @@ class SeArbetslSv(Monument):
 
     def set_descriptions(self):
         DESC_BASE = "arbetslivsmuseum"
+        description = ""
         if len(self.typ) > 0:
-            self.wd_item["descriptions"] = {self.lang: self.typ.lower()}
+            description = self.typ.lower()
         else:
-            self.wd_item["descriptions"] = {self.lang: DESC_BASE}
+            description = DESC_BASE
+        self.add_description("sv", description)
 
     def add_location_to_desc(self, municipality):
         self.wd_item["descriptions"][self.lang] += " i " + municipality
@@ -332,6 +351,19 @@ class SeBbrSv(Monument):
     """
 
     def update_labels(self):
+        """
+        TODO
+        Original labels look like this:
+            Wickmanska gården (Paradis 35)
+        We don't need the latter part (fastighetsbeteckning) in the label,
+        but it's important info to have.
+        What's the best place for it?
+        Have a look at https://www.wikidata.org/wiki/Property_talk:P528
+        for now, we'll just put them in the description field!
+
+        wtf is "K 0188"???
+        """
+        self.add_label("sv", get_rid_of_brackets(self.wd_item["labels"]["sv"]))
         return
 
     def set_bbr(self):
@@ -423,13 +455,31 @@ class SeBbrSv(Monument):
             True
         return
 
+    def update_descriptions(self):
+        fastighetsbeteckning = get_text_inside_brackets(self.name)
+        self.add_description("sv", fastighetsbeteckning)
+
+    def set_no_of_buildings(self):
+        """
+        Most common value of type:
+            4 byggnader
+        However, there are also items like
+            inga registrerade byggnader
+            Livsmedelsindustri, Tobak och snus
+        """
+        extracted_no = get_number_from_string(get_text_inside_brackets(self.funktion))
+        if extracted_no is not None:
+            self.add_statement("has_parts_of_class", "Q41176", {"quantity": extracted_no})
+
     def update_wd_item(self):
         self.update_labels()
+        self.update_descriptions()
         # self.set_bbr()
         # self.set_heritage_bbr()
         self.set_function()
         self.set_architect()
         self.set_location()
+        self.set_no_of_buildings()
 
     def __init__(self, db_row_dict, mapping, data_files=None):
         Monument.__init__(self, db_row_dict, mapping, data_files)

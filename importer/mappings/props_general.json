@@ -7,6 +7,7 @@
     "coordinates": "P625",
     "country": "P17",
     "draft": "P2262",
+    "has_parts_of_class": "P2670",
     "heritage_status": "P1435",
     "home_port": "P504",
     "image": "P18",
@@ -17,6 +18,7 @@
     "located_street": "P969",
     "location": "P276",
     "manufacturer": "P176",
+    "quantity": "P1114",
     "raa-nr": "P1262",
     "width": "P2049"
 }
