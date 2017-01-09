@@ -4,6 +4,7 @@ import mwparserfromhell as wparser
 import string
 import pywikibot
 
+
 def get_specific_table_name(countryname, languagename):
     return "monuments_{}_({})".format(countryname, languagename)
 
@@ -162,5 +163,38 @@ def remove_characters(text, string_of_chars_to_remove):
         {key: None for key in string_of_chars_to_remove})
     return text.translate(translator)
 
+
+def comma_to_period(text):
+    return text.replace(",", ".")
+
+
+def remove_marks_from_ends(text):
+    return text.lstrip(string.punctuation).rstrip(string.punctuation)
+
+
+def string_to_float(text):
+    text_clean = remove_marks_from_ends(text)
+    text_clean = comma_to_period(text_clean)
+    return float(text_clean)
+
+
 def parse_ship_dimensions(text):
-    return
+    dimensions_vocab = {
+        "längd": "length",
+        "bredd": "width",
+        "djup": "draft",
+        "brt": "grt"
+    }
+    dimensions_dict = {}
+    dimensions_list = text.split(" ")
+    for i, item in enumerate(dimensions_list):
+        if contains_digit(item):
+            try:
+                number_part = string_to_float(comma_to_period(item))
+                associated_word = remove_marks_from_ends(
+                    dimensions_list[i - 1].lower())
+                word_part = dimensions_vocab[associated_word]
+                dimensions_dict[word_part] = number_part
+            except (ValueError, KeyError):
+                continue
+    return dimensions_dict

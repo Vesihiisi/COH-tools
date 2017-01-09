@@ -43,7 +43,7 @@ def create_connection(arguments):
         charset="utf8")
 
 
-SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv, "data_files": {}, },
+SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv, "data_files": {}},
                    "monuments_se-fornmin_(sv)":
                    {"class": SeFornminSv,
                     "data_files":

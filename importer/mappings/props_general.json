@@ -5,13 +5,16 @@
     "commonscat": "P373",
     "coordinates": "P625",
     "country": "P17",
+    "draft": "P2262",
     "heritage_status": "P1435",
     "image": "P18",
     "inception": "P571",
     "is": "P31",
+    "length": "P2043",
     "located_adm": "P131",
     "located_street": "P969",
     "location": "P276",
     "manufacturer": "P176",
-    "raa-nr": "P1262"
+    "raa-nr": "P1262",
+    "width": "P2049"
 }

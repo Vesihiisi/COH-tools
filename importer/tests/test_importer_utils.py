@@ -141,28 +141,51 @@ def test_remove_characters_2():
 
 
 def test_parse_ship_dimensions_1():
-    assert parse_ship_dimensions("Längd: 18,55 Bredd: 4,06 Djup: Brt: 37,78") == {"L": 18.55,
-                                                                                 "W": 4.06,
-                                                                                 "D": None,
-                                                                                 "BRT": 37.78}
+    assert parse_ship_dimensions("Längd: 18,55 Bredd: 4,06 Djup: Brt: 37,78") == {"length": 18.55,
+                                                                                  "width": 4.06,
+                                                                                  "grt": 37.78}
 
 
 def test_parse_ship_dimensions_2():
-    assert parse_ship_dimensions("Längd: 17.5 Bredd: 5.8 Djup: 2.50 Brt: 47") == {"L": 17.5,
-                                                                                 "W": 5.8,
-                                                                                 "D": 2.50,
-                                                                                 "BRT": 47}
+    assert parse_ship_dimensions("Längd: 17.5 Bredd: 5.8 Djup: 2.50 Brt: 47") == {"length": 17.5,
+                                                                                  "width": 5.8,
+                                                                                  "draft": 2.50,
+                                                                                  "grt": 47}
 
 
 def test_parse_ship_dimensions_3():
-    assert parse_ship_dimensions("Längd:  Bredd:  Djup:  Brt:") == {"L": None,
-                                                                   "W": None,
-                                                                   "D": None,
-                                                                   "BRT": None}
+    assert parse_ship_dimensions("Längd:  Bredd:  Djup:  Brt:") == {}
 
 
 def test_parse_ship_dimensions_4():
-    assert parse_ship_dimensions("Längd: 14,76. Bredd: 4,83 Djup: Brt: 22") == {"L": 14.76,
-                                                                               "W": 4.83,
-                                                                               "D": None,
-                                                                               "BRT": 22}
+    assert parse_ship_dimensions("Längd: 14,76. Bredd: 4,83 Djup: Brt: 22") == {"length": 14.76,
+                                                                                "width": 4.83,
+                                                                                "grt": 22}
+
+
+def test_comma_to_period_1():
+    assert comma_to_period("43,12") == "43.12"
+
+
+def test_remove_marks_from_ends_1():
+    assert remove_marks_from_ends(".43.22.") == "43.22"
+
+
+def test_remove_marks_from_ends_2():
+    assert remove_marks_from_ends("length:") == "length"
+
+
+def test_string_to_float_1():
+    assert string_to_float("32.12") == 32.12
+
+
+def test_string_to_float_2():
+    assert string_to_float("32,12") == 32.12
+
+
+def test_string_to_float_3():
+    assert string_to_float("32,12.") == 32.12
+
+
+def test_string_to_float_3():
+    assert string_to_float(",32,12.") == 32.12

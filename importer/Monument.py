@@ -267,17 +267,12 @@ class SeShipSv(Monument):
             self.wd_item["statements"][PROPS["inception"]] = byggar
 
     def set_dimensions(self):
-        """
-        Längd: 25,26 Bredd: 6,95 Djup: 2,78 Brt: 99,74
-        Längd:  Bredd:  Djup:  Brt:
-        Längd: 18,55 Bredd: 4,06 Djup: Brt: 37,78
-        Längd: 14,76. Bredd: 4,83 Djup: Brt: 22
-        Längd: 17.5 Bredd: 5.8 Djup: 2.50 Brt: 47
-        Längd: 13,85 Bredd: 3,11
-        Längd: 23,16 bredd: 5,35
-        """
         if self.dimensioner:
-            print(self.dimensioner)
+            dimensions_processed = parse_ship_dimensions(self.dimensioner)
+            for dimension in dimensions_processed:
+                if dimension in PROPS:
+                    value = dimensions_processed[dimension]
+                    self.wd_item["statements"][PROPS[dimension]] = value
 
     def update_wd_item(self):
         self.update_labels()
