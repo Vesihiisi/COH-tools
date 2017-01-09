@@ -263,7 +263,6 @@ class SeShipSv(Monument):
     TODO
     * handle material (from lookup table)
     * handle function (from lookup table)
-    * handle callsign
     """
 
     def update_labels(self):
@@ -296,12 +295,17 @@ class SeShipSv(Monument):
             home_port = q_from_first_wikilink("sv", self.hemmahamn)
             self.wd_item["statements"][PROPS["home_port"]] = home_port
 
+    def set_call_sign(self):
+        if self.signal:
+            self.wd_item["statements"][PROPS["call_sign"]] == self.signal
+
     def update_wd_item(self):
         self.update_labels()
         self.set_manufacture_year()
         self.set_shipyard()
         self.set_homeport()
         self.set_dimensions()
+        self.set_call_sign()
 
     def __init__(self, db_row_dict, mapping, data_files=None):
         Monument.__init__(self, db_row_dict, mapping, data_files)
