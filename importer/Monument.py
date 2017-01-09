@@ -30,6 +30,10 @@ class Monument(object):
         statement = {"value": value, "quals": quals, "refs": refs}
         base[prop].append(statement)
 
+    def remove_claim(self, prop):
+        base = self.wd_item["statements"]
+        del base[PROPS[prop]]
+
     def set_country(self):
         country = [item["item"]
                    for item in ADM0 if item["code"].lower() == self.adm0][0]
@@ -331,6 +335,10 @@ class SeBbrSv(Monument):
         return
 
     def set_bbr(self):
+        """
+        TODO
+        check if there are items with no BBR
+        """
         bbr_link = get_bbr_link(self.bbr)
         self.add_statement("bbr", bbr_link)
 
@@ -351,7 +359,7 @@ class SeBbrSv(Monument):
         """
         # print(self.wd_item["statements"][PROPS["heritage_status"]])
         url = "http://kulturarvsdata.se/" + \
-            self.wd_item["statements"][PROPS["bbr"]]
+            self.wd_item["statements"][PROPS["bbr"]][0]["value"]
         url_list = url.split("/")
         url_list.insert(-1, "jsonld")
         url = "/".join(url_list)
@@ -365,14 +373,63 @@ class SeBbrSv(Monument):
                     type_q = "Q24284072"
                 elif bbr_type.startswith("Statligt byggnadsminne"):
                     type_q = "Q24284071"
-        print(type_q)
-        print("-----")
+        """
+        The original set_heritage() added an empty claim
+        because there's no heritage status specified in mapping file,
+        so we start by removing that empty claim.
+        """
+        self.remove_claim("heritage_status")
+        self.add_statement("heritage_status", type_q)
+
+    def set_function(self):
+        """
+        TODO
+        Isolate function and number of buildings:
+            Kyrka sammanbyggd med församlingshem (1 byggnad)
+            Slott (4 byggnader)
+            Gästgivargård (1 byggnad)
+        """
+        return
+
+    def set_architect(self):
+        """
+        TODO
+        Sometimes 1 wikilink, sometimes more, sometimes none:
+            [[Fred. M. Bäck]]
+            Richard Conricus
+            [[Bertil Engstrand]] och [[Hans Speek]]
+        Only process where there's wlinks
+
+        """
+        if self.arkitekt:
+            architects = get_wikilinks(self.arkitekt)
+            for name in architects:
+                wp_page = name.title
+                q_item = q_from_wikipedia("sv", wp_page)
+                if q_item is not None:
+                    self.add_statement("architect", q_item)
+
+    def set_location(self):
+        """
+        TODO
+        This is the same as 'address' in monuments_all.
+        There are some street addresses. Some are simple:
+            Norra Murgatan 3
+        Some are complex:
+            Skolgatan 5, Västra Kyrkogatan 3
+            Norra Murgatan 27, Uddens gränd 14-16
+        """
+        if self.plats:
+            True
         return
 
     def update_wd_item(self):
         self.update_labels()
-        self.set_bbr()
+        # self.set_bbr()
         # self.set_heritage_bbr()
+        self.set_function()
+        self.set_architect()
+        self.set_location()
 
     def __init__(self, db_row_dict, mapping, data_files=None):
         Monument.__init__(self, db_row_dict, mapping, data_files)
