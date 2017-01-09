@@ -322,6 +322,10 @@ class SeShipSv(Monument):
 class SeBbrSv(Monument):
 
     def update_labels(self):
+        print(self.wd_item["labels"])
+        print(self.namn)
+        print(self.name)
+        print("----")
         return
 
     def set_heritage(self, mapping):

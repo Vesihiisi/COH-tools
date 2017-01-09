@@ -201,3 +201,21 @@ def test_count_wikilinks_2():
 
 def test_count_wikilinks_3():
     assert count_wikilinks("[[Tranås]] and also [[Svanesund]]") == 2
+
+
+def test_get_http_code_1():
+    assert get_http_code(
+        "http://kulturarvsdata.se/raa/bbr/21300000003265") == 200
+
+
+def test_get_http_code_2():
+    assert get_http_code(
+        "http://kulturarvsdata.se/raa/bbra/21300000003265") == 404
+
+
+def test_get_type_of_bbr_1():
+    assert get_type_of_bbr("21320000019150") == "bbra"
+
+
+def test_get_type_of_bbr_2():
+    assert get_type_of_bbr("21300000003265") == "bbr"

@@ -4,6 +4,8 @@ import mwparserfromhell as wparser
 import string
 import pywikibot
 import datetime
+import requests
+
 
 def get_specific_table_name(countryname, languagename):
     return "monuments_{}_({})".format(countryname, languagename)
@@ -207,3 +209,18 @@ def parse_ship_dimensions(text):
             except (ValueError, KeyError):
                 continue
     return dimensions_dict
+
+
+def get_http_code(url):
+    r = requests.get(url)
+    return r.status_code
+
+
+def get_type_of_bbr(text):
+    base_url = "http://kulturarvsdata.se/raa/"
+    url_bbr = base_url + "bbr/" + text
+    url_bbra = base_url + "bbra/" + text
+    if get_http_code(url_bbra) == 200:
+        return "bbra"
+    elif get_http_code(url_bbr) == 200:
+        return "bbr"
