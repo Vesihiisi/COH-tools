@@ -1,0 +1,12 @@
+{
+    "_id" : "bbr",
+    "country": {
+        "item": "Q34",
+        "name": "Sweden"
+    },
+    "default_is": {
+        "item": "Q1497375",
+        "name": "item with multiple objects"
+    },
+    "language": "sv"
+}

@@ -46,15 +46,18 @@ class Monument(object):
 
     def set_image(self):
         if self.image:
-            self.wd_item["statements"][PROPS["image"]] = self.image
+            self.wd_item["statements"][
+                PROPS["image"]] = helpers.listify(self.image)
 
     def set_commonscat(self):
         if self.commonscat:
-            self.wd_item["statements"][PROPS["commonscat"]] = self.commonscat
+            self.wd_item["statements"][
+                PROPS["commonscat"]] = helpers.listify(self.commonscat)
 
     def set_registrant_url(self):
         if self.registrant_url:
-            self.wd_item["registrant_url"] = self.registrant_url
+            self.wd_item["registrant_url"] = helpers.listify(
+                self.registrant_url)
 
     def set_street_address(self):
         """
@@ -67,7 +70,7 @@ class Monument(object):
             processed_address = get_street_address(self.address, self.lang)
             if processed_address is not None:
                 self.wd_item["statements"][
-                    PROPS["located_street"]] = processed_address
+                    PROPS["located_street"]] = helpers.listify(processed_address)
 
     def exists(self, mapping):
         self.wd_item["wd-item"] = None
@@ -259,6 +262,7 @@ class SeArbetslSv(Monument):
 
 
 class SeShipSv(Monument):
+
     """
     TODO
     * handle material (from lookup table)
@@ -275,7 +279,8 @@ class SeShipSv(Monument):
                 possible_varv = self.varv.split("<br>")[0]
             if "[[" in possible_varv:
                 varv = q_from_first_wikilink("sv", possible_varv)
-                self.wd_item["statements"][PROPS["manufacturer"]] = varv
+                self.wd_item["statements"][
+                    PROPS["manufacturer"]] = helpers.listify(varv)
 
     def set_manufacture_year(self):
         if self.byggar:
@@ -293,11 +298,13 @@ class SeShipSv(Monument):
     def set_homeport(self):
         if self.hemmahamn and count_wikilinks(self.hemmahamn) == 1:
             home_port = q_from_first_wikilink("sv", self.hemmahamn)
-            self.wd_item["statements"][PROPS["home_port"]] = home_port
+            self.wd_item["statements"][
+                PROPS["home_port"]] = helpers.listify(home_port)
 
     def set_call_sign(self):
         if self.signal:
-            self.wd_item["statements"][PROPS["call_sign"]] == self.signal
+            self.wd_item["statements"][
+                PROPS["call_sign"]] = helpers.listify(self.signal)
 
     def update_wd_item(self):
         self.update_labels()
@@ -306,6 +313,35 @@ class SeShipSv(Monument):
         self.set_homeport()
         self.set_dimensions()
         self.set_call_sign()
+
+    def __init__(self, db_row_dict, mapping, data_files=None):
+        Monument.__init__(self, db_row_dict, mapping, data_files)
+        self.update_wd_item()
+
+
+class SeBbrSv(Monument):
+
+    def update_labels(self):
+        return
+
+    def set_heritage(self, mapping):
+        """
+        This needs to be overriden from parent class,
+        because there are three possible options that can't be
+        mapped automatically:
+        ---
+        In Sweden there are three different types of legal protection for different types of
+        cultural heritage, so we created three new items:
+        governmental listed building complex (Q24284071) for buildings owned by the state,
+        individual listed building complex (Q24284072) for privately owned buildings,
+        ecclesiastical listed building complex (Q24284073) for older buildings owned by the Church of Sweden.
+        Which legal protection each monument goes under is not stored in the WLM database.
+        We therefore need to look that up by querying the source database via their API.
+        """
+        return
+
+    def update_wd_item(self):
+        self.update_labels()
 
     def __init__(self, db_row_dict, mapping, data_files=None):
         Monument.__init__(self, db_row_dict, mapping, data_files)

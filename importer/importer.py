@@ -44,6 +44,7 @@ def create_connection(arguments):
 
 
 SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv, "data_files": {}},
+                   "monuments_se-bbr_(sv)": {"class": SeBbrSv, "data_files": {}},
                    "monuments_se-fornmin_(sv)":
                    {"class": SeFornminSv,
                     "data_files":
