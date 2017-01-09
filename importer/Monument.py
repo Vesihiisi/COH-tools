@@ -241,7 +241,7 @@ class SeArbetslSv(Monument):
                 self.wd_item["statements"][
                     PROPS["location"]] = helpers.listify(location)
             except IndexError:
-                #print("Could not find ort: " + self.ort)
+                # print("Could not find ort: " + self.ort)
                 return
 
     def set_id(self):
@@ -321,6 +321,16 @@ class SeShipSv(Monument):
 
 class SeBbrSv(Monument):
 
+    """
+    TODO
+    Add an option to have qualifiers in statements.
+    For example:
+
+    self.wd_item["statements"]["P11"] = [{"value": "Q34", "qualifiers": {"start_date": "1992"}, "source" : "some_source"}]
+
+    Add a general method to Monument so that you don't have to repeat this all the time?
+    """
+
     def update_labels(self):
         return
 
@@ -342,8 +352,9 @@ class SeBbrSv(Monument):
         Which legal protection each monument goes under is not stored in the WLM database.
         We therefore need to look that up by querying the source database via their API.
         """
-        #print(self.wd_item["statements"][PROPS["heritage_status"]])
-        url = "http://kulturarvsdata.se/" + self.wd_item["statements"][PROPS["bbr"]]
+        # print(self.wd_item["statements"][PROPS["heritage_status"]])
+        url = "http://kulturarvsdata.se/" + \
+            self.wd_item["statements"][PROPS["bbr"]]
         url_list = url.split("/")
         url_list.insert(-1, "jsonld")
         url = "/".join(url_list)
