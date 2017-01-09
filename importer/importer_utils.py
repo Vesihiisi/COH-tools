@@ -227,3 +227,7 @@ def get_bbr_link(text):
         return "raa/bbra/" + text
     elif get_http_code(url_bbr) == 200:
         return "raa/bbr/" + text
+
+
+def get_rid_of_brackets(text):
+    return re.sub('\(.*?\)', '', text).strip()
