@@ -478,11 +478,24 @@ class SeBbrSv(Monument):
         try:
             municipality = [x["item"] for x in municip_dict if x[
                 "en"].lower() == pattern_en][0]
-            print(municipality)
             self.add_statement("located_adm", municipality)
         except IndexError:
             print("Could not parse municipality: {}.".format(self.adm2))
             return
+
+    def set_inception(self):
+        """
+        TODO
+        Some fun examples:
+            1800-1809 <- this should work
+            1314 <- this too
+            1800-talets början <- hmmmm
+            1700-talet <- this should work! have a look at precision
+        """
+        if self.byggar:
+            print(self.byggar)
+            print(parse_year(self.byggar))
+            print("----")
 
     def update_wd_item(self):
         self.update_labels()
@@ -494,6 +507,7 @@ class SeBbrSv(Monument):
         self.set_location()
         self.set_adm_location()
         self.set_no_of_buildings()
+        self.set_inception()
 
     def __init__(self, db_row_dict, mapping, data_files=None):
         Monument.__init__(self, db_row_dict, mapping, data_files)
