@@ -18,7 +18,8 @@ class Monument(object):
             json.dumps(self.wd_item,
                        sort_keys=True,
                        indent=4,
-                       ensure_ascii=False)
+                       ensure_ascii=False,
+                       default = datetime_convert)
         )
 
     def set_country(self):
@@ -51,6 +52,10 @@ class Monument(object):
         if self.commonscat:
             self.wd_item["statements"][PROPS["commonscat"]] = self.commonscat
 
+    def set_registrant_url(self):
+        if self.registrant_url:
+            self.wd_item["registrant_url"] = self.registrant_url
+
     def set_street_address(self):
         """
         NOTE: P:located at street address says "Include building number through to post code"
@@ -59,15 +64,20 @@ class Monument(object):
         Compare with located on street (P669) and its qualifier street number (P670).
         """
         if self.address:
-            self.wd_item["statements"][
-                PROPS["located_street"]] = get_street_address(
-                    self.address, self.lang)
+            processed_address = get_street_address(self.address, self.lang)
+            if processed_address is not None:
+                self.wd_item["statements"][
+                    PROPS["located_street"]] = processed_address
 
     def exists(self, mapping):
         self.wd_item["wd-item"] = None
         if self.monument_article:
             wd_item = q_from_wikipedia(self.lang, self.monument_article)
             self.wd_item["wd-item"] = wd_item
+
+    def set_changed(self):
+        if self.changed:
+            self.wd_item["changed"] = self.changed
 
     def construct_wd_item(self, mapping, data_files=None):
         self.wd_item = {}
@@ -80,6 +90,8 @@ class Monument(object):
         self.set_image()
         self.set_commonscat()
         self.set_street_address()
+        self.set_registrant_url()
+        self.set_changed()
         # self.exists(mapping)
 
     def __init__(self, db_row_dict, mapping, data_files):
@@ -274,10 +286,16 @@ class SeShipSv(Monument):
                     value = dimensions_processed[dimension]
                     self.wd_item["statements"][PROPS[dimension]] = value
 
+    def set_homeport(self):
+        if self.hemmahamn and count_wikilinks(self.hemmahamn) == 1:
+            home_port = q_from_first_wikilink("sv", self.hemmahamn)
+            self.wd_item["statements"][PROPS["home_port"]] = home_port
+
     def update_wd_item(self):
         self.update_labels()
         self.set_manufacture_year()
         self.set_shipyard()
+        self.set_homeport()
         self.set_dimensions()
 
     def __init__(self, db_row_dict, mapping, data_files=None):

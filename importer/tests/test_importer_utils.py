@@ -189,3 +189,15 @@ def test_string_to_float_3():
 
 def test_string_to_float_3():
     assert string_to_float(",32,12.") == 32.12
+
+
+def test_count_wikilinks_1():
+    assert count_wikilinks("just text") == 0
+
+
+def test_count_wikilinks_2():
+    assert count_wikilinks("[[Movikens masugn|Moviken]]") == 1
+
+
+def test_count_wikilinks_3():
+    assert count_wikilinks("[[Tranås]] and also [[Svanesund]]") == 2

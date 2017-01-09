@@ -3,7 +3,7 @@ import re
 import mwparserfromhell as wparser
 import string
 import pywikibot
-
+import datetime
 
 def get_specific_table_name(countryname, languagename):
     return "monuments_{}_({})".format(countryname, languagename)
@@ -34,6 +34,11 @@ def load_json(filename):
                 print("Failed to decode file {}.".format(filename))
     except OSError as e:
         print("File {} does not exist.".format(filename))
+
+
+def datetime_convert(dt_object):
+    if isinstance(dt_object, datetime.datetime):
+        return dt_object.__str__()
 
 
 def remove_markup(text):
@@ -98,6 +103,10 @@ def get_street_address(address, language):
 def get_wikilinks(text):
     parsed = wparser.parse(text)
     return parsed.filter_wikilinks()
+
+
+def count_wikilinks(text):
+    return len(get_wikilinks(text))
 
 
 def q_from_wikipedia(language, page_title):

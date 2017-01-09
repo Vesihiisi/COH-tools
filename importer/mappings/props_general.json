@@ -7,6 +7,7 @@
     "country": "P17",
     "draft": "P2262",
     "heritage_status": "P1435",
+    "home_port": "P504",
     "image": "P18",
     "inception": "P571",
     "is": "P31",
