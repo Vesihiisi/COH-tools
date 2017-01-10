@@ -452,7 +452,10 @@ class SeBbrSv(Monument):
             Norra Murgatan 27, Uddens gränd 14-16
         """
         if self.plats:
-            True
+            if count_wikilinks(self.plats) == 1:
+                location = q_from_first_wikilink(self.lang, self.plats)
+                self.add_statement("location", location)
+            ## TODO: process if no wikilinks
         return
 
     def update_descriptions(self):
@@ -493,9 +496,7 @@ class SeBbrSv(Monument):
             1700-talet <- this should work! have a look at precision
         """
         if self.byggar:
-            print(self.byggar)
-            print(parse_year(self.byggar))
-            print("----")
+            return
 
     def update_wd_item(self):
         self.update_labels()
