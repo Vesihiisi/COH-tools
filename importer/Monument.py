@@ -1,11 +1,10 @@
 from os import path
 import json
 import mwparserfromhell as wparser
-import pywikibot
 import re
 import wikidataStuff.helpers as helpers
 from importer_utils import *
-from wikidataStuff.WikidataStuff import WikidataStuff as WDS
+
 
 MAPPING_DIR = "mappings"
 ADM0 = load_json(path.join(MAPPING_DIR, "adm0.json"))
