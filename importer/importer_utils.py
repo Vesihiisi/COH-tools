@@ -283,3 +283,22 @@ def commonscat_exists(text):
     site = pywikibot.Site(fam="commons")
     page = pywikibot.Page(site, "Category:"+text)
     return page.exists()
+
+
+def is_valid_url(url):
+    import re
+    pattern = re.compile(
+        r'^https?://'
+        r'(?:(?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?\.)+[A-Z]{2,6}\.?|'
+        r'localhost|'
+        r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})'
+        r'(?::\d+)?'
+        r'(?:/?|[/?]\S+)$', re.IGNORECASE)
+    try:
+        m = pattern.match(url)
+    except TypeError:
+        return False
+    if m:
+        return True
+    else:
+        return False

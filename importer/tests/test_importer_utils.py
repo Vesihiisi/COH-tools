@@ -314,3 +314,6 @@ def test_commonscat_exists_1():
 
 def test_commonscat_exists_2():
     assert commonscat_exists("adgafgtaffrsdf") == False
+
+def test_is_valid_url_1():
+    assert is_valid_url("http://pywikibot.readthedocs.io/en/latest/_modules/pywikibot/page/?highlight=WbQuantity") == True
