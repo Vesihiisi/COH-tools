@@ -1,66 +1,110 @@
-"""
+from wikidataStuff.WikidataStuff import WikidataStuff as WDS
+import pywikibot
+import importer_utils as utils
+from os import path
+
+MAPPING_DIR = "mappings"
+PROPS = utils.load_json(path.join(MAPPING_DIR, "props_general.json"))
+
+class Uploader(object):
+
+    TEST_ITEM = "Q4115189"
+
     def make_labels(self):
-        labels = self.wd_item["labels"]
+        labels = self.data["labels"]
         new_labels = {}
         for item in labels:
-            new_labels[item] = {'language':item, 'value':labels[item]}
+            new_labels[item] = {'language': item, 'value': labels[item]}
         return new_labels
 
     def make_descriptions(self):
-        descriptions = self.wd_item["descriptions"]
+        descriptions = self.data["descriptions"]
         new_descriptions = {}
         for item in descriptions:
-            new_descriptions[item] = {'language':item, 'value':descriptions[item]}
+            new_descriptions[item] = {
+                'language': item, 'value': descriptions[item]}
         return new_descriptions
 
-    def create_new_item(self):
-        repo = pywikibot.Site("test", "wikidata").data_repository()
-        wdstuff = WDS(repo)
-        data = {'labels':{}, 'descriptions':{}}
-        data["labels"] = self.make_labels()
-        data["descriptions"] = self.make_descriptions()
-        summary = "creating new item.. " + self.name
-        monument_item = None
-        monument_item = wdstuff.make_new_item(data, summary)
-        print("creating new item...")
-
-
-    def upload(self):
-        statements = self.wd_item["statements"]
-        labels = self.wd_item["labels"]
-        descriptions = self.wd_item["descriptions"]
-        exists = True if self.wd_item["wd-item"] is not None else False
-        if exists:
-            print("item exists: " + self.wd_item["wd-item"])
-            test_item = "Q4115189"
-            site = pywikibot.Site("wikidata", "wikidata")
-            repo = site.data_repository()
-            wdstuff = WDS(repo)
-            item = pywikibot.ItemPage(repo, test_item)
-            item_dict = item.get()
-            clm_dict = item_dict["claims"]
-            print(statements)
-            print(clm_dict)
-            for prop in statements:
-                if prop not in clm_dict:
-                    print(prop)
-                    val = statements[prop][0]["value"]
-                    if str(val).startswith("Q"):
-                        val_item = wdstuff.QtoItemPage(val)
-                        statement = wdstuff.Statement(val_item)
-                        print(statement)
-                        test_item_page = wdstuff.QtoItemPage(test_item)
-                        test_item_page.get()
-                        wdstuff.addNewClaim(prop, statement, test_item_page, None)
-        else:
-            pass
-            #new_item = self.create_new_item()
-
-"""
-class Uploader(object):
     def __init__(self, monument_object):
-        monument_data = monument_object.wd_item
-        print(monument_data)
+        self.data = monument_object.wd_item
+        site = pywikibot.Site("wikidata", "wikidata")
+        self.repo = site.data_repository()
+        self.wdstuff = WDS(self.repo)
+
+    def make_pywikibot_item(self, value, prop=None, ):
+        """
+        TODO
+        Process values like:
+        * time value
+        * Commonscat
+        """
+        val_item = None
+        if utils.string_is_q_item(value):
+            val_item = self.wdstuff.QtoItemPage(value)
+        elif prop == PROPS["image"] and utils.file_is_on_commons(value):
+            """
+            TODO
+            Separate this out
+            """
+            print("---------------- IMAGE!")
+            commonssite = pywikibot.Site("commons", "commons")
+            imagelink = pywikibot.Link(value, source=commonssite, defaultNamespace=6)
+            val_item = pywikibot.FilePage(imagelink)
+        elif utils.tuple_is_coords(value) and prop == PROPS["coordinates"]:
+            print("COORDINATES: ", value)
+            """
+            TODO
+            Move to separate method
+            Default precision, such as used by http://pywikibot.readthedocs.io/en/latest/_modules/scripts/claimit/
+            """
+            val_item = pywikibot.Coordinate(value[0], value[1], precision=0.0001)
+        elif isinstance(value, float) or isinstance(value, int):
+            val_item = pywikibot.WbQuantity(value, site=self.repo)
+        else:
+            val_item = value
+        return val_item
+
+    def make_statement(self, value):
+        return self.wdstuff.Statement(value)
+
+    def add_claims(self, wd_item, claims):
+        if wd_item:
+            item_dict = wd_item.get()
+            for claim in claims:
+                prop = claim
+                for x in claims[claim]:
+                    print(x)
+                    value = x['value']
+                    if len(value) > 0:
+                        quals = x['quals']
+                        refs = x['refs']
+                        wd_value = self.make_statement(self.make_pywikibot_item(value, prop))
+                        if any(quals):
+                            print("!!!!!!!there are some qualifiers....")
+                            for qual in quals:
+                                value = self.make_pywikibot_item(quals[qual], qual)
+                                qualifier = self.wdstuff.Qualifier(qual, value)
+                                wd_value.addQualifier(qualifier)
+                        if len(refs) > 0:
+                            print("there are some references....")
+                        if wd_value:
+                            print("")
+                            #print(wd_value)
+                            self.wdstuff.addNewClaim(prop, wd_value, wd_item, None)
 
     def upload(self):
-        print("uploading....")
+        labels = self.make_labels()
+        descriptions = self.make_descriptions()
+        claims = self.data["statements"]
+        exists = True if self.data["wd-item"] is not None else False
+        if exists:
+            item_q = self.data["wd-item"]
+            target_item = self.wdstuff.QtoItemPage(self.TEST_ITEM)
+            print(target_item)
+        else:
+            # print("new item created here...")
+            target_item = self.wdstuff.QtoItemPage(self.TEST_ITEM)
+            # target_item = self.create_new_item()
+        # TODO self.add_labels
+        # TODO self.add_descriptions
+        self.add_claims(target_item, claims)
