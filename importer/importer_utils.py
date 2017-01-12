@@ -249,3 +249,12 @@ def get_number_from_string(text):
     except ValueError:
         result = None
     return result
+
+
+def string_is_q_item(text):
+    pattern = re.compile("^Q[0-9]+$", re.I)
+    m = pattern.match(text)
+    if m:
+        return True
+    else:
+        return False

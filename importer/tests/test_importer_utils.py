@@ -266,3 +266,15 @@ def test_q_from_first_wikilink_1():
                                         " ligger i [[Hälsingland]], ingår sedan 1971 i "
                                         "[[Söderhamns kommun]] och motsvarar från 2016 "
                                         "[[Norrala distrikt]].")) == "Q206564"
+
+
+def test_string_is_q_item_1():
+    assert string_is_q_item("Q1641992") == True
+
+
+def test_string_is_q_item_2():
+    assert string_is_q_item("some string") == False
+
+
+def test_string_is_q_item_3():
+    assert string_is_q_item("Q34234vsf") == False
