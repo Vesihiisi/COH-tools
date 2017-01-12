@@ -269,3 +269,10 @@ def tuple_is_coords(sometuple):
         if all(isinstance(x, float) for x in sometuple):
             result = True
     return result
+
+
+def file_is_on_commons(text):
+    text = text.replace(" ", "_")
+    site = pywikibot.Site(fam="commons")
+    page = pywikibot.Page(site, "File:"+text)
+    return page.exists()

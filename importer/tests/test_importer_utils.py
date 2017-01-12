@@ -298,3 +298,10 @@ def test_tuple_is_coords_4():
 
 def test_tuple_is_coords_5():
     assert tuple_is_coords((-56.16, -14.86667)) == True
+
+def test_file_is_on_commons_1():
+    assert file_is_on_commons("Loojangu värvid 2.jpg") == True
+
+
+def test_file_is_on_commons_2():
+    assert file_is_on_commons("adgffhgadftgfhsfgdg") == False
