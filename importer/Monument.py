@@ -5,6 +5,7 @@ import pywikibot
 import re
 import wikidataStuff.helpers as helpers
 from importer_utils import *
+from wikidataStuff.WikidataStuff import WikidataStuff as WDS
 
 MAPPING_DIR = "mappings"
 ADM0 = load_json(path.join(MAPPING_DIR, "adm0.json"))
@@ -21,6 +22,19 @@ class Monument(object):
                        ensure_ascii=False,
                        default=datetime_convert)
         )
+
+    def prep_upload(self):
+        statements = self.wd_item["statements"]
+        labels = self.wd_item["labels"]
+        descriptions = self.wd_item["descriptions"]
+        for item in statements:
+            print(item, statements[item])
+        for label in labels:
+            print(label, labels[label])
+        for description in descriptions:
+            print(description, descriptions[description])
+        exists = True if self.wd_item["wd-item"] is not None else False
+        print(exists)
 
     def add_statement(self, prop_name, value, quals={}, refs=[]):
         base = self.wd_item["statements"]
@@ -122,7 +136,7 @@ class Monument(object):
         self.set_registrant_url()
         self.set_changed()
         self.set_source()
-        # self.exists(mapping)
+        #self.exists(mapping)
 
     def __init__(self, db_row_dict, mapping, data_files):
         for k, v in db_row_dict.items():
@@ -144,6 +158,8 @@ class SeFornminSv(Monument):
             self.add_label(self.lang, self.namn)
 
     def set_descriptions(self):
+        """
+        """
         DESC_BASE = "fornminne"
         description = ""
         if len(self.typ) > 0:
@@ -157,6 +173,10 @@ class SeFornminSv(Monument):
         self.add_statement("raa-nr", self.raa_nr)
 
     def set_adm_location(self):
+        """
+        TODO
+        Could not parse municipality: Göteborg.
+        """
         municip_dict = load_json(path.join(
             MAPPING_DIR, "sweden_municipalities.json"))
         pattern_en = self.adm2.lower() + " municipality"
@@ -216,16 +236,15 @@ class SeArbetslSv(Monument):
         return
 
     def set_descriptions(self):
-        DESC_BASE = "arbetslivsmuseum"
-        description = ""
-        if len(self.typ) > 0:
-            description = self.typ.lower()
-        else:
-            description = DESC_BASE
-        self.add_description("sv", description)
+        DESC_BASES = {"sv":"arbetslivsmuseum", "en":"museum"}
+        for language in ["en", "sv"]:
+            self.add_description(language, DESC_BASES[language])
 
-    def add_location_to_desc(self, municipality):
-        self.wd_item["descriptions"][self.lang] += " i " + municipality
+    def add_location_to_desc(self, language, municipality):
+        if language == "sv":
+            self.wd_item["descriptions"][language] += " i " + municipality
+        elif language == "en":
+            self.wd_item["descriptions"][language] += " in " + municipality + ", Sweden"
 
     def set_adm_location(self):
         municip_dict = self.data_files["municipalities"]
@@ -237,7 +256,11 @@ class SeArbetslSv(Monument):
             swedish_name = [x["sv"]
                             for x in municip_dict
                             if x["item"] == municipality][0]
-            self.add_location_to_desc(swedish_name)
+            english_name = [x["en"]
+                            for x in municip_dict
+                            if x["item"] == municipality][0]
+            self.add_location_to_desc("sv", swedish_name)
+            self.add_location_to_desc("en", english_name)
         except IndexError:
             print("Could not parse municipality: {}.".format(self.adm2))
             return
@@ -455,7 +478,7 @@ class SeBbrSv(Monument):
             if count_wikilinks(self.plats) == 1:
                 location = q_from_first_wikilink(self.lang, self.plats)
                 self.add_statement("location", location)
-            ## TODO: process if no wikilinks
+            # TODO: process if no wikilinks
         return
 
     def update_descriptions(self):
@@ -470,9 +493,11 @@ class SeBbrSv(Monument):
             inga registrerade byggnader
             Livsmedelsindustri, Tobak och snus
         """
-        extracted_no = get_number_from_string(get_text_inside_brackets(self.funktion))
+        extracted_no = get_number_from_string(
+            get_text_inside_brackets(self.funktion))
         if extracted_no is not None:
-            self.add_statement("has_parts_of_class", "Q41176", {"quantity": extracted_no})
+            self.add_statement(
+                "has_parts_of_class", "Q41176", {"quantity": extracted_no})
 
     def set_adm_location(self):
         municip_dict = load_json(path.join(
