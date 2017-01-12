@@ -1,10 +1,8 @@
 from Monument import *
+from Uploader import *
 from os import path
-from wikidataStuff.WikidataStuff import WikidataStuff as WD
-from wikidataStuff import wdqsLookup as lookup
 import argparse
 import pymysql
-import wikidataStuff
 import random
 from importer_utils import *
 
@@ -103,7 +101,8 @@ def run_test(monuments):
     #sample_item = random.choice(monuments)
     #sample_item.print_wd()
     for sample_item in monuments:
-        sample_item.upload()
+        uploader = Uploader(sample_item)
+        uploader.upload()
 
 
 def main(arguments):
