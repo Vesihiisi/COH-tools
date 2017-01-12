@@ -253,8 +253,16 @@ def test_q_from_wikipedia_1():
     assert q_from_wikipedia("sv", "Norrala socken") == "Q10602691"
 
 
+def test_q_from_wikipedia_2():
+    assert q_from_wikipedia("sv", "Användare:Vesihiisi") == None
+
+
+def test_q_from_wikipedia_2():
+    assert q_from_wikipedia("sv", "This page does not exist") == None
+
+
 def test_q_from_first_wikilink_1():
     assert q_from_first_wikilink("sv", ("'''Norrala socken'''"
-        " ligger i [[Hälsingland]], ingår sedan 1971 i "
-        "[[Söderhamns kommun]] och motsvarar från 2016 "
-        "[[Norrala distrikt]].")) == "Q206564"
+                                        " ligger i [[Hälsingland]], ingår sedan 1971 i "
+                                        "[[Söderhamns kommun]] och motsvarar från 2016 "
+                                        "[[Norrala distrikt]].")) == "Q206564"
