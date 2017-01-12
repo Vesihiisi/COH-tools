@@ -101,7 +101,8 @@ def get_items(connection, country, language, short=False):
 
 def run_test(monuments):
     sample_item = random.choice(monuments)
-    sample_item.print_wd()
+    #sample_item.print_wd()
+    sample_item.prep_upload()
 
 
 def main(arguments):
