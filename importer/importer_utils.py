@@ -276,3 +276,10 @@ def file_is_on_commons(text):
     site = pywikibot.Site(fam="commons")
     page = pywikibot.Page(site, "File:"+text)
     return page.exists()
+
+
+def commonscat_exists(text):
+    text = text.replace(" ", "_")
+    site = pywikibot.Site(fam="commons")
+    page = pywikibot.Page(site, "Category:"+text)
+    return page.exists()

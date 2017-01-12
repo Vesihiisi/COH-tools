@@ -299,9 +299,18 @@ def test_tuple_is_coords_4():
 def test_tuple_is_coords_5():
     assert tuple_is_coords((-56.16, -14.86667)) == True
 
+
 def test_file_is_on_commons_1():
     assert file_is_on_commons("Loojangu värvid 2.jpg") == True
 
 
 def test_file_is_on_commons_2():
     assert file_is_on_commons("adgffhgadftgfhsfgdg") == False
+
+
+def test_commonscat_exists_1():
+    assert commonscat_exists("Libraries in Germany by city") == True
+
+
+def test_commonscat_exists_2():
+    assert commonscat_exists("adgafgtaffrsdf") == False
