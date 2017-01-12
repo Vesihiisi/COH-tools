@@ -18,11 +18,19 @@ class Uploader(object):
             new_labels[item] = {'language': item, 'value': labels[item]}
         return new_labels
 
-    def add_labels(self, labels):
-        print(labels)
+    def add_labels(self, target_item, labels):
+        for label in labels:
+            target_item.get()
+            name = labels[label]['value']
+            lang = labels[label]['language']
+            self.wdstuff.addLabelOrAlias(lang, name, target_item, "label: " + name)
 
-    def add_descriptions(self, descriptions):
-        print(descriptions)
+    def add_descriptions(self, target_item, descriptions):
+        """
+        TODO
+        look at addLabelOrAlias, use item.editDescriptions() with same structure
+        """
+        return
 
     def make_descriptions(self):
         descriptions = self.data["descriptions"]
@@ -134,6 +142,6 @@ class Uploader(object):
             # print("new item created here...")
             target_item = self.wdstuff.QtoItemPage(self.TEST_ITEM)
             # target_item = self.create_new_item()
-        self.add_labels(labels)
-        self.add_descriptions(descriptions)
+        self.add_labels(target_item, labels)
+        self.add_descriptions(target_item, descriptions)
         self.add_claims(target_item, claims)
