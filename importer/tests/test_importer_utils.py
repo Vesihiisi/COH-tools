@@ -278,3 +278,23 @@ def test_string_is_q_item_2():
 
 def test_string_is_q_item_3():
     assert string_is_q_item("Q34234vsf") == False
+
+
+def test_tuple_is_coords_1():
+    assert tuple_is_coords((56.16566667, 14.86541667)) == True
+
+
+def test_tuple_is_coords_2():
+    assert tuple_is_coords((56.16566667)) == False
+
+
+def test_tuple_is_coords_3():
+    assert tuple_is_coords((56.16566667, 14.86541667, 14)) == False
+
+
+def test_tuple_is_coords_4():
+    assert tuple_is_coords(("56.16566667", 14.86541667)) == False
+
+
+def test_tuple_is_coords_5():
+    assert tuple_is_coords((-56.16, -14.86667)) == True

@@ -261,3 +261,11 @@ def string_is_q_item(text):
         return True
     else:
         return False
+
+
+def tuple_is_coords(sometuple):
+    result = False
+    if isinstance(sometuple, tuple) and len(sometuple) == 2:
+        if all(isinstance(x, float) for x in sometuple):
+            result = True
+    return result
