@@ -23,6 +23,10 @@ class Monument(object):
         )
 
     def add_statement(self, prop_name, value, quals={}, refs=[]):
+        """
+        If prop already exists, this will append another value to the array,
+        i.e. two statements with the same prop.
+        """
         base = self.wd_item["statements"]
         prop = PROPS[prop_name]
         qualifiers = {}
@@ -34,6 +38,27 @@ class Monument(object):
                 qualifiers[prop_name] = quals[k]
         statement = {"value": value, "quals": qualifiers, "refs": refs}
         base[prop].append(statement)
+
+    def substitute_statement(self, prop_name, value, quals={}, refs=[]):
+        """
+        Instead of adding to the array, replace the statement.
+        This is so that instances of child classes can override default values...
+        For example p31 museum -> art museum
+        """
+        base = self.wd_item["statements"]
+        prop = PROPS[prop_name]
+        qualifiers = {}
+        if prop not in base:
+            base[prop] = []
+            self.add_statement(prop_name, value, quals, refs)
+        else:
+            if len(quals) > 0:
+                for k in quals:
+                    prop_name = PROPS[k]
+                    qualifiers[prop_name] = quals[k]
+            statement = {"value": value, "quals": qualifiers, "refs": refs}
+            base[prop] = [statement]
+
 
     def add_label(self, language, text):
         base = self.wd_item["labels"]
@@ -156,7 +181,10 @@ class SeFornminSv(Monument):
         self.add_description("sv", description)
 
     def set_raa(self):
-        self.add_statement("raa-nr", self.raa_nr)
+        """
+        With registrant_url as source, to test source uploading mechanism
+        """
+        self.add_statement("raa-nr", self.raa_nr, refs=[self.registrant_url])
 
     def set_adm_location(self):
         """
@@ -175,6 +203,9 @@ class SeFornminSv(Monument):
             return
 
     def set_type(self):
+        """
+        Replace the original P31 rather than adding to it.
+        """
         if self.typ:
             table = self.data_files["types"]["mappings"]
             type_to_search_for = self.typ.lower()
@@ -182,7 +213,7 @@ class SeFornminSv(Monument):
                 special_type = [table[x]["items"]
                                 for x in table
                                 if x.lower() == type_to_search_for][0]
-                self.add_statement("is", special_type)
+                self.substitute_statement("is", special_type)
             except IndexError:
                 return
 
@@ -260,7 +291,7 @@ class SeArbetslSv(Monument):
                 special_type = [table[x]["items"]
                                 for x in table
                                 if x.lower() == type_to_search_for][0]
-                self.add_statement("is", special_type)
+                self.substitute_statement("is", special_type)
             except IndexError:
                 return
         return

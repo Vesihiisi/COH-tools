@@ -6,7 +6,7 @@ import pymysql
 import random
 from importer_utils import *
 
-SHORT = 20
+SHORT = 10
 MAPPING_DIR = "mappings"
 MONUMENTS_ALL = "monuments_all"
 
