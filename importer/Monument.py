@@ -266,7 +266,11 @@ class SeArbetslSv(Monument):
 
     def set_adm_location(self):
         municip_dict = self.data_files["municipalities"]
-        pattern = self.adm2.lower() + " municipality"
+        if self.adm2 == "Göteborg":
+            municip_name = "Gothenburg"
+        else:
+            municip_name = self.adm2
+        pattern = municip_name.lower() + " municipality"
         try:
             municipality = [x["item"] for x in municip_dict if x[
                 "en"].lower() == pattern][0]
