@@ -46,41 +46,43 @@ class Uploader(object):
         self.repo = site.data_repository()
         self.wdstuff = WDS(self.repo)
 
+    def make_image_item(self, filename):
+        commonssite = pywikibot.Site("commons", "commons")
+        imagelink = pywikibot.Link(value, source=commonssite, defaultNamespace=6)
+        return pywikibot.FilePage(imagelink)
+
+    def make_coords_item(self, coordstuple):
+        """
+        Default precision, such as used by http://pywikibot.readthedocs.io/en/latest/_modules/scripts/claimit/
+        """
+        DEFAULT_PREC = 0.0001
+        return pywikibot.Coordinate(
+                coordstuple[0], coordstuple[1], precision=DEFAULT_PREC)
+
+    def make_quantity_item(self, quantity, repo):
+        return pywikibot.WbQuantity(quantity, site=repo)
+
+    def make_q_item(self, qnumber):
+        return self.wdstuff.QtoItemPage(qnumber)
+
     def make_pywikibot_item(self, value, prop=None, ):
         """
         TODO
         Process values like:
         * time value
-        * Commonscat
         """
         val_item = None
         if type(value) is list and len(value) == 1:
             value = value[0]
         if utils.string_is_q_item(value):
-            val_item = self.wdstuff.QtoItemPage(value)
+            val_item = make_q_item(value)
         elif prop == PROPS["image"] and utils.file_is_on_commons(value):
-            """
-            TODO
-            Separate this out
-            """
-            print("---------------- IMAGE!")
-            commonssite = pywikibot.Site("commons", "commons")
-            imagelink = pywikibot.Link(
-                value, source=commonssite, defaultNamespace=6)
-            val_item = pywikibot.FilePage(imagelink)
+            val_item = self.make_image_item(value)
         elif utils.tuple_is_coords(value) and prop == PROPS["coordinates"]:
-            print("COORDINATES: ", value)
-            """
-            TODO
-            Move to separate method
-            Default precision, such as used by http://pywikibot.readthedocs.io/en/latest/_modules/scripts/claimit/
-            """
-            val_item = pywikibot.Coordinate(
-                value[0], value[1], precision=0.0001)
+            val_item = self.make_coords_item(value)
         elif isinstance(value, float) or isinstance(value, int):
-            val_item = pywikibot.WbQuantity(value, site=self.repo)
+            val_item = make_quantity_item(value, self.repo)
         elif prop == PROPS["commonscat"] and utils.commonscat_exists(value):
-            print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! commonscat")
             val_item = value
         else:
             val_item = value
@@ -110,17 +112,17 @@ class Uploader(object):
                         wd_claim = self.make_pywikibot_item(value, prop)
                         wd_value = self.make_statement(wd_claim)
                         if any(quals):
-                            print("!!!!!!!there are some qualifiers....")
                             for qual in quals:
                                 value = self.make_pywikibot_item(
                                     quals[qual], qual)
                                 qualifier = self.wdstuff.Qualifier(qual, value)
                                 wd_value.addQualifier(qualifier)
                         if len(refs) > 0:
-                            print("!!!!!!!!there are some references....")
                             for ref in refs:
                                 """
-                                When it's not a url but an item
+                                This only works if it's a url.
+                                If we have references of different sort,
+                                this will have to be appended.
                                 """
                                 if utils.is_valid_url(ref):
                                     ref = self.make_url_reference(ref)
@@ -144,4 +146,4 @@ class Uploader(object):
             # target_item = self.create_new_item()
         self.add_labels(target_item, labels)
         self.add_descriptions(target_item, descriptions)
-        self.add_claims(target_item, claims)
+        #self.add_claims(target_item, claims)
