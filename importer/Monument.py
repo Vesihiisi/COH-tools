@@ -356,17 +356,12 @@ class SeShipSv(Monument):
             self.add_statement("inception", {"time_value": byggar})
 
     def set_dimensions(self):
-        """
-        TODO
-        !!!!!
-        make sure BRT is unitless, but the other ones have metre.
-        """
         if self.dimensioner:
             dimensions_processed = parse_ship_dimensions(self.dimensioner)
             for dimension in dimensions_processed:
                 if dimension in PROPS:
                     value = dimensions_processed[dimension]
-                    self.add_statement(dimension, {"quantity_value": value, "unit": "Q11573"})
+                    self.add_statement(dimension, {"quantity_value": value, "unit": PROPS["metre"]})
 
     def set_homeport(self):
         if self.hemmahamn and count_wikilinks(self.hemmahamn) == 1:
