@@ -23,13 +23,22 @@ class Uploader(object):
             target_item.get()
             name = labels[label]['value']
             lang = labels[label]['language']
-            self.wdstuff.addLabelOrAlias(lang, name, target_item, "label: " + name)
+            self.wdstuff.addLabelOrAlias(
+                lang, name, target_item, "label: " + name)
 
     def add_descriptions(self, target_item, descriptions):
         """
         TODO
         look at addLabelOrAlias, use item.editDescriptions() with same structure
         """
+        for description in descriptions:
+            target_item.get()
+            name = descriptions[description]['value']
+            lang = descriptions[description]['language']
+            if not target_item.descriptions or lang not in target_item.descriptions:
+                descs = {lang: name}
+                target_item.editDescriptions(descs)
+                pywikibot.output("Added description: " + name)
         return
 
     def make_descriptions(self):
@@ -48,7 +57,8 @@ class Uploader(object):
 
     def make_image_item(self, filename):
         commonssite = pywikibot.Site("commons", "commons")
-        imagelink = pywikibot.Link(value, source=commonssite, defaultNamespace=6)
+        imagelink = pywikibot.Link(
+            filename, source=commonssite, defaultNamespace=6)
         return pywikibot.FilePage(imagelink)
 
     def make_coords_item(self, coordstuple):
@@ -57,31 +67,45 @@ class Uploader(object):
         """
         DEFAULT_PREC = 0.0001
         return pywikibot.Coordinate(
-                coordstuple[0], coordstuple[1], precision=DEFAULT_PREC)
+            coordstuple[0], coordstuple[1], precision=DEFAULT_PREC)
 
     def make_quantity_item(self, quantity, repo):
-        return pywikibot.WbQuantity(quantity, site=repo)
+        value = quantity['quantity_value']
+        if quantity['unit']:
+            unit = "http://www.wikidata.org/entity/" + quantity['unit']
+        else:
+            unit=None
+        return pywikibot.WbQuantity(value, unit, site=repo)
+
+    def make_time_item(self, quantity, repo):
+        """
+        This only works for full years.
+        TODO
+        Make it work for year range!
+        """
+        value = quantity['time_value']
+        print(value)
+        return pywikibot.WbTime(year=value)
 
     def make_q_item(self, qnumber):
         return self.wdstuff.QtoItemPage(qnumber)
 
     def make_pywikibot_item(self, value, prop=None, ):
-        """
-        TODO
-        Process values like:
-        * time value
-        """
         val_item = None
         if type(value) is list and len(value) == 1:
             value = value[0]
         if utils.string_is_q_item(value):
-            val_item = make_q_item(value)
+            val_item = self.make_q_item(value)
         elif prop == PROPS["image"] and utils.file_is_on_commons(value):
             val_item = self.make_image_item(value)
         elif utils.tuple_is_coords(value) and prop == PROPS["coordinates"]:
             val_item = self.make_coords_item(value)
-        elif isinstance(value, float) or isinstance(value, int):
-            val_item = make_quantity_item(value, self.repo)
+        elif isinstance(value, dict) and 'quantity_value' in value:
+            print("detected quantity")
+            val_item = self.make_quantity_item(value, self.repo)
+        elif isinstance(value, dict) and 'time_value' in value:
+            print("detected year")
+            val_item = self.make_time_item(value, self.repo)
         elif prop == PROPS["commonscat"] and utils.commonscat_exists(value):
             val_item = value
         else:
@@ -105,7 +129,7 @@ class Uploader(object):
                     print(prop)
                     print(x)
                     value = x['value']
-                    if len(value) > 0:
+                    if value != "":
                         ref = None
                         quals = x['quals']
                         refs = x['refs']
@@ -128,7 +152,7 @@ class Uploader(object):
                                     ref = self.make_url_reference(ref)
                         if wd_value:
                             print("")
-                            # print(wd_value)
+                            print("Added value: ", prop)
                             self.wdstuff.addNewClaim(prop, wd_value, wd_item, ref)
 
     def upload(self):
@@ -137,13 +161,13 @@ class Uploader(object):
         claims = self.data["statements"]
         exists = True if self.data["wd-item"] is not None else False
         if exists:
-            item_q = self.data["wd-item"]
+            # item_q = self.data["wd-item"]
             target_item = self.wdstuff.QtoItemPage(self.TEST_ITEM)
             print(target_item)
         else:
             # print("new item created here...")
             target_item = self.wdstuff.QtoItemPage(self.TEST_ITEM)
             # target_item = self.create_new_item()
-        self.add_labels(target_item, labels)
-        self.add_descriptions(target_item, descriptions)
-        #self.add_claims(target_item, claims)
+        #self.add_labels(target_item, labels)
+        #self.add_descriptions(target_item, descriptions)
+        self.add_claims(target_item, claims)
