@@ -359,7 +359,7 @@ class SeShipSv(Monument):
         """
         TODO
         !!!!!
-        ADD UNITS.
+        make sure BRT is unitless, but the other ones have metre.
         """
         if self.dimensioner:
             dimensions_processed = parse_ship_dimensions(self.dimensioner)
