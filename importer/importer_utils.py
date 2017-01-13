@@ -5,6 +5,7 @@ import string
 import pywikibot
 import datetime
 import requests
+import pymysql
 
 
 def get_specific_table_name(countryname, languagename):
