@@ -27,15 +27,12 @@ class Uploader(object):
                 lang, name, target_item, "label: " + name)
 
     def add_descriptions(self, target_item, descriptions):
-        """
-        TODO
-        look at addLabelOrAlias, use item.editDescriptions() with same structure
-        """
         for description in descriptions:
             target_item.get()
             name = descriptions[description]['value']
             lang = descriptions[description]['language']
-            if not target_item.descriptions or lang not in target_item.descriptions:
+            if (not target_item.descriptions or
+                    lang not in target_item.descriptions):
                 descs = {lang: name}
                 target_item.editDescriptions(descs)
                 pywikibot.output("Added description: " + name)
@@ -63,7 +60,8 @@ class Uploader(object):
 
     def make_coords_item(self, coordstuple):
         """
-        Default precision, such as used by http://pywikibot.readthedocs.io/en/latest/_modules/scripts/claimit/
+        Default precision, such as used by
+        http://pywikibot.readthedocs.io/en/latest/_modules/scripts/claimit/
         """
         DEFAULT_PREC = 0.0001
         return pywikibot.Coordinate(
@@ -74,7 +72,7 @@ class Uploader(object):
         if quantity['unit']:
             unit = "http://www.wikidata.org/entity/" + quantity['unit']
         else:
-            unit=None
+            unit = None
         return pywikibot.WbQuantity(value, unit, site=repo)
 
     def make_time_item(self, quantity, repo):
@@ -116,13 +114,13 @@ class Uploader(object):
         return self.wdstuff.Statement(value)
 
     def make_url_reference(self, uri):
+        prop = PROPS["reference_url"]
         ref = self.wdstuff.Reference(
-            source_test=self.wdstuff.make_simple_claim(PROPS["reference_url"], uri))
+            source_test=self.wdstuff.make_simple_claim(prop, uri))
         return ref
 
     def add_claims(self, wd_item, claims):
         if wd_item:
-            item_dict = wd_item.get()
             for claim in claims:
                 prop = claim
                 for x in claims[claim]:
@@ -153,7 +151,8 @@ class Uploader(object):
                         if wd_value:
                             print("")
                             print("Added value: ", prop)
-                            self.wdstuff.addNewClaim(prop, wd_value, wd_item, ref)
+                            self.wdstuff.addNewClaim(
+                                prop, wd_value, wd_item, ref)
 
     def upload(self):
         labels = self.make_labels()
@@ -168,6 +167,6 @@ class Uploader(object):
             # print("new item created here...")
             target_item = self.wdstuff.QtoItemPage(self.TEST_ITEM)
             # target_item = self.create_new_item()
-        #self.add_labels(target_item, labels)
-        #self.add_descriptions(target_item, descriptions)
+        self.add_labels(target_item, labels)
+        self.add_descriptions(target_item, descriptions)
         self.add_claims(target_item, claims)

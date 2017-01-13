@@ -1,7 +1,5 @@
 from os import path
 import json
-import mwparserfromhell as wparser
-import re
 import wikidataStuff.helpers as helpers
 from importer_utils import *
 
@@ -42,7 +40,8 @@ class Monument(object):
     def substitute_statement(self, prop_name, value, quals={}, refs=[]):
         """
         Instead of adding to the array, replace the statement.
-        This is so that instances of child classes can override default values...
+        This is so that instances of child classes
+        can override default values...
         For example p31 museum -> art museum
         """
         base = self.wd_item["statements"]
@@ -58,7 +57,6 @@ class Monument(object):
                     qualifiers[prop_name] = quals[k]
             statement = {"value": value, "quals": qualifiers, "refs": refs}
             base[prop] = [statement]
-
 
     def add_label(self, language, text):
         base = self.wd_item["labels"]
@@ -107,10 +105,12 @@ class Monument(object):
 
     def set_street_address(self):
         """
-        NOTE: P:located at street address says "Include building number through to post code"
+        NOTE: P:located at street address says
+        "Include building number through to post code"
         In most cases, there's no post code in the data!
         In practice though, it's often omitted....
-        Compare with located on street (P669) and its qualifier street number (P670).
+        Compare with located on street (P669)
+        and its qualifier street number (P670).
         """
         if self.address:
             processed_address = get_street_address(self.address, self.lang)
@@ -361,7 +361,9 @@ class SeShipSv(Monument):
             for dimension in dimensions_processed:
                 if dimension in PROPS:
                     value = dimensions_processed[dimension]
-                    self.add_statement(dimension, {"quantity_value": value, "unit": PROPS["metre"]})
+                    self.add_statement(
+                        dimension, {"quantity_value": value,
+                                    "unit": PROPS["metre"]})
 
     def set_homeport(self):
         if self.hemmahamn and count_wikilinks(self.hemmahamn) == 1:
@@ -386,16 +388,6 @@ class SeShipSv(Monument):
 
 
 class SeBbrSv(Monument):
-
-    """
-    TODO
-    Add an option to have qualifiers in statements.
-    For example:
-
-    self.wd_item["statements"]["P11"] = [{"value": "Q34", "qualifiers": {"start_date": "1992"}, "source" : "some_source"}]
-
-    Add a general method to Monument so that you don't have to repeat this all the time?
-    """
 
     def update_labels(self):
         """
@@ -423,18 +415,29 @@ class SeBbrSv(Monument):
 
     def set_heritage_bbr(self):
         """
-        TODO: Get starts_from from parentheses in byggnadsminne and statligt byggnadsminne
+        TODO: Get starts_from from parentheses in
+        byggnadsminne and statligt byggnadsminne.
         This needs to be overriden from parent class,
         because there are three possible options that can't be
         mapped automatically:
         ---
-        In Sweden there are three different types of legal protection for different types of
-        cultural heritage, so we created three new items:
-        governmental listed building complex (Q24284071) for buildings owned by the state,
-        individual listed building complex (Q24284072) for privately owned buildings,
-        ecclesiastical listed building complex (Q24284073) for older buildings owned by the Church of Sweden.
-        Which legal protection each monument goes under is not stored in the WLM database.
-        We therefore need to look that up by querying the source database via their API.
+        In Sweden there are three different types of legal protection
+        for different types of cultural heritage,
+        so we created three new items:
+
+        governmental listed building complex (Q24284071)
+        for buildings owned by the state,
+
+        individual listed building complex (Q24284072)
+        for privately owned buildings,
+
+        ecclesiastical listed building complex (Q24284073)
+        for older buildings owned by the Church of Sweden.
+
+        Which legal protection each monument goes under
+        is not stored in the WLM database.
+        We therefore need to look that up by
+        querying the source database via their API.
         """
         # print(self.wd_item["statements"][PROPS["heritage_status"]])
         url = "http://kulturarvsdata.se/" + \

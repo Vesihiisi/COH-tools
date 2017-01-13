@@ -3,7 +3,6 @@ from Uploader import *
 from os import path
 import argparse
 import pymysql
-import random
 from importer_utils import *
 
 SHORT = 10
@@ -41,8 +40,10 @@ def create_connection(arguments):
         charset="utf8")
 
 
-SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv, "data_files": {}},
-                   "monuments_se-bbr_(sv)": {"class": SeBbrSv, "data_files": {}},
+SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
+                                              "data_files": {}},
+                   "monuments_se-bbr_(sv)": {"class": SeBbrSv,
+                                             "data_files": {}},
                    "monuments_se-fornmin_(sv)":
                    {"class": SeFornminSv,
                     "data_files":
@@ -98,8 +99,6 @@ def get_items(connection, country, language, short=False):
 
 
 def run_test(monuments):
-    #sample_item = random.choice(monuments)
-    #sample_item.print_wd()
     for sample_item in monuments:
         uploader = Uploader(sample_item)
         uploader.upload()

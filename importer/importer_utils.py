@@ -23,7 +23,7 @@ def table_exists(connection, tablename):
     try:
         if get_number_of_rows(connection, tablename) > 0:
             return True
-    except pymysql.ProgrammingError as e:
+    except pymysql.ProgrammingError:
         return False
 
 
@@ -34,7 +34,7 @@ def load_json(filename):
                 return json.load(f)
             except ValueError:
                 print("Failed to decode file {}.".format(filename))
-    except OSError as e:
+    except OSError:
         print("File {} does not exist.".format(filename))
 
 
@@ -87,12 +87,12 @@ def get_street_address(address, language):
         if "," in address:
             address_split = address.split(",", re.IGNORECASE)
             for part in address_split:
-                if (any(substring in part for substring in patterns)
-                        and contains_digit(part)):
+                if (any(substring in part for substring in patterns) and
+                        contains_digit(part)):
                     interesting_part = part.strip()
         else:
-            if (any(substring in address for substring in patterns)
-                    and contains_digit(address)):
+            if (any(substring in address for substring in patterns) and
+                    contains_digit(address)):
                 interesting_part = address
         if len(interesting_part) > 1:
             interesting_part_split = interesting_part.split(" ")
@@ -150,8 +150,8 @@ def legit_year_range(text):
         part_one = text.split("-")[0]
         part_two = text.split("-")[1]
         if parse_year(part_one) and parse_year(part_two):
-            if (len(part_one) == len(part_two)
-                    and int(part_two) > int(part_one)):
+            if (len(part_one) == len(part_two) and
+                    int(part_two) > int(part_one)):
                 year_range = (int(part_one), int(part_two))
             elif len(part_one) == 4 and len(part_two) == 2:
                 full_length_part_two = part_one[:2] + part_two
@@ -238,7 +238,7 @@ def get_rid_of_brackets(text):
 
 def get_text_inside_brackets(text):
     if "(" in text:
-        return text[text.find("(")+1:text.find(")")]
+        return text[text.find("(") + 1:text.find(")")]
     else:
         return text
 
@@ -274,14 +274,14 @@ def tuple_is_coords(sometuple):
 def file_is_on_commons(text):
     text = text.replace(" ", "_")
     site = pywikibot.Site(fam="commons")
-    page = pywikibot.Page(site, "File:"+text)
+    page = pywikibot.Page(site, "File:" + text)
     return page.exists()
 
 
 def commonscat_exists(text):
     text = text.replace(" ", "_")
     site = pywikibot.Site(fam="commons")
-    page = pywikibot.Page(site, "Category:"+text)
+    page = pywikibot.Page(site, "Category:" + text)
     return page.exists()
 
 
