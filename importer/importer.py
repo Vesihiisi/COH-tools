@@ -12,6 +12,17 @@ MONUMENTS_ALL = "monuments_all"
 
 
 class Mapping(object):
+    """
+    For a table to be processed, it requires a basic mapping file,
+    named just like the table (eg. se-ship_(sv).json)
+    At the very least, it should contain the name of the column
+    in the _specific_ table should be mapped against the "id" column
+    in monuments_all().
+    That's because the column does not have to be called "id"
+    in the specific table.
+    Such as:
+    "_id": "signal"
+    """
 
     def join_id(self):
         return self.file_content["_id"]
