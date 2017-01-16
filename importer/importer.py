@@ -48,6 +48,17 @@ class Mapping(object):
 
 
 def make_query(country_code, language, specific_table, join_id, all_id="id"):
+    """
+    you know what. MONUMENTS_ALL IS NOT EVEN NECESSARY
+    IT WILL SOLVE THIS WHOLE JOINING PROBLEM IF YOU GET RID OF IT
+    THERE IS LITERALLY NOTHING UNIQUE IN IT
+    SERIOUSLY
+    WHY
+    bUT: parent class Monument() relies on consistent attributes to assign
+    simple values (name, image, adm2)
+    idea: make methods in Monument() take params to indicate where to search
+    for the values, like add_image("bilde")
+    """
     query = ('select DISTINCT *  from `{}` as m_all JOIN `{}` '
              'as m_spec on m_all.{} = m_spec.{} '
              'WHERE m_all.adm0="{}" and m_all.lang="{}"'
@@ -125,8 +136,10 @@ def get_items(connection, country, language, short=False):
         class_to_use = Monument
         data_files = None
     print(class_to_use)
+    database_rows = select_query(query, connection)
+    print(len(database_rows))
     results = [class_to_use(table_row, mapping, data_files)
-               for table_row in select_query(query, connection)]
+               for table_row in database_rows]
     print("Fetched {} items from {}".format(
         len(results), get_specific_table_name(country, language)))
     return results
