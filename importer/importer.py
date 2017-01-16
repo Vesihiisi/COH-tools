@@ -12,6 +12,7 @@ MONUMENTS_ALL = "monuments_all"
 
 
 class Mapping(object):
+
     """
     For a table to be processed, it requires a basic mapping file,
     named just like the table (eg. se-ship_(sv).json)
@@ -91,7 +92,9 @@ def create_connection(arguments):
 There must be a better way to do this.....
 """
 SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
-                                              "data_files": {}},
+                                              "data_files":
+                                              {"functions":
+                                               "se-ship_(sv)_functions.json"}},
                    "monuments_dk-bygninger_(da)": {"class": DkBygningDa,
                                                    "data_files": {}},
                    "monuments_se-bbr_(sv)": {"class": SeBbrSv,

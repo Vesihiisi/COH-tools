@@ -36,6 +36,12 @@ class Monument(object):
         statement = {"value": value, "quals": qualifiers, "refs": refs}
         base[prop].append(statement)
 
+    def remove_statement(self, prop_name):
+        base = self.wd_item["statements"]
+        prop = PROPS[prop_name]
+        if prop in base:
+            del base[prop]
+
     def substitute_statement(self, prop_name, value, quals={}, refs=[]):
         """
         Instead of adding to the array, replace the statement.
@@ -341,6 +347,20 @@ class SeShipSv(Monument):
     def update_labels(self):
         return
 
+    def set_type(self):
+        table = self.data_files["functions"]["mappings"]
+        if self.funktion:
+            special_type = self.funktion.lower()
+            try:
+                functions = [table[x]["items"]
+                             for x in table if x.lower() == special_type][0]
+                if len(functions) > 0:
+                    self.remove_statement("is")
+                    for f in functions:
+                        self.add_statement("is", f)
+            except IndexError:
+                return
+
     def set_shipyard(self):
         if self.varv:
             possible_varv = self.varv
@@ -382,6 +402,7 @@ class SeShipSv(Monument):
 
     def update_wd_item(self):
         self.update_labels()
+        self.set_type()
         self.set_manufacture_year()
         self.set_shipyard()
         self.set_homeport()
