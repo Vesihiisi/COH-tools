@@ -1,6 +1,5 @@
 from os import path
 import json
-import wikidataStuff.helpers as helpers
 from importer_utils import *
 
 
@@ -100,8 +99,7 @@ class Monument(object):
 
     def set_registrant_url(self):
         if self.registrant_url:
-            self.wd_item["registrant_url"] = helpers.listify(
-                self.registrant_url)
+            self.wd_item["registrant_url"] = self.registrant_url
 
     def set_street_address(self):
         """
