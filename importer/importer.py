@@ -69,7 +69,7 @@ There must be a better way to do this.....
 """
 SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                                               "data_files": {}},
-                   "monuments_dk-bygning_(da)": {"class": DkBygningDa,
+                   "monuments_dk-bygninger_(da)": {"class": DkBygningDa,
                                                  "data_files": {}},
                    "monuments_se-bbr_(sv)": {"class": SeBbrSv,
                                              "data_files": {}},
@@ -124,6 +124,7 @@ def get_items(connection, country, language, short=False):
     else:
         class_to_use = Monument
         data_files = None
+    print(class_to_use)
     results = [class_to_use(table_row, mapping, data_files)
                for table_row in select_query(query, connection)]
     print("Fetched {} items from {}".format(

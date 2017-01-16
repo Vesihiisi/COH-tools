@@ -570,8 +570,31 @@ class SeBbrSv(Monument):
 
 class DkBygningDa(Monument):
 
+    def set_adm_location(self):
+        if count_wikilinks(self.adm2) == 1:
+            adm_location = q_from_first_wikilink("da", self.adm2)
+            self.add_statement("located_adm", adm_location)
+
+    def set_location(self):
+        """
+        Use self.municipality because IT'S PLACE NOT MUNICIPALITY
+        (that's adm2)
+        """
+        place_item = False
+        if self.municipality:
+            place = self.municipality
+            print(place)
+            if count_wikilinks(place) == 1:
+                place_item = q_from_first_wikilink("da", place)
+            else:
+                if wp_page_exists("da", place):
+                    place_item = q_from_wikipedia("da", place)
+        if place_item:
+            self.add_statement("location", place_item)
+
     def update_wd_item(self):
-        print(self.name)
+        self.set_adm_location()
+        self.set_location()
 
     def __init__(self, db_row_dict, mapping, data_files=None):
         Monument.__init__(self, db_row_dict, mapping, data_files)
