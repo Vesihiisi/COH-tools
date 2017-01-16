@@ -185,13 +185,13 @@ class SeFornminSv(Monument):
         self.add_statement("raa-nr", self.raa_nr, refs=[self.registrant_url])
 
     def set_adm_location(self):
-        """
-        TODO
-        Could not parse municipality: Göteborg.
-        """
         municip_dict = load_json(path.join(
             MAPPING_DIR, "sweden_municipalities.json"))
-        pattern_en = self.adm2.lower() + " municipality"
+        if self.adm2 == "Göteborg":
+            municip_name = "Gothenburg"
+        else:
+            municip_name = self.adm2
+        pattern_en = municip_name.lower() + " municipality"
         try:
             municipality = [x["item"] for x in municip_dict if x[
                 "en"].lower() == pattern_en][0]
@@ -234,7 +234,6 @@ class SeFornminSv(Monument):
         # TODO
         # This is messy and not super prioritized...
         return
-
 
     def update_wd_item(self):
         self.update_labels()
@@ -534,9 +533,13 @@ class SeBbrSv(Monument):
                 "has_parts_of_class", "Q41176", {"quantity": extracted_no})
 
     def set_adm_location(self):
+        if self.adm2 == "Göteborg":
+            municip_name = "Gothenburg"
+        else:
+            municip_name = self.adm2
         municip_dict = load_json(path.join(
             MAPPING_DIR, "sweden_municipalities.json"))
-        pattern_en = self.adm2.lower() + " municipality"
+        pattern_en = municip_name.lower() + " municipality"
         try:
             municipality = [x["item"] for x in municip_dict if x[
                 "en"].lower() == pattern_en][0]
