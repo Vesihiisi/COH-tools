@@ -58,6 +58,17 @@ def make_query(country_code, language, specific_table, join_id, all_id="id"):
     simple values (name, image, adm2)
     idea: make methods in Monument() take params to indicate where to search
     for the values, like add_image("bilde")
+    --
+    Note: Until this is fixed, you won't be able to do Denmark and then
+    who knows what else because the joins on Denmark are super weird,
+    because apparently id in monuments_all corresponds to
+    three. concatenated. strings. in dk_bygninger
+    (101--15--1 is kommunenr + ejendomsnr + bygningsnr)
+    and then you try to join on something else like name
+    but then you end up with 48 000 rows instead of 7000
+    and it doesn't ever happen with sweden for some reason???
+
+    so yeah, don't join with monuments_all.
     """
     query = ('select DISTINCT *  from `{}` as m_all JOIN `{}` '
              'as m_spec on m_all.{} = m_spec.{} '
@@ -75,13 +86,14 @@ def create_connection(arguments):
         db=arguments.db,
         charset="utf8")
 
+
 """
 There must be a better way to do this.....
 """
 SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                                               "data_files": {}},
                    "monuments_dk-bygninger_(da)": {"class": DkBygningDa,
-                                                 "data_files": {}},
+                                                   "data_files": {}},
                    "monuments_se-bbr_(sv)": {"class": SeBbrSv,
                                              "data_files": {}},
                    "monuments_se-fornmin_(sv)":
