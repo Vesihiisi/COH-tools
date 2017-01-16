@@ -566,3 +566,13 @@ class SeBbrSv(Monument):
     def __init__(self, db_row_dict, mapping, data_files=None):
         Monument.__init__(self, db_row_dict, mapping, data_files)
         self.update_wd_item()
+
+
+class DkBygningDa(Monument):
+
+    def update_wd_item(self):
+        print(self.name)
+
+    def __init__(self, db_row_dict, mapping, data_files=None):
+        Monument.__init__(self, db_row_dict, mapping, data_files)
+        self.update_wd_item()

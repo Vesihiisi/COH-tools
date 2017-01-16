@@ -48,10 +48,10 @@ class Mapping(object):
 
 
 def make_query(country_code, language, specific_table, join_id, all_id="id"):
-    query = ('select *  from `{}` as m_all JOIN `{}` '
-            'as m_spec on m_all.{} = m_spec.{} '
-            'WHERE m_all.adm0="{}" and m_all.lang="{}"'
-            ).format(MONUMENTS_ALL, specific_table, all_id, join_id, country_code, language)
+    query = ('select DISTINCT *  from `{}` as m_all JOIN `{}` '
+             'as m_spec on m_all.{} = m_spec.{} '
+             'WHERE m_all.adm0="{}" and m_all.lang="{}"'
+             ).format(MONUMENTS_ALL, specific_table, all_id, join_id, country_code, language)
     print(query)
     return query
 
@@ -64,9 +64,13 @@ def create_connection(arguments):
         db=arguments.db,
         charset="utf8")
 
-
+"""
+There must be a better way to do this.....
+"""
 SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                                               "data_files": {}},
+                   "monuments_dk-bygning_(da)": {"class": DkBygningDa,
+                                                 "data_files": {}},
                    "monuments_se-bbr_(sv)": {"class": SeBbrSv,
                                              "data_files": {}},
                    "monuments_se-fornmin_(sv)":
@@ -124,7 +128,6 @@ def get_items(connection, country, language, short=False):
                for table_row in select_query(query, connection)]
     print("Fetched {} items from {}".format(
         len(results), get_specific_table_name(country, language)))
-    results[-1].print_wd()
     return results
 
 
