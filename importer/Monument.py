@@ -570,6 +570,9 @@ class SeBbrSv(Monument):
 
 class DkBygningDa(Monument):
 
+    def set_inception(self):
+        print(self.opforelsesar)
+
     def set_adm_location(self):
         if count_wikilinks(self.adm2) == 1:
             adm_location = q_from_first_wikilink("da", self.adm2)
@@ -583,7 +586,6 @@ class DkBygningDa(Monument):
         place_item = False
         if self.municipality:
             place = self.municipality
-            print(place)
             if count_wikilinks(place) == 1:
                 place_item = q_from_first_wikilink("da", place)
             else:
@@ -592,9 +594,18 @@ class DkBygningDa(Monument):
         if place_item:
             self.add_statement("location", place_item)
 
+    def set_sagsnr(self):
+        """
+        Danish listed buildings case ID (P2783) 
+        """
+        #self.add_statement("listed_building_dk", self.sagsnr)
+        print(self.sagsnavn, self.adresse, self.sagsnr)
+
     def update_wd_item(self):
         self.set_adm_location()
         self.set_location()
+        self.set_inception()
+        self.set_sagsnr()
 
     def __init__(self, db_row_dict, mapping, data_files=None):
         Monument.__init__(self, db_row_dict, mapping, data_files)
