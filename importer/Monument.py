@@ -217,21 +217,30 @@ class SeFornminSv(Monument):
             except IndexError:
                 return
 
+    def get_socken(self):
+        if self.socken:
+            return socken_to_q(self.socken, self.landskap)
+
     def set_location(self):
         if self.address:
             if "[[" in self.address:
                 wikilinks = get_wikilinks(self.address)
                 if len(wikilinks) == 1:
                     target_page = wikilinks[0].title
-                    print(self.address)
-                    print(target_page)
                     wd_item = q_from_wikipedia(self.lang, target_page)
                     self.add_statement("location", wd_item)
+        if self.socken:
+            self.add_statement("location", self.get_socken())
 
     def set_inception(self):
         # TODO
         # This is messy and not super prioritized...
         return
+
+    def set_socken(self):
+        if self.socken:
+            print(self.socken, self.landskap)
+            socken_to_q(self.socken, self.landskap)
 
     def update_wd_item(self):
         self.update_labels()

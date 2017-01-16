@@ -42,7 +42,7 @@ class Uploader(object):
                 pywikibot.output("Added description: " + name)
                 if log:
                     t_id = target_item.getID()
-                    log.logit(t_id + " ADDED DESCRIPTION " + lang + " name")
+                    log.logit(t_id + " ADDED DESCRIPTION " + lang + " " + name)
 
     def make_descriptions(self):
         descriptions = self.data["descriptions"]
