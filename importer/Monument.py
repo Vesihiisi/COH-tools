@@ -237,10 +237,6 @@ class SeFornminSv(Monument):
         # This is messy and not super prioritized...
         return
 
-    def set_socken(self):
-        if self.socken:
-            print(self.socken, self.landskap)
-            socken_to_q(self.socken, self.landskap)
 
     def update_wd_item(self):
         self.update_labels()
