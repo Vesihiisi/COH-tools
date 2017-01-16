@@ -25,7 +25,16 @@ class Mapping(object):
     """
 
     def join_id(self):
-        return self.file_content["_id"]
+        DEFAULT_ID = "id"
+        joins = {}
+        if self.country != "dk-bygninger":
+            joins["all_id"] = DEFAULT_ID
+            joins["join_id"] = self.file_content["_id"]
+        else:
+            joins["all_id"] = "name"
+            joins["join_id"] = "sagsnavn"
+        joins["country_code"] = self.file_content["country_code"]
+        return joins
 
     def load_mapping_file(self, countryname, languagename):
         filename = path.join(
@@ -34,13 +43,17 @@ class Mapping(object):
 
     def __init__(self, countryname, languagename):
         self.file_content = self.load_mapping_file(countryname, languagename)
+        self.country = countryname
+        self.joins = self.join_id()
 
 
-def make_query(country, language, specific_table, join_id):
-    return ('select *  from {} as m_all JOIN `{}` '
-            'as m_spec on m_all.id = m_spec.{} '
-            'WHERE m_all.country="{}" and m_all.lang="{}"'
-            ).format(MONUMENTS_ALL, specific_table, join_id, country, language)
+def make_query(country_code, language, specific_table, join_id, all_id="id"):
+    query = ('select *  from `{}` as m_all JOIN `{}` '
+            'as m_spec on m_all.{} = m_spec.{} '
+            'WHERE m_all.adm0="{}" and m_all.lang="{}"'
+            ).format(MONUMENTS_ALL, specific_table, all_id, join_id, country_code, language)
+    print(query)
+    return query
 
 
 def create_connection(arguments):
@@ -90,10 +103,14 @@ def get_items(connection, country, language, short=False):
         print("Table does not exist.")
         return
     mapping = Mapping(country, language)
-    query = make_query(country,
+    country_code = mapping.joins["country_code"]
+    all_id = mapping.joins["all_id"]
+    join_id = mapping.joins["join_id"]
+    query = make_query(country_code,
                        language,
                        specific_table_name,
-                       mapping.join_id())
+                       join_id,
+                       all_id)
     if short:
         query += " LIMIT " + str(SHORT)
     if specific_table_name in SPECIFIC_TABLES.keys():
@@ -107,6 +124,7 @@ def get_items(connection, country, language, short=False):
                for table_row in select_query(query, connection)]
     print("Fetched {} items from {}".format(
         len(results), get_specific_table_name(country, language)))
+    results[-1].print_wd()
     return results
 
 

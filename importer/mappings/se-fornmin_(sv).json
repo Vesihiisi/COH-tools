@@ -4,13 +4,14 @@
         "item": "Q34",
         "name": "Sweden"
     },
-    "heritage": {
-        "item": "Q21287602",
-        "name": "monument in Fornminnesregistret"
-    },
+    "country_code": "se",
     "default_is": {
         "item": "Q3395377",
         "name": "ancient monument"
+    },
+    "heritage": {
+        "item": "Q21287602",
+        "name": "monument in Fornminnesregistret"
     },
     "language": "sv"
 }

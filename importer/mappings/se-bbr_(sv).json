@@ -4,6 +4,7 @@
         "item": "Q34",
         "name": "Sweden"
     },
+    "country_code": "se",
     "default_is": {
         "item": "Q1497375",
         "name": "item with multiple objects"

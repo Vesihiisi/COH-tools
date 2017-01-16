@@ -1,16 +1,17 @@
 {
-    "_id" : "id",
+    "_id": "id",
     "country": {
         "item": "Q34",
         "name": "Sweden"
     },
-    "heritage": {
-        "item": "Q10416961",
-        "name": "working life museum"
-    },
+    "country_code": "se",
     "default_is": {
         "item": "Q33506",
         "name": "museum"
+    },
+    "heritage": {
+        "item": "Q10416961",
+        "name": "working life museum"
     },
     "language": "sv"
 }

@@ -1,0 +1,17 @@
+{
+    "_id": "",
+    "country": {
+        "item": "Q35",
+        "name": "Denmark"
+    },
+    "country_code": "dk",
+    "default_is": {
+        "item": "Q1497375",
+        "name": "item with multiple objects"
+    },
+    "heritage": {
+        "item": "Q21436546",
+        "name": "monument on Kulturstyrelsen register"
+    },
+    "language": "da"
+}
