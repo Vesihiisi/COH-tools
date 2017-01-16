@@ -212,6 +212,34 @@ def parse_ship_dimensions(text):
     return dimensions_dict
 
 
+def is_vowel(char):
+    vowels = "auoiyéeöåäáæø"
+    if char.lower() in vowels:
+        return True
+    else:
+        return False
+
+
+def get_last_char(text):
+    return text[-1]
+
+
+def last_char_is_vowel(text):
+    return is_vowel(get_last_char(text))
+
+
+def socken_to_q(socken, landskap):
+    if last_char_is_vowel(socken) or get_last_char(socken) == "s":
+        socken_name = socken + " socken"
+    else:
+        socken_name = socken + "s socken"
+    socken_and_landskap = socken_name + ", " + landskap
+    if wp_page_exists("sv", socken_and_landskap):
+        return q_from_wikipedia("sv", socken_and_landskap)
+    elif wp_page_exists("sv", socken_name):
+        return q_from_wikipedia("sv", socken_name)
+
+
 def get_http_code(url):
     r = requests.get(url)
     return r.status_code
@@ -284,6 +312,15 @@ def commonscat_exists(text):
     site = pywikibot.Site(fam="commons")
     page = pywikibot.Page(site, "Category:" + text)
     return page.exists()
+
+
+def wp_page_exists(language, title):
+    site = pywikibot.Site(language, "wikipedia")
+    page = pywikibot.Page(site, title)
+    if page.exists():
+        return True
+    else:
+        return False
 
 
 def is_valid_url(url):

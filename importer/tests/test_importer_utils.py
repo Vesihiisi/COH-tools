@@ -203,24 +203,6 @@ def test_count_wikilinks_3():
     assert count_wikilinks("[[Tranås]] and also [[Svanesund]]") == 2
 
 
-def test_get_http_code_1():
-    assert get_http_code(
-        "http://kulturarvsdata.se/raa/bbr/21300000003265") == 200
-
-
-def test_get_http_code_2():
-    assert get_http_code(
-        "http://kulturarvsdata.se/raa/bbra/21300000003265") == 404
-
-
-def test_get_bbr_link_1():
-    assert get_bbr_link("21320000019150") == "raa/bbra/21320000019150"
-
-
-def test_get_bbr_link_2():
-    assert get_bbr_link("21300000003265") == "raa/bbr/21300000003265"
-
-
 def test_get_rid_of_brackets_1():
     assert get_rid_of_brackets(
         "Kulla Gunnarstorps mölla (Kulla Gunnarstorp 1:21)") == "Kulla Gunnarstorps mölla"
@@ -315,5 +297,75 @@ def test_commonscat_exists_1():
 def test_commonscat_exists_2():
     assert commonscat_exists("adgafgtaffrsdf") == False
 
+
 def test_is_valid_url_1():
-    assert is_valid_url("http://pywikibot.readthedocs.io/en/latest/_modules/pywikibot/page/?highlight=WbQuantity") == True
+    assert is_valid_url(
+        "http://pywikibot.readthedocs.io/en/latest/_modules/pywikibot/page/?highlight=WbQuantity") == True
+
+
+def test_get_last_char_1():
+    assert get_last_char("foobar") == "r"
+
+
+def test_socken_to_q_1():
+    assert socken_to_q("Holm", "Medelpad") == "Q10525331"
+
+
+def test_socken_to_q_2():
+    assert socken_to_q("Holm", "Uppland") == "Q10525332"
+
+
+def test_socken_to_q_3():
+    assert socken_to_q("Långtora", "Uppland") == "Q10572689"
+
+
+def test_socken_to_q_4():
+    assert socken_to_q("Linde", "Västmanland") == "Q10562482"
+
+
+def test_socken_to_q_5():
+    assert socken_to_q("Löts", "Öland") == "Q10572936"
+
+
+def test_socken_to_q_6():
+    assert socken_to_q("Egby", "Öland") == "Q10480210"
+
+
+def test_socken_to_q_7():
+    assert socken_to_q("Backa", "Bohuslän") == "Q10424141"
+
+
+def test_socken_to_q_8():
+    assert socken_to_q("Solberga", "Bohuslän") == "Q2788890"
+
+
+def test_is_vowel_1():
+    assert is_vowel("a") == True
+
+
+def test_is_vowel_2():
+    assert is_vowel("Ø") == True
+
+
+def test_is_vowel_3():
+    assert is_vowel("f") == False
+
+
+def test_is_vowel_4():
+    assert is_vowel("é") == True
+
+
+def test_last_char_is_vowel_1():
+    assert last_char_is_vowel("Stockholm") == False
+
+
+def test_last_char_is_vowel_2():
+    assert last_char_is_vowel("Långtora") == True
+
+
+def test_wp_page_exists_1():
+    assert wp_page_exists("sv", "Långtora socken") == True
+
+
+def test_wp_page_exists_2():
+    assert wp_page_exists("sv", "datfyasqwewrq") == False
