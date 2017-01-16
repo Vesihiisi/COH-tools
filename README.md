@@ -32,7 +32,7 @@ Each row in the database is used to create a Monument object using data from the
 
 **Monument.py** – Monument classes. Includes both a general parent class Monument() and special child classes that inherit from it, one per database table. Those are used to process table-specific data.
 
-**Uploader.py** – converts Monument objects into Wikidata-ready data dictionaries and uploads them.
+**Uploader.py** – converts Monument objects into Wikidata-ready data dictionaries and uploads them. Currently locked to the Wikidata sandbox.
 
 **Logger.py** – logs each Wikidata write.
 
