@@ -18,6 +18,10 @@ class Logger(object):
         timestamp = self.get_current_timestamp()
         return timestamp + "\t" + message
 
+    def logit(self, message):
+        ts_mess = self.append_timestamp_to_message(message)
+        self.save_line_to_file(self.file_path, ts_mess)
+
     def __init__(self):
         directory_path = "logs"
         filename = self.create_filename()
@@ -27,4 +31,3 @@ class Logger(object):
         filename = self.create_filename()
         if not path.exists(self.file_path):
             open(self.file_path, 'w').close()
-        return

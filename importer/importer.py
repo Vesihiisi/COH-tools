@@ -1,5 +1,6 @@
 from Monument import *
 from Uploader import *
+from Logger import *
 from os import path
 import argparse
 import pymysql
@@ -98,9 +99,10 @@ def get_items(connection, country, language, short=False):
     return results
 
 
-def run_test(monuments):
+def upload(monuments):
+    logger = Logger()
     for sample_item in monuments:
-        uploader = Uploader(sample_item)
+        uploader = Uploader(sample_item, log=logger)
         uploader.upload()
 
 
@@ -109,8 +111,8 @@ def main(arguments):
     country = arguments.country
     language = arguments.language
     results = get_items(connection, country, language, arguments.short)
-    if arguments.testrun:
-        run_test(results)
+    if arguments.upload:
+        upload(results)
 
 
 if __name__ == "__main__":
@@ -122,6 +124,6 @@ if __name__ == "__main__":
     parser.add_argument("--language", default="sv")
     parser.add_argument("--country", default="se-ship")
     parser.add_argument("--short", action='store_true')
-    parser.add_argument("--testrun", action='store_true')
+    parser.add_argument("--upload", action='store_true')
     args = parser.parse_args()
     main(args)
