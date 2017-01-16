@@ -191,10 +191,10 @@ class SeFornminSv(Monument):
             municip_name = "Gothenburg"
         else:
             municip_name = self.adm2
-        pattern_en = municip_name.lower() + " municipality"
+        pattern = municip_name.lower() + " municipality"
         try:
             municipality = [x["item"] for x in municip_dict if x[
-                "en"].lower() == pattern_en][0]
+                "en"].lower() == pattern][0]
             self.add_statement("located_adm", municipality)
         except IndexError:
             print("Could not parse municipality: {}.".format(self.adm2))
@@ -480,15 +480,6 @@ class SeBbrSv(Monument):
         return
 
     def set_architect(self):
-        """
-        TODO
-        Sometimes 1 wikilink, sometimes more, sometimes none:
-            [[Fred. M. Bäck]]
-            Richard Conricus
-            [[Bertil Engstrand]] och [[Hans Speek]]
-        Only process where there's wlinks
-
-        """
         if self.arkitekt:
             architects = get_wikilinks(self.arkitekt)
             for name in architects:
