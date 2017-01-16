@@ -19,7 +19,7 @@ This the part that actually extracts the data from the WLM database, processes i
 **importer.py** – the main script. Pass your MySQL credentials to it:
 
 ```
-python3 importer.py --user foo --password bar --country se-fornmin --language sv --short --upload
+python3 importer.py --host localhost --user foo --password bar --db wlm --country se-fornmin --language sv --short --upload
 ```
 
 This will process the `monuments_se-fornmin_(sv)` table.
