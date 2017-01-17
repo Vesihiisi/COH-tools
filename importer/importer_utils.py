@@ -351,3 +351,14 @@ def date_to_dict(datestring, dateformat):
     if "%d" in dateformat:
         date_dict["day"] = date_obj.day
     return date_dict
+
+
+def append_line_to_file(text, filename):
+    with open(filename, 'a') as f:
+        f.write(text + "\n")
+
+
+def dump_list_to_file(some_list, filename):
+    f = open(filename, 'w')
+    for item in some_list:
+        f.write(item + "\n")
