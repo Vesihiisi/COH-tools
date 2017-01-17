@@ -13,30 +13,6 @@ MONUMENTS_ALL = "monuments_all"
 
 class Mapping(object):
 
-    """
-    For a table to be processed, it requires a basic mapping file,
-    named just like the table (eg. se-ship_(sv).json)
-    At the very least, it should contain the name of the column
-    in the _specific_ table should be mapped against the "id" column
-    in monuments_all().
-    That's because the column does not have to be called "id"
-    in the specific table.
-    Such as:
-    "_id": "signal"
-    """
-
-    def join_id(self):
-        DEFAULT_ID = "id"
-        joins = {}
-        if self.country != "dk-bygninger":
-            joins["all_id"] = DEFAULT_ID
-            joins["join_id"] = self.file_content["_id"]
-        else:
-            joins["all_id"] = "name"
-            joins["join_id"] = "sagsnavn"
-        joins["country_code"] = self.file_content["country_code"]
-        return joins
-
     def load_mapping_file(self, countryname, languagename):
         filename = path.join(
             MAPPING_DIR, "{}_({}).json".format(countryname, languagename))
@@ -44,36 +20,10 @@ class Mapping(object):
 
     def __init__(self, countryname, languagename):
         self.file_content = self.load_mapping_file(countryname, languagename)
-        self.country = countryname
-        self.joins = self.join_id()
 
 
-def make_query(country_code, language, specific_table, join_id, all_id="id"):
-    """
-    you know what. MONUMENTS_ALL IS NOT EVEN NECESSARY
-    IT WILL SOLVE THIS WHOLE JOINING PROBLEM IF YOU GET RID OF IT
-    THERE IS LITERALLY NOTHING UNIQUE IN IT
-    SERIOUSLY
-    WHY
-    bUT: parent class Monument() relies on consistent attributes to assign
-    simple values (name, image, adm2)
-    idea: make methods in Monument() take params to indicate where to search
-    for the values, like add_image("bilde")
-    --
-    Note: Until this is fixed, you won't be able to do Denmark and then
-    who knows what else because the joins on Denmark are super weird,
-    because apparently id in monuments_all corresponds to
-    three. concatenated. strings. in dk_bygninger
-    (101--15--1 is kommunenr + ejendomsnr + bygningsnr)
-    and then you try to join on something else like name
-    but then you end up with 48 000 rows instead of 7000
-    and it doesn't ever happen with sweden for some reason???
-
-    so yeah, don't join with monuments_all.
-    """
-    query = ('select DISTINCT *  from `{}`').format(specific_table)
-    print(query)
-    return query
+def make_query(specific_table):
+    return ('select DISTINCT *  from `{}`').format(specific_table)
 
 
 def create_connection(arguments):
@@ -130,14 +80,8 @@ def get_items(connection, country, language, short=False):
         print("Table does not exist.")
         return
     mapping = Mapping(country, language)
-    country_code = mapping.joins["country_code"]
-    all_id = mapping.joins["all_id"]
-    join_id = mapping.joins["join_id"]
-    query = make_query(country_code,
-                       language,
-                       specific_table_name,
-                       join_id,
-                       all_id)
+
+    query = make_query(specific_table_name)
     if short:
         query += " LIMIT " + str(SHORT)
     if specific_table_name in SPECIFIC_TABLES.keys():

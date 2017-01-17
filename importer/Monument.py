@@ -65,14 +65,11 @@ class Monument(object):
 
     def add_label(self, language, text):
         base = self.wd_item["labels"]
-        print("ADDING LABELS")
-        print(text)
         base[language] = text
 
     def add_description(self, language, text):
         base = self.wd_item["descriptions"]
         base[language] = text
-        print(text)
 
     def remove_claim(self, prop):
         base = self.wd_item["statements"]
@@ -81,7 +78,6 @@ class Monument(object):
     def set_country(self, countrycode):
         country = [item["item"]
                    for item in ADM0 if item["code"].lower() == countrycode.lower()][0]
-        print(country)
         self.add_statement("country", country)
 
     def set_is(self, mapping):
@@ -89,7 +85,6 @@ class Monument(object):
         self.add_statement("is", default_is["item"])
 
     def set_labels(self, language, content):
-        print(content)
         self.add_label(language, remove_markup(content))
 
     def set_heritage(self, mapping):
