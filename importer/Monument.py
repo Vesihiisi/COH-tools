@@ -81,9 +81,9 @@ class Monument(object):
         base = self.wd_item["statements"]
         del base[PROPS[prop]]
 
-    def set_country(self, countrycode):
-        country = [item["item"]
-                   for item in ADM0 if item["code"].lower() == countrycode.lower()][0]
+    def set_country(self, mapping):
+        code = mapping.file_content["country_code"].lower()
+        country = [item["item"] for item in ADM0 if item["code"].lower() == code][0]
         self.add_statement("country", country)
 
     def set_is(self, mapping):
@@ -158,6 +158,7 @@ class Monument(object):
         self.wd_item["labels"] = {}
         self.wd_item["aliases"] = {}
         self.wd_item["descriptions"] = {}
+        self.set_country(mapping)
         self.set_is(mapping)
         self.set_heritage(mapping)
         self.set_source()
@@ -254,7 +255,6 @@ class SeFornminSv(Monument):
 
     def __init__(self, db_row_dict, mapping, data_files):
         Monument.__init__(self, db_row_dict, mapping, data_files)
-        self.set_country("se")
         self.set_image("bild")
         self.exists("sv", "artikel")
         self.update_labels()
@@ -267,7 +267,7 @@ class SeFornminSv(Monument):
         self.exists("sv", "artikel")
         self.set_coords(("lat", "lon"))
         self.set_commonscat()
-        # self.print_wd()
+        self.print_wd()
 
 
 class SeArbetslSv(Monument):
@@ -412,7 +412,6 @@ class SeShipSv(Monument):
 
     def __init__(self, db_row_dict, mapping, data_files=None):
         Monument.__init__(self, db_row_dict, mapping, data_files)
-        self.set_country("se")
         self.set_labels("sv", self.namn)
         self.set_image("bild")
         self.exists("sv", "artikel")
@@ -423,7 +422,7 @@ class SeShipSv(Monument):
         self.set_shipyard()
         self.set_homeport()
         self.set_dimensions()
-        # self.print_wd()
+        self.print_wd()
 
 
 class SeBbrSv(Monument):
@@ -539,8 +538,6 @@ class SeBbrSv(Monument):
                 location = q_from_first_wikilink("sv", self.plats)
                 self.add_statement("location", location)
 
-        return
-
     def update_descriptions(self):
         fastighetsbeteckning = get_text_inside_brackets(self.namn)
         self.add_alias("sv", fastighetsbeteckning)
@@ -582,8 +579,6 @@ class SeBbrSv(Monument):
         not only monument_article
         """
         Monument.__init__(self, db_row_dict, mapping, data_files)
-
-        self.set_country("se")
         self.update_labels()
         self.update_descriptions()
         self.set_image("bild")
@@ -651,7 +646,6 @@ class DkBygningDa(Monument):
     def __init__(self, db_row_dict, mapping, data_files=None):
         Monument.__init__(self, db_row_dict, mapping, data_files)
         self.update_labels()
-        self.set_country("dk")
         self.exists("da")
         self.set_commonscat()
         self.set_image("billede")
