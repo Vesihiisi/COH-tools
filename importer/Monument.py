@@ -401,9 +401,10 @@ class SeShipSv(Monument):
                                     "unit": PROPS["metre"]})
 
     def set_homeport(self):
-        if self.has_non_empty_attribute("hemmahamn") and count_wikilinks(self.hemmahamn) == 1:
-            home_port = q_from_first_wikilink("sv", self.hemmahamn)
-            self.add_statement("home_port", home_port)
+        if self.has_non_empty_attribute("hemmahamn"):
+            if count_wikilinks(self.hemmahamn) == 1:
+                home_port = q_from_first_wikilink("sv", self.hemmahamn)
+                self.add_statement("home_port", home_port)
 
     def set_call_sign(self):
         if self.has_non_empty_attribute("signal"):
@@ -448,18 +449,11 @@ class SeBbrSv(Monument):
         return
 
     def set_bbr(self):
-        """
-        TODO
-        check if there are items with no BBR
-        """
         bbr_link = get_bbr_link(self.bbr)
         self.add_statement("bbr", bbr_link)
 
     def set_heritage_bbr(self):
         """
-        TODO:
-        save protection_date in a format
-        that pywikibot will recognize {"time_value" : "1985-11-15"}
         ---
         In Sweden there are three different types of legal protection
         for different types of cultural heritage,
@@ -479,7 +473,6 @@ class SeBbrSv(Monument):
         We therefore need to look that up by
         querying the source database via their API.
         """
-        # print(self.wd_item["statements"][PROPS["heritage_status"]])
         url = "http://kulturarvsdata.se/" + \
             self.wd_item["statements"][PROPS["bbr"]][0]["value"]
         url_list = url.split("/")
@@ -497,7 +490,7 @@ class SeBbrSv(Monument):
                     protection_date = bbr_type.split("(")[-1][:-1]
                 elif bbr_type.startswith("Statligt byggnadsminne"):
                     type_q = "Q24284071"
-                    protection_date =bbr_type.split("(")[-1][:-1]
+                    protection_date = bbr_type.split("(")[-1][:-1]
         """
         The original set_heritage() added an empty claim
         because there's no heritage status specified in mapping file,
@@ -506,8 +499,9 @@ class SeBbrSv(Monument):
         self.remove_claim("heritage_status")
         if protection_date:
             # 1969-01-31
-            qualifier = {"start_time": 
-            {"time_value":date_to_dict(protection_date, "%Y-%m-%d")}}
+            date_dict = date_to_dict(protection_date, "%Y-%m-%d")
+            qualifier = {"start_time":
+                         {"time_value": date_dict}}
         else:
             qualifier = None
         self.add_statement("heritage_status", type_q, qualifier)
@@ -564,7 +558,8 @@ class SeBbrSv(Monument):
             get_text_inside_brackets(self.funktion))
         if extracted_no is not None:
             self.add_statement(
-                "has_parts_of_class", "Q41176", {"quantity": {"quantity_value": extracted_no}})
+                "has_parts_of_class", "Q41176",
+                {"quantity": {"quantity_value": extracted_no}})
 
     def set_adm_location(self):
         if self.kommun == "Göteborg":
@@ -583,16 +578,10 @@ class SeBbrSv(Monument):
             return
 
     def set_inception(self):
-        """
-        TODO
-        Some fun examples:
-            1800-1809 <- this should work
-            1314 <- this too
-            1800-talets början <- hmmmm
-            1700-talet <- this should work! have a look at precision
-        """
         if self.has_non_empty_attribute("byggar"):
-            return
+            year_parsed = parse_year(self.byggar)
+            if year_parsed is not None:
+                self.add_statement("inception", {"time_value": year_parsed})
 
     def __init__(self, db_row_dict, mapping, data_files=None):
         """
@@ -624,9 +613,10 @@ class SeBbrSv(Monument):
 class DkBygningDa(Monument):
 
     def set_adm_location(self):
-        if self.has_non_empty_attribute("kommune") and count_wikilinks(self.kommune) == 1:
-            adm_location = q_from_first_wikilink("da", self.kommune)
-            self.add_statement("located_adm", adm_location)
+        if self.has_non_empty_attribute("kommune"):
+            if count_wikilinks(self.kommune) == 1:
+                adm_location = q_from_first_wikilink("da", self.kommune)
+                self.add_statement("located_adm", adm_location)
 
     def set_location(self):
         """
