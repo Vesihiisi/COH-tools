@@ -449,11 +449,9 @@ class SeBbrSv(Monument):
 
     def set_heritage_bbr(self):
         """
-        TODO: Get starts_from from parentheses in
-        byggnadsminne and statligt byggnadsminne.
-        This needs to be overriden from parent class,
-        because there are three possible options that can't be
-        mapped automatically:
+        TODO:
+        save protection_date in a format
+        that pywikibot will recognize {"time_value" : "1985-11-15"}
         ---
         In Sweden there are three different types of legal protection
         for different types of cultural heritage,
@@ -482,20 +480,27 @@ class SeBbrSv(Monument):
         data = requests.get(url).json()
         for element in data["@graph"]:
             if "ns5:spec" in element:
+                protection_date = False
                 bbr_type = element["ns5:spec"]
                 if bbr_type.startswith("Kyrkligt kulturminne"):
                     type_q = "Q24284073"
                 elif bbr_type.startswith("Byggnadsminne"):
                     type_q = "Q24284072"
+                    protection_date = bbr_type.split("(")[-1][:-1]
                 elif bbr_type.startswith("Statligt byggnadsminne"):
                     type_q = "Q24284071"
+                    protection_date =bbr_type.split("(")[-1][:-1]
         """
         The original set_heritage() added an empty claim
         because there's no heritage status specified in mapping file,
         so we start by removing that empty claim.
         """
         self.remove_claim("heritage_status")
-        self.add_statement("heritage_status", type_q)
+        if protection_date:
+            qualifier = {"start_time": protection_date}
+        else:
+            qualifier = None
+        self.add_statement("heritage_status", type_q, qualifier)
 
     def set_function(self):
         """
@@ -549,7 +554,7 @@ class SeBbrSv(Monument):
             get_text_inside_brackets(self.funktion))
         if extracted_no is not None:
             self.add_statement(
-                "has_parts_of_class", "Q41176", {"quantity": extracted_no})
+                "has_parts_of_class", "Q41176", {"quantity": {"quantity_value": extracted_no}})
 
     def set_adm_location(self):
         if self.kommun == "Göteborg":
