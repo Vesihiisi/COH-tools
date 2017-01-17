@@ -369,3 +369,13 @@ def test_wp_page_exists_1():
 
 def test_wp_page_exists_2():
     assert wp_page_exists("sv", "datfyasqwewrq") == False
+
+
+def test_date_to_dict_1():
+    assert date_to_dict(
+        "1999-12-09", "%Y-%m-%d") == {"year": 1999, "month": 12, "day": 9}
+
+
+def test_date_to_dict_2():
+    assert date_to_dict(
+        "09-12-1999", "%d-%m-%Y") == {"year": 1999, "month": 12, "day": 9}

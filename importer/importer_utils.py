@@ -340,3 +340,6 @@ def is_valid_url(url):
         return True
     else:
         return False
+
+def date_to_dict(datestring, dateformat):
+    return datestring
