@@ -509,11 +509,10 @@ class SeBbrSv(Monument):
     def set_function(self):
         """
         TODO
-        Isolate function and number of buildings:
-            Kyrka sammanbyggd med församlingshem (1 byggnad)
-            Slott (4 byggnader)
-            Gästgivargård (1 byggnad)
+        examples:
+        https://gist.github.com/Vesihiisi/f637916ea1d80a4be5d71a3adf6e2dc2
         """
+        # functions = get_rid_of_brackets(self.funktion).lower().split(",")
         return
 
     def set_architect(self):
@@ -539,7 +538,7 @@ class SeBbrSv(Monument):
             if count_wikilinks(self.plats) == 1:
                 location = q_from_first_wikilink("sv", self.plats)
                 self.add_statement("location", location)
-            # TODO: process if no wikilinks
+
         return
 
     def update_descriptions(self):
@@ -547,13 +546,6 @@ class SeBbrSv(Monument):
         self.add_alias("sv", fastighetsbeteckning)
 
     def set_no_of_buildings(self):
-        """
-        Most common value of type:
-            4 byggnader
-        However, there are also items like
-            inga registrerade byggnader
-            Livsmedelsindustri, Tobak och snus
-        """
         extracted_no = get_number_from_string(
             get_text_inside_brackets(self.funktion))
         if extracted_no is not None:
