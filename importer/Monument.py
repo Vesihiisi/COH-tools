@@ -259,7 +259,7 @@ class SeFornminSv(Monument):
         self.exists("sv", "artikel")
         self.set_coords(("lat", "lon"))
         self.set_commonscat()
-        self.print_wd()
+        # self.print_wd()
 
 
 class SeArbetslSv(Monument):
@@ -634,16 +634,20 @@ class DkBygningDa(Monument):
 
     def set_sagsnr(self):
         """
-        Danish listed buildings case ID (P2783) 
+        Danish listed buildings case ID (P2783)
         """
         self.add_statement("listed_building_dk", str(self.sagsnr))
 
     def update_labels(self):
         self.add_label("da", remove_markup(self.sagsnavn))
 
-    def update_wd_item(self):
-
-        self.set_inception()
+    def set_address(self):
+        """
+        Really nice addresses in this table.
+        """
+        if self.has_non_empty_attribute("adresse"):
+            address = self.adresse + " " + self.postnr + " " + self.by
+            self.add_statement("located_street", address)
 
     def __init__(self, db_row_dict, mapping, data_files=None):
         Monument.__init__(self, db_row_dict, mapping, data_files)
@@ -656,4 +660,5 @@ class DkBygningDa(Monument):
         self.set_adm_location()
         self.set_location()
         self.set_sagsnr()
-        # self.print_wd()
+        self.set_address()
+        self.print_wd()
