@@ -71,10 +71,7 @@ def make_query(country_code, language, specific_table, join_id, all_id="id"):
 
     so yeah, don't join with monuments_all.
     """
-    query = ('select DISTINCT *  from `{}` as m_all JOIN `{}` '
-             'as m_spec on m_all.{} = m_spec.{} '
-             'WHERE m_all.adm0="{}" and m_all.lang="{}"'
-             ).format(MONUMENTS_ALL, specific_table, all_id, join_id, country_code, language)
+    query = ('select DISTINCT *  from `{}`').format(specific_table)
     print(query)
     return query
 
