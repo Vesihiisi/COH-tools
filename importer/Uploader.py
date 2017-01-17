@@ -69,7 +69,7 @@ class Uploader(object):
 
     def make_quantity_item(self, quantity, repo):
         value = quantity['quantity_value']
-        if quantity['unit']:
+        if 'unit' in quantity:
             unit = "http://www.wikidata.org/entity/" + quantity['unit']
         else:
             unit = None
@@ -83,7 +83,7 @@ class Uploader(object):
         """
         value = quantity['time_value']
         print(value)
-        return pywikibot.WbTime(year=value)
+        return pywikibot.WbTime(**value)
 
     def make_q_item(self, qnumber):
         return self.wdstuff.QtoItemPage(qnumber)
@@ -150,7 +150,7 @@ class Uploader(object):
                                     ref = self.make_url_reference(ref)
                         if wd_value:
                             print("")
-                            print("Added value: ", prop)
+                            print("Adding value: ", prop, wd_value)
                             self.wdstuff.addNewClaim(
                                 prop, wd_value, wd_item, ref)
                             if log:

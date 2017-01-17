@@ -497,7 +497,9 @@ class SeBbrSv(Monument):
         """
         self.remove_claim("heritage_status")
         if protection_date:
-            qualifier = {"start_time": protection_date}
+            # 1969-01-31
+            qualifier = {"start_time": 
+            {"time_value":date_to_dict(protection_date, "%Y-%m-%d")}}
         else:
             qualifier = None
         self.add_statement("heritage_status", type_q, qualifier)
