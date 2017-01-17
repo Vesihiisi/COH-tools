@@ -379,3 +379,13 @@ def test_date_to_dict_1():
 def test_date_to_dict_2():
     assert date_to_dict(
         "09-12-1999", "%d-%m-%Y") == {"year": 1999, "month": 12, "day": 9}
+
+
+def test_date_to_dict_3():
+    assert date_to_dict(
+        "12-1999", "%m-%Y") == {"year": 1999, "month": 12}
+
+
+def test_date_to_dict_4():
+    assert date_to_dict(
+        "1999", "%Y") == {"year": 1999}

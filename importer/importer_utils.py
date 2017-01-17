@@ -341,5 +341,13 @@ def is_valid_url(url):
     else:
         return False
 
+
 def date_to_dict(datestring, dateformat):
-    return datestring
+    date_dict = {}
+    date_obj = datetime.datetime.strptime(datestring, dateformat)
+    date_dict["year"] = date_obj.year
+    if "%m" in dateformat:
+        date_dict["month"] = date_obj.month
+    if "%d" in dateformat:
+        date_dict["day"] = date_obj.day
+    return date_dict
