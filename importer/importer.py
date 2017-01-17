@@ -101,20 +101,13 @@ def get_items(connection, country, language, short=False, upload=False):
             uploader.upload()
 
 
-# def upload(monuments):
-#     for sample_item in monuments:
-#         uploader = Uploader(sample_item, log=logger)
-#         uploader.upload()
-
-
 def main(arguments):
-
     connection = create_connection(arguments)
     country = arguments.country
     language = arguments.language
     short = arguments.short
     upload = arguments.upload
-    results = get_items(connection, country, language, short, upload)
+    get_items(connection, country, language, short, upload)
 
 
 if __name__ == "__main__":
