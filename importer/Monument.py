@@ -608,9 +608,6 @@ class SeBbrSv(Monument):
 
 class DkBygningDa(Monument):
 
-    def set_inception(self):
-        print(self.opforelsesar)
-
     def set_adm_location(self):
         if self.has_non_empty_attribute("kommune") and count_wikilinks(self.kommune) == 1:
             adm_location = q_from_first_wikilink("da", self.kommune)
@@ -649,6 +646,11 @@ class DkBygningDa(Monument):
             address = self.adresse + " " + self.postnr + " " + self.by
             self.add_statement("located_street", address)
 
+    def set_inception(self):
+        if self.has_non_empty_attribute("opforelsesar"):
+            inception = parse_year(self.opforelsesar)
+            self.add_statement("inception", {"time_value": inception})
+
     def __init__(self, db_row_dict, mapping, data_files=None):
         Monument.__init__(self, db_row_dict, mapping, data_files)
         self.update_labels()
@@ -661,4 +663,5 @@ class DkBygningDa(Monument):
         self.set_location()
         self.set_sagsnr()
         self.set_address()
-        self.print_wd()
+        self.set_inception()
+        # self.print_wd()
