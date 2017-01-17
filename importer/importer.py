@@ -99,6 +99,7 @@ def get_items(connection, country, language, short=False, upload=False):
         if upload:
             uploader = Uploader(monument, log=logger)
             uploader.upload()
+            print("--------------------------------------------------")
 
 
 def main(arguments):

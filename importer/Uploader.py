@@ -99,10 +99,8 @@ class Uploader(object):
         elif utils.tuple_is_coords(value) and prop == PROPS["coordinates"]:
             val_item = self.make_coords_item(value)
         elif isinstance(value, dict) and 'quantity_value' in value:
-            print("detected quantity")
             val_item = self.make_quantity_item(value, self.repo)
         elif isinstance(value, dict) and 'time_value' in value:
-            print("detected year")
             val_item = self.make_time_item(value, self.repo)
         elif prop == PROPS["commonscat"] and utils.commonscat_exists(value):
             val_item = value
