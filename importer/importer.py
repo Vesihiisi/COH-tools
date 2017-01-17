@@ -74,7 +74,9 @@ def load_data_files(file_dict):
     return file_dict
 
 
-def get_items(connection, country, language, short=False):
+def get_items(connection, country, language, short=False, upload=False):
+    if upload:
+        logger = Logger()
     specific_table_name = get_specific_table_name(country, language)
     if not table_exists(connection, specific_table_name):
         print("Table does not exist.")
@@ -91,30 +93,28 @@ def get_items(connection, country, language, short=False):
     else:
         class_to_use = Monument
         data_files = None
-    print(class_to_use)
     database_rows = select_query(query, connection)
-    print(len(database_rows))
-    results = [class_to_use(table_row, mapping, data_files)
-               for table_row in database_rows]
-    print("Fetched {} items from {}".format(
-        len(results), get_specific_table_name(country, language)))
-    return results
+    for row in database_rows:
+        monument = class_to_use(row, mapping, data_files)
+        if upload:
+            uploader = Uploader(monument, log=logger)
+            uploader.upload()
 
 
-def upload(monuments):
-    logger = Logger()
-    for sample_item in monuments:
-        uploader = Uploader(sample_item, log=logger)
-        uploader.upload()
+# def upload(monuments):
+#     for sample_item in monuments:
+#         uploader = Uploader(sample_item, log=logger)
+#         uploader.upload()
 
 
 def main(arguments):
+
     connection = create_connection(arguments)
     country = arguments.country
     language = arguments.language
-    results = get_items(connection, country, language, arguments.short)
-    if arguments.upload:
-        upload(results)
+    short = arguments.short
+    upload = arguments.upload
+    results = get_items(connection, country, language, short, upload)
 
 
 if __name__ == "__main__":
