@@ -67,6 +67,12 @@ class Monument(object):
         base = self.wd_item["labels"]
         base[language] = text
 
+    def add_alias(self, language, text):
+        base = self.wd_item["aliases"]
+        if language not in base:
+            base[language] = []
+        base[language].append(text)
+
     def add_description(self, language, text):
         base = self.wd_item["descriptions"]
         base[language] = text
@@ -150,11 +156,13 @@ class Monument(object):
         self.wd_item = {}
         self.wd_item["statements"] = {}
         self.wd_item["labels"] = {}
+        self.wd_item["aliases"] = {}
         self.wd_item["descriptions"] = {}
         self.set_is(mapping)
         self.set_heritage(mapping)
         self.set_source()
         self.set_registrant_url()
+        self.set_changed()
 
     def __init__(self, db_row_dict, mapping, data_files):
         for k, v in db_row_dict.items():
@@ -542,7 +550,7 @@ class SeBbrSv(Monument):
 
     def update_descriptions(self):
         fastighetsbeteckning = get_text_inside_brackets(self.namn)
-        self.add_description("sv", fastighetsbeteckning)
+        self.add_alias("sv", fastighetsbeteckning)
 
     def set_no_of_buildings(self):
         """

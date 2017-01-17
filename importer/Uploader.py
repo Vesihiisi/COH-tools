@@ -18,6 +18,16 @@ class Uploader(object):
             new_labels[item] = {'language': item, 'value': labels[item]}
         return new_labels
 
+    def make_aliases(self):
+        aliases = self.data["aliases"]
+        new_aliases = []
+        for item in aliases:
+            language = item
+            for value in aliases[language]:
+                new_alias = {"language": language, "value": value}
+                new_aliases.append(new_alias)
+        return new_aliases
+
     def add_labels(self, target_item, labels, log):
         for label in labels:
             target_item.get()
@@ -43,6 +53,21 @@ class Uploader(object):
                 if log:
                     t_id = target_item.getID()
                     log.logit(t_id + " ADDED DESCRIPTION " + lang + " " + name)
+
+    def add_aliases(self, target_item, aliases, log):
+        for alias in aliases:
+            print(alias)
+            target_item.get()
+            name = alias["value"]
+            language = alias["language"]
+            t_aliases = target_item.aliases
+            if language in t_aliases and name in t_aliases[language]:
+                return
+            else:
+                target_item.editAliases({language: [name]})
+            if log:
+                t_id = target_item.getID()
+                log.logit(t_id + " ADDED ALIAS " + language + " " + name)
 
     def make_descriptions(self):
         descriptions = self.data["descriptions"]
@@ -167,6 +192,7 @@ class Uploader(object):
     def upload(self):
         labels = self.make_labels()
         descriptions = self.make_descriptions()
+        aliases = self.make_aliases()
         claims = self.data["statements"]
         exists = True if self.data["wd-item"] is not None else False
         if exists:
@@ -177,6 +203,7 @@ class Uploader(object):
             target_item = self.wdstuff.QtoItemPage(self.TEST_ITEM)
             # target_item = self.create_new_item()
         self.add_labels(target_item, labels, self.log)
+        self.add_aliases(target_item, aliases, self.log)
         self.add_descriptions(target_item, descriptions, self.log)
         self.add_claims(target_item, claims, self.log)
 
