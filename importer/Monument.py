@@ -641,7 +641,7 @@ class DkBygningDa(Monument):
         """
         Danish listed buildings case ID (P2783) 
         """
-        self.add_statement("listed_building_dk", self.sagsnr)
+        self.add_statement("listed_building_dk", str(self.sagsnr))
 
     def update_labels(self):
         self.add_label("da", remove_markup(self.sagsnavn))
