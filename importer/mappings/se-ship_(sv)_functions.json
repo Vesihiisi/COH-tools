@@ -1,0 +1,179 @@
+{
+    "@meta": {
+        "timestamp": "2016-12-22T12:50:27Z",
+        "permalink": "//www.wikidata.org/w/index.php?title=Wikidata%3AWikiProject_WLM/Mapping_tables/se-ship_%28sv%29/functions&oldid=418742241"
+    },
+    "mappings": {
+        "Torpedbåt": {
+            "items": [
+                "Q324233"
+            ],
+            "count": "1"
+        },
+        "Verkstadsbåt Och Bogserbåt": {
+            "items": [
+                "Q191826"
+            ],
+            "count": "1"
+        },
+        "Minutläggare": {
+            "items": [
+                "Q640078"
+            ],
+            "count": "1"
+        },
+        "Passagerarfartyg": {
+            "items": [
+                "Q2055880"
+            ],
+            "count": "20"
+        },
+        "Segelfartyg, Ketch": {
+            "items": [
+                "Q753784"
+            ],
+            "count": "4"
+        },
+        "Färja": {
+            "items": [
+                "Q25653"
+            ],
+            "count": "1"
+        },
+        "Motorfartyg": {
+            "items": [
+                "Q402092"
+            ],
+            "count": "3"
+        },
+        "Ångslup": {
+            "items": [
+                "Q1158769"
+            ],
+            "count": "1"
+        },
+        "Varpbåt": {
+            "items": [
+                "Q10713147"
+            ],
+            "count": "1"
+        },
+        "Segelfartyg": {
+            "items": [
+                "Q170483"
+            ],
+            "count": "3"
+        },
+        "Segelfartyg, Galeas": {
+            "items": [
+                "Q1622132"
+            ],
+            "count": "5"
+        },
+        "Fiskefartyg, Fraktfartyg": {
+            "items": [
+                "Q13561346",
+                "Q105999"
+            ],
+            "count": "1"
+        },
+        "Lotsbåt": {
+            "items": [
+                "Q939770"
+            ],
+            "count": "2"
+        },
+        "Segelfartyg, [[Tjalk]]": {
+            "items": [
+                "Q1371481"
+            ],
+            "count": "1"
+        },
+        "Bogserbåt": {
+            "items": [
+                "Q191826"
+            ],
+            "count": "21"
+        },
+        "Minsvepare": {
+            "items": [
+                "Q202527"
+            ],
+            "count": "1"
+        },
+        "Segelfartyg, Galeas.": {
+            "items": [
+                "Q1622132"
+            ],
+            "count": "1"
+        },
+        "Varpbåt Och Bogserbåt": {
+            "items": [
+                "Q10713147",
+                "Q191826"
+            ],
+            "count": "4"
+        },
+        "Fiskefartyg, Forskningsfartyg": {
+            "items": [
+                "Q13561346",
+                "Q391022"
+            ],
+            "count": "1"
+        },
+        "Bilfärja": {
+            "items": [
+                "Q3784092"
+            ],
+            "count": "1"
+        },
+        "Segelfartyg, Galjot": {
+            "items": [
+                "Q1046122"
+            ],
+            "count": "1"
+        },
+        "Torrlastfartyg": {
+            "items": [
+                "Q15276"
+            ],
+            "count": "1"
+        },
+        "Passagerarfartyg.": {
+            "items": [
+                "Q2055880"
+            ],
+            "count": "1"
+        },
+        "Fiskefartyg": {
+            "items": [
+                "Q13561346"
+            ],
+            "count": "9"
+        },
+        "Lastfartyg": {
+            "items": [
+                "Q105999"
+            ],
+            "count": "1"
+        },
+        "Isbrytare": {
+            "items": [
+                "Q14978"
+            ],
+            "count": "1"
+        },
+        "Ångfartyg": {
+            "items": [
+                "Q178193"
+            ],
+            "count": "1"
+        },
+        "Fraktfartyg": {
+            "items": [
+                "Q105999"
+            ],
+            "count": "1"
+        }
+    }
+}

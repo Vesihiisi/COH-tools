@@ -1,0 +1,86 @@
+{
+    "mappings": {
+        "Stenkrets": {
+            "items": [
+                "Q1935728"
+            ],
+            "count": "2079"
+        },
+        "Fornborg": {
+            "items": [
+                "Q744099"
+            ],
+            "count": "1213"
+        },
+        "Fäbod": {
+            "items": [
+                "Q2082774"
+            ],
+            "count": "984"
+        },
+        "Gravfält": {
+            "items": [
+                "Q2593777"
+            ],
+            "count": "17204"
+        },
+        "Stensättning": {
+            "items": [
+                "Q2341654"
+            ],
+            "count": "60454"
+        },
+        "Borg": {
+            "items": [
+                "Q23413"
+            ],
+            "count": "264"
+        },
+        "Stridsvärn": {
+            "items": [
+                "Q91122"
+            ],
+            "count": "45"
+        },
+        "Gravklot": {
+            "items": [
+                "Q835624"
+            ],
+            "count": "25"
+        },
+        "Hällmålning": {
+            "items": [
+                "Q1211146"
+            ],
+            "count": "50"
+        },
+        "Röse": {
+            "items": [
+                "Q7321974"
+            ],
+            "count": "15648"
+        },
+        "Minnesmärke": {
+            "items": [
+                "Q4989906"
+            ],
+            "count": "326"
+        },
+        "Hällristning": {
+            "items": [
+                "Q42195"
+            ],
+            "count": "17635"
+        },
+        "Kyrkstad": {
+            "items": [
+                "Q1743100"
+            ],
+            "count": "9"
+        }
+    },
+    "@meta": {
+        "timestamp": "2016-12-22T14:49:42Z",
+        "permalink": "//www.wikidata.org/w/index.php?title=Wikidata%3AWikiProject_WLM/Mapping_tables/se-fornmin_%28sv%29/types&oldid=418771954"
+    }
+}

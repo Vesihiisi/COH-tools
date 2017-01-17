@@ -1,0 +1,80 @@
+{
+    "@meta": {
+        "permalink": "//www.wikidata.org/w/index.php?title=Wikidata%3AWikiProject_WLM/Mapping_tables/se-arbetsl_%28sv%29/types&oldid=419108127",
+        "timestamp": "2016-12-23T11:45:54Z"
+    },
+    "mappings": {
+        "Museispårväg": {
+            "items": [
+                "Q372047"
+            ],
+            "count": "1"
+        },
+        "Medicinhistoriskt Museum": {
+            "items": [
+                "Q26958986"
+            ],
+            "count": "2"
+        },
+        "Museijärnväg": {
+            "items": [
+                "Q420962"
+            ],
+            "count": "2"
+        },
+        "Leksaksmuseum": {
+            "items": [
+                "Q2310465"
+            ],
+            "count": "1"
+        },
+        "Industriminne": {
+            "items": [
+                "Q1569871"
+            ],
+            "count": "1"
+        },
+        "Friluftsmuseum": {
+            "items": [
+                "Q756102"
+            ],
+            "count": "2"
+        },
+        "Hembygdsgård": {
+            "items": [
+                "Q10520688"
+            ],
+            "count": "4"
+        },
+        "Fyrskepp": {
+            "items": [
+                "Q831515"
+            ],
+            "count": "1"
+        },
+        "Flyghistoriskt Museum": {
+            "items": [
+                "Q4828724"
+            ],
+            "count": "2"
+        },
+        "Fartyg": {
+            "items": [
+                "Q1229765"
+            ],
+            "count": "10"
+        },
+        "Personhistoriskt Museum": {
+            "items": [
+                "Q10624527"
+            ],
+            "count": "1"
+        },
+        "Författarmuseum": {
+            "items": [
+                "Q10501308"
+            ],
+            "count": "2"
+        }
+    }
+}
