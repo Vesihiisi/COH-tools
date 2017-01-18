@@ -1,0 +1,18 @@
+{
+    "country": {
+        "item": "Q213",
+        "name": "Czech Republic"
+    },
+    "country_code": "cz",
+    "default_is": {
+        "item": "",
+        "name": "",
+        "comment" : ""
+    },
+    "heritage": {
+        "item": "",
+        "name": "",
+        "comment": "look at national monument of the Czech Republic and cultural monument of the Czech Republic!"
+    },
+    "language": "cs"
+}

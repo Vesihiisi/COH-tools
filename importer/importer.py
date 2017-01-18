@@ -53,6 +53,8 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
 
                    "monuments_ro_(ro)": {"class": RoRo, "data_files": {}},
 
+                   "monuments_cz_(cs)": {"class": CzCs, "data_files": {}},
+
                    "monuments_dk-bygninger_(da)": {"class": DkBygningDa,
                                                    "data_files": {}},
                    "monuments_pl_(pl)": {"class": PlPl,

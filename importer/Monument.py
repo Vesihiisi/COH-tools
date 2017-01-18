@@ -931,10 +931,14 @@ class ZaEn(Monument):
 class RoRo(Monument):
 
     def update_labels(self):
-        return
+        name = remove_markup(self.denumire)
+        self.add_label("ro", name)
 
     def set_adm_location(self):
         return
+
+    def set_no(self):
+        self.add_statement("romanian_monument_id", self.cod)
 
     def __init__(self, db_row_dict, mapping, data_files=None):
         Monument.__init__(self, db_row_dict, mapping, data_files)
@@ -944,6 +948,28 @@ class RoRo(Monument):
         self.set_image("imagine")
         self.set_coords(("lat", "lon"))
         self.set_adm_location()
-        # self.set_no()
+        self.set_no()
         # self.set_location()
         # self.print_wd()
+
+
+class CzCs(Monument):
+
+    def update_labels(self):
+        name = remove_markup(self.name)
+        self.add_label("cs", name)
+
+    def set_adm_location(self):
+        return
+
+    def __init__(self, db_row_dict, mapping, data_files=None):
+        Monument.__init__(self, db_row_dict, mapping, data_files)
+        self.update_labels()
+        # self.exists("sq")
+        self.set_commonscat()
+        self.set_image("image")
+        self.set_coords(("lat", "lon"))
+        self.set_adm_location()
+        # self.set_no()
+        # self.set_location()
+        self.print_wd()
