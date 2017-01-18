@@ -83,7 +83,8 @@ class Monument(object):
 
     def set_country(self, mapping):
         code = mapping.file_content["country_code"].lower()
-        country = [item["item"] for item in ADM0 if item["code"].lower() == code][0]
+        country = [item["item"]
+                   for item in ADM0 if item["code"].lower() == code][0]
         self.add_statement("country", country)
 
     def set_is(self, mapping):
@@ -267,7 +268,7 @@ class SeFornminSv(Monument):
         self.exists("sv", "artikel")
         self.set_coords(("lat", "lon"))
         self.set_commonscat()
-        self.print_wd()
+        # self.print_wd()
 
 
 class SeArbetslSv(Monument):
@@ -655,4 +656,33 @@ class DkBygningDa(Monument):
         self.set_sagsnr()
         self.set_address()
         self.set_inception()
+        # self.print_wd()
+
+
+class DkFortidsDa(Monument):
+
+    def update_labels(self):
+        """
+        TODO: Naming things!
+        See:
+        https://da.wikipedia.org/wiki/Fredede_fortidsminder_i_Ikast-Brande_Kommune
+        The monuments don't have unique names, stednavn
+        is a general placename.
+        Use the description field to provide better info:
+        'rundhøj i Ikast-Brande kommune'
+        """
+        self.add_label("da", remove_markup(self.stednavn))
+
+    def __init__(self, db_row_dict, mapping, data_files=None):
+        Monument.__init__(self, db_row_dict, mapping, data_files)
+        self.update_labels()
+        self.exists("da")
+        self.set_commonscat()
+        self.set_image("billede")
+        self.set_coords(("lat", "lon"))
+        # self.set_adm_location()
+        # self.set_location()
+        # self.set_sagsnr()
+        # self.set_address()
+        # self.set_inception()
         # self.print_wd()

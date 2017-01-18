@@ -48,6 +48,9 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                                                "se-ship_(sv)_functions.json"}},
                    "monuments_dk-bygninger_(da)": {"class": DkBygningDa,
                                                    "data_files": {}},
+                   "monuments_dk-fortidsminder_(da)": {"class": DkFortidsDa,
+                                                      "data_files": {}},
+
                    "monuments_se-bbr_(sv)": {"class": SeBbrSv,
                                              "data_files": {}},
                    "monuments_se-fornmin_(sv)":

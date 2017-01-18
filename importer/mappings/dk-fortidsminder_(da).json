@@ -1,0 +1,17 @@
+{
+    "country": {
+        "item": "Q35",
+        "name": "Denmark"
+    },
+    "country_code": "dk",
+    "default_is": {
+        "item": "Q3395377",
+        "name": "ancient monument"
+    },
+    "heritage": {
+        "item": "",
+        "name": "",
+        "comment": "create new prop?"
+    },
+    "language": "da"
+}
