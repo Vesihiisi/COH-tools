@@ -1,0 +1,18 @@
+{
+    "country": {
+        "item": "Q20",
+        "name": "Norway"
+    },
+    "country_code": "no",
+    "default_is": {
+        "item": "",
+        "name": "",
+        "comment" : ""
+    },
+    "heritage": {
+        "item": "",
+        "name": "",
+        "comment": "new q -- item on Riksantikvaren register?"
+    },
+    "language": "nb"
+}
