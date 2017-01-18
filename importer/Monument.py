@@ -102,7 +102,10 @@ class Monument(object):
         lat = coord_keywords_tuple[0]
         lon = coord_keywords_tuple[1]
         if self.has_non_empty_attribute(lat):
-            self.add_statement(
+            if self.lat == 0 and self.lon == 0:
+                return
+            else:
+                self.add_statement(
                 "coordinates", (getattr(self, lat), getattr(self, lon)))
 
     def set_image(self, image_keyword="image"):
