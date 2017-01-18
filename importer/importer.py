@@ -26,6 +26,10 @@ def make_query(specific_table):
     return ('select DISTINCT *  from `{}`').format(specific_table)
 
 
+def make_count_query(specific_table):
+    return ("SELECT COUNT(*) FROM `{}`").format(specific_table)
+
+
 def create_connection(arguments):
     return pymysql.connect(
         host=arguments.host,
@@ -61,6 +65,16 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                    }
 
 
+def get_row_count(tablename, connection):
+    count_query = make_count_query(tablename)
+    return select_query(count_query, connection)[0]['COUNT(*)']
+
+
+def print_row_count(tablename, connection):
+    rowcount = get_row_count(tablename, connection)
+    print(("TABLE {} HAS {} ROWS.").format(tablename, rowcount))
+
+
 def select_query(query, connection):
     cursor = connection.cursor(pymysql.cursors.DictCursor)
     cursor.execute(query)
@@ -82,7 +96,6 @@ def get_items(connection, country, language, short=False, upload=False):
         print("Table does not exist.")
         return
     mapping = Mapping(country, language)
-
     query = make_query(specific_table_name)
     if short:
         query += " LIMIT " + str(SHORT)
@@ -93,6 +106,7 @@ def get_items(connection, country, language, short=False, upload=False):
     else:
         class_to_use = Monument
         data_files = None
+    print_row_count(specific_table_name, connection)
     database_rows = select_query(query, connection)
     for row in database_rows:
         monument = class_to_use(row, mapping, data_files)
