@@ -722,6 +722,12 @@ class DkFortidsDa(Monument):
 
 
 class NoNo(Monument):
+    """
+    TODO
+    there's an API:
+    https://data.norge.no/data/riksantikvaren/kulturminnes%C3%B8k
+    look into how we can benefit from it!
+    """
 
     def update_labels(self):
         """
@@ -842,5 +848,43 @@ class PlPl(Monument):
         self.set_location()
         # self.set_sagsnr()
         self.set_address()
+        # self.set_inception()
+        # self.print_wd()
+
+
+class XkSq(Monument):
+
+    def update_labels(self):
+        """
+        TODO
+        Some of these contain a weird character: 
+        """
+        print(self.name)
+        return
+
+    def update_commonscat():
+        """
+        TODO
+        the actual category names are not saved
+        in the database, BUT
+        a full category tree exists on commons,
+        even though many of the cats are empty:
+        https://commons.wikimedia.org/wiki/Category:Cultural_heritage_monuments_in_Kosovo_with_ID_No_3340
+        These can be deduced from ID number
+        """
+        return
+
+    def __init__(self, db_row_dict, mapping, data_files=None):
+        Monument.__init__(self, db_row_dict, mapping, data_files)
+        self.update_labels()
+        self.exists("sq")
+        self.set_commonscat()
+        self.set_image("image")
+        self.set_coords(("lat", "lon"))
+        # self.set_adm_location()
+        # self.set_no()
+        # self.set_location()
+        # self.set_sagsnr()
+        # self.set_address()
         # self.set_inception()
         # self.print_wd()
