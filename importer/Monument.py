@@ -753,23 +753,44 @@ class EeEt(Monument):
         # self.print_wd()
 
 
-
 class PlPl(Monument):
 
     def update_labels(self):
-        print(self.nazwa)
+        """
+        TODO
+        """
+        return
+
+    def set_adm_location(self):
+        if "gmina " in self.gmina:
+            municipality = self.gmina.split(" ")[1:]
+            municipality = ' '.join(municipality)
+        else:
+            municipality = self.gmina
+        print(municipality)
+
+    def set_no(self):
+        """
+        TODo
+        Examples of what these can look like: http://tinyurl.com/jz5vuc4
+        isolate the date and use as start_time
+        """
+        return
+
+    def set_address(self):
         return
 
     def __init__(self, db_row_dict, mapping, data_files=None):
         Monument.__init__(self, db_row_dict, mapping, data_files)
         self.update_labels()
-        self.exists("pl")
+        # self.exists("pl")
         self.set_commonscat()
         self.set_image("zdjecie")
         self.set_coords(("lat", "lon"))
-        # self.set_adm_location()
+        self.set_adm_location()
+        self.set_no()
         # self.set_location()
         # self.set_sagsnr()
-        # self.set_address()
+        self.set_address()
         # self.set_inception()
         # self.print_wd()
