@@ -1,0 +1,18 @@
+{
+    "country": {
+        "item": "Q36",
+        "name": "Poland"
+    },
+    "country_code": "pl",
+    "default_is": {
+        "item": "",
+        "name": "",
+        "comment" : ""
+    },
+    "heritage": {
+        "item": "",
+        "name": "",
+        "comment": ""
+    },
+    "language": "pl"
+}
