@@ -9,9 +9,9 @@
         "name": "ancient monument"
     },
     "heritage": {
-        "item": "",
-        "name": "",
-        "comment": "create new prop?"
+        "item": "Q21436546",
+        "name": "monument on Kulturstyrelsen register",
+        "comment": "This is the same as for dk-bygninger... The Q has a very general definition, not specifying building/something else"
     },
     "language": "da"
 }
