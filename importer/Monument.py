@@ -106,7 +106,7 @@ class Monument(object):
                 return
             else:
                 self.add_statement(
-                "coordinates", (getattr(self, lat), getattr(self, lon)))
+                    "coordinates", (getattr(self, lat), getattr(self, lon)))
 
     def set_image(self, image_keyword="image"):
         if self.has_non_empty_attribute(image_keyword):
@@ -136,8 +136,13 @@ class Monument(object):
                 self.add_statement("located_street", processed_address)
 
     def has_non_empty_attribute(self, attr_name):
-        if hasattr(self, attr_name) and getattr(self, attr_name) != "":
-            return True
+        if hasattr(self, attr_name):
+            if getattr(self, attr_name) == "":
+                return False
+            elif getattr(self, attr_name) is None:
+                return False
+            else:
+                return True
         else:
             return False
 
@@ -739,21 +744,26 @@ class NoNo(Monument):
 class EeEt(Monument):
 
     def update_labels(self):
-        print(self.nimi)
+        return
+
+    def set_no(self):
+        register_no = str(self.registrant_url.split("=")[-1])
+        self.add_statement("estonian_monument_id", register_no)
 
     def __init__(self, db_row_dict, mapping, data_files=None):
         Monument.__init__(self, db_row_dict, mapping, data_files)
         self.update_labels()
-        self.exists("et")
+        # self.exists("et")
         self.set_commonscat()
         self.set_image("pilt")
         self.set_coords(("lat", "lon"))
+        self.set_no()
         # self.set_adm_location()
         # self.set_location()
         # self.set_sagsnr()
         # self.set_address()
         # self.set_inception()
-        # self.print_wd()
+        self.print_wd()
 
 
 class PlPl(Monument):
