@@ -692,7 +692,6 @@ class DkFortidsDa(Monument):
                 special_type = [table[x]["items"]
                                 for x in table
                                 if x == self.type][0]
-                print(self.type, special_type)
                 self.substitute_statement("is", special_type)
             except IndexError:
                 return
@@ -745,6 +744,28 @@ class EeEt(Monument):
         self.exists("et")
         self.set_commonscat()
         self.set_image("pilt")
+        self.set_coords(("lat", "lon"))
+        # self.set_adm_location()
+        # self.set_location()
+        # self.set_sagsnr()
+        # self.set_address()
+        # self.set_inception()
+        # self.print_wd()
+
+
+
+class PlPl(Monument):
+
+    def update_labels(self):
+        print(self.nazwa)
+        return
+
+    def __init__(self, db_row_dict, mapping, data_files=None):
+        Monument.__init__(self, db_row_dict, mapping, data_files)
+        self.update_labels()
+        self.exists("pl")
+        self.set_commonscat()
+        self.set_image("zdjecie")
         self.set_coords(("lat", "lon"))
         # self.set_adm_location()
         # self.set_location()
