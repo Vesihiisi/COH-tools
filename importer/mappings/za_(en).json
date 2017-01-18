@@ -1,0 +1,18 @@
+{
+    "country": {
+        "item": "Q258",
+        "name": "South Africa"
+    },
+    "country_code": "za",
+    "default_is": {
+        "item": "",
+        "name": "",
+        "comment" : ""
+    },
+    "heritage": {
+        "item": "",
+        "name": "",
+        "comment": ""
+    },
+    "language": "en"
+}

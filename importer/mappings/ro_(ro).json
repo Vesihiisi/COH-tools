@@ -1,0 +1,18 @@
+{
+    "country": {
+        "item": "Q218",
+        "name": "Romania"
+    },
+    "country_code": "za",
+    "default_is": {
+        "item": "",
+        "name": "",
+        "comment" : ""
+    },
+    "heritage": {
+        "item": "",
+        "name": "",
+        "comment": ""
+    },
+    "language": "ro"
+}

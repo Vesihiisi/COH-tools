@@ -1,0 +1,18 @@
+{
+    "country": {
+        "item": "Q1246",
+        "name": "Kosovo"
+    },
+    "country_code": "xk",
+    "default_is": {
+        "item": "",
+        "name": "",
+        "comment" : ""
+    },
+    "heritage": {
+        "item": "Q6906963",
+        "name": "monument of Kosovo",
+        "comment": ""
+    },
+    "language": "sq"
+}
