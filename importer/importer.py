@@ -54,6 +54,8 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                                          "data_files": {}},
                    "monuments_se-bbr_(sv)": {"class": SeBbrSv,
                                              "data_files": {}},
+                   "monuments_ee_(et)": {"class": EeEt,
+                                             "data_files": {}},
                    "monuments_se-fornmin_(sv)":
                    {"class": SeFornminSv,
                     "data_files":

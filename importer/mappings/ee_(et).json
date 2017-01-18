@@ -1,0 +1,18 @@
+{
+    "country": {
+        "item": "Q191",
+        "name": "Estonia"
+    },
+    "country_code": "ee",
+    "default_is": {
+        "item": "",
+        "name": "",
+        "comment" : ""
+    },
+    "heritage": {
+        "item": "",
+        "name": "",
+        "comment": ""
+    },
+    "language": "et"
+}
