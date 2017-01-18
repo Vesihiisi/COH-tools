@@ -722,6 +722,7 @@ class DkFortidsDa(Monument):
 
 
 class NoNo(Monument):
+
     """
     TODO
     there's an API:
@@ -868,6 +869,13 @@ class XkSq(Monument):
     def set_no(self):
         self.add_statement("kosovo_monument_id", str(self.idno))
 
+    def set_adm_location(self):
+        """
+        never wikilinked!
+        E panjohur = unknown
+        """
+        print(municipality)
+
     def update_commonscat(self):
         """s
         the actual category names are not saved
@@ -889,8 +897,29 @@ class XkSq(Monument):
         self.update_commonscat()
         self.set_image("image")
         self.set_coords(("lat", "lon"))
-        # self.set_adm_location()
+        self.set_adm_location()
         self.set_no()
+        # self.set_location()
+        # self.set_sagsnr()
+        # self.set_address()
+        # self.set_inception()
+        # self.print_wd()
+
+
+class ZaEn(Monument):
+
+    def update_labels(self):
+        print(self.site_name)
+
+    def __init__(self, db_row_dict, mapping, data_files=None):
+        Monument.__init__(self, db_row_dict, mapping, data_files)
+        self.update_labels()
+        # self.exists("sq")
+        # self.update_commonscat()
+        # self.set_image("image")
+        # self.set_coords(("lat", "lon"))
+        # self.set_adm_location()
+        # self.set_no()
         # self.set_location()
         # self.set_sagsnr()
         # self.set_address()
