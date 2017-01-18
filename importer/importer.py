@@ -49,7 +49,7 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                    "monuments_dk-bygninger_(da)": {"class": DkBygningDa,
                                                    "data_files": {}},
                    "monuments_pl_(pl)": {"class": PlPl,
-                                         "data_files": {}},
+                                         "data_files": {"settlements": "poland_settlements.json"}},
                    "monuments_dk-fortidsminder_(da)": {"class": DkFortidsDa,
                                                        "data_files": {
                                                            "types": "dk-fortidsminder_(da)_types.json"

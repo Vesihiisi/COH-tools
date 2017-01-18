@@ -776,12 +776,18 @@ class PlPl(Monument):
         return
 
     def set_adm_location(self):
+        """
+        TODO
+        These are not wikilinked...
+        And the labels on wd are in different formats,
+        sometimes with 'gmina' and sometimes without.
+        How to match them correctly?
+        """
         if "gmina " in self.gmina:
             municipality = self.gmina.split(" ")[1:]
             municipality = ' '.join(municipality)
         else:
             municipality = self.gmina
-        print(municipality)
 
     def set_no(self):
         """
@@ -795,17 +801,18 @@ class PlPl(Monument):
         return
 
     def set_location(self):
-        """
-        TODO
-        get list of all settlements
-        and match the plain text ones against it
-        """
+        settlements_dict = self.data_files["settlements"]
         if count_wikilinks(self.miejscowosc) == 1:
             location = q_from_first_wikilink("pl", self.miejscowosc)
             self.add_statement("location", location)
         else:
-            pass
-            # location = remove_markup(self.miejscowosc)
+            placename = remove_markup(self.miejscowosc)
+            try:
+                location = [x["item"] for x in settlements_dict if x[
+                    "pl"].strip() == placename][0]
+                self.add_statement("location", location)
+            except IndexError:
+                return
 
     def __init__(self, db_row_dict, mapping, data_files=None):
         Monument.__init__(self, db_row_dict, mapping, data_files)
