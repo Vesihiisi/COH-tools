@@ -1,0 +1,101 @@
+{| class='wikitable sortable'
+! Name
+! Count
+! Item(s)
+! Notes
+|- 
+| kunstimälestis
+| 11498
+| 
+| 
+|- 
+| arheoloogiamälestis
+| 6589
+| 
+| 
+|- 
+| ehitismälestis
+| 5146
+| 
+| 
+|- 
+| ajaloomälestis
+| 1146
+| 
+| 
+|- 
+| ehitismälestis, ajaloomälestis
+| 83
+| 
+| 
+|- 
+| tehnikamälestis
+| 35
+| 
+| 
+|- 
+| ehitismälestis, ajaloomälestis, arheoloogiamälestis
+| 18
+| 
+| 
+|- 
+| muinsuskaitseala
+| 11
+| 
+| 
+|- 
+| arheoloogiamälestis, ajaloomälestis
+| 5
+| 
+| 
+|- 
+| ajaloomälestis, ehitismälestis
+| 5
+| 
+| 
+|- 
+| arheoloogiamälestis, ehitismälestis
+| 4
+| 
+| 
+|- 
+| kunstimälestis, ajaloomälestis
+| 3
+| 
+| 
+|- 
+| ajaloomälestis, arheoloogiamälestis, ehitismälestis
+| 3
+| 
+| 
+|- 
+| 
+| 1
+| 
+| 
+|- 
+| muinsuskaitseala, arheoloogiamälestis
+| 1
+| 
+| 
+|- 
+| ajaloomälestis, ajaloomälestis
+| 1
+| 
+| 
+|- 
+| arheoloogiamälestis, ajaloomälestis, ehitismälestis
+| 1
+| 
+| 
+|- 
+| ajaloomälestis, ehitismälestis, arheoloogiamälestis
+| 1
+| 
+| 
+|- 
+| ehitismälestis, arheoloogiamälestis, ajaloomälestis
+| 1
+| 
+| 
+|}
