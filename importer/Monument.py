@@ -673,14 +673,40 @@ class DkFortidsDa(Monument):
         """
         self.add_label("da", remove_markup(self.stednavn))
 
+    def update_descriptions(self):
+        monument_type = remove_markup(self.type).lower()
+        municipality = remove_markup(self.kommune)
+        description_da = "{} i {}".format(monument_type, municipality)
+        self.add_description("da", description_da)
+
+    def set_adm_location(self):
+        if self.has_non_empty_attribute("kommune"):
+            if count_wikilinks(self.kommune) == 1:
+                adm_location = q_from_first_wikilink("da", self.kommune)
+                self.add_statement("located_adm", adm_location)
+
+    def set_type(self):
+        if self.has_non_empty_attribute("type"):
+            table = self.data_files["types"]["mappings"]
+            try:
+                special_type = [table[x]["items"]
+                                for x in table
+                                if x == self.type][0]
+                print(self.type, special_type)
+                self.substitute_statement("is", special_type)
+            except IndexError:
+                return
+
     def __init__(self, db_row_dict, mapping, data_files=None):
         Monument.__init__(self, db_row_dict, mapping, data_files)
         self.update_labels()
+        self.update_descriptions()
         self.exists("da")
         self.set_commonscat()
         self.set_image("billede")
         self.set_coords(("lat", "lon"))
-        # self.set_adm_location()
+        self.set_adm_location()
+        self.set_type()
         # self.set_location()
         # self.set_sagsnr()
         # self.set_address()
@@ -706,6 +732,7 @@ class NoNo(Monument):
         # self.set_address()
         # self.set_inception()
         # self.print_wd()
+
 
 class EeEt(Monument):
 
