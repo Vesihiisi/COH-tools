@@ -24,6 +24,11 @@ def test_remove_markup_3():
         "[[Tegera Arena]],<br/> huvudentrén") == "Tegera Arena, huvudentrén"
 
 
+def test_remove_multiple_spaces_1():
+    assert remove_multiple_spaces(
+        "text  with      a lot   of spaces") == "text with a lot of spaces"
+
+
 def test_is_legit_house_number_1():
     assert is_legit_house_number("32") == True
 

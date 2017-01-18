@@ -44,6 +44,10 @@ def datetime_convert(dt_object):
         return dt_object.__str__()
 
 
+def remove_multiple_spaces(text):
+    return re.sub(' +', ' ', text)
+
+
 def remove_markup(text):
     remove_br = re.compile('<br.*?>\W*', re.I)
     text = remove_br.sub(' ', text)
