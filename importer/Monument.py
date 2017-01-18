@@ -724,15 +724,31 @@ class DkFortidsDa(Monument):
 class NoNo(Monument):
 
     def update_labels(self):
-        print(self.navn)
+        """
+        NOTE
+        Some of these are in all caps or have multiple spaces:
+        UTSIRA FYRSTASJON
+        SØGARD FJONE  -  FJONE SØNDRE
+        VÅLE PRESTEGÅRD, museum
+
+        TODO
+        Normalize - to title case?
+        rm extra whitespace
+        """
+        name = self.navn
+
+    def set_no(self):
+        self.add_statement("norwegian_monument_id", self.id)
 
     def __init__(self, db_row_dict, mapping, data_files=None):
         Monument.__init__(self, db_row_dict, mapping, data_files)
         self.update_labels()
-        self.exists("no")
+        # self.exists("no")
         self.set_commonscat()
         self.set_image("bilde")
         self.set_coords(("lat", "lon"))
+        self.set_no()
+        self.print_wd()
         # self.set_adm_location()
         # self.set_location()
         # self.set_sagsnr()
