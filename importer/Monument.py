@@ -744,7 +744,8 @@ class NoNo(Monument):
 class EeEt(Monument):
 
     def update_labels(self):
-        return
+        name = remove_markup(self.nimi)
+        self.add_label("et", name)
 
     def set_no(self):
         register_no = str(self.registrant_url.split("=")[-1])
@@ -793,6 +794,19 @@ class PlPl(Monument):
     def set_address(self):
         return
 
+    def set_location(self):
+        """
+        TODO
+        get list of all settlements
+        and match the plain text ones against it
+        """
+        if count_wikilinks(self.miejscowosc) == 1:
+            location = q_from_first_wikilink("pl", self.miejscowosc)
+            self.add_statement("location", location)
+        else:
+            pass
+            # location = remove_markup(self.miejscowosc)
+
     def __init__(self, db_row_dict, mapping, data_files=None):
         Monument.__init__(self, db_row_dict, mapping, data_files)
         self.update_labels()
@@ -802,7 +816,7 @@ class PlPl(Monument):
         self.set_coords(("lat", "lon"))
         self.set_adm_location()
         self.set_no()
-        # self.set_location()
+        self.set_location()
         # self.set_sagsnr()
         self.set_address()
         # self.set_inception()
