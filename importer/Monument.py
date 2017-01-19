@@ -939,6 +939,7 @@ class ZaEn(Monument):
         self.add_label("en", name)
 
     def set_adm_location(self):
+        # print(self.magisterial_district)
         return
 
     def __init__(self, db_row_dict, mapping, data_files=None):
