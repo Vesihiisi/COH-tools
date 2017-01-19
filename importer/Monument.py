@@ -991,7 +991,15 @@ class CzCs(Monument):
         self.add_label("cs", name)
 
     def set_adm_location(self):
-        return
+        """
+        TODO
+        Download all municipalities
+        """
+        print(self.municipality)
+
+    def set_no(self):
+        code = str(self.id_objektu)
+        self.add_statement("czech_monument_id", code)
 
     def __init__(self, db_row_dict, mapping, data_files=None):
         Monument.__init__(self, db_row_dict, mapping, data_files)
@@ -1001,9 +1009,9 @@ class CzCs(Monument):
         self.set_image("image")
         self.set_coords(("lat", "lon"))
         self.set_adm_location()
-        # self.set_no()
+        self.set_no()
         # self.set_location()
-        self.print_wd()
+        # self.print_wd()
 
 
 class HuHu(Monument):
