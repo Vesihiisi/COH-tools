@@ -1031,23 +1031,34 @@ class HuHu(Monument):
 class PtPt(Monument):
 
     def update_labels(self):
-        return
+        name = remove_markup(self.designacoes)
+        self.add_label("pt", name)
+
+    def update_descriptions(self):
+        if self.has_non_empty_attribute("freguesia"):
+            freg = remove_markup(self.freguesia)
+            desc_en = "heritage site in " + freg + ", Portugal"
+            self.add_description("en", desc_en)
+            print(desc_en)
 
     def set_adm_location(self):
-        return
+        if self.has_non_empty_attribute("freguesia"):
+            parish = q_from_first_wikilink("pt", self.freguesia)
+            self.add_statement("located_adm", parish)
 
     def set_no(self):
         code = self.id
-        self.add_statement("igespar_id", code)
+        self.add_statement("igespar_id", str(code))
 
     def __init__(self, db_row_dict, mapping, data_files=None):
         Monument.__init__(self, db_row_dict, mapping, data_files)
         self.update_labels()
-        # self.exists("sq")
+        # self.exists("pt")
+        self.update_descriptions()
         self.set_commonscat()
         self.set_image("imagem")
         self.set_coords(("lat", "lon"))
         self.set_adm_location()
         self.set_no()
         # self.set_location()
-        self.print_wd()
+        # self.print_wd()
