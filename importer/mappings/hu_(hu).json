@@ -1,0 +1,18 @@
+{
+    "country": {
+        "item": "Q28",
+        "name": "Hungary"
+    },
+    "country_code": "hu",
+    "default_is": {
+        "item": "",
+        "name": "",
+        "comment" : ""
+    },
+    "heritage": {
+        "item": "",
+        "name": "",
+        "comment": ""
+    },
+    "language": "hu"
+}

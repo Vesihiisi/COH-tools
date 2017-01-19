@@ -973,3 +973,24 @@ class CzCs(Monument):
         # self.set_no()
         # self.set_location()
         self.print_wd()
+
+class HuHu(Monument):
+
+    def update_labels(self):
+        name = remove_markup(self.name)
+        self.add_label("hu", name)
+
+    def set_adm_location(self):
+        return
+
+    def __init__(self, db_row_dict, mapping, data_files=None):
+        Monument.__init__(self, db_row_dict, mapping, data_files)
+        self.update_labels()
+        # self.exists("sq")
+        self.set_commonscat()
+        self.set_image("image")
+        self.set_coords(("lat", "lon"))
+        self.set_adm_location()
+        # self.set_no()
+        # self.set_location()
+        self.print_wd()
