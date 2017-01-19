@@ -1,0 +1,18 @@
+{
+    "country": {
+        "item": "Q45",
+        "name": "Portugal"
+    },
+    "country_code": "pt",
+    "default_is": {
+        "comment": "",
+        "item": "",
+        "name": ""
+    },
+    "heritage": {
+        "comment": "",
+        "item": "",
+        "name": ""
+    },
+    "language": "pt"
+}

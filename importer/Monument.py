@@ -752,10 +752,15 @@ class NoNo(Monument):
         VÅLE PRESTEGÅRD, museum
 
         TODO
-        Normalize - to title case?
-        rm extra whitespace
+        *Normalize - to title case?
+            It contains some old-style numbers, and these will be broken:
+            XXVIII -> Xxviii
+
+        * rm extra whitespace
         """
-        name = self.navn
+        for part in self.navn.split(" "):
+            if part.isupper():
+                print(part, "----", part.capitalize())
 
     def set_no(self):
         self.add_statement("norwegian_monument_id", self.id)
@@ -768,7 +773,6 @@ class NoNo(Monument):
         self.set_image("bilde")
         self.set_coords(("lat", "lon"))
         self.set_no()
-        self.print_wd()
         # self.set_adm_location()
         # self.set_location()
         # self.set_sagsnr()
@@ -1020,5 +1024,30 @@ class HuHu(Monument):
         self.set_coords(("lat", "lon"))
         self.set_adm_location()
         # self.set_no()
+        # self.set_location()
+        self.print_wd()
+
+
+class PtPt(Monument):
+
+    def update_labels(self):
+        return
+
+    def set_adm_location(self):
+        return
+
+    def set_no(self):
+        code = self.id
+        self.add_statement("igespar_id", code)
+
+    def __init__(self, db_row_dict, mapping, data_files=None):
+        Monument.__init__(self, db_row_dict, mapping, data_files)
+        self.update_labels()
+        # self.exists("sq")
+        self.set_commonscat()
+        self.set_image("imagem")
+        self.set_coords(("lat", "lon"))
+        self.set_adm_location()
+        self.set_no()
         # self.set_location()
         self.print_wd()

@@ -46,17 +46,12 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                                               "data_files":
                                               {"functions":
                                                "se-ship_(sv)_functions.json"}},
-
-                   "monuments_xk_(sq)": {"class": XkSq, "data_files": {}},
-
-                   "monuments_za_(en)": {"class": ZaEn, "data_files": {}},
-
-                   "monuments_ro_(ro)": {"class": RoRo, "data_files": {}},
-
                    "monuments_cz_(cs)": {"class": CzCs, "data_files": {}},
-
                    "monuments_hu_(hu)": {"class": HuHu, "data_files": {}},
-
+                   "monuments_pt_(pt)": {"class": PtPt, "data_files": {}},
+                   "monuments_ro_(ro)": {"class": RoRo, "data_files": {}},
+                   "monuments_xk_(sq)": {"class": XkSq, "data_files": {}},
+                   "monuments_za_(en)": {"class": ZaEn, "data_files": {}},
                    "monuments_dk-bygninger_(da)": {"class": DkBygningDa,
                                                    "data_files": {}},
                    "monuments_pl_(pl)": {"class": PlPl,
