@@ -12,5 +12,9 @@
         "item": "Q10416961",
         "name": "working life museum"
     },
-    "language": "sv"
+    "language": "sv",
+    "unique": {
+        "comment": "Arbetsam ID",
+        "property": "P3426"
+    }
 }

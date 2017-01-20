@@ -12,5 +12,9 @@
         "item": "Q21287602",
         "name": "monument in Fornminnesregistret"
     },
-    "language": "sv"
+    "language": "sv",
+    "unique": {
+        "comment": "RAÄ number",
+        "property": "P1262"
+    }
 }

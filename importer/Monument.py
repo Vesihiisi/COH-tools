@@ -63,6 +63,11 @@ class Monument(object):
             statement = {"value": value, "quals": qualifiers, "refs": refs}
             base[prop] = [statement]
 
+    def set_wd_item(self, wd_item):
+        if wd_item is not None:
+            self.wd_item["wd-item"] = wd_item
+            print("Associated WD item: ", wd_item)
+
     def add_label(self, language, text):
         base = self.wd_item["labels"]
         base[language] = text
@@ -147,11 +152,10 @@ class Monument(object):
             return False
 
     def exists(self, language, article_keyword="monument_article"):
-        self.wd_item["wd-item"] = None
         if self.has_non_empty_attribute(article_keyword):
             wd_item = q_from_wikipedia(
                 language, getattr(self, article_keyword))
-            self.wd_item["wd-item"] = wd_item
+            self.set_wd_item(wd_item)
 
     def set_changed(self):
         if self.changed:
@@ -160,6 +164,19 @@ class Monument(object):
     def set_source(self):
         if self.has_non_empty_attribute("source"):
             self.wd_item["source"] = self.source
+
+    def exists_with_prop(self, mapping):
+        unique_prop = mapping.get_unique_prop()
+        base = self.wd_item["statements"]
+        if unique_prop in base:
+            val_to_check = base[unique_prop][0]['value']
+            if val_to_check in self.existing:
+                wd_item = self.existing[val_to_check]
+                print("Wikidata has item with {} = {}. Connecting with item {}.".format(unique_prop, val_to_check, wd_item))
+                self.set_wd_item(wd_item)
+            else:
+                print("There's no item with {} = {} on Wikidata.".format(
+                    unique_prop, val_to_check))
 
     def construct_wd_item(self, mapping, data_files=None):
         self.wd_item = {}
@@ -174,12 +191,13 @@ class Monument(object):
         self.set_registrant_url()
         self.set_changed()
 
-    def __init__(self, db_row_dict, mapping, data_files):
+    def __init__(self, db_row_dict, mapping, data_files, existing):
         for k, v in db_row_dict.items():
             if not k.startswith("m_spec."):
                 setattr(self, k.replace("-", "_"), v)
         self.construct_wd_item(mapping)
         self.data_files = data_files
+        self.existing = existing
 
     def get_fields(self):
         return sorted(list(self.__dict__.keys()))
@@ -262,10 +280,9 @@ class SeFornminSv(Monument):
         # This is messy and not super prioritized...
         return
 
-    def __init__(self, db_row_dict, mapping, data_files):
-        Monument.__init__(self, db_row_dict, mapping, data_files)
+    def __init__(self, db_row_dict, mapping, data_files, existing):
+        Monument.__init__(self, db_row_dict, mapping, data_files, existing)
         self.set_image("bild")
-        self.exists("sv", "artikel")
         self.update_labels()
         self.set_descriptions()
         self.set_raa()
@@ -273,9 +290,10 @@ class SeFornminSv(Monument):
         self.set_type()
         self.set_location()
         self.set_inception()
-        self.exists("sv", "artikel")
+        # self.exists("sv", "artikel")
         self.set_coords(("lat", "lon"))
         self.set_commonscat()
+        self.exists_with_prop(mapping)
         # self.print_wd()
 
 
@@ -343,8 +361,8 @@ class SeArbetslSv(Monument):
         if self.has_non_empty_attribute("id"):
             self.add_statement("arbetsam", self.id)
 
-    def __init__(self, db_row_dict, mapping, data_files=None):
-        Monument.__init__(self, db_row_dict, mapping, data_files)
+    def __init__(self, db_row_dict, mapping, data_files, existing):
+        Monument.__init__(self, db_row_dict, mapping, data_files, existing)
         self.set_labels("sv", self.namn)
         self.set_descriptions()
         self.set_id()
@@ -355,6 +373,7 @@ class SeArbetslSv(Monument):
         self.set_image("bild")
         self.set_commonscat()
         self.set_coords(("lat", "lon"))
+        self.exists_with_prop(mapping)
         # self.print_wd()
 
 
@@ -419,8 +438,8 @@ class SeShipSv(Monument):
         if self.has_non_empty_attribute("signal"):
             self.add_statement("call_sign", self.signal)
 
-    def __init__(self, db_row_dict, mapping, data_files=None):
-        Monument.__init__(self, db_row_dict, mapping, data_files)
+    def __init__(self, db_row_dict, mapping, data_files, existing):
+        Monument.__init__(self, db_row_dict, mapping, data_files, existing)
         self.set_labels("sv", self.namn)
         self.set_image("bild")
         self.exists("sv", "artikel")
@@ -431,6 +450,7 @@ class SeShipSv(Monument):
         self.set_shipyard()
         self.set_homeport()
         self.set_dimensions()
+        self.exists_with_prop(mapping)
         self.print_wd()
 
 
@@ -581,13 +601,13 @@ class SeBbrSv(Monument):
             if year_parsed is not None:
                 self.add_statement("inception", {"time_value": year_parsed})
 
-    def __init__(self, db_row_dict, mapping, data_files=None):
+    def __init__(self, db_row_dict, mapping, data_files, existing):
         """
         TODO
         Add an extra check for existing article using bbr?
         not only monument_article
         """
-        Monument.__init__(self, db_row_dict, mapping, data_files)
+        Monument.__init__(self, db_row_dict, mapping, data_files, existing)
         self.update_labels()
         self.update_descriptions()
         self.set_image("bild")
@@ -603,6 +623,7 @@ class SeBbrSv(Monument):
         self.set_architect()
         self.set_location()
         self.set_function()
+        self.exists_with_prop(mapping)
         # self.print_wd()
 
 
@@ -652,8 +673,8 @@ class DkBygningDa(Monument):
             inception = parse_year(self.opforelsesar)
             self.add_statement("inception", {"time_value": inception})
 
-    def __init__(self, db_row_dict, mapping, data_files=None):
-        Monument.__init__(self, db_row_dict, mapping, data_files)
+    def __init__(self, db_row_dict, mapping, data_files, existing):
+        Monument.__init__(self, db_row_dict, mapping, data_files, existing)
         self.update_labels()
         self.exists("da")
         self.set_commonscat()
@@ -664,6 +685,7 @@ class DkBygningDa(Monument):
         self.set_sagsnr()
         self.set_address()
         self.set_inception()
+        self.exists_with_prop(mapping)
         # self.print_wd()
 
 
@@ -716,8 +738,8 @@ class DkFortidsDa(Monument):
                 print(self.datering)
                 print(q_from_first_wikilink("da", self.datering))
 
-    def __init__(self, db_row_dict, mapping, data_files=None):
-        Monument.__init__(self, db_row_dict, mapping, data_files)
+    def __init__(self, db_row_dict, mapping, data_files, existing):
+        Monument.__init__(self, db_row_dict, mapping, data_files, existing)
         self.update_labels()
         self.update_descriptions()
         self.exists("da")
@@ -732,6 +754,7 @@ class DkFortidsDa(Monument):
         # self.set_address()
         # self.set_inception()
         # self.print_wd()
+        self.exists_with_prop(mapping)
 
 
 class NoNo(Monument):
@@ -765,8 +788,8 @@ class NoNo(Monument):
     def set_no(self):
         self.add_statement("norwegian_monument_id", self.id)
 
-    def __init__(self, db_row_dict, mapping, data_files=None):
-        Monument.__init__(self, db_row_dict, mapping, data_files)
+    def __init__(self, db_row_dict, mapping, data_files, existing):
+        Monument.__init__(self, db_row_dict, mapping, data_files, existing)
         self.update_labels()
         # self.exists("no")
         self.set_commonscat()
@@ -779,6 +802,7 @@ class NoNo(Monument):
         # self.set_address()
         # self.set_inception()
         # self.print_wd()
+        self.exists_with_prop(mapping)
 
 
 class EeEt(Monument):
@@ -791,8 +815,8 @@ class EeEt(Monument):
         register_no = str(self.registrant_url.split("=")[-1])
         self.add_statement("estonian_monument_id", register_no)
 
-    def __init__(self, db_row_dict, mapping, data_files=None):
-        Monument.__init__(self, db_row_dict, mapping, data_files)
+    def __init__(self, db_row_dict, mapping, data_files, existing):
+        Monument.__init__(self, db_row_dict, mapping, data_files, existing)
         self.update_labels()
         # self.exists("et")
         self.set_commonscat()
@@ -804,6 +828,7 @@ class EeEt(Monument):
         # self.set_sagsnr()
         # self.set_address()
         # self.set_inception()
+        self.exists_with_prop(mapping)
         self.print_wd()
 
 
@@ -867,8 +892,8 @@ class PlPl(Monument):
             except IndexError:
                 return
 
-    def __init__(self, db_row_dict, mapping, data_files=None):
-        Monument.__init__(self, db_row_dict, mapping, data_files)
+    def __init__(self, db_row_dict, mapping, data_files, existing):
+        Monument.__init__(self, db_row_dict, mapping, data_files, existing)
         self.update_labels()
         # self.exists("pl")
         self.set_commonscat()
@@ -880,6 +905,7 @@ class PlPl(Monument):
         # self.set_sagsnr()
         self.set_address()
         # self.set_inception()
+        self.exists_with_prop(mapping)
         # self.print_wd()
 
 
@@ -920,8 +946,8 @@ class XkSq(Monument):
         if commonscat_exists(category):
             self.add_statement("commonscat", category)
 
-    def __init__(self, db_row_dict, mapping, data_files=None):
-        Monument.__init__(self, db_row_dict, mapping, data_files)
+    def __init__(self, db_row_dict, mapping, data_files, existing):
+        Monument.__init__(self, db_row_dict, mapping, data_files, existing)
         self.update_labels()
         self.exists("sq")
         self.update_commonscat()
@@ -933,6 +959,7 @@ class XkSq(Monument):
         # self.set_sagsnr()
         # self.set_address()
         # self.set_inception()
+        self.exists_with_prop(mapping)
         # self.print_wd()
 
 
@@ -946,8 +973,8 @@ class ZaEn(Monument):
         # print(self.magisterial_district)
         return
 
-    def __init__(self, db_row_dict, mapping, data_files=None):
-        Monument.__init__(self, db_row_dict, mapping, data_files)
+    def __init__(self, db_row_dict, mapping, data_files, existing):
+        Monument.__init__(self, db_row_dict, mapping, data_files, existing)
         self.update_labels()
         # self.exists("sq")
         self.set_commonscat()
@@ -956,6 +983,7 @@ class ZaEn(Monument):
         self.set_adm_location()
         # self.set_no()
         # self.set_location()
+        self.exists_with_prop(mapping)
         # self.print_wd()
 
 
@@ -971,8 +999,8 @@ class RoRo(Monument):
     def set_no(self):
         self.add_statement("romanian_monument_id", self.cod)
 
-    def __init__(self, db_row_dict, mapping, data_files=None):
-        Monument.__init__(self, db_row_dict, mapping, data_files)
+    def __init__(self, db_row_dict, mapping, data_files, existing):
+        Monument.__init__(self, db_row_dict, mapping, data_files, existing)
         self.update_labels()
         # self.exists("sq")
         self.set_commonscat()
@@ -981,6 +1009,7 @@ class RoRo(Monument):
         self.set_adm_location()
         self.set_no()
         # self.set_location()
+        self.exists_with_prop(mapping)
         # self.print_wd()
 
 
@@ -993,7 +1022,7 @@ class CzCs(Monument):
     def set_adm_location(self):
         """
         TODO
-        Download all municipalities
+        Download all
         """
         print(self.municipality)
 
@@ -1001,8 +1030,8 @@ class CzCs(Monument):
         code = str(self.id_objektu)
         self.add_statement("czech_monument_id", code)
 
-    def __init__(self, db_row_dict, mapping, data_files=None):
-        Monument.__init__(self, db_row_dict, mapping, data_files)
+    def __init__(self, db_row_dict, mapping, data_files, existing):
+        Monument.__init__(self, db_row_dict, mapping, data_files, existing)
         self.update_labels()
         # self.exists("sq")
         self.set_commonscat()
@@ -1011,6 +1040,7 @@ class CzCs(Monument):
         self.set_adm_location()
         self.set_no()
         # self.set_location()
+        self.exists_with_prop(mapping)
         # self.print_wd()
 
 
@@ -1023,8 +1053,8 @@ class HuHu(Monument):
     def set_adm_location(self):
         return
 
-    def __init__(self, db_row_dict, mapping, data_files=None):
-        Monument.__init__(self, db_row_dict, mapping, data_files)
+    def __init__(self, db_row_dict, mapping, data_files, existing):
+        Monument.__init__(self, db_row_dict, mapping, data_files, existing)
         self.update_labels()
         # self.exists("sq")
         self.set_commonscat()
@@ -1033,6 +1063,7 @@ class HuHu(Monument):
         self.set_adm_location()
         # self.set_no()
         # self.set_location()
+        self.exists_with_prop(mapping)
         self.print_wd()
 
 
@@ -1058,8 +1089,8 @@ class PtPt(Monument):
         code = self.id
         self.add_statement("igespar_id", str(code))
 
-    def __init__(self, db_row_dict, mapping, data_files=None):
-        Monument.__init__(self, db_row_dict, mapping, data_files)
+    def __init__(self, db_row_dict, mapping, data_files, existing):
+        Monument.__init__(self, db_row_dict, mapping, data_files, existing)
         self.update_labels()
         # self.exists("pt")
         self.update_descriptions()
@@ -1069,4 +1100,5 @@ class PtPt(Monument):
         self.set_adm_location()
         self.set_no()
         # self.set_location()
+        self.exists_with_prop(mapping)
         # self.print_wd()

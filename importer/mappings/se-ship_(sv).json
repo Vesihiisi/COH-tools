@@ -11,5 +11,9 @@
     "heritage": {
         "item": "Q16501309"
     },
-    "language": "sv"
+    "language": "sv",
+    "unique": {
+        "comment": "call sign",
+        "property": "P2317"
+    }
 }

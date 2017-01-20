@@ -5,6 +5,7 @@ from os import path
 import argparse
 import pymysql
 from importer_utils import *
+import wikidataStuff.wdqsLookup as lookup
 
 SHORT = 10
 MAPPING_DIR = "mappings"
@@ -17,6 +18,9 @@ class Mapping(object):
         filename = path.join(
             MAPPING_DIR, "{}_({}).json".format(countryname, languagename))
         return load_json(filename)
+
+    def get_unique_prop(self):
+        return self.file_content["unique"]["property"]
 
     def __init__(self, countryname, languagename):
         self.file_content = self.load_mapping_file(countryname, languagename)
@@ -104,6 +108,18 @@ def load_data_files(file_dict):
     return file_dict
 
 
+def get_wd_items_using_prop(prop):
+    items = {}
+    query = "SELECT DISTINCT ?item ?value  WHERE {?item p:" + \
+        prop + "?statement. OPTIONAL { ?item wdt:" + prop + " ?value. }}"
+    data = lookup.make_simple_wdqs_query(query, verbose=True)
+    for x in data:
+        key = lookup.sanitize_wdqs_result(x['item'])
+        value = x['value']
+        items[value] = key
+    return items
+
+
 def get_items(connection, country, language, short=False, upload=False):
     if upload:
         logger = Logger()
@@ -112,6 +128,8 @@ def get_items(connection, country, language, short=False, upload=False):
         print("Table does not exist.")
         return
     mapping = Mapping(country, language)
+    unique_prop = mapping.get_unique_prop()
+    existing = get_wd_items_using_prop(unique_prop)
     query = make_query(specific_table_name)
     if short:
         query += " LIMIT " + str(SHORT)
@@ -120,12 +138,12 @@ def get_items(connection, country, language, short=False, upload=False):
         data_files = load_data_files(
             SPECIFIC_TABLES[specific_table_name]["data_files"])
     else:
-        class_to_use = Monument
-        data_files = None
+        print("No class defined for " + specific_table_name)
+        return
     print_row_count(specific_table_name, connection)
     database_rows = select_query(query, connection)
     for row in database_rows:
-        monument = class_to_use(row, mapping, data_files)
+        monument = class_to_use(row, mapping, data_files, existing)
         if upload:
             uploader = Uploader(monument, log=logger)
             uploader.upload()

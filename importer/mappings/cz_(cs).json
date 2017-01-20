@@ -5,14 +5,18 @@
     },
     "country_code": "cz",
     "default_is": {
+        "comment": "",
         "item": "",
-        "name": "",
-        "comment" : ""
+        "name": ""
     },
     "heritage": {
+        "comment": "look at national monument of the Czech Republic and cultural monument of the Czech Republic!",
         "item": "",
-        "name": "",
-        "comment": "look at national monument of the Czech Republic and cultural monument of the Czech Republic!"
+        "name": ""
     },
-    "language": "cs"
+    "language": "cs",
+    "unique": {
+        "comment": "Czech cultural heritage ID",
+        "property": "P762"
+    }
 }

@@ -11,5 +11,9 @@
     "heritage": {
         "item": ""
     },
-    "language": "sv"
+    "language": "sv",
+        "unique": {
+        "comment": "BBR number",
+        "property": "P1260"
+    } 
 }
