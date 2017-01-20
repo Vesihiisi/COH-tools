@@ -172,7 +172,8 @@ class Monument(object):
             val_to_check = base[unique_prop][0]['value']
             if val_to_check in self.existing:
                 wd_item = self.existing[val_to_check]
-                print("Wikidata has item with {} = {}. Connecting with item {}.".format(unique_prop, val_to_check, wd_item))
+                print("Wikidata has item with {} = {}. Connecting with item {}.".format(
+                    unique_prop, val_to_check, wd_item))
                 self.set_wd_item(wd_item)
             else:
                 print("There's no item with {} = {} on Wikidata.".format(
@@ -293,7 +294,7 @@ class SeFornminSv(Monument):
         # self.exists("sv", "artikel")
         self.set_coords(("lat", "lon"))
         self.set_commonscat()
-        self.exists_with_prop(mapping)
+        # self.exists_with_prop(mapping)
         # self.print_wd()
 
 
