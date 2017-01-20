@@ -1,0 +1,20 @@
+{
+    "country": {
+        "item": "",
+        "name": ""
+    },
+    "country_code": "",
+    "default_is": {
+        "item": "",
+        "name": ""
+    },
+    "heritage": {
+        "item": "",
+        "name": ""
+    },
+    "language": "",
+    "unique": {
+        "comment": "This is used to find wd items about this monument even if they're not linked to wikipedia articles. Necessary for momuments that have already been imported.",
+        "property": ""
+    }
+}
