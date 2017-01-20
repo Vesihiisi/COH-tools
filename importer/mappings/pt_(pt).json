@@ -14,5 +14,9 @@
         "item": "",
         "name": ""
     },
-    "language": "pt"
+    "language": "pt",
+    "unique": {
+        "comment": "IGESPAR ID",
+        "property": "P1702"
+    }
 }

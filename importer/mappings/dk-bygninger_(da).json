@@ -13,5 +13,9 @@
         "item": "Q21436546",
         "name": "monument on Kulturstyrelsen register"
     },
-    "language": "da"
+    "language": "da",
+    "unique": {
+        "comment": "Danish listed buildings case ID",
+        "property": "P2783"
+    }
 }

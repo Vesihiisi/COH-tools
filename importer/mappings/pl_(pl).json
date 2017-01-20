@@ -14,5 +14,9 @@
         "name": "object on the Polish cultural heritage register",
         "comment": ""
     },
-    "language": "pl"
+    "language": "pl",
+        "unique": {
+        "comment": "Polish cultural heritage register numbers",
+        "property": "P3424"
+    }
 }

@@ -5,14 +5,18 @@
     },
     "country_code": "za",
     "default_is": {
+        "comment": "",
         "item": "",
-        "name": "",
-        "comment" : ""
+        "name": ""
     },
     "heritage": {
+        "comment": "",
         "item": "",
-        "name": "",
-        "comment": ""
+        "name": ""
     },
-    "language": "ro"
+    "language": "ro",
+    "unique": {
+        "comment": "Romania LMI code",
+        "property": "P1770"
+    }
 }

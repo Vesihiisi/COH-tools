@@ -14,5 +14,9 @@
         "name": "",
         "comment": ""
     },
-    "language": "et"
+    "language": "et",
+        "unique": {
+        "comment": "Estonian cultural monument ID",
+        "property": "P2948"
+    }
 }

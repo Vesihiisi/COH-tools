@@ -14,5 +14,9 @@
         "name": "monument of Kosovo",
         "comment": ""
     },
-    "language": "sq"
+    "language": "sq",
+        "unique": {
+        "comment": "Cultural Heritage Kosovo ID",
+        "property": "P3227"
+    }
 }
