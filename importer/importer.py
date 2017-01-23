@@ -110,13 +110,15 @@ def load_data_files(file_dict):
 
 def get_wd_items_using_prop(prop):
     items = {}
+    print("WILL NOW DOWNLOAD WD ITEMS THAT USE " + prop)
     query = "SELECT DISTINCT ?item ?value  WHERE {?item p:" + \
         prop + "?statement. OPTIONAL { ?item wdt:" + prop + " ?value. }}"
-    data = lookup.make_simple_wdqs_query(query, verbose=True)
+    data = lookup.make_simple_wdqs_query(query, verbose=False)
     for x in data:
         key = lookup.sanitize_wdqs_result(x['item'])
         value = x['value']
         items[value] = key
+    print("FOUND {} WD ITEMS WITH PROP {}".format(len(items), prop))
     return items
 
 
