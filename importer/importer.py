@@ -69,7 +69,7 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                    "monuments_se-bbr_(sv)": {"class": SeBbrSv,
                                              "data_files": {}},
                    "monuments_ee_(et)": {"class": EeEt,
-                                         "data_files": {}},
+                                         "data_files": {"counties":"estonia_counties.json"}},
                    "monuments_se-fornmin_(sv)":
                    {"class": SeFornminSv,
                     "data_files":
