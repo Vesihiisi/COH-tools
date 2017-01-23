@@ -55,7 +55,7 @@ def remove_markup(text):
     if "[" in text:
         text = wparser.parse(text)
         text = text.strip_code()
-    return text.strip()
+    return remove_multiple_spaces(text.strip())
 
 
 def contains_digit(text):
@@ -119,6 +119,7 @@ def count_wikilinks(text):
 def q_from_wikipedia(language, page_title):
     site = pywikibot.Site(language, "wikipedia")
     page = pywikibot.Page(site, page_title)
+
     if page.exists():
         if page.isRedirectPage():
             page = page.getRedirectTarget()
