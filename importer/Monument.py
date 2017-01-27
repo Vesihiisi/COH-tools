@@ -185,6 +185,7 @@ class Monument(object):
         self.wd_item["labels"] = {}
         self.wd_item["aliases"] = {}
         self.wd_item["descriptions"] = {}
+        self.wd_item["wd-item"] = None
         self.set_country(mapping)
         self.set_is(mapping)
         self.set_heritage(mapping)
