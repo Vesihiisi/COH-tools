@@ -194,18 +194,20 @@ class Uploader(object):
         descriptions = self.make_descriptions()
         aliases = self.make_aliases()
         claims = self.data["statements"]
-        exists = True if self.data["wd-item"] is not None else False
-        if exists:
+        self.add_labels(self.wd_item, labels, self.log)
+        self.add_aliases(self.wd_item, aliases, self.log)
+        self.add_descriptions(self.wd_item, descriptions, self.log)
+        self.add_claims(self.wd_item, claims, self.log)
+
+    def set_wd_item(self):
+        item_exists = True if self.data["wd-item"] is not None else False
+        if item_exists:
             # item_q = self.data["wd-item"]
-            target_item = self.wdstuff.QtoItemPage(self.TEST_ITEM)
-            print(target_item)
+            self.wd_item = self.wdstuff.QtoItemPage(self.TEST_ITEM)
+            print(self.wd_item)
         else:
-            target_item = self.wdstuff.QtoItemPage(self.TEST_ITEM)
-            # target_item = self.create_new_item()
-        self.add_labels(target_item, labels, self.log)
-        self.add_aliases(target_item, aliases, self.log)
-        self.add_descriptions(target_item, descriptions, self.log)
-        self.add_claims(target_item, claims, self.log)
+            self.wd_item = self.wdstuff.QtoItemPage(self.TEST_ITEM)
+            # self.wd_item = self.create_new_item()
 
     def __init__(self, monument_object, log=None):
         self.log = False
@@ -216,3 +218,4 @@ class Uploader(object):
         site = pywikibot.Site("wikidata", "wikidata")
         self.repo = site.data_repository()
         self.wdstuff = WDS(self.repo)
+        self.set_wd_item()
