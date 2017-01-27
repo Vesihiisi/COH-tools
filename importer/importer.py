@@ -7,7 +7,7 @@ import pymysql
 from importer_utils import *
 import wikidataStuff.wdqsLookup as lookup
 
-SHORT = 10
+DEFAULT_SHORT = 10
 MAPPING_DIR = "mappings"
 MONUMENTS_ALL = "monuments_all"
 
@@ -69,7 +69,7 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                    "monuments_se-bbr_(sv)": {"class": SeBbrSv,
                                              "data_files": {}},
                    "monuments_ee_(et)": {"class": EeEt,
-                                         "data_files": {"counties":"estonia_counties.json"}},
+                                         "data_files": {"counties": "estonia_counties.json"}},
                    "monuments_se-fornmin_(sv)":
                    {"class": SeFornminSv,
                     "data_files":
@@ -134,7 +134,7 @@ def get_items(connection, country, language, short=False, upload=False):
     existing = get_wd_items_using_prop(unique_prop)
     query = make_query(specific_table_name)
     if short:
-        query += " LIMIT " + str(SHORT)
+        query += " LIMIT " + str(short)
     if specific_table_name in SPECIFIC_TABLES.keys():
         class_to_use = SPECIFIC_TABLES[specific_table_name]["class"]
         data_files = load_data_files(
@@ -157,6 +157,7 @@ def main(arguments):
     country = arguments.country
     language = arguments.language
     short = arguments.short
+    print("short: ", short)
     upload = arguments.upload
     get_items(connection, country, language, short, upload)
 
@@ -169,7 +170,11 @@ if __name__ == "__main__":
     parser.add_argument("--db", default="wlm")
     parser.add_argument("--language", default="sv")
     parser.add_argument("--country", default="se-ship")
-    parser.add_argument("--short", action='store_true')
+    parser.add_argument("--short",
+                        const=DEFAULT_SHORT,
+                        nargs='?',
+                        type=int,
+                        action='store',)
     parser.add_argument("--upload", action='store_true')
     args = parser.parse_args()
     main(args)
