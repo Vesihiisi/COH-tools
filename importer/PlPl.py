@@ -54,7 +54,7 @@ class PlPl(Monument):
             location = utils.q_from_first_wikilink("pl", self.miejscowosc)
             self.add_statement("location", location)
         else:
-            placename = remove_markup(self.miejscowosc)
+            placename = utils.remove_markup(self.miejscowosc)
             try:
                 location = [x["item"] for x in settlements_dict if x[
                     "pl"].strip() == placename][0]
@@ -72,8 +72,6 @@ class PlPl(Monument):
         self.set_adm_location()
         self.set_no()
         self.set_location()
-        # self.set_sagsnr()
         self.set_address()
-        # self.set_inception()
         self.exists_with_prop(mapping)
         # self.print_wd()
