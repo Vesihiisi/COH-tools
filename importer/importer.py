@@ -3,6 +3,7 @@ from HuHu import HuHu
 from PtPt import PtPt
 from RoRo import RoRo
 from PlPl import PlPl
+from EeEt import EeEt
 from SeArbetslSv import SeArbetslSv
 from SeShipSv import SeShipSv
 from XkSq import XkSq
@@ -76,8 +77,8 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                    #                       "data_files": {}},
                    # "monuments_se-bbr_(sv)": {"class": SeBbrSv,
                    #                           "data_files": {}},
-                   # "monuments_ee_(et)": {"class": EeEt,
-                   #                       "data_files": {"counties": "estonia_counties.json"}},
+                   "monuments_ee_(et)": {"class": EeEt,
+                                          "data_files": {"counties": "estonia_counties.json"}},
                    # "monuments_se-fornmin_(sv)":
                    # {"class": SeFornminSv,
                    #  "data_files":
