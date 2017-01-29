@@ -1,6 +1,5 @@
 from Monument import Monument
 import importer_utils as utils
-from os import path
 
 
 class SeShipSv(Monument):
