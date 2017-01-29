@@ -164,6 +164,8 @@ class Monument(object):
             self.wd_item["source"] = self.source
 
     def exists_with_prop(self, mapping):
+        if self.existing is None:
+            return
         unique_prop = mapping.get_unique_prop()
         base = self.wd_item["statements"]
         if unique_prop in base:

@@ -34,7 +34,8 @@ class Mapping(object):
         return utils.load_json(filename)
 
     def get_unique_prop(self):
-        return self.file_content["unique"]["property"]
+        if "unique" in self.file_content and self.file_content["unique"]["property"] != "":
+            return self.file_content["unique"]["property"]
 
     def __init__(self, countryname, languagename):
         self.file_content = self.load_mapping_file(countryname, languagename)
@@ -71,19 +72,19 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                    "monuments_xk_(sq)": {"class": XkSq, "data_files": {}},
                    "monuments_za_(en)": {"class": ZaEn, "data_files": {}},
                    "monuments_dk-bygninger_(da)": {"class": DkBygningDa,
-                                                    "data_files": {}},
+                                                   "data_files": {}},
                    "monuments_pl_(pl)": {"class": PlPl,
-                                          "data_files": {"settlements": "poland_settlements.json"}},
+                                         "data_files": {"settlements": "poland_settlements.json"}},
                    "monuments_dk-fortidsminder_(da)": {"class": DkFortidsDa,
-                                                        "data_files": {
+                                                       "data_files": {
                                                            "types": "dk-fortidsminder_(da)_types.json"
-                                                        }},
+                                                       }},
                    "monuments_no_(no)": {"class": NoNo,
                                          "data_files": {}},
-                    "monuments_se-bbr_(sv)": {"class": SeBbrSv,
+                   "monuments_se-bbr_(sv)": {"class": SeBbrSv,
                                              "data_files": {}},
                    "monuments_ee_(et)": {"class": EeEt,
-                                          "data_files": {"counties": "estonia_counties.json"}},
+                                         "data_files": {"counties": "estonia_counties.json"}},
                    "monuments_se-fornmin_(sv)":
                    {"class": SeFornminSv,
                     "data_files":
@@ -118,7 +119,8 @@ def select_query(query, connection):
 
 def load_data_files(file_dict):
     for key in file_dict.keys():
-        file_dict[key] = utils.load_json(path.join(MAPPING_DIR, file_dict[key]))
+        file_dict[key] = utils.load_json(
+            path.join(MAPPING_DIR, file_dict[key]))
     return file_dict
 
 
@@ -145,7 +147,10 @@ def get_items(connection, country, language, short=False, upload=False):
         return
     mapping = Mapping(country, language)
     unique_prop = mapping.get_unique_prop()
-    existing = get_wd_items_using_prop(unique_prop)
+    if unique_prop is not None:
+        existing = get_wd_items_using_prop(unique_prop)
+    else:
+        existing = None
     query = make_query(specific_table_name)
     if short:
         query += " LIMIT " + str(short)
