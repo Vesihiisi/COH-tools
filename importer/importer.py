@@ -1,7 +1,8 @@
+from CzCs import CzCs
+from HuHu import HuHu
+from PtPt import PtPt
 from SeArbetslSv import SeArbetslSv
 from SeShipSv import SeShipSv
-from PtPt import PtPt
-from HuHu import HuHu
 from Uploader import *
 from Logger import *
 from os import path
@@ -53,7 +54,7 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                                               "data_files":
                                               {"functions":
                                                "se-ship_(sv)_functions.json"}},
-                   # "monuments_cz_(cs)": {"class": CzCs, "data_files": {}},
+                   "monuments_cz_(cs)": {"class": CzCs, "data_files": {}},
                    "monuments_hu_(hu)": {"class": HuHu, "data_files": {}},
                    "monuments_pt_(pt)": {"class": PtPt, "data_files": {}},
                    # "monuments_ro_(ro)": {"class": RoRo, "data_files": {}},
