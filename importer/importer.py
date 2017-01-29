@@ -2,6 +2,7 @@ from CzCs import CzCs
 from HuHu import HuHu
 from PtPt import PtPt
 from RoRo import RoRo
+from NoNo import NoNo
 from PlPl import PlPl
 from EeEt import EeEt
 from SeArbetslSv import SeArbetslSv
@@ -73,8 +74,8 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                    #                                     "data_files": {
                    #                                         "types": "dk-fortidsminder_(da)_types.json"
                    #                                     }},
-                   # "monuments_no_(no)": {"class": NoNo,
-                   #                       "data_files": {}},
+                   "monuments_no_(no)": {"class": NoNo,
+                                         "data_files": {}},
                    # "monuments_se-bbr_(sv)": {"class": SeBbrSv,
                    #                           "data_files": {}},
                    "monuments_ee_(et)": {"class": EeEt,
