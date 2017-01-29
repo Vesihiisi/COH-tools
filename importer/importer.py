@@ -1,5 +1,6 @@
 from SeArbetslSv import SeArbetslSv
 from SeShipSv import SeShipSv
+from PtPt import PtPt
 from Uploader import *
 from Logger import *
 from os import path
@@ -53,7 +54,7 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                                                "se-ship_(sv)_functions.json"}},
                    # "monuments_cz_(cs)": {"class": CzCs, "data_files": {}},
                    # "monuments_hu_(hu)": {"class": HuHu, "data_files": {}},
-                   # "monuments_pt_(pt)": {"class": PtPt, "data_files": {}},
+                   "monuments_pt_(pt)": {"class": PtPt, "data_files": {}},
                    # "monuments_ro_(ro)": {"class": RoRo, "data_files": {}},
                    # "monuments_xk_(sq)": {"class": XkSq, "data_files": {}},
                    # "monuments_za_(en)": {"class": ZaEn, "data_files": {}},
