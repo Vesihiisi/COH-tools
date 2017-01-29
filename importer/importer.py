@@ -1,10 +1,11 @@
 from CzCs import CzCs
+from DkFortidsDa import DkFortidsDa
+from EeEt import EeEt
 from HuHu import HuHu
-from PtPt import PtPt
-from RoRo import RoRo
 from NoNo import NoNo
 from PlPl import PlPl
-from EeEt import EeEt
+from PtPt import PtPt
+from RoRo import RoRo
 from SeArbetslSv import SeArbetslSv
 from SeShipSv import SeShipSv
 from XkSq import XkSq
@@ -70,10 +71,10 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                    #                                 "data_files": {}},
                    "monuments_pl_(pl)": {"class": PlPl,
                                           "data_files": {"settlements": "poland_settlements.json"}},
-                   # "monuments_dk-fortidsminder_(da)": {"class": DkFortidsDa,
-                   #                                     "data_files": {
-                   #                                         "types": "dk-fortidsminder_(da)_types.json"
-                   #                                     }},
+                   "monuments_dk-fortidsminder_(da)": {"class": DkFortidsDa,
+                                                        "data_files": {
+                                                           "types": "dk-fortidsminder_(da)_types.json"
+                                                        }},
                    "monuments_no_(no)": {"class": NoNo,
                                          "data_files": {}},
                    # "monuments_se-bbr_(sv)": {"class": SeBbrSv,
