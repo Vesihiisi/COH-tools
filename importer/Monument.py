@@ -1,11 +1,9 @@
 from os import path
 import json
-from importer_utils import *
+import importer_utils as utils
 
 
 MAPPING_DIR = "mappings"
-ADM0 = load_json(path.join(MAPPING_DIR, "adm0.json"))
-PROPS = load_json(path.join(MAPPING_DIR, "props_general.json"))
 
 
 class Monument(object):
@@ -16,7 +14,7 @@ class Monument(object):
                        sort_keys=True,
                        indent=4,
                        ensure_ascii=False,
-                       default=datetime_convert)
+                       default=utils.datetime_convert)
         )
 
     def add_statement(self, prop_name, value, quals={}, refs=[]):
@@ -25,20 +23,20 @@ class Monument(object):
         i.e. two statements with the same prop.
         """
         base = self.wd_item["statements"]
-        prop = PROPS[prop_name]
+        prop = self.props[prop_name]
         qualifiers = {}
         if prop not in base:
             base[prop] = []
         if len(quals) > 0:
             for k in quals:
-                prop_name = PROPS[k]
+                prop_name = self.props[k]
                 qualifiers[prop_name] = quals[k]
         statement = {"value": value, "quals": qualifiers, "refs": refs}
         base[prop].append(statement)
 
     def remove_statement(self, prop_name):
         base = self.wd_item["statements"]
-        prop = PROPS[prop_name]
+        prop = self.props[prop_name]
         if prop in base:
             del base[prop]
 
@@ -50,7 +48,7 @@ class Monument(object):
         For example p31 museum -> art museum
         """
         base = self.wd_item["statements"]
-        prop = PROPS[prop_name]
+        prop = self.props[prop_name]
         qualifiers = {}
         if prop not in base:
             base[prop] = []
@@ -58,7 +56,7 @@ class Monument(object):
         else:
             if len(quals) > 0:
                 for k in quals:
-                    prop_name = PROPS[k]
+                    prop_name = self.props[k]
                     qualifiers[prop_name] = quals[k]
             statement = {"value": value, "quals": qualifiers, "refs": refs}
             base[prop] = [statement]
@@ -84,12 +82,12 @@ class Monument(object):
 
     def remove_claim(self, prop):
         base = self.wd_item["statements"]
-        del base[PROPS[prop]]
+        del base[self.props[prop]]
 
     def set_country(self, mapping):
         code = mapping.file_content["country_code"].lower()
         country = [item["item"]
-                   for item in ADM0 if item["code"].lower() == code][0]
+                   for item in self.adm0 if item["code"].lower() == code][0]
         self.add_statement("country", country)
 
     def set_is(self, mapping):
@@ -97,7 +95,7 @@ class Monument(object):
         self.add_statement("is", default_is["item"])
 
     def set_labels(self, language, content):
-        self.add_label(language, remove_markup(content))
+        self.add_label(language, utils.remove_markup(content))
 
     def set_heritage(self, mapping):
         heritage = mapping.file_content["heritage"]
@@ -194,12 +192,16 @@ class Monument(object):
         self.set_changed()
 
     def __init__(self, db_row_dict, mapping, data_files, existing):
+        self.props = utils.load_json(
+            path.join(MAPPING_DIR, "props_general.json"))
+        self.adm0 = utils.load_json(path.join(MAPPING_DIR, "adm0.json"))
         for k, v in db_row_dict.items():
             if not k.startswith("m_spec."):
                 setattr(self, k.replace("-", "_"), v)
         self.construct_wd_item(mapping)
         self.data_files = data_files
         self.existing = existing
+        print(".........................................")
 
     def get_fields(self):
         return sorted(list(self.__dict__.keys()))
@@ -299,163 +301,6 @@ class SeFornminSv(Monument):
         # self.print_wd()
 
 
-class SeArbetslSv(Monument):
-
-    def set_descriptions(self):
-        DESC_BASES = {"sv": "arbetslivsmuseum", "en": "museum"}
-        for language in ["en", "sv"]:
-            self.add_description(language, DESC_BASES[language])
-
-    def add_location_to_desc(self, language, municipality):
-        if language == "sv":
-            self.wd_item["descriptions"][language] += " i " + municipality
-        elif language == "en":
-            self.wd_item["descriptions"][
-                language] += " in " + municipality + ", Sweden"
-
-    def set_adm_location(self):
-        municip_dict = self.data_files["municipalities"]
-        if self.kommun == "Göteborg":
-            municip_name = "Gothenburg"
-        else:
-            municip_name = self.kommun
-        pattern = municip_name.lower() + " municipality"
-        try:
-            municipality = [x["item"] for x in municip_dict if x[
-                "en"].lower() == pattern][0]
-            self.add_statement("located_adm", municipality)
-            swedish_name = [x["sv"]
-                            for x in municip_dict
-                            if x["item"] == municipality][0]
-            english_name = [x["en"]
-                            for x in municip_dict
-                            if x["item"] == municipality][0]
-            self.add_location_to_desc("sv", swedish_name)
-            self.add_location_to_desc("en", english_name)
-        except IndexError:
-            print("Could not parse municipality: {}.".format(self.kommun))
-            return
-
-    def set_type(self):
-        if self.has_non_empty_attribute("typ"):
-            table = self.data_files["types"]["mappings"]
-            type_to_search_for = self.typ.lower()
-            try:
-                special_type = [table[x]["items"]
-                                for x in table
-                                if x.lower() == type_to_search_for][0]
-                self.substitute_statement("is", special_type)
-            except IndexError:
-                return
-        return
-
-    def set_location(self):
-        settlements_dict = self.data_files["settlements"]
-        if self.has_non_empty_attribute("ort"):
-            try:
-                location = [x["item"] for x in settlements_dict if x[
-                    "sv"].strip() == remove_markup(self.ort)][0]
-                self.add_statement("location", location)
-            except IndexError:
-                return
-
-    def set_id(self):
-        if self.has_non_empty_attribute("id"):
-            self.add_statement("arbetsam", self.id)
-
-    def __init__(self, db_row_dict, mapping, data_files, existing):
-        Monument.__init__(self, db_row_dict, mapping, data_files, existing)
-        self.set_labels("sv", self.namn)
-        self.set_descriptions()
-        self.set_id()
-        self.set_type()
-        self.set_adm_location()
-        self.set_location()
-        self.exists("sv", "monument_article")
-        self.set_image("bild")
-        self.set_commonscat()
-        self.set_coords(("lat", "lon"))
-        self.exists_with_prop(mapping)
-        # self.print_wd()
-
-
-class SeShipSv(Monument):
-
-    """
-    TODO
-    * handle material (from lookup table)
-    """
-
-    def set_type(self):
-        table = self.data_files["functions"]["mappings"]
-        if self.funktion:
-            special_type = self.funktion.lower()
-            try:
-                functions = [table[x]["items"]
-                             for x in table if x.lower() == special_type][0]
-                if len(functions) > 0:
-                    self.remove_statement("is")
-                    for f in functions:
-                        self.add_statement("is", f)
-            except IndexError:
-                return
-
-    def set_shipyard(self):
-        if self.has_non_empty_attribute("varv"):
-            possible_varv = self.varv
-            if "<br>" in possible_varv:
-                possible_varv = self.varv.split("<br>")[0]
-            if "[[" in possible_varv:
-                varv = q_from_first_wikilink("sv", possible_varv)
-                self.add_statement("manufacturer", varv)
-
-    def set_manufacture_year(self):
-        """
-        TODO
-        !!!!!
-        add "year" etc. so that it can be processed by pywikibot
-        See:
-        """
-        if self.has_non_empty_attribute("byggar"):
-            byggar = parse_year(remove_characters(self.byggar, ".,"))
-            self.add_statement("inception", {"time_value": byggar})
-
-    def set_dimensions(self):
-        if self.has_non_empty_attribute("dimensioner"):
-            dimensions_processed = parse_ship_dimensions(self.dimensioner)
-            for dimension in dimensions_processed:
-                if dimension in PROPS:
-                    value = dimensions_processed[dimension]
-                    self.add_statement(
-                        dimension, {"quantity_value": value,
-                                    "unit": PROPS["metre"]})
-
-    def set_homeport(self):
-        if self.has_non_empty_attribute("hemmahamn"):
-            if count_wikilinks(self.hemmahamn) == 1:
-                home_port = q_from_first_wikilink("sv", self.hemmahamn)
-                self.add_statement("home_port", home_port)
-
-    def set_call_sign(self):
-        if self.has_non_empty_attribute("signal"):
-            self.add_statement("call_sign", self.signal)
-
-    def __init__(self, db_row_dict, mapping, data_files, existing):
-        Monument.__init__(self, db_row_dict, mapping, data_files, existing)
-        self.set_labels("sv", self.namn)
-        self.set_image("bild")
-        self.exists("sv", "artikel")
-        self.set_type()
-        self.set_commonscat()
-        self.set_call_sign()
-        self.set_manufacture_year()
-        self.set_shipyard()
-        self.set_homeport()
-        self.set_dimensions()
-        self.exists_with_prop(mapping)
-        self.print_wd()
-
-
 class SeBbrSv(Monument):
 
     def update_labels(self):
@@ -504,7 +349,7 @@ class SeBbrSv(Monument):
         querying the source database via their API.
         """
         url = "http://kulturarvsdata.se/" + \
-            self.wd_item["statements"][PROPS["bbr"]][0]["value"]
+            self.wd_item["statements"][self.props["bbr"]][0]["value"]
         url_list = url.split("/")
         url_list.insert(-1, "jsonld")
         url = "/".join(url_list)
@@ -820,7 +665,8 @@ class EeEt(Monument):
     def set_adm_location(self):
         counties = self.data_files["counties"]
         try:
-            county_item = [x["item"] for x in counties if x["et"] == self.maakond]
+            county_item = [x["item"]
+                           for x in counties if x["et"] == self.maakond]
             self.add_statement("located_adm", county_item[0])
         except IndexError:
             return

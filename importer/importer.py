@@ -1,11 +1,12 @@
-from Monument import *
+from SeArbetslSv import SeArbetslSv
+from SeShipSv import SeShipSv
 from Uploader import *
 from Logger import *
 from os import path
 import argparse
 import pymysql
-from importer_utils import *
 import wikidataStuff.wdqsLookup as lookup
+import importer_utils as utils
 
 DEFAULT_SHORT = 10
 MAPPING_DIR = "mappings"
@@ -17,7 +18,7 @@ class Mapping(object):
     def load_mapping_file(self, countryname, languagename):
         filename = path.join(
             MAPPING_DIR, "{}_({}).json".format(countryname, languagename))
-        return load_json(filename)
+        return utils.load_json(filename)
 
     def get_unique_prop(self):
         return self.file_content["unique"]["property"]
@@ -50,31 +51,31 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                                               "data_files":
                                               {"functions":
                                                "se-ship_(sv)_functions.json"}},
-                   "monuments_cz_(cs)": {"class": CzCs, "data_files": {}},
-                   "monuments_hu_(hu)": {"class": HuHu, "data_files": {}},
-                   "monuments_pt_(pt)": {"class": PtPt, "data_files": {}},
-                   "monuments_ro_(ro)": {"class": RoRo, "data_files": {}},
-                   "monuments_xk_(sq)": {"class": XkSq, "data_files": {}},
-                   "monuments_za_(en)": {"class": ZaEn, "data_files": {}},
-                   "monuments_dk-bygninger_(da)": {"class": DkBygningDa,
-                                                   "data_files": {}},
-                   "monuments_pl_(pl)": {"class": PlPl,
-                                         "data_files": {"settlements": "poland_settlements.json"}},
-                   "monuments_dk-fortidsminder_(da)": {"class": DkFortidsDa,
-                                                       "data_files": {
-                                                           "types": "dk-fortidsminder_(da)_types.json"
-                                                       }},
-                   "monuments_no_(no)": {"class": NoNo,
-                                         "data_files": {}},
-                   "monuments_se-bbr_(sv)": {"class": SeBbrSv,
-                                             "data_files": {}},
-                   "monuments_ee_(et)": {"class": EeEt,
-                                         "data_files": {"counties": "estonia_counties.json"}},
-                   "monuments_se-fornmin_(sv)":
-                   {"class": SeFornminSv,
-                    "data_files":
-                    {"municipalities": "sweden_municipalities.json",
-                     "types": "se-fornmin_(sv)_types.json"}},
+                   # "monuments_cz_(cs)": {"class": CzCs, "data_files": {}},
+                   # "monuments_hu_(hu)": {"class": HuHu, "data_files": {}},
+                   # "monuments_pt_(pt)": {"class": PtPt, "data_files": {}},
+                   # "monuments_ro_(ro)": {"class": RoRo, "data_files": {}},
+                   # "monuments_xk_(sq)": {"class": XkSq, "data_files": {}},
+                   # "monuments_za_(en)": {"class": ZaEn, "data_files": {}},
+                   # "monuments_dk-bygninger_(da)": {"class": DkBygningDa,
+                   #                                 "data_files": {}},
+                   # "monuments_pl_(pl)": {"class": PlPl,
+                   #                       "data_files": {"settlements": "poland_settlements.json"}},
+                   # "monuments_dk-fortidsminder_(da)": {"class": DkFortidsDa,
+                   #                                     "data_files": {
+                   #                                         "types": "dk-fortidsminder_(da)_types.json"
+                   #                                     }},
+                   # "monuments_no_(no)": {"class": NoNo,
+                   #                       "data_files": {}},
+                   # "monuments_se-bbr_(sv)": {"class": SeBbrSv,
+                   #                           "data_files": {}},
+                   # "monuments_ee_(et)": {"class": EeEt,
+                   #                       "data_files": {"counties": "estonia_counties.json"}},
+                   # "monuments_se-fornmin_(sv)":
+                   # {"class": SeFornminSv,
+                   #  "data_files":
+                   #  {"municipalities": "sweden_municipalities.json",
+                   #   "types": "se-fornmin_(sv)_types.json"}},
                    "monuments_se-arbetsl_(sv)":
                    {"class":
                     SeArbetslSv,
@@ -104,7 +105,7 @@ def select_query(query, connection):
 
 def load_data_files(file_dict):
     for key in file_dict.keys():
-        file_dict[key] = load_json(path.join(MAPPING_DIR, file_dict[key]))
+        file_dict[key] = utils.load_json(path.join(MAPPING_DIR, file_dict[key]))
     return file_dict
 
 
@@ -125,8 +126,8 @@ def get_wd_items_using_prop(prop):
 def get_items(connection, country, language, short=False, upload=False):
     if upload:
         logger = Logger()
-    specific_table_name = get_specific_table_name(country, language)
-    if not table_exists(connection, specific_table_name):
+    specific_table_name = utils.get_specific_table_name(country, language)
+    if not utils.table_exists(connection, specific_table_name):
         print("Table does not exist.")
         return
     mapping = Mapping(country, language)
@@ -157,7 +158,6 @@ def main(arguments):
     country = arguments.country
     language = arguments.language
     short = arguments.short
-    print("short: ", short)
     upload = arguments.upload
     get_items(connection, country, language, short, upload)
 
