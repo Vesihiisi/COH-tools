@@ -6,6 +6,7 @@ from NoNo import NoNo
 from PlPl import PlPl
 from PtPt import PtPt
 from RoRo import RoRo
+from DkBygningDa import DkBygningDa
 from SeArbetslSv import SeArbetslSv
 from SeShipSv import SeShipSv
 from XkSq import XkSq
@@ -67,8 +68,8 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                    "monuments_ro_(ro)": {"class": RoRo, "data_files": {}},
                    "monuments_xk_(sq)": {"class": XkSq, "data_files": {}},
                    "monuments_za_(en)": {"class": ZaEn, "data_files": {}},
-                   # "monuments_dk-bygninger_(da)": {"class": DkBygningDa,
-                   #                                 "data_files": {}},
+                   "monuments_dk-bygninger_(da)": {"class": DkBygningDa,
+                                                    "data_files": {}},
                    "monuments_pl_(pl)": {"class": PlPl,
                                           "data_files": {"settlements": "poland_settlements.json"}},
                    "monuments_dk-fortidsminder_(da)": {"class": DkFortidsDa,
