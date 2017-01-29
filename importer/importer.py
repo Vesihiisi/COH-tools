@@ -1,14 +1,15 @@
 from CzCs import CzCs
+from DkBygningDa import DkBygningDa
 from DkFortidsDa import DkFortidsDa
 from EeEt import EeEt
 from HuHu import HuHu
 from NoNo import NoNo
 from PlPl import PlPl
 from PtPt import PtPt
-from SeBbrSv import SeBbrSv
 from RoRo import RoRo
-from DkBygningDa import DkBygningDa
 from SeArbetslSv import SeArbetslSv
+from SeBbrSv import SeBbrSv
+from SeFornminSv import SeFornminSv
 from SeShipSv import SeShipSv
 from XkSq import XkSq
 from ZaEn import ZaEn
@@ -83,11 +84,11 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                                              "data_files": {}},
                    "monuments_ee_(et)": {"class": EeEt,
                                           "data_files": {"counties": "estonia_counties.json"}},
-                   # "monuments_se-fornmin_(sv)":
-                   # {"class": SeFornminSv,
-                   #  "data_files":
-                   #  {"municipalities": "sweden_municipalities.json",
-                   #   "types": "se-fornmin_(sv)_types.json"}},
+                   "monuments_se-fornmin_(sv)":
+                   {"class": SeFornminSv,
+                    "data_files":
+                    {"municipalities": "sweden_municipalities.json",
+                     "types": "se-fornmin_(sv)_types.json"}},
                    "monuments_se-arbetsl_(sv)":
                    {"class":
                     SeArbetslSv,
