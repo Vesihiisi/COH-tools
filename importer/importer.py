@@ -1,6 +1,7 @@
 from CzCs import CzCs
 from HuHu import HuHu
 from PtPt import PtPt
+from RoRo import RoRo
 from SeArbetslSv import SeArbetslSv
 from SeShipSv import SeShipSv
 from Uploader import *
@@ -57,7 +58,7 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                    "monuments_cz_(cs)": {"class": CzCs, "data_files": {}},
                    "monuments_hu_(hu)": {"class": HuHu, "data_files": {}},
                    "monuments_pt_(pt)": {"class": PtPt, "data_files": {}},
-                   # "monuments_ro_(ro)": {"class": RoRo, "data_files": {}},
+                   "monuments_ro_(ro)": {"class": RoRo, "data_files": {}},
                    # "monuments_xk_(sq)": {"class": XkSq, "data_files": {}},
                    # "monuments_za_(en)": {"class": ZaEn, "data_files": {}},
                    # "monuments_dk-bygninger_(da)": {"class": DkBygningDa,
