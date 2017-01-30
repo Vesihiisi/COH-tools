@@ -74,4 +74,3 @@ class PlPl(Monument):
         self.set_location()
         self.set_address()
         self.exists_with_prop(mapping)
-        # self.print_wd()

@@ -177,4 +177,3 @@ class SeBbrSv(Monument):
         self.set_location()
         self.set_function()
         self.exists_with_prop(mapping)
-        # self.print_wd()

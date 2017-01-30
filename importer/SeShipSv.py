@@ -78,4 +78,3 @@ class SeShipSv(Monument):
         self.set_homeport()
         self.set_dimensions()
         self.exists_with_prop(mapping)
-        self.print_wd()

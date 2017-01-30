@@ -79,4 +79,3 @@ class SeArbetslSv(Monument):
         self.set_commonscat()
         self.set_coords(("lat", "lon"))
         self.exists_with_prop(mapping)
-        # self.print_wd()

@@ -97,4 +97,3 @@ class SeFornminSv(Monument):
         self.set_coords(("lat", "lon"))
         self.set_commonscat()
         # self.exists_with_prop(mapping)
-        self.print_wd()
