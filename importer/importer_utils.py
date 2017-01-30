@@ -371,3 +371,7 @@ def dump_list_to_file(some_list, filename):
 
 def wd_template(template_type, value):
     return "{{" + template_type + "|" + value + "}}"
+
+
+def get_current_timestamp():
+    return datetime.datetime.now().strftime('%Y-%m-%d_%H:%M:%S')
