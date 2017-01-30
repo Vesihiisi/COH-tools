@@ -74,6 +74,7 @@ class SeArbetslSv(Monument):
         self.set_type()
         self.set_adm_location()
         self.set_location()
+        self.set_street_address("sv", "adress")
         self.exists("sv", "monument_article")
         self.set_image("bild")
         self.set_commonscat()
