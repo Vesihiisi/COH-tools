@@ -94,7 +94,7 @@ class Monument(object):
         qualifiers = {}
         if prop not in base:
             base[prop] = []
-        if len(quals) > 0:
+        if quals is not None and len(quals) > 0:
             for k in quals:
                 prop_name = self.props[k]
                 qualifiers[prop_name] = quals[k]
@@ -200,7 +200,7 @@ class Monument(object):
         and its qualifier street number (P670).
         """
         if self.has_non_empty_attribute(address_keyword):
-            processed_address = get_street_address(
+            processed_address = utils.get_street_address(
                 getattr(self, address_keyword), language)
             if processed_address is not None:
                 self.add_statement("located_street", processed_address)
