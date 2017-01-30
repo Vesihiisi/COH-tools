@@ -20,6 +20,7 @@ import argparse
 import pymysql
 import wikidataStuff.wdqsLookup as lookup
 import importer_utils as utils
+import json
 
 DEFAULT_SHORT = 10
 MAPPING_DIR = "mappings"
@@ -173,7 +174,9 @@ def get_items(connection,
     for row in database_rows:
         monument = class_to_use(row, mapping, data_files, existing)
         if table:
+            raw_data = "<pre>" + str(row) + "</pre>\n\n"
             monument_table = monument.print_wd_to_table()
+            utils.append_line_to_file(raw_data, filename)
             utils.append_line_to_file(monument_table, filename)
         if upload:
             uploader = Uploader(monument, log=logger)

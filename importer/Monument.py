@@ -48,6 +48,10 @@ class Monument(object):
         for a in aliases:
             for single_alias in aliases[a]:
                 table = table + "* '''" + a + "''': " + single_alias + "\n\n"
+        if self.wd_item["wd-item"] is not None:
+            table = table + "'''Possible item''': " + utils.wd_template("Q", self.wd_item["wd-item"]) + "\n\n"
+        else:
+            table = table + "'''Possible item''': \n\n"
         table_head = "{| class='wikitable'\n|-\n! Property\n! Value\n! Qualifiers\n! References\n"
         table = table + table_head
         statements = self.wd_item["statements"]
