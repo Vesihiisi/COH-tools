@@ -42,7 +42,9 @@ class SeShipSv(Monument):
         if self.has_non_empty_attribute("byggar"):
             byggar = utils.parse_year(
                 utils.remove_characters(self.byggar, ".,"))
-            self.add_statement("inception", {"time_value": byggar})
+            if isinstance(byggar, int):
+                self.add_statement(
+                    "inception", {"time_value": {"year": byggar}})
 
     def set_dimensions(self):
         if self.has_non_empty_attribute("dimensioner"):
