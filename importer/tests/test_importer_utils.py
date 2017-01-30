@@ -327,3 +327,11 @@ def test_date_to_dict_3():
 def test_date_to_dict_4():
     assert date_to_dict(
         "1999", "%Y") == {"year": 1999}
+
+
+def test_wd_template_1():
+    assert wd_template("P", "17") == "{{P|17}}"
+
+
+def test_wd_template_2():
+    assert wd_template("Q", "Q34") == "{{Q|Q34}}"

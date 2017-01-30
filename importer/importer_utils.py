@@ -367,3 +367,7 @@ def dump_list_to_file(some_list, filename):
     f = open(filename, 'w')
     for item in some_list:
         f.write(item + "\n")
+
+
+def wd_template(template_type, value):
+    return "{{" + template_type + "|" + value + "}}"
