@@ -49,39 +49,37 @@ class Monument(object):
             for single_alias in aliases[a]:
                 table = table + "* '''" + a + "''': " + single_alias + "\n\n"
         if self.wd_item["wd-item"] is not None:
-            table = table + "'''Possible item''': " + utils.wd_template("Q", self.wd_item["wd-item"]) + "\n\n"
+            table = table + "'''Possible item''': " + \
+                utils.wd_template("Q", self.wd_item["wd-item"]) + "\n\n"
         else:
             table = table + "'''Possible item''': \n\n"
         table_head = "{| class='wikitable'\n|-\n! Property\n! Value\n! Qualifiers\n! References\n"
         table = table + table_head
         statements = self.wd_item["statements"]
         for statement in statements:
-            table = table + "|-\n"
-            table = table + "| " + utils.wd_template("P", statement) + "\n"
             claims = statements[statement]
             for claim in claims:
                 value = claim["value"]
                 value_to_print = ""
-                if type(value) is not list:
-                    value = [value]
-                for v in value:
-                    if utils.string_is_q_item(v):
-                        v = utils.wd_template("Q", v)
-                    value_to_print = value_to_print + str(v)
-                table = table + "| " + value_to_print + "\n"
+                if utils.string_is_q_item(value):
+                    value = utils.wd_template("Q", value)
+                value_to_print = value_to_print + str(value)
                 quals = claim["quals"]
                 refs = claim["refs"]
                 if len(quals) == 0:
                     qual_to_print = ""
                 else:
-                    print(quals)
                     for q in quals:
-                        qual_to_print = utils.wd_template("P", q) + " : " + json.dumps(quals[q])
+                        qual_to_print = utils.wd_template(
+                            "P", q) + " : " + json.dumps(quals[q])
                 if len(refs) == 0:
                     ref_to_print = ""
                 else:
                     for r in refs:
                         ref_to_print = str(r)
+                table = table + "|-\n"
+                table = table + "| " + utils.wd_template("P", statement) + "\n"
+                table = table + "| " + value_to_print + "\n"
                 table = table + "| " + qual_to_print + "\n"
                 table = table + "| " + ref_to_print + "\n"
         table = table + "|}\n"
