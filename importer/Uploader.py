@@ -133,7 +133,7 @@ class Uploader(object):
         if utils.string_is_q_item(value):
             val_item = self.make_q_item(value)
         elif prop == PROPS["image"]:
-            if self.item_has_prop(PROPS["image"], self.wd_item) is False:
+            if self.item_has_prop("image", self.wd_item) is False:
                 if utils.file_is_on_commons(value):
                     val_item = self.make_image_item(value)
         elif utils.tuple_is_coords(value) and prop == PROPS["coordinates"]:
@@ -170,6 +170,8 @@ class Uploader(object):
                         quals = x['quals']
                         refs = x['refs']
                         wd_claim = self.make_pywikibot_item(value, prop)
+                        if wd_claim is None:
+                            continue
                         wd_value = self.make_statement(wd_claim)
                         if any(quals):
                             for qual in quals:
