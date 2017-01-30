@@ -69,7 +69,7 @@ class SeFornminSv(Monument):
     def set_location(self):
         if self.has_non_empty_attribute("plats"):
             if "[[" in self.plats:
-                wikilinks = utils.get_wikilinks(self.address)
+                wikilinks = utils.get_wikilinks(self.plats)
                 if len(wikilinks) == 1:
                     target_page = wikilinks[0].title
                     wd_item = utils.q_from_wikipedia(self.lang, target_page)
