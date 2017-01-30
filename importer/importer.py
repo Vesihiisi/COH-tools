@@ -157,8 +157,6 @@ def get_items(connection,
     else:
         existing = None
     query = make_query(specific_table_name)
-    if short:
-        query += " LIMIT " + str(short)
     if specific_table_name in SPECIFIC_TABLES.keys():
         class_to_use = SPECIFIC_TABLES[specific_table_name]["class"]
         data_files = load_data_files(
@@ -168,6 +166,9 @@ def get_items(connection,
         return
     print_row_count(specific_table_name, connection)
     database_rows = select_query(query, connection)
+    if short:
+        database_rows = utils.get_random_list_sample(database_rows, short)
+        print("USING RANDOM SAMPLE OF " + str(short))
     filename = specific_table_name + "_" + utils.get_current_timestamp()
     for row in database_rows:
         monument = class_to_use(row, mapping, data_files, existing)
