@@ -113,8 +113,15 @@ class Uploader(object):
     def make_q_item(self, qnumber):
         return self.wdstuff.QtoItemPage(qnumber)
 
-    def item_has_image(self, wd_item):
-        if PROPS["image"] in wd_item.claims:
+    def item_has_prop(self, property_name, wd_item):
+        """
+        This is different from WikidataStuff has_claim()
+        because it checks whether the property exists,
+        not if the statement matches.
+        If the target item already uses the property,
+        a new claim will not be added even if it's different.
+        """
+        if PROPS[property_name] in wd_item.claims:
             return True
         else:
             return False
@@ -126,7 +133,7 @@ class Uploader(object):
         if utils.string_is_q_item(value):
             val_item = self.make_q_item(value)
         elif prop == PROPS["image"]:
-            if self.item_has_image(self.wd_item) is False:
+            if self.item_has_prop(PROPS["image"], self.wd_item) is False:
                 if utils.file_is_on_commons(value):
                     val_item = self.make_image_item(value)
         elif utils.tuple_is_coords(value) and prop == PROPS["coordinates"]:
