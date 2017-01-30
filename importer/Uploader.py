@@ -113,14 +113,22 @@ class Uploader(object):
     def make_q_item(self, qnumber):
         return self.wdstuff.QtoItemPage(qnumber)
 
-    def make_pywikibot_item(self, value, prop=None, ):
+    def item_has_image(self, wd_item):
+        if PROPS["image"] in wd_item.claims:
+            return True
+        else:
+            return False
+
+    def make_pywikibot_item(self, value, prop=None):
         val_item = None
         if type(value) is list and len(value) == 1:
             value = value[0]
         if utils.string_is_q_item(value):
             val_item = self.make_q_item(value)
-        elif prop == PROPS["image"] and utils.file_is_on_commons(value):
-            val_item = self.make_image_item(value)
+        elif prop == PROPS["image"]:
+            if self.item_has_image(self.wd_item) is False:
+                if utils.file_is_on_commons(value):
+                    val_item = self.make_image_item(value)
         elif utils.tuple_is_coords(value) and prop == PROPS["coordinates"]:
             val_item = self.make_coords_item(value)
         elif isinstance(value, dict) and 'quantity_value' in value:
