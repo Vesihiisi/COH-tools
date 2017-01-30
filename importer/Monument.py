@@ -17,6 +17,73 @@ class Monument(object):
                        default=utils.datetime_convert)
         )
 
+    def print_wd_to_table(self):
+        """
+        {| class="wikitable"
+        |-
+        ! Header C1
+        ! Header C2
+        ! Header C3
+        |-
+        | R1C1
+        | R1C2
+        | R1C3
+        |-
+        | R2C1
+        | R2C2
+        | R2C3
+        |}
+        """
+        table = ""
+        labels = self.wd_item["labels"]
+        descriptions = self.wd_item["descriptions"]
+        aliases = self.wd_item["aliases"]
+        table = table + "'''Labels'''\n\n"
+        for l in labels:
+            table = table + "* '''" + l + "''': " + labels[l] + "\n\n"
+        table = table + "'''Descriptions'''\n\n"
+        for d in descriptions:
+            table = table + "* '''" + d + "''': " + descriptions[d] + "\n\n"
+        table = table + "'''Aliases'''\n\n"
+        for a in aliases:
+            for single_alias in aliases[a]:
+                table = table + "* '''" + a + "''': " + single_alias + "\n\n"
+        table_head = "{| class='wikitable'\n|-\n! Property\n! Value\n! Qualifiers\n! References\n"
+        table = table + table_head
+        statements = self.wd_item["statements"]
+        for statement in statements:
+            table = table + "|-\n"
+            table = table + "| " + utils.wd_template("P", statement) + "\n"
+            claims = statements[statement]
+            for claim in claims:
+                value = claim["value"]
+                value_to_print = ""
+                if type(value) is not list:
+                    value = [value]
+                for v in value:
+                    if utils.string_is_q_item(v):
+                        v = utils.wd_template("Q", v)
+                    value_to_print = value_to_print + str(v)
+                table = table + "| " + value_to_print + "\n"
+                quals = claim["quals"]
+                refs = claim["refs"]
+                if len(quals) == 0:
+                    qual_to_print = ""
+                else:
+                    print(quals)
+                    for q in quals:
+                        qual_to_print = utils.wd_template("P", q) + " : " + json.dumps(quals[q])
+                if len(refs) == 0:
+                    ref_to_print = ""
+                else:
+                    for r in refs:
+                        ref_to_print = str(r)
+                table = table + "| " + qual_to_print + "\n"
+                table = table + "| " + ref_to_print + "\n"
+        table = table + "|}\n"
+        table = table + "----------\n"
+        return table
+
     def add_statement(self, prop_name, value, quals={}, refs=[]):
         """
         If prop already exists, this will append another value to the array,

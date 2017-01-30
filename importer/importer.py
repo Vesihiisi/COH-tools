@@ -138,7 +138,12 @@ def get_wd_items_using_prop(prop):
     return items
 
 
-def get_items(connection, country, language, short=False, upload=False):
+def get_items(connection,
+              country,
+              language,
+              short=False,
+              upload=False,
+              table=False):
     if upload:
         logger = Logger()
     specific_table_name = utils.get_specific_table_name(country, language)
@@ -163,12 +168,18 @@ def get_items(connection, country, language, short=False, upload=False):
         return
     print_row_count(specific_table_name, connection)
     database_rows = select_query(query, connection)
+    filename = specific_table_name + "_" + utils.get_current_timestamp()
     for row in database_rows:
         monument = class_to_use(row, mapping, data_files, existing)
+        if table:
+            monument_table = monument.print_wd_to_table()
+            utils.append_line_to_file(monument_table, filename)
         if upload:
             uploader = Uploader(monument, log=logger)
             uploader.upload()
             print("--------------------------------------------------")
+    if table:
+        print("SAVED TEST RESULTS TO " + filename)
 
 
 def main(arguments):
@@ -177,7 +188,8 @@ def main(arguments):
     language = arguments.language
     short = arguments.short
     upload = arguments.upload
-    get_items(connection, country, language, short, upload)
+    table = arguments.table
+    get_items(connection, country, language, short, upload, table)
 
 
 if __name__ == "__main__":
@@ -193,6 +205,7 @@ if __name__ == "__main__":
                         nargs='?',
                         type=int,
                         action='store',)
+    parser.add_argument("--table", action='store_true')
     parser.add_argument("--upload", action='store_true')
     args = parser.parse_args()
     main(args)
