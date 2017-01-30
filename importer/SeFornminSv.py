@@ -72,7 +72,7 @@ class SeFornminSv(Monument):
                 wikilinks = utils.get_wikilinks(self.plats)
                 if len(wikilinks) == 1:
                     target_page = wikilinks[0].title
-                    wd_item = utils.q_from_wikipedia(self.lang, target_page)
+                    wd_item = utils.q_from_wikipedia("sv", target_page)
                     self.add_statement("location", wd_item)
         if self.has_non_empty_attribute("socken"):
             self.add_statement("location", self.get_socken(
