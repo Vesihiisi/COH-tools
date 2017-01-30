@@ -6,6 +6,7 @@ import pywikibot
 import datetime
 import requests
 import pymysql
+import random
 
 
 def get_specific_table_name(countryname, languagename):
@@ -375,3 +376,7 @@ def wd_template(template_type, value):
 
 def get_current_timestamp():
     return datetime.datetime.now().strftime('%Y-%m-%d_%H:%M:%S')
+
+
+def get_random_list_sample(some_list, amount):
+    return random.sample(some_list, amount)
