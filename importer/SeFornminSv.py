@@ -58,7 +58,7 @@ class SeFornminSv(Monument):
             try:
                 special_type = [table[x]["items"]
                                 for x in table
-                                if x.lower() == type_to_search_for][0]
+                                if x.lower() == type_to_search_for][0][0]
                 self.substitute_statement("is", special_type)
             except IndexError:
                 return

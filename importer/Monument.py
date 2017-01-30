@@ -59,6 +59,7 @@ class Monument(object):
         for statement in statements:
             claims = statements[statement]
             for claim in claims:
+                print(statement, claim)
                 value = claim["value"]
                 value_to_print = ""
                 if utils.string_is_q_item(value):
@@ -127,8 +128,9 @@ class Monument(object):
                 for k in quals:
                     prop_name = self.props[k]
                     qualifiers[prop_name] = quals[k]
-            statement = {"value": value, "quals": qualifiers, "refs": refs}
-            base[prop] = [statement]
+            # statement = {"value": value, "quals": qualifiers, "refs": refs}
+            self.remove_statement(prop_name)
+            self.add_statement(prop_name, value, quals, refs)
 
     def set_wd_item(self, wd_item):
         if wd_item is not None:
