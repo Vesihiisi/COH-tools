@@ -119,16 +119,10 @@ class Monument(object):
         """
         base = self.wd_item["statements"]
         prop = self.props[prop_name]
-        qualifiers = {}
         if prop not in base:
             base[prop] = []
             self.add_statement(prop_name, value, quals, refs)
         else:
-            if len(quals) > 0:
-                for k in quals:
-                    prop_name = self.props[k]
-                    qualifiers[prop_name] = quals[k]
-            # statement = {"value": value, "quals": qualifiers, "refs": refs}
             self.remove_statement(prop_name)
             self.add_statement(prop_name, value, quals, refs)
 
@@ -150,10 +144,6 @@ class Monument(object):
     def add_description(self, language, text):
         base = self.wd_item["descriptions"]
         base[language] = text
-
-    def remove_claim(self, prop):
-        base = self.wd_item["statements"]
-        del base[self.props[prop]]
 
     def set_country(self, mapping):
         code = mapping.file_content["country_code"].lower()
