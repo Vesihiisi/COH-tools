@@ -26,7 +26,8 @@ class SeArbetslSv(Monument):
         try:
             municipality = [x["item"] for x in municip_dict if x[
                 "en"].lower() == pattern][0]
-            self.add_statement("located_adm", municipality)
+            ref = self.create_wlm_source()
+            self.add_statement("located_adm", municipality, refs=[ref])
             swedish_name = [x["sv"]
                             for x in municip_dict
                             if x["item"] == municipality][0]
@@ -47,7 +48,8 @@ class SeArbetslSv(Monument):
                 special_type = [table[x]["items"]
                                 for x in table
                                 if x.lower() == type_to_search_for][0]
-                self.substitute_statement("is", special_type)
+                ref = self.create_wlm_source()
+                self.substitute_statement("is", special_type, refs=[ref])
             except IndexError:
                 return
         return
@@ -58,13 +60,15 @@ class SeArbetslSv(Monument):
             try:
                 location = [x["item"] for x in settlements_dict if x[
                     "sv"].strip() == utils.remove_markup(self.ort)][0]
-                self.add_statement("location", location)
+                ref = self.create_wlm_source()
+                self.add_statement("location", location, refs=[ref])
             except IndexError:
                 return
 
     def set_id(self):
         if self.has_non_empty_attribute("id"):
-            self.add_statement("arbetsam", self.id)
+            ref = self.create_wlm_source()
+            self.add_statement("arbetsam", self.id, refs=[ref])
 
     def __init__(self, db_row_dict, mapping, data_files, existing):
         Monument.__init__(self, db_row_dict, mapping, data_files, existing)
@@ -80,3 +84,4 @@ class SeArbetslSv(Monument):
         self.set_commonscat()
         self.set_coords(("lat", "lon"))
         self.exists_with_prop(mapping)
+        self.print_wd()

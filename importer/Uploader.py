@@ -157,6 +157,18 @@ class Uploader(object):
             source_test=self.wdstuff.make_simple_claim(prop, uri))
         return ref
 
+    def make_stated_in_reference(self, ref_dict):
+        prop = ref_dict["source"]["prop"]
+        prop_date = ref_dict["published"]["prop"]
+        date = utils.datetime_object_to_dict(ref_dict["published"]["value"])
+        date_item = pywikibot.WbTime(**date)
+        source_item = self.wdstuff.QtoItemPage(ref_dict["source"]["value"])
+        source_claim = self.wdstuff.make_simple_claim(prop, source_item)
+        ref = self.wdstuff.Reference(
+            source_test=source_claim,
+            source_notest=self.wdstuff.make_simple_claim(prop_date, date_item))
+        return ref
+
     def add_claims(self, wd_item, claims, log):
         if wd_item:
             for claim in claims:
@@ -188,6 +200,8 @@ class Uploader(object):
                                 """
                                 if utils.is_valid_url(ref):
                                     ref = self.make_url_reference(ref)
+                                else:
+                                    ref = self.make_stated_in_reference(ref)
                         if wd_value:
                             print("")
                             print("Adding value: ", prop, wd_value)

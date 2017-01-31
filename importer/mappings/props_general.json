@@ -14,6 +14,7 @@
     "home_port": "P504",
     "igespar_id": "P1702",
     "image": "P18",
+    "imported_from": "P143",
     "inception": "P571",
     "is": "P31",
     "kosovo_monument_id": "P3227",
@@ -26,10 +27,12 @@
     "metre": "Q11573",
     "norwegian_monument_id": "P758",
     "period": "P234",
+    "publication_date": "P577",
     "quantity": "P1114",
     "raa-nr": "P1262",
     "reference_url": "P854",
     "romanian_monument_id": "P1770",
     "start_time": "P580",
+    "stated_in": "P248",
     "width": "P2049"
 }

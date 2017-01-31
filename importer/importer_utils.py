@@ -348,6 +348,14 @@ def is_valid_url(url):
         return False
 
 
+def datetime_object_to_dict(datetime_object):
+    date_dict = {}
+    date_dict["year"] = datetime_object.year
+    date_dict["day"] = datetime_object.day
+    date_dict["month"] = datetime_object.month
+    return date_dict
+
+
 def date_to_dict(datestring, dateformat):
     date_dict = {}
     date_obj = datetime.datetime.strptime(datestring, dateformat)
