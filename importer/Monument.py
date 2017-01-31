@@ -159,7 +159,8 @@ class Monument(object):
         code = mapping.file_content["country_code"].lower()
         country = [item["item"]
                    for item in self.adm0 if item["code"].lower() == code][0]
-        self.add_statement("country", country)
+        ref = self.create_wlm_source()
+        self.add_statement("country", country, refs=[ref])
 
     def set_is(self, mapping):
         default_is = mapping.file_content["default_is"]
@@ -179,8 +180,9 @@ class Monument(object):
             if self.lat == 0 and self.lon == 0:
                 return
             else:
+                ref = self.create_wlm_source()
                 self.add_statement(
-                    "coordinates", (getattr(self, lat), getattr(self, lon)))
+                    "coordinates", (getattr(self, lat), getattr(self, lon)), refs=[ref])
 
     def set_image(self, image_keyword="image"):
         if self.has_non_empty_attribute(image_keyword):
@@ -234,6 +236,17 @@ class Monument(object):
         if self.has_non_empty_attribute("source"):
             self.wd_item["source"] = self.source
 
+    def create_stated_in_source(self, source_item, pub_date):
+        prop_stated = self.props["stated_in"]
+        prop_date = self.props["publication_date"]
+        return {"source": {"prop": prop_stated, "value": source_item},
+                "published": {"prop": prop_date, "value": pub_date}}
+
+    def create_wlm_source(self):
+        source_item = self.sources["monuments_db"]
+        timestamp = self.wd_item["changed"]
+        return self.create_stated_in_source(source_item, timestamp)
+
     def exists_with_prop(self, mapping):
         if self.existing is None:
             return
@@ -257,17 +270,19 @@ class Monument(object):
         self.wd_item["aliases"] = {}
         self.wd_item["descriptions"] = {}
         self.wd_item["wd-item"] = None
+        self.set_changed()
         self.set_country(mapping)
         self.set_is(mapping)
         self.set_heritage(mapping)
         self.set_source()
         self.set_registrant_url()
-        self.set_changed()
 
     def __init__(self, db_row_dict, mapping, data_files, existing):
         self.props = utils.load_json(
             path.join(MAPPING_DIR, "props_general.json"))
         self.adm0 = utils.load_json(path.join(MAPPING_DIR, "adm0.json"))
+        self.sources = utils.load_json(
+            path.join(MAPPING_DIR, "data_sources.json"))
         for k, v in db_row_dict.items():
             if not k.startswith("m_spec."):
                 setattr(self, k.replace("-", "_"), v)
