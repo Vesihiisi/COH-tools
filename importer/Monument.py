@@ -59,7 +59,6 @@ class Monument(object):
         for statement in statements:
             claims = statements[statement]
             for claim in claims:
-                print(statement, claim)
                 value = claim["value"]
                 value_to_print = ""
                 if utils.string_is_q_item(value):
@@ -279,7 +278,6 @@ class Monument(object):
         self.construct_wd_item(mapping)
         self.data_files = data_files
         self.existing = existing
-        print(".........................................")
 
     def get_fields(self):
         return sorted(list(self.__dict__.keys()))
