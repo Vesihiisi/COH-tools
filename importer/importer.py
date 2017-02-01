@@ -4,6 +4,7 @@ from DkBygningDa import DkBygningDa
 from DkFortidsDa import DkFortidsDa
 from EeEt import EeEt
 from HuHu import HuHu
+from IeEn import IeEn
 from NoNo import NoNo
 from PlPl import PlPl
 from PtPt import PtPt
@@ -71,6 +72,7 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                    "monuments_pt_(pt)": {"class": PtPt, "data_files": {}},
                    "monuments_ro_(ro)": {"class": RoRo, "data_files": {}},
                    "monuments_xk_(sq)": {"class": XkSq, "data_files": {}},
+                   "monuments_ie_(en)": {"class": IeEn, "data_files": {}},
                    "monuments_za_(en)": {"class": ZaEn, "data_files": {}},
                    "monuments_cm_(fr)": {"class": CmFr, "data_files": {}},
                    "monuments_dk-bygninger_(da)": {"class": DkBygningDa,
