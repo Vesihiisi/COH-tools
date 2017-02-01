@@ -7,15 +7,22 @@ class IeEn(Monument):
     def update_labels(self):
         name = utils.remove_markup(self.name)
         self.add_label("en", name)
-        print(name)
 
     def set_adm_location(self):
-        return
+        counties = self.data_files["counties"]
+        try:
+            county_name = "County " + self.county
+            county_item = [x["item"]
+                           for x in counties if x["en"] == county_name]
+            ref = self.create_wlm_source()
+            self.add_statement("located_adm", county_item[0], refs=[ref])
+        except IndexError:
+            return
 
     def __init__(self, db_row_dict, mapping, data_files, existing):
         Monument.__init__(self, db_row_dict, mapping, data_files, existing)
         self.update_labels()
-        # self.exists("sq")
+        # self.exists("en")
         self.set_commonscat()
         self.set_image("image")
         self.set_coords(("lat", "lon"))
@@ -23,4 +30,4 @@ class IeEn(Monument):
         # self.set_no()
         # self.set_location()
         # self.exists_with_prop(mapping)
-        # self.print_wd()
+        self.print_wd()
