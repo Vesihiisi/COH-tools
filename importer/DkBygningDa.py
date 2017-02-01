@@ -46,7 +46,9 @@ class DkBygningDa(Monument):
     def set_inception(self):
         if self.has_non_empty_attribute("opforelsesar"):
             inception = utils.parse_year(self.opforelsesar)
-            self.add_statement("inception", {"time_value": inception})
+            if isinstance(inception, int):
+                self.add_statement(
+                    "inception", {"time_value": {"year": inception}})
 
     def __init__(self, db_row_dict, mapping, data_files, existing):
         Monument.__init__(self, db_row_dict, mapping, data_files, existing)
@@ -62,5 +64,3 @@ class DkBygningDa(Monument):
         self.set_inception()
         self.exists_with_prop(mapping)
         # self.print_wd()
-
-
