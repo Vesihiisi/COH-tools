@@ -1,0 +1,18 @@
+{
+    "country": {
+        "item": "Q1009",
+        "name": "Cameroon"
+    },
+    "country_code": "cm",
+    "default_is": {
+        "comment": "",
+        "item": "",
+        "name": ""
+    },
+    "heritage": {
+        "comment": "",
+        "item": "",
+        "name": ""
+    },
+    "language": "fr"
+}

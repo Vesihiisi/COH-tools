@@ -1,3 +1,4 @@
+from CmFr import CmFr
 from CzCs import CzCs
 from DkBygningDa import DkBygningDa
 from DkFortidsDa import DkFortidsDa
@@ -20,7 +21,6 @@ import argparse
 import pymysql
 import wikidataStuff.wdqsLookup as lookup
 import importer_utils as utils
-import json
 
 DEFAULT_SHORT = 10
 MAPPING_DIR = "mappings"
@@ -72,6 +72,7 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                    "monuments_ro_(ro)": {"class": RoRo, "data_files": {}},
                    "monuments_xk_(sq)": {"class": XkSq, "data_files": {}},
                    "monuments_za_(en)": {"class": ZaEn, "data_files": {}},
+                   "monuments_cm_(fr)": {"class": CmFr, "data_files": {}},
                    "monuments_dk-bygninger_(da)": {"class": DkBygningDa,
                                                    "data_files": {}},
                    "monuments_pl_(pl)": {"class": PlPl,
