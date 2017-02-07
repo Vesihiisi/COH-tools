@@ -76,7 +76,7 @@ class Monument(object):
                     ref_to_print = ""
                 else:
                     for r in refs:
-                        ref_to_print = str(r)
+                        ref_to_print = json.dumps(r, default=utils.datetime_convert)
                 table = table + "|-\n"
                 table = table + "| " + utils.wd_template("P", statement) + "\n"
                 table = table + "| " + value_to_print + "\n"
@@ -144,23 +144,24 @@ class Monument(object):
         base = self.wd_item["descriptions"]
         base[language] = text
 
-    def set_country(self, mapping):
-        code = mapping.file_content["country_code"].lower()
+    def set_country(self):
+        code = self.mapping["country_code"].lower()
         country = [item["item"]
                    for item in self.adm0 if item["code"].lower() == code][0]
-        ref = self.create_wlm_source()
+        ref = self.wlm_source
         self.add_statement("country", country, refs=[ref])
 
-    def set_is(self, mapping):
-        default_is = mapping.file_content["default_is"]
+    def set_is(self):
+        default_is = self.mapping["default_is"]
         self.add_statement("is", default_is["item"])
 
     def set_labels(self, language, content):
         self.add_label(language, utils.remove_markup(content))
 
-    def set_heritage(self, mapping):
-        heritage = mapping.file_content["heritage"]
-        self.add_statement("heritage_status", heritage["item"])
+    def set_heritage(self):
+        heritage = self.mapping["heritage"]
+        ref = self.wlm_source
+        self.add_statement("heritage_status", heritage["item"], refs=[ref])
 
     def set_coords(self, coord_keywords_tuple):
         lat = coord_keywords_tuple[0]
@@ -169,7 +170,7 @@ class Monument(object):
             if self.lat == 0 and self.lon == 0:
                 return
             else:
-                ref = self.create_wlm_source()
+                ref = self.wlm_source
                 self.add_statement(
                     "coordinates", (getattr(self, lat), getattr(self, lon)), refs=[ref])
 
@@ -198,7 +199,8 @@ class Monument(object):
             processed_address = utils.get_street_address(
                 getattr(self, address_keyword), language)
             if processed_address is not None:
-                self.add_statement("located_street", processed_address)
+                ref = self.wlm_source
+                self.add_statement("located_street", processed_address, refs=[ref])
 
     def has_non_empty_attribute(self, attr_name):
         if hasattr(self, attr_name):
@@ -231,10 +233,18 @@ class Monument(object):
         return {"source": {"prop": prop_stated, "value": source_item},
                 "published": {"prop": prop_date, "value": pub_date}}
 
-    def create_wlm_source(self):
+    def create_wlm_source(self, monuments_all_id):
+        url_base = "https://tools.wmflabs.org/heritage/api/api.php?action=search&format=json&srcountry={}&srlanguage={}&srid={}"
+        url_base = url_base.format(
+            self.mapping["table_name"], self.mapping["language"], monuments_all_id)
         source_item = self.sources["monuments_db"]
         timestamp = self.wd_item["changed"]
-        return self.create_stated_in_source(source_item, timestamp)
+        prop_stated = self.props["stated_in"]
+        prop_date = self.props["publication_date"]
+        prop_reference_url = self.props["reference_url"]
+        return {"source": {"prop": prop_stated, "value": source_item},
+                "published": {"prop": prop_date, "value": timestamp},
+                "reference_url": {"prop": prop_reference_url, "value": url_base}}
 
     def exists_with_prop(self, mapping):
         if self.existing is None:
@@ -259,12 +269,7 @@ class Monument(object):
         self.wd_item["aliases"] = {}
         self.wd_item["descriptions"] = {}
         self.wd_item["wd-item"] = None
-        self.set_changed()
-        self.set_country(mapping)
-        self.set_is(mapping)
-        self.set_heritage(mapping)
-        self.set_source()
-        self.set_registrant_url()
+        self.mapping = mapping.file_content
 
     def __init__(self, db_row_dict, mapping, data_files, existing):
         self.props = utils.load_json(
@@ -275,6 +280,7 @@ class Monument(object):
         for k, v in db_row_dict.items():
             if not k.startswith("m_spec."):
                 setattr(self, k.replace("-", "_"), v)
+        self.monuments_all_id = ""
         self.construct_wd_item(mapping)
         self.data_files = data_files
         self.existing = existing

@@ -11,6 +11,7 @@
     "heritage": {
         "item": ""
     },
+    "table_name": "se-bbr",
     "language": "sv",
         "unique": {
         "comment": "BBR number",

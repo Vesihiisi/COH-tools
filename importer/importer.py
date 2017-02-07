@@ -72,7 +72,7 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                    "monuments_pt_(pt)": {"class": PtPt, "data_files": {}},
                    "monuments_ro_(ro)": {"class": RoRo, "data_files": {}},
                    "monuments_xk_(sq)": {"class": XkSq, "data_files": {}},
-                   "monuments_ie_(en)": {"class": IeEn, "data_files": {"counties":"ireland_counties.json"}},
+                   "monuments_ie_(en)": {"class": IeEn, "data_files": {"counties": "ireland_counties.json"}},
                    "monuments_za_(en)": {"class": ZaEn, "data_files": {}},
                    "monuments_cm_(fr)": {"class": CmFr, "data_files": {}},
                    "monuments_dk-bygninger_(da)": {"class": DkBygningDa,
@@ -150,6 +150,7 @@ def get_items(connection,
               table=False):
     if upload:
         logger = Logger()
+    country_language = {"country": country, "language": language}
     specific_table_name = utils.get_specific_table_name(country, language)
     if not utils.table_exists(connection, specific_table_name):
         print("Table does not exist.")
@@ -177,7 +178,7 @@ def get_items(connection,
     for row in database_rows:
         monument = class_to_use(row, mapping, data_files, existing)
         if table:
-            raw_data = "<pre>" + str(row) + "</pre>\n\n"
+            raw_data = "<pre>" + str(row) + "</pre>\n"
             monument_table = monument.print_wd_to_table()
             utils.append_line_to_file(raw_data, filename)
             utils.append_line_to_file(monument_table, filename)

@@ -30,7 +30,8 @@ class SeShipSv(Monument):
                 possible_varv = self.varv.split("<br>")[0]
             if "[[" in possible_varv:
                 varv = utils.q_from_first_wikilink("sv", possible_varv)
-                self.add_statement("manufacturer", varv)
+                ref = self.wlm_source
+                self.add_statement("manufacturer", varv, refs=[ref])
 
     def set_manufacture_year(self):
         """
@@ -43,8 +44,9 @@ class SeShipSv(Monument):
             byggar = utils.parse_year(
                 utils.remove_characters(self.byggar, ".,"))
             if isinstance(byggar, int):
+                ref = self.wlm_source
                 self.add_statement(
-                    "inception", {"time_value": {"year": byggar}})
+                    "inception", {"time_value": {"year": byggar}}, refs=[ref])
 
     def set_dimensions(self):
         if self.has_non_empty_attribute("dimensioner"):
@@ -53,22 +55,36 @@ class SeShipSv(Monument):
             for dimension in dimensions_processed:
                 if dimension in self.props:
                     value = dimensions_processed[dimension]
+                    ref = self.wlm_source
                     self.add_statement(
                         dimension, {"quantity_value": value,
-                                    "unit": self.props["metre"]})
+                                    "unit": self.props["metre"]}, refs=[ref])
 
     def set_homeport(self):
         if self.has_non_empty_attribute("hemmahamn"):
             if utils.count_wikilinks(self.hemmahamn) == 1:
                 home_port = utils.q_from_first_wikilink("sv", self.hemmahamn)
-                self.add_statement("home_port", home_port)
+                ref = self.wlm_source
+                self.add_statement("home_port", home_port, refs=[ref])
 
     def set_call_sign(self):
         if self.has_non_empty_attribute("signal"):
-            self.add_statement("call_sign", self.signal)
+            ref = self.wlm_source
+            self.add_statement("call_sign", self.signal, refs=[ref])
+
+    def set_monuments_all_id(self):
+        self.monuments_all_id = self.signal
 
     def __init__(self, db_row_dict, mapping, data_files, existing):
         Monument.__init__(self, db_row_dict, mapping, data_files, existing)
+        self.set_monuments_all_id()
+        self.set_changed()
+        self.wlm_source = self.create_wlm_source(self.monuments_all_id)
+        self.set_country()
+        self.set_is()
+        self.set_heritage()
+        self.set_source()
+        self.set_registrant_url()
         self.set_labels("sv", self.namn)
         self.set_image("bild")
         self.exists("sv", "artikel")

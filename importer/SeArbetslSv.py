@@ -26,7 +26,7 @@ class SeArbetslSv(Monument):
         try:
             municipality = [x["item"] for x in municip_dict if x[
                 "en"].lower() == pattern][0]
-            ref = self.create_wlm_source()
+            ref = self.wlm_source
             self.add_statement("located_adm", municipality, refs=[ref])
             swedish_name = [x["sv"]
                             for x in municip_dict
@@ -48,8 +48,7 @@ class SeArbetslSv(Monument):
                 special_type = [table[x]["items"]
                                 for x in table
                                 if x.lower() == type_to_search_for][0]
-                ref = self.create_wlm_source()
-                self.substitute_statement("is", special_type, refs=[ref])
+                self.substitute_statement("is", special_type)
             except IndexError:
                 return
         return
@@ -60,18 +59,29 @@ class SeArbetslSv(Monument):
             try:
                 location = [x["item"] for x in settlements_dict if x[
                     "sv"].strip() == utils.remove_markup(self.ort)][0]
-                ref = self.create_wlm_source()
+                ref = self.wlm_source
                 self.add_statement("location", location, refs=[ref])
             except IndexError:
                 return
 
     def set_id(self):
         if self.has_non_empty_attribute("id"):
-            ref = self.create_wlm_source()
+            ref = self.wlm_source
             self.add_statement("arbetsam", self.id, refs=[ref])
+
+    def set_monuments_all_id(self):
+        self.monuments_all_id = self.id
 
     def __init__(self, db_row_dict, mapping, data_files, existing):
         Monument.__init__(self, db_row_dict, mapping, data_files, existing)
+        self.set_monuments_all_id()
+        self.set_changed()
+        self.wlm_source = self.create_wlm_source(self.monuments_all_id)
+        self.set_country()
+        self.set_is()
+        self.set_heritage()
+        self.set_source()
+        self.set_registrant_url()
         self.set_labels("sv", self.namn)
         self.set_descriptions()
         self.set_id()

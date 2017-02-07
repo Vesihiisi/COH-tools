@@ -13,6 +13,7 @@
         "name": "working life museum"
     },
     "language": "sv",
+    "table_name": "se-arbetsl",
     "unique": {
         "comment": "Arbetsam ID",
         "property": "P3426"

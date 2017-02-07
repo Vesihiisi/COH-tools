@@ -12,6 +12,7 @@
         "item": "Q16501309"
     },
     "language": "sv",
+    "table_name": "se-ship",
     "unique": {
         "comment": "call sign",
         "property": "P2317"

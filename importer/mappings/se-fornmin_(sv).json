@@ -13,6 +13,7 @@
         "name": "monument in Fornminnesregistret"
     },
     "language": "sv",
+    "table_name": "se-fornmin",
     "unique": {
         "comment": "",
         "property": ""
