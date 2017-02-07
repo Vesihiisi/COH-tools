@@ -30,7 +30,8 @@ class SeFornminSv(Monument):
         """
         With registrant_url as source, to test source uploading mechanism
         """
-        self.add_statement("raa-nr", self.raa_nr, refs=[self.registrant_url])
+        ref = self.wlm_source
+        self.add_statement("raa-nr", self.raa_nr, refs=[ref])
 
     def set_adm_location(self):
         municip_dict = utils.load_json(path.join(
@@ -43,7 +44,8 @@ class SeFornminSv(Monument):
         try:
             municipality = [x["item"] for x in municip_dict if x[
                 "en"].lower() == pattern][0]
-            self.add_statement("located_adm", municipality)
+            ref = self.wlm_source
+            self.add_statement("located_adm", municipality, refs=[ref])
         except IndexError:
             print("Could not parse municipality: {}.".format(self.kommun))
             return
@@ -73,18 +75,31 @@ class SeFornminSv(Monument):
                 if len(wikilinks) == 1:
                     target_page = wikilinks[0].title
                     wd_item = utils.q_from_wikipedia("sv", target_page)
-                    self.add_statement("location", wd_item)
+                    ref = self.wlm_source
+                    self.add_statement("location", wd_item, refs=[ref])
         if self.has_non_empty_attribute("socken"):
+            ref = self.wlm_source
             self.add_statement("location", self.get_socken(
-                self.socken, self.landskap))
+                self.socken, self.landskap), refs=[ref])
 
     def set_inception(self):
         # TODO
         # This is messy and not super prioritized...
         return
 
+    def set_monuments_all_id(self):
+        self.monuments_all_id = self.id
+
     def __init__(self, db_row_dict, mapping, data_files, existing):
         Monument.__init__(self, db_row_dict, mapping, data_files, existing)
+        self.set_monuments_all_id()
+        self.set_changed()
+        self.wlm_source = self.create_wlm_source(self.monuments_all_id)
+        self.set_country()
+        self.set_is()
+        self.set_heritage()
+        self.set_source()
+        self.set_registrant_url()
         self.set_image("bild")
         self.update_labels()
         self.set_descriptions()
