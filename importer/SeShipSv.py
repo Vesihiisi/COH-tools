@@ -4,12 +4,16 @@ import importer_utils as utils
 
 class SeShipSv(Monument):
 
-    """
-    TODO
-    * handle material (from lookup table)
-    """
-
     def set_type(self):
+        """
+        In some cases, there's a more specific ship type in
+        the 'funktion' column.
+        Here all all the possible values:
+        https://www.wikidata.org/wiki/Wikidata:WikiProject_WLM/Mapping_tables/se-ship_(sv)/functions
+        This table is used as the base for mapping.
+        If there's a mapping for the specific value,
+        it will substitute the default P31 (watercraft)
+        """
         table = self.data_files["functions"]["mappings"]
         if self.funktion:
             special_type = self.funktion.lower()
@@ -24,6 +28,14 @@ class SeShipSv(Monument):
                 return
 
     def set_shipyard(self):
+        """
+        Process the column 'varv'.
+        It can look like this:
+        '[[Bergsunds varv]]<br>[[Stockholm]]'
+        We only use this if the actual shipyard is
+        wikilinked, which is not always the case.
+        Use WLM database as reference.
+        """
         if self.has_non_empty_attribute("varv"):
             possible_varv = self.varv
             if "<br>" in possible_varv:
@@ -35,10 +47,9 @@ class SeShipSv(Monument):
 
     def set_manufacture_year(self):
         """
-        TODO
-        !!!!!
-        add "year" etc. so that it can be processed by pywikibot
-        See:
+        If the column 'byggar' has a parsable value,
+        use it as year of manufacture.
+        Use WLM database as a source.
         """
         if self.has_non_empty_attribute("byggar"):
             byggar = utils.parse_year(
@@ -49,6 +60,13 @@ class SeShipSv(Monument):
                     "inception", {"time_value": {"year": byggar}}, refs=[ref])
 
     def set_dimensions(self):
+        """
+        Try to parse the contents of the 'dimensioner' column
+        and add them as length, width etc.
+        They can look like this:
+        'Längd: 15.77 Bredd: 5.19 Djup: 1.70 Brt: 15'
+        Use WLM database as source.
+        """
         if self.has_non_empty_attribute("dimensioner"):
             dimensions_processed = utils.parse_ship_dimensions(
                 self.dimensioner)
@@ -61,6 +79,12 @@ class SeShipSv(Monument):
                                     "unit": self.props["metre"]}, refs=[ref])
 
     def set_homeport(self):
+        """
+        Add homeport to data object.
+        Only works if column 'hemmahamn' contains exactly
+        one wikilink.
+        Use WLM database as source.
+        """
         if self.has_non_empty_attribute("hemmahamn"):
             if utils.count_wikilinks(self.hemmahamn) == 1:
                 home_port = utils.q_from_first_wikilink("sv", self.hemmahamn)
@@ -68,11 +92,19 @@ class SeShipSv(Monument):
                 self.add_statement("home_port", home_port, refs=[ref])
 
     def set_call_sign(self):
+        """
+        Add call sign to data object, use WLM database
+        as source.
+        """
         if self.has_non_empty_attribute("signal"):
             ref = self.wlm_source
             self.add_statement("call_sign", self.signal, refs=[ref])
 
     def set_monuments_all_id(self):
+        """
+        Map which column name in specific table
+        is used as ID in monuments_all.
+        """
         self.monuments_all_id = self.signal
 
     def __init__(self, db_row_dict, mapping, data_files, existing):
