@@ -11,31 +11,25 @@ class SeBbrSv(Monument):
 
     def update_labels(self):
         """
-        TODO
         Original labels look like this:
             Wickmanska gården (Paradis 35)
-        We don't need the latter part (fastighetsbeteckning) in the label,
-        but it's important info to have.
-        What's the best place for it?
-        Have a look at https://www.wikidata.org/wiki/Property_talk:P528
-        for now, we'll just put them in the description field!
-
-        wtf is "K 0188"???
+        We don't need the latter part (fastighetsbeteckning) in the label.
         """
         label = utils.get_rid_of_brackets(utils.remove_markup(self.namn))
         self.add_label("sv", label)
         return
 
-    def set_type(self):
-        return
-
     def set_bbr(self):
+        """
+        This will get a link that looks like
+            raa/bbr/21300000002805
+        Depending on whether the prefix is raa/bbr/ or raa/bbra/
+        """
         bbr_link = utils.get_bbr_link(self.bbr)
         self.add_statement("bbr", bbr_link)
 
     def set_heritage_bbr(self):
         """
-        ---
         In Sweden there are three different types of legal protection
         for different types of cultural heritage,
         so we created three new items:
@@ -97,6 +91,11 @@ class SeBbrSv(Monument):
         return
 
     def set_architect(self):
+        """
+        Add architect claim if available.
+        Only if wikilinked.
+        Can be more than one.
+        """
         if self.has_non_empty_attribute("arkitekt"):
             architects = utils.get_wikilinks(self.arkitekt)
             for name in architects:
@@ -121,10 +120,22 @@ class SeBbrSv(Monument):
                 self.add_statement("location", location)
 
     def update_descriptions(self):
+        """
+        Use fastighetsbeteckning as alias.
+        For example:
+            (Knutse 2:19)
+        """
         fastighetsbeteckning = utils.get_text_inside_brackets(self.namn)
         self.add_alias("sv", fastighetsbeteckning)
 
     def set_no_of_buildings(self):
+        """
+        The 'funktion' column looks like this:
+            Kapell (3 byggnader)
+        From this, we extract: has parts of class building,
+        and how many as qualifier.
+        Some items don't have any numbers, so we ignore those.
+        """
         extracted_no = utils.get_number_from_string(
             utils.get_text_inside_brackets(self.funktion))
         if extracted_no is not None:
@@ -133,6 +144,15 @@ class SeBbrSv(Monument):
                 {"quantity": {"quantity_value": extracted_no}})
 
     def set_adm_location(self):
+        """
+        Use offline mapping file
+        to map municipality to P131.
+        The column is 'kommun'.
+        It looks like this:
+            Alingsås
+        Just the name of the municipality
+        without the word kommun or genitive.
+        """
         if self.kommun == "Göteborg":
             municip_name = "Gothenburg"
         else:
@@ -149,17 +169,21 @@ class SeBbrSv(Monument):
             return
 
     def set_inception(self):
+        """
+        The 'byggar' column can have many forms,
+        but here we only process the obvious cases:
+            1865
+            [[1865]]
+        It can also look like:
+            1100- eller 1200-talet
+        and many other variants, which are ignored.
+        """
         if self.has_non_empty_attribute("byggar"):
             year_parsed = utils.parse_year(self.byggar)
             if year_parsed is not None:
                 self.add_statement("inception", {"time_value": year_parsed})
 
     def __init__(self, db_row_dict, mapping, data_files, existing):
-        """
-        TODO
-        Add an extra check for existing article using bbr?
-        not only monument_article
-        """
         Monument.__init__(self, db_row_dict, mapping, data_files, existing)
         self.update_labels()
         self.update_descriptions()
