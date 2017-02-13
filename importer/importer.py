@@ -183,7 +183,7 @@ def get_items(connection,
             utils.append_line_to_file(raw_data, filename)
             utils.append_line_to_file(monument_table, filename)
         if upload:
-            uploader = Uploader(monument, log=logger)
+            uploader = Uploader(monument, log=logger, tablename=country)
             uploader.upload()
             print("--------------------------------------------------")
     if table:
