@@ -388,3 +388,23 @@ def get_current_timestamp():
 
 def get_random_list_sample(some_list, amount):
     return random.sample(some_list, amount)
+
+
+def is_whitelisted_P31(q_number, allowed_values):
+    result = False
+    site = pywikibot.Site("wikidata", "wikidata")
+    repo = site.data_repository()
+    item = pywikibot.ItemPage(repo, q_number)
+    item_dict = item.get()
+    clm_dict = item_dict["claims"]
+    if "P31" in clm_dict:
+        for x in clm_dict["P31"]:
+            clm_trgt = x.getTarget()
+            if clm_trgt.id in allowed_values:
+                result = True
+    else:
+        # A great many items do not have any P31 at all,
+        # in which case assume it's correct.
+        # Otherwise there'd be too many false negatives.
+        result = True
+    return result
