@@ -225,6 +225,9 @@ class Uploader(object):
         return item
 
     def upload(self):
+        if self.data["upload"] is False:
+            print("SKIPPING OBJECT")
+            return
         labels = self.make_labels()
         descriptions = self.make_descriptions()
         aliases = self.make_aliases()
