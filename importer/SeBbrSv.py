@@ -71,7 +71,7 @@ class SeBbrSv(Monument):
         because there's no heritage status specified in mapping file,
         so we start by removing that empty claim.
         """
-        self.remove_claim("heritage_status")
+        self.remove_statement("heritage_status")
         if protection_date:
             # 1969-01-31
             date_dict = utils.date_to_dict(protection_date, "%Y-%m-%d")
@@ -183,14 +183,28 @@ class SeBbrSv(Monument):
             if year_parsed is not None:
                 self.add_statement("inception", {"time_value": year_parsed})
 
+    def set_monuments_all_id(self):
+        """
+        Map which column name in specific table
+        is used as ID in monuments_all.
+        """
+        self.monuments_all_id = self.bbr
+
     def __init__(self, db_row_dict, mapping, data_files, existing):
         Monument.__init__(self, db_row_dict, mapping, data_files, existing)
+        self.set_monuments_all_id()
+        self.set_changed()
+        self.wlm_source = self.create_wlm_source(self.monuments_all_id)
+        self.set_country()
+        self.set_is()
+        self.set_heritage()
+        self.set_source()
+        self.set_registrant_url()
         self.update_labels()
         self.update_descriptions()
         self.set_image("bild")
         self.exists("sv")
         self.set_commonscat()
-        self.set_type()
         self.set_coords(("lat", "lon"))
         self.set_inception()
         self.set_no_of_buildings()
