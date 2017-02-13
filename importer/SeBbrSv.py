@@ -48,6 +48,7 @@ class SeBbrSv(Monument):
         We therefore need to look that up by
         querying the source database via their API.
         """
+        protection_date = False
         url = "http://kulturarvsdata.se/" + \
             self.wd_item["statements"][self.props["bbr"]][0]["value"]
         url_list = url.split("/")
@@ -56,7 +57,6 @@ class SeBbrSv(Monument):
         data = requests.get(url).json()
         for element in data["@graph"]:
             if "ns5:spec" in element:
-                protection_date = False
                 bbr_type = element["ns5:spec"]
                 if bbr_type.startswith("Kyrkligt kulturminne"):
                     type_q = "Q24284073"
@@ -95,6 +95,7 @@ class SeBbrSv(Monument):
         Add architect claim if available.
         Only if wikilinked.
         Can be more than one.
+        Check if it's a human.
         """
         if self.has_non_empty_attribute("arkitekt"):
             architects = utils.get_wikilinks(self.arkitekt)
@@ -102,7 +103,8 @@ class SeBbrSv(Monument):
                 wp_page = name.title
                 q_item = utils.q_from_wikipedia("sv", wp_page)
                 if q_item is not None:
-                    self.add_statement("architect", q_item)
+                    if utils.is_whitelisted_P31(q_item, ["Q5"]):
+                        self.add_statement("architect", q_item)
 
     def set_location(self):
         """
