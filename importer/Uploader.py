@@ -34,7 +34,7 @@ class Uploader(object):
             name = labels[label]['value']
             lang = labels[label]['language']
             self.wdstuff.addLabelOrAlias(
-                lang, name, target_item, "label: " + name)
+                lang, name, target_item, summary=self.summary)
             if log:
                 t_id = target_item.getID()
                 message = t_id + " ADDED LABEL " + lang + " " + name
@@ -210,7 +210,7 @@ class Uploader(object):
                             print("")
                             print("Adding value: ", prop, wd_value)
                             self.wdstuff.addNewClaim(
-                                prop, wd_value, wd_item, ref)
+                                prop, wd_value, wd_item, ref, summary=self.summary)
                             if log:
                                 t_id = wd_item.getID()
                                 message = t_id + " ADDED CLAIM " + prop
@@ -225,6 +225,9 @@ class Uploader(object):
         return item
 
     def upload(self):
+        if self.data["upload"] is False:
+            print("SKIPPING OBJECT")
+            return
         labels = self.make_labels()
         descriptions = self.make_descriptions()
         aliases = self.make_aliases()
@@ -244,9 +247,10 @@ class Uploader(object):
             self.wd_item = self.wdstuff.QtoItemPage(self.TEST_ITEM)
             # self.wd_item = self.create_new_item()
 
-    def __init__(self, monument_object, log=None):
+    def __init__(self, monument_object, log=None, tablename=None):
         self.log = False
-        self.summary = "test"
+        self.summary = "#COH #WLM #" + tablename
+        print(self.summary)
         if log is not None:
             self.log = log
         self.data = monument_object.wd_item

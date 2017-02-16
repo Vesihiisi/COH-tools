@@ -52,19 +52,19 @@ def test_socken_to_q_8():
 
 
 def test_file_is_on_commons_1():
-    assert file_is_on_commons("Loojangu värvid 2.jpg") == True
+    assert file_is_on_commons("Loojangu värvid 2.jpg") is True
 
 
 def test_file_is_on_commons_2():
-    assert file_is_on_commons("adgffhgadftgfhsfgdg") == False
+    assert file_is_on_commons("adgffhgadftgfhsfgdg") is False
 
 
 def test_commonscat_exists_1():
-    assert commonscat_exists("Libraries in Germany by city") == True
+    assert commonscat_exists("Libraries in Germany by city") is True
 
 
 def test_commonscat_exists_2():
-    assert commonscat_exists("adgafgtaffrsdf") == False
+    assert commonscat_exists("adgafgtaffrsdf") is False
 
 
 def test_q_from_wikipedia_1():
@@ -84,3 +84,17 @@ def test_q_from_first_wikilink_1():
                                         " ligger i [[Hälsingland]], ingår sedan 1971 i "
                                         "[[Söderhamns kommun]] och motsvarar från 2016 "
                                         "[[Norrala distrikt]].")) == "Q206564"
+
+
+def test_is_whitelisted_P31_1():
+    """
+    Solberg, Kungälvs kommun -> småort
+    """
+    assert is_whitelisted_P31("Q2263578", ["Q14839548"]) is True
+
+
+def test_is_whitelisted_P31_2():
+    """
+    Solberg, Kungälvs kommun -> [city, tätort]
+    """
+    assert is_whitelisted_P31("Q2263578", ["Q515", "Q12813115"]) is False

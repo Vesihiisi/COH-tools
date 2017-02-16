@@ -48,6 +48,7 @@ class SeBbrSv(Monument):
         We therefore need to look that up by
         querying the source database via their API.
         """
+        protection_date = False
         url = "http://kulturarvsdata.se/" + \
             self.wd_item["statements"][self.props["bbr"]][0]["value"]
         url_list = url.split("/")
@@ -56,7 +57,6 @@ class SeBbrSv(Monument):
         data = requests.get(url).json()
         for element in data["@graph"]:
             if "ns5:spec" in element:
-                protection_date = False
                 bbr_type = element["ns5:spec"]
                 if bbr_type.startswith("Kyrkligt kulturminne"):
                     type_q = "Q24284073"
@@ -71,7 +71,7 @@ class SeBbrSv(Monument):
         because there's no heritage status specified in mapping file,
         so we start by removing that empty claim.
         """
-        self.remove_claim("heritage_status")
+        self.remove_statement("heritage_status")
         if protection_date:
             # 1969-01-31
             date_dict = utils.date_to_dict(protection_date, "%Y-%m-%d")
@@ -95,6 +95,7 @@ class SeBbrSv(Monument):
         Add architect claim if available.
         Only if wikilinked.
         Can be more than one.
+        Check if it's a human.
         """
         if self.has_non_empty_attribute("arkitekt"):
             architects = utils.get_wikilinks(self.arkitekt)
@@ -102,7 +103,8 @@ class SeBbrSv(Monument):
                 wp_page = name.title
                 q_item = utils.q_from_wikipedia("sv", wp_page)
                 if q_item is not None:
-                    self.add_statement("architect", q_item)
+                    if utils.is_whitelisted_P31(q_item, ["Q5"]):
+                        self.add_statement("architect", q_item)
 
     def set_location(self):
         """
@@ -183,14 +185,28 @@ class SeBbrSv(Monument):
             if year_parsed is not None:
                 self.add_statement("inception", {"time_value": year_parsed})
 
+    def set_monuments_all_id(self):
+        """
+        Map which column name in specific table
+        is used as ID in monuments_all.
+        """
+        self.monuments_all_id = self.bbr
+
     def __init__(self, db_row_dict, mapping, data_files, existing):
         Monument.__init__(self, db_row_dict, mapping, data_files, existing)
+        self.set_monuments_all_id()
+        self.set_changed()
+        self.wlm_source = self.create_wlm_source(self.monuments_all_id)
+        self.set_country()
+        self.set_is()
+        self.set_heritage()
+        self.set_source()
+        self.set_registrant_url()
         self.update_labels()
         self.update_descriptions()
         self.set_image("bild")
         self.exists("sv")
         self.set_commonscat()
-        self.set_type()
         self.set_coords(("lat", "lon"))
         self.set_inception()
         self.set_no_of_buildings()
