@@ -5,11 +5,17 @@ import importer_utils as utils
 class SeArbetslSv(Monument):
 
     def set_descriptions(self):
+        """
+        Set default descriptions in both English and Swedish.
+        """
         DESC_BASES = {"sv": "arbetslivsmuseum", "en": "museum"}
         for language in ["en", "sv"]:
             self.add_description(language, DESC_BASES[language])
 
     def add_location_to_desc(self, language, municipality):
+        """
+        Append municipality name to description.
+        """
         if language == "sv":
             self.wd_item["descriptions"][language] += " i " + municipality
         elif language == "en":
@@ -17,6 +23,17 @@ class SeArbetslSv(Monument):
                 language] += " in " + municipality + ", Sweden"
 
     def set_adm_location(self):
+        """
+        Use offline mapping file
+        to map municipality to P131.
+        The column is 'kommun'.
+        It looks like this:
+            Alingsås
+        Just the name of the municipality
+        without the word kommun or genitive.
+        THEN use the administrative location in description
+        in both English and Swedish.
+        """
         municip_dict = self.data_files["municipalities"]
         if self.kommun == "Göteborg":
             municip_name = "Gothenburg"
@@ -41,6 +58,11 @@ class SeArbetslSv(Monument):
             return
 
     def set_type(self):
+        """
+        Use the lookup table from:
+        https://www.wikidata.org/wiki/Wikidata:WikiProject_WLM/Mapping_tables/se-arbetsl_(sv)/types
+        If possble, exchange the default P31 for more specific one.
+        """
         if self.has_non_empty_attribute("typ"):
             table = self.data_files["types"]["mappings"]
             type_to_search_for = self.typ.lower()
@@ -54,6 +76,13 @@ class SeArbetslSv(Monument):
         return
 
     def set_location(self):
+        """
+        Using external file of all populated places in Sweden,
+        and the 'ort' column,
+        add location statement.
+        The file contains all subclasses of settlement,
+        such as town, village, etc.
+        """
         settlements_dict = self.data_files["settlements"]
         if self.has_non_empty_attribute("ort"):
             try:
@@ -65,11 +94,18 @@ class SeArbetslSv(Monument):
                 return
 
     def set_id(self):
+        """
+        Add ID number from ARBETSAM database.
+        """
         if self.has_non_empty_attribute("id"):
             ref = self.wlm_source
             self.add_statement("arbetsam", self.id, refs=[ref])
 
     def set_monuments_all_id(self):
+        """
+        Map which column name in specific table
+        is used as ID in monuments_all.
+        """
         self.monuments_all_id = self.id
 
     def __init__(self, db_row_dict, mapping, data_files, existing):
