@@ -50,8 +50,24 @@ class DkBygningDa(Monument):
                 self.add_statement(
                     "inception", {"time_value": {"year": inception}})
 
+    def set_monuments_all_id(self):
+        """
+        Map which column name in specific table
+        is used as ID in monuments_all.
+        """
+        self.monuments_all_id = str(self.kommunenr) + "-" + \
+            str(self.ejendomsnr) + "-" + str(self.bygningsnr)
+
     def __init__(self, db_row_dict, mapping, data_files, existing):
         Monument.__init__(self, db_row_dict, mapping, data_files, existing)
+        self.set_monuments_all_id()
+        self.set_changed()
+        self.wlm_source = self.create_wlm_source(self.monuments_all_id)
+        self.set_country()
+        self.set_is()
+        self.set_heritage()
+        self.set_source()
+        self.set_registrant_url()
         self.update_labels()
         self.exists("da")
         self.set_commonscat()
@@ -63,4 +79,4 @@ class DkBygningDa(Monument):
         self.set_address()
         self.set_inception()
         self.exists_with_prop(mapping)
-        # self.print_wd()
+        self.print_wd()

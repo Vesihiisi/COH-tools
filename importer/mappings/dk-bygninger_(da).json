@@ -14,6 +14,7 @@
         "name": "monument on Kulturstyrelsen register"
     },
     "language": "da",
+    "table_name": "dk-bygninger",
     "unique": {
         "comment": "Danish listed buildings case ID",
         "property": "P2783"
