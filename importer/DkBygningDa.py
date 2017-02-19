@@ -14,15 +14,25 @@ class DkBygningDa(Monument):
         """
         Use self.municipality because IT'S PLACE NOT MUNICIPALITY
         (that's adm2)
+        Look it up in list of Danish placenames.
+        Some are wikilinked, but we can't rely on it
+        because of items like [[København K]], which redirect
+        to an article about postal codes...
         """
         place_item = False
+        placename_dict = self.data_files["settlements"]
         if self.has_non_empty_attribute("by"):
             place = self.by
             if utils.count_wikilinks(place) == 1:
-                place_item = utils.q_from_first_wikilink("da", place)
+                place = utils.remove_markup(place)
             else:
-                if utils.wp_page_exists("da", place):
-                    place_item = utils.q_from_wikipedia("da", place)
+                try:
+                    placename = [x["item"] for x in placename_dict if x[
+                        "da"].lower() == place.lower()][0]
+                    print(placename)
+                except IndexError:
+                    print("Could not parse placename: {}.".format(place))
+                    return
         if place_item:
             self.add_statement("location", place_item)
 
@@ -79,4 +89,4 @@ class DkBygningDa(Monument):
         self.set_address()
         self.set_inception()
         self.exists_with_prop(mapping)
-        self.print_wd()
+        # self.print_wd()
