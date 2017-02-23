@@ -49,6 +49,7 @@ class SeFornminSv(Monument):
     def set_raa(self):
         """
         All items have a 'raa-nr' and an 'id'.
+
         The latter is used to link to the
         Database of the cultural heritage in Sweden,
         and the former is used as a qualifier.
