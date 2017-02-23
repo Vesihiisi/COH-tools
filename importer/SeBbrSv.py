@@ -26,7 +26,7 @@ class SeBbrSv(Monument):
         Depending on whether the prefix is raa/bbr/ or raa/bbra/
         """
         bbr_link = utils.get_bbr_link(self.bbr)
-        self.add_statement("bbr", bbr_link)
+        self.add_statement("cultural_heritage_sweden", bbr_link)
 
     def set_heritage_bbr(self):
         """
@@ -50,7 +50,7 @@ class SeBbrSv(Monument):
         """
         protection_date = False
         url = "http://kulturarvsdata.se/" + \
-            self.wd_item["statements"][self.props["bbr"]][0]["value"]
+            self.wd_item["statements"][self.props["cultural_heritage_sweden"]][0]["value"]
         url_list = url.split("/")
         url_list.insert(-1, "jsonld")
         url = "/".join(url_list)

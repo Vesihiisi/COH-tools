@@ -48,10 +48,19 @@ class SeFornminSv(Monument):
 
     def set_raa(self):
         """
-        All items have a 'raa-nr'.
+        All items have a 'raa-nr' and an 'id'.
+
+        The latter is used to link to the
+        Database of the cultural heritage in Sweden,
+        and the former is used as a qualifier.
+        See https://www.wikidata.org/wiki/Property_talk:P1262
+        for discussion of rationale.
         """
         ref = self.wlm_source
-        self.add_statement("raa-nr", self.raa_nr, refs=[ref])
+        fmi_link = "raa/fmi/" + self.id
+        raa_qualifier = {"raa-nr": self.raa_nr}
+        self.add_statement(
+            "cultural_heritage_sweden", fmi_link, raa_qualifier, refs=[ref])
 
     def set_adm_location(self):
         """
