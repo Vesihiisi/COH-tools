@@ -6,10 +6,14 @@ class SeArbetslSv(Monument):
 
     def set_descriptions(self):
         """
-        Set default descriptions in both English and Swedish.
+        Set default descriptions.
         """
-        DESC_BASES = {"sv": "arbetslivsmuseum", "en": "museum"}
-        for language in ["en", "sv"]:
+        DESC_BASES = {"sv": "arbetslivsmuseum",
+                      "en": "working life museum",
+                      "fi": "työväen museo Ruotsissa",
+                      "ru": "музей в Швеции",
+                      "pl": "muzeum w Szwecji"}
+        for language in ["en", "sv", "fi", "ru", "pl"]:
             self.add_description(language, DESC_BASES[language])
 
     def add_location_to_desc(self, language, municipality):
