@@ -160,9 +160,10 @@ class Monument(object):
         self.add_label(language, utils.remove_markup(content))
 
     def set_heritage(self):
-        heritage = self.mapping["heritage"]
-        ref = self.wlm_source
-        self.add_statement("heritage_status", heritage["item"], refs=[ref])
+        if "heritage" in self.mapping:
+            heritage = self.mapping["heritage"]
+            ref = self.wlm_source
+            self.add_statement("heritage_status", heritage["item"], refs=[ref])
 
     def set_coords(self, coord_keywords_tuple):
         lat = coord_keywords_tuple[0]
@@ -232,6 +233,7 @@ class Monument(object):
     def create_stated_in_source(self, source_item, pub_date):
         prop_stated = self.props["stated_in"]
         prop_date = self.props["publication_date"]
+        pub_date = utils.date_to_dict(pub_date, "%Y-%m-%d")  # 2014-12-23
         return {"source": {"prop": prop_stated, "value": source_item},
                 "published": {"prop": prop_date, "value": pub_date}}
 
@@ -240,7 +242,7 @@ class Monument(object):
         url_base = url_base.format(
             self.mapping["table_name"], self.mapping["language"], monuments_all_id)
         source_item = self.sources["monuments_db"]
-        timestamp = self.wd_item["changed"]
+        timestamp = utils.datetime_object_to_dict(self.wd_item["changed"])
         prop_stated = self.props["stated_in"]
         prop_date = self.props["publication_date"]
         prop_reference_url = self.props["reference_url"]

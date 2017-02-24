@@ -1,80 +1,206 @@
 {
-    "@meta": {
-        "permalink": "//www.wikidata.org/w/index.php?title=Wikidata%3AWikiProject_WLM/Mapping_tables/se-arbetsl_%28sv%29/types&oldid=419108127",
-        "timestamp": "2016-12-23T11:45:54Z"
-    },
     "mappings": {
-        "Museispårväg": {
+        "Bondgård": {
+            "count": "1",
             "items": [
-                "Q372047"
-            ],
-            "count": "1"
+                "Q131596"
+            ]
         },
-        "Medicinhistoriskt Museum": {
+        "Produktionsmuseum": {
+            "count": "5",
             "items": [
-                "Q26958986"
-            ],
-            "count": "2"
-        },
-        "Museijärnväg": {
-            "items": [
-                "Q420962"
-            ],
-            "count": "2"
-        },
-        "Leksaksmuseum": {
-            "items": [
-                "Q2310465"
-            ],
-            "count": "1"
+                "Q1662089"
+            ]
         },
         "Industriminne": {
+            "count": "1",
             "items": [
                 "Q1569871"
-            ],
-            "count": "1"
+            ]
         },
-        "Friluftsmuseum": {
+        "Produktionsanläggning": {
+            "count": "5",
             "items": [
-                "Q756102"
-            ],
-            "count": "2"
+                "Q83405"
+            ]
         },
-        "Hembygdsgård": {
+        "Lanthandelsmuseum": {
+            "count": "1",
             "items": [
-                "Q10520688"
-            ],
-            "count": "4"
+                "Q1595639"
+            ]
         },
-        "Fyrskepp": {
+        "Kulturhistoriskt Museum": {
+            "count": "1",
             "items": [
-                "Q831515"
-            ],
-            "count": "1"
+                "Q17105874"
+            ]
         },
-        "Flyghistoriskt Museum": {
+        "Hantverkerimuseum": {
+            "count": "1",
             "items": [
-                "Q4828724"
-            ],
-            "count": "2"
+                "Q28476987"
+            ]
         },
         "Fartyg": {
+            "count": "10",
             "items": [
                 "Q1229765"
-            ],
-            "count": "10"
+            ]
+        },
+        "Flyghistoriskt Museum": {
+            "count": "2",
+            "items": [
+                "Q4828724"
+            ]
+        },
+        "Stadsmuseum": {
+            "count": "1",
+            "items": [
+                "Q2327632"
+            ]
+        },
+        "Webbmuseum": {
+            "count": "1",
+            "items": [
+                "Q1225034"
+            ]
+        },
+        "Kulturhistoriskt Museum, Friluftsmuseum": {
+            "count": "1",
+            "items": [
+                "Q756102"
+            ]
+        },
+        "Militärhistoriskt Museum": {
+            "count": "2",
+            "items": [
+                "Q2772772"
+            ]
+        },
+        "Museijärnväg": {
+            "count": "2",
+            "items": [
+                "Q420962"
+            ]
+        },
+        "Sjukvårdsmuseum": {
+            "count": "1",
+            "items": [
+                "Q26958986"
+            ]
+        },
+        "Psykiatrihistoriskt Museum": {
+            "count": "1",
+            "items": [
+                "Q26958986"
+            ]
         },
         "Personhistoriskt Museum": {
+            "count": "1",
             "items": [
                 "Q10624527"
-            ],
-            "count": "1"
+            ]
         },
         "Författarmuseum": {
+            "count": "2",
             "items": [
                 "Q10501308"
-            ],
-            "count": "2"
+            ]
+        },
+        "Produktmuseum": {
+            "count": "1",
+            "items": [
+                "Q1662089"
+            ]
+        },
+        "Kulturhistoriskt Museum Friluftsmuseum": {
+            "count": "1",
+            "items": [
+                "Q756102"
+            ]
+        },
+        "Teater": {
+            "count": "1",
+            "items": [
+                "Q24354"
+            ]
+        },
+        "Leksaksmuseum": {
+            "count": "1",
+            "items": [
+                "Q2310465"
+            ]
+        },
+        "Museispårväg": {
+            "count": "1",
+            "items": [
+                "Q372047"
+            ]
+        },
+        "Friluftsmuseum": {
+            "count": "2",
+            "items": [
+                "Q756102"
+            ]
+        },
+        "Teknikmuseum/Fartyg": {
+            "count": "1",
+            "items": [
+                "Q2398990"
+            ]
+        },
+        "Veteranflygplan": {
+            "count": "1",
+            "items": [
+                "Q11436"
+            ]
+        },
+        "Konsthistoriskt Museum": {
+            "count": "1",
+            "items": [
+                "Q207694"
+            ]
+        },
+        "Hemelektronik Historia": {
+            "count": "1",
+            "items": [
+                "Q2398990"
+            ]
+        },
+        "Hembygdsgård": {
+            "count": "4",
+            "items": [
+                "Q10520688"
+            ]
+        },
+        "Fyrskepp": {
+            "count": "1",
+            "items": [
+                "Q831515"
+            ]
+        },
+        "Gårdsmuseum": {
+            "count": "1",
+            "items": [
+                "Q5435556"
+            ]
+        },
+        "Motorhistoriskt Museum": {
+            "count": "2",
+            "items": [
+                "Q787934"
+            ]
+        },
+        "Medicinhistoriskt Museum": {
+            "count": "2",
+            "items": [
+                "Q26958986"
+            ]
         }
+    },
+    "@meta": {
+        "timestamp": "2017-01-23T06:58:02Z",
+        "permalink": "//www.wikidata.org/w/index.php?title=Wikidata%3AWikiProject_WLM/Mapping_tables/se-arbetsl_%28sv%29/types&oldid=434982936"
     }
 }

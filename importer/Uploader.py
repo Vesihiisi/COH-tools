@@ -161,16 +161,22 @@ class Uploader(object):
         print(ref_dict)
         prop = ref_dict["source"]["prop"]
         prop_date = ref_dict["published"]["prop"]
-        date = utils.datetime_object_to_dict(ref_dict["published"]["value"])
+        date = ref_dict["published"]["value"]
         date_item = pywikibot.WbTime(**date)
         source_item = self.wdstuff.QtoItemPage(ref_dict["source"]["value"])
         source_claim = self.wdstuff.make_simple_claim(prop, source_item)
-        ref_url = ref_dict["reference_url"]["value"]
-        ref_url_prop = ref_dict["reference_url"]["prop"]
-        ref_url_claim = self.wdstuff.make_simple_claim(ref_url_prop, ref_url)
-        ref = self.wdstuff.Reference(
-            source_test=[source_claim, ref_url_claim],
-            source_notest=self.wdstuff.make_simple_claim(prop_date, date_item))
+        if "reference_url" in ref_dict:
+            ref_url = ref_dict["reference_url"]["value"]
+            ref_url_prop = ref_dict["reference_url"]["prop"]
+            ref_url_claim = self.wdstuff.make_simple_claim(
+                ref_url_prop, ref_url)
+            ref = self.wdstuff.Reference(
+                source_test=[source_claim, ref_url_claim],
+                source_notest=self.wdstuff.make_simple_claim(prop_date, date_item))
+        else:
+            ref = self.wdstuff.Reference(
+                source_test=[source_claim],
+                source_notest=self.wdstuff.make_simple_claim(prop_date, date_item))
         return ref
 
     def add_claims(self, wd_item, claims, log):
