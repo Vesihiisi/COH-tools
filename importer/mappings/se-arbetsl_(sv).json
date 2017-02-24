@@ -8,10 +8,6 @@
         "item": "Q33506",
         "name": "museum"
     },
-    "heritage": {
-        "item": "Q10416961",
-        "name": "working life museum"
-    },
     "language": "sv",
     "table_name": "se-arbetsl",
     "unique": {
