@@ -160,9 +160,10 @@ class Monument(object):
         self.add_label(language, utils.remove_markup(content))
 
     def set_heritage(self):
-        heritage = self.mapping["heritage"]
-        ref = self.wlm_source
-        self.add_statement("heritage_status", heritage["item"], refs=[ref])
+        if "heritage" in self.mapping:
+            heritage = self.mapping["heritage"]
+            ref = self.wlm_source
+            self.add_statement("heritage_status", heritage["item"], refs=[ref])
 
     def set_coords(self, coord_keywords_tuple):
         lat = coord_keywords_tuple[0]
