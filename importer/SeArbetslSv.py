@@ -108,7 +108,7 @@ class SeArbetslSv(Monument):
         Add ID number from ARBETSAM database.
         """
         if self.has_non_empty_attribute("id"):
-            ref = self.wlm_source
+            ref = self.arbetsam_source
             self.add_statement("arbetsam", self.id, refs=[ref])
 
     def set_monuments_all_id(self):
@@ -134,6 +134,8 @@ class SeArbetslSv(Monument):
         self.set_monuments_all_id()
         self.set_changed()
         self.wlm_source = self.create_wlm_source(self.monuments_all_id)
+        self.arbetsam_source = self.create_stated_in_source(
+            "Q28834837", "2013-11-28")
         self.set_country()
         self.set_source()
         self.set_registrant_url()
