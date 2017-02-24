@@ -80,7 +80,6 @@ class SeArbetslSv(Monument):
                                 if x.lower() == type_to_search_for][0]
                 for special in special_type:
                     self.add_statement("is", special, refs=[ref])
-                self.print_wd()
             except IndexError:
                 return
         return
@@ -126,7 +125,7 @@ class SeArbetslSv(Monument):
         even if they can be something else in addition.
         """
         arbetslivsmuseum = "Q10416961"
-        ref = self.wlm_source
+        ref = self.arbetsam_source
         self.add_statement("is", arbetslivsmuseum, refs=[ref])
 
     def __init__(self, db_row_dict, mapping, data_files, existing):
