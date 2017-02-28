@@ -223,6 +223,12 @@ class Uploader(object):
             log.logit(message)
         return item
 
+    def get_username(self):
+        """
+        Get Wikidata login that will be used to upload.
+        """
+        return pywikibot.config.usernames["wikidata"]["wikidata"]
+
     def upload(self):
         if self.data["upload"] is False:
             print("SKIPPING ITEM")
@@ -240,7 +246,7 @@ class Uploader(object):
         item_exists = True if self.data["wd-item"] is not None else False
         if item_exists:
             item_q = self.data["wd-item"]
-            self.wd_item = self.wdstuff.QtoItemPage(item_q)
+            self.wd_item = self.wdstuff.QtoItemPage(self.item_q)
         else:
             # self.wd_item = self.wdstuff.QtoItemPage(self.TEST_ITEM)
             self.wd_item = self.create_new_item()
@@ -248,7 +254,9 @@ class Uploader(object):
     def __init__(self, monument_object, log=None, tablename=None):
         self.log = False
         self.summary = "#COH #WLM #" + tablename
+        print("User: " + self.get_username())
         print("Edit summary: " + self.summary)
+        print("---------------")
         if log is not None:
             self.log = log
         self.data = monument_object.wd_item
