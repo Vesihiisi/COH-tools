@@ -249,7 +249,7 @@ class Uploader(object):
             self.wd_item = self.wdstuff.QtoItemPage(self.item_q)
         else:
             # self.wd_item = self.wdstuff.QtoItemPage(self.TEST_ITEM)
-            self.wd_item = self.create_new_item()
+            self.wd_item = self.create_new_item(self.log)
 
     def __init__(self, monument_object, log=None, tablename=None):
         self.log = False
