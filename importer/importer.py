@@ -175,8 +175,11 @@ def get_items(connection,
         database_rows = utils.get_random_list_sample(database_rows, short)
         print("USING RANDOM SAMPLE OF " + str(short))
     filename = specific_table_name + "_" + utils.get_current_timestamp()
+    problem_reports = []
     for row in database_rows:
         monument = class_to_use(row, mapping, data_files, existing)
+        problem_report = monument.get_report()
+        problem_reports.append(problem_report)
         if table:
             raw_data = "<pre>" + str(row) + "</pre>\n"
             monument_table = monument.print_wd_to_table()
@@ -186,6 +189,9 @@ def get_items(connection,
             uploader = Uploader(monument, log=logger, tablename=country)
             uploader.upload()
             print("--------------------------------------------------")
+    non_empty_reports = utils.remove_empty_dicts_from_list(problem_reports)
+    utils.json_to_file(
+        "report_" + specific_table_name + ".txt", non_empty_reports)
     if table:
         print("SAVED TEST RESULTS TO " + filename)
 
