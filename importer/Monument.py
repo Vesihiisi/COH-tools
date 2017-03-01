@@ -240,10 +240,16 @@ class Monument(object):
         return {"source": {"prop": prop_stated, "value": source_item},
                 "published": {"prop": prop_date, "value": pub_date}}
 
-    def create_wlm_source(self, monuments_all_id):
+    def get_wlm_url(self, monuments_all_id):
+        """
+        Create url to raw data in WLM API.
+        """
         url_base = "https://tools.wmflabs.org/heritage/api/api.php?action=search&format=json&srcountry={}&srlanguage={}&srid={}"
-        url_base = url_base.format(
+        return url_base.format(
             self.mapping["table_name"], self.mapping["language"], monuments_all_id)
+
+    def create_wlm_source(self, monuments_all_id):
+        wlm_url = self.get_wlm_url(monuments_all_id)
         source_item = self.sources["monuments_db"]
         timestamp = utils.datetime_object_to_dict(self.wd_item["changed"])
         prop_stated = self.props["stated_in"]
@@ -251,7 +257,7 @@ class Monument(object):
         prop_reference_url = self.props["reference_url"]
         return {"source": {"prop": prop_stated, "value": source_item},
                 "published": {"prop": prop_date, "value": timestamp},
-                "reference_url": {"prop": prop_reference_url, "value": url_base}}
+                "reference_url": {"prop": prop_reference_url, "value": wlm_url}}
 
     def exists_with_prop(self, mapping):
         if self.existing is None:
@@ -316,11 +322,17 @@ class Monument(object):
         and if that's the case and it's missing
         in the report,
         add it to the report automatically.
+        Add direct URL to item in WLM API.
         """
         self.problem_report[key_name] = raw_data
         if "wd-item" not in self.problem_report:
             if self.wd_item["wd-item"] is not None:
                 self.problem_report["Q"] = self.wd_item["wd-item"]
+            else:
+                self.problem_report["Q"] = ""
+        if "url" not in self.problem_report:
+            self.problem_report["url"] = self.get_wlm_url(
+                self.monuments_all_id)
 
     def print_report(self):
         """
@@ -333,3 +345,6 @@ class Monument(object):
                        ensure_ascii=False,
                        default=utils.datetime_convert)
         )
+
+    def get_report(self):
+        return self.problem_report
