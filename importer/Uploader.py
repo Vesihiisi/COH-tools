@@ -246,7 +246,7 @@ class Uploader(object):
         item_exists = True if self.data["wd-item"] is not None else False
         if item_exists:
             item_q = self.data["wd-item"]
-            self.wd_item = self.wdstuff.QtoItemPage(self.item_q)
+            self.wd_item = self.wdstuff.QtoItemPage(item_q)
         else:
             # self.wd_item = self.wdstuff.QtoItemPage(self.TEST_ITEM)
             self.wd_item = self.create_new_item(self.log)
