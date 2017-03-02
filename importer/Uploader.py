@@ -243,19 +243,33 @@ class Uploader(object):
         self.add_claims(self.wd_item, claims, self.log)
 
     def set_wd_item(self):
-        item_exists = True if self.data["wd-item"] is not None else False
-        if item_exists:
-            item_q = self.data["wd-item"]
-            self.wd_item = self.wdstuff.QtoItemPage(item_q)
-        else:
-            # self.wd_item = self.wdstuff.QtoItemPage(self.TEST_ITEM)
-            self.wd_item = self.create_new_item(self.log)
+        """
+        Determine WD item to manipulate.
 
-    def __init__(self, monument_object, log=None, tablename=None):
+        In live mode, if data object has associated WD item,
+        edit it. Otherwise, create a new WD item.
+        In sandbox mode, all edits are done on the WD Sandbox item.
+        """
+        if self.live:
+            item_exists = True if self.data["wd-item"] is not None else False
+            if item_exists:
+                item_q = self.data["wd-item"]
+                self.wd_item = self.wdstuff.QtoItemPage(item_q)
+            else:
+                self.wd_item = self.create_new_item(self.log)
+        else:
+            self.wd_item = self.wdstuff.QtoItemPage(self.TEST_ITEM)
+
+    def __init__(self, monument_object, log=None, tablename=None, live=False):
         self.log = False
         self.summary = "#COH #WLM #" + tablename
+        self.live = live
         print("User: " + self.get_username())
         print("Edit summary: " + self.summary)
+        if self.live:
+            print("LIVE MODE")
+        else:
+            print("SANDBOX MODE: " + self.TEST_ITEM)
         print("---------------")
         if log is not None:
             self.log = log
