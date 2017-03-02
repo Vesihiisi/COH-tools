@@ -251,12 +251,11 @@ class Uploader(object):
         In sandbox mode, all edits are done on the WD Sandbox item.
         """
         if self.live:
-            item_exists = True if self.data["wd-item"] is not None else False
-            if item_exists:
+            if self.data["wd-item"] is None:
+                self.wd_item = self.create_new_item(self.log)
+            else:
                 item_q = self.data["wd-item"]
                 self.wd_item = self.wdstuff.QtoItemPage(item_q)
-            else:
-                self.wd_item = self.create_new_item(self.log)
         else:
             self.wd_item = self.wdstuff.QtoItemPage(self.TEST_ITEM)
 
