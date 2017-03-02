@@ -179,7 +179,6 @@ def get_items(connection,
     for row in database_rows:
         monument = class_to_use(row, mapping, data_files, existing)
         problem_report = monument.get_report()
-        problem_reports.append(problem_report)
         if table:
             raw_data = "<pre>" + str(row) + "</pre>\n"
             monument_table = monument.print_wd_to_table()
@@ -189,8 +188,16 @@ def get_items(connection,
             live = True if upload == "live" else False
             uploader = Uploader(
                 monument, log=logger, tablename=country, live=live)
+            if "Q" in problem_report and problem_report["Q"] == "":
+                """
+                If the Monument didn't have an associated Qid,
+                this means the Uploader has now created a new Item
+                for it -- insert that id into the problem report.
+                """
+                problem_report["Q"] = uploader.wd_item_q
             uploader.upload()
             print("--------------------------------------------------")
+        problem_reports.append(problem_report)
     non_empty_reports = utils.remove_empty_dicts_from_list(problem_reports)
     utils.json_to_file(
         "report_" + specific_table_name + ".txt", non_empty_reports)
