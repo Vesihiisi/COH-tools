@@ -145,8 +145,8 @@ def get_wd_items_using_prop(prop):
 def get_items(connection,
               country,
               language,
+              upload,
               short=False,
-              upload=False,
               table=False):
     if upload:
         logger = Logger()
@@ -183,7 +183,9 @@ def get_items(connection,
             utils.append_line_to_file(raw_data, filename)
             utils.append_line_to_file(monument_table, filename)
         if upload:
-            uploader = Uploader(monument, log=logger, tablename=country)
+            live = True if upload == "live" else False
+            uploader = Uploader(
+                monument, log=logger, tablename=country, live=live)
             uploader.upload()
             print("--------------------------------------------------")
     if table:
@@ -197,7 +199,7 @@ def main(arguments):
     short = arguments.short
     upload = arguments.upload
     table = arguments.table
-    get_items(connection, country, language, short, upload, table)
+    get_items(connection, country, language, upload, short, table)
 
 
 if __name__ == "__main__":
@@ -208,12 +210,13 @@ if __name__ == "__main__":
     parser.add_argument("--db", default="wlm")
     parser.add_argument("--language", default="sv")
     parser.add_argument("--country", default="se-ship")
+    parser.add_argument("--upload", action='store')
     parser.add_argument("--short",
                         const=DEFAULT_SHORT,
                         nargs='?',
                         type=int,
                         action='store',)
     parser.add_argument("--table", action='store_true')
-    parser.add_argument("--upload", action='store_true')
     args = parser.parse_args()
+    print(args)
     main(args)
