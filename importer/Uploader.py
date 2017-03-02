@@ -56,7 +56,6 @@ class Uploader(object):
 
     def add_aliases(self, target_item, aliases, log):
         for alias in aliases:
-            print(alias)
             target_item.get()
             name = alias["value"]
             language = alias["language"]
@@ -107,7 +106,6 @@ class Uploader(object):
         Make it work for year range!
         """
         value = quantity['time_value']
-        print(value)
         return pywikibot.WbTime(**value)
 
     def make_q_item(self, qnumber):
@@ -158,7 +156,6 @@ class Uploader(object):
         return ref
 
     def make_stated_in_reference(self, ref_dict):
-        print(ref_dict)
         prop = ref_dict["source"]["prop"]
         prop_date = ref_dict["published"]["prop"]
         date = ref_dict["published"]["value"]
@@ -184,8 +181,6 @@ class Uploader(object):
             for claim in claims:
                 prop = claim
                 for x in claims[claim]:
-                    print(prop)
-                    print(x)
                     value = x['value']
                     if value != "":
                         ref = None
@@ -213,8 +208,6 @@ class Uploader(object):
                                 else:
                                     ref = self.make_stated_in_reference(ref)
                         if wd_value:
-                            print("")
-                            print("Adding value: ", prop, wd_value)
                             self.wdstuff.addNewClaim(
                                 prop, wd_value, wd_item, ref, summary=self.summary)
                             if log:
@@ -230,9 +223,15 @@ class Uploader(object):
             log.logit(message)
         return item
 
+    def get_username(self):
+        """
+        Get Wikidata login that will be used to upload.
+        """
+        return pywikibot.config.usernames["wikidata"]["wikidata"]
+
     def upload(self):
         if self.data["upload"] is False:
-            print("SKIPPING OBJECT")
+            print("SKIPPING ITEM")
             return
         labels = self.make_labels()
         descriptions = self.make_descriptions()
@@ -244,19 +243,33 @@ class Uploader(object):
         self.add_claims(self.wd_item, claims, self.log)
 
     def set_wd_item(self):
-        item_exists = True if self.data["wd-item"] is not None else False
-        if item_exists:
-            # item_q = self.data["wd-item"]
-            self.wd_item = self.wdstuff.QtoItemPage(self.TEST_ITEM)
-            print(self.wd_item)
+        """
+        Determine WD item to manipulate.
+
+        In live mode, if data object has associated WD item,
+        edit it. Otherwise, create a new WD item.
+        In sandbox mode, all edits are done on the WD Sandbox item.
+        """
+        if self.live:
+            if self.data["wd-item"] is None:
+                self.wd_item = self.create_new_item(self.log)
+            else:
+                item_q = self.data["wd-item"]
+                self.wd_item = self.wdstuff.QtoItemPage(item_q)
         else:
             self.wd_item = self.wdstuff.QtoItemPage(self.TEST_ITEM)
-            # self.wd_item = self.create_new_item()
 
-    def __init__(self, monument_object, log=None, tablename=None):
+    def __init__(self, monument_object, log=None, tablename=None, live=False):
         self.log = False
         self.summary = "#COH #WLM #" + tablename
-        print(self.summary)
+        self.live = live
+        print("User: " + self.get_username())
+        print("Edit summary: " + self.summary)
+        if self.live:
+            print("LIVE MODE")
+        else:
+            print("SANDBOX MODE: " + self.TEST_ITEM)
+        print("---------------")
         if log is not None:
             self.log = log
         self.data = monument_object.wd_item
