@@ -104,14 +104,14 @@ def test_is_subclass_of_1():
     """
     cat -> eukaryote
     """
-    assert is_subclass_of("Q146", "Q19088") is True
+    assert is_subclass_of("Q146", "Q19088", []) is True
 
 
 def test_is_subclass_of_2():
     """
     cat -> plant
     """
-    assert is_subclass_of("Q146", "Q756") is False
+    assert is_subclass_of("Q146", "Q756", []) is False
 
 
 def test_is_subclass_of_3():
@@ -120,4 +120,11 @@ def test_is_subclass_of_3():
     urban area has more than 1 parent!
     So it should test multiple branches
     """
-    assert is_subclass_of("Q12813115", "Q486972") is True
+    assert is_subclass_of("Q12813115", "Q486972", []) is True
+
+
+def test_is_human_settlement_1():
+    """
+    Helsingborg -> True
+    """
+    assert is_human_settlement("Q25411") is True

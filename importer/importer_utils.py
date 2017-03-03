@@ -425,6 +425,22 @@ def get_ids_of_parent_class(q_item):
 
 
 def is_subclass_of(q_child, q_parent, path=[]):
+    """
+    Check if WD item is a subclass of another.
+
+    This is recursive - works for indirect subclasses.
+
+    Args:
+        q_child: Qid of item that is a subclass
+        q_parent: Qid of item that we're checking if q_child
+        is a subclass of
+        path: array of previous q_child, protects against infinite loops
+        (circular subclass definition)
+        BECAUSE OF REASONS, when invoking this function with an empty
+        array, it has to be passed explicitly instead of relying
+        on the default value.
+        Otherwise it fails: http://stackoverflow.com/q/13437063
+    """
     if q_child == q_parent:
         return True
     else:
