@@ -24,7 +24,13 @@ class DkBygningDa(Monument):
         if self.has_non_empty_attribute("by"):
             place = self.by
             if utils.count_wikilinks(place) == 1:
-                place = utils.remove_markup(place)
+                """
+                If exactly one wikilink,
+                get the target item, then verify its P31....
+                """
+                placename_item = utils.q_from_first_wikilink(place)
+                if utils.is_human_settlement(placename_item) is False:
+                    return
             else:
                 try:
                     placename = [x["item"] for x in placename_dict if x[
