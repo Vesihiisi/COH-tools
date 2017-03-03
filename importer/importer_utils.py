@@ -434,3 +434,21 @@ def is_subclass_of(q_child, q_parent, path=[]):
                 path.append(parent_class)
                 return is_subclass_of(parent_class, q_parent, path)
     return False
+
+
+def is_human_settlement(q_item):
+    result = False
+    settlement_q = "Q486972"
+    site = pywikibot.Site("wikidata", "wikidata")
+    repo = site.data_repository()
+    wd_item = pywikibot.ItemPage(repo, q_item)
+    item_dict = wd_item.get()
+    clm_dict = item_dict["claims"]
+    if "P31" in clm_dict:
+        for x in clm_dict["P31"]:
+            clm_trgt = x.getTarget()
+            id_to_test = clm_trgt.getID()
+            subclass_test = is_subclass_of(id_to_test, settlement_q)
+            if subclass_test is True:
+                result = True
+    return result
