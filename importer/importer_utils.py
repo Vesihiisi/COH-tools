@@ -464,7 +464,7 @@ def is_human_settlement(q_item):
         for x in clm_dict["P31"]:
             clm_trgt = x.getTarget()
             id_to_test = clm_trgt.getID()
-            subclass_test = is_subclass_of(id_to_test, settlement_q)
+            subclass_test = is_subclass_of(id_to_test, settlement_q, [])
             if subclass_test is True:
                 result = True
     return result
