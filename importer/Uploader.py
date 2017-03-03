@@ -43,16 +43,14 @@ class Uploader(object):
     def add_descriptions(self, target_item, descriptions, log):
         for description in descriptions:
             target_item.get()
-            name = descriptions[description]['value']
+            desc_content = descriptions[description]['value']
             lang = descriptions[description]['language']
-            if (not target_item.descriptions or
-                    lang not in target_item.descriptions):
-                descs = {lang: name}
-                target_item.editDescriptions(descs)
-                pywikibot.output("Added description: " + name)
-                if log:
-                    t_id = target_item.getID()
-                    log.logit(t_id + " ADDED DESCRIPTION " + lang + " " + name)
+            self.wdstuff.add_description(
+                lang, desc_content, target_item, summary=self.summary)
+            if log:
+                t_id = target_item.getID()
+                log.logit(t_id + " ADDED DESCRIPTION " +
+                          lang + " " + desc_content)
 
     def add_aliases(self, target_item, aliases, log):
         for alias in aliases:
