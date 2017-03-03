@@ -98,3 +98,17 @@ def test_is_whitelisted_P31_2():
     Solberg, Kungälvs kommun -> [city, tätort]
     """
     assert is_whitelisted_P31("Q2263578", ["Q515", "Q12813115"]) is False
+
+
+def test_is_subclass_of_1():
+    """
+    cat -> eukaryote
+    """
+    assert is_subclass_of("Q146", "Q19088") is True
+
+
+def test_is_subclass_of_2():
+    """
+    cat -> plant
+    """
+    assert is_subclass_of("Q146", "Q756") is False
