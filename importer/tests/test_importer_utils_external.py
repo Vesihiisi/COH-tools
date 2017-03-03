@@ -112,3 +112,12 @@ def test_is_subclass_of_2():
     cat -> plant
     """
     assert is_subclass_of("Q146", "Q756") is False
+
+
+def test_is_subclass_of_3():
+    """
+    urban area of Sweden -> settlement
+    urban area has more than 1 parent!
+    So it should test multiple branches
+    """
+    assert is_subclass_of("Q12813115", "Q486972") is True

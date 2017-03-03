@@ -408,3 +408,29 @@ def is_whitelisted_P31(q_number, allowed_values):
         # Otherwise there'd be too many false negatives.
         result = True
     return result
+
+
+def get_ids_of_parent_class(q_item):
+    parents = []
+    site = pywikibot.Site("wikidata", "wikidata")
+    repo = site.data_repository()
+    wd_item_subclass = pywikibot.ItemPage(repo, q_item)
+    item_dict = wd_item_subclass.get()
+    clm_dict = item_dict["claims"]
+    if "P279" in clm_dict:
+        for x in clm_dict["P279"]:
+            clm_trgt = x.getTarget()
+            parents.append(clm_trgt.getID())
+    return parents
+
+
+def is_subclass_of(q_child, q_parent, path=[]):
+    if q_child == q_parent:
+        return True
+    else:
+        parents = get_ids_of_parent_class(q_child)
+        for parent_class in parents:
+            if parent_class not in path:
+                path.append(parent_class)
+                return is_subclass_of(parent_class, q_parent, path)
+    return False
