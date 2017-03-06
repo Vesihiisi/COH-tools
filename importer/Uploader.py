@@ -34,7 +34,7 @@ class Uploader(object):
             name = labels[label]['value']
             lang = labels[label]['language']
             self.wdstuff.addLabelOrAlias(
-                lang, name, target_item, summary=self.summary)
+                lang, name, target_item)
             if log:
                 t_id = target_item.getID()
                 message = t_id + " ADDED LABEL " + lang + " " + name
@@ -46,7 +46,7 @@ class Uploader(object):
             desc_content = descriptions[description]['value']
             lang = descriptions[description]['language']
             self.wdstuff.add_description(
-                lang, desc_content, target_item, summary=self.summary)
+                lang, desc_content, target_item)
             if log:
                 t_id = target_item.getID()
                 log.logit(t_id + " ADDED DESCRIPTION " +
@@ -207,14 +207,14 @@ class Uploader(object):
                                     ref = self.make_stated_in_reference(ref)
                         if wd_value:
                             self.wdstuff.addNewClaim(
-                                prop, wd_value, wd_item, ref, summary=self.summary)
+                                prop, wd_value, wd_item, ref)
                             if log:
                                 t_id = wd_item.getID()
                                 message = t_id + " ADDED CLAIM " + prop
                                 log.logit(message)
 
     def create_new_item(self, log):
-        item = self.wdstuff.make_new_item({}, summary=self.summary)
+        item = self.wdstuff.make_new_item({})
         if log:
             t_id = item.getID()
             message = t_id + " CREATE"
@@ -273,5 +273,5 @@ class Uploader(object):
         self.data = monument_object.wd_item
         site = pywikibot.Site("wikidata", "wikidata")
         self.repo = site.data_repository()
-        self.wdstuff = WDS(self.repo)
+        self.wdstuff = WDS(self.repo, edit_summary=self.summary)
         self.set_wd_item()
