@@ -2,7 +2,6 @@ from os import path
 import json
 import importer_utils as utils
 
-
 MAPPING_DIR = "mappings"
 
 
@@ -238,9 +237,8 @@ class Monument(object):
                 "published": {"prop": prop_date, "value": pub_date}}
 
     def create_wlm_source(self, monuments_all_id):
-        url_base = "https://tools.wmflabs.org/heritage/api/api.php?action=search&format=json&srcountry={}&srlanguage={}&srid={}"
-        url_base = url_base.format(
-            self.mapping["table_name"], self.mapping["language"], monuments_all_id)
+        wlm_url = utils.create_wlm_url(self.mapping["table_name"], self.mapping[
+                                       "language"], monuments_all_id)
         source_item = self.sources["monuments_db"]
         timestamp = utils.datetime_object_to_dict(self.wd_item["changed"])
         prop_stated = self.props["stated_in"]
@@ -248,7 +246,8 @@ class Monument(object):
         prop_reference_url = self.props["reference_url"]
         return {"source": {"prop": prop_stated, "value": source_item},
                 "published": {"prop": prop_date, "value": timestamp},
-                "reference_url": {"prop": prop_reference_url, "value": url_base}}
+                "reference_url": {"prop": prop_reference_url,
+                                  "value": wlm_url}}
 
     def exists_with_prop(self, mapping):
         if self.existing is None:

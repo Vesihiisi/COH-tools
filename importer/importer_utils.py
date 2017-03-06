@@ -7,6 +7,7 @@ import datetime
 import requests
 import pymysql
 import random
+from urllib.parse import quote
 
 
 def get_specific_table_name(countryname, languagename):
@@ -408,3 +409,9 @@ def is_whitelisted_P31(q_number, allowed_values):
         # Otherwise there'd be too many false negatives.
         result = True
     return result
+
+
+def create_wlm_url(country, language, id):
+    url_base = "https://tools.wmflabs.org/heritage/api/api.php?action=search&format=json&srcountry={}&srlanguage={}&srid={}"
+    return url_base.format(
+        country, language, quote(id))

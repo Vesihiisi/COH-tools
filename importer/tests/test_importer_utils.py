@@ -335,3 +335,8 @@ def test_wd_template_1():
 
 def test_wd_template_2():
     assert wd_template("Q", "Q34") == "{{Q|Q34}}"
+
+
+def test_create_wlm_url_1():
+    assert create_wlm_url(
+        "se-ship", "sv", "SFC 9698") == "https://tools.wmflabs.org/heritage/api/api.php?action=search&format=json&srcountry=se-ship&srlanguage=sv&srid=SFC%209698"
