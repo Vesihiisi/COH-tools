@@ -93,12 +93,22 @@ class SeShipSv(Monument):
 
     def set_call_sign(self):
         """
-        Add call sign to data object, use WLM database
-        as source.
+        Add call sign to data object.
+
+        [https://phabricator.wikimedia.org/T159427]
+        A few of them are fake
+        (since identifiers are needed in the WLM database).
+        These have the shape wiki[0-9][0-9].
+        All values: https://phabricator.wikimedia.org/P5010
+
+        Use WLM database as source.
         """
         if self.has_non_empty_attribute("signal"):
-            ref = self.wlm_source
-            self.add_statement("call_sign", self.signal, refs=[ref])
+            if self.signal.startswith("wiki") or self.signal.startswith("Tidigare"):
+                return
+            else:
+                ref = self.wlm_source
+                self.add_statement("call_sign", self.signal, refs=[ref])
 
     def set_monuments_all_id(self):
         """
