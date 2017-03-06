@@ -87,7 +87,6 @@ class SeArbetslSv(Monument):
                     self.add_statement("is", special, refs=[ref])
             except IndexError:
                 self.add_to_report("typ", self.typ)
-                return
         return
 
     def set_location(self):
@@ -109,7 +108,6 @@ class SeArbetslSv(Monument):
                 self.add_statement("location", location, refs=[ref])
             except IndexError:
                 self.add_to_report("ort", self.ort)
-                return
 
     def set_id(self):
         """
