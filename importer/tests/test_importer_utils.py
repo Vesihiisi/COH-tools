@@ -1,6 +1,12 @@
 from importer_utils import *
 
 
+def test_remove_empty_dicts_from_list_1():
+    dic_list = [{"foo": 1}, {}, {}, {"bar": "cat"}]
+    assert remove_empty_dicts_from_list(
+        dic_list) == [{"foo": 1}, {"bar": "cat"}]
+
+
 def test_contains_digit_1():
     assert contains_digit("fna3fs") == True
 

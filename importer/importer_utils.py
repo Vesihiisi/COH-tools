@@ -10,6 +10,25 @@ import random
 from urllib.parse import quote
 
 
+def remove_empty_dicts_from_list(list_of_dicts):
+    return [i for i in list_of_dicts if i]
+
+
+def save_to_file(filename, content):
+    with open(filename, 'w') as f:
+        f.write(content)
+        print("SAVED FILE " + filename)
+
+
+def json_to_file(filename, json_content):
+    with open(filename, 'w') as f:
+        json.dump(json_content, f, sort_keys=True,
+                  indent=4,
+                  ensure_ascii=False,
+                  default=datetime_convert)
+        print("SAVED FILE " + filename)
+
+
 def get_specific_table_name(countryname, languagename):
     return "monuments_{}_({})".format(countryname, languagename)
 

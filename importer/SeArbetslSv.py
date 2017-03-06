@@ -37,6 +37,8 @@ class SeArbetslSv(Monument):
         without the word kommun or genitive.
         THEN use the administrative location in description
         in both English and Swedish.
+
+        If raw data cannot be matched, add to problem report.
         """
         municip_dict = self.data_files["municipalities"]
         if self.kommun == "Göteborg":
@@ -59,6 +61,7 @@ class SeArbetslSv(Monument):
             self.add_location_to_desc("en", english_name)
         except IndexError:
             print("Could not parse municipality: {}.".format(self.kommun))
+            self.add_to_report("kommun", self.kommun)
             return
 
     def set_type(self):
@@ -69,6 +72,8 @@ class SeArbetslSv(Monument):
         https://www.wikidata.org/wiki/Wikidata:WikiProject_WLM/Mapping_tables/se-arbetsl_(sv)/types
         If there's a specific type, it will be added to the default
         "working life museum", resulting in two P31's for this item.
+
+        If raw data cannot be matched, add to problem report.
         """
         if self.has_non_empty_attribute("typ"):
             table = self.data_files["types"]["mappings"]
@@ -81,7 +86,7 @@ class SeArbetslSv(Monument):
                 for special in special_type:
                     self.add_statement("is", special, refs=[ref])
             except IndexError:
-                return
+                self.add_to_report("typ", self.typ)
         return
 
     def set_location(self):
@@ -91,6 +96,8 @@ class SeArbetslSv(Monument):
         add location statement.
         The file contains all subclasses of settlement,
         such as town, village, etc.
+
+        If raw data cannot be matched, add to problem report.
         """
         settlements_dict = self.data_files["settlements"]
         if self.has_non_empty_attribute("ort"):
@@ -100,7 +107,7 @@ class SeArbetslSv(Monument):
                 ref = self.wlm_source
                 self.add_statement("location", location, refs=[ref])
             except IndexError:
-                return
+                self.add_to_report("ort", self.ort)
 
     def set_id(self):
         """
@@ -135,6 +142,8 @@ class SeArbetslSv(Monument):
         self.wlm_source = self.create_wlm_source(self.monuments_all_id)
         self.arbetsam_source = self.create_stated_in_source(
             "Q28834837", "2013-11-28")
+        self.exists("sv", "monument_article")
+        self.exists_with_prop(mapping)
         self.set_country()
         self.set_source()
         self.set_registrant_url()
@@ -146,9 +155,8 @@ class SeArbetslSv(Monument):
         self.set_adm_location()
         self.set_location()
         self.set_street_address("sv", "adress")
-        self.exists("sv", "monument_article")
         self.set_image("bild")
         self.set_commonscat()
         self.set_coords(("lat", "lon"))
-        self.exists_with_prop(mapping)
+        # self.print_report()
         # self.print_wd()

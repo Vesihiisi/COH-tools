@@ -203,6 +203,9 @@ class Monument(object):
                 ref = self.wlm_source
                 self.add_statement(
                     "located_street", processed_address, refs=[ref])
+            else:
+                self.add_to_report(
+                    address_keyword, getattr(self, address_keyword))
 
     def has_non_empty_attribute(self, attr_name):
         if hasattr(self, attr_name):
@@ -239,6 +242,7 @@ class Monument(object):
     def create_wlm_source(self, monuments_all_id):
         wlm_url = utils.create_wlm_url(self.mapping["table_name"], self.mapping[
                                        "language"], monuments_all_id)
+
         source_item = self.sources["monuments_db"]
         timestamp = utils.datetime_object_to_dict(self.wd_item["changed"])
         prop_stated = self.props["stated_in"]
@@ -299,6 +303,42 @@ class Monument(object):
         self.construct_wd_item(mapping)
         self.data_files = data_files
         self.existing = existing
+        self.problem_report = {}
 
     def get_fields(self):
         return sorted(list(self.__dict__.keys()))
+
+    def add_to_report(self, key_name, raw_data):
+        """
+        Add data to problem report json.
+
+        Check if item has an associated Q-number,
+        and if that's the case and it's missing
+        in the report,
+        add it to the report automatically.
+        Add direct URL to item in WLM API.
+        """
+        self.problem_report[key_name] = raw_data
+        if "wd-item" not in self.problem_report:
+            if self.wd_item["wd-item"] is not None:
+                self.problem_report["Q"] = self.wd_item["wd-item"]
+            else:
+                self.problem_report["Q"] = ""
+        if "url" not in self.problem_report:
+            self.problem_report["url"] = self.get_wlm_url(
+                self.monuments_all_id)
+
+    def print_report(self):
+        """
+        Print the problem report on screen.
+        """
+        print(
+            json.dumps(self.problem_report,
+                       sort_keys=True,
+                       indent=4,
+                       ensure_ascii=False,
+                       default=utils.datetime_convert)
+        )
+
+    def get_report(self):
+        return self.problem_report

@@ -253,11 +253,14 @@ class Uploader(object):
         if self.live:
             if self.data["wd-item"] is None:
                 self.wd_item = self.create_new_item(self.log)
+                self.wd_item_q = self.wd_item.getID()
             else:
                 item_q = self.data["wd-item"]
                 self.wd_item = self.wdstuff.QtoItemPage(item_q)
+                self.wd_item_q = item_q
         else:
             self.wd_item = self.wdstuff.QtoItemPage(self.TEST_ITEM)
+            self.wd_item_q = self.TEST_ITEM
 
     def __init__(self, monument_object, log=None, tablename=None, live=False):
         self.log = False
