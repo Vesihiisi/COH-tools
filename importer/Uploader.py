@@ -37,7 +37,7 @@ class Uploader(object):
                 lang, name, target_item)
             if log:
                 t_id = target_item.getID()
-                message = t_id + " ADDED LABEL " + lang + " " + name
+                message = "{} ADDED LABEL {} {}".format(t_id, lang, name)
                 log.logit(message)
 
     def add_descriptions(self, target_item, descriptions, log):
@@ -49,8 +49,9 @@ class Uploader(object):
                 lang, desc_content, target_item)
             if log:
                 t_id = target_item.getID()
-                log.logit(t_id + " ADDED DESCRIPTION " +
-                          lang + " " + desc_content)
+                message = "{} ADDED DESCRIPTION {} {}".format(
+                    t_id, lang, desc_content)
+                log.logit(message)
 
     def add_aliases(self, target_item, aliases, log):
         for alias in aliases:
@@ -64,7 +65,8 @@ class Uploader(object):
                 target_item.editAliases({language: [name]})
             if log:
                 t_id = target_item.getID()
-                log.logit(t_id + " ADDED ALIAS " + language + " " + name)
+                message = "{} ADDED ALIAS {} {}".format(t_id, language, name)
+                log.logit(message)
 
     def make_descriptions(self):
         descriptions = self.data["descriptions"]
@@ -210,14 +212,15 @@ class Uploader(object):
                                 prop, wd_value, wd_item, ref)
                             if log:
                                 t_id = wd_item.getID()
-                                message = t_id + " ADDED CLAIM " + prop
+                                message = "{} ADDED CLAIM {}".format(
+                                    t_id, prop)
                                 log.logit(message)
 
     def create_new_item(self, log):
         item = self.wdstuff.make_new_item({})
         if log:
             t_id = item.getID()
-            message = t_id + " CREATE"
+            message = "{} CREATE".format(t_id)
             log.logit(message)
         return item
 
@@ -259,14 +262,14 @@ class Uploader(object):
 
     def __init__(self, monument_object, log=None, tablename=None, live=False):
         self.log = False
-        self.summary = "#COH #WLM #" + tablename
+        self.summary = "#COH #WLM #{}".format(tablename)
         self.live = live
-        print("User: " + self.get_username())
-        print("Edit summary: " + self.summary)
+        print("User: {}".format(self.get_username()))
+        print("Edit summary: {}".format(self.summary))
         if self.live:
             print("LIVE MODE")
         else:
-            print("SANDBOX MODE: " + self.TEST_ITEM)
+            print("SANDBOX MODE: {}".format(self.TEST_ITEM))
         print("---------------")
         if log is not None:
             self.log = log
