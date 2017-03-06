@@ -200,7 +200,7 @@ def get_items(connection,
         problem_reports.append(problem_report)
     non_empty_reports = utils.remove_empty_dicts_from_list(problem_reports)
     utils.json_to_file(
-        "report_" + specific_table_name + ".txt", non_empty_reports)
+        "report_" + specific_table_name + ".json", non_empty_reports)
     if table:
         print("SAVED TEST RESULTS TO " + filename)
 
