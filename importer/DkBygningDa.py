@@ -11,20 +11,22 @@ class DkBygningDa(Monument):
                 self.add_statement("located_adm", adm_location)
 
     def set_location(self):
-        """
-        Use self.municipality because IT'S PLACE NOT MUNICIPALITY
-        (that's adm2)
-        """
         place_item = False
         if self.has_non_empty_attribute("by"):
             place = self.by
             if utils.count_wikilinks(place) == 1:
-                place_item = utils.q_from_first_wikilink("da", place)
+                linked_page_title = utils.get_wikilinks(place)[0].title
+                if utils.wp_page_exists("da", linked_page_title):
+                    place_item = utils.q_from_first_wikilink("da", place)
             else:
                 if utils.wp_page_exists("da", place):
                     place_item = utils.q_from_wikipedia("da", place)
         if place_item:
-            self.add_statement("location", place_item)
+            place_item_ids = utils.get_P31(place_item)
+            for is_instance in place_item_ids:
+                if is_instance in self.data_files["settlement"]:
+                    self.add_statement("location", place_item)
+                    return  # there can be more than one P31, but after first positive we can leave
 
     def set_sagsnr(self):
         """
@@ -52,15 +54,15 @@ class DkBygningDa(Monument):
 
     def __init__(self, db_row_dict, mapping, data_files, existing):
         Monument.__init__(self, db_row_dict, mapping, data_files, existing)
-        self.update_labels()
-        self.exists("da")
-        self.set_commonscat()
-        self.set_image("billede")
-        self.set_coords(("lat", "lon"))
-        self.set_adm_location()
+        # self.update_labels()
+        # self.exists("da")
+        # self.set_commonscat()
+        # self.set_image("billede")
+        # self.set_coords(("lat", "lon"))
+        # self.set_adm_location()
         self.set_location()
-        self.set_sagsnr()
-        self.set_address()
-        self.set_inception()
-        self.exists_with_prop(mapping)
+        # self.set_sagsnr()
+        # self.set_address()
+        # self.set_inception()
+        # self.exists_with_prop(mapping)
         # self.print_wd()
