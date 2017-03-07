@@ -76,7 +76,8 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                    "monuments_za_(en)": {"class": ZaEn, "data_files": {}},
                    "monuments_cm_(fr)": {"class": CmFr, "data_files": {}},
                    "monuments_dk-bygninger_(da)": {"class": DkBygningDa,
-                                                   "data_files": {}},
+                                                   "data_files": {},
+                                                   "subclass_downloads": {"settlement": "Q486972"}},
                    "monuments_pl_(pl)": {"class": PlPl,
                                          "data_files": {"settlements": "poland_settlements.json"}},
                    "monuments_dk-fortidsminder_(da)": {"class": DkFortidsDa,
@@ -143,15 +144,12 @@ def get_wd_items_using_prop(prop):
 
 
 def get_subclasses(q_item):
-    items = []
-    query = "SELECT DISTINCT ?item WHERE {?item wdt:P279* wd:{}.}".format(
-        q_item)
+    results = []
+    query = "SELECT DISTINCT ?item WHERE {?item wdt:P279* wd:" + q_item + ".}"
     data = lookup.make_simple_wdqs_query(query, verbose=False)
     for x in data:
-        key = lookup.sanitize_wdqs_result(x['item'])
-        value = x['value']
-        items[value] = key
-    return items
+        results.append(lookup.sanitize_wdqs_result(x['item']))
+    return results
 
 
 def get_items(connection,
@@ -178,6 +176,11 @@ def get_items(connection,
         class_to_use = SPECIFIC_TABLES[specific_table_name]["class"]
         data_files = load_data_files(
             SPECIFIC_TABLES[specific_table_name]["data_files"])
+        if SPECIFIC_TABLES[specific_table_name]["subclass_downloads"]:
+            for dataset_title in SPECIFIC_TABLES[specific_table_name]["subclass_downloads"]:
+                dataset = get_subclasses(SPECIFIC_TABLES[specific_table_name][
+                                         "subclass_downloads"][dataset_title])
+                data_files[dataset_title] = dataset
     else:
         print("No class defined for " + specific_table_name)
         return
