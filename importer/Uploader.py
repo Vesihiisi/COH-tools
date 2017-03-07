@@ -110,10 +110,10 @@ class Uploader(object):
     def make_quantity_item(self, quantity, repo):
         value = quantity['quantity_value']
         if 'unit' in quantity:
-            unit = "http://www.wikidata.org/entity/" + quantity['unit']
+            unit = self.make_q_item(quantity['unit'])
         else:
             unit = None
-        return pywikibot.WbQuantity(value, unit, site=repo)
+        return pywikibot.WbQuantity(amount=value, unit=unit, site=repo)
 
     def make_time_item(self, quantity, repo):
         """
