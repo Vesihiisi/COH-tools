@@ -13,9 +13,9 @@ class Uploader(object):
 
     def make_labels(self):
         labels = self.data["labels"]
-        new_labels = {}
+        new_labels = []
         for item in labels:
-            new_labels[item] = {'language': item, 'value': labels[item]}
+            new_labels.append({'language': item, 'value': labels[item]})
         return new_labels
 
     def make_aliases(self):
@@ -28,33 +28,31 @@ class Uploader(object):
                 new_aliases.append(new_alias)
         return new_aliases
 
-    def add_labels(self, target_item, labels, log):
+    def add_labels(self, target_item, labels, aliases, log):
+        """
+        Add labels and aliases.
+
+        Normally, if the WD item already has a label in $lang
+        and the data object has another one, the new one
+        will be automatically added as an alias. Otherwise
+        (no existing label), it will be added as a label.
+        However, the data model supports an optional [aliases]
+        field as well.
+        Its contents will be added directly as an alias, without checking
+        if it could be a label first.
+        """
+        print(labels)
         for label in labels:
             target_item.get()
-            name = labels[label]['value']
-            lang = labels[label]['language']
+            label_content = label['value']
+            language = label['language']
             self.wdstuff.addLabelOrAlias(
-                lang, name, target_item, summary=self.summary)
+                language, label_content, target_item)
             if log:
                 t_id = target_item.getID()
-                message = t_id + " ADDED LABEL " + lang + " " + name
+                message = "{} ADDED LABEL {} {}".format(
+                    t_id, language, label_content)
                 log.logit(message)
-
-    def add_descriptions(self, target_item, descriptions, log):
-        for description in descriptions:
-            target_item.get()
-            name = descriptions[description]['value']
-            lang = descriptions[description]['language']
-            if (not target_item.descriptions or
-                    lang not in target_item.descriptions):
-                descs = {lang: name}
-                target_item.editDescriptions(descs)
-                pywikibot.output("Added description: " + name)
-                if log:
-                    t_id = target_item.getID()
-                    log.logit(t_id + " ADDED DESCRIPTION " + lang + " " + name)
-
-    def add_aliases(self, target_item, aliases, log):
         for alias in aliases:
             target_item.get()
             name = alias["value"]
@@ -63,10 +61,28 @@ class Uploader(object):
             if language in t_aliases and name in t_aliases[language]:
                 return
             else:
-                target_item.editAliases({language: [name]})
+                summary = "Added [{}] alias to [[{}]], {}".format(
+                    language, target_item.title(), self.summary)
+                target_item.editAliases(
+                    {language: [name]}, summary=summary)
             if log:
                 t_id = target_item.getID()
-                log.logit(t_id + " ADDED ALIAS " + language + " " + name)
+                message = "{} ADDED ALIAS {} {}".format(
+                    t_id, language, name)
+                log.logit(message)
+
+    def add_descriptions(self, target_item, descriptions, log):
+        for description in descriptions:
+            target_item.get()
+            desc_content = descriptions[description]['value']
+            lang = descriptions[description]['language']
+            self.wdstuff.add_description(
+                lang, desc_content, target_item)
+            if log:
+                t_id = target_item.getID()
+                message = "{} ADDED DESCRIPTION {} {}".format(
+                    t_id, lang, desc_content)
+                log.logit(message)
 
     def make_descriptions(self):
         descriptions = self.data["descriptions"]
@@ -196,30 +212,30 @@ class Uploader(object):
                                     quals[qual], qual)
                                 qualifier = self.wdstuff.Qualifier(qual, value)
                                 wd_value.addQualifier(qualifier)
-                        if len(refs) > 0:
-                            for ref in refs:
-                                """
-                                This only works if it's a url.
-                                If we have references of different sort,
-                                this will have to be appended.
-                                """
-                                if utils.is_valid_url(ref):
-                                    ref = self.make_url_reference(ref)
-                                else:
-                                    ref = self.make_stated_in_reference(ref)
+                        for ref in refs:
+                            """
+                            This only works if it's a url.
+                            If we have references of different sort,
+                            this will have to be appended.
+                            """
+                            if utils.is_valid_url(ref):
+                                ref = self.make_url_reference(ref)
+                            else:
+                                ref = self.make_stated_in_reference(ref)
                         if wd_value:
                             self.wdstuff.addNewClaim(
-                                prop, wd_value, wd_item, ref, summary=self.summary)
+                                prop, wd_value, wd_item, ref)
                             if log:
                                 t_id = wd_item.getID()
-                                message = t_id + " ADDED CLAIM " + prop
+                                message = "{} ADDED CLAIM {}".format(
+                                    t_id, prop)
                                 log.logit(message)
 
     def create_new_item(self, log):
-        item = self.wdstuff.make_new_item({}, summary=self.summary)
+        item = self.wdstuff.make_new_item({})
         if log:
             t_id = item.getID()
-            message = t_id + " CREATE"
+            message = "{} CREATE".format(t_id)
             log.logit(message)
         return item
 
@@ -237,8 +253,7 @@ class Uploader(object):
         descriptions = self.make_descriptions()
         aliases = self.make_aliases()
         claims = self.data["statements"]
-        self.add_labels(self.wd_item, labels, self.log)
-        self.add_aliases(self.wd_item, aliases, self.log)
+        self.add_labels(self.wd_item, labels, aliases, self.log)
         self.add_descriptions(self.wd_item, descriptions, self.log)
         self.add_claims(self.wd_item, claims, self.log)
 
@@ -264,19 +279,19 @@ class Uploader(object):
 
     def __init__(self, monument_object, log=None, tablename=None, live=False):
         self.log = False
-        self.summary = "#COH #WLM #" + tablename
+        self.summary = "#COH #WLM #{}".format(tablename)
         self.live = live
-        print("User: " + self.get_username())
-        print("Edit summary: " + self.summary)
+        print("User: {}".format(self.get_username()))
+        print("Edit summary: {}".format(self.summary))
         if self.live:
             print("LIVE MODE")
         else:
-            print("SANDBOX MODE: " + self.TEST_ITEM)
+            print("SANDBOX MODE: {}".format(self.TEST_ITEM))
         print("---------------")
         if log is not None:
             self.log = log
         self.data = monument_object.wd_item
         site = pywikibot.Site("wikidata", "wikidata")
         self.repo = site.data_repository()
-        self.wdstuff = WDS(self.repo)
+        self.wdstuff = WDS(self.repo, edit_summary=self.summary)
         self.set_wd_item()
