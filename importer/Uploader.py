@@ -36,7 +36,6 @@ class Uploader(object):
         and the data object has another one, the new one
         will be automatically added as an alias. Otherwise
         (no existing label), it will be added as a label.
-
         However, the data model supports an optional [aliases]
         field as well.
         Its contents will be added directly as an alias, without checking
