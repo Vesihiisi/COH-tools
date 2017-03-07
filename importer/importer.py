@@ -142,6 +142,18 @@ def get_wd_items_using_prop(prop):
     return items
 
 
+def get_subclasses(q_item):
+    items = []
+    query = "SELECT DISTINCT ?item WHERE {?item wdt:P279* wd:{}.}".format(
+        q_item)
+    data = lookup.make_simple_wdqs_query(query, verbose=False)
+    for x in data:
+        key = lookup.sanitize_wdqs_result(x['item'])
+        value = x['value']
+        items[value] = key
+    return items
+
+
 def get_items(connection,
               country,
               language,
