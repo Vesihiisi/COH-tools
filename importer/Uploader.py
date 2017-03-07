@@ -28,17 +28,49 @@ class Uploader(object):
                 new_aliases.append(new_alias)
         return new_aliases
 
-    def add_labels(self, target_item, labels, log):
+    def add_labels(self, target_item, labels, aliases, log):
+        """
+        Add labels and aliases.
+
+        Normally, if the WD item already has a label in $lang
+        and the data object has another one, the new one
+        will be automatically added as an alias. Otherwise
+        (no existing label), it will be added as a label.
+
+        However, the data model supports an optional [aliases]
+        field as well.
+        Its contents will be added directly as an alias, without checking
+        if it could be a label first.
+        """
         for label in labels:
             target_item.get()
-            name = labels[label]['value']
-            lang = labels[label]['language']
+            label_content = labels[label]['value']
+            language = labels[label]['language']
             self.wdstuff.addLabelOrAlias(
-                lang, name, target_item)
+                language, label_content, target_item)
             if log:
                 t_id = target_item.getID()
-                message = "{} ADDED LABEL {} {}".format(t_id, lang, name)
+                message = "{} ADDED LABEL {} {}".format(
+                    t_id, language, label_content)
                 log.logit(message)
+        if len(aliases) > 0:
+            for alias in aliases:
+                target_item.get()
+                name = alias["value"]
+                language = alias["language"]
+                t_aliases = target_item.aliases
+                if language in t_aliases and name in t_aliases[language]:
+                    return
+                else:
+                    summary = "Added [{}] alias to [[{}]], {}".format(
+                        language, target_item.title(), self.summary)
+                    target_item.editAliases(
+                        {language: [name]}, summary=summary)
+                if log:
+                    t_id = target_item.getID()
+                    message = "{} ADDED ALIAS {} {}".format(
+                        t_id, language, name)
+                    log.logit(message)
 
     def add_descriptions(self, target_item, descriptions, log):
         for description in descriptions:
@@ -51,21 +83,6 @@ class Uploader(object):
                 t_id = target_item.getID()
                 message = "{} ADDED DESCRIPTION {} {}".format(
                     t_id, lang, desc_content)
-                log.logit(message)
-
-    def add_aliases(self, target_item, aliases, log):
-        for alias in aliases:
-            target_item.get()
-            name = alias["value"]
-            language = alias["language"]
-            t_aliases = target_item.aliases
-            if language in t_aliases and name in t_aliases[language]:
-                return
-            else:
-                target_item.editAliases({language: [name]})
-            if log:
-                t_id = target_item.getID()
-                message = "{} ADDED ALIAS {} {}".format(t_id, language, name)
                 log.logit(message)
 
     def make_descriptions(self):
@@ -238,8 +255,7 @@ class Uploader(object):
         descriptions = self.make_descriptions()
         aliases = self.make_aliases()
         claims = self.data["statements"]
-        self.add_labels(self.wd_item, labels, self.log)
-        self.add_aliases(self.wd_item, aliases, self.log)
+        self.add_labels(self.wd_item, labels, aliases, self.log)
         self.add_descriptions(self.wd_item, descriptions, self.log)
         self.add_claims(self.wd_item, claims, self.log)
 
