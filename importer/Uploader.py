@@ -108,12 +108,17 @@ class Uploader(object):
             coordstuple[0], coordstuple[1], precision=DEFAULT_PREC)
 
     def make_quantity_item(self, quantity, repo):
+        """
+        Create claim for a quantity, with optional unit.
+
+        quantity: {'unit': 'Q11573', 'quantity_value': 6.85}
+        """
         value = quantity['quantity_value']
         if 'unit' in quantity:
-            unit = "http://www.wikidata.org/entity/" + quantity['unit']
+            unit = self.make_q_item(quantity['unit'])
         else:
             unit = None
-        return pywikibot.WbQuantity(value, unit, site=repo)
+        return pywikibot.WbQuantity(amount=value, unit=unit, site=repo)
 
     def make_time_item(self, quantity, repo):
         """
