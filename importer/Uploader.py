@@ -13,9 +13,9 @@ class Uploader(object):
 
     def make_labels(self):
         labels = self.data["labels"]
-        new_labels = {}
+        new_labels = []
         for item in labels:
-            new_labels[item] = {'language': item, 'value': labels[item]}
+            new_labels.append({'language': item, 'value': labels[item]})
         return new_labels
 
     def make_aliases(self):
@@ -41,10 +41,11 @@ class Uploader(object):
         Its contents will be added directly as an alias, without checking
         if it could be a label first.
         """
+        print(labels)
         for label in labels:
             target_item.get()
-            label_content = labels[label]['value']
-            language = labels[label]['language']
+            label_content = label['value']
+            language = label['language']
             self.wdstuff.addLabelOrAlias(
                 language, label_content, target_item)
             if log:
