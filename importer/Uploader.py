@@ -108,6 +108,11 @@ class Uploader(object):
             coordstuple[0], coordstuple[1], precision=DEFAULT_PREC)
 
     def make_quantity_item(self, quantity, repo):
+        """
+        Create claim for a quantity, with optional unit.
+
+        quantity: {'unit': 'Q11573', 'quantity_value': 6.85}
+        """
         value = quantity['quantity_value']
         if 'unit' in quantity:
             unit = self.make_q_item(quantity['unit'])
