@@ -434,3 +434,16 @@ def create_wlm_url(country, language, id):
     url_base = "https://tools.wmflabs.org/heritage/api/api.php?action=search&format=json&srcountry={}&srlanguage={}&srid={}"
     return url_base.format(
         country, language, quote(id))
+
+
+def get_P31(q_number):
+    results = []
+    site = pywikibot.Site("wikidata", "wikidata")
+    repo = site.data_repository()
+    item = pywikibot.ItemPage(repo, q_number)
+    item_dict = item.get()
+    clm_dict = item_dict["claims"]
+    if "P31" in clm_dict:
+        for x in clm_dict["P31"]:
+            results.append(x.getTarget().getID())
+    return results

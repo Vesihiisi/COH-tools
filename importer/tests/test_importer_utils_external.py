@@ -98,3 +98,10 @@ def test_is_whitelisted_P31_2():
     Solberg, Kungälvs kommun -> [city, tätort]
     """
     assert is_whitelisted_P31("Q2263578", ["Q515", "Q12813115"]) is False
+
+
+def test_getP31_1():
+    """
+    August Strindberg -> human
+    """
+    assert get_P31("Q7724") == ["Q5"]
