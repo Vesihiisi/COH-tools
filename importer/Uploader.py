@@ -53,24 +53,23 @@ class Uploader(object):
                 message = "{} ADDED LABEL {} {}".format(
                     t_id, language, label_content)
                 log.logit(message)
-        if len(aliases) > 0:
-            for alias in aliases:
-                target_item.get()
-                name = alias["value"]
-                language = alias["language"]
-                t_aliases = target_item.aliases
-                if language in t_aliases and name in t_aliases[language]:
-                    return
-                else:
-                    summary = "Added [{}] alias to [[{}]], {}".format(
-                        language, target_item.title(), self.summary)
-                    target_item.editAliases(
-                        {language: [name]}, summary=summary)
-                if log:
-                    t_id = target_item.getID()
-                    message = "{} ADDED ALIAS {} {}".format(
-                        t_id, language, name)
-                    log.logit(message)
+        for alias in aliases:
+            target_item.get()
+            name = alias["value"]
+            language = alias["language"]
+            t_aliases = target_item.aliases
+            if language in t_aliases and name in t_aliases[language]:
+                return
+            else:
+                summary = "Added [{}] alias to [[{}]], {}".format(
+                    language, target_item.title(), self.summary)
+                target_item.editAliases(
+                    {language: [name]}, summary=summary)
+            if log:
+                t_id = target_item.getID()
+                message = "{} ADDED ALIAS {} {}".format(
+                    t_id, language, name)
+                log.logit(message)
 
     def add_descriptions(self, target_item, descriptions, log):
         for description in descriptions:
@@ -213,17 +212,16 @@ class Uploader(object):
                                     quals[qual], qual)
                                 qualifier = self.wdstuff.Qualifier(qual, value)
                                 wd_value.addQualifier(qualifier)
-                        if len(refs) > 0:
-                            for ref in refs:
-                                """
-                                This only works if it's a url.
-                                If we have references of different sort,
-                                this will have to be appended.
-                                """
-                                if utils.is_valid_url(ref):
-                                    ref = self.make_url_reference(ref)
-                                else:
-                                    ref = self.make_stated_in_reference(ref)
+                        for ref in refs:
+                            """
+                            This only works if it's a url.
+                            If we have references of different sort,
+                            this will have to be appended.
+                            """
+                            if utils.is_valid_url(ref):
+                                ref = self.make_url_reference(ref)
+                            else:
+                                ref = self.make_stated_in_reference(ref)
                         if wd_value:
                             self.wdstuff.addNewClaim(
                                 prop, wd_value, wd_item, ref)
