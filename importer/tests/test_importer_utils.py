@@ -330,26 +330,56 @@ class TestMisc(unittest.TestCase):
                "pywikibot/page/?highlight=WbQuantity")
         self.assertTrue(utils.is_valid_url(url))
 
+
+class TestCommons(unittest.TestCase):
+
+    def test_file_is_on_commons_pass(self):
+        self.assertTrue(utils.file_is_on_commons("Loojangu värvid 2.jpg"))
+
+    def test_file_is_on_commons_fail(self):
+        self.assertFalse(utils.file_is_on_commons("adgffhgadftgfhsfgdg"))
+
+    def test_commonscat_exists_pass(self):
+        self.assertTrue(
+            utils.commonscat_exists("Libraries in Germany by city"))
+
+    def test_commonscat_exists_fail(self):
+        self.assertFalse(utils.commonscat_exists("adgafgtaffrsdf"))
+
+
+class TestWikidata(unittest.TestCase):
+
+    def test_is_whitelisted_P31_pass(self):
+        """
+        Solberg, Kungälvs kommun -> småort
+        """
+        self.assertTrue(utils.is_whitelisted_P31("Q2263578", ["Q14839548"]))
+
+    def test_is_whitelisted_P31_fail(self):
+        """
+        Solberg, Kungälvs kommun -> [city, tätort]
+        """
+        self.assertFalse(
+            utils.is_whitelisted_P31("Q2263578", ["Q515", "Q12813115"]))
+
+
 class TestSocken(unittest.TestCase):
 
     def test_socken_to_q_1(self):
         self.assertEqual(utils.socken_to_q("Holm", "Medelpad"), "Q10525331")
 
-
     def test_socken_to_q_2(self):
         self.assertEqual(utils.socken_to_q("Holm", "Uppland"), "Q10525332")
-
 
     def test_socken_to_q_3(self):
         self.assertEqual(utils.socken_to_q("Långtora", "Uppland"), "Q10572689")
 
     def test_socken_to_q_4(self):
-        self.assertEqual(utils.socken_to_q("Linde", "Västmanland"), "Q10562482")
-
+        self.assertEqual(
+            utils.socken_to_q("Linde", "Västmanland"), "Q10562482")
 
     def test_socken_to_q_5(self):
         self.assertEqual(utils.socken_to_q("Löts", "Öland"), "Q10572936")
-
 
     def test_socken_to_q_6(self):
         self.assertEqual(utils.socken_to_q("Egby", "Öland"), "Q10480210")
@@ -358,7 +388,8 @@ class TestSocken(unittest.TestCase):
         self.assertEqual(utils.socken_to_q("Backa", "Bohuslän"), "Q10424141")
 
     def test_socken_to_q_8(self):
-        self.assertEqual(utils.socken_to_q("Solberga", "Bohuslän"),  "Q2788890")
+        self.assertEqual(
+            utils.socken_to_q("Solberga", "Bohuslän"),  "Q2788890")
 
 if __name__ == '__main__':
     unittest.main()
