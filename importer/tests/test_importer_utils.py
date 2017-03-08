@@ -382,10 +382,10 @@ class TestWikipedia(unittest.TestCase):
         self.assertEqual(utils.q_from_first_wikilink("sv", text), "Q206564")
 
     def test_wp_page_exists_pass(self):
-        self.assertTrue(utils.wp_page_exists("sv"), "Långtora socken")
+        self.assertTrue(utils.wp_page_exists("sv", "Långtora socken"))
 
-    def test_wp_page_exists(false):
-        self.assertFalse(utils.wp_page_exists("sv"), "datfyasqwewrq")
+    def test_wp_page_exists(self):
+        self.assertFalse(utils.wp_page_exists("sv", "datfyasqwewrq"))
 
 
 class TestSocken(unittest.TestCase):
