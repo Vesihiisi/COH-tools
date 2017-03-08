@@ -156,7 +156,7 @@ class TestDatetimeMethods(unittest.TestCase):
         self.assertEqual(utils.date_to_dict(text, template), output)
 
 
-class TestWikiCode(unittest.TestCase):
+class TestWikitext(unittest.TestCase):
 
     def test_remove_markup_simple(self):
         text = "[[Tegera Arena]], huvudentrén"
