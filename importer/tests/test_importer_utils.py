@@ -104,6 +104,15 @@ class TestStringMethods(unittest.TestCase):
     def test_remove_marks_from_ends_colon(self):
         self.assertEqual(utils.remove_marks_from_ends("foo:"), "foo")
 
+    def test_string_to_float_1(self):
+        self.assertEqual(utils.string_to_float("32.11"), 32.11)
+
+    def test_string_to_float_2(self):
+        self.assertEqual(utils.string_to_float("32,11"), 32.11)
+
+    def test_string_to_float_3(self):
+        self.assertEqual(utils.string_to_float("32,11."), 32.11)
+
 
 class TestDatetimeMethods(unittest.TestCase):
 
@@ -121,6 +130,30 @@ class TestDatetimeMethods(unittest.TestCase):
         self.assertIsNone(utils.parse_year("1999-foo"))
         self.assertIsNone(utils.parse_year("1999-1899"))
         self.assertIsNone(utils.parse_year("1999-2000-2003"))
+
+    def test_date_to_dict_1(self):
+        text = "1999-12-09"
+        template = "%Y-%m-%d"
+        output = {"year": 1999, "month": 12, "day": 9}
+        self.assertEqual(utils.date_to_dict(text, template), output)
+
+    def test_date_to_dict_2(self):
+        text = "09-12-1999"
+        template = "%d-%m-%Y"
+        output = {"year": 1999, "month": 12, "day": 9}
+        self.assertEqual(utils.date_to_dict(text, template), output)
+
+    def test_date_to_dict_3(self):
+        text = "12-1999"
+        template = "%m-%Y"
+        output = {"year": 1999, "month": 12}
+        self.assertEqual(utils.date_to_dict(text, template), output)
+
+    def test_date_to_dict_4(self):
+        text = "1999"
+        template = "%Y"
+        output = {"year": 1999}
+        self.assertEqual(utils.date_to_dict(text, template), output)
 
 
 class TestWikiCode(unittest.TestCase):
@@ -193,6 +226,109 @@ class TestLegitHouseNumber(unittest.TestCase):
     def test_is_legit_house_number_6(self):
         text = "43B-43E"
         self.assertTrue(utils.is_legit_house_number(text))
+
+
+class TestGetAddress(unittest.TestCase):
+
+    def test_get_street_address_1(self):
+        text = "Bruksvägen 23"
+        lang = "sv"
+        output = "Bruksvägen 23"
+        self.assertEqual(utils.get_street_address(text, lang), output)
+
+    def test_get_street_address_2(self):
+        text = "Vilhelm Mobergs gata 4"
+        lang = "sv"
+        output = "Vilhelm Mobergs gata 4"
+        self.assertEqual(utils.get_street_address(text, lang), output)
+
+    def test_get_street_address_3(self):
+        text = "Spånhult"
+        lang = "sv"
+        self.assertIsNone(utils.get_street_address(text, lang))
+
+    def test_get_street_address_4(self):
+        text = "Virserums station, Södra Järnvägsgatan 20"
+        lang = "sv"
+        output = "Södra Järnvägsgatan 20"
+        self.assertEqual(utils.get_street_address(text, lang), output)
+
+    def test_get_street_address_5(self):
+        text = "Kyrkogatan 34, Dackestop"
+        lang = "sv"
+        output = "Kyrkogatan 34"
+        self.assertEqual(utils.get_street_address(text, lang), output)
+
+    def test_get_street_address_6(self):
+        text = "Odlaregatan, Svalöv (Gamla 9:an)."
+        lang = "sv"
+        self.assertIsNone(utils.get_street_address(text, lang))
+
+    def test_get_street_address_7(self):
+        text = "Bröderna Nilssons väg 14, Onslunda, 273 95 Tomelilla"
+        lang = "sv"
+        output = "Bröderna Nilssons väg 14"
+        self.assertEqual(utils.get_street_address(text, lang), output)
+
+    def test_get_street_address_8(self):
+        text = "Norra Finnskoga Hembygdsgård , Höljes, Solrosvägen 2,"
+        lang = "sv"
+        output = "Solrosvägen 2"
+        self.assertEqual(utils.get_street_address(text, lang), output)
+
+    def test_get_street_address_9(self):
+        text = ("Svaneholms slott ligger i Skurup i Skåne, "
+                "fyra mil öster om Malmö, vid väg E65.")
+        lang = "sv"
+        self.assertIsNone(utils.get_street_address(text, lang))
+
+
+class TestShipDimensions(unittest.TestCase):
+
+    def test_parse_ship_dimensions_1(self):
+        text = "Längd: 18,55 Bredd: 4,06 Djup: Brt: 37,78"
+        output = {"length": 18.55, "width": 4.06, "grt": 37.78}
+        self.assertEqual(utils.parse_ship_dimensions(text), output)
+
+    def test_parse_ship_dimensions_2(self):
+        text = "Längd: 17.5 Bredd: 5.8 Djup: 2.50 Brt: 47"
+        output = {"length": 17.5, "width": 5.8, "draft": 2.50, "grt": 47}
+        self.assertEqual(utils.parse_ship_dimensions(text), output)
+
+    def test_parse_ship_dimensions_3(self):
+        text = "Längd:  Bredd:  Djup:  Brt:"
+        output = {}
+        self.assertEqual(utils.parse_ship_dimensions(text), output)
+
+    def test_parse_ship_dimensions_4(self):
+        text = "Längd: 14,76. Bredd: 4,83 Djup: Brt: 22"
+        output = {"length": 14.76, "width": 4.83, "grt": 22}
+        self.assertEqual(utils.parse_ship_dimensions(text), output)
+
+
+class TestCoordinates(unittest.TestCase):
+
+    def test_tuple_is_coords_pass(self):
+        self.assertTrue(utils.tuple_is_coords((-56.16, -14.86667)))
+        self.assertTrue(utils.tuple_is_coords((56.16566667, 14.86541667)))
+
+    def test_tuple_is_coords_fail(self):
+        self.assertFalse(utils.tuple_is_coords((56.16566667)))
+        self.assertFalse(utils.tuple_is_coords((56.16566667, 14.86541667, 14)))
+        self.assertFalse(utils.tuple_is_coords(("56.16566667", 14.86541667)))
+
+
+class TestMisc(unittest.TestCase):
+
+    def test_remove_empty_dicts_from_list(self):
+        dic_list = [{"foo": 1}, {}, {}, {"bar": "cat"}]
+        output = [{"foo": 1}, {"bar": "cat"}]
+        self.assertEqual(utils.remove_empty_dicts_from_list(dic_list), output)
+
+    def test_is_valid_url(self):
+        url = ("http://pywikibot.readthedocs.io/en/latest/_modules/"
+               "pywikibot/page/?highlight=WbQuantity")
+        self.assertTrue(utils.is_valid_url(url))
 
 
 if __name__ == '__main__':
