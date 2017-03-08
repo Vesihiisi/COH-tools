@@ -172,15 +172,14 @@ def get_items(connection,
     else:
         existing = None
     query = make_query(specific_table_name)
-    if specific_table_name in SPECIFIC_TABLES.keys():
-        class_to_use = SPECIFIC_TABLES[specific_table_name]["class"]
+    if specific_table_name in SPECIFIC_TABLES:
+        specific_table = SPECIFIC_TABLES[specific_table_name]
+        class_to_use = specific_table["class"]
         data_files = load_data_files(
-            SPECIFIC_TABLES[specific_table_name]["data_files"])
-        if SPECIFIC_TABLES[specific_table_name]["subclass_downloads"]:
-            for dataset_title in SPECIFIC_TABLES[specific_table_name]["subclass_downloads"]:
-                dataset = get_subclasses(SPECIFIC_TABLES[specific_table_name][
-                                         "subclass_downloads"][dataset_title])
-                data_files[dataset_title] = dataset
+            specific_table["data_files"])
+        if specific_table.get("subclass_downloads"):
+            for subclass_title, subclass_item in specific_table.get("subclass_downloads").items():
+                data_files[subclass_title] = get_subclasses(subclass_item)
     else:
         print("No class defined for " + specific_table_name)
         return
