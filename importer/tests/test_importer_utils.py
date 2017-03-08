@@ -363,6 +363,27 @@ class TestWikidata(unittest.TestCase):
             utils.is_whitelisted_P31("Q2263578", ["Q515", "Q12813115"]))
 
 
+class TestWpToWd(unittest.TestCase):
+
+    def test_q_from_wikipedia_succeed(self):
+        self.assertEqual(
+            utils.q_from_wikipedia("sv", "Norrala socken"), "Q10602691")
+
+    def test_q_from_wikipedia_none(self):
+        self.assertIsNone(utils.q_from_wikipedia("sv", "Användare:Vesihiisi"))
+        self.assertIsNone(
+            utils.q_from_wikipedia("sv", "This page does not exist"))
+
+    def test_q_from_first_wikilink(self):
+        text = ("'''Norrala socken'''"
+                " ligger i [[Hälsingland]], ingår sedan 1971 i "
+                "[[Söderhamns kommun]] och motsvarar från 2016 "
+                "[[Norrala distrikt]].")
+        self.assertEqual(utils.q_from_first_wikilink("sv", text), "Q206564")
+
+
+
+
 class TestSocken(unittest.TestCase):
 
     def test_socken_to_q_1(self):
