@@ -11,6 +11,16 @@ class DkBygningDa(Monument):
                 self.add_statement("located_adm", adm_location)
 
     def set_location(self):
+        """
+        Set location based on 'by' column.
+
+        If there's one wikilinked item, confirm that
+        the corresponding WD item is of a type that's
+        a subclass of 'human settlement', using query results
+        downloaded by importer.
+        If not wikilinked, check if there's a dawp article
+        with the same name and do the same check.
+        """
         place_item = False
         if self.has_non_empty_attribute("by"):
             place = self.by
