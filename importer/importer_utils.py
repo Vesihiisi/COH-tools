@@ -413,8 +413,7 @@ def get_random_list_sample(some_list, amount):
 def is_whitelisted_P31(q_number, allowed_values):
     result = False
     site = pywikibot.Site("wikidata", "wikidata")
-    repo = site.data_repository()
-    item = pywikibot.ItemPage(repo, q_number)
+    item = pywikibot.ItemPage(site, q_number)
     item_dict = item.get()
     clm_dict = item_dict["claims"]
     if "P31" in clm_dict:
@@ -439,8 +438,7 @@ def create_wlm_url(country, language, id):
 def get_P31(q_number):
     results = []
     site = pywikibot.Site("wikidata", "wikidata")
-    repo = site.data_repository()
-    item = pywikibot.ItemPage(repo, q_number)
+    item = pywikibot.ItemPage(site, q_number)
     item_dict = item.get()
     clm_dict = item_dict["claims"]
     if "P31" in clm_dict:
