@@ -291,6 +291,9 @@ class Monument(object):
         self.mapping = mapping.file_content
 
     def print_datafiles_titles(self):
+        """
+        Print out the keys in self.data_files
+        """
         for title in self.data_files:
             print(title)
 
