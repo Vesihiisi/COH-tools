@@ -99,15 +99,16 @@ class SeShipSv(Monument):
         A few of them are fake
         (since identifiers are needed in the WLM database).
         These have the shape wiki[0-9][0-9].
+        Fake ID's are added as P2186 (WLM identifier).
         All values: https://phabricator.wikimedia.org/P5010
 
         Use WLM database as source.
         """
         if self.has_non_empty_attribute("signal"):
+            ref = self.wlm_source
             if self.signal.startswith("wiki") or self.signal.startswith("Tidigare"):
-                return
+                self.add_statement("wlm_id", self.signal, refs=[ref])
             else:
-                ref = self.wlm_source
                 self.add_statement("call_sign", self.signal, refs=[ref])
 
     def set_monuments_all_id(self):
