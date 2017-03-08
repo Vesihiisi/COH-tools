@@ -382,8 +382,6 @@ class TestWpToWd(unittest.TestCase):
         self.assertEqual(utils.q_from_first_wikilink("sv", text), "Q206564")
 
 
-
-
 class TestSocken(unittest.TestCase):
 
     def test_socken_to_q_1(self):
@@ -411,6 +409,24 @@ class TestSocken(unittest.TestCase):
     def test_socken_to_q_8(self):
         self.assertEqual(
             utils.socken_to_q("Solberga", "Bohuslän"),  "Q2788890")
+
+
+class TestBbr(unittest.TestCase):
+
+    def test_get_http_code_good(self):
+        url = "http://kulturarvsdata.se/raa/bbr/21300000003265"
+        self.assertEqual(utils.get_http_code(url), 200)
+
+    def test_get_http_code_bad(self):
+        url = "http://kulturarvsdata.se/raa/bbra/21300000003265"
+        self.assertEqual(utils.get_http_code(url), 404)
+
+    def test_get_bbr_link(self):
+        self.assertEqual(
+            utils.get_bbr_link("21320000019150"), "raa/bbra/21320000019150")
+        self.assertEqual(
+            utils.get_bbr_link("21300000003265"), "raa/bbr/21300000003265")
+
 
 if __name__ == '__main__':
     unittest.main()
