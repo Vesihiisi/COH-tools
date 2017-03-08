@@ -1,348 +1,438 @@
-from importer_utils import *
+import string
+import unittest
+import importer_utils as utils
 
 
-def test_remove_empty_dicts_from_list_1():
-    dic_list = [{"foo": 1}, {}, {}, {"bar": "cat"}]
-    assert remove_empty_dicts_from_list(
-        dic_list) == [{"foo": 1}, {"bar": "cat"}]
+class TestWLMStuff(unittest.TestCase):
 
+    def test_get_specific_table_name(self):
+        dataset = "se-arbetsl"
+        lang = "sv"
+        output = "monuments_se-arbetsl_(sv)"
+        self.assertEqual(utils.get_specific_table_name(dataset, lang), output)
 
-def test_contains_digit_1():
-    assert contains_digit("fna3fs") == True
+    def test_create_wlm_url(self):
+        dataset = "se-ship"
+        lang = "sv"
+        id_no = "SFC 9698"
+        output = ("https://tools.wmflabs.org/heritage/api/api.php"
+                  "?action=search&format=json&srcountry=se-ship"
+                  "&srlanguage=sv&srid=SFC%209698")
+        self.assertEqual(utils.create_wlm_url(dataset, lang, id_no), output)
 
 
-def test_contains_digit_2():
-    assert contains_digit("fnas") == False
+class TestStringMethods(unittest.TestCase):
 
+    def test_contains_digit(self):
+        self.assertTrue(utils.contains_digit("fna3fs"))
+        self.assertFalse(utils.contains_digit("foo"))
 
-def test_remove_markup_1():
-    assert remove_markup(
-        "[[Tegera Arena]], huvudentrén") == "Tegera Arena, huvudentrén"
+    def test_get_number_from_string_succeed(self):
+        text = "12 byggnader"
+        self.assertEqual(utils.get_number_from_string(text), 12)
 
+    def test_get_number_from_string_none(self):
+        text = "just text!"
+        self.assertIsNone(utils.get_number_from_string(text))
 
-def test_remove_markup_2():
-    assert remove_markup(
-        "[[Tegera Arena]],<br>huvudentrén") == "Tegera Arena, huvudentrén"
+    def test_remove_multiple_spaces(self):
+        text = "text  with      a lot   of spaces"
+        output = "text with a lot of spaces"
+        self.assertEqual(utils.remove_multiple_spaces(text), output)
 
+    def test_get_last_char(self):
+        self.assertEqual(utils.get_last_char("foobar"), "r")
 
-def test_remove_markup_3():
-    assert remove_markup(
-        "[[Tegera Arena]],<br/> huvudentrén") == "Tegera Arena, huvudentrén"
+    def test_is_vowel_simple(self):
+        self.assertTrue(utils.is_vowel("a"))
 
+    def test_is_vowel_accented(self):
+        self.assertTrue(utils.is_vowel("é"))
 
-def test_remove_multiple_spaces_1():
-    assert remove_multiple_spaces(
-        "text  with      a lot   of spaces") == "text with a lot of spaces"
+    def test_is_vowel_diacritic(self):
+        self.assertTrue(utils.is_vowel("Ø"))
 
+    def test_is_vowel_consonant(self):
+        self.assertFalse(utils.is_vowel("g"))
 
-def test_is_legit_house_number_1():
-    assert is_legit_house_number("32") == True
+    def test_last_char_is_vowel_pass(self):
+        self.assertTrue(utils.last_char_is_vowel("foo"))
 
+    def test_last_char_is_vowel_fail(self):
+        self.assertFalse(utils.last_char_is_vowel("bar"))
 
-def test_is_legit_house_number_2():
-    assert is_legit_house_number("2") == True
+    def test_get_rid_of_brackets_succeed(self):
+        text = "Kulla Gunnarstorps mölla (Kulla Gunnarstorp 1:21)"
+        output = "Kulla Gunnarstorps mölla"
+        self.assertEqual(utils.get_rid_of_brackets(text), output)
 
+    def test_get_rid_of_brackets_none(self):
+        text = "Kulla Gunnarstorps mölla"
+        output = "Kulla Gunnarstorps mölla"
+        self.assertEqual(utils.get_rid_of_brackets(text), output)
 
-def test_is_legit_house_number_3():
-    assert is_legit_house_number("3b") == True
+    def test_get_text_inside_brackets_succeed(self):
+        text = "Kulla Gunnarstorps mölla (Kulla Gunnarstorp 1:21)"
+        output = "Kulla Gunnarstorp 1:21"
+        self.assertEqual(utils.get_text_inside_brackets(text), output)
 
+    def test_get_text_inside_brackets_none(self):
+        text = "just text no brackets"
+        output = "just text no brackets"
+        self.assertEqual(utils.get_text_inside_brackets(text), output)
 
-def test_is_legit_house_number_4():
-    assert is_legit_house_number("3 B") == True
+    def test_comma_to_period(self):
+        self.assertEqual(utils.comma_to_period("42,22"), "42.22")
 
+    def test_remove_characters_selected(self):
+        text = "foo-.fdaf.f2,3"
+        chars = ".,"
+        output = "foo-fdaff23"
+        self.assertEqual(utils.remove_characters(text, chars), output)
 
-def test_is_legit_house_number_5():
-    assert is_legit_house_number("3-5") == True
+    def test_remove_characters_punctuation(self):
+        text = ('string with "punctuation" inside of it! '
+                'Does this work? I hope so.')
+        chars = string.punctuation
+        output = ("string with punctuation inside of it "
+                  "Does this work I hope so")
+        self.assertEqual(utils.remove_characters(text, chars), output)
 
+    def test_remove_marks_from_ends_period(self):
+        self.assertEqual(utils.remove_marks_from_ends(".43.22."), "43.22")
 
-def test_is_legit_house_number_6():
-    assert is_legit_house_number("43B-43E") == True
+    def test_remove_marks_from_ends_colon(self):
+        self.assertEqual(utils.remove_marks_from_ends("foo:"), "foo")
 
+    def test_string_to_float_1(self):
+        self.assertEqual(utils.string_to_float("32.11"), 32.11)
 
-def test_get_street_address_1():
-    assert get_street_address("Bruksvägen 23", "sv") == "Bruksvägen 23"
+    def test_string_to_float_2(self):
+        self.assertEqual(utils.string_to_float("32,11"), 32.11)
 
+    def test_string_to_float_3(self):
+        self.assertEqual(utils.string_to_float("32,11."), 32.11)
 
-def test_get_street_address_2():
-    assert get_street_address(
-        "Vilhelm Mobergs gata 4", "sv") == "Vilhelm Mobergs gata 4"
 
+class TestDatetimeMethods(unittest.TestCase):
 
-def test_get_street_address_3():
-    assert get_street_address("Spånhult", "sv") == None
+    def test_parse_year_full(self):
+        self.assertEqual(utils.parse_year("1888"), 1888)
 
+    def test_parse_year_full_range(self):
+        self.assertEqual(utils.parse_year("1991-2008"), (1991, 2008))
 
-def test_get_street_address_4():
-    assert get_street_address(
-        ("Virserums station, Södra "
-            "Järnvägsgatan 20"), "sv") == "Södra Järnvägsgatan 20"
+    def test_parse_year_short_range(self):
+        self.assertEqual(utils.parse_year("1987-88"), (1987, 1988))
 
+    def test_parse_year_invalid(self):
+        self.assertIsNone(utils.parse_year("43432424"))
+        self.assertIsNone(utils.parse_year("1999-foo"))
+        self.assertIsNone(utils.parse_year("1999-1899"))
+        self.assertIsNone(utils.parse_year("1999-2000-2003"))
 
-def test_get_street_address_5():
-    assert get_street_address(
-        "Kyrkogatan 34, Dackestop", "sv") == "Kyrkogatan 34"
+    def test_date_to_dict_1(self):
+        text = "1999-12-09"
+        template = "%Y-%m-%d"
+        output = {"year": 1999, "month": 12, "day": 9}
+        self.assertEqual(utils.date_to_dict(text, template), output)
 
+    def test_date_to_dict_2(self):
+        text = "09-12-1999"
+        template = "%d-%m-%Y"
+        output = {"year": 1999, "month": 12, "day": 9}
+        self.assertEqual(utils.date_to_dict(text, template), output)
 
-def test_get_street_address_6():
-    assert get_street_address(
-        "Odlaregatan, Svalöv (Gamla 9:an).", "sv") == None
+    def test_date_to_dict_3(self):
+        text = "12-1999"
+        template = "%m-%Y"
+        output = {"year": 1999, "month": 12}
+        self.assertEqual(utils.date_to_dict(text, template), output)
 
+    def test_date_to_dict_4(self):
+        text = "1999"
+        template = "%Y"
+        output = {"year": 1999}
+        self.assertEqual(utils.date_to_dict(text, template), output)
 
-def test_get_street_address_7():
-    assert get_street_address(
-        ("Bröderna Nilssons väg 14, Onslunda, "
-            "273 95 Tomelilla"), "sv") == "Bröderna Nilssons väg 14"
 
+class TestWikitext(unittest.TestCase):
 
-def test_get_street_address_8():
-    assert get_street_address(
-        ("Norra Finnskoga Hembygdsgård , "
-            "Höljes, Solrosvägen 2,"), "sv") == "Solrosvägen 2"
+    def test_remove_markup_simple(self):
+        text = "[[Tegera Arena]], huvudentrén"
+        output = "Tegera Arena, huvudentrén"
+        self.assertEqual(utils.remove_markup(text), output)
 
+    def test_remove_markup_linebreak_1(self):
+        text = "[[Tegera Arena]],<br>huvudentrén"
+        output = "Tegera Arena, huvudentrén"
+        self.assertEqual(utils.remove_markup(text), output)
 
-def test_get_street_address_9():
-    assert get_street_address(
-        ("Svaneholms slott ligger i Skurup i Skåne, "
-            "fyra mil öster om Malmö, vid väg E65."), "sv") == None
+    def test_remove_markup_linebreak_2(self):
+        text = "[[Tegera Arena]],<br/> huvudentrén"
+        output = "Tegera Arena, huvudentrén"
+        self.assertEqual(utils.remove_markup(text), output)
 
+    def test_count_wikilinks_none(self):
+        text = "just text"
+        self.assertEqual(utils.count_wikilinks(text), 0)
 
-def test_get_specific_table_name_1():
-    assert get_specific_table_name(
-        "se-arbetsl", "sv") == "monuments_se-arbetsl_(sv)"
+    def test_count_wikilinks_one(self):
+        text = "[[Movikens masugn|Moviken]]"
+        self.assertEqual(utils.count_wikilinks(text), 1)
 
+    def test_count_wikilinks_two(self):
+        text = "[[Tranås]] and also [[Svanesund]]"
+        self.assertEqual(utils.count_wikilinks(text), 2)
 
-def test_parse_year_1():
-    assert parse_year("1987") == 1987
+    def test_string_is_q_item_pass(self):
+        self.assertTrue(utils.string_is_q_item("Q1641992"))
 
+    def test_string_is_q_item_fail(self):
+        self.assertFalse(utils.string_is_q_item("some string"))
 
-def test_parse_year_2():
-    assert parse_year("1987-88") == (1987, 1988)
+    def test_string_is_q_item_invalid(self):
+        self.assertFalse(utils.string_is_q_item("Q34234vsf"))
 
+    def test_wd_template_p(self):
+        self.assertEqual(utils.wd_template("P", "17"), "{{P|17}}")
 
-def test_parse_year_3():
-    assert parse_year("24235423") == None
+    def test_wd_template_q(self):
+        self.assertEqual(utils.wd_template("Q", "Q34"), "{{Q|Q34}}")
 
 
-def test_parse_year_4():
-    assert parse_year("1999-2008") == (1999, 2008)
+class TestLegitHouseNumber(unittest.TestCase):
 
+    def test_is_legit_house_number_1(self):
+        text = "32"
+        self.assertTrue(utils.is_legit_house_number(text))
 
-def test_parse_year_5():
-    assert parse_year("1999-foo") == None
+    def test_is_legit_house_number_2(self):
+        text = "2"
+        self.assertTrue(utils.is_legit_house_number(text))
 
+    def test_is_legit_house_number_3(self):
+        text = "3b"
+        self.assertTrue(utils.is_legit_house_number(text))
 
-def test_parse_year_6():
-    assert parse_year("1999-1899") == None
+    def test_is_legit_house_number_4(self):
+        text = "2 B"
+        self.assertTrue(utils.is_legit_house_number(text))
 
+    def test_is_legit_house_number_5(self):
+        text = "3-5"
+        self.assertTrue(utils.is_legit_house_number(text))
 
-def test_parse_year_6():
-    assert parse_year("1999-2000-2003") == None
+    def test_is_legit_house_number_6(self):
+        text = "43B-43E"
+        self.assertTrue(utils.is_legit_house_number(text))
 
 
-def test_remove_characters_1():
-    assert remove_characters("foo-.fdaf.f2,3", ".,") == "foo-fdaff23"
+class TestGetAddress(unittest.TestCase):
 
+    def test_get_street_address_1(self):
+        text = "Bruksvägen 23"
+        lang = "sv"
+        output = "Bruksvägen 23"
+        self.assertEqual(utils.get_street_address(text, lang), output)
 
-def test_remove_characters_2():
-    assert remove_characters(('string with "punctuation" inside of it! '
-                              'Does this work? I hope so.'),
-                             string.punctuation) == ("string with punctuation "
-                                                     "inside of it Does this "
-                                                     "work I hope so")
+    def test_get_street_address_2(self):
+        text = "Vilhelm Mobergs gata 4"
+        lang = "sv"
+        output = "Vilhelm Mobergs gata 4"
+        self.assertEqual(utils.get_street_address(text, lang), output)
 
+    def test_get_street_address_3(self):
+        text = "Spånhult"
+        lang = "sv"
+        self.assertIsNone(utils.get_street_address(text, lang))
 
-def test_parse_ship_dimensions_1():
-    assert parse_ship_dimensions("Längd: 18,55 Bredd: 4,06 Djup: Brt: 37,78") == {"length": 18.55,
-                                                                                  "width": 4.06,
-                                                                                  "grt": 37.78}
+    def test_get_street_address_4(self):
+        text = "Virserums station, Södra Järnvägsgatan 20"
+        lang = "sv"
+        output = "Södra Järnvägsgatan 20"
+        self.assertEqual(utils.get_street_address(text, lang), output)
 
+    def test_get_street_address_5(self):
+        text = "Kyrkogatan 34, Dackestop"
+        lang = "sv"
+        output = "Kyrkogatan 34"
+        self.assertEqual(utils.get_street_address(text, lang), output)
 
-def test_parse_ship_dimensions_2():
-    assert parse_ship_dimensions("Längd: 17.5 Bredd: 5.8 Djup: 2.50 Brt: 47") == {"length": 17.5,
-                                                                                  "width": 5.8,
-                                                                                  "draft": 2.50,
-                                                                                  "grt": 47}
+    def test_get_street_address_6(self):
+        text = "Odlaregatan, Svalöv (Gamla 9:an)."
+        lang = "sv"
+        self.assertIsNone(utils.get_street_address(text, lang))
 
+    def test_get_street_address_7(self):
+        text = "Bröderna Nilssons väg 14, Onslunda, 273 95 Tomelilla"
+        lang = "sv"
+        output = "Bröderna Nilssons väg 14"
+        self.assertEqual(utils.get_street_address(text, lang), output)
 
-def test_parse_ship_dimensions_3():
-    assert parse_ship_dimensions("Längd:  Bredd:  Djup:  Brt:") == {}
+    def test_get_street_address_8(self):
+        text = "Norra Finnskoga Hembygdsgård , Höljes, Solrosvägen 2,"
+        lang = "sv"
+        output = "Solrosvägen 2"
+        self.assertEqual(utils.get_street_address(text, lang), output)
 
+    def test_get_street_address_9(self):
+        text = ("Svaneholms slott ligger i Skurup i Skåne, "
+                "fyra mil öster om Malmö, vid väg E65.")
+        lang = "sv"
+        self.assertIsNone(utils.get_street_address(text, lang))
 
-def test_parse_ship_dimensions_4():
-    assert parse_ship_dimensions("Längd: 14,76. Bredd: 4,83 Djup: Brt: 22") == {"length": 14.76,
-                                                                                "width": 4.83,
-                                                                                "grt": 22}
 
+class TestShipDimensions(unittest.TestCase):
 
-def test_comma_to_period_1():
-    assert comma_to_period("43,12") == "43.12"
+    def test_parse_ship_dimensions_1(self):
+        text = "Längd: 18,55 Bredd: 4,06 Djup: Brt: 37,78"
+        output = {"length": 18.55, "width": 4.06, "grt": 37.78}
+        self.assertEqual(utils.parse_ship_dimensions(text), output)
 
+    def test_parse_ship_dimensions_2(self):
+        text = "Längd: 17.5 Bredd: 5.8 Djup: 2.50 Brt: 47"
+        output = {"length": 17.5, "width": 5.8, "draft": 2.50, "grt": 47}
+        self.assertEqual(utils.parse_ship_dimensions(text), output)
 
-def test_remove_marks_from_ends_1():
-    assert remove_marks_from_ends(".43.22.") == "43.22"
+    def test_parse_ship_dimensions_3(self):
+        text = "Längd:  Bredd:  Djup:  Brt:"
+        output = {}
+        self.assertEqual(utils.parse_ship_dimensions(text), output)
 
+    def test_parse_ship_dimensions_4(self):
+        text = "Längd: 14,76. Bredd: 4,83 Djup: Brt: 22"
+        output = {"length": 14.76, "width": 4.83, "grt": 22}
+        self.assertEqual(utils.parse_ship_dimensions(text), output)
 
-def test_remove_marks_from_ends_2():
-    assert remove_marks_from_ends("length:") == "length"
 
+class TestCoordinates(unittest.TestCase):
 
-def test_string_to_float_1():
-    assert string_to_float("32.12") == 32.12
+    def test_tuple_is_coords_pass(self):
+        self.assertTrue(utils.tuple_is_coords((-56.16, -14.86667)))
+        self.assertTrue(utils.tuple_is_coords((56.16566667, 14.86541667)))
 
+    def test_tuple_is_coords_fail(self):
+        self.assertFalse(utils.tuple_is_coords((56.16566667)))
+        self.assertFalse(utils.tuple_is_coords((56.16566667, 14.86541667, 14)))
+        self.assertFalse(utils.tuple_is_coords(("56.16566667", 14.86541667)))
 
-def test_string_to_float_2():
-    assert string_to_float("32,12") == 32.12
 
+class TestMisc(unittest.TestCase):
 
-def test_string_to_float_3():
-    assert string_to_float("32,12.") == 32.12
+    def test_remove_empty_dicts_from_list(self):
+        dic_list = [{"foo": 1}, {}, {}, {"bar": "cat"}]
+        output = [{"foo": 1}, {"bar": "cat"}]
+        self.assertEqual(utils.remove_empty_dicts_from_list(dic_list), output)
 
+    def test_is_valid_url(self):
+        url = ("http://pywikibot.readthedocs.io/en/latest/_modules/"
+               "pywikibot/page/?highlight=WbQuantity")
+        self.assertTrue(utils.is_valid_url(url))
 
-def test_string_to_float_3():
-    assert string_to_float(",32,12.") == 32.12
 
+class TestCommons(unittest.TestCase):
 
-def test_count_wikilinks_1():
-    assert count_wikilinks("just text") == 0
+    def test_file_is_on_commons_pass(self):
+        self.assertTrue(utils.file_is_on_commons("Loojangu värvid 2.jpg"))
 
+    def test_file_is_on_commons_fail(self):
+        self.assertFalse(utils.file_is_on_commons("adgffhgadftgfhsfgdg"))
 
-def test_count_wikilinks_2():
-    assert count_wikilinks("[[Movikens masugn|Moviken]]") == 1
+    def test_commonscat_exists_pass(self):
+        self.assertTrue(
+            utils.commonscat_exists("Libraries in Germany by city"))
 
+    def test_commonscat_exists_fail(self):
+        self.assertFalse(utils.commonscat_exists("adgafgtaffrsdf"))
 
-def test_count_wikilinks_3():
-    assert count_wikilinks("[[Tranås]] and also [[Svanesund]]") == 2
 
+class TestWikidata(unittest.TestCase):
 
-def test_get_rid_of_brackets_1():
-    assert get_rid_of_brackets(
-        "Kulla Gunnarstorps mölla (Kulla Gunnarstorp 1:21)") == "Kulla Gunnarstorps mölla"
+    def test_is_whitelisted_P31_pass(self):
+        """
+        Solberg, Kungälvs kommun -> småort
+        """
+        self.assertTrue(utils.is_whitelisted_P31("Q2263578", ["Q14839548"]))
 
+    def test_is_whitelisted_P31_fail(self):
+        """
+        Solberg, Kungälvs kommun -> [city, tätort]
+        """
+        self.assertFalse(
+            utils.is_whitelisted_P31("Q2263578", ["Q515", "Q12813115"]))
 
-def test_get_rid_of_brackets_2():
-    assert get_rid_of_brackets(
-        "Kulla Gunnarstorps mölla") == "Kulla Gunnarstorps mölla"
 
+class TestWikipedia(unittest.TestCase):
 
-def test_get_text_inside_brackets_1():
-    assert get_text_inside_brackets(
-        "Kulla Gunnarstorps mölla (Kulla Gunnarstorp 1:21)") == "Kulla Gunnarstorp 1:21"
+    def test_q_from_wikipedia_succeed(self):
+        self.assertEqual(
+            utils.q_from_wikipedia("sv", "Norrala socken"), "Q10602691")
 
+    def test_q_from_wikipedia_none(self):
+        self.assertIsNone(utils.q_from_wikipedia("sv", "Användare:Vesihiisi"))
+        self.assertIsNone(
+            utils.q_from_wikipedia("sv", "This page does not exist"))
 
-def test_get_text_inside_brackets_2():
-    assert get_text_inside_brackets(
-        "just text no brackets") == "just text no brackets"
+    def test_q_from_first_wikilink(self):
+        text = ("'''Norrala socken'''"
+                " ligger i [[Hälsingland]], ingår sedan 1971 i "
+                "[[Söderhamns kommun]] och motsvarar från 2016 "
+                "[[Norrala distrikt]].")
+        self.assertEqual(utils.q_from_first_wikilink("sv", text), "Q206564")
 
+    def test_wp_page_exists_pass(self):
+        self.assertTrue(utils.wp_page_exists("sv", "Långtora socken"))
 
-def test_get_number_from_string_1():
-    assert get_number_from_string("12 byggnader") == 12
+    def test_wp_page_exists(self):
+        self.assertFalse(utils.wp_page_exists("sv", "datfyasqwewrq"))
 
 
-def test_get_number_from_string_2():
-    assert get_number_from_string("just text!") == None
+class TestSocken(unittest.TestCase):
 
+    def test_socken_to_q_1(self):
+        self.assertEqual(utils.socken_to_q("Holm", "Medelpad"), "Q10525331")
 
-def test_string_is_q_item_1():
-    assert string_is_q_item("Q1641992") == True
+    def test_socken_to_q_2(self):
+        self.assertEqual(utils.socken_to_q("Holm", "Uppland"), "Q10525332")
 
+    def test_socken_to_q_3(self):
+        self.assertEqual(utils.socken_to_q("Långtora", "Uppland"), "Q10572689")
 
-def test_string_is_q_item_2():
-    assert string_is_q_item("some string") == False
+    def test_socken_to_q_4(self):
+        self.assertEqual(
+            utils.socken_to_q("Linde", "Västmanland"), "Q10562482")
 
+    def test_socken_to_q_5(self):
+        self.assertEqual(utils.socken_to_q("Löts", "Öland"), "Q10572936")
 
-def test_string_is_q_item_3():
-    assert string_is_q_item("Q34234vsf") == False
+    def test_socken_to_q_6(self):
+        self.assertEqual(utils.socken_to_q("Egby", "Öland"), "Q10480210")
 
+    def test_socken_to_q_7(self):
+        self.assertEqual(utils.socken_to_q("Backa", "Bohuslän"), "Q10424141")
 
-def test_tuple_is_coords_1():
-    assert tuple_is_coords((56.16566667, 14.86541667)) == True
+    def test_socken_to_q_8(self):
+        self.assertEqual(
+            utils.socken_to_q("Solberga", "Bohuslän"),  "Q2788890")
 
 
-def test_tuple_is_coords_2():
-    assert tuple_is_coords((56.16566667)) == False
+class TestBbr(unittest.TestCase):
 
+    def test_get_http_code_good(self):
+        url = "http://kulturarvsdata.se/raa/bbr/21300000003265"
+        self.assertEqual(utils.get_http_code(url), 200)
 
-def test_tuple_is_coords_3():
-    assert tuple_is_coords((56.16566667, 14.86541667, 14)) == False
+    def test_get_http_code_bad(self):
+        url = "http://kulturarvsdata.se/raa/bbra/21300000003265"
+        self.assertEqual(utils.get_http_code(url), 404)
 
+    def test_get_bbr_link(self):
+        self.assertEqual(
+            utils.get_bbr_link("21320000019150"), "raa/bbra/21320000019150")
+        self.assertEqual(
+            utils.get_bbr_link("21300000003265"), "raa/bbr/21300000003265")
 
-def test_tuple_is_coords_4():
-    assert tuple_is_coords(("56.16566667", 14.86541667)) == False
 
-
-def test_tuple_is_coords_5():
-    assert tuple_is_coords((-56.16, -14.86667)) == True
-
-
-def test_is_valid_url_1():
-    assert is_valid_url(
-        "http://pywikibot.readthedocs.io/en/latest/_modules/pywikibot/page/?highlight=WbQuantity") == True
-
-
-def test_get_last_char_1():
-    assert get_last_char("foobar") == "r"
-
-
-def test_is_vowel_1():
-    assert is_vowel("a") == True
-
-
-def test_is_vowel_2():
-    assert is_vowel("Ø") == True
-
-
-def test_is_vowel_3():
-    assert is_vowel("f") == False
-
-
-def test_is_vowel_4():
-    assert is_vowel("é") == True
-
-
-def test_last_char_is_vowel_1():
-    assert last_char_is_vowel("Stockholm") == False
-
-
-def test_last_char_is_vowel_2():
-    assert last_char_is_vowel("Långtora") == True
-
-
-def test_wp_page_exists_1():
-    assert wp_page_exists("sv", "Långtora socken") == True
-
-
-def test_wp_page_exists_2():
-    assert wp_page_exists("sv", "datfyasqwewrq") == False
-
-
-def test_date_to_dict_1():
-    assert date_to_dict(
-        "1999-12-09", "%Y-%m-%d") == {"year": 1999, "month": 12, "day": 9}
-
-
-def test_date_to_dict_2():
-    assert date_to_dict(
-        "09-12-1999", "%d-%m-%Y") == {"year": 1999, "month": 12, "day": 9}
-
-
-def test_date_to_dict_3():
-    assert date_to_dict(
-        "12-1999", "%m-%Y") == {"year": 1999, "month": 12}
-
-
-def test_date_to_dict_4():
-    assert date_to_dict(
-        "1999", "%Y") == {"year": 1999}
-
-
-def test_wd_template_1():
-    assert wd_template("P", "17") == "{{P|17}}"
-
-
-def test_wd_template_2():
-    assert wd_template("Q", "Q34") == "{{Q|Q34}}"
-
-
-def test_create_wlm_url_1():
-    assert create_wlm_url(
-        "se-ship", "sv", "SFC 9698") == "https://tools.wmflabs.org/heritage/api/api.php?action=search&format=json&srcountry=se-ship&srlanguage=sv&srid=SFC%209698"
+if __name__ == '__main__':
+    unittest.main()
