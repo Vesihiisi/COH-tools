@@ -21,20 +21,17 @@ class DkBygningDa(Monument):
         If not wikilinked, check if there's a dawp article
         with the same name and do the same check.
         """
-        place_item = False
+        place_item = None
         if self.has_non_empty_attribute("by"):
             place = self.by
             if utils.count_wikilinks(place) == 1:
-                linked_page_title = utils.get_wikilinks(place)[0].title
-                if utils.wp_page_exists("da", linked_page_title):
-                    place_item = utils.q_from_first_wikilink("da", place)
-            else:
-                if utils.wp_page_exists("da", place):
-                    place_item = utils.q_from_wikipedia("da", place)
+                place = utils.get_wikilinks(place)[0].title
+            if utils.wp_page_exists("da", place):
+                place_item = utils.q_from_wikipedia("da", place)
         if place_item:
             place_item_ids = utils.get_P31(place_item)
-            for is_instance in place_item_ids:
-                if is_instance in self.data_files["settlement"]:
+            for p31_value in place_item_ids:
+                if p31_value in self.data_files["settlement"]:
                     self.add_statement("location", place_item)
                     return  # there can be more than one P31, but after first positive we can leave
 
