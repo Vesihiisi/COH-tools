@@ -330,6 +330,35 @@ class TestMisc(unittest.TestCase):
                "pywikibot/page/?highlight=WbQuantity")
         self.assertTrue(utils.is_valid_url(url))
 
+class TestSocken(unittest.TestCase):
+
+    def test_socken_to_q_1(self):
+        self.assertEqual(utils.socken_to_q("Holm", "Medelpad"), "Q10525331")
+
+
+    def test_socken_to_q_2(self):
+        self.assertEqual(utils.socken_to_q("Holm", "Uppland"), "Q10525332")
+
+
+    def test_socken_to_q_3(self):
+        self.assertEqual(utils.socken_to_q("Långtora", "Uppland"), "Q10572689")
+
+    def test_socken_to_q_4(self):
+        self.assertEqual(utils.socken_to_q("Linde", "Västmanland"), "Q10562482")
+
+
+    def test_socken_to_q_5(self):
+        self.assertEqual(utils.socken_to_q("Löts", "Öland"), "Q10572936")
+
+
+    def test_socken_to_q_6(self):
+        self.assertEqual(utils.socken_to_q("Egby", "Öland"), "Q10480210")
+
+    def test_socken_to_q_7(self):
+        self.assertEqual(utils.socken_to_q("Backa", "Bohuslän"), "Q10424141")
+
+    def test_socken_to_q_8(self):
+        self.assertEqual(utils.socken_to_q("Solberga", "Bohuslän"),  "Q2788890")
 
 if __name__ == '__main__':
     unittest.main()
