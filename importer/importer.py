@@ -144,6 +144,12 @@ def get_wd_items_using_prop(prop):
 
 
 def get_subclasses(q_item):
+    """
+    Get Q-ids of all the items that are subclasses of the specified one.
+
+    The query fetches both items where P279 = q_item
+    and indirect ones (subclass of subclass...).
+    """
     results = []
     query = "SELECT DISTINCT ?item WHERE {?item wdt:P279* wd:" + q_item + ".}"
     data = lookup.make_simple_wdqs_query(query, verbose=False)
