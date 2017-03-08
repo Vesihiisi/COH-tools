@@ -439,9 +439,7 @@ def get_P31(q_number):
     results = []
     site = pywikibot.Site("wikidata", "wikidata")
     item = pywikibot.ItemPage(site, q_number)
-    item_dict = item.get()
-    clm_dict = item_dict["claims"]
-    if "P31" in clm_dict:
-        for x in clm_dict["P31"]:
+    if item.exists() and item.claims.get("P31"):
+        for x in item.claims.get("P31"):
             results.append(x.getTarget().getID())
     return results
