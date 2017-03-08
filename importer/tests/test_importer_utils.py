@@ -363,7 +363,7 @@ class TestWikidata(unittest.TestCase):
             utils.is_whitelisted_P31("Q2263578", ["Q515", "Q12813115"]))
 
 
-class TestWpToWd(unittest.TestCase):
+class TestWikipedia(unittest.TestCase):
 
     def test_q_from_wikipedia_succeed(self):
         self.assertEqual(
@@ -380,6 +380,12 @@ class TestWpToWd(unittest.TestCase):
                 "[[Söderhamns kommun]] och motsvarar från 2016 "
                 "[[Norrala distrikt]].")
         self.assertEqual(utils.q_from_first_wikilink("sv", text), "Q206564")
+
+    def test_wp_page_exists_pass(self):
+        self.assertTrue(utils.wp_page_exists("sv"), "Långtora socken")
+
+    def test_wp_page_exists(false):
+        self.assertFalse(utils.wp_page_exists("sv"), "datfyasqwewrq")
 
 
 class TestSocken(unittest.TestCase):
