@@ -349,6 +349,24 @@ class TestCommons(unittest.TestCase):
 
 class TestWikidata(unittest.TestCase):
 
+    def test_get_P31_one(self):
+        """
+        August Strindberg -> human
+        """
+        self.assertEqual(utils.get_P31("Q7724"), ["Q5"])
+
+    def test_get_P31_two(self):
+        """
+        cat -> [taxon, model organism]
+        """
+        self.assertEqual(utils.get_P31("Q146"), ["Q16521", "Q213907"])
+
+    def test_get_P31_none(self):
+        """
+        model organism -> [] (it's only a subclass)
+        """
+        self.assertEqual(utils.get_P31("Q213907"), [])
+
     def test_is_whitelisted_P31_pass(self):
         """
         Solberg, Kungälvs kommun -> småort
