@@ -415,8 +415,8 @@ def get_P31(q_number):
     site = pywikibot.Site("wikidata", "wikidata")
     item = pywikibot.ItemPage(site, q_number)
     if item.exists() and item.claims.get("P31"):
-        for x in item.claims.get("P31"):
-            results.append(x.getTarget().getID())
+        for claim in item.claims.get("P31"):
+            results.append(claim.getTarget().getID())
     return results
 
 
