@@ -422,7 +422,6 @@ def get_P31(q_number):
 
 def is_whitelisted_P31(q_number, allowed_values):
     result = False
-    site = pywikibot.Site("wikidata", "wikidata")
     all_P31s = get_P31(q_number)
     if all_P31s:
         for P31 in all_P31s:
