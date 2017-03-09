@@ -2,7 +2,6 @@ from os import path
 import json
 import importer_utils as utils
 
-
 MAPPING_DIR = "mappings"
 
 
@@ -160,9 +159,10 @@ class Monument(object):
         self.add_label(language, utils.remove_markup(content))
 
     def set_heritage(self):
-        heritage = self.mapping["heritage"]
-        ref = self.wlm_source
-        self.add_statement("heritage_status", heritage["item"], refs=[ref])
+        if "heritage" in self.mapping:
+            heritage = self.mapping["heritage"]
+            ref = self.wlm_source
+            self.add_statement("heritage_status", heritage["item"], refs=[ref])
 
     def set_coords(self, coord_keywords_tuple):
         lat = coord_keywords_tuple[0]
@@ -203,6 +203,9 @@ class Monument(object):
                 ref = self.wlm_source
                 self.add_statement(
                     "located_street", processed_address, refs=[ref])
+            else:
+                self.add_to_report(
+                    address_keyword, getattr(self, address_keyword))
 
     def has_non_empty_attribute(self, attr_name):
         if hasattr(self, attr_name):
@@ -232,21 +235,23 @@ class Monument(object):
     def create_stated_in_source(self, source_item, pub_date):
         prop_stated = self.props["stated_in"]
         prop_date = self.props["publication_date"]
+        pub_date = utils.date_to_dict(pub_date, "%Y-%m-%d")  # 2014-12-23
         return {"source": {"prop": prop_stated, "value": source_item},
                 "published": {"prop": prop_date, "value": pub_date}}
 
     def create_wlm_source(self, monuments_all_id):
-        url_base = "https://tools.wmflabs.org/heritage/api/api.php?action=search&format=json&srcountry={}&srlanguage={}&srid={}"
-        url_base = url_base.format(
-            self.mapping["table_name"], self.mapping["language"], monuments_all_id)
+        wlm_url = utils.create_wlm_url(self.mapping["table_name"], self.mapping[
+                                       "language"], monuments_all_id)
+
         source_item = self.sources["monuments_db"]
-        timestamp = self.wd_item["changed"]
+        timestamp = utils.datetime_object_to_dict(self.wd_item["changed"])
         prop_stated = self.props["stated_in"]
         prop_date = self.props["publication_date"]
         prop_reference_url = self.props["reference_url"]
         return {"source": {"prop": prop_stated, "value": source_item},
                 "published": {"prop": prop_date, "value": timestamp},
-                "reference_url": {"prop": prop_reference_url, "value": url_base}}
+                "reference_url": {"prop": prop_reference_url,
+                                  "value": wlm_url}}
 
     def exists_with_prop(self, mapping):
         if self.existing is None:
@@ -285,6 +290,11 @@ class Monument(object):
         self.wd_item["wd-item"] = None
         self.mapping = mapping.file_content
 
+    def print_datafiles_titles(self):
+        """Print out the keys in self.data_files."""
+        for title in self.data_files:
+            print(title)
+
     def __init__(self, db_row_dict, mapping, data_files, existing):
         self.props = utils.load_json(
             path.join(MAPPING_DIR, "props_general.json"))
@@ -298,6 +308,42 @@ class Monument(object):
         self.construct_wd_item(mapping)
         self.data_files = data_files
         self.existing = existing
+        self.problem_report = {}
 
     def get_fields(self):
         return sorted(list(self.__dict__.keys()))
+
+    def add_to_report(self, key_name, raw_data):
+        """
+        Add data to problem report json.
+
+        Check if item has an associated Q-number,
+        and if that's the case and it's missing
+        in the report,
+        add it to the report automatically.
+        Add direct URL to item in WLM API.
+        """
+        self.problem_report[key_name] = raw_data
+        if "wd-item" not in self.problem_report:
+            if self.wd_item["wd-item"] is not None:
+                self.problem_report["Q"] = self.wd_item["wd-item"]
+            else:
+                self.problem_report["Q"] = ""
+        if "url" not in self.problem_report:
+            self.problem_report["url"] = self.get_wlm_url(
+                self.monuments_all_id)
+
+    def print_report(self):
+        """
+        Print the problem report on screen.
+        """
+        print(
+            json.dumps(self.problem_report,
+                       sort_keys=True,
+                       indent=4,
+                       ensure_ascii=False,
+                       default=utils.datetime_convert)
+        )
+
+    def get_report(self):
+        return self.problem_report

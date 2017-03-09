@@ -76,7 +76,8 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                    "monuments_za_(en)": {"class": ZaEn, "data_files": {}},
                    "monuments_cm_(fr)": {"class": CmFr, "data_files": {}},
                    "monuments_dk-bygninger_(da)": {"class": DkBygningDa,
-                                                   "data_files": {"settlements": "denmark_settlements.json"}},
+                                                   "data_files": {},
+                                                   "subclass_downloads": {"settlement": "Q486972"}},
                    "monuments_pl_(pl)": {"class": PlPl,
                                          "data_files": {"settlements": "poland_settlements.json"}},
                    "monuments_dk-fortidsminder_(da)": {"class": DkFortidsDa,
@@ -142,11 +143,26 @@ def get_wd_items_using_prop(prop):
     return items
 
 
+def get_subclasses(q_item):
+    """
+    Get Q-ids of all the items that are subclasses of the specified one.
+
+    The query fetches both items where P279 = q_item
+    and indirect ones (subclass of subclass...).
+    """
+    results = []
+    query = "SELECT DISTINCT ?item WHERE {?item wdt:P279* wd:" + q_item + ".}"
+    data = lookup.make_simple_wdqs_query(query, verbose=False)
+    for x in data:
+        results.append(lookup.sanitize_wdqs_result(x['item']))
+    return results
+
+
 def get_items(connection,
               country,
               language,
+              upload,
               short=False,
-              upload=False,
               table=False):
     if upload:
         logger = Logger()
@@ -162,10 +178,14 @@ def get_items(connection,
     else:
         existing = None
     query = make_query(specific_table_name)
-    if specific_table_name in SPECIFIC_TABLES.keys():
-        class_to_use = SPECIFIC_TABLES[specific_table_name]["class"]
+    if specific_table_name in SPECIFIC_TABLES:
+        specific_table = SPECIFIC_TABLES[specific_table_name]
+        class_to_use = specific_table["class"]
         data_files = load_data_files(
-            SPECIFIC_TABLES[specific_table_name]["data_files"])
+            specific_table["data_files"])
+        if specific_table.get("subclass_downloads"):
+            for subclass_title, subclass_item in specific_table.get("subclass_downloads").items():
+                data_files[subclass_title] = get_subclasses(subclass_item)
     else:
         print("No class defined for " + specific_table_name)
         return
@@ -175,17 +195,32 @@ def get_items(connection,
         database_rows = utils.get_random_list_sample(database_rows, short)
         print("USING RANDOM SAMPLE OF " + str(short))
     filename = specific_table_name + "_" + utils.get_current_timestamp()
+    problem_reports = []
     for row in database_rows:
         monument = class_to_use(row, mapping, data_files, existing)
+        problem_report = monument.get_report()
         if table:
             raw_data = "<pre>" + str(row) + "</pre>\n"
             monument_table = monument.print_wd_to_table()
             utils.append_line_to_file(raw_data, filename)
             utils.append_line_to_file(monument_table, filename)
         if upload:
-            uploader = Uploader(monument, log=logger, tablename=country)
+            live = True if upload == "live" else False
+            uploader = Uploader(
+                monument, log=logger, tablename=country, live=live)
+            if "Q" in problem_report and problem_report["Q"] == "":
+                """
+                If the Monument didn't have an associated Qid,
+                this means the Uploader has now created a new Item
+                for it -- insert that id into the problem report.
+                """
+                problem_report["Q"] = uploader.wd_item_q
             uploader.upload()
             print("--------------------------------------------------")
+        problem_reports.append(problem_report)
+    non_empty_reports = utils.remove_empty_dicts_from_list(problem_reports)
+    utils.json_to_file(
+        "report_" + specific_table_name + ".json", non_empty_reports)
     if table:
         print("SAVED TEST RESULTS TO " + filename)
 
@@ -197,7 +232,7 @@ def main(arguments):
     short = arguments.short
     upload = arguments.upload
     table = arguments.table
-    get_items(connection, country, language, short, upload, table)
+    get_items(connection, country, language, upload, short, table)
 
 
 if __name__ == "__main__":
@@ -208,12 +243,13 @@ if __name__ == "__main__":
     parser.add_argument("--db", default="wlm")
     parser.add_argument("--language", default="sv")
     parser.add_argument("--country", default="se-ship")
+    parser.add_argument("--upload", action='store')
     parser.add_argument("--short",
                         const=DEFAULT_SHORT,
                         nargs='?',
                         type=int,
                         action='store',)
     parser.add_argument("--table", action='store_true')
-    parser.add_argument("--upload", action='store_true')
     args = parser.parse_args()
+    print(args)
     main(args)

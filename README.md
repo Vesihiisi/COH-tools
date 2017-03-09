@@ -19,14 +19,14 @@ This the part that actually extracts the data from the WLM database, processes i
 **importer.py** – the main script. Pass your MySQL credentials to it:
 
 ```
-python3 importer.py --host localhost --user foo --password bar --db wlm --country se-fornmin --language sv --short --upload
+python3 importer.py --host localhost --user foo --password bar --db wlm --country se-fornmin --language sv --short --upload live
 ```
 
 This will process the `monuments_se-fornmin_(sv)` table.
 
 `short` will only process the first 10 rows in the table.
 
-`upload` to actually upload the items to Wikidata. You can leave it out if you want to debug the Monument object processing.
+`upload` to upload the created claims to Wikidata. You can leave it out if you want to debug the Monument object processing. **By default** this will use the [Wikidata Sandbox](https://www.wikidata.org/wiki/Q4115189). Add `live` to work on actual live Wikidata items, assuming you're 100% positive you want to do that.
 
 Each row in the database is used to create a Monument object using data from the SPECIFIC_TABLES dictionary, which maps database tables to classes and, optionally, extra data files that can be passed to the constructor.
 

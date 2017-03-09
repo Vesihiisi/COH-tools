@@ -7,6 +7,26 @@ import datetime
 import requests
 import pymysql
 import random
+from urllib.parse import quote
+
+
+def remove_empty_dicts_from_list(list_of_dicts):
+    return [i for i in list_of_dicts if i]
+
+
+def save_to_file(filename, content):
+    with open(filename, 'w') as f:
+        f.write(content)
+        print("SAVED FILE " + filename)
+
+
+def json_to_file(filename, json_content):
+    with open(filename, 'w') as f:
+        json.dump(json_content, f, sort_keys=True,
+                  indent=4,
+                  ensure_ascii=False,
+                  default=datetime_convert)
+        print("SAVED FILE " + filename)
 
 
 def get_specific_table_name(countryname, languagename):
@@ -390,17 +410,22 @@ def get_random_list_sample(some_list, amount):
     return random.sample(some_list, amount)
 
 
+def get_P31(q_number):
+    results = []
+    site = pywikibot.Site("wikidata", "wikidata")
+    item = pywikibot.ItemPage(site, q_number)
+    if item.exists() and item.claims.get("P31"):
+        for claim in item.claims.get("P31"):
+            results.append(claim.getTarget().getID())
+    return results
+
+
 def is_whitelisted_P31(q_number, allowed_values):
     result = False
-    site = pywikibot.Site("wikidata", "wikidata")
-    repo = site.data_repository()
-    item = pywikibot.ItemPage(repo, q_number)
-    item_dict = item.get()
-    clm_dict = item_dict["claims"]
-    if "P31" in clm_dict:
-        for x in clm_dict["P31"]:
-            clm_trgt = x.getTarget()
-            if clm_trgt.id in allowed_values:
+    all_P31s = get_P31(q_number)
+    if all_P31s:
+        for P31 in all_P31s:
+            if P31 in allowed_values:
                 result = True
     else:
         # A great many items do not have any P31 at all,
@@ -410,61 +435,7 @@ def is_whitelisted_P31(q_number, allowed_values):
     return result
 
 
-def get_ids_of_parent_class(q_item):
-    parents = []
-    site = pywikibot.Site("wikidata", "wikidata")
-    repo = site.data_repository()
-    wd_item_subclass = pywikibot.ItemPage(repo, q_item)
-    item_dict = wd_item_subclass.get()
-    clm_dict = item_dict["claims"]
-    if "P279" in clm_dict:
-        for x in clm_dict["P279"]:
-            clm_trgt = x.getTarget()
-            parents.append(clm_trgt.getID())
-    return parents
-
-
-def is_subclass_of(q_child, q_parent, path=[]):
-    """
-    Check if WD item is a subclass of another.
-
-    This is recursive - works for indirect subclasses.
-
-    Args:
-        q_child: Qid of item that is a subclass
-        q_parent: Qid of item that we're checking if q_child
-        is a subclass of
-        path: array of previous q_child, protects against infinite loops
-        (circular subclass definition)
-        BECAUSE OF REASONS, when invoking this function with an empty
-        array, it has to be passed explicitly instead of relying
-        on the default value.
-        Otherwise it fails: http://stackoverflow.com/q/13437063
-    """
-    if q_child == q_parent:
-        return True
-    else:
-        parents = get_ids_of_parent_class(q_child)
-        for parent_class in parents:
-            if parent_class not in path:
-                path.append(parent_class)
-                return is_subclass_of(parent_class, q_parent, path)
-    return False
-
-
-def is_human_settlement(q_item):
-    result = False
-    settlement_q = "Q486972"
-    site = pywikibot.Site("wikidata", "wikidata")
-    repo = site.data_repository()
-    wd_item = pywikibot.ItemPage(repo, q_item)
-    item_dict = wd_item.get()
-    clm_dict = item_dict["claims"]
-    if "P31" in clm_dict:
-        for x in clm_dict["P31"]:
-            clm_trgt = x.getTarget()
-            id_to_test = clm_trgt.getID()
-            subclass_test = is_subclass_of(id_to_test, settlement_q, [])
-            if subclass_test is True:
-                result = True
-    return result
+def create_wlm_url(country, language, id):
+    url_base = "https://tools.wmflabs.org/heritage/api/api.php?action=search&format=json&srcountry={}&srlanguage={}&srid={}"
+    return url_base.format(
+        country, language, quote(id))

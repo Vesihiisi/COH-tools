@@ -1,7 +1,7 @@
 {
     "arbetsam": "P3426",
     "architect": "P84",
-    "bbr": "P1260",
+    "cultural_heritage_sweden": "P1260",
     "call_sign": "P2317",
     "commonscat": "P373",
     "coordinates": "P625",
@@ -34,5 +34,6 @@
     "romanian_monument_id": "P1770",
     "start_time": "P580",
     "stated_in": "P248",
-    "width": "P2049"
+    "width": "P2049",
+    "wlm_id": "P2186"
 }

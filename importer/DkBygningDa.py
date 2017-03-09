@@ -12,35 +12,28 @@ class DkBygningDa(Monument):
 
     def set_location(self):
         """
-        Use self.municipality because IT'S PLACE NOT MUNICIPALITY
-        (that's adm2)
-        Look it up in list of Danish placenames.
-        Some are wikilinked, but we can't rely on it
-        because of items like [[København K]], which redirect
-        to an article about postal codes...
+        Set location based on 'by' column.
+
+        If there's one wikilinked item, confirm that
+        the corresponding WD item is of a type that's
+        a subclass of 'human settlement', using query results
+        downloaded by importer.
+        If not wikilinked, check if there's a dawp article
+        with the same name and do the same check.
         """
-        place_item = False
-        placename_dict = self.data_files["settlements"]
+        place_item = None
         if self.has_non_empty_attribute("by"):
             place = self.by
             if utils.count_wikilinks(place) == 1:
-                """
-                If exactly one wikilink,
-                get the target item, then verify its P31....
-                """
-                placename_item = utils.q_from_first_wikilink(place)
-                if utils.is_human_settlement(placename_item) is False:
-                    return
-            else:
-                try:
-                    placename = [x["item"] for x in placename_dict if x[
-                        "da"].lower() == place.lower()][0]
-                    print(placename)
-                except IndexError:
-                    print("Could not parse placename: {}.".format(place))
-                    return
+                place = utils.get_wikilinks(place)[0].title
+            if utils.wp_page_exists("da", place):
+                place_item = utils.q_from_wikipedia("da", place)
         if place_item:
-            self.add_statement("location", place_item)
+            place_item_ids = utils.get_P31(place_item)
+            for p31_value in place_item_ids:
+                if p31_value in self.data_files["settlement"]:
+                    self.add_statement("location", place_item)
+                    return  # there can be more than one P31, but after first positive we can leave
 
     def set_sagsnr(self):
         """
@@ -66,24 +59,8 @@ class DkBygningDa(Monument):
                 self.add_statement(
                     "inception", {"time_value": {"year": inception}})
 
-    def set_monuments_all_id(self):
-        """
-        Map which column name in specific table
-        is used as ID in monuments_all.
-        """
-        self.monuments_all_id = str(self.kommunenr) + "-" + \
-            str(self.ejendomsnr) + "-" + str(self.bygningsnr)
-
     def __init__(self, db_row_dict, mapping, data_files, existing):
         Monument.__init__(self, db_row_dict, mapping, data_files, existing)
-        self.set_monuments_all_id()
-        self.set_changed()
-        self.wlm_source = self.create_wlm_source(self.monuments_all_id)
-        self.set_country()
-        self.set_is()
-        self.set_heritage()
-        self.set_source()
-        self.set_registrant_url()
         self.update_labels()
         self.exists("da")
         self.set_commonscat()
@@ -95,4 +72,4 @@ class DkBygningDa(Monument):
         self.set_address()
         self.set_inception()
         self.exists_with_prop(mapping)
-        # self.print_wd()
+        self.print_wd()
