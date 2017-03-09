@@ -410,17 +410,22 @@ def get_random_list_sample(some_list, amount):
     return random.sample(some_list, amount)
 
 
+def get_P31(q_number):
+    results = []
+    site = pywikibot.Site("wikidata", "wikidata")
+    item = pywikibot.ItemPage(site, q_number)
+    if item.exists() and item.claims.get("P31"):
+        for claim in item.claims.get("P31"):
+            results.append(claim.getTarget().getID())
+    return results
+
+
 def is_whitelisted_P31(q_number, allowed_values):
     result = False
-    site = pywikibot.Site("wikidata", "wikidata")
-    repo = site.data_repository()
-    item = pywikibot.ItemPage(repo, q_number)
-    item_dict = item.get()
-    clm_dict = item_dict["claims"]
-    if "P31" in clm_dict:
-        for x in clm_dict["P31"]:
-            clm_trgt = x.getTarget()
-            if clm_trgt.id in allowed_values:
+    all_P31s = get_P31(q_number)
+    if all_P31s:
+        for P31 in all_P31s:
+            if P31 in allowed_values:
                 result = True
     else:
         # A great many items do not have any P31 at all,

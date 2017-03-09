@@ -290,6 +290,11 @@ class Monument(object):
         self.wd_item["wd-item"] = None
         self.mapping = mapping.file_content
 
+    def print_datafiles_titles(self):
+        """Print out the keys in self.data_files."""
+        for title in self.data_files:
+            print(title)
+
     def __init__(self, db_row_dict, mapping, data_files, existing):
         self.props = utils.load_json(
             path.join(MAPPING_DIR, "props_general.json"))

@@ -12,19 +12,28 @@ class DkBygningDa(Monument):
 
     def set_location(self):
         """
-        Use self.municipality because IT'S PLACE NOT MUNICIPALITY
-        (that's adm2)
+        Set location based on 'by' column.
+
+        If there's one wikilinked item, confirm that
+        the corresponding WD item is of a type that's
+        a subclass of 'human settlement', using query results
+        downloaded by importer.
+        If not wikilinked, check if there's a dawp article
+        with the same name and do the same check.
         """
-        place_item = False
+        place_item = None
         if self.has_non_empty_attribute("by"):
             place = self.by
             if utils.count_wikilinks(place) == 1:
-                place_item = utils.q_from_first_wikilink("da", place)
-            else:
-                if utils.wp_page_exists("da", place):
-                    place_item = utils.q_from_wikipedia("da", place)
+                place = utils.get_wikilinks(place)[0].title
+            if utils.wp_page_exists("da", place):
+                place_item = utils.q_from_wikipedia("da", place)
         if place_item:
-            self.add_statement("location", place_item)
+            place_item_ids = utils.get_P31(place_item)
+            for p31_value in place_item_ids:
+                if p31_value in self.data_files["settlement"]:
+                    self.add_statement("location", place_item)
+                    return  # there can be more than one P31, but after first positive we can leave
 
     def set_sagsnr(self):
         """
@@ -63,4 +72,4 @@ class DkBygningDa(Monument):
         self.set_address()
         self.set_inception()
         self.exists_with_prop(mapping)
-        # self.print_wd()
+        self.print_wd()
