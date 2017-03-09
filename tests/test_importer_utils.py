@@ -1,6 +1,6 @@
 import string
 import unittest
-import importer_utils as utils
+import importer.importer_utils as utils
 
 
 class TestWLMStuff(unittest.TestCase):
