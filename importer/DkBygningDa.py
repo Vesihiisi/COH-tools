@@ -38,13 +38,20 @@ class DkBygningDa(Monument):
                     return
 
     def set_sagsnr(self):
-        """ Danish listed buildings case ID (P2783) """
+        """Danish listed buildings case ID (P2783)."""
         self.add_statement("listed_building_dk", str(self.sagsnr))
 
     def update_labels(self):
         self.add_label("da", utils.remove_markup(self.sagsnavn))
 
     def set_address(self):
+        """
+        Set address of object.
+
+        self.addresse is always streetname + number.
+        self.postnr is always zipcode
+        self.by is always placename.
+        """
         if self.has_non_empty_attribute("adresse"):
             address = self.adresse + " " + self.postnr + " " + self.by
             self.add_statement("located_street", address)
@@ -57,7 +64,7 @@ class DkBygningDa(Monument):
                     "inception", {"time_value": {"year": inception}})
 
     def set_monuments_all_id(self):
-        """ Map monuments_all ID to fields in this table. """
+        """Map monuments_all ID to fields in this table."""
         self.monuments_all_id = "{!s}-{!s}-{!s}".format(
             self.kommunenr, self.ejendomsnr, self.bygningsnr)
 
