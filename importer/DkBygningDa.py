@@ -33,12 +33,12 @@ class DkBygningDa(Monument):
             for p31_value in place_item_ids:
                 if p31_value in self.data_files["settlement"]:
                     self.add_statement("location", place_item)
-                    return  # there can be more than one P31, but after first positive we can leave
+                    # there can be more than one P31, but after first positive
+                    # we can leave
+                    return
 
     def set_sagsnr(self):
-        """
-        Danish listed buildings case ID (P2783)
-        """
+        """Danish listed buildings case ID (P2783)."""
         self.add_statement("listed_building_dk", str(self.sagsnr))
 
     def update_labels(self):
@@ -46,7 +46,11 @@ class DkBygningDa(Monument):
 
     def set_address(self):
         """
-        Really nice addresses in this table.
+        Set address of object.
+
+        self.addresse is always streetname + number.
+        self.postnr is always zipcode
+        self.by is always placename.
         """
         if self.has_non_empty_attribute("adresse"):
             address = self.adresse + " " + self.postnr + " " + self.by
@@ -59,8 +63,14 @@ class DkBygningDa(Monument):
                 self.add_statement(
                     "inception", {"time_value": {"year": inception}})
 
+    def set_monuments_all_id(self):
+        """Map monuments_all ID to fields in this table."""
+        self.monuments_all_id = "{!s}-{!s}-{!s}".format(
+            self.kommunenr, self.ejendomsnr, self.bygningsnr)
+
     def __init__(self, db_row_dict, mapping, data_files, existing):
         Monument.__init__(self, db_row_dict, mapping, data_files, existing)
+        self.set_monuments_all_id()
         self.update_labels()
         self.exists("da")
         self.set_commonscat()
