@@ -93,7 +93,7 @@ class Uploader(object):
         return new_descriptions
 
     def make_image_item(self, filename):
-        commonssite = pywikibot.Site("commons", "commons")
+        commonssite = utils.create_site_instance("commons", "commons")
         imagelink = pywikibot.Link(
             filename, source=commonssite, defaultNamespace=6)
         return pywikibot.FilePage(imagelink)
@@ -282,7 +282,7 @@ class Uploader(object):
             self.wd_item = self.wdstuff.QtoItemPage(self.TEST_ITEM)
             self.wd_item_q = self.TEST_ITEM
 
-    def __init__(self, monument_object, log=None, tablename=None, live=False):
+    def __init__(self, monument_object, log=None, tablename=None, live=False, site=None):
         self.log = False
         self.summary = "#COH #WLM #{}".format(tablename)
         self.live = live
@@ -296,7 +296,7 @@ class Uploader(object):
         if log is not None:
             self.log = log
         self.data = monument_object.wd_item
-        site = pywikibot.Site("wikidata", "wikidata")
+        site = site
         self.repo = site.data_repository()
         self.wdstuff = WDS(self.repo, edit_summary=self.summary)
         self.set_wd_item()

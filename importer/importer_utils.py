@@ -138,7 +138,7 @@ def count_wikilinks(text):
 
 
 def q_from_wikipedia(language, page_title):
-    site = pywikibot.Site(language, "wikipedia")
+    site = create_site_instance(language, "wikipedia")
     page = pywikibot.Page(site, page_title)
 
     if page.exists():
@@ -328,20 +328,20 @@ def tuple_is_coords(sometuple):
 
 def file_is_on_commons(text):
     text = text.replace(" ", "_")
-    site = pywikibot.Site(fam="commons")
+    site = create_site_instance("commons", "commons")
     page = pywikibot.Page(site, "File:" + text)
     return page.exists()
 
 
 def commonscat_exists(text):
     text = text.replace(" ", "_")
-    site = pywikibot.Site(fam="commons")
+    site = create_site_instance("commons", "commons")
     page = pywikibot.Page(site, "Category:" + text)
     return page.exists()
 
 
 def wp_page_exists(language, title):
-    site = pywikibot.Site(language, "wikipedia")
+    site = create_site_instance(language, "wikipedia")
     page = pywikibot.Page(site, title)
     if page.exists():
         return True
@@ -412,7 +412,7 @@ def get_random_list_sample(some_list, amount):
 
 def get_P31(q_number):
     results = []
-    site = pywikibot.Site("wikidata", "wikidata")
+    site = create_site_instance("wikidata", "wikidata")
     item = pywikibot.ItemPage(site, q_number)
     if item.exists() and item.claims.get("P31"):
         for claim in item.claims.get("P31"):
@@ -439,3 +439,7 @@ def create_wlm_url(country, language, id):
     url_base = "https://tools.wmflabs.org/heritage/api/api.php?action=search&format=json&srcountry={}&srlanguage={}&srid={}"
     return url_base.format(
         country, language, quote(id))
+
+
+def create_site_instance(language, family):
+    return pywikibot.Site(language, family)
