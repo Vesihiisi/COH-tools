@@ -58,11 +58,12 @@ class DkBygningDa(Monument):
 
     def set_monuments_all_id(self):
         """ Map monuments_all ID to fields in this table. """
-        self.monuments_all_id = "{}-{}-{}".format(
-            str(self.kommunenr), str(self.ejendomsnr), str(self.bygningsnr))
+        self.monuments_all_id = "{!s}-{!s}-{!s}".format(
+            self.kommunenr, self.ejendomsnr, self.bygningsnr)
 
     def __init__(self, db_row_dict, mapping, data_files, existing):
         Monument.__init__(self, db_row_dict, mapping, data_files, existing)
+        self.set_monuments_all_id()
         self.update_labels()
         self.exists("da")
         self.set_commonscat()
