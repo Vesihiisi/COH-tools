@@ -46,6 +46,8 @@ class SeShipSv(Monument):
                 varv = utils.q_from_first_wikilink("sv", possible_varv)
                 ref = self.wlm_source
                 self.add_statement("manufacturer", varv, refs=[ref])
+            else:
+                self.add_to_report("varv", self.varv)
 
     def set_manufacture_year(self):
         """
