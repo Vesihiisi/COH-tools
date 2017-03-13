@@ -121,7 +121,7 @@ class SeShipSv(Monument):
 
     def set_descriptions(self):
         """Set default descriptions."""
-        DESC_BASES = {"sv": "K-märkt fartyg",
+        DESC_BASES = {"sv": "kulturmärkt bruksfartyg",
                       "en": "listed historical ship in Sweden"}
         for language in ["en", "sv"]:
             self.add_description(language, DESC_BASES[language])
