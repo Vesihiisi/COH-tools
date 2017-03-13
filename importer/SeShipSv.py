@@ -23,7 +23,8 @@ class SeShipSv(Monument):
                 if len(functions) > 0:
                     self.remove_statement("is")
                     for f in functions:
-                        self.add_statement("is", f)
+                        ref = self.wlm_source
+                        self.add_statement("is", f, refs=[ref])
             except IndexError:
                 return
 
@@ -118,6 +119,13 @@ class SeShipSv(Monument):
         """
         self.monuments_all_id = self.signal
 
+    def set_descriptions(self):
+        """Set default descriptions."""
+        desc_bases = {"sv": "kulturmärkt bruksfartyg",
+                      "en": "listed historical ship in Sweden"}
+        for language in ["en", "sv"]:
+            self.add_description(language, desc_bases[language])
+
     def __init__(self, db_row_dict, mapping, data_files, existing):
         Monument.__init__(self, db_row_dict, mapping, data_files, existing)
         self.set_monuments_all_id()
@@ -129,6 +137,7 @@ class SeShipSv(Monument):
         self.set_source()
         self.set_registrant_url()
         self.set_labels("sv", self.namn)
+        self.set_descriptions()
         self.set_image("bild")
         self.exists("sv", "artikel")
         self.set_type()
