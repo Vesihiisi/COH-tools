@@ -65,22 +65,27 @@ class SeShipSv(Monument):
 
     def set_dimensions(self):
         """
-        Try to parse the contents of the 'dimensioner' column
-        and add them as length, width etc.
+        Parse ship dimensions.
+
         They can look like this:
         'Längd: 15.77 Bredd: 5.19 Djup: 1.70 Brt: 15'
+        If parsing fails, set it to an empty dictionary
+        and save the input data to the problem report.
         Use WLM database as source.
         """
         if self.has_non_empty_attribute("dimensioner"):
             dimensions_processed = utils.parse_ship_dimensions(
                 self.dimensioner)
-            for dimension in dimensions_processed:
-                if dimension in self.props:
-                    value = dimensions_processed[dimension]
-                    ref = self.wlm_source
-                    self.add_statement(
-                        dimension, {"quantity_value": value,
-                                    "unit": self.props["metre"]}, refs=[ref])
+            if dimensions_processed == {}:
+                self.add_to_report("dimensioner", self.dimensioner)
+            else:
+                for dimension in dimensions_processed:
+                    if dimension in self.props:
+                        value = dimensions_processed[dimension]
+                        ref = self.wlm_source
+                        self.add_statement(
+                            dimension, {"quantity_value": value,
+                                        "unit": self.props["metre"]}, refs=[ref])
 
     def set_homeport(self):
         """
