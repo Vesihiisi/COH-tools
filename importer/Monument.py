@@ -240,7 +240,7 @@ class Monument(object):
                 "published": {"prop": prop_date, "value": pub_date}}
 
     def create_wlm_source(self, monuments_all_id):
-        wlm_url = utils.create_wlm_url(self.mapping["table_name"], self.mapping[
+        self.wlm_url = utils.create_wlm_url(self.mapping["table_name"], self.mapping[
                                        "language"], monuments_all_id)
 
         source_item = self.sources["monuments_db"]
@@ -251,7 +251,7 @@ class Monument(object):
         return {"source": {"prop": prop_stated, "value": source_item},
                 "published": {"prop": prop_date, "value": timestamp},
                 "reference_url": {"prop": prop_reference_url,
-                                  "value": wlm_url}}
+                                  "value": self.wlm_url}}
 
     def exists_with_prop(self, mapping):
         if self.existing is None:
@@ -330,8 +330,7 @@ class Monument(object):
             else:
                 self.problem_report["Q"] = ""
         if "url" not in self.problem_report:
-            self.problem_report["url"] = self.get_wlm_url(
-                self.monuments_all_id)
+            self.problem_report["url"] = self.wlm_url
 
     def print_report(self):
         """

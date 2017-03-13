@@ -26,6 +26,7 @@ class SeShipSv(Monument):
                         ref = self.wlm_source
                         self.add_statement("is", f, refs=[ref])
             except IndexError:
+                self.add_to_report("funktion", self.funktion)
                 return
 
     def set_shipyard(self):
@@ -59,6 +60,8 @@ class SeShipSv(Monument):
                 ref = self.wlm_source
                 self.add_statement(
                     "inception", {"time_value": {"year": byggar}}, refs=[ref])
+            else:
+                self.add_to_report("byggår", self.byggar)
 
     def set_dimensions(self):
         """
