@@ -77,12 +77,11 @@ class SeShipSv(Monument):
         if self.has_non_empty_attribute("dimensioner"):
             dimensions_processed = utils.parse_ship_dimensions(
                 self.dimensioner)
-            if dimensions_processed == {}:
+            if not dimensions_processed:
                 self.add_to_report("dimensioner", self.dimensioner)
             else:
-                for dimension in dimensions_processed:
+                for dimension, value in dimensions_processed.items():
                     if dimension in self.props:
-                        value = dimensions_processed[dimension]
                         ref = self.wlm_source
                         self.add_statement(
                             dimension, {"quantity_value": value,
