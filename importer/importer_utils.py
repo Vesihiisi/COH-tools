@@ -387,6 +387,17 @@ def date_to_dict(datestring, dateformat):
     return date_dict
 
 
+def dict_to_iso_date(date_dict):
+    iso_date = ""
+    if "year" in date_dict:
+        iso_date += str(date_dict["year"])
+    if "month" in date_dict:
+        iso_date += "-" + str(date_dict["month"])
+    if "day" in date_dict:
+        iso_date += "-" + str(date_dict["day"])
+    return iso_date
+
+
 def append_line_to_file(text, filename):
     with open(filename, 'a') as f:
         f.write(text + "\n")
