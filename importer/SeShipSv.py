@@ -27,7 +27,6 @@ class SeShipSv(Monument):
                         self.add_statement("is", f, refs=[ref])
             except IndexError:
                 self.add_to_report("funktion", self.funktion)
-                return
 
     def set_shipyard(self):
         """
