@@ -299,6 +299,8 @@ class Monument(object):
     def __init__(self, db_row_dict, mapping, data_files, existing):
         self.props = utils.load_json(
             path.join(MAPPING_DIR, "props_general.json"))
+        self.common_items = utils.load_json(
+            path.join(MAPPING_DIR, "common_items.json"))
         self.adm0 = utils.load_json(path.join(MAPPING_DIR, "adm0.json"))
         self.sources = utils.load_json(
             path.join(MAPPING_DIR, "data_sources.json"))

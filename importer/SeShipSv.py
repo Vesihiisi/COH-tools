@@ -84,8 +84,10 @@ class SeShipSv(Monument):
                     if dimension in self.props:
                         ref = self.wlm_source
                         self.add_statement(
-                            dimension, {"quantity_value": value,
-                                        "unit": self.props["metre"]}, refs=[ref])
+                            dimension,
+                            {"quantity_value": value,
+                             "unit": self.common_items["metre"]},
+                            refs=[ref])
 
     def set_homeport(self):
         """
