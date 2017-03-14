@@ -240,8 +240,9 @@ class Monument(object):
                 "published": {"prop": prop_date, "value": pub_date}}
 
     def create_wlm_source(self, monuments_all_id):
-        self.wlm_url = utils.create_wlm_url(self.mapping["table_name"], self.mapping[
-                                       "language"], monuments_all_id)
+        self.wlm_url = utils.create_wlm_url(self.mapping["table_name"],
+                                            self.mapping["language"],
+                                            monuments_all_id)
 
         source_item = self.sources["monuments_db"]
         timestamp = utils.datetime_object_to_dict(self.wd_item["changed"])
