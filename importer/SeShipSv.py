@@ -26,7 +26,7 @@ class SeShipSv(Monument):
                         ref = self.wlm_source
                         self.add_statement("is", f, refs=[ref])
             except IndexError:
-                return
+                self.add_to_report("funktion", self.funktion)
 
     def set_shipyard(self):
         """
@@ -45,6 +45,8 @@ class SeShipSv(Monument):
                 varv = utils.q_from_first_wikilink("sv", possible_varv)
                 ref = self.wlm_source
                 self.add_statement("manufacturer", varv, refs=[ref])
+            else:
+                self.add_to_report("varv", self.varv)
 
     def set_manufacture_year(self):
         """
@@ -59,25 +61,33 @@ class SeShipSv(Monument):
                 ref = self.wlm_source
                 self.add_statement(
                     "inception", {"time_value": {"year": byggar}}, refs=[ref])
+            else:
+                self.add_to_report("byggår", self.byggar)
 
     def set_dimensions(self):
         """
-        Try to parse the contents of the 'dimensioner' column
-        and add them as length, width etc.
+        Parse ship dimensions.
+
         They can look like this:
         'Längd: 15.77 Bredd: 5.19 Djup: 1.70 Brt: 15'
+        If parsing fails, set it to an empty dictionary
+        and save the input data to the problem report.
         Use WLM database as source.
         """
         if self.has_non_empty_attribute("dimensioner"):
             dimensions_processed = utils.parse_ship_dimensions(
                 self.dimensioner)
-            for dimension in dimensions_processed:
-                if dimension in self.props:
-                    value = dimensions_processed[dimension]
-                    ref = self.wlm_source
-                    self.add_statement(
-                        dimension, {"quantity_value": value,
-                                    "unit": self.props["metre"]}, refs=[ref])
+            if not dimensions_processed:
+                self.add_to_report("dimensioner", self.dimensioner)
+            else:
+                for dimension, value in dimensions_processed.items():
+                    if dimension in self.props:
+                        ref = self.wlm_source
+                        self.add_statement(
+                            dimension,
+                            {"quantity_value": value,
+                             "unit": self.common_items["metre"]},
+                            refs=[ref])
 
     def set_homeport(self):
         """
