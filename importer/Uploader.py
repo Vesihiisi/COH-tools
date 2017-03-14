@@ -152,11 +152,11 @@ class Uploader(object):
         if utils.string_is_q_item(value):
             val_item = self.make_q_item(value)
         elif prop == PROPS["image"]:
-            if self.item_has_prop("image", self.wd_item) is False:
+            if not self.item_has_prop("image", self.wd_item):
                 if utils.file_is_on_commons(value):
                     val_item = self.make_image_item(value)
         elif utils.tuple_is_coords(value) and prop == PROPS["coordinates"]:
-            if self.item_has_prop("coordinates", self.wd_item) is False:
+            if not self.item_has_prop("coordinates", self.wd_item):
                 val_item = self.make_coords_item(value)
         elif isinstance(value, dict) and 'quantity_value' in value:
             val_item = self.make_quantity_item(value, self.repo)
