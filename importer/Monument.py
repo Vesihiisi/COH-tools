@@ -60,9 +60,16 @@ class Monument(object):
             for claim in claims:
                 value = claim["value"]
                 value_to_print = ""
+                print(value)
                 if utils.string_is_q_item(value):
                     value = utils.wd_template("Q", value)
-                value_to_print = value_to_print + str(value)
+                    value_to_print = value_to_print + str(value)
+                elif "quantity_value" in value:
+                    value_to_print += str(value["quantity_value"])
+                    if "unit" in value:
+                        value_to_print += " " + utils.wd_template("Q", value["unit"])
+                else:
+                    value_to_print += str(value)
                 quals = claim["quals"]
                 refs = claim["refs"]
                 if len(quals) == 0:
