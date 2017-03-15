@@ -240,7 +240,7 @@ class Uploader(object):
                                 log.logit(message)
 
     def create_new_item(self, log):
-        item = self.wdstuff.make_new_item({})
+        item = self.wdstuff.make_new_item({}, self.summary)
         if log:
             t_id = item.getID()
             message = "{} CREATE".format(t_id)
