@@ -282,7 +282,22 @@ class Uploader(object):
             self.wd_item = self.wdstuff.QtoItemPage(self.TEST_ITEM)
             self.wd_item_q = self.TEST_ITEM
 
-    def __init__(self, monument_object, log=None, tablename=None, live=False, site=None):
+    def __init__(self,
+                 monument_object,
+                 repo,
+                 log=None,
+                 tablename=None,
+                 live=False):
+        """
+        Initialize an Upload object for a single Monument.
+
+        @param: monument_object Dictionary of Monument data
+        @param: repo Data repository of site to work on (Wikidata)
+        @param: log Enable logging to file
+        @param: tablename Name of db table, used in edit summary
+        @param: live Whether to work on real WD items or in the sandbox
+        """
+        self.repo = repo
         self.log = False
         self.summary = "#COH #WLM #{}".format(tablename)
         self.live = live
@@ -296,7 +311,5 @@ class Uploader(object):
         if log is not None:
             self.log = log
         self.data = monument_object.wd_item
-        site = site
-        self.repo = site.data_repository()
         self.wdstuff = WDS(self.repo, edit_summary=self.summary)
         self.set_wd_item()

@@ -209,10 +209,10 @@ def get_items(connection,
             live = True if upload == "live" else False
             uploader = Uploader(
                 monument,
+                repo=wikidata_site,
                 log=logger,
                 tablename=country,
-                live=live,
-                site=wikidata_site)
+                live=live)
             if "Q" in problem_report and problem_report["Q"] == "":
                 """
                 If the Monument didn't have an associated Qid,
