@@ -442,10 +442,5 @@ def create_wlm_url(country, language, id):
 
 
 def create_site_instance(language, family):
-    """
-    Create an instance of a Wiki site.
-
-    This is a so-called "convenience function":
-    https://en.wikipedia.org/wiki/Convenience_function
-    """
+    """Create an instance of a Wiki site (convenience function)."""
     return pywikibot.Site(language, family)
