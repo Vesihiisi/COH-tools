@@ -50,7 +50,8 @@ class SeBbrSv(Monument):
         """
         protection_date = False
         url = "http://kulturarvsdata.se/" + \
-            self.wd_item["statements"][self.props["cultural_heritage_sweden"]][0]["value"]
+            self.wd_item["statements"][
+                self.props["cultural_heritage_sweden"]][0]["value"]
         url_list = url.split("/")
         url_list.insert(-1, "jsonld")
         url = "/".join(url_list)
@@ -104,7 +105,8 @@ class SeBbrSv(Monument):
                 q_item = utils.q_from_wikipedia("sv", wp_page)
                 if q_item is not None:
                     if utils.is_whitelisted_P31(q_item, ["Q5"]):
-                        self.add_statement("architect", q_item)
+                        ref = self.wlm_source
+                        self.add_statement("architect", q_item, refs=[ref])
 
     def set_location(self):
         """
@@ -119,7 +121,8 @@ class SeBbrSv(Monument):
         if self.has_non_empty_attribute("plats"):
             if utils.count_wikilinks(self.plats) == 1:
                 location = utils.q_from_first_wikilink("sv", self.plats)
-                self.add_statement("location", location)
+                ref = self.wlm_source
+                self.add_statement("location", location, refs=[ref])
 
     def update_descriptions(self):
         """
@@ -141,9 +144,11 @@ class SeBbrSv(Monument):
         extracted_no = utils.get_number_from_string(
             utils.get_text_inside_brackets(self.funktion))
         if extracted_no is not None:
+            ref = self.wlm_source
             self.add_statement(
                 "has_parts_of_class", "Q41176",
-                {"quantity": {"quantity_value": extracted_no}})
+                {"quantity": {"quantity_value": extracted_no}},
+                refs=[ref])
 
     def set_adm_location(self):
         """
@@ -165,7 +170,8 @@ class SeBbrSv(Monument):
         try:
             municipality = [x["item"] for x in municip_dict if x[
                 "en"].lower() == pattern_en][0]
-            self.add_statement("located_adm", municipality)
+            ref = self.wlm_source
+            self.add_statement("located_adm", municipality, refs=[ref])
         except IndexError:
             print("Could not parse municipality: {}.".format(self.kommun))
             return
@@ -183,7 +189,10 @@ class SeBbrSv(Monument):
         if self.has_non_empty_attribute("byggar"):
             year_parsed = utils.parse_year(self.byggar)
             if year_parsed is not None:
-                self.add_statement("inception", {"time_value": year_parsed})
+                ref = self.wlm_source
+                self.add_statement("inception",
+                                   {"time_value": year_parsed},
+                                   refs=[ref])
 
     def set_monuments_all_id(self):
         """
