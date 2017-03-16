@@ -138,17 +138,6 @@ class SeFornminSv(Monument):
             self.add_statement("location", self.get_socken(
                 self.socken, self.landskap), refs=[ref])
 
-    def set_inception(self):
-        """
-        TODO?
-        This is messy and not super prioritized...
-        Only a handful of items have it,
-        and it looks mostly like
-            folkvandringstid ca 400 - 550 e Kr
-            sentida
-        """
-        return
-
     def set_monuments_all_id(self):
         """
         Map which column name in specific table
