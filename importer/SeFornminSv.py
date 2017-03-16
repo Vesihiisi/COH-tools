@@ -86,7 +86,7 @@ class SeFornminSv(Monument):
             self.add_statement("located_adm", municipality, refs=[ref])
         except IndexError:
             print("Could not parse municipality: {}.".format(self.kommun))
-            return
+            self.add_to_report("kommun", self.kommun)
 
     def set_type(self):
         """
@@ -107,7 +107,7 @@ class SeFornminSv(Monument):
                                 if x.lower() == type_to_search_for][0][0]
                 self.substitute_statement("is", special_type)
             except IndexError:
-                return
+                self.add_to_report("typ", self.typ)
 
     def get_socken(self, socken_name, landskap_name):
         """
