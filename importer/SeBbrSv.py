@@ -82,15 +82,6 @@ class SeBbrSv(Monument):
             qualifier = None
         self.add_statement("heritage_status", type_q, qualifier)
 
-    def set_function(self):
-        """
-        TODO
-        examples:
-        https://gist.github.com/Vesihiisi/f637916ea1d80a4be5d71a3adf6e2dc2
-        """
-        # functions = get_rid_of_brackets(self.funktion).lower().split(",")
-        return
-
     def set_architect(self):
         """
         Add architect claim if available.
