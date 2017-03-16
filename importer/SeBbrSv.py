@@ -98,6 +98,8 @@ class SeBbrSv(Monument):
                     if utils.is_whitelisted_P31(q_item, ["Q5"]):
                         ref = self.wlm_source
                         self.add_statement("architect", q_item, refs=[ref])
+                    else:
+                        self.add_to_report("arkitekt", self.arkitekt)
 
     def set_location(self):
         """
@@ -114,6 +116,8 @@ class SeBbrSv(Monument):
                 location = utils.q_from_first_wikilink("sv", self.plats)
                 ref = self.wlm_source
                 self.add_statement("location", location, refs=[ref])
+            else:
+                self.add_to_report("plats", self.plats)
 
     def update_descriptions(self):
         """
@@ -165,7 +169,7 @@ class SeBbrSv(Monument):
             self.add_statement("located_adm", municipality, refs=[ref])
         except IndexError:
             print("Could not parse municipality: {}.".format(self.kommun))
-            return
+            self.add_to_report("kommun", self.kommun)
 
     def set_inception(self):
         """
@@ -184,6 +188,8 @@ class SeBbrSv(Monument):
                 self.add_statement("inception",
                                    {"time_value": year_parsed},
                                    refs=[ref])
+            else:
+                self.add_to_report("byggar", self.byggar)
 
     def set_monuments_all_id(self):
         """
