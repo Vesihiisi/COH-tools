@@ -105,7 +105,8 @@ class SeFornminSv(Monument):
                 special_type = [table[x]["items"]
                                 for x in table
                                 if x.lower() == type_to_search_for][0][0]
-                self.substitute_statement("is", special_type)
+                ref = self.wlm_source
+                self.substitute_statement("is", special_type, refs=[ref])
             except IndexError:
                 self.add_to_report("typ", self.typ)
 
