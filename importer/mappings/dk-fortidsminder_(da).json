@@ -14,7 +14,7 @@
         "name": "monument on Kulturstyrelsen register"
     },
     "language": "da",
-    "table_name": "dk-fortidsminder",
+    "table_name": "dk-fortids",
     "unique": {
         "comment": "Danish ancient monument ID",
         "property": "P3596"
