@@ -1,443 +1,449 @@
 {
     "@meta": {
-        "permalink": "//www.wikidata.org/w/index.php?title=Wikidata%3AWikiProject_WLM/Mapping_tables/dk-fortidsminder_%28da%29/types&oldid=418714690",
-        "timestamp": "2016-12-22T11:18:23Z"
+        "timestamp": "2017-03-20T09:47:57Z",
+        "permalink": "//www.wikidata.org/w/index.php?title=Wikidata%3AWikiProject_WLM/Mapping_tables/dk-fortidsminder_%28da%29/types&oldid=468581789"
     },
     "mappings": {
-        "[[Langhøj]] + [[Dysse]] Eller [[Jættestue]]": {
-            "items": [
-                "Q101659",
-                "Q1426772"
-            ],
-            "count": "1"
-        },
-        "[[Runesten]]": {
-            "items": [
-                "Q815241"
-            ],
-            "count": "59"
-        },
-        "[[Kirkegård]]": {
-            "items": [
-                "Q39614"
-            ],
-            "count": "49"
-        },
-        "[[Borg]]/[[Voldanlæg|Voldsted]]": {
-            "items": [
-                "Q23413",
-                "Q89778"
-            ],
-            "count": "262"
-        },
-        "[[Stenbrud]]": {
-            "items": [
-                "Q188040"
-            ],
-            "count": "1"
-        },
-        "[[Ting (Folkeforsamling)|Tingsted]]": {
-            "items": [
-                "Q387834"
-            ],
-            "count": "7"
-        },
-        "[[Dysse]]": {
-            "items": [
-                "Q101659"
-            ],
-            "count": "128"
-        },
-        "[[Voldgrav]]": {
-            "items": [
-                "Q88480"
-            ],
-            "count": "205"
-        },
-        "[[Dige]] (Uspecificeret)": {
-            "items": [
-                "Q105190"
-            ],
-            "count": "2"
-        },
-        "Stenbygget [[Grav]]": {
-            "items": [
-                "Q173387"
-            ],
-            "count": "417"
-        },
-        "[[Begravelse]], Uspec Undergruppe": {
-            "items": [
-                "Q201676"
-            ],
-            "count": "68"
-        },
-        "[[Rundhøj]] + [[Dysse]] Eller [[Jættestue]]": {
-            "items": [
-                "Q101659",
-                "Q1426772"
-            ],
-            "count": "1"
-        },
-        "[[Helleristning]]/Billedsten": {
-            "items": [
-                "Q42195"
-            ],
-            "count": "121"
-        },
-        "[[Stenkiste]]": {
-            "items": [
-                "Q16296988"
-            ],
-            "count": "366"
-        },
-        "[[Herregård]]Sanlæg/[[Slot]]": {
-            "items": [
-                "Q879050",
-                "Q751876"
-            ],
-            "count": "22"
-        },
-        "[[Bondegård|Gård]]": {
-            "items": [
-                "Q131596"
-            ],
-            "count": "10"
-        },
-        "[[Langhøj]], [[Dysse]] Eller [[Jættestue]]": {
-            "items": [
-                "Q101659",
-                "Q1426772"
-            ],
-            "count": "1"
-        },
-        "[[Rettersted]]": {
-            "items": [
-                "Q2151479"
-            ],
-            "count": "39"
-        },
-        "[[Fyr (Navigation)|Fyr]]": {
-            "items": [
-                "Q39715"
-            ],
-            "count": "2"
-        },
-        "[[Stensætning]]": {
-            "items": [
-                "Q2341654"
-            ],
-            "count": "196"
-        },
-        "[[Hospital]]": {
-            "items": [
-                "Q180370"
-            ],
-            "count": "6"
-        },
-        "[[Milepæl]]/-Sten": {
-            "items": [
-                "Q10145"
-            ],
-            "count": "105"
-        },
-        "[[Kanal]]": {
-            "items": [
-                "Q12284"
-            ],
-            "count": "30"
-        },
-        "[[Kloster]]Anlæg": {
-            "items": [
-                "Q44613"
-            ],
-            "count": "13"
-        },
-        "[[Havn]]": {
-            "items": [
-                "Q44782"
-            ],
-            "count": "1"
-        },
-        "[[Kogegrube]]": {
-            "items": [
-                "Q187317"
-            ],
-            "count": "9"
-        },
-        "[[Batteri]]": {
-            "items": [
-                "Q1211308"
-            ],
-            "count": "2"
-        },
-        "[[Skyttegrav]]": {
-            "items": [
-                "Q241059"
-            ],
-            "count": "42"
-        },
-        "[[Jættestue]] Med Bikammer": {
-            "items": [
-                "Q1426772"
-            ],
-            "count": "1"
-        },
-        "[[Dæmning]] (Uspecificeret)": {
-            "items": [
-                "Q12323"
-            ],
-            "count": "89"
-        },
-        "[[Sten]]Lægning/Stensamling": {
-            "items": [
-                "Q22731"
-            ],
-            "count": "44"
-        },
-        "[[Bolværk]]": {
-            "items": [
-                "Q891475"
-            ],
-            "count": "1"
-        },
-        "[[Sagnsten]]": {
-            "items": [
-                "Q17312485"
-            ],
-            "count": "116"
-        },
-        "[[Gravrøse]]": {
-            "items": [
-                "Q15120977"
-            ],
-            "count": "827"
-        },
-        "[[Kystsikring]]": {
-            "items": [
-                "Q1316027"
-            ],
-            "count": "1"
-        },
-        "[[Kirke (Bygning)|Kirke]]": {
-            "items": [
-                "Q16970"
-            ],
-            "count": "30"
-        },
-        "[[Bautasten]]": {
-            "items": [
-                "Q19820204"
-            ],
-            "count": "467"
-        },
-        "[[Sten]]Række": {
-            "items": [
-                "Q22731"
-            ],
-            "count": "42"
-        },
-        "[[Brønd]]": {
-            "items": [
-                "Q43483"
-            ],
-            "count": "48"
-        },
-        "Vandfyldt [[Grav]]": {
-            "items": [
-                "Q173387"
-            ],
-            "count": "29"
-        },
-        "[[Dambrug]]": {
-            "items": [
-                "Q209894"
-            ],
-            "count": "2"
-        },
-        "[[Værksted]]": {
-            "items": [
-                "Q12341367"
-            ],
-            "count": "1"
-        },
         "[[Skanse (Forsvarsanlæg)|Skanse]]": {
+            "count": "206",
             "items": [
                 "Q91203"
-            ],
-            "count": "206"
+            ]
         },
-        "[[Jættestue]]": {
+        "[[Have]]": {
+            "count": "4",
             "items": [
-                "Q1426772"
-            ],
-            "count": "1"
+                "Q1107656"
+            ]
+        },
+        "[[Skovbrug]]": {
+            "count": "24",
+            "items": [
+                "Q38112"
+            ]
+        },
+        "[[Kystsikring]]": {
+            "count": "1",
+            "items": [
+                "Q1316027"
+            ]
+        },
+        "[[Kogegrube]]": {
+            "count": "9",
+            "items": [
+                "Q187317"
+            ]
+        },
+        "[[Tingsted]]": {
+            "count": "3",
+            "items": [
+                "Q12339434"
+            ]
+        },
+        "[[Bro]]": {
+            "count": "130",
+            "items": [
+                "Q12280"
+            ]
         },
         "[[Dige]] (Kirkegård)": {
+            "count": "1",
             "items": [
                 "Q105190"
-            ],
-            "count": "1"
+            ]
         },
-        "[[Park]]": {
+        "[[Militær]]Væsen, Uspec Undergruppe": {
+            "count": "3",
             "items": [
-                "Q22698"
-            ],
-            "count": "1"
+                "Q8473"
+            ]
         },
-        "[[Bygning]]": {
+        "[[Vandmølle]]": {
+            "count": "12",
             "items": [
-                "Q41176"
-            ],
-            "count": "58"
+                "Q185187"
+            ]
+        },
+        "[[Vindmølle]]": {
+            "count": "20",
+            "items": [
+                "Q38720"
+            ]
+        },
+        "[[Begravelse]], Uspec Undergruppe": {
+            "count": "68",
+            "items": [
+                "Q201676"
+            ]
         },
         "[[Rundhøj]] Med [[Dysse]] Eller [[Jættestue]]": {
+            "count": "2",
             "items": [
                 "Q101659",
                 "Q1426772"
-            ],
-            "count": "2"
+            ]
         },
-        "[[Skovbrug]]": {
+        "[[Bolværk]]": {
+            "count": "1",
             "items": [
-                "Q38112"
-            ],
-            "count": "24"
+                "Q891475"
+            ]
         },
-        "[[Vandmølle]]": {
+        "[[Rundhøj]]": {
+            "count": "21373",
             "items": [
-                "Q185187"
-            ],
-            "count": "12"
+                "Q34023"
+            ]
+        },
+        "[[Grubehus]]": {
+            "count": "2",
+            "items": [
+                "Q940435"
+            ]
+        },
+        "[[Genforeningssten]]": {
+            "count": "14",
+            "items": [
+                "Q12313625"
+            ]
+        },
+        "[[Jættestue]]": {
+            "count": "1",
+            "items": [
+                "Q1426772"
+            ]
+        },
+        "Stenbygget [[Grav]]": {
+            "count": "417",
+            "items": [
+                "Q173387"
+            ]
+        },
+        "[[Kapel]]": {
+            "count": "10",
+            "items": [
+                "Q108325"
+            ]
+        },
+        "[[Rundhøj]] + [[Dysse]] Eller [[Jættestue]]": {
+            "count": "1",
+            "items": [
+                "Q101659",
+                "Q1426772"
+            ]
+        },
+        "[[Fyr (Navigation)|Fyr]]": {
+            "count": "2",
+            "items": [
+                "Q39715"
+            ]
+        },
+        "[[Milepæl]]/-Sten": {
+            "count": "105",
+            "items": [
+                "Q10145"
+            ]
+        },
+        "[[Stald]]Bygning": {
+            "count": "1",
+            "items": [
+                "Q1207909"
+            ]
+        },
+        "[[Rundhøj]] Og [[Dysse]] Eller [[Jættestue]]": {
+            "count": "1",
+            "items": [
+                "Q101659",
+                "Q1426772"
+            ]
+        },
+        "[[Havn]]": {
+            "count": "1",
+            "items": [
+                "Q44782"
+            ]
+        },
+        "[[Bautasten]]": {
+            "count": "467",
+            "items": [
+                "Q19820204"
+            ]
+        },
+        "[[Gravrøse]]": {
+            "count": "827",
+            "items": [
+                "Q15120977"
+            ]
+        },
+        "[[Stenkiste]]": {
+            "count": "366",
+            "items": [
+                "Q16296988"
+            ]
+        },
+        "[[Voldgrav]]": {
+            "count": "205",
+            "items": [
+                "Q88480"
+            ]
+        },
+        "[[Skibsbro]]": {
+            "count": "1",
+            "items": [
+                "Q23014696"
+            ]
+        },
+        "[[Mindesmærke]]": {
+            "count": "372",
+            "items": [
+                "Q5003624"
+            ]
+        },
+        "[[Stensætning]]": {
+            "count": "196",
+            "items": [
+                "Q2341654"
+            ]
+        },
+        "[[Skibssætning]]": {
+            "count": "60",
+            "items": [
+                "Q1433492"
+            ]
+        },
+        "[[Hus]] (Evt. Med Stald)": {
+            "count": "31",
+            "items": [
+                "Q3947"
+            ]
+        },
+        "[[Grøft]] (Afvanding)": {
+            "count": "1",
+            "items": [
+                "Q523166"
+            ]
+        },
+        "[[Dysse]] Eller [[Jættestue]]": {
+            "count": "2057",
+            "items": [
+                "Q101659",
+                "Q1426772"
+            ]
+        },
+        "[[Skyttegrav]]": {
+            "count": "42",
+            "items": [
+                "Q241059"
+            ]
+        },
+        "[[Runesten]]": {
+            "count": "59",
+            "items": [
+                "Q815241"
+            ]
         },
         "[[Borg]]/[[Voldsted]]": {
+            "count": "6",
             "items": [
                 "Q23413",
                 "Q744099"
-            ],
-            "count": "6"
+            ]
         },
-        "[[Bro]]": {
+        "[[Kanal]]": {
+            "count": "30",
             "items": [
-                "Q12280"
-            ],
-            "count": "130"
+                "Q12284"
+            ]
         },
-        "[[Vandværk]]": {
+        "[[Herregård]]Sanlæg/[[Slot]]": {
+            "count": "22",
             "items": [
-                "Q11849395"
-            ],
-            "count": "1"
+                "Q879050",
+                "Q751876"
+            ]
         },
-        "[[Genforeningssten]]": {
+        "[[Kloster]]Anlæg": {
+            "count": "13",
             "items": [
-                "Q12313625"
-            ],
-            "count": "14"
+                "Q44613"
+            ]
         },
-        "[[Stald]]Bygning": {
+        "[[Borg]]/[[Voldanlæg|Voldsted]]": {
+            "count": "262",
             "items": [
-                "Q1207909"
-            ],
-            "count": "1"
+                "Q23413",
+                "Q89778"
+            ]
         },
-        "[[Rundhøj]] Og [[Dysse]] Eller [[Jættestue]]": {
+        "[[Park]]": {
+            "count": "1",
+            "items": [
+                "Q22698"
+            ]
+        },
+        "[[Bondegård|Gård]]": {
+            "count": "10",
+            "items": [
+                "Q131596"
+            ]
+        },
+        "[[Langhøj]], [[Dysse]] Eller [[Jættestue]]": {
+            "count": "1",
             "items": [
                 "Q101659",
                 "Q1426772"
-            ],
-            "count": "1"
+            ]
         },
-        "[[Kapel]]": {
+        "[[Batteri]]": {
+            "count": "2",
             "items": [
-                "Q108325"
-            ],
-            "count": "10"
+                "Q1211308"
+            ]
         },
-        "[[Skibsbro]]": {
+        "[[Jættestue]] Med Bikammer": {
+            "count": "1",
             "items": [
-                "Q23014696"
-            ],
-            "count": "1"
+                "Q1426772"
+            ]
         },
-        "[[Have]]": {
+        "[[Dæmning]] (Uspecificeret)": {
+            "count": "89",
             "items": [
-                "Q1107656"
-            ],
-            "count": "4"
-        },
-        "[[Grubehus]]": {
-            "items": [
-                "Q940435"
-            ],
-            "count": "2"
-        },
-        "[[Mindesmærke]]": {
-            "items": [
-                "Q5003624"
-            ],
-            "count": "372"
-        },
-        "[[Hus]] (Evt. Med Stald)": {
-            "items": [
-                "Q3947"
-            ],
-            "count": "31"
-        },
-        "[[Helligkilde]]": {
-            "items": [
-                "Q1371047"
-            ],
-            "count": "71"
+                "Q12323"
+            ]
         },
         "[[Rådhus]]": {
+            "count": "1",
             "items": [
                 "Q543654"
-            ],
-            "count": "1"
+            ]
         },
-        "[[Militær]]Væsen, Uspec Undergruppe": {
+        "[[Sten]]Række": {
+            "count": "42",
             "items": [
-                "Q8473"
-            ],
-            "count": "3"
+                "Q22731"
+            ]
         },
-        "[[Skibssætning]]": {
+        "Vandfyldt [[Grav]]": {
+            "count": "29",
             "items": [
-                "Q1433492"
-            ],
-            "count": "60"
+                "Q173387"
+            ]
         },
-        "[[Vindmølle]]": {
+        "[[Hospital]]": {
+            "count": "6",
             "items": [
-                "Q38720"
-            ],
-            "count": "20"
+                "Q180370"
+            ]
         },
-        "[[Dysse]] Eller [[Jættestue]]": {
+        "[[Ting (Folkeforsamling)|Tingsted]]": {
+            "count": "7",
+            "items": [
+                "Q387834"
+            ]
+        },
+        "[[Stenbrud]]": {
+            "count": "1",
+            "items": [
+                "Q188040"
+            ]
+        },
+        "[[Sagnsten]]": {
+            "count": "116",
+            "items": [
+                "Q17312485"
+            ]
+        },
+        "[[Dambrug]]": {
+            "count": "2",
+            "items": [
+                "Q209894"
+            ]
+        },
+        "[[Dysse]]": {
+            "count": "128",
+            "items": [
+                "Q101659"
+            ]
+        },
+        "[[Rettersted]]": {
+            "count": "39",
+            "items": [
+                "Q2151479"
+            ]
+        },
+        "[[Værksted]]": {
+            "count": "1",
+            "items": [
+                "Q12341367"
+            ]
+        },
+        "[[Dige]] (Uspecificeret)": {
+            "count": "2",
+            "items": [
+                "Q105190"
+            ]
+        },
+        "[[Kirke (Bygning)|Kirke]]": {
+            "count": "30",
+            "items": [
+                "Q16970"
+            ]
+        },
+        "[[Bygning]]": {
+            "count": "58",
+            "items": [
+                "Q41176"
+            ]
+        },
+        "[[Langhøj]] + [[Dysse]] Eller [[Jættestue]]": {
+            "count": "1",
             "items": [
                 "Q101659",
                 "Q1426772"
-            ],
-            "count": "2057"
+            ]
         },
-        "[[Grøft]] (Afvanding)": {
+        "[[Vandværk]]": {
+            "count": "1",
             "items": [
-                "Q523166"
-            ],
-            "count": "1"
+                "Q11849395"
+            ]
+        },
+        "[[Sten]]Lægning/Stensamling": {
+            "count": "44",
+            "items": [
+                "Q22731"
+            ]
         },
         "[[Sømærke]]": {
+            "count": "13",
             "items": [
                 "Q7321258"
-            ],
-            "count": "13"
+            ]
         },
-        "[[Tingsted]]": {
+        "[[Brønd]]": {
+            "count": "48",
             "items": [
-                "Q12339434"
-            ],
-            "count": "3"
+                "Q43483"
+            ]
+        },
+        "[[Helleristning]]/Billedsten": {
+            "count": "121",
+            "items": [
+                "Q42195"
+            ]
+        },
+        "[[Helligkilde]]": {
+            "count": "71",
+            "items": [
+                "Q1371047"
+            ]
+        },
+        "[[Kirkegård]]": {
+            "count": "49",
+            "items": [
+                "Q39614"
+            ]
         }
     }
 }
