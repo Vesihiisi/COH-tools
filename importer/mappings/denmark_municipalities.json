@@ -1,0 +1,492 @@
+[
+    {
+        "da": "Glostrup Kommune",
+        "en": "Glostrup Municipality",
+        "item": "Q21006"
+    },
+    {
+        "da": "Nordfyns Kommune",
+        "en": "Nordfyn Municipality",
+        "item": "Q20770"
+    },
+    {
+        "da": "Kolding Kommune",
+        "en": "Kolding Municipality",
+        "item": "Q21101"
+    },
+    {
+        "da": "Ærø Kommune",
+        "en": "Ærø Municipality",
+        "item": "Q21104"
+    },
+    {
+        "da": "Sønderborg Kommune",
+        "en": "Sønderborg Municipality",
+        "item": "Q21108"
+    },
+    {
+        "da": "Middelfart Kommune",
+        "en": "Middelfart Municipality",
+        "item": "Q21140"
+    },
+    {
+        "da": "Haderslev Kommune",
+        "en": "Haderslev Municipality",
+        "item": "Q21143"
+    },
+    {
+        "da": "Varde Kommune",
+        "en": "Varde Municipality",
+        "item": "Q21142"
+    },
+    {
+        "da": "Fredericia Kommune",
+        "en": "Fredericia Municipality",
+        "item": "Q21145"
+    },
+    {
+        "da": "Odense Kommune",
+        "en": "Odense Municipality",
+        "item": "Q21146"
+    },
+    {
+        "da": "Sorø Kommune",
+        "en": "Sorø Municipality",
+        "item": "Q21151"
+    },
+    {
+        "da": "Vejen Kommune",
+        "en": "Vejen Municipality",
+        "item": "Q21150"
+    },
+    {
+        "da": "Svendborg Kommune",
+        "en": "Svendborg Municipality",
+        "item": "Q21182"
+    },
+    {
+        "da": "Aabenraa Kommune",
+        "en": "Aabenraa Municipality",
+        "item": "Q21152"
+    },
+    {
+        "da": "Billund Kommune",
+        "en": "Billund Municipality",
+        "item": "Q27875"
+    },
+    {
+        "da": "Vejle Kommune",
+        "en": "Vejle Municipality",
+        "item": "Q28150"
+    },
+    {
+        "da": "Assens Kommune",
+        "en": "Assens Municipality",
+        "item": "Q27967"
+    },
+    {
+        "da": "Faaborg-Midtfyn Kommune",
+        "en": "Faaborg-Midtfyn Municipality",
+        "item": "Q27976"
+    },
+    {
+        "da": "Vordingborg Kommune",
+        "en": "Vordingborg Municipality",
+        "item": "Q183572"
+    },
+    {
+        "da": "Slagelse Kommune",
+        "en": "Slagelse Municipality",
+        "item": "Q29927"
+    },
+    {
+        "da": "Nyborg Kommune",
+        "en": "Nyborg Municipality",
+        "item": "Q30013"
+    },
+    {
+        "da": "Herlev Kommune",
+        "en": "Herlev Municipality",
+        "item": "Q164490"
+    },
+    {
+        "da": "Aarhus Kommune",
+        "en": "Aarhus Municipality",
+        "item": "Q240262"
+    },
+    {
+        "da": "Kalundborg Kommune",
+        "en": "Kalundborg Municipality",
+        "item": "Q204976"
+    },
+    {
+        "da": "Hillerød Kommune",
+        "en": "Hillerød Municipality",
+        "item": "Q221394"
+    },
+    {
+        "da": "Ballerup Kommune",
+        "en": "Ballerup Municipality",
+        "item": "Q257223"
+    },
+    {
+        "da": "Aalborg Kommune",
+        "en": "Aalborg Municipality",
+        "item": "Q300856"
+    },
+    {
+        "da": "Tårnby Kommune",
+        "en": "Tårnby Municipality",
+        "item": "Q282496"
+    },
+    {
+        "da": "Brøndby Kommune",
+        "en": "Brøndby Municipality",
+        "item": "Q484038"
+    },
+    {
+        "da": "Gladsaxe Kommune",
+        "en": "Gladsaxe Municipality",
+        "item": "Q484018"
+    },
+    {
+        "da": "Fanø Kommune",
+        "en": "Fanø Municipality",
+        "item": "Q493285"
+    },
+    {
+        "da": "Gribskov Kommune",
+        "en": "Gribskov Municipality",
+        "item": "Q494827"
+    },
+    {
+        "da": "Lyngby-Taarbæk Kommune",
+        "en": "Lyngby-Taarbæk Municipality",
+        "item": "Q493826"
+    },
+    {
+        "da": "Albertslund Kommune",
+        "en": "Albertslund Municipality",
+        "item": "Q493833"
+    },
+    {
+        "da": "Læsø Kommune",
+        "en": "Læsø Municipality",
+        "item": "Q498457"
+    },
+    {
+        "da": "Høje-Taastrup Kommune",
+        "en": "Høje-Taastrup Municipality",
+        "item": "Q499400"
+    },
+    {
+        "da": "Solrød Kommune",
+        "en": "Solrød Municipality",
+        "item": "Q499469"
+    },
+    {
+        "da": "Allerød Kommune",
+        "en": "Allerød Municipality",
+        "item": "Q499479"
+    },
+    {
+        "da": "Rebild Kommune",
+        "en": "Rebild Municipality",
+        "item": "Q499896"
+    },
+    {
+        "da": "Gentofte Kommune",
+        "en": "Gentofte Municipality",
+        "item": "Q500076"
+    },
+    {
+        "da": "Odder Kommune",
+        "en": "Odder Municipality",
+        "item": "Q500058"
+    },
+    {
+        "da": "Ishøj Kommune",
+        "en": "Ishøj Municipality",
+        "item": "Q502040"
+    },
+    {
+        "da": "Lemvig Kommune",
+        "en": "Lemvig Municipality",
+        "item": "Q502644"
+    },
+    {
+        "da": "Frederikshavn Kommune",
+        "en": "Frederikshavn Municipality",
+        "item": "Q502168"
+    },
+    {
+        "da": "Morsø Kommune",
+        "en": "Morsø Municipality",
+        "item": "Q502770"
+    },
+    {
+        "da": "Fredensborg Kommune",
+        "en": "Fredensborg Municipality",
+        "item": "Q503045"
+    },
+    {
+        "da": "Viborg Kommune",
+        "en": "Viborg Municipality",
+        "item": "Q502962"
+    },
+    {
+        "da": "Skive Kommune",
+        "en": "Skive Municipality",
+        "item": "Q503108"
+    },
+    {
+        "da": "Ringsted Kommune",
+        "en": "Ringsted Municipality",
+        "item": "Q503116"
+    },
+    {
+        "da": "Rødovre Kommune",
+        "en": "Rødovre Municipality",
+        "item": "Q503097"
+    },
+    {
+        "da": "Furesø Kommune",
+        "en": "Furesø Municipality",
+        "item": "Q503138"
+    },
+    {
+        "da": "Stevns Kommune",
+        "en": "Stevns Municipality",
+        "item": "Q503153"
+    },
+    {
+        "da": "Holbæk Kommune",
+        "en": "Holbæk Municipality",
+        "item": "Q503159"
+    },
+    {
+        "da": "Jammerbugt Kommune",
+        "en": "Jammerbugt Municipality",
+        "item": "Q503222"
+    },
+    {
+        "da": "Struer Kommune",
+        "en": "Struer Municipality",
+        "item": "Q503227"
+    },
+    {
+        "da": "Frederikssund Kommune",
+        "en": "Frederikssund Municipality",
+        "item": "Q503232"
+    },
+    {
+        "da": "Faxe Kommune",
+        "en": "Faxe Municipality",
+        "item": "Q505000"
+    },
+    {
+        "da": "Københavns Kommune",
+        "en": "Copenhagen Municipality",
+        "item": "Q504125"
+    },
+    {
+        "da": "Greve Kommune",
+        "en": "Greve Municipality",
+        "item": "Q504977"
+    },
+    {
+        "da": "Køge Kommune",
+        "en": "Køge Municipality",
+        "item": "Q504664"
+    },
+    {
+        "da": "Halsnæs Kommune",
+        "en": "Halsnæs Municipality",
+        "item": "Q505130"
+    },
+    {
+        "da": "Silkeborg Kommune",
+        "en": "Silkeborg Municipality",
+        "item": "Q505151"
+    },
+    {
+        "da": "Egedal Kommune",
+        "en": "Egedal Municipality",
+        "item": "Q505113"
+    },
+    {
+        "da": "Norddjurs Kommune",
+        "en": "Norddjurs Municipality",
+        "item": "Q505156"
+    },
+    {
+        "da": "Langeland Kommune",
+        "en": "Langeland Municipality",
+        "item": "Q506647"
+    },
+    {
+        "da": "Lejre Kommune",
+        "en": "Lejre Municipality",
+        "item": "Q505369"
+    },
+    {
+        "da": "Holstebro Kommune",
+        "en": "Holstebro Municipality",
+        "item": "Q506109"
+    },
+    {
+        "da": "Næstved Kommune",
+        "en": "Naestved Municipality",
+        "item": "Q506716"
+    },
+    {
+        "da": "Herning Kommune",
+        "en": "Herning Municipality",
+        "item": "Q506877"
+    },
+    {
+        "da": "Roskilde Kommune",
+        "en": "Roskilde Municipality",
+        "item": "Q510810"
+    },
+    {
+        "da": "Hjørring Kommune",
+        "en": "Hjørring Municipality",
+        "item": "Q511214"
+    },
+    {
+        "da": "Brønderslev Kommune",
+        "en": "Brønderslev Municipality",
+        "item": "Q511376"
+    },
+    {
+        "da": "Guldborgsund Kommune",
+        "en": "Guldborgsund Municipality",
+        "item": "Q510997"
+    },
+    {
+        "da": "Vesthimmerlands Kommune",
+        "en": "Vesthimmerland Municipality",
+        "item": "Q511975"
+    },
+    {
+        "da": "Helsingør Kommune",
+        "en": "Helsingør Municipality",
+        "item": "Q511546"
+    },
+    {
+        "da": "Rudersdal Kommune",
+        "en": "Rudersdal Municipality",
+        "item": "Q511949"
+    },
+    {
+        "da": "Horsens Kommune",
+        "en": "Horsens Municipality",
+        "item": "Q512064"
+    },
+    {
+        "da": "Randers Kommune",
+        "en": "Randers Municipality",
+        "item": "Q512457"
+    },
+    {
+        "da": "Mariagerfjord Kommune",
+        "en": "Mariagerfjord Municipality",
+        "item": "Q512528"
+    },
+    {
+        "da": "Hvidovre Kommune",
+        "en": "Hvidovre Municipality",
+        "item": "Q512562"
+    },
+    {
+        "da": "Hørsholm Kommune",
+        "en": "Hørsholm Municipality",
+        "item": "Q512540"
+    },
+    {
+        "da": "Syddjurs Kommune",
+        "en": "Syddjurs Municipality",
+        "item": "Q512581"
+    },
+    {
+        "da": "Favrskov Kommune",
+        "en": "Favrskov Municipality",
+        "item": "Q512550"
+    },
+    {
+        "da": "Samsø Kommune",
+        "en": "Samsø Municipality",
+        "item": "Q513256"
+    },
+    {
+        "da": "Ringkøbing-Skjern Kommune",
+        "en": "Ringkøbing-Skjern Municipality",
+        "item": "Q514777"
+    },
+    {
+        "da": "Ikast-Brande Kommune",
+        "en": "Ikast-Brande Municipality",
+        "item": "Q512595"
+    },
+    {
+        "da": "Hedensted Kommune",
+        "en": "Hedensted Municipality",
+        "item": "Q515986"
+    },
+    {
+        "da": "Kerteminde Kommune",
+        "en": "Kerteminde Municipality",
+        "item": "Q612488"
+    },
+    {
+        "da": "Vallensbæk Kommune",
+        "en": "Vallensbæk Municipality",
+        "item": "Q514844"
+    },
+    {
+        "da": "Esbjerg Kommune",
+        "en": "Esbjerg Municipality",
+        "item": "Q645747"
+    },
+    {
+        "da": "Dragør Kommune",
+        "en": "Dragør Municipality",
+        "item": "Q838823"
+    },
+    {
+        "da": "Odsherred Kommune",
+        "en": "Odsherred Municipality",
+        "item": "Q1425064"
+    },
+    {
+        "da": "Lolland Kommune",
+        "en": "Lolland Municipality",
+        "item": "Q670153"
+    },
+    {
+        "da": "Thisted Kommune",
+        "en": "Thisted Municipality",
+        "item": "Q7715809"
+    },
+    {
+        "da": "Bornholms Regionskommune",
+        "en": "Bornholm Regional Municipality",
+        "item": "Q2598329"
+    },
+    {
+        "da": "Tønder Kommune",
+        "en": "Tønder Municipality",
+        "item": "Q3162907"
+    },
+    {
+        "da": "Frederiksberg Kommune",
+        "en": "Frederiksberg Municipality",
+        "item": "Q2488464"
+    },
+    {
+        "da": "Skanderborg Kommune",
+        "en": "Skanderborg Municipality",
+        "item": "Q7725510"
+    }
+]
