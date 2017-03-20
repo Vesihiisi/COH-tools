@@ -5,54 +5,84 @@ import importer_utils as utils
 class DkFortidsDa(Monument):
 
     def update_labels(self):
-        """
-        TODO: Naming things!
-        See:
-        https://da.wikipedia.org/wiki/Fredede_fortidsminder_i_Ikast-Brande_Kommune
-        The monuments don't have unique names, stednavn
-        is a general placename.
-        Use the description field to provide better info:
-        'rundhøj i Ikast-Brande kommune'
-        """
+        """Set Danish label of the object."""
         self.add_label("da", utils.remove_markup(self.stednavn))
 
     def update_descriptions(self):
+        """
+        Set descriptions of the object.
+
+        All the objects have a "type" field.
+        Use it in connection with the municipality:
+        "skanse i Nyborg Kommune"
+        """
+        mun_dict = self.data_files["municipalities"]
         monument_type = utils.remove_markup(self.type).lower()
-        municipality = utils.remove_markup(self.kommune)
-        description_da = "{} i {}".format(monument_type, municipality)
+        municipality_da = utils.remove_markup(self.kommune)
+        description_da = "{} i {}".format(monument_type, municipality_da)
         self.add_description("da", description_da)
+        try:
+            location_en = [x["en"] for x in mun_dict if x["da"] == municipality_da][0]
+        except IndexError:
+            location_en = "Denmark"
+        description_en = "ancient monument in {}".format(location_en)
+        self.add_description("en", description_en)
+        self.add_description("sv", "fornlämning i Danmark")
 
     def set_adm_location(self):
+        """
+        Set municipality of the object.
+
+        Note: All distinct values in this column are wikilinked
+        and in the form "[[Allerød Kommune]]".
+        For safety, compare with offline list of Danish municipalities.
+        """
+        mun_dict = self.data_files["municipalities"]
         if self.has_non_empty_attribute("kommune"):
             if utils.count_wikilinks(self.kommune) == 1:
-                adm_location = utils.q_from_first_wikilink("da", self.kommune)
-                self.add_statement("located_adm", adm_location)
+                try:
+                    adm_q = utils.q_from_first_wikilink(
+                        "da", self.kommune)
+                    municipality = [x["item"] for x in mun_dict if x["item"] == adm_q][0]
+                    ref = self.wlm_source
+                    self.add_statement("located_adm", municipality, refs=[ref])
+                except IndexError:
+                    self.add_to_report("kommune", self.kommune)
 
     def set_type(self):
+        """
+        Set specific type of the object.
+
+        https://www.wikidata.org/wiki/Wikidata:WikiProject_WLM/Mapping_tables/dk-fortidsminder_(da)/types
+        If parsed successfully, substitute the default "ancient monument".
+        """
         if self.has_non_empty_attribute("type"):
             table = self.data_files["types"]["mappings"]
             try:
                 special_type = [table[x]["items"]
                                 for x in table
                                 if x == self.type][0]
-                self.substitute_statement("is", special_type)
+                ref = self.wlm_source
+                self.substitute_statement("is", special_type, refs=[ref])
             except IndexError:
-                return
+                self.add_to_report("type", self.type)
 
-    def set_inception(self):
+    def set_monuments_all_id(self):
         """
-        TODO
-        these are very broad...
-        basically "prehistoric time", "modern time"
-        is this even useful?
+        Map which column name in specific table
+        is used as ID in monuments_all.
         """
-        if self.has_non_empty_attribute("datering"):
-            if len(utils.get_wikilinks(self.datering)) == 1:
-                print(self.datering)
-                print(utils.q_from_first_wikilink("da", self.datering))
+        self.monuments_all_id = str(self.systemnummer)
 
     def __init__(self, db_row_dict, mapping, data_files, existing):
         Monument.__init__(self, db_row_dict, mapping, data_files, existing)
+        self.set_monuments_all_id()
+        self.set_changed()
+        self.wlm_source = self.create_wlm_source(self.monuments_all_id)
+        self.set_country()
+        self.set_source()
+        self.set_registrant_url()
+        self.set_is()
         self.update_labels()
         self.update_descriptions()
         self.exists("da")
@@ -61,10 +91,4 @@ class DkFortidsDa(Monument):
         self.set_coords(("lat", "lon"))
         self.set_adm_location()
         self.set_type()
-        # self.set_inception()
-        # self.set_location()
-        # self.set_sagsnr()
-        # self.set_address()
-        # self.set_inception()
-        # self.print_wd()
         self.exists_with_prop(mapping)
