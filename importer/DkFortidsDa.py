@@ -76,7 +76,7 @@ class DkFortidsDa(Monument):
 
     def set_id(self):
         """Set ancient monument ID (P3596)"""
-        danish_id = self.systemnummer
+        danish_id = str(self.systemnummer)
         ref = self.wlm_source
         self.add_statement("danish_ancient_monument_id", danish_id, refs=[ref])
 
