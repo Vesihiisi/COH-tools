@@ -9,9 +9,9 @@
         "name": "ancient monument"
     },
     "heritage": {
-        "comment": "This is the same as for dk-bygninger... The Q has a very general definition, not specifying building/something else",
-        "item": "Q21436546",
-        "name": "monument on Kulturstyrelsen register"
+        "comment": "",
+        "item": "Q12312385",
+        "name": "protected ancient monument in Denmark"
     },
     "language": "da",
     "table_name": "dk-fortids",
