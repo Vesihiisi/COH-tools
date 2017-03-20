@@ -61,7 +61,7 @@ class DkFortidsDa(Monument):
             try:
                 special_type = [table[x]["items"]
                                 for x in table
-                                if x == self.type][0]
+                                if x == self.type][0][0]
                 ref = self.wlm_source
                 self.substitute_statement("is", special_type, refs=[ref])
             except IndexError:
@@ -74,11 +74,18 @@ class DkFortidsDa(Monument):
         """
         self.monuments_all_id = str(self.systemnummer)
 
+    def set_id(self):
+        """Set ancient monument ID (P3596)"""
+        danish_id = self.systemnummer
+        ref = self.wlm_source
+        self.add_statement("danish_ancient_monument_id", danish_id, refs=[ref])
+
     def __init__(self, db_row_dict, mapping, data_files, existing):
         Monument.__init__(self, db_row_dict, mapping, data_files, existing)
         self.set_monuments_all_id()
         self.set_changed()
         self.wlm_source = self.create_wlm_source(self.monuments_all_id)
+        self.set_heritage()
         self.set_country()
         self.set_source()
         self.set_registrant_url()
@@ -91,4 +98,5 @@ class DkFortidsDa(Monument):
         self.set_coords(("lat", "lon"))
         self.set_adm_location()
         self.set_type()
+        self.set_id()
         self.exists_with_prop(mapping)
