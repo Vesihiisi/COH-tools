@@ -388,6 +388,12 @@ def date_to_dict(datestring, dateformat):
 
 
 def dict_to_iso_date(date_dict):
+    """
+    Convert pywikiboty-style date dictionary
+    to ISO string ("2002-10-23").
+
+    @param date_dict: dictionary like {"year" : 2002, "month" : 10, "day" : 23}
+    """
     iso_date = ""
     if "year" in date_dict:
         iso_date += str(date_dict["year"])
