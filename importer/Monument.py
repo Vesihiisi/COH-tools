@@ -263,10 +263,16 @@ class Monument(object):
             wd_item = utils.q_from_wikipedia(
                 language, getattr(self, article_keyword))
             return wd_item
+        else:
+            return None
+
+    def exists_with_wd_item(self, wd_item_keyword="wd_item"):
+        if self.has_non_empty_attribute(wd_item_keyword):
+            return getattr(wd_item_keyword)
+        else:
+            return None
 
     def exists_with_prop(self, mapping):
-        if self.existing is None:
-            return
         unique_prop = mapping.get_unique_prop()
         base = self.wd_item["statements"]
         if unique_prop in base:
@@ -276,6 +282,10 @@ class Monument(object):
                 return wd_item
             else:
                 return None
+
+    def in_known_items(self, wd_item):
+        """Check whether given item is on the list of items with certain prop"""
+        return wd_item in self.existing
 
     def construct_wd_item(self, mapping, data_files=None):
         self.wd_item = {}
