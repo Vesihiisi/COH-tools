@@ -226,12 +226,6 @@ class Monument(object):
         else:
             return False
 
-    def exists(self, language, article_keyword="monument_article"):
-        if self.has_non_empty_attribute(article_keyword):
-            wd_item = utils.q_from_wikipedia(
-                language, getattr(self, article_keyword))
-            self.set_wd_item(wd_item)
-
     def set_changed(self):
         if self.changed:
             self.wd_item["changed"] = self.changed
@@ -262,6 +256,14 @@ class Monument(object):
                 "reference_url": {"prop": prop_reference_url,
                                   "value": self.wlm_url}}
 
+    def exists_with_monument_article(self,
+                                     language,
+                                     article_keyword="monument_article"):
+        if self.has_non_empty_attribute(article_keyword):
+            wd_item = utils.q_from_wikipedia(
+                language, getattr(self, article_keyword))
+            return wd_item
+
     def exists_with_prop(self, mapping):
         if self.existing is None:
             return
@@ -271,23 +273,9 @@ class Monument(object):
             val_to_check = base[unique_prop][0]['value']
             if val_to_check in self.existing:
                 wd_item = self.existing[val_to_check]
-                print("Wikidata has item with {} = {}. Connecting with item {}.".format(
-                    unique_prop, val_to_check, wd_item))
-                # Check whether it already has self.wd_item
-                # from monument_article.
-                # This of course assumes that self.exist is run earlier.
-                # If it's a different one,
-                wd_item_from_monument_article = self.wd_item["wd-item"]
-                if wd_item != wd_item_from_monument_article:
-                    # different Q-numbers from monuments_all and
-                    # unique property
-                    self.wd_item["upload"] = False
-                else:
-                    pass  # match
-                self.set_wd_item(wd_item)
+                return wd_item
             else:
-                print("There's no item with {} = {} on Wikidata.".format(
-                    unique_prop, val_to_check))
+                return None
 
     def construct_wd_item(self, mapping, data_files=None):
         self.wd_item = {}
