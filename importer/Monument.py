@@ -66,9 +66,11 @@ class Monument(object):
                 elif "quantity_value" in value:
                     value_to_print += str(value["quantity_value"])
                     if "unit" in value:
-                        value_to_print += " " + utils.wd_template("Q", value["unit"])
+                        value_to_print += " " + \
+                            utils.wd_template("Q", value["unit"])
                 elif "time_value" in value:
-                    value_to_print += utils.dict_to_iso_date(value["time_value"])
+                    value_to_print += utils.dict_to_iso_date(
+                        value["time_value"])
                 else:
                     value_to_print += str(value)
                 quals = claim["quals"]
@@ -259,6 +261,7 @@ class Monument(object):
     def exists_with_monument_article(self,
                                      language,
                                      article_keyword="monument_article"):
+        """Check whether the data object has anythin in the monument_article field."""
         if self.has_non_empty_attribute(article_keyword):
             wd_item = utils.q_from_wikipedia(
                 language, getattr(self, article_keyword))
@@ -267,12 +270,17 @@ class Monument(object):
             return None
 
     def exists_with_wd_item(self, wd_item_keyword="wd_item"):
-        if self.has_non_empty_attribute(wd_item_keyword):
-            return getattr(wd_item_keyword)
+        """Check whether the data object has anything in the 'wd_item' field."""
+        if wd_item_keyword in self.raw_data:
+            return self.raw_data[wd_item_keyword]
         else:
             return None
 
     def exists_with_prop(self, mapping):
+        """
+        Check whether there already exists an item
+        with the same unique ID as that in the data object.
+        """
         unique_prop = mapping.get_unique_prop()
         base = self.wd_item["statements"]
         if unique_prop in base:
@@ -285,9 +293,20 @@ class Monument(object):
 
     def in_known_items(self, wd_item):
         """Check whether given item is on the list of items with certain prop"""
-        return wd_item in self.existing
+        return wd_item in self.existing.items()
+
+    def find_matching_wikidata(self, mapping):
+        item = self.exists_with_prop(mapping)
+        if not item:
+            item = self.exists_with_wd_item()
+            if not item:
+                item = self.exists_with_monument_article(self.mapping["language"])
+            if item and self.in_known_items(item):
+                self.upload = False
+        return item
 
     def construct_wd_item(self, mapping, data_files=None):
+        self.mapping = mapping.file_content
         self.wd_item = {}
         self.wd_item["upload"] = True
         self.wd_item["statements"] = {}
@@ -295,7 +314,6 @@ class Monument(object):
         self.wd_item["aliases"] = {}
         self.wd_item["descriptions"] = {}
         self.wd_item["wd-item"] = None
-        self.mapping = mapping.file_content
 
     def print_datafiles_titles(self):
         """Print out the keys in self.data_files."""
@@ -303,6 +321,7 @@ class Monument(object):
             print(title)
 
     def __init__(self, db_row_dict, mapping, data_files, existing):
+        self.raw_data = db_row_dict
         self.props = utils.load_json(
             path.join(MAPPING_DIR, "props_general.json"))
         self.common_items = utils.load_json(
@@ -314,9 +333,9 @@ class Monument(object):
             if not k.startswith("m_spec."):
                 setattr(self, k.replace("-", "_"), v)
         self.monuments_all_id = ""
-        self.construct_wd_item(mapping)
         self.data_files = data_files
         self.existing = existing
+        self.construct_wd_item(mapping)
         self.problem_report = {}
 
     def get_fields(self):
