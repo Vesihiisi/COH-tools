@@ -94,10 +94,18 @@ class Monument(object):
         table = table + "----------\n"
         return table
 
-    def add_statement(self, prop_name, value, quals={}, refs=[]):
+    def add_statement(self, prop_name, value, quals=None, refs=None):
         """
-        If prop already exists, this will append another value to the array,
+        Add a statement to the data object.
+
+        If the given property already exists, this will
+        append another value to the array,
         i.e. two statements with the same prop.
+
+        :param prop_name: name of the property, as stated in the props library file
+        :param value: the value of the property
+        :param quals: a dictionary of qualifiers
+        :param refs: a list of references
         """
         base = self.wd_item["statements"]
         prop = self.props[prop_name]
@@ -117,7 +125,7 @@ class Monument(object):
         if prop in base:
             del base[prop]
 
-    def substitute_statement(self, prop_name, value, quals={}, refs=[]):
+    def substitute_statement(self, prop_name, value, quals=None, refs=None):
         """
         Instead of adding to the array, replace the statement.
         This is so that instances of child classes
