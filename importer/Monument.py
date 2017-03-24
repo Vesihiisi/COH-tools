@@ -116,6 +116,12 @@ class Monument(object):
             for k in quals:
                 prop_name = self.props[k]
                 qualifiers[prop_name] = quals[k]
+        if refs is None or refs is True:
+            refs = self.wlm_source
+        elif refs is False:
+            refs = None
+        if refs and not isinstance(refs, list):
+            refs = [refs]
         statement = {"value": value, "quals": qualifiers, "refs": refs}
         base[prop].append(statement)
 
@@ -164,8 +170,7 @@ class Monument(object):
         code = self.mapping["country_code"].lower()
         country = [item["item"]
                    for item in self.adm0 if item["code"].lower() == code][0]
-        ref = self.wlm_source
-        self.add_statement("country", country, refs=[ref])
+        self.add_statement("country", country)
 
     def set_is(self):
         default_is = self.mapping["default_is"]
@@ -177,8 +182,7 @@ class Monument(object):
     def set_heritage(self):
         if "heritage" in self.mapping:
             heritage = self.mapping["heritage"]
-            ref = self.wlm_source
-            self.add_statement("heritage_status", heritage["item"], refs=[ref])
+            self.add_statement("heritage_status", heritage["item"])
 
     def set_coords(self, coord_keywords_tuple):
         lat = coord_keywords_tuple[0]
@@ -187,17 +191,18 @@ class Monument(object):
             if self.lat == 0 and self.lon == 0:
                 return
             else:
-                ref = self.wlm_source
                 self.add_statement(
-                    "coordinates", (getattr(self, lat), getattr(self, lon)), refs=[ref])
+                    "coordinates", (getattr(self, lat), getattr(self, lon)))
 
     def set_image(self, image_keyword="image"):
         if self.has_non_empty_attribute(image_keyword):
-            self.add_statement("image", getattr(self, image_keyword))
+            self.add_statement("image", getattr(self, image_keyword),
+                               refs=False)
 
     def set_commonscat(self, keyword="commonscat"):
         if self.has_non_empty_attribute(keyword):
-            self.add_statement("commonscat", getattr(self, keyword))
+            self.add_statement("commonscat", getattr(self, keyword),
+                               refs=False)
 
     def set_registrant_url(self):
         if self.has_non_empty_attribute("registrant_url"):
@@ -216,9 +221,8 @@ class Monument(object):
             processed_address = utils.get_street_address(
                 getattr(self, address_keyword), language)
             if processed_address is not None:
-                ref = self.wlm_source
                 self.add_statement(
-                    "located_street", processed_address, refs=[ref])
+                    "located_street", processed_address)
             else:
                 self.add_to_report(
                     address_keyword, getattr(self, address_keyword))
