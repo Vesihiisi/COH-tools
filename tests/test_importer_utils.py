@@ -155,6 +155,21 @@ class TestDatetimeMethods(unittest.TestCase):
         output = {"year": 1999}
         self.assertEqual(utils.date_to_dict(text, template), output)
 
+    def test_dict_to_iso_date_full(self):
+        date_dict = {"year": 1999, "month": 10, "day": 19}
+        output = "1999-10-19"
+        self.assertEqual(utils.dict_to_iso_date(date_dict), output)
+
+    def test_dict_to_iso_date_year(self):
+        date_dict = {"year": 1999}
+        output = "1999"
+        self.assertEqual(utils.dict_to_iso_date(date_dict), output)
+
+    def test_dict_to_iso_date_year_month(self):
+        date_dict = {"year": 1999, "month": 10}
+        output = "1999-10"
+        self.assertEqual(utils.dict_to_iso_date(date_dict), output)
+
 
 class TestWikitext(unittest.TestCase):
 
