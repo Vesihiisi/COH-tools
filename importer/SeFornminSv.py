@@ -135,9 +135,13 @@ class SeFornminSv(Monument):
                     ref = self.wlm_source
                     self.add_statement("location", wd_item, refs=[ref])
         if self.has_non_empty_attribute("socken"):
-            ref = self.wlm_source
-            self.add_statement("location", self.get_socken(
-                self.socken, self.landskap), refs=[ref])
+            socken = self.get_socken(self.socken, self.landskap)
+            if socken is not None:
+                ref = self.wlm_source
+                self.add_statement("location", socken, refs=[ref])
+            else:
+                raw_socken = "{} ({})".format(self.socken, self.landskap)
+                self.add_to_report("socken", raw_socken)
 
     def set_monuments_all_id(self):
         """
