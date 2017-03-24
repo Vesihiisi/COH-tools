@@ -49,8 +49,7 @@ class SeArbetslSv(Monument):
         try:
             municipality = [x["item"] for x in municip_dict if x[
                 "en"].lower() == pattern][0]
-            ref = self.wlm_source
-            self.add_statement("located_adm", municipality, refs=[ref])
+            self.add_statement("located_adm", municipality)
             swedish_name = [x["sv"]
                             for x in municip_dict
                             if x["item"] == municipality][0]
@@ -78,13 +77,12 @@ class SeArbetslSv(Monument):
         if self.has_non_empty_attribute("typ"):
             table = self.data_files["types"]["mappings"]
             type_to_search_for = self.typ.lower()
-            ref = self.wlm_source
             try:
                 special_type = [table[x]["items"]
                                 for x in table
                                 if x.lower() == type_to_search_for][0]
                 for special in special_type:
-                    self.add_statement("is", special, refs=[ref])
+                    self.add_statement("is", special)
             except IndexError:
                 self.add_to_report("typ", self.typ)
         return
@@ -104,8 +102,7 @@ class SeArbetslSv(Monument):
             try:
                 location = [x["item"] for x in settlements_dict if x[
                     "sv"].strip() == utils.remove_markup(self.ort)][0]
-                ref = self.wlm_source
-                self.add_statement("location", location, refs=[ref])
+                self.add_statement("location", location)
             except IndexError:
                 self.add_to_report("ort", self.ort)
 
@@ -115,7 +112,7 @@ class SeArbetslSv(Monument):
         """
         if self.has_non_empty_attribute("id"):
             ref = self.arbetsam_source
-            self.add_statement("arbetsam", self.id, refs=[ref])
+            self.add_statement("arbetsam", self.id, refs=ref)
 
     def set_monuments_all_id(self):
         """
@@ -133,7 +130,7 @@ class SeArbetslSv(Monument):
         """
         arbetslivsmuseum = "Q10416961"
         ref = self.arbetsam_source
-        self.add_statement("is", arbetslivsmuseum, refs=[ref])
+        self.add_statement("is", arbetslivsmuseum, refs=ref)
 
     def __init__(self, db_row_dict, mapping, data_files, existing):
         Monument.__init__(self, db_row_dict, mapping, data_files, existing)
