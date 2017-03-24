@@ -156,6 +156,9 @@ class SeFornminSv(Monument):
         """
         self.monuments_all_id = self.id
 
+    def exists_with_monument_article(self, language):
+        return super().exists_with_monument_article("sv", "artikel")
+
     def __init__(self, db_row_dict, mapping, data_files, existing):
         Monument.__init__(self, db_row_dict, mapping, data_files, existing)
         self.set_monuments_all_id()
@@ -174,7 +177,6 @@ class SeFornminSv(Monument):
         self.set_type()
         self.set_location()
         self.set_inception()
-        # self.exists("sv", "artikel")
         self.set_coords(("lat", "lon"))
         self.set_commonscat()
-        # self.exists_with_prop(mapping)
+        self.set_wd_item(self.find_matching_wikidata(mapping))
