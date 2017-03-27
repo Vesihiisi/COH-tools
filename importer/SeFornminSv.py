@@ -120,6 +120,8 @@ class SeFornminSv(Monument):
 
     def set_location(self):
         """
+        Set location (P276) of object.
+
         If there's a 'plats' and it's wikilinked use it as location:
             [[Tyresta]]
         It's just a handful of items that have it, though.
@@ -127,13 +129,14 @@ class SeFornminSv(Monument):
         so use that as location as well.
         """
         if self.has_non_empty_attribute("plats"):
-            if "[[" in self.plats:
-                wikilinks = utils.get_wikilinks(self.plats)
-                if len(wikilinks) == 1:
-                    target_page = wikilinks[0].title
-                    wd_item = utils.q_from_wikipedia("sv", target_page)
-                    ref = self.wlm_source
-                    self.add_statement("location", wd_item, refs=[ref])
+            wikilinks = utils.get_wikilinks(self.plats)
+            if len(wikilinks) == 1:
+                target_page = wikilinks[0].title
+                wd_item = utils.q_from_wikipedia("sv", target_page)
+                ref = self.wlm_source
+                self.add_statement("location", wd_item, refs=[ref])
+            else:
+                self.add_to_report("plats", self.plats)
         if self.has_non_empty_attribute("socken"):
             socken = self.get_socken(self.socken, self.landskap)
             if socken is not None:
