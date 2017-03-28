@@ -89,9 +89,19 @@ class SeBbrSv(Monument):
                 self.add_to_report("protection_type", bbr_type)
         else:
             qualifier = None
-        source_item = "Q13406268" #sandbox!
-        kulturarv_source = self.create_stated_in_source(source_item, "2013-11-28")
-        self.add_statement("heritage_status", type_q, refs=[kulturarv_source])
+        source_item = "Q13406268"  # sandbox!
+        today = utils.today_dict()
+        prop_reference_url = self.props["reference_url"]
+        prop_date = self.props["publication_date"]
+        prop_stated = self.props["stated_in"]
+        prop_reference_url = self.props["reference_url"]
+        kulturarv_source = {"source":
+                            {"prop": prop_stated, "value": source_item},
+                            "published": {"prop": prop_date, "value": today},
+                            "reference_url": {"prop": prop_reference_url,
+                                              "value": url}}
+        self.add_statement(
+            "heritage_status", type_q, qualifier, refs=[kulturarv_source])
 
     def set_function(self):
         """
@@ -233,3 +243,4 @@ class SeBbrSv(Monument):
         self.set_location()
         self.set_function()
         self.exists_with_prop(mapping)
+        self.print_wd()
