@@ -49,38 +49,58 @@ class SeBbrSv(Monument):
         querying the source database via their API.
         """
         protection_date = False
-        url = "http://kulturarvsdata.se/" + \
-            self.wd_item["statements"][
-                self.props["cultural_heritage_sweden"]][0]["value"]
+        kulturarv_id = self.wd_item["statements"][
+            self.props["cultural_heritage_sweden"]][0]["value"]
+        url = "http://kulturarvsdata.se/{}".format(kulturarv_id)
+        # http://kulturarvsdata.se/raa/bbr/21300000023251
         url_list = url.split("/")
         url_list.insert(-1, "jsonld")
         url = "/".join(url_list)
+        # Request data in json format
+        # http://kulturarvsdata.se/raa/bbr/jsonld/21300000023251
         data = requests.get(url).json()
         for element in data["@graph"]:
             if "ns5:spec" in element:
                 bbr_type = element["ns5:spec"]
+                print(bbr_type)
                 if bbr_type.startswith("Kyrkligt kulturminne"):
+                    # Kyrkligt kulturminne. 4 kap. KML -- these don't seem to have dates
                     type_q = "Q24284073"
                 elif bbr_type.startswith("Byggnadsminne"):
+                    # Byggnadsminne (BM) 3 kap. KML (1977-02-25)
                     type_q = "Q24284072"
                     protection_date = bbr_type.split("(")[-1][:-1]
                 elif bbr_type.startswith("Statligt byggnadsminne"):
+                    # Statligt byggnadsminne (SBM). Förordning (2013:558) (1935-01-25)
                     type_q = "Q24284071"
                     protection_date = bbr_type.split("(")[-1][:-1]
-        """
-        The original set_heritage() added an empty claim
-        because there's no heritage status specified in mapping file,
-        so we start by removing that empty claim.
-        """
+        # The original set_heritage() added an empty claim
+        # because there's no heritage status specified in mapping file,
+        # so we start by removing that empty claim.
         self.remove_statement("heritage_status")
         if protection_date:
             # 1969-01-31
-            date_dict = utils.date_to_dict(protection_date, "%Y-%m-%d")
-            qualifier = {"start_time":
-                         {"time_value": date_dict}}
+            print(protection_date)
+            try:
+                date_dict = utils.date_to_dict(protection_date, "%Y-%m-%d")
+                qualifier = {"start_time":
+                             {"time_value": date_dict}}
+            except ValueError:
+                self.add_to_report("protection_type", bbr_type)
         else:
             qualifier = None
-        self.add_statement("heritage_status", type_q, qualifier)
+        source_item = "Q13406268" #sandbox!
+        kulturarv_source = self.create_stated_in_source(source_item, "2013-11-28")
+        self.add_statement("heritage_status", type_q, refs=[kulturarv_source])
+
+    def set_function(self):
+        """
+        TODO
+        examples:
+        https://gist.github.com/Vesihiisi/f637916ea1d80a4be5d71a3adf6e2dc2
+        """
+        # functions = get_rid_of_brackets(self.funktion).lower().split(",")
+        return
 
     def set_architect(self):
         """
@@ -94,12 +114,9 @@ class SeBbrSv(Monument):
             for name in architects:
                 wp_page = name.title
                 q_item = utils.q_from_wikipedia("sv", wp_page)
-                if q_item is not None:
+                if q_item:
                     if utils.is_whitelisted_P31(q_item, ["Q5"]):
-                        ref = self.wlm_source
-                        self.add_statement("architect", q_item, refs=[ref])
-                    else:
-                        self.add_to_report("arkitekt", self.arkitekt)
+                        self.add_statement("architect", q_item)
 
     def set_location(self):
         """
@@ -114,10 +131,7 @@ class SeBbrSv(Monument):
         if self.has_non_empty_attribute("plats"):
             if utils.count_wikilinks(self.plats) == 1:
                 location = utils.q_from_first_wikilink("sv", self.plats)
-                ref = self.wlm_source
-                self.add_statement("location", location, refs=[ref])
-            else:
-                self.add_to_report("plats", self.plats)
+                self.add_statement("location", location)
 
     def update_descriptions(self):
         """
@@ -138,12 +152,10 @@ class SeBbrSv(Monument):
         """
         extracted_no = utils.get_number_from_string(
             utils.get_text_inside_brackets(self.funktion))
-        if extracted_no is not None:
-            ref = self.wlm_source
+        if extracted_no:
             self.add_statement(
                 "has_parts_of_class", "Q41176",
-                {"quantity": {"quantity_value": extracted_no}},
-                refs=[ref])
+                {"quantity": {"quantity_value": extracted_no}})
 
     def set_adm_location(self):
         """
@@ -165,11 +177,10 @@ class SeBbrSv(Monument):
         try:
             municipality = [x["item"] for x in municip_dict if x[
                 "en"].lower() == pattern_en][0]
-            ref = self.wlm_source
-            self.add_statement("located_adm", municipality, refs=[ref])
+            self.add_statement("located_adm", municipality)
         except IndexError:
             print("Could not parse municipality: {}.".format(self.kommun))
-            self.add_to_report("kommun", self.kommun)
+            return
 
     def set_inception(self):
         """
@@ -183,13 +194,8 @@ class SeBbrSv(Monument):
         """
         if self.has_non_empty_attribute("byggar"):
             year_parsed = utils.parse_year(self.byggar)
-            if year_parsed is not None:
-                ref = self.wlm_source
-                self.add_statement("inception",
-                                   {"time_value": year_parsed},
-                                   refs=[ref])
-            else:
-                self.add_to_report("byggar", self.byggar)
+            if year_parsed:
+                self.add_statement("inception", {"time_value": year_parsed})
 
     def set_monuments_all_id(self):
         """
@@ -221,4 +227,5 @@ class SeBbrSv(Monument):
         self.set_adm_location()
         self.set_architect()
         self.set_location()
+        self.set_function()
         self.exists_with_prop(mapping)
