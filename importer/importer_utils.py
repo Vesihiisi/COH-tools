@@ -391,11 +391,12 @@ def today_dict():
     """Get today's date as pywikibot-ready dictionary."""
     return datetime_object_to_dict(datetime.date.today())
 
-
+  
 def dict_to_iso_date(date_dict):
     """
     Convert pywikiboty-style date dictionary
     to ISO string ("2002-10-23").
+
     @param date_dict: dictionary like
     {"year" : 2002, "month" : 10, "day" : 23}
     """

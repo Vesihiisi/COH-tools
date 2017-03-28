@@ -1,86 +1,326 @@
 {
     "mappings": {
-        "Stenkrets": {
+        "Stadsvall/Stadsmur": {
+            "count": "14",
             "items": [
-                "Q1935728"
-            ],
-            "count": "2079"
+                "Q16748868"
+            ]
+        },
+        "Kalkugn": {
+            "count": "6",
+            "items": [
+                "Q59772"
+            ]
+        },
+        "Gravhägnad": {
+            "count": "45",
+            "items": [
+                "Q28803060"
+            ]
+        },
+        "Hög": {
+            "count": "13464",
+            "items": [
+                "Q34023"
+            ]
+        },
+        "Fångstgrop": {
+            "count": "4",
+            "items": [
+                "Q1067958"
+            ]
+        },
+        "Kåta": {
+            "count": "1",
+            "items": [
+                "Q1629518"
+            ]
         },
         "Fornborg": {
+            "count": "1213",
             "items": [
                 "Q744099"
-            ],
-            "count": "1213"
-        },
-        "Fäbod": {
-            "items": [
-                "Q2082774"
-            ],
-            "count": "984"
+            ]
         },
         "Gravfält": {
+            "count": "17204",
             "items": [
                 "Q2593777"
-            ],
-            "count": "17204"
+            ]
         },
-        "Stensättning": {
-            "items": [
-                "Q2341654"
-            ],
-            "count": "60454"
-        },
-        "Borg": {
-            "items": [
-                "Q23413"
-            ],
-            "count": "264"
-        },
-        "Stridsvärn": {
-            "items": [
-                "Q91122"
-            ],
-            "count": "45"
-        },
-        "Gravklot": {
-            "items": [
-                "Q835624"
-            ],
-            "count": "25"
-        },
-        "Hällmålning": {
-            "items": [
-                "Q1211146"
-            ],
-            "count": "50"
-        },
-        "Röse": {
-            "items": [
-                "Q7321974"
-            ],
-            "count": "15648"
-        },
-        "Minnesmärke": {
-            "items": [
-                "Q4989906"
-            ],
-            "count": "326"
-        },
-        "Hällristning": {
+        "Bildristning, Medeltid/Historisk Tid": {
+            "count": "1",
             "items": [
                 "Q42195"
-            ],
-            "count": "17635"
+            ]
+        },
+        "Stensättning": {
+            "count": "60454",
+            "items": [
+                "Q2341654"
+            ]
         },
         "Kyrkstad": {
+            "count": "9",
             "items": [
                 "Q1743100"
-            ],
-            "count": "9"
+            ]
+        },
+        "Hällmålning": {
+            "count": "50",
+            "items": [
+                "Q1211146"
+            ]
+        },
+        "Runristning I Fast Häll": {
+            "count": "2",
+            "items": [
+                "Q10657813"
+            ]
+        },
+        "Stridsvärn": {
+            "count": "45",
+            "items": [
+                "Q91122"
+            ]
+        },
+        "Grav Övrig": {
+            "count": "26",
+            "items": [
+                "Q10508452"
+            ]
+        },
+        "Hällristning": {
+            "count": "17635",
+            "items": [
+                "Q42195"
+            ]
+        },
+        "Kvarn": {
+            "count": "242",
+            "items": [
+                "Q44494"
+            ]
+        },
+        "Borg": {
+            "count": "264",
+            "items": [
+                "Q23413"
+            ]
+        },
+        "Runsten": {
+            "count": "1",
+            "items": [
+                "Q815241"
+            ]
+        },
+        "Kloster": {
+            "count": "36",
+            "items": [
+                "Q160742"
+            ]
+        },
+        "Fästning/Skans": {
+            "count": "288",
+            "items": [
+                "Q91203"
+            ]
+        },
+        "Ristning": {
+            "count": "1",
+            "items": [
+                "Q42195"
+            ]
+        },
+        "Avrättningsplats": {
+            "count": "1",
+            "items": [
+                "Q2151479"
+            ]
+        },
+        "Gravklot": {
+            "count": "25",
+            "items": [
+                "Q835624"
+            ]
+        },
+        "Terrassering": {
+            "count": "1",
+            "items": [
+                "Q838625"
+            ]
+        },
+        "Bildristning": {
+            "count": "59",
+            "items": [
+                "Q42195"
+            ]
+        },
+        "Stenkammargrav": {
+            "count": "1945",
+            "items": [
+                "Q164240"
+            ]
+        },
+        "Begravningsplats": {
+            "count": "649",
+            "items": [
+                "Q39614"
+            ]
+        },
+        "Lägenhetsbebyggelse": {
+            "count": "1056",
+            "items": [
+                "Q28803049"
+            ]
+        },
+        "Härd": {
+            "count": "2",
+            "items": [
+                "Q585473"
+            ]
+        },
+        "Boplats": {
+            "count": "8",
+            "items": [
+                "Q1708422"
+            ]
+        },
+        "Röjningsröse": {
+            "count": "1",
+            "items": [
+                "Q1820704"
+            ]
+        },
+        "Vägmärke": {
+            "count": "4",
+            "items": [
+                "Q170285"
+            ]
+        },
+        "Fäbod": {
+            "count": "984",
+            "items": [
+                "Q2082774"
+            ]
+        },
+        "Ristning, Medeltid/Historisk Tid": {
+            "count": "501",
+            "items": [
+                "Q42195"
+            ]
+        },
+        "Fossil Åkermark": {
+            "count": "2",
+            "items": [
+                "Q10498262"
+            ]
+        },
+        "Röse": {
+            "count": "15648",
+            "items": [
+                "Q7321974"
+            ]
+        },
+        "Grav- Och Boplatsområde": {
+            "count": "924",
+            "items": [
+                "Q10508453"
+            ]
+        },
+        "Runristning": {
+            "count": "1777",
+            "items": [
+                "Q10657813"
+            ]
+        },
+        "Grav Markerad Av Sten/Block": {
+            "count": "3581",
+            "items": [
+                "Q10508452"
+            ]
+        },
+        "Husgrund, Historisk Tid": {
+            "count": "465",
+            "items": [
+                "Q191360"
+            ]
+        },
+        "Minnesmärke": {
+            "count": "326",
+            "items": [
+                "Q4989906"
+            ]
+        },
+        "Hembygdsgård": {
+            "count": "1",
+            "items": [
+                "Q10520688"
+            ]
+        },
+        "Skålgropssten": {
+            "count": "1",
+            "items": [
+                "Q373661"
+            ]
+        },
+        "Fiskeläge": {
+            "count": "469",
+            "items": [
+                "Q1317251"
+            ]
+        },
+        "Brunn/Kallkälla": {
+            "count": "18",
+            "items": [
+                "Q43483"
+            ]
+        },
+        "Stenkrets": {
+            "count": "2079",
+            "items": [
+                "Q1935728"
+            ]
+        },
+        "Husgrund, Förhistorisk/Medeltida": {
+            "count": "3111",
+            "items": [
+                "Q191360"
+            ]
+        },
+        "Kyrka/Kapell": {
+            "count": "376",
+            "items": [
+                "Q16970"
+            ]
+        },
+        "Gravfält, Stensättning": {
+            "count": "6",
+            "items": [
+                "Q2593777"
+            ]
+        },
+        "Stenkistgrav": {
+            "count": "49",
+            "items": [
+                "Q1399576"
+            ]
+        },
+        "Husgrund, Bebyggelselämningar": {
+            "count": "1",
+            "items": [
+                "Q191360"
+            ]
+        },
+        "Stadsbefästning": {
+            "count": "18",
+            "items": [
+                "Q57821"
+            ]
         }
     },
     "@meta": {
-        "timestamp": "2016-12-22T14:49:42Z",
-        "permalink": "//www.wikidata.org/w/index.php?title=Wikidata%3AWikiProject_WLM/Mapping_tables/se-fornmin_%28sv%29/types&oldid=418771954"
+        "timestamp": "2017-02-19T15:37:30Z",
+        "permalink": "//www.wikidata.org/w/index.php?title=Wikidata%3AWikiProject_WLM/Mapping_tables/se-fornmin_%28sv%29/types&oldid=452233895"
     }
 }

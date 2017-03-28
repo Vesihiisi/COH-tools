@@ -62,7 +62,15 @@ class Monument(object):
                 value_to_print = ""
                 if utils.string_is_q_item(value):
                     value = utils.wd_template("Q", value)
-                value_to_print = value_to_print + str(value)
+                    value_to_print += str(value)
+                elif "quantity_value" in value:
+                    value_to_print += str(value["quantity_value"])
+                    if "unit" in value:
+                        value_to_print += " " + utils.wd_template("Q", value["unit"])
+                elif "time_value" in value:
+                    value_to_print += utils.dict_to_iso_date(value["time_value"])
+                else:
+                    value_to_print += str(value)
                 quals = claim["quals"]
                 refs = claim["refs"]
                 if len(quals) == 0:
