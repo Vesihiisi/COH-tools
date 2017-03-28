@@ -94,10 +94,10 @@ class SeBbrSv(Monument):
             "heritage_status", type_q, qualifier, refs=[kulturarv_source])
 
     def create_kulturarv_source(self, url):
-        source_item = "Q13406268"  # sandbox!
+        source_item = self.sources["bebyggelseregistret"]
         today = utils.today_dict()
         prop_reference_url = self.props["reference_url"]
-        prop_date = self.props["publication_date"]
+        prop_date = self.props["retrieved"]
         prop_stated = self.props["stated_in"]
         prop_reference_url = self.props["reference_url"]
         kulturarv_source = {"source":
