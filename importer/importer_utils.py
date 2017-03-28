@@ -387,6 +387,11 @@ def date_to_dict(datestring, dateformat):
     return date_dict
 
 
+def today_dict():
+    """Get today's date as pywikibot-ready dictionary."""
+    return datetime_object_to_dict(datetime.date.today())
+
+
 def append_line_to_file(text, filename):
     with open(filename, 'a') as f:
         f.write(text + "\n")
