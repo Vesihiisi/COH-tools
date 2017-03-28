@@ -58,7 +58,16 @@ class SeBbrSv(Monument):
         url = "/".join(url_list)
         # Request data in json format
         # http://kulturarvsdata.se/raa/bbr/jsonld/21300000023251
-        data = requests.get(url).json()
+        data = requests.get(url)
+        try:
+            data = data.json()
+        except ValueError:
+            # Got a jsondecodeerror once, on bbr: 21420000015942
+            # utils.get_bbr_link gives a None from it.
+            # If it occurs, skip the heritage statement,
+            # but the question is whether the item shouldn't be skipped...
+            self.add_to_report("kulturarv_url", url)
+            return
         for element in data["@graph"]:
             if "ns5:spec" in element:
                 bbr_type = element["ns5:spec"]
