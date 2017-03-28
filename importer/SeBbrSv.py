@@ -71,7 +71,6 @@ class SeBbrSv(Monument):
         for element in data["@graph"]:
             if "ns5:spec" in element:
                 bbr_type = element["ns5:spec"]
-                print(bbr_type)
                 if bbr_type.startswith("Kyrkligt kulturminne"):
                     # Kyrkligt kulturminne. 4 kap. KML -- these don't seem to have dates
                     type_q = "Q24284073"
@@ -89,7 +88,6 @@ class SeBbrSv(Monument):
         self.remove_statement("heritage_status")
         if protection_date:
             # 1969-01-31
-            print(protection_date)
             try:
                 date_dict = utils.date_to_dict(protection_date, "%Y-%m-%d")
                 qualifier = {"start_time":
@@ -153,18 +151,35 @@ class SeBbrSv(Monument):
 
     def set_location(self):
         """
-        TODO
-        This is the same as 'address' in monuments_all.
+        Set location or street address.
+
         There are some street addresses. Some are simple:
             Norra Murgatan 3
         Some are complex:
             Skolgatan 5, Västra Kyrkogatan 3
             Norra Murgatan 27, Uddens gränd 14-16
+
+        If self.plats consists of 1 wikilinked item,
+        get the WD item and cross check with the list of
+        known human settlements.
+
+        If it's not wikilinked text, try to extract an address.
         """
+        settlements_dict = self.data_files["settlements"]
         if self.has_non_empty_attribute("plats"):
             if utils.count_wikilinks(self.plats) == 1:
-                location = utils.q_from_first_wikilink("sv", self.plats)
-                self.add_statement("location", location)
+                location_q = utils.q_from_first_wikilink("sv", self.plats)
+                try:
+                    legit_location = [x["item"] for x in settlements_dict if x["item"] == location_q][0]
+                    self.add_statement("location", legit_location)
+                except IndexError:
+                    self.add_to_report("plats", self.plats)
+            elif utils.count_wikilinks(self.plats) == 0:
+                processed_address = utils.get_street_address(self.plats, "sv")
+                if processed_address:
+                    self.add_statement("located_street", processed_address)
+                else:
+                    self.add_to_report("plats", self.plats)
             else:
                 self.add_to_report("plats", self.plats)
 
