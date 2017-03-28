@@ -117,6 +117,8 @@ class SeBbrSv(Monument):
                 if q_item:
                     if utils.is_whitelisted_P31(q_item, ["Q5"]):
                         self.add_statement("architect", q_item)
+                    else:
+                        self.add_to_report("arkitekt", self.arkitekt)
 
     def set_location(self):
         """
@@ -132,6 +134,8 @@ class SeBbrSv(Monument):
             if utils.count_wikilinks(self.plats) == 1:
                 location = utils.q_from_first_wikilink("sv", self.plats)
                 self.add_statement("location", location)
+            else:
+                self.add_to_report("plats", self.plats)
 
     def update_descriptions(self):
         """
