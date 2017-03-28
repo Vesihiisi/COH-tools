@@ -86,7 +86,7 @@ class SeFornminSv(Monument):
             self.add_statement("located_adm", municipality, refs=[ref])
         except IndexError:
             print("Could not parse municipality: {}.".format(self.kommun))
-            return
+            self.add_to_report("kommun", self.kommun)
 
     def set_type(self):
         """
@@ -105,9 +105,10 @@ class SeFornminSv(Monument):
                 special_type = [table[x]["items"]
                                 for x in table
                                 if x.lower() == type_to_search_for][0][0]
-                self.substitute_statement("is", special_type)
+                ref = self.wlm_source
+                self.substitute_statement("is", special_type, refs=[ref])
             except IndexError:
-                return
+                self.add_to_report("typ", self.typ)
 
     def get_socken(self, socken_name, landskap_name):
         """
@@ -119,6 +120,8 @@ class SeFornminSv(Monument):
 
     def set_location(self):
         """
+        Set location (P276) of object.
+
         If there's a 'plats' and it's wikilinked use it as location:
             [[Tyresta]]
         It's just a handful of items that have it, though.
@@ -126,28 +129,22 @@ class SeFornminSv(Monument):
         so use that as location as well.
         """
         if self.has_non_empty_attribute("plats"):
-            if "[[" in self.plats:
-                wikilinks = utils.get_wikilinks(self.plats)
-                if len(wikilinks) == 1:
-                    target_page = wikilinks[0].title
-                    wd_item = utils.q_from_wikipedia("sv", target_page)
-                    ref = self.wlm_source
-                    self.add_statement("location", wd_item, refs=[ref])
+            wikilinks = utils.get_wikilinks(self.plats)
+            if len(wikilinks) == 1:
+                target_page = wikilinks[0].title
+                wd_item = utils.q_from_wikipedia("sv", target_page)
+                ref = self.wlm_source
+                self.add_statement("location", wd_item, refs=[ref])
+            else:
+                self.add_to_report("plats", self.plats)
         if self.has_non_empty_attribute("socken"):
-            ref = self.wlm_source
-            self.add_statement("location", self.get_socken(
-                self.socken, self.landskap), refs=[ref])
-
-    def set_inception(self):
-        """
-        TODO?
-        This is messy and not super prioritized...
-        Only a handful of items have it,
-        and it looks mostly like
-            folkvandringstid ca 400 - 550 e Kr
-            sentida
-        """
-        return
+            socken = self.get_socken(self.socken, self.landskap)
+            if socken is not None:
+                ref = self.wlm_source
+                self.add_statement("location", socken, refs=[ref])
+            else:
+                raw_socken = "{} ({})".format(self.socken, self.landskap)
+                self.add_to_report("socken", raw_socken)
 
     def set_monuments_all_id(self):
         """
@@ -173,8 +170,7 @@ class SeFornminSv(Monument):
         self.set_adm_location()
         self.set_type()
         self.set_location()
-        self.set_inception()
-        # self.exists("sv", "artikel")
+        self.exists("sv", "artikel")
         self.set_coords(("lat", "lon"))
         self.set_commonscat()
-        # self.exists_with_prop(mapping)
+        self.exists_with_prop(mapping)
