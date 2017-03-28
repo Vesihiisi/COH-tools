@@ -89,6 +89,11 @@ class SeBbrSv(Monument):
                 self.add_to_report("protection_type", bbr_type)
         else:
             qualifier = None
+        kulturarv_source = self.create_kulturarv_source(url)
+        self.add_statement(
+            "heritage_status", type_q, qualifier, refs=[kulturarv_source])
+
+    def create_kulturarv_source(self, url):
         source_item = "Q13406268"  # sandbox!
         today = utils.today_dict()
         prop_reference_url = self.props["reference_url"]
@@ -100,8 +105,7 @@ class SeBbrSv(Monument):
                             "published": {"prop": prop_date, "value": today},
                             "reference_url": {"prop": prop_reference_url,
                                               "value": url}}
-        self.add_statement(
-            "heritage_status", type_q, qualifier, refs=[kulturarv_source])
+        return kulturarv_source
 
     def set_function(self):
         """
@@ -208,8 +212,9 @@ class SeBbrSv(Monument):
         """
         if self.has_non_empty_attribute("byggar"):
             year_parsed = utils.parse_year(self.byggar)
-            if year_parsed:
-                self.add_statement("inception", {"time_value": year_parsed})
+            if isinstance(year_parsed, int):
+                value_dict = {"time_value": {"year": year_parsed}}
+                self.add_statement("inception", value_dict)
 
     def set_monuments_all_id(self):
         """
