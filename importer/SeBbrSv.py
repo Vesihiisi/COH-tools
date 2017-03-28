@@ -108,13 +108,21 @@ class SeBbrSv(Monument):
         return kulturarv_source
 
     def set_function(self):
-        """
-        TODO
-        examples:
-        https://gist.github.com/Vesihiisi/f637916ea1d80a4be5d71a3adf6e2dc2
-        """
-        # functions = get_rid_of_brackets(self.funktion).lower().split(",")
-        return
+        functions_map = self.data_files["functions"]["mappings"]
+        if self.has_non_empty_attribute("funktion"):
+            functions = utils.get_rid_of_brackets(
+                self.funktion).lower().split(",")
+            for item in functions:
+                function = item.strip()
+                try:
+                    function_item = [functions_map[x]["items"]
+                                     for x in functions_map if x.lower() == function][0]
+                    self.add_statement("use", function_item)
+                except IndexError:
+                    data_string = "{} ({})".format(function, self.funktion)
+                    # report both this particular function and the whole
+                    # string containing it
+                    self.add_to_report("funktion", data_string)
 
     def set_architect(self):
         """
@@ -248,4 +256,3 @@ class SeBbrSv(Monument):
         self.set_location()
         self.set_function()
         self.exists_with_prop(mapping)
-        self.print_wd()
