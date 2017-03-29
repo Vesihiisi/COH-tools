@@ -136,8 +136,8 @@ class SeArbetslSv(Monument):
         self.add_statement("is", arbetslivsmuseum, refs=[ref])
 
     def exists_with_monument_article(self, language):
-        """Override default behavior with unusual field name."""
-        return super().exists_with_monument_article("sv", "monument_article")
+        """Set language of Wikipedia to use to match articles."""
+        return super().exists_with_monument_article("sv")
 
     def __init__(self, db_row_dict, mapping, data_files, existing):
         Monument.__init__(self, db_row_dict, mapping, data_files, existing)
