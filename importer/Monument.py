@@ -18,7 +18,7 @@ class Monument(object):
         )
 
     def print_wd_to_table(self):
-        """Generate a preview table of the data item."""
+        """Generate a wikitext preview table of the data item."""
         table = ""
         labels = self.wd_item["labels"]
         descriptions = self.wd_item["descriptions"]
@@ -88,11 +88,6 @@ class Monument(object):
         append another value to the array,
         i.e. two statements with the same prop.
 
-        :param prop_name: name of the property, as stated in the props library file
-        :param value: the value of the property
-        :param quals: a dictionary of qualifiers
-        :param refs: a list of references
-
         Refs is None as default. This means that
         if it's left out, the WLM reference will be inserted
         into the statement. The same if its value is
@@ -102,6 +97,12 @@ class Monument(object):
         respectively.
         In order to not use any reference whatsoever,
         the value of refs is to be set to False.
+
+        :param prop_name: name of the property, as stated in the props library file
+        :param value: the value of the property
+        :param quals: a dictionary of qualifiers
+        :param refs: a list of references or a single reference.
+            Set None/True for the default reference, set False to not add a reference.
         """
         base = self.wd_item["statements"]
         prop = self.props[prop_name]
@@ -124,7 +125,7 @@ class Monument(object):
 
     def remove_statement(self, prop_name):
         """
-        Remove a statement from the data object.
+        Remove all statements with a given property from the data object.
 
         :param prop_name: name of the property, as stated in the props library file
         """
@@ -150,7 +151,7 @@ class Monument(object):
             self.add_statement(prop_name, value, quals, refs)
 
     def set_wd_item(self, wd_item):
-        """Associate the data object with a Q-item."""
+        """Associate the data object with a Wikidata item."""
         if wd_item is not None:
             self.wd_item["wd-item"] = wd_item
             print("Associated WD item: ", wd_item)
@@ -195,14 +196,16 @@ class Monument(object):
         self.add_statement("country", country)
 
     def set_is(self):
-        """Set the P31 using the mapping file."""
+        """Set the P31 property using the mapping file."""
         default_is = self.mapping["default_is"]
         self.add_statement("is", default_is["item"])
 
     def set_labels(self, language, content):
         """
-        Add a label in a specific language using content that potentially
-        has markup and has to be cleaned from it.
+        Add a label in a specific language using content with markup.
+
+        This will clean up markup, for instance if it's a Wiki-link
+        it will extract its title.
 
         :param language: code of language, e.g. "fi"
         :param text: content of the label
@@ -245,7 +248,7 @@ class Monument(object):
 
     def set_commonscat(self, keyword="commonscat"):
         """
-        Add Commons category.
+        Add a statement with Commons category.
 
         :param keyword: the name of the column with commons category
         """
@@ -313,7 +316,7 @@ class Monument(object):
         """
         Create a 'stated in' reference.
 
-        :param source_item: Q-item or URL used as a source
+        :param source_item: Wikidata item or URL used as a source
         :param pub_date: publication date in the format 2014-12-23
         """
         prop_stated = self.props["stated_in"]
