@@ -264,7 +264,7 @@ class Monument(object):
     def exists_with_monument_article(self,
                                      language,
                                      article_keyword="monument_article"):
-        """Get the Q-item connected to monument_article (or equivalent), if any."""
+        """Get the Wikidata item connected to monument_article (or equivalent), if any."""
         if self.has_non_empty_attribute(article_keyword):
             wd_item = utils.q_from_wikipedia(
                 language, getattr(self, article_keyword))
@@ -273,7 +273,7 @@ class Monument(object):
             return None
 
     def exists_with_wd_item(self, wd_item_keyword="wd_item"):
-        """Get the Q-item connected to wd_item (or equivalent), if any."""
+        """Get the Wikidata item connected to wd_item (or equivalent), if any."""
         if wd_item_keyword in self.raw_data:
             return self.raw_data[wd_item_keyword]
         else:
@@ -281,7 +281,7 @@ class Monument(object):
 
     def exists_with_prop(self, mapping):
         """
-        Get the Q-item that has the same value of a property as the data object.
+        Get the Wikidata item that has the same value of a property as the data object.
 
         The unique property is given in the mapping file.
         """
@@ -300,7 +300,7 @@ class Monument(object):
         return wd_item in self.existing.items()
 
     def find_matching_wikidata(self, mapping):
-        """Match the data object with a possible Q-item."""
+        """Match the data object with a possible Wikidata item."""
         item = self.exists_with_prop(mapping)
         if not item:
             item = self.exists_with_wd_item()
