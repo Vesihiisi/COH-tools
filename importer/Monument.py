@@ -296,11 +296,33 @@ class Monument(object):
                 return None
 
     def in_known_items(self, wd_item):
-        """Check whether given item is in the list of items with a certain property."""
-        return wd_item in self.existing.items()
+        """
+        Check if given item is in the list of items with a certain property.
+
+        This uses the list of items with a certain property
+        (specified in mapping) that was downloaded in the
+        beginning of the process.
+        """
+        return wd_item in self.existing.values()
 
     def find_matching_wikidata(self, mapping):
-        """Match the data object with a possible Wikidata item."""
+        """
+        Match the data object with a possible Wikidata item.
+
+        At first, use the downloaded list of Wikidata items
+        that use the optional unique property.
+        If it contains an item where this property has the same
+        value as this data item, assign this Wikidata item
+        to this data item.
+
+        If not, do a check using the 'wd_item' and 'monument_article'
+        fields. If this results in an item, compare it
+        with the downloaded list. If it's found in the list
+        then something is wrong, because at this stage it should
+        have been found by exists_with_prop()
+        and thus we should not have arrived to this stage in the
+        first place. So don't upload it (and log it).
+        """
         item = self.exists_with_prop(mapping)
         if not item:
             item = self.exists_with_wd_item()
