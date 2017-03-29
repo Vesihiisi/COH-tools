@@ -56,11 +56,10 @@ class SeFornminSv(Monument):
         See https://www.wikidata.org/wiki/Property_talk:P1262
         for discussion of rationale.
         """
-        ref = self.wlm_source
         fmi_link = "raa/fmi/" + self.id
         raa_qualifier = {"raa-nr": self.raa_nr}
         self.add_statement(
-            "cultural_heritage_sweden", fmi_link, raa_qualifier, refs=[ref])
+            "cultural_heritage_sweden", fmi_link, raa_qualifier)
 
     def set_adm_location(self):
         """
@@ -82,8 +81,7 @@ class SeFornminSv(Monument):
         try:
             municipality = [x["item"] for x in municip_dict if x[
                 "en"].lower() == pattern][0]
-            ref = self.wlm_source
-            self.add_statement("located_adm", municipality, refs=[ref])
+            self.add_statement("located_adm", municipality)
         except IndexError:
             print("Could not parse municipality: {}.".format(self.kommun))
             self.add_to_report("kommun", self.kommun)
@@ -105,8 +103,7 @@ class SeFornminSv(Monument):
                 special_type = [table[x]["items"]
                                 for x in table
                                 if x.lower() == type_to_search_for][0][0]
-                ref = self.wlm_source
-                self.substitute_statement("is", special_type, refs=[ref])
+                self.substitute_statement("is", special_type)
             except IndexError:
                 self.add_to_report("typ", self.typ)
 
@@ -133,15 +130,13 @@ class SeFornminSv(Monument):
             if len(wikilinks) == 1:
                 target_page = wikilinks[0].title
                 wd_item = utils.q_from_wikipedia("sv", target_page)
-                ref = self.wlm_source
-                self.add_statement("location", wd_item, refs=[ref])
+                self.add_statement("location", wd_item)
             else:
                 self.add_to_report("plats", self.plats)
         if self.has_non_empty_attribute("socken"):
             socken = self.get_socken(self.socken, self.landskap)
             if socken is not None:
-                ref = self.wlm_source
-                self.add_statement("location", socken, refs=[ref])
+                self.add_statement("location", socken)
             else:
                 raw_socken = "{} ({})".format(self.socken, self.landskap)
                 self.add_to_report("socken", raw_socken)
@@ -173,7 +168,6 @@ class SeFornminSv(Monument):
         self.set_adm_location()
         self.set_type()
         self.set_location()
-        self.exists("sv", "artikel")
         self.set_coords(("lat", "lon"))
         self.set_commonscat()
-        self.exists_with_prop(mapping)
+        self.set_wd_item(self.find_matching_wikidata(mapping))
