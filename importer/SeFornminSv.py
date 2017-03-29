@@ -153,6 +153,9 @@ class SeFornminSv(Monument):
         """
         self.monuments_all_id = self.id
 
+    def exists_with_monument_article(self, language):
+        return super().exists_with_monument_article("sv", "artikel")
+
     def __init__(self, db_row_dict, mapping, data_files, existing):
         Monument.__init__(self, db_row_dict, mapping, data_files, existing)
         self.set_monuments_all_id()

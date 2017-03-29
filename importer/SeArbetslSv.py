@@ -132,6 +132,10 @@ class SeArbetslSv(Monument):
         ref = self.arbetsam_source
         self.add_statement("is", arbetslivsmuseum, refs=ref)
 
+    def exists_with_monument_article(self, language):
+        """Set language of Wikipedia to use to match articles."""
+        return super().exists_with_monument_article("sv")
+
     def __init__(self, db_row_dict, mapping, data_files, existing):
         Monument.__init__(self, db_row_dict, mapping, data_files, existing)
         self.set_monuments_all_id()
@@ -139,15 +143,13 @@ class SeArbetslSv(Monument):
         self.wlm_source = self.create_wlm_source(self.monuments_all_id)
         self.arbetsam_source = self.create_stated_in_source(
             "Q28834837", "2013-11-28")
-        self.exists("sv", "monument_article")
-        self.exists_with_prop(mapping)
+        self.set_id()
         self.set_country()
         self.set_source()
         self.set_registrant_url()
         self.set_is()
         self.set_labels("sv", self.namn)
         self.set_descriptions()
-        self.set_id()
         self.set_type()
         self.set_adm_location()
         self.set_location()
@@ -155,5 +157,5 @@ class SeArbetslSv(Monument):
         self.set_image("bild")
         self.set_commonscat()
         self.set_coords(("lat", "lon"))
-        # self.print_report()
+        self.set_wd_item(self.find_matching_wikidata(mapping))
         # self.print_wd()

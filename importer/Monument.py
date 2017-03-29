@@ -50,11 +50,16 @@ class Monument(object):
                     value = utils.wd_template("Q", value)
                     value_to_print += str(value)
                 elif "quantity_value" in value:
-                    value_to_print += str(value["quantity_value"])
+                    quantity = str(value["quantity_value"])
                     if "unit" in value:
-                        value_to_print += " " + utils.wd_template("Q", value["unit"])
+                        value_to_print += "{quantity} {unit}".format(
+                            quantity=quantity,
+                            unit=utils.wd_template("Q", value["unit"]))
+                    else:
+                        value_to_print += quantity
                 elif "time_value" in value:
-                    value_to_print += utils.dict_to_iso_date(value["time_value"])
+                    value_to_print += utils.dict_to_iso_date(
+                        value["time_value"])
                 else:
                     value_to_print += str(value)
                 quals = claim["quals"]
@@ -296,12 +301,6 @@ class Monument(object):
         else:
             return False
 
-    def exists(self, language, article_keyword="monument_article"):
-        if self.has_non_empty_attribute(article_keyword):
-            wd_item = utils.q_from_wikipedia(
-                language, getattr(self, article_keyword))
-            self.set_wd_item(wd_item)
-
     def set_changed(self):
         """Set the 'changed' field."""
         if self.changed:
@@ -346,32 +345,77 @@ class Monument(object):
                 "reference_url": {"prop": prop_reference_url,
                                   "value": self.wlm_url}}
 
+    def exists_with_monument_article(self,
+                                     language,
+                                     article_keyword="monument_article"):
+        """Get the Wikidata item connected to monument_article (or equivalent), if any."""
+        if self.has_non_empty_attribute(article_keyword):
+            wd_item = utils.q_from_wikipedia(
+                language, getattr(self, article_keyword))
+            return wd_item
+        else:
+            return None
+
+    def exists_with_wd_item(self, wd_item_keyword="wd_item"):
+        """Get the Wikidata item connected to wd_item (or equivalent), if any."""
+        if wd_item_keyword in self.raw_data:
+            return self.raw_data[wd_item_keyword]
+        else:
+            return None
+
     def exists_with_prop(self, mapping):
-        if self.existing is None:
-            return
+        """
+        Get the Wikidata item that has the same value of a property as the data object.
+
+        The unique property is given in the mapping file.
+        """
         unique_prop = mapping.get_unique_prop()
         base = self.wd_item["statements"]
         if unique_prop in base:
             val_to_check = base[unique_prop][0]['value']
             if val_to_check in self.existing:
                 wd_item = self.existing[val_to_check]
-                print("Wikidata has item with {} = {}. Connecting with item {}.".format(
-                    unique_prop, val_to_check, wd_item))
-                # Check whether it already has self.wd_item
-                # from monument_article.
-                # This of course assumes that self.exist is run earlier.
-                # If it's a different one,
-                wd_item_from_monument_article = self.wd_item["wd-item"]
-                if wd_item != wd_item_from_monument_article:
-                    # different Q-numbers from monuments_all and
-                    # unique property
-                    self.wd_item["upload"] = False
-                else:
-                    pass  # match
-                self.set_wd_item(wd_item)
+                return wd_item
             else:
-                print("There's no item with {} = {} on Wikidata.".format(
-                    unique_prop, val_to_check))
+                return None
+
+    def in_known_items(self, wd_item):
+        """
+        Check if given item is in the list of items with a certain property.
+
+        This uses the list of items with a certain property
+        (specified in mapping) that was downloaded in the
+        beginning of the process.
+        """
+        return wd_item in self.existing.values()
+
+    def find_matching_wikidata(self, mapping):
+        """
+        Match the data object with a possible Wikidata item.
+
+        At first, use the downloaded list of Wikidata items
+        that use the optional unique property.
+        If it contains an item where this property has the same
+        value as this data item, assign this Wikidata item
+        to this data item.
+
+        If not, do a check using the 'wd_item' and 'monument_article'
+        fields. If this results in an item, compare it
+        with the downloaded list. If it's found in the list
+        then something is wrong, because at this stage it should
+        have been found by exists_with_prop()
+        and thus we should not have arrived to this stage in the
+        first place. So don't upload it (and log it).
+        """
+        item = self.exists_with_prop(mapping)
+        if not item:
+            item = self.exists_with_wd_item()
+            if not item:
+                item = self.exists_with_monument_article(self.mapping["language"])
+            if item and self.in_known_items(item):
+                self.upload = False
+                self.add_to_report("item_conflict", item)
+        return item
 
     def construct_wd_item(self, mapping, data_files=None):
         """Create the empty structure of the data object."""
@@ -390,6 +434,17 @@ class Monument(object):
             print(title)
 
     def __init__(self, db_row_dict, mapping, data_files, existing):
+        """
+        Initialize the data object.
+
+        :param db_row_dict: raw data from the database
+        :param mapping: mapping file object
+        :param data_files: resources like dictionaries of known placenames to match
+        :param existing: list of Wikidata items using a specific property
+            that is optionally specified in the mapping file and is supposed to
+            hold unique values
+        """
+        self.raw_data = db_row_dict
         self.props = utils.load_json(
             path.join(MAPPING_DIR, "props_general.json"))
         self.common_items = utils.load_json(
@@ -401,9 +456,9 @@ class Monument(object):
             if not k.startswith("m_spec."):
                 setattr(self, k.replace("-", "_"), v)
         self.monuments_all_id = ""
-        self.construct_wd_item(mapping)
         self.data_files = data_files
         self.existing = existing
+        self.construct_wd_item(mapping)
         self.problem_report = {}
 
     def get_fields(self):
