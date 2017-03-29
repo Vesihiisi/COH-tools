@@ -123,7 +123,7 @@ class SeBbrSv(Monument):
                 function = item.strip()
                 try:
                     function_item = [functions_map[x]["items"]
-                                     for x in functions_map if x.lower() == function][0]
+                                     for x in functions_map if x.lower() == function][0][0]
                     self.add_statement("use", function_item)
                 except IndexError:
                     data_string = "{} ({})".format(function, self.funktion)
