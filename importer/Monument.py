@@ -64,10 +64,13 @@ class Monument(object):
                     value = utils.wd_template("Q", value)
                     value_to_print += str(value)
                 elif "quantity_value" in value:
-                    value_to_print += str(value["quantity_value"])
+                    quantity = str(value["quantity_value"])
                     if "unit" in value:
-                        value_to_print += " " + \
-                            utils.wd_template("Q", value["unit"])
+                        value_to_print += "{quantity} {unit}".format(
+                            quantity=quantity,
+                            unit=utils.wd_template("Q", value["unit"]))
+                    else:
+                        value_to_print += quantity
                 elif "time_value" in value:
                     value_to_print += utils.dict_to_iso_date(
                         value["time_value"])
@@ -261,7 +264,7 @@ class Monument(object):
     def exists_with_monument_article(self,
                                      language,
                                      article_keyword="monument_article"):
-        """Check whether the data object has anythin in the monument_article field."""
+        """Get the Q-item connected to monument_article (or equivalent), if any."""
         if self.has_non_empty_attribute(article_keyword):
             wd_item = utils.q_from_wikipedia(
                 language, getattr(self, article_keyword))
@@ -270,7 +273,7 @@ class Monument(object):
             return None
 
     def exists_with_wd_item(self, wd_item_keyword="wd_item"):
-        """Check whether the data object has anything in the 'wd_item' field."""
+        """Get the Q-item connected to wd_item (or equivalent), if any."""
         if wd_item_keyword in self.raw_data:
             return self.raw_data[wd_item_keyword]
         else:
@@ -278,8 +281,9 @@ class Monument(object):
 
     def exists_with_prop(self, mapping):
         """
-        Check whether there already exists an item
-        with the same unique ID as that in the data object.
+        Get the Q-item that has the same value of a property as the data object.
+
+        The unique property is given in the mapping file.
         """
         unique_prop = mapping.get_unique_prop()
         base = self.wd_item["statements"]
@@ -292,10 +296,11 @@ class Monument(object):
                 return None
 
     def in_known_items(self, wd_item):
-        """Check whether given item is on the list of items with certain prop"""
+        """Check whether given item is in the list of items with a certain property."""
         return wd_item in self.existing.items()
 
     def find_matching_wikidata(self, mapping):
+        """Match the data object with a possible Q-item."""
         item = self.exists_with_prop(mapping)
         if not item:
             item = self.exists_with_wd_item()
@@ -303,6 +308,7 @@ class Monument(object):
                 item = self.exists_with_monument_article(self.mapping["language"])
             if item and self.in_known_items(item):
                 self.upload = False
+                self.add_to_report("item_conflict", item)
         return item
 
     def construct_wd_item(self, mapping, data_files=None):
@@ -321,6 +327,16 @@ class Monument(object):
             print(title)
 
     def __init__(self, db_row_dict, mapping, data_files, existing):
+        """
+        Initialize the data object.
+
+        :param db_row_dict: raw data from the database
+        :param mapping: mapping file object
+        :param data_files: resources like dictionaries of known placenames to match
+        :param existing: list of Wikidata items using a specific property
+            that is optionally specified in the mapping file and is supposed to
+            hold unique values
+        """
         self.raw_data = db_row_dict
         self.props = utils.load_json(
             path.join(MAPPING_DIR, "props_general.json"))
