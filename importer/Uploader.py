@@ -204,12 +204,15 @@ class Uploader(object):
         if wd_item:
             for claim in claims:
                 prop = claim
+                print(prop)
                 for x in claims[claim]:
                     value = x['value']
+                    print(value)
                     if value != "":
                         ref = None
                         quals = x['quals']
                         refs = x['refs']
+                        print(refs)
                         wd_claim = self.make_pywikibot_item(value, prop)
                         if wd_claim is None:
                             continue
@@ -220,16 +223,17 @@ class Uploader(object):
                                     quals[qual], qual)
                                 qualifier = self.wdstuff.Qualifier(qual, value)
                                 wd_value.addQualifier(qualifier)
-                        for ref in refs:
-                            """
-                            This only works if it's a url.
-                            If we have references of different sort,
-                            this will have to be appended.
-                            """
-                            if utils.is_valid_url(ref):
-                                ref = self.make_url_reference(ref)
-                            else:
-                                ref = self.make_stated_in_reference(ref)
+                        if refs:
+                            for ref in refs:
+                                """
+                                This only works if it's a url.
+                                If we have references of different sort,
+                                this will have to be appended.
+                                """
+                                if utils.is_valid_url(ref):
+                                    ref = self.make_url_reference(ref)
+                                else:
+                                    ref = self.make_stated_in_reference(ref)
                         if wd_value:
                             self.wdstuff.addNewClaim(
                                 prop, wd_value, wd_item, ref)
