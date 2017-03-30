@@ -1,6 +1,7 @@
 from Monument import Monument
 import importer_utils as utils
 
+
 class CzCs(Monument):
 
     def update_labels(self):
@@ -9,6 +10,8 @@ class CzCs(Monument):
 
     def set_adm_location(self):
         """
+        Set the administrative location.
+
         TODO
         Download all
         """
@@ -30,5 +33,3 @@ class CzCs(Monument):
         # self.set_location()
         self.exists_with_prop(mapping)
         # self.print_wd()
-
-

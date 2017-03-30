@@ -11,6 +11,8 @@ class SeBbrSv(Monument):
 
     def update_labels(self):
         """
+        Set the label in Swedish.
+
         Original labels look like this:
             Wickmanska gården (Paradis 35)
         We don't need the latter part (fastighetsbeteckning) in the label.
@@ -21,6 +23,8 @@ class SeBbrSv(Monument):
 
     def set_bbr(self):
         """
+        Set the BBR ID property.
+
         This will get a link that looks like
             raa/bbr/21300000002805
         Depending on whether the prefix is raa/bbr/ or raa/bbra/
@@ -30,6 +34,8 @@ class SeBbrSv(Monument):
 
     def set_heritage_bbr(self):
         """
+        Set the specific type of heritage status.
+
         In Sweden there are three different types of legal protection
         for different types of cultural heritage,
         so we created three new items:
@@ -66,11 +72,9 @@ class SeBbrSv(Monument):
                 elif bbr_type.startswith("Statligt byggnadsminne"):
                     type_q = "Q24284071"
                     protection_date = bbr_type.split("(")[-1][:-1]
-        """
-        The original set_heritage() added an empty claim
-        because there's no heritage status specified in mapping file,
-        so we start by removing that empty claim.
-        """
+        # The original set_heritage() added an empty claim
+        # because there's no heritage status specified in mapping file,
+        # so we start by removing that empty claim.
         self.remove_statement("heritage_status")
         if protection_date:
             # 1969-01-31
@@ -83,6 +87,8 @@ class SeBbrSv(Monument):
 
     def set_function(self):
         """
+        Will be overriden by the se-bbr patch anyway.
+
         TODO
         examples:
         https://gist.github.com/Vesihiisi/f637916ea1d80a4be5d71a3adf6e2dc2
@@ -92,7 +98,8 @@ class SeBbrSv(Monument):
 
     def set_architect(self):
         """
-        Add architect claim if available.
+        Set the architect.
+
         Only if wikilinked.
         Can be more than one.
         Check if it's a human.
@@ -108,7 +115,8 @@ class SeBbrSv(Monument):
 
     def set_location(self):
         """
-        TODO
+        Set the location.
+
         This is the same as 'address' in monuments_all.
         There are some street addresses. Some are simple:
             Norra Murgatan 3
@@ -123,7 +131,8 @@ class SeBbrSv(Monument):
 
     def update_descriptions(self):
         """
-        Use fastighetsbeteckning as alias.
+        Add the fastighetsbeteckning as alias.
+
         For example:
             (Knutse 2:19)
         """
@@ -132,6 +141,8 @@ class SeBbrSv(Monument):
 
     def set_no_of_buildings(self):
         """
+        Set how many buildings the item consists of.
+
         The 'funktion' column looks like this:
             Kapell (3 byggnader)
         From this, we extract: has parts of class building,
@@ -147,6 +158,8 @@ class SeBbrSv(Monument):
 
     def set_adm_location(self):
         """
+        Set the administrative location.
+
         Use offline mapping file
         to map municipality to P131.
         The column is 'kommun'.
@@ -172,6 +185,8 @@ class SeBbrSv(Monument):
 
     def set_inception(self):
         """
+        Set the building year.
+
         The 'byggar' column can have many forms,
         but here we only process the obvious cases:
             1865
@@ -186,10 +201,7 @@ class SeBbrSv(Monument):
                 self.add_statement("inception", {"time_value": year_parsed})
 
     def set_monuments_all_id(self):
-        """
-        Map which column name in specific table
-        is used as ID in monuments_all.
-        """
+        """Map which column name in specific table to  ID in monuments_all."""
         self.monuments_all_id = self.bbr
 
     def __init__(self, db_row_dict, mapping, data_files, existing):

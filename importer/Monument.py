@@ -103,11 +103,13 @@ class Monument(object):
         In order to not use any reference whatsoever,
         the value of refs is to be set to False.
 
-        :param prop_name: name of the property, as stated in the props library file
+        :param prop_name: name of the property,
+            as stated in the props library file
         :param value: the value of the property
         :param quals: a dictionary of qualifiers
         :param refs: a list of references or a single reference.
-            Set None/True for the default reference, set False to not add a reference.
+            Set None/True for the default reference,
+            set False to not add a reference.
         """
         base = self.wd_item["statements"]
         prop = self.props[prop_name]
@@ -132,7 +134,8 @@ class Monument(object):
         """
         Remove all statements with a given property from the data object.
 
-        :param prop_name: name of the property, as stated in the props library file
+        :param prop_name: name of the property,
+            as stated in the props library file
         """
         base = self.wd_item["statements"]
         prop = self.props[prop_name]
@@ -142,6 +145,7 @@ class Monument(object):
     def substitute_statement(self, prop_name, value, quals=None, refs=None):
         """
         Instead of adding to the array, replace the statement.
+
         This is so that instances of child classes
         can override default values...
         For example p31 museum -> art museum
@@ -286,8 +290,7 @@ class Monument(object):
 
     def has_non_empty_attribute(self, attr_name):
         """
-        Check whether the data object has has an attribute and it's
-        not an empty string.
+        Check whether the data object has a non-empty attribute.
 
         :param attr_name: name of the attribute
         """
@@ -485,9 +488,7 @@ class Monument(object):
             self.problem_report["url"] = self.wlm_url
 
     def print_report(self):
-        """
-        Print the problem report on screen.
-        """
+        """Print the problem report on screen."""
         print(
             json.dumps(self.problem_report,
                        sort_keys=True,

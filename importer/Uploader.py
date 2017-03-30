@@ -100,6 +100,8 @@ class Uploader(object):
 
     def make_coords_item(self, coordstuple):
         """
+        Create a Coordinate item.
+
         Default precision, such as used by
         http://pywikibot.readthedocs.io/en/latest/_modules/scripts/claimit/
         """
@@ -122,6 +124,8 @@ class Uploader(object):
 
     def make_time_item(self, quantity, repo):
         """
+        Create a WbTime item.
+
         This only works for full years.
         TODO
         Make it work for year range!
@@ -130,10 +134,13 @@ class Uploader(object):
         return pywikibot.WbTime(**value)
 
     def make_q_item(self, qnumber):
+        """Create a regular Item."""
         return self.wdstuff.QtoItemPage(qnumber)
 
     def item_has_prop(self, property_name, wd_item):
         """
+        Check if item has a specific property.
+
         This is different from WikidataStuff has_claim()
         because it checks whether the property exists,
         not if the statement matches.
@@ -221,11 +228,9 @@ class Uploader(object):
                                 qualifier = self.wdstuff.Qualifier(qual, value)
                                 wd_value.addQualifier(qualifier)
                         for ref in refs:
-                            """
-                            This only works if it's a url.
-                            If we have references of different sort,
-                            this will have to be appended.
-                            """
+                            # This only works if it's a url.
+                            # If we have references of different sort,
+                            # this will have to be appended.
                             if utils.is_valid_url(ref):
                                 ref = self.make_url_reference(ref)
                             else:
@@ -248,9 +253,7 @@ class Uploader(object):
         return item
 
     def get_username(self):
-        """
-        Get Wikidata login that will be used to upload.
-        """
+        """Get Wikidata login that will be used to upload."""
         return pywikibot.config.usernames["wikidata"]["wikidata"]
 
     def upload(self):

@@ -5,9 +5,7 @@ import importer_utils as utils
 class SeArbetslSv(Monument):
 
     def set_descriptions(self):
-        """
-        Set default descriptions.
-        """
+        """Set default descriptions."""
         DESC_BASES = {"sv": "arbetslivsmuseum",
                       "en": "working life museum",
                       "fi": "työväen museo Ruotsissa",
@@ -17,9 +15,7 @@ class SeArbetslSv(Monument):
             self.add_description(language, DESC_BASES[language])
 
     def add_location_to_desc(self, language, municipality):
-        """
-        Append municipality name to description.
-        """
+        """Append municipality name to description."""
         if language == "sv":
             self.wd_item["descriptions"][language] += " i " + municipality
         elif language == "en":
@@ -28,6 +24,8 @@ class SeArbetslSv(Monument):
 
     def set_adm_location(self):
         """
+        Set the administrative location.
+
         Use offline mapping file
         to map municipality to P131.
         The column is 'kommun'.
@@ -89,6 +87,8 @@ class SeArbetslSv(Monument):
 
     def set_location(self):
         """
+        Set the location.
+
         Using external file of all populated places in Sweden,
         and the 'ort' column,
         add location statement.
@@ -107,18 +107,13 @@ class SeArbetslSv(Monument):
                 self.add_to_report("ort", self.ort)
 
     def set_id(self):
-        """
-        Add ID number from ARBETSAM database.
-        """
+        """Add ID number from ARBETSAM database."""
         if self.has_non_empty_attribute("id"):
             ref = self.arbetsam_source
             self.add_statement("arbetsam", self.id, refs=ref)
 
     def set_monuments_all_id(self):
-        """
-        Map which column name in specific table
-        is used as ID in monuments_all.
-        """
+        """Map which column name in specific table to  ID in monuments_all."""
         self.monuments_all_id = self.id
 
     def set_is(self):

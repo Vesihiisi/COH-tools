@@ -10,6 +10,8 @@ class SeFornminSv(Monument):
 
     def update_labels(self):
         """
+        Create a label.
+
         Some of the items have the 'namn' column
         filled out, and others don't.
         If it exists, it looks like:
@@ -26,6 +28,8 @@ class SeFornminSv(Monument):
 
     def set_descriptions(self):
         """
+        Create a description based on the type and location.
+
         All items should have the 'typ' field
         filled out:
             stensättning
@@ -48,8 +52,9 @@ class SeFornminSv(Monument):
 
     def set_raa(self):
         """
-        All items have a 'raa-nr' and an 'id'.
+        Set the "Cultural heritage database in Sweden (P1260)" property.
 
+        All items have a 'raa-nr' and an 'id'.
         The latter is used to link to the
         Database of the cultural heritage in Sweden,
         and the former is used as a qualifier.
@@ -63,6 +68,8 @@ class SeFornminSv(Monument):
 
     def set_adm_location(self):
         """
+        Set the administrative location (municipality).
+
         Use offline mapping file
         to map municipality to P131.
         The column is 'kommun'.
@@ -88,6 +95,8 @@ class SeFornminSv(Monument):
 
     def set_type(self):
         """
+        Set the P31 property of a certain type of monument.
+
         All items should have a 'typ', like:
             stensättning
         Use the lookup table from:
@@ -109,6 +118,8 @@ class SeFornminSv(Monument):
 
     def get_socken(self, socken_name, landskap_name):
         """
+        Get the Wikidata ID of a socken.
+
         Each item has both a 'landskap' and a 'socken'.
         Combine them and get corresponding WD item
         via swedish wikipedia.
@@ -142,10 +153,7 @@ class SeFornminSv(Monument):
                 self.add_to_report("socken", raw_socken)
 
     def set_monuments_all_id(self):
-        """
-        Map which column name in specific table
-        is used as ID in monuments_all.
-        """
+        """Map which column name in specific table to  ID in monuments_all."""
         self.monuments_all_id = self.id
 
     def exists_with_monument_article(self, language):

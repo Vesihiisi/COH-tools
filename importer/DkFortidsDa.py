@@ -5,18 +5,17 @@ import importer_utils as utils
 class DkFortidsDa(Monument):
 
     def update_labels(self):
-        """
-        TODO: Naming things!
-        See:
-        https://da.wikipedia.org/wiki/Fredede_fortidsminder_i_Ikast-Brande_Kommune
-        The monuments don't have unique names, stednavn
-        is a general placename.
-        Use the description field to provide better info:
-        'rundhøj i Ikast-Brande kommune'
-        """
+        """Set Danish label of the object."""
         self.add_label("da", utils.remove_markup(self.stednavn))
 
     def update_descriptions(self):
+        """
+        Set descriptions of the object.
+
+        All the objects have a "type" field.
+        Use it in connection with the municipality:
+        "skanse i Nyborg Kommune"
+        """
         monument_type = utils.remove_markup(self.type).lower()
         municipality = utils.remove_markup(self.kommune)
         description_da = "{} i {}".format(monument_type, municipality)
@@ -41,6 +40,8 @@ class DkFortidsDa(Monument):
 
     def set_inception(self):
         """
+        Set the inception.
+
         TODO
         these are very broad...
         basically "prehistoric time", "modern time"
