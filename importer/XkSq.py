@@ -6,6 +6,8 @@ class XkSq(Monument):
 
     def update_labels(self):
         """
+        Set the labels.
+
         TODO
         Some of these contain several unprintable characters...
         0093 - 0096
@@ -20,13 +22,17 @@ class XkSq(Monument):
 
     def set_adm_location(self):
         """
+        Set the administrative location.
+
         never wikilinked!
         E panjohur = unknown
         """
         print(self.municipality)
 
     def update_commonscat(self):
-        """s
+        """
+        Set the Commons category property.
+
         the actual category names are not saved
         in the database, BUT
         a full category tree exists on commons,

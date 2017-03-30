@@ -10,6 +10,8 @@ class PlPl(Monument):
 
     def set_adm_location(self):
         """
+        Set the administrative location.
+
         TODO
         These are not wikilinked...
         And the labels on wd are in different formats,
@@ -24,7 +26,9 @@ class PlPl(Monument):
 
     def set_no(self):
         """
-        TODo
+        Set the heritage register ID.
+
+        TODO
         Examples of what these can look like: http://tinyurl.com/jz5vuc4
         isolate the date and use as start_time
         sometimes there are two values:
@@ -37,6 +41,8 @@ class PlPl(Monument):
 
     def set_address(self):
         """
+        Set the address.
+
         NOTE
         Sometimes this is broken and only a number is included,
         like "70".
