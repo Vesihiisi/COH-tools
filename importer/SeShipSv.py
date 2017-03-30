@@ -6,6 +6,8 @@ class SeShipSv(Monument):
 
     def set_type(self):
         """
+        Set the specific type of watercraft.
+
         In some cases, there's a more specific ship type in
         the 'funktion' column.
         Here all all the possible values:
@@ -23,12 +25,15 @@ class SeShipSv(Monument):
                 if len(functions) > 0:
                     self.remove_statement("is")
                     for f in functions:
-                        self.add_statement("is", f)
+                        ref = self.wlm_source
+                        self.add_statement("is", f, refs=[ref])
             except IndexError:
-                return
+                self.add_to_report("funktion", self.funktion)
 
     def set_shipyard(self):
         """
+        Set the manufacturer property.
+
         Process the column 'varv'.
         It can look like this:
         '[[Bergsunds varv]]<br>[[Stockholm]]'
@@ -44,9 +49,13 @@ class SeShipSv(Monument):
                 varv = utils.q_from_first_wikilink("sv", possible_varv)
                 ref = self.wlm_source
                 self.add_statement("manufacturer", varv, refs=[ref])
+            else:
+                self.add_to_report("varv", self.varv)
 
     def set_manufacture_year(self):
         """
+        Set the manufacture year.
+
         If the column 'byggar' has a parsable value,
         use it as year of manufacture.
         Use WLM database as a source.
@@ -58,29 +67,38 @@ class SeShipSv(Monument):
                 ref = self.wlm_source
                 self.add_statement(
                     "inception", {"time_value": {"year": byggar}}, refs=[ref])
+            else:
+                self.add_to_report("byggår", self.byggar)
 
     def set_dimensions(self):
         """
-        Try to parse the contents of the 'dimensioner' column
-        and add them as length, width etc.
+        Parse ship dimensions.
+
         They can look like this:
         'Längd: 15.77 Bredd: 5.19 Djup: 1.70 Brt: 15'
+        If parsing fails, set it to an empty dictionary
+        and save the input data to the problem report.
         Use WLM database as source.
         """
         if self.has_non_empty_attribute("dimensioner"):
             dimensions_processed = utils.parse_ship_dimensions(
                 self.dimensioner)
-            for dimension in dimensions_processed:
-                if dimension in self.props:
-                    value = dimensions_processed[dimension]
-                    ref = self.wlm_source
-                    self.add_statement(
-                        dimension, {"quantity_value": value,
-                                    "unit": self.props["metre"]}, refs=[ref])
+            if not dimensions_processed:
+                self.add_to_report("dimensioner", self.dimensioner)
+            else:
+                for dimension, value in dimensions_processed.items():
+                    if dimension in self.props:
+                        ref = self.wlm_source
+                        self.add_statement(
+                            dimension,
+                            {"quantity_value": value,
+                             "unit": self.common_items["metre"]},
+                            refs=[ref])
 
     def set_homeport(self):
         """
         Add homeport to data object.
+
         Only works if column 'hemmahamn' contains exactly
         one wikilink.
         Use WLM database as source.
@@ -112,11 +130,15 @@ class SeShipSv(Monument):
                 self.add_statement("call_sign", self.signal, refs=[ref])
 
     def set_monuments_all_id(self):
-        """
-        Map which column name in specific table
-        is used as ID in monuments_all.
-        """
+        """Map which column name in specific table to  ID in monuments_all."""
         self.monuments_all_id = self.signal
+
+    def set_descriptions(self):
+        """Set default descriptions."""
+        desc_bases = {"sv": "kulturmärkt bruksfartyg",
+                      "en": "listed historical ship in Sweden"}
+        for language in ["en", "sv"]:
+            self.add_description(language, desc_bases[language])
 
     def __init__(self, db_row_dict, mapping, data_files, existing):
         Monument.__init__(self, db_row_dict, mapping, data_files, existing)
@@ -129,6 +151,7 @@ class SeShipSv(Monument):
         self.set_source()
         self.set_registrant_url()
         self.set_labels("sv", self.namn)
+        self.set_descriptions()
         self.set_image("bild")
         self.exists("sv", "artikel")
         self.set_type()

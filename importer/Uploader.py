@@ -100,6 +100,8 @@ class Uploader(object):
 
     def make_coords_item(self, coordstuple):
         """
+        Create a Coordinate item.
+
         Default precision, such as used by
         http://pywikibot.readthedocs.io/en/latest/_modules/scripts/claimit/
         """
@@ -122,6 +124,8 @@ class Uploader(object):
 
     def make_time_item(self, quantity, repo):
         """
+        Create a WbTime item.
+
         This only works for full years.
         TODO
         Make it work for year range!
@@ -130,10 +134,13 @@ class Uploader(object):
         return pywikibot.WbTime(**value)
 
     def make_q_item(self, qnumber):
+        """Create a regular Item."""
         return self.wdstuff.QtoItemPage(qnumber)
 
     def item_has_prop(self, property_name, wd_item):
         """
+        Check if item has a specific property.
+
         This is different from WikidataStuff has_claim()
         because it checks whether the property exists,
         not if the statement matches.
@@ -152,11 +159,14 @@ class Uploader(object):
         if utils.string_is_q_item(value):
             val_item = self.make_q_item(value)
         elif prop == PROPS["image"]:
-            if self.item_has_prop("image", self.wd_item) is False:
-                if utils.file_is_on_commons(value):
-                    val_item = self.make_image_item(value)
+            if not self.item_has_prop("image", self.wd_item) and \
+                    utils.file_is_on_commons(value):
+                val_item = self.make_image_item(value)
         elif utils.tuple_is_coords(value) and prop == PROPS["coordinates"]:
-            val_item = self.make_coords_item(value)
+            # Don't upload coords if item already has one.
+            # Temp. until https://phabricator.wikimedia.org/T160282 is solved.
+            if not self.item_has_prop("coordinates", self.wd_item):
+                val_item = self.make_coords_item(value)
         elif isinstance(value, dict) and 'quantity_value' in value:
             val_item = self.make_quantity_item(value, self.repo)
         elif isinstance(value, dict) and 'time_value' in value:
@@ -218,11 +228,9 @@ class Uploader(object):
                                 qualifier = self.wdstuff.Qualifier(qual, value)
                                 wd_value.addQualifier(qualifier)
                         for ref in refs:
-                            """
-                            This only works if it's a url.
-                            If we have references of different sort,
-                            this will have to be appended.
-                            """
+                            # This only works if it's a url.
+                            # If we have references of different sort,
+                            # this will have to be appended.
                             if utils.is_valid_url(ref):
                                 ref = self.make_url_reference(ref)
                             else:
@@ -237,7 +245,7 @@ class Uploader(object):
                                 log.logit(message)
 
     def create_new_item(self, log):
-        item = self.wdstuff.make_new_item({})
+        item = self.wdstuff.make_new_item({}, self.summary)
         if log:
             t_id = item.getID()
             message = "{} CREATE".format(t_id)
@@ -245,9 +253,7 @@ class Uploader(object):
         return item
 
     def get_username(self):
-        """
-        Get Wikidata login that will be used to upload.
-        """
+        """Get Wikidata login that will be used to upload."""
         return pywikibot.config.usernames["wikidata"]["wikidata"]
 
     def upload(self):

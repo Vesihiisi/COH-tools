@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# -*- coding: utf-8  -*-
 import json
 import re
 import mwparserfromhell as wparser
@@ -11,7 +13,6 @@ from urllib.parse import quote
 from wikidataStuff.WikidataStuff import WikidataStuff as wds
 
 site_cache = {}
-
 
 def remove_empty_dicts_from_list(list_of_dicts):
     return [i for i in list_of_dicts if i]
@@ -394,6 +395,29 @@ def date_to_dict(datestring, dateformat):
     if "%d" in dateformat:
         date_dict["day"] = date_obj.day
     return date_dict
+
+
+def today_dict():
+    """Get today's date as pywikibot-ready dictionary."""
+    return datetime_object_to_dict(datetime.date.today())
+
+  
+def dict_to_iso_date(date_dict):
+    """
+    Convert pywikiboty-style date dictionary
+    to ISO string ("2002-10-23").
+
+    @param date_dict: dictionary like
+    {"year" : 2002, "month" : 10, "day" : 23}
+    """
+    iso_date = ""
+    if "year" in date_dict:
+        iso_date += str(date_dict["year"])
+    if "month" in date_dict:
+        iso_date += "-" + str(date_dict["month"])
+    if "day" in date_dict:
+        iso_date += "-" + str(date_dict["day"])
+    return iso_date
 
 
 def append_line_to_file(text, filename):

@@ -1,0 +1,452 @@
+{
+    "mappings": {
+        "Skola": {
+            "count": "100",
+            "items": [
+                "Q3914"
+            ]
+        },
+        "Hotell": {
+            "count": "12",
+            "items": [
+                "Q27686"
+            ]
+        },
+        "Hytta": {
+            "count": "9",
+            "items": [
+                "Q13883136"
+            ]
+        },
+        "Kloster": {
+            "count": "11",
+            "items": [
+                "Q44613"
+            ]
+        },
+        "Konstnärsateljé": {
+            "count": "10",
+            "items": [
+                "Q746628"
+            ]
+        },
+        "Kungligt Slott": {
+            "count": "14",
+            "items": [
+                "Q751876"
+            ]
+        },
+        "Hantverkargård": {
+            "count": "23",
+            "items": [
+                "Q29045040"
+            ]
+        },
+        "Kontorshus": {
+            "count": "19",
+            "items": [
+                "Q1021645"
+            ]
+        },
+        "Kraftverk": {
+            "count": "13",
+            "items": [
+                "Q159719"
+            ]
+        },
+        "Gruva": {
+            "count": "15",
+            "items": [
+                "Q820477"
+            ]
+        },
+        "Fyrplats": {
+            "count": "44",
+            "items": [
+                "Q29045010"
+            ]
+        },
+        "Bro": {
+            "count": "14",
+            "items": [
+                "Q12280"
+            ]
+        },
+        "Komministerboställe": {
+            "count": "2",
+            "items": [
+                "Q10433548"
+            ]
+        },
+        "Herrgård": {
+            "count": "167",
+            "items": [
+                "Q879050"
+            ]
+        },
+        "Högskola": {
+            "count": "12",
+            "items": [
+                "Q21028957"
+            ]
+        },
+        "Bondgård": {
+            "count": "221",
+            "items": [
+                "Q131596"
+            ]
+        },
+        "Teater": {
+            "count": "19",
+            "items": [
+                "Q11635"
+            ]
+        },
+        "Kapell": {
+            "count": "190",
+            "items": [
+                "Q108325"
+            ]
+        },
+        "Museum": {
+            "count": "24",
+            "items": [
+                "Q33506"
+            ]
+        },
+        "Prästgård": {
+            "count": "76",
+            "items": [
+                "Q17051104"
+            ]
+        },
+        "Slott": {
+            "count": "71",
+            "items": [
+                "Q751876"
+            ]
+        },
+        "Palats Och Stadsvilla": {
+            "count": "31",
+            "items": [
+                "Q16560"
+            ]
+        },
+        "Borg": {
+            "count": "13",
+            "items": [
+                "Q23413"
+            ]
+        },
+        "Borgargård": {
+            "count": "342",
+            "items": [
+                "Q29045030"
+            ]
+        },
+        "Tingshus": {
+            "count": "38",
+            "items": [
+                "Q1137809"
+            ]
+        },
+        "Kyrka": {
+            "count": "367",
+            "items": [
+                "Q16970"
+            ]
+        },
+        "Örlogsbas": {
+            "count": "16",
+            "items": [
+                "Q1324633"
+            ]
+        },
+        "Gravkapell Med Begravningsplats": {
+            "count": "55",
+            "items": [
+                "Q29045010"
+            ]
+        },
+        "Läroverk": {
+            "count": "20",
+            "items": [
+                "Q10572388"
+            ]
+        },
+        "Kapell Med Begravningsplats": {
+            "count": "35",
+            "items": [
+                "Q29045010"
+            ]
+        },
+        "Befästning": {
+            "count": "31",
+            "items": [
+                "Q57821"
+            ]
+        },
+        "Bibliotek": {
+            "count": "9",
+            "items": [
+                "Q7075"
+            ]
+        },
+        "Bostadshus Med Lokal": {
+            "count": "34",
+            "items": [
+                "Q699405"
+            ]
+        },
+        "Posthus Och Poststation": {
+            "count": "12",
+            "items": [
+                "Q28532565"
+            ]
+        },
+        "Bruk": {
+            "count": "39",
+            "items": [
+                "Q10436265"
+            ]
+        },
+        "Ämbets- Och Tjänstemannaboställe": {
+            "count": "23",
+            "items": [
+                "Q10433548"
+            ]
+        },
+        "Bruksherrgård": {
+            "count": "37",
+            "items": [
+                "Q29045013"
+            ]
+        },
+        "Säteri": {
+            "count": "54",
+            "items": [
+                "Q3354019"
+            ]
+        },
+        "Kyrka Sammanbyggd Med Församlingshem": {
+            "count": "252",
+            "items": [
+                "Q29045018"
+            ]
+        },
+        "Församlingshem": {
+            "count": "14",
+            "items": [
+                "Q5116768"
+            ]
+        },
+        "Frikyrka": {
+            "count": "31",
+            "items": [
+                "Q426043"
+            ]
+        },
+        "Sjukhus": {
+            "count": "9",
+            "items": [
+                "Q16917"
+            ]
+        },
+        "Gästgivargård": {
+            "count": "18",
+            "items": [
+                "Q10512404"
+            ]
+        },
+        "Stadshus": {
+            "count": "10",
+            "items": [
+                "Q3222326"
+            ]
+        },
+        "Bank": {
+            "count": "20",
+            "items": [
+                "Q22687"
+            ]
+        },
+        "Folkskola": {
+            "count": "13",
+            "items": [
+                "Q513984"
+            ]
+        },
+        "Kasernetablissemang": {
+            "count": "28",
+            "items": [
+                "Q131263"
+            ]
+        },
+        "Krematorium": {
+            "count": "13",
+            "items": [
+                "Q157570"
+            ]
+        },
+        "Boställe": {
+            "count": "107",
+            "items": [
+                "Q10433548"
+            ]
+        },
+        "Handelsgård": {
+            "count": "89",
+            "items": [
+                "Q29045034"
+            ]
+        },
+        "Verkstad": {
+            "count": "10",
+            "items": [
+                "Q656720"
+            ]
+        },
+        "Rådhus": {
+            "count": "34",
+            "items": [
+                "Q543654"
+            ]
+        },
+        "Biograf": {
+            "count": "13",
+            "items": [
+                "Q41253"
+            ]
+        },
+        "Telegrafstation Och Televerk": {
+            "count": "17",
+            "items": [
+                "Q29045049"
+            ]
+        },
+        "Såg": {
+            "count": "14",
+            "items": [
+                "Q505213"
+            ]
+        },
+        "Flerbostadshus": {
+            "count": "20",
+            "items": [
+                "Q1498804"
+            ]
+        },
+        "Kyrka Med Begravningsplats": {
+            "count": "2352",
+            "items": [
+                "Q29044875"
+            ]
+        },
+        "Järnvägsstation": {
+            "count": "64",
+            "items": [
+                "Q55488"
+            ]
+        },
+        "Gravkapell": {
+            "count": "14",
+            "items": [
+                "Q1424583"
+            ]
+        },
+        "Badhus": {
+            "count": "12",
+            "items": [
+                "Q785952"
+            ]
+        },
+        "Fritidshus": {
+            "count": "46",
+            "items": [
+                "Q1371789"
+            ]
+        },
+        "Kyrka Med Kyrkotomt": {
+            "count": "163",
+            "items": [
+                "Q29045032"
+            ]
+        },
+        "Bostadshus": {
+            "count": "370",
+            "items": [
+                "Q11755880"
+            ]
+        },
+        "Torp": {
+            "count": "25",
+            "items": [
+                "Q1507736"
+            ]
+        },
+        "Citadell": {
+            "count": "10",
+            "items": [
+                "Q88291"
+            ]
+        },
+        "Residens": {
+            "count": "24",
+            "items": [
+                "Q1180262"
+            ]
+        },
+        "Kvarn": {
+            "count": "50",
+            "items": [
+                "Q44494"
+            ]
+        },
+        "Tullhus Och Tullstation": {
+            "count": "13",
+            "items": [
+                "Q218653"
+            ]
+        },
+        "Officersboställe": {
+            "count": "19",
+            "items": [
+                "Q10433548"
+            ]
+        },
+        "Kungsgård": {
+            "count": "24",
+            "items": [
+                "Q1788752"
+            ]
+        },
+        "Biskopsgård": {
+            "count": "13",
+            "items": [
+                "Q866257"
+            ]
+        },
+        "Industrianläggning": {
+            "count": "16",
+            "items": [
+                "Q83405"
+            ]
+        },
+        "Ordenshus": {
+            "count": "11",
+            "items": [
+                "Q10611239"
+            ]
+        },
+        "Sommarvilla": {
+            "count": "30",
+            "items": [
+                "Q10673626"
+            ]
+        }
+    },
+    "@meta": {
+        "permalink": "//www.wikidata.org/w/index.php?title=Wikidata%3AWikiProject_WLM/Mapping_tables/se-bbr_%28sv%29/functions&oldid=470855792",
+        "timestamp": "2017-03-28T12:30:16Z"
+    }
+}
