@@ -8,6 +8,7 @@ import requests
 import pymysql
 import random
 from urllib.parse import quote
+from wikidataStuff.WikidataStuff import WikidataStuff as wds
 
 site_cache = {}
 
@@ -139,28 +140,27 @@ def count_wikilinks(text):
     return len(get_wikilinks(text))
 
 
-def q_from_wikipedia(language, page_title, wd_repo):
+def q_from_wikipedia(language, page_title):
     """
     Get the ID of the WD item linked to a wp page.
     If the page has no item and is in the article
     namespace, create an item for it.
     """
-    site = pywikibot.Site(language, "wikipedia")
-    repo = site.data_repository()
-    page = pywikibot.Page(site, page_title)
+    wp_site = pywikibot.Site(language, "wikipedia")
+    page = pywikibot.Page(wp_site, page_title)
     summary = "Creating item for {} on {}wp."
     summary = summary.format(page_title, language)
-    wdstuff = wds(repo, edit_summary=summary)
+    wdstuff = wds(create_site_instance("wikidata", "wikidata"), edit_summary=summary)
     if page.exists():
         if page.isRedirectPage():
             page = page.getRedirectTarget()
         try:
             item = pywikibot.ItemPage.fromPage(page)
         except pywikibot.NoPage:
-            if page.namespace() == 0:  # main namespace
-                item = wdstuff.make_new_item_from_page(page, summary)
-            else:
+            if page.namespace() != 0:  # main namespace
                 return
+            else:
+                item = wdstuff.make_new_item_from_page(page, summary)
         return item.getID()
 
 
