@@ -410,9 +410,8 @@ def get_random_list_sample(some_list, amount):
     return random.sample(some_list, amount)
 
 
-def get_P31(q_number):
+def get_P31(q_number, site):
     results = []
-    site = create_site_instance("wikidata", "wikidata")
     item = pywikibot.ItemPage(site, q_number)
     if item.exists() and item.claims.get("P31"):
         for claim in item.claims.get("P31"):
@@ -420,9 +419,9 @@ def get_P31(q_number):
     return results
 
 
-def is_whitelisted_P31(q_number, allowed_values):
+def is_whitelisted_P31(q_number, site, allowed_values):
     result = False
-    all_P31s = get_P31(q_number)
+    all_P31s = get_P31(q_number, site)
     if all_P31s:
         for P31 in all_P31s:
             if P31 in allowed_values:

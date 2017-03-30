@@ -295,7 +295,7 @@ class Monument(object):
         for title in self.data_files:
             print(title)
 
-    def __init__(self, db_row_dict, mapping, data_files, existing):
+    def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         self.props = utils.load_json(
             path.join(MAPPING_DIR, "props_general.json"))
         self.adm0 = utils.load_json(path.join(MAPPING_DIR, "adm0.json"))
@@ -308,6 +308,7 @@ class Monument(object):
         self.construct_wd_item(mapping)
         self.data_files = data_files
         self.existing = existing
+        self.repo = repository
         self.problem_report = {}
 
     def get_fields(self):

@@ -1,6 +1,7 @@
+import importer.importer_utils as utils
+import pywikibot
 import string
 import unittest
-import importer.importer_utils as utils
 
 
 class TestWLMStuff(unittest.TestCase):
@@ -349,36 +350,39 @@ class TestCommons(unittest.TestCase):
 
 class TestWikidata(unittest.TestCase):
 
+    def setUp(self):
+        self.wikidata_site = utils.create_site_instance("wikidata", "wikidata")
+
     def test_get_P31_one(self):
         """
         August Strindberg -> human
         """
-        self.assertEqual(utils.get_P31("Q7724"), ["Q5"])
+        self.assertEqual(utils.get_P31("Q7724", self.wikidata_site), ["Q5"])
 
     def test_get_P31_two(self):
         """
         cat -> [taxon, model organism]
         """
-        self.assertEqual(utils.get_P31("Q146"), ["Q16521", "Q213907"])
+        self.assertEqual(utils.get_P31("Q146", self.wikidata_site), ["Q16521", "Q213907"])
 
     def test_get_P31_none(self):
         """
         model organism -> [] (it's only a subclass)
         """
-        self.assertEqual(utils.get_P31("Q213907"), [])
+        self.assertEqual(utils.get_P31("Q213907", self.wikidata_site), [])
 
     def test_is_whitelisted_P31_pass(self):
         """
         Solberg, Kungälvs kommun -> småort
         """
-        self.assertTrue(utils.is_whitelisted_P31("Q2263578", ["Q14839548"]))
+        self.assertTrue(utils.is_whitelisted_P31("Q2263578", self.wikidata_site, ["Q14839548"]))
 
     def test_is_whitelisted_P31_fail(self):
         """
         Solberg, Kungälvs kommun -> [city, tätort]
         """
         self.assertFalse(
-            utils.is_whitelisted_P31("Q2263578", ["Q515", "Q12813115"]))
+            utils.is_whitelisted_P31("Q2263578", self.wikidata_site, ["Q515", "Q12813115"]))
 
 
 class TestWikipedia(unittest.TestCase):

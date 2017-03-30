@@ -29,7 +29,7 @@ class DkBygningDa(Monument):
             if utils.wp_page_exists("da", place):
                 place_item = utils.q_from_wikipedia("da", place)
         if place_item:
-            place_item_ids = utils.get_P31(place_item)
+            place_item_ids = utils.get_P31(place_item, self.repo)
             for p31_value in place_item_ids:
                 if p31_value in self.data_files["settlement"]:
                     self.add_statement("location", place_item)

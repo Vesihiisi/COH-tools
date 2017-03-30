@@ -103,7 +103,7 @@ class SeBbrSv(Monument):
                 wp_page = name.title
                 q_item = utils.q_from_wikipedia("sv", wp_page)
                 if q_item is not None:
-                    if utils.is_whitelisted_P31(q_item, ["Q5"]):
+                    if utils.is_whitelisted_P31(q_item, self.repo, ["Q5"]):
                         self.add_statement("architect", q_item)
 
     def set_location(self):

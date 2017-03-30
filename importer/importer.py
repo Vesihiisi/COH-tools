@@ -198,7 +198,7 @@ def get_items(connection,
     problem_reports = []
     wikidata_site = utils.create_site_instance("wikidata", "wikidata")
     for row in database_rows:
-        monument = class_to_use(row, mapping, data_files, existing)
+        monument = class_to_use(row, mapping, data_files, existing, wikidata_site)
         problem_report = monument.get_report()
         if table:
             raw_data = "<pre>" + str(row) + "</pre>\n"
