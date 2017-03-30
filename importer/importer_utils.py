@@ -148,9 +148,11 @@ def q_from_wikipedia(language, page_title):
     namespace, create an item for it.
     """
     site = pywikibot.Site(language, "wikipedia")
+    repo = site.data_repository()
     page = pywikibot.Page(site, page_title)
     summary = "Creating item for {} on {}wp."
     summary = summary.format(page_title, language)
+    wdstuff = wds(repo, edit_summary=summary)
     if page.exists():
         if page.isRedirectPage():
             page = page.getRedirectTarget()
@@ -158,7 +160,7 @@ def q_from_wikipedia(language, page_title):
             item = pywikibot.ItemPage.fromPage(page)
         except pywikibot.NoPage:
             if page.namespace() == 0:  # main namespace
-                item = wds.make_new_item_from_page(page, summary)
+                item = wdstuff.make_new_item_from_page(page, summary)
         return item.getID()
 
 
