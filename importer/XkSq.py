@@ -24,7 +24,7 @@ class XkSq(Monument):
         """
         Set the administrative location.
 
-        never wikilinked!
+        The values are never wikilinked.
         E panjohur = unknown
         """
         print(self.municipality)
@@ -33,7 +33,7 @@ class XkSq(Monument):
         """
         Set the Commons category property.
 
-        the actual category names are not saved
+        The actual category names are not saved
         in the database, BUT
         a full category tree exists on commons,
         even though many of the cats are empty:

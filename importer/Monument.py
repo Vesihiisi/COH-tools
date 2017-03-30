@@ -477,7 +477,6 @@ class Monument(object):
         in the report,
         add it to the report automatically.
         Add direct URL to item in WLM API.
-
         """
         self.problem_report[key_name] = raw_data
         if "wd-item" not in self.problem_report:
