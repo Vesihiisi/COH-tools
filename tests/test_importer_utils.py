@@ -1,7 +1,7 @@
-import importer.importer_utils as utils
 import pywikibot
 import string
 import unittest
+import importer.importer_utils as utils
 
 
 class TestWLMStuff(unittest.TestCase):
