@@ -291,11 +291,11 @@ class Uploader(object):
         """
         Initialize an Upload object for a single Monument.
 
-        @param: monument_object Dictionary of Monument data
-        @param: repo Data repository of site to work on (Wikidata)
-        @param: log Enable logging to file
-        @param: tablename Name of db table, used in edit summary
-        @param: live Whether to work on real WD items or in the sandbox
+        :param monument_object: Dictionary of Monument data
+        :param repo: Data repository of site to work on (Wikidata)
+        :param log: Enable logging to file
+        :param tablename: Name of db table, used in edit summary
+        :param live: Whether to work on real WD items or in the sandbox
         """
         self.repo = repo
         self.log = False
