@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# -*- coding: utf-8  -*-
 import string
 import unittest
 import importer.importer_utils as utils
