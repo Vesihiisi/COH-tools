@@ -86,6 +86,7 @@ class SeBbrSv(Monument):
         # because there's no heritage status specified in mapping file,
         # so we start by removing that empty claim.
         self.remove_statement("heritage_status")
+        qualifier = None
         if protection_date:
             # 1969-01-31
             try:
@@ -94,37 +95,51 @@ class SeBbrSv(Monument):
                              {"time_value": date_dict}}
             except ValueError:
                 self.add_to_report("protection_type", bbr_type)
-        else:
-            qualifier = None
         kulturarv_source = self.create_kulturarv_source(url)
         self.add_statement(
             "heritage_status", type_q, qualifier, refs=[kulturarv_source])
 
     def create_kulturarv_source(self, url):
+        """
+        Create a reference to the BBR database.
+
+        The reference is used to source the heritage status
+        statement. It contains a link to the item in the open
+        API kulturarvsdata.se.
+        """
         source_item = self.sources["bebyggelseregistret"]
         today = utils.today_dict()
         prop_reference_url = self.props["reference_url"]
         prop_date = self.props["retrieved"]
         prop_stated = self.props["stated_in"]
         prop_reference_url = self.props["reference_url"]
-        kulturarv_source = {"source":
-                            {"prop": prop_stated, "value": source_item},
-                            "published": {"prop": prop_date, "value": today},
-                            "reference_url": {"prop": prop_reference_url,
-                                              "value": url}}
+        kulturarv_source = {
+            "source": {"prop": prop_stated, "value": source_item},
+            "published": {"prop": prop_date, "value": today},
+            "reference_url": {"prop": prop_reference_url, "value": url}}
         return kulturarv_source
 
     def set_function(self):
+        """
+        Set the use (P366) property.
+
+        Extract the functions from the 'funktion' field,
+        whose contents look like 'Kyrka med kyrkotomt,Skola (1 byggnad)'.
+        Use the mapping table:
+        https://www.wikidata.org/wiki/Wikidata:WikiProject_WLM/Mapping_tables/se-bbr_(sv)/functions
+        """
         functions_map = self.data_files["functions"]["mappings"]
         if self.has_non_empty_attribute("funktion"):
-            functions = utils.get_rid_of_brackets(
-                self.funktion).lower().split(",")
+            functions_string = utils.get_rid_of_brackets(self.funktion)
+            functions = functions_string.lower().split(",")
             for item in functions:
                 function = item.strip()
                 try:
                     function_item = [functions_map[x]["items"]
-                                     for x in functions_map if x.lower() == function][0][0]
-                    self.add_statement("use", function_item)
+                                     for x in functions_map if
+                                     x.lower() == function]
+                    function_item_clean = function_item[0][0]
+                    self.add_statement("use", function_item_clean)
                 except IndexError:
                     data_string = "{} ({})".format(function, self.funktion)
                     # report both this particular function and the whole
@@ -170,8 +185,11 @@ class SeBbrSv(Monument):
             if utils.count_wikilinks(self.plats) == 1:
                 location_q = utils.q_from_first_wikilink("sv", self.plats)
                 try:
-                    legit_location = [x["item"] for x in settlements_dict if x["item"] == location_q][0]
-                    self.add_statement("location", legit_location)
+                    legit_location = [x["item"] for
+                                      x in settlements_dict if
+                                      x["item"] == location_q]
+                    legit_location_clean = legit_location[0]
+                    self.add_statement("location", legit_location_clean)
                 except IndexError:
                     self.add_to_report("plats", self.plats)
             elif utils.count_wikilinks(self.plats) == 0:
@@ -230,7 +248,7 @@ class SeBbrSv(Monument):
             self.add_statement("located_adm", municipality)
         except IndexError:
             print("Could not parse municipality: {}.".format(self.kommun))
-            return
+            self.add_to_report("kommun", self.kommun)
 
     def set_inception(self):
         """
