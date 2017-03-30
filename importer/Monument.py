@@ -296,6 +296,16 @@ class Monument(object):
             print(title)
 
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
+        """
+        Initialize the data object.
+        :param db_row_dict: raw data from the database
+        :param mapping: mapping file object
+        :param data_files: resources like dictionaries of known placenames to match
+        :param existing: list of Wikidata items using a specific property
+            that is optionally specified in the mapping file and is supposed to
+            hold unique values
+        :param repository: data repository (Wikidata site)
+        """
         self.props = utils.load_json(
             path.join(MAPPING_DIR, "props_general.json"))
         self.adm0 = utils.load_json(path.join(MAPPING_DIR, "adm0.json"))
