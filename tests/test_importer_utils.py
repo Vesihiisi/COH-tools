@@ -1,4 +1,5 @@
-import pywikibot
+#!/usr/bin/python
+# -*- coding: utf-8  -*-
 import string
 import unittest
 import importer.importer_utils as utils
@@ -155,6 +156,21 @@ class TestDatetimeMethods(unittest.TestCase):
         template = "%Y"
         output = {"year": 1999}
         self.assertEqual(utils.date_to_dict(text, template), output)
+
+    def test_dict_to_iso_date_full(self):
+        date_dict = {"year": 1999, "month": 10, "day": 19}
+        output = "1999-10-19"
+        self.assertEqual(utils.dict_to_iso_date(date_dict), output)
+
+    def test_dict_to_iso_date_year(self):
+        date_dict = {"year": 1999}
+        output = "1999"
+        self.assertEqual(utils.dict_to_iso_date(date_dict), output)
+
+    def test_dict_to_iso_date_year_month(self):
+        date_dict = {"year": 1999, "month": 10}
+        output = "1999-10"
+        self.assertEqual(utils.dict_to_iso_date(date_dict), output)
 
 
 class TestWikitext(unittest.TestCase):
@@ -350,39 +366,36 @@ class TestCommons(unittest.TestCase):
 
 class TestWikidata(unittest.TestCase):
 
-    def setUp(self):
-        self.wikidata_site = utils.create_site_instance("wikidata", "wikidata")
-
     def test_get_P31_one(self):
         """
         August Strindberg -> human
         """
-        self.assertEqual(utils.get_P31("Q7724", self.wikidata_site), ["Q5"])
+        self.assertEqual(utils.get_P31("Q7724"), ["Q5"])
 
     def test_get_P31_two(self):
         """
-        cat -> [taxon, model organism]
+        Felis manul -> [taxon, synonym]
         """
-        self.assertEqual(utils.get_P31("Q146", self.wikidata_site), ["Q16521", "Q213907"])
+        self.assertEqual(utils.get_P31("Q24006022"), ["Q16521", "Q1040689"])
 
     def test_get_P31_none(self):
         """
         model organism -> [] (it's only a subclass)
         """
-        self.assertEqual(utils.get_P31("Q213907", self.wikidata_site), [])
+        self.assertEqual(utils.get_P31("Q213907"), [])
 
     def test_is_whitelisted_P31_pass(self):
         """
         Solberg, Kungälvs kommun -> småort
         """
-        self.assertTrue(utils.is_whitelisted_P31("Q2263578", self.wikidata_site, ["Q14839548"]))
+        self.assertTrue(utils.is_whitelisted_P31("Q2263578", ["Q14839548"]))
 
     def test_is_whitelisted_P31_fail(self):
         """
         Solberg, Kungälvs kommun -> [city, tätort]
         """
         self.assertFalse(
-            utils.is_whitelisted_P31("Q2263578", self.wikidata_site, ["Q515", "Q12813115"]))
+            utils.is_whitelisted_P31("Q2263578", ["Q515", "Q12813115"]))
 
 
 class TestWikipedia(unittest.TestCase):
