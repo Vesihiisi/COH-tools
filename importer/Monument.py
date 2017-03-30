@@ -86,8 +86,7 @@ class Monument(object):
         return table
 
     def add_statement(self, prop_name, value, quals=None, refs=None):
-        """
-        Add a statement to the data object.
+        """Add a statement to the data object.
 
         If the given property already exists, this will
         append another value to the array,
@@ -103,11 +102,13 @@ class Monument(object):
         In order to not use any reference whatsoever,
         the value of refs is to be set to False.
 
-        :param prop_name: name of the property, as stated in the props library file
+        :param prop_name: name of the property,
+            as stated in the props library file
         :param value: the value of the property
         :param quals: a dictionary of qualifiers
         :param refs: a list of references or a single reference.
-            Set None/True for the default reference, set False to not add a reference.
+            Set None/True for the default reference,
+            set False to not add a reference.
         """
         base = self.wd_item["statements"]
         prop = self.props[prop_name]
@@ -129,10 +130,10 @@ class Monument(object):
         base[prop].append(statement)
 
     def remove_statement(self, prop_name):
-        """
-        Remove all statements with a given property from the data object.
+        """Remove all statements with a given property from the data object.
 
-        :param prop_name: name of the property, as stated in the props library file
+        :param prop_name: name of the property,
+            as stated in the props library file
         """
         base = self.wd_item["statements"]
         prop = self.props[prop_name]
@@ -140,8 +141,8 @@ class Monument(object):
             del base[prop]
 
     def substitute_statement(self, prop_name, value, quals=None, refs=None):
-        """
-        Instead of adding to the array, replace the statement.
+        """Instead of adding to the array, replace the statement.
+
         This is so that instances of child classes
         can override default values...
         For example p31 museum -> art museum
@@ -162,8 +163,7 @@ class Monument(object):
             print("Associated WD item: ", wd_item)
 
     def add_label(self, language, text):
-        """
-        Add a label in a specific language.
+        """Add a label in a specific language.
 
         :param language: code of language, e.g. "fi"
         :param text: content of the label
@@ -172,8 +172,7 @@ class Monument(object):
         base[language] = text
 
     def add_alias(self, language, text):
-        """
-        Add an alias in a specific language.
+        """Add an alias in a specific language.
 
         :param language: code of language, e.g. "fi"
         :param text: content of the alias
@@ -184,8 +183,7 @@ class Monument(object):
         base[language].append(text)
 
     def add_description(self, language, text):
-        """
-        Add a description in a specific language.
+        """Add a description in a specific language.
 
         :param language: code of language, e.g. "fi"
         :param text: content of the description
@@ -206,8 +204,7 @@ class Monument(object):
         self.add_statement("is", default_is["item"])
 
     def set_labels(self, language, content):
-        """
-        Add a label in a specific language using content with markup.
+        """Add a label in a specific language using content with markup.
 
         This will clean up markup, for instance if it's a Wiki-link
         it will extract its title.
@@ -224,8 +221,7 @@ class Monument(object):
             self.add_statement("heritage_status", heritage["item"])
 
     def set_coords(self, coord_keywords_tuple):
-        """
-        Add coordinates.
+        """Add coordinates.
 
         :param coord_keywords_tuple: names of the columns with
             coordinates, like ("lat", "long")
@@ -242,8 +238,7 @@ class Monument(object):
                     "coordinates", (latitude, longitude))
 
     def set_image(self, image_keyword="image"):
-        """
-        Add image.
+        """Add image.
 
         :param image_keyword: the name of the column with image path
         """
@@ -252,8 +247,7 @@ class Monument(object):
             self.add_statement("image", image, refs=False)
 
     def set_commonscat(self, keyword="commonscat"):
-        """
-        Add a statement with Commons category.
+        """Add a statement with Commons category.
 
         :param keyword: the name of the column with commons category
         """
@@ -267,8 +261,7 @@ class Monument(object):
             self.wd_item["registrant_url"] = self.registrant_url
 
     def set_street_address(self, language, address_keyword):
-        """
-        Add the street address.
+        """Add the street address.
 
         If parsing failed, add to problem report.
 
@@ -285,9 +278,7 @@ class Monument(object):
                 self.add_to_report(address_keyword, possible_address)
 
     def has_non_empty_attribute(self, attr_name):
-        """
-        Check whether the data object has has an attribute and it's
-        not an empty string.
+        """Check whether the data object has a non-empty attribute.
 
         :param attr_name: name of the attribute
         """
@@ -312,8 +303,7 @@ class Monument(object):
             self.wd_item["source"] = self.source
 
     def create_stated_in_source(self, source_item, pub_date):
-        """
-        Create a 'stated in' reference.
+        """Create a 'stated in' reference.
 
         :param source_item: Wikidata item or URL used as a source
         :param pub_date: publication date in the format 2014-12-23
@@ -325,8 +315,7 @@ class Monument(object):
                 "published": {"prop": prop_date, "value": pub_date}}
 
     def create_wlm_source(self, monuments_all_id):
-        """
-        Create a reference to the WLM database.
+        """Create a reference to the WLM database.
 
         :param monuments_all_id: the ID of the object in monuments_all,
             used to create a URL to the entry in the online database.
@@ -364,8 +353,7 @@ class Monument(object):
             return None
 
     def exists_with_prop(self, mapping):
-        """
-        Get the Wikidata item that has the same value of a property as the data object.
+        """Get the Wikidata item that has the same value of a property as the data object.
 
         The unique property is given in the mapping file.
         """
@@ -380,8 +368,7 @@ class Monument(object):
                 return None
 
     def in_known_items(self, wd_item):
-        """
-        Check if given item is in the list of items with a certain property.
+        """Check if given item is in the list of items with a certain property.
 
         This uses the list of items with a certain property
         (specified in mapping) that was downloaded in the
@@ -390,8 +377,7 @@ class Monument(object):
         return wd_item in self.existing.values()
 
     def find_matching_wikidata(self, mapping):
-        """
-        Match the data object with a possible Wikidata item.
+        """Match the data object with a possible Wikidata item.
 
         At first, use the downloaded list of Wikidata items
         that use the optional unique property.
@@ -434,8 +420,7 @@ class Monument(object):
             print(title)
 
     def __init__(self, db_row_dict, mapping, data_files, existing):
-        """
-        Initialize the data object.
+        """Initialize the data object.
 
         :param db_row_dict: raw data from the database
         :param mapping: mapping file object
@@ -466,14 +451,14 @@ class Monument(object):
         return sorted(list(self.__dict__.keys()))
 
     def add_to_report(self, key_name, raw_data):
-        """
-        Add data to problem report json.
+        """Add data to problem report json.
 
         Check if item has an associated Q-number,
         and if that's the case and it's missing
         in the report,
         add it to the report automatically.
         Add direct URL to item in WLM API.
+
         """
         self.problem_report[key_name] = raw_data
         if "wd-item" not in self.problem_report:
@@ -485,9 +470,7 @@ class Monument(object):
             self.problem_report["url"] = self.wlm_url
 
     def print_report(self):
-        """
-        Print the problem report on screen.
-        """
+        """Print the problem report on screen."""
         print(
             json.dumps(self.problem_report,
                        sort_keys=True,
