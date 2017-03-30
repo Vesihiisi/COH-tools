@@ -273,6 +273,10 @@ class SeBbrSv(Monument):
         """
         self.monuments_all_id = self.bbr
 
+    def exists_with_monument_article(self, language):
+        """Set language of Wikipedia to use to match articles."""
+        return super().exists_with_monument_article("sv")
+
     def __init__(self, db_row_dict, mapping, data_files, existing):
         Monument.__init__(self, db_row_dict, mapping, data_files, existing)
         self.set_monuments_all_id()
@@ -286,7 +290,6 @@ class SeBbrSv(Monument):
         self.update_labels()
         self.update_descriptions()
         self.set_image("bild")
-        self.exists("sv")
         self.set_commonscat()
         self.set_coords(("lat", "lon"))
         self.set_inception()
@@ -297,4 +300,4 @@ class SeBbrSv(Monument):
         self.set_architect()
         self.set_location()
         self.set_function()
-        self.exists_with_prop(mapping)
+        self.set_wd_item(self.find_matching_wikidata(mapping))
