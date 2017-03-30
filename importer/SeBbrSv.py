@@ -55,46 +55,102 @@ class SeBbrSv(Monument):
         querying the source database via their API.
         """
         protection_date = False
-        url = "http://kulturarvsdata.se/" + \
-            self.wd_item["statements"][self.props["cultural_heritage_sweden"]][0]["value"]
+        kulturarv_id = self.wd_item["statements"][
+            self.props["cultural_heritage_sweden"]][0]["value"]
+        url = "http://kulturarvsdata.se/{}".format(kulturarv_id)
+        # http://kulturarvsdata.se/raa/bbr/21300000023251
         url_list = url.split("/")
         url_list.insert(-1, "jsonld")
         url = "/".join(url_list)
-        data = requests.get(url).json()
+        # Request data in json format
+        # http://kulturarvsdata.se/raa/bbr/jsonld/21300000023251
+        data = requests.get(url)
+        try:
+            data = data.json()
+        except ValueError:
+            # Got a jsondecodeerror once, on bbr: 21420000015942
+            # utils.get_bbr_link gives a None from it.
+            # If it occurs, skip the heritage statement,
+            # but the question is whether the item shouldn't be skipped...
+            self.add_to_report("kulturarv_url", url)
+            return
         for element in data["@graph"]:
             if "ns5:spec" in element:
                 bbr_type = element["ns5:spec"]
                 if bbr_type.startswith("Kyrkligt kulturminne"):
+                    # Kyrkligt kulturminne. 4 kap. KML -- these don't seem to have dates
                     type_q = "Q24284073"
                 elif bbr_type.startswith("Byggnadsminne"):
+                    # Byggnadsminne (BM) 3 kap. KML (1977-02-25)
                     type_q = "Q24284072"
                     protection_date = bbr_type.split("(")[-1][:-1]
                 elif bbr_type.startswith("Statligt byggnadsminne"):
+                    # Statligt byggnadsminne (SBM). Förordning (2013:558) (1935-01-25)
                     type_q = "Q24284071"
                     protection_date = bbr_type.split("(")[-1][:-1]
         # The original set_heritage() added an empty claim
         # because there's no heritage status specified in mapping file,
         # so we start by removing that empty claim.
         self.remove_statement("heritage_status")
+        qualifier = None
         if protection_date:
             # 1969-01-31
-            date_dict = utils.date_to_dict(protection_date, "%Y-%m-%d")
-            qualifier = {"start_time":
-                         {"time_value": date_dict}}
-        else:
-            qualifier = None
-        self.add_statement("heritage_status", type_q, qualifier)
+            try:
+                date_dict = utils.date_to_dict(protection_date, "%Y-%m-%d")
+                qualifier = {"start_time":
+                             {"time_value": date_dict}}
+            except ValueError:
+                self.add_to_report("protection_type", bbr_type)
+        kulturarv_source = self.create_kulturarv_source(url)
+        self.add_statement(
+            "heritage_status", type_q, qualifier, refs=[kulturarv_source])
+
+    def create_kulturarv_source(self, url):
+        """
+        Create a reference to the BBR database.
+
+        The reference is used to source the heritage status
+        statement. It contains a link to the item in the open
+        API kulturarvsdata.se.
+        """
+        source_item = self.sources["bebyggelseregistret"]
+        today = utils.today_dict()
+        prop_reference_url = self.props["reference_url"]
+        prop_date = self.props["retrieved"]
+        prop_stated = self.props["stated_in"]
+        prop_reference_url = self.props["reference_url"]
+        kulturarv_source = {
+            "source": {"prop": prop_stated, "value": source_item},
+            "published": {"prop": prop_date, "value": today},
+            "reference_url": {"prop": prop_reference_url, "value": url}}
+        return kulturarv_source
 
     def set_function(self):
         """
-        Will be overriden by the se-bbr patch anyway.
+        Set the use (P366) property.
 
-        TODO
-        examples:
-        https://gist.github.com/Vesihiisi/f637916ea1d80a4be5d71a3adf6e2dc2
+        Extract the functions from the 'funktion' field,
+        whose contents look like 'Kyrka med kyrkotomt,Skola (1 byggnad)'.
+        Use the mapping table:
+        https://www.wikidata.org/wiki/Wikidata:WikiProject_WLM/Mapping_tables/se-bbr_(sv)/functions
         """
-        # functions = get_rid_of_brackets(self.funktion).lower().split(",")
-        return
+        functions_map = self.data_files["functions"]["mappings"]
+        if self.has_non_empty_attribute("funktion"):
+            functions_string = utils.get_rid_of_brackets(self.funktion)
+            functions = functions_string.lower().split(",")
+            for item in functions:
+                function = item.strip()
+                try:
+                    function_item = [functions_map[x]["items"]
+                                     for x in functions_map if
+                                     x.lower() == function]
+                    function_item_clean = function_item[0][0]
+                    self.add_statement("use", function_item_clean)
+                except IndexError:
+                    data_string = "{} ({})".format(function, self.funktion)
+                    # report both this particular function and the whole
+                    # string containing it
+                    self.add_to_report("funktion", data_string)
 
     def set_architect(self):
         """
@@ -109,25 +165,48 @@ class SeBbrSv(Monument):
             for name in architects:
                 wp_page = name.title
                 q_item = utils.q_from_wikipedia("sv", wp_page)
-                if q_item is not None:
+                if q_item:
                     if utils.is_whitelisted_P31(q_item, ["Q5"]):
                         self.add_statement("architect", q_item)
+                    else:
+                        self.add_to_report("arkitekt", self.arkitekt)
 
     def set_location(self):
         """
-        Set the location.
+        Set location or street address.
 
-        This is the same as 'address' in monuments_all.
         There are some street addresses. Some are simple:
             Norra Murgatan 3
         Some are complex:
             Skolgatan 5, Västra Kyrkogatan 3
             Norra Murgatan 27, Uddens gränd 14-16
+
+        If self.plats consists of 1 wikilinked item,
+        get the WD item and cross check with the list of
+        known human settlements.
+
+        If it's not wikilinked text, try to extract an address.
         """
+        settlements_dict = self.data_files["settlements"]
         if self.has_non_empty_attribute("plats"):
             if utils.count_wikilinks(self.plats) == 1:
-                location = utils.q_from_first_wikilink("sv", self.plats)
-                self.add_statement("location", location)
+                location_q = utils.q_from_first_wikilink("sv", self.plats)
+                try:
+                    legit_location = [x["item"] for
+                                      x in settlements_dict if
+                                      x["item"] == location_q]
+                    legit_location_clean = legit_location[0]
+                    self.add_statement("location", legit_location_clean)
+                except IndexError:
+                    self.add_to_report("plats", self.plats)
+            elif utils.count_wikilinks(self.plats) == 0:
+                processed_address = utils.get_street_address(self.plats, "sv")
+                if processed_address:
+                    self.add_statement("located_street", processed_address)
+                else:
+                    self.add_to_report("plats", self.plats)
+            else:
+                self.add_to_report("plats", self.plats)
 
     def update_descriptions(self):
         """
@@ -151,7 +230,7 @@ class SeBbrSv(Monument):
         """
         extracted_no = utils.get_number_from_string(
             utils.get_text_inside_brackets(self.funktion))
-        if extracted_no is not None:
+        if extracted_no:
             self.add_statement(
                 "has_parts_of_class", "Q41176",
                 {"quantity": {"quantity_value": extracted_no}})
@@ -181,7 +260,7 @@ class SeBbrSv(Monument):
             self.add_statement("located_adm", municipality)
         except IndexError:
             print("Could not parse municipality: {}.".format(self.kommun))
-            return
+            self.add_to_report("kommun", self.kommun)
 
     def set_inception(self):
         """
@@ -197,12 +276,17 @@ class SeBbrSv(Monument):
         """
         if self.has_non_empty_attribute("byggar"):
             year_parsed = utils.parse_year(self.byggar)
-            if year_parsed is not None:
-                self.add_statement("inception", {"time_value": year_parsed})
+            if isinstance(year_parsed, int):
+                value_dict = {"time_value": {"year": year_parsed}}
+                self.add_statement("inception", value_dict)
 
     def set_monuments_all_id(self):
         """Map which column name in specific table to  ID in monuments_all."""
         self.monuments_all_id = self.bbr
+
+    def exists_with_monument_article(self, language):
+        """Set language of Wikipedia to use to match articles."""
+        return super().exists_with_monument_article("sv")
 
     def __init__(self, db_row_dict, mapping, data_files, existing):
         Monument.__init__(self, db_row_dict, mapping, data_files, existing)
@@ -217,7 +301,6 @@ class SeBbrSv(Monument):
         self.update_labels()
         self.update_descriptions()
         self.set_image("bild")
-        self.exists("sv")
         self.set_commonscat()
         self.set_coords(("lat", "lon"))
         self.set_inception()
@@ -228,4 +311,4 @@ class SeBbrSv(Monument):
         self.set_architect()
         self.set_location()
         self.set_function()
-        self.exists_with_prop(mapping)
+        self.set_wd_item(self.find_matching_wikidata(mapping))

@@ -30,9 +30,11 @@
     "quantity": "P1114",
     "raa-nr": "P1262",
     "reference_url": "P854",
+    "retrieved":"P813",
     "romanian_monument_id": "P1770",
     "start_time": "P580",
     "stated_in": "P248",
     "width": "P2049",
-    "wlm_id": "P2186"
+    "wlm_id": "P2186",
+    "use": "P366"
 }

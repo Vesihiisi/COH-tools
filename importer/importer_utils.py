@@ -398,6 +398,11 @@ def date_to_dict(datestring, dateformat):
     return date_dict
 
 
+def today_dict():
+    """Get today's date as pywikibot-ready dictionary."""
+    return datetime_object_to_dict(datetime.date.today())
+
+  
 def dict_to_iso_date(date_dict):
     """
     Convert pywikiboty-style date dictionary

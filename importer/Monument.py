@@ -123,7 +123,7 @@ class Monument(object):
         if refs is None or refs is True:
             refs = self.wlm_source
         elif refs is False:
-            refs = None
+            refs = []
 
         if refs and not isinstance(refs, list):
             refs = [refs]
