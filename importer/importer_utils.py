@@ -150,7 +150,8 @@ def q_from_wikipedia(language, page_title):
     page = pywikibot.Page(wp_site, page_title)
     summary = "Creating item for {} on {}wp."
     summary = summary.format(page_title, language)
-    wdstuff = wds(create_site_instance("wikidata", "wikidata"), edit_summary=summary)
+    wd_repo = create_site_instance("wikidata", "wikidata")
+    wdstuff = wds(wd_repo, edit_summary=summary)
     if page.exists():
         if page.isRedirectPage():
             page = page.getRedirectTarget()
@@ -159,8 +160,7 @@ def q_from_wikipedia(language, page_title):
         except pywikibot.NoPage:
             if page.namespace() != 0:  # main namespace
                 return
-            else:
-                item = wdstuff.make_new_item_from_page(page, summary)
+            item = wdstuff.make_new_item_from_page(page, summary)
         return item.getID()
 
 
