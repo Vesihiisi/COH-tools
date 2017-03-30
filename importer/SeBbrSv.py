@@ -11,6 +11,8 @@ class SeBbrSv(Monument):
 
     def update_labels(self):
         """
+        Set the label in Swedish.
+
         Original labels look like this:
             Wickmanska gården (Paradis 35)
         We don't need the latter part (fastighetsbeteckning) in the label.
@@ -21,6 +23,8 @@ class SeBbrSv(Monument):
 
     def set_bbr(self):
         """
+        Set the BBR ID property.
+
         This will get a link that looks like
             raa/bbr/21300000002805
         Depending on whether the prefix is raa/bbr/ or raa/bbra/
@@ -30,6 +34,8 @@ class SeBbrSv(Monument):
 
     def set_heritage_bbr(self):
         """
+        Set the specific type of heritage status.
+
         In Sweden there are three different types of legal protection
         for different types of cultural heritage,
         so we created three new items:
@@ -148,7 +154,8 @@ class SeBbrSv(Monument):
 
     def set_architect(self):
         """
-        Add architect claim if available.
+        Set the architect.
+
         Only if wikilinked.
         Can be more than one.
         Check if it's a human.
@@ -203,7 +210,8 @@ class SeBbrSv(Monument):
 
     def update_descriptions(self):
         """
-        Use fastighetsbeteckning as alias.
+        Add the fastighetsbeteckning as alias.
+
         For example:
             (Knutse 2:19)
         """
@@ -212,6 +220,8 @@ class SeBbrSv(Monument):
 
     def set_no_of_buildings(self):
         """
+        Set how many buildings the item consists of.
+
         The 'funktion' column looks like this:
             Kapell (3 byggnader)
         From this, we extract: has parts of class building,
@@ -227,6 +237,8 @@ class SeBbrSv(Monument):
 
     def set_adm_location(self):
         """
+        Set the administrative location.
+
         Use offline mapping file
         to map municipality to P131.
         The column is 'kommun'.
@@ -252,6 +264,8 @@ class SeBbrSv(Monument):
 
     def set_inception(self):
         """
+        Set the building year.
+
         The 'byggar' column can have many forms,
         but here we only process the obvious cases:
             1865
@@ -267,10 +281,7 @@ class SeBbrSv(Monument):
                 self.add_statement("inception", value_dict)
 
     def set_monuments_all_id(self):
-        """
-        Map which column name in specific table
-        is used as ID in monuments_all.
-        """
+        """Map which column name in specific table to  ID in monuments_all."""
         self.monuments_all_id = self.bbr
 
     def exists_with_monument_article(self, language):

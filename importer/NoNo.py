@@ -3,9 +3,10 @@ import importer_utils as utils
 
 
 class NoNo(Monument):
-
     """
-    TODO
+    A class to process monuments_no_(no).
+
+    TODO.
     there's an API:
     https://data.norge.no/data/riksantikvaren/kulturminnes%C3%B8k
     look into how we can benefit from it!
@@ -13,6 +14,8 @@ class NoNo(Monument):
 
     def update_labels(self):
         """
+        Set the labels.
+
         NOTE
         Some of these are in all caps or have multiple spaces:
         UTSIRA FYRSTASJON

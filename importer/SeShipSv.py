@@ -6,6 +6,8 @@ class SeShipSv(Monument):
 
     def set_type(self):
         """
+        Set the specific type of watercraft.
+
         In some cases, there's a more specific ship type in
         the 'funktion' column.
         Here all all the possible values:
@@ -30,6 +32,8 @@ class SeShipSv(Monument):
 
     def set_shipyard(self):
         """
+        Set the manufacturer property.
+
         Process the column 'varv'.
         It can look like this:
         '[[Bergsunds varv]]<br>[[Stockholm]]'
@@ -50,6 +54,8 @@ class SeShipSv(Monument):
 
     def set_manufacture_year(self):
         """
+        Set the manufacture year.
+
         If the column 'byggar' has a parsable value,
         use it as year of manufacture.
         Use WLM database as a source.
@@ -92,6 +98,7 @@ class SeShipSv(Monument):
     def set_homeport(self):
         """
         Add homeport to data object.
+
         Only works if column 'hemmahamn' contains exactly
         one wikilink.
         Use WLM database as source.
@@ -123,10 +130,7 @@ class SeShipSv(Monument):
                 self.add_statement("call_sign", self.signal, refs=[ref])
 
     def set_monuments_all_id(self):
-        """
-        Map which column name in specific table
-        is used as ID in monuments_all.
-        """
+        """Map which column name in specific table to  ID in monuments_all."""
         self.monuments_all_id = self.signal
 
     def set_descriptions(self):

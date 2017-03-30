@@ -374,9 +374,9 @@ class TestWikidata(unittest.TestCase):
 
     def test_get_P31_two(self):
         """
-        cat -> [taxon, model organism]
+        Felis manul -> [taxon, synonym]
         """
-        self.assertEqual(utils.get_P31("Q146"), ["Q16521", "Q213907"])
+        self.assertEqual(utils.get_P31("Q24006022"), ["Q16521", "Q1040689"])
 
     def test_get_P31_none(self):
         """
