@@ -161,6 +161,8 @@ def q_from_wikipedia(language, page_title):
         except pywikibot.NoPage:
             if page.namespace() == 0:  # main namespace
                 item = wdstuff.make_new_item_from_page(page, summary)
+            else:
+                return
         return item.getID()
 
 
