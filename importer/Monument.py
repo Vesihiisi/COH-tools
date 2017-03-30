@@ -298,6 +298,7 @@ class Monument(object):
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         """
         Initialize the data object.
+
         :param db_row_dict: raw data from the database
         :param mapping: mapping file object
         :param data_files: resources like dictionaries of known placenames to match
