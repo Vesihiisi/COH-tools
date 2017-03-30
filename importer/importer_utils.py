@@ -12,6 +12,7 @@ import random
 from urllib.parse import quote
 from wikidataStuff.WikidataStuff import WikidataStuff as wds
 
+site_cache = {}
 
 def remove_empty_dicts_from_list(list_of_dicts):
     return [i for i in list_of_dicts if i]
@@ -143,26 +144,24 @@ def count_wikilinks(text):
 def q_from_wikipedia(language, page_title):
     """
     Get the ID of the WD item linked to a wp page.
-
     If the page has no item and is in the article
     namespace, create an item for it.
     """
-    site = pywikibot.Site(language, "wikipedia")
-    repo = site.data_repository()
-    page = pywikibot.Page(site, page_title)
+    wp_site = pywikibot.Site(language, "wikipedia")
+    page = pywikibot.Page(wp_site, page_title)
     summary = "Creating item for {} on {}wp."
     summary = summary.format(page_title, language)
-    wdstuff = wds(repo, edit_summary=summary)
+    wd_repo = create_site_instance("wikidata", "wikidata")
+    wdstuff = wds(wd_repo, edit_summary=summary)
     if page.exists():
         if page.isRedirectPage():
             page = page.getRedirectTarget()
         try:
             item = pywikibot.ItemPage.fromPage(page)
         except pywikibot.NoPage:
-            if page.namespace() == 0:  # main namespace
-                item = wdstuff.make_new_item_from_page(page, summary)
-            else:
+            if page.namespace() != 0:  # main namespace
                 return
+            item = wdstuff.make_new_item_from_page(page, summary)
         return item.getID()
 
 
@@ -339,20 +338,20 @@ def tuple_is_coords(sometuple):
 
 def file_is_on_commons(text):
     text = text.replace(" ", "_")
-    site = pywikibot.Site(fam="commons")
+    site = create_site_instance("commons", "commons")
     page = pywikibot.Page(site, "File:" + text)
     return page.exists()
 
 
 def commonscat_exists(text):
     text = text.replace(" ", "_")
-    site = pywikibot.Site(fam="commons")
+    site = create_site_instance("commons", "commons")
     page = pywikibot.Page(site, "Category:" + text)
     return page.exists()
 
 
 def wp_page_exists(language, title):
-    site = pywikibot.Site(language, "wikipedia")
+    site = create_site_instance(language, "wikipedia")
     page = pywikibot.Page(site, title)
     if page.exists():
         return True
@@ -444,9 +443,8 @@ def get_random_list_sample(some_list, amount):
     return random.sample(some_list, amount)
 
 
-def get_P31(q_number):
+def get_P31(q_number, site):
     results = []
-    site = pywikibot.Site("wikidata", "wikidata")
     item = pywikibot.ItemPage(site, q_number)
     if item.exists() and item.claims.get("P31"):
         for claim in item.claims.get("P31"):
@@ -454,9 +452,9 @@ def get_P31(q_number):
     return results
 
 
-def is_whitelisted_P31(q_number, allowed_values):
+def is_whitelisted_P31(q_number, site, allowed_values):
     result = False
-    all_P31s = get_P31(q_number)
+    all_P31s = get_P31(q_number, site)
     if all_P31s:
         for P31 in all_P31s:
             if P31 in allowed_values:
@@ -473,3 +471,13 @@ def create_wlm_url(country, language, id):
     url_base = "https://tools.wmflabs.org/heritage/api/api.php?action=search&format=json&srcountry={}&srlanguage={}&srid={}"
     return url_base.format(
         country, language, quote(id))
+
+
+def create_site_instance(language, family):
+    """Create an instance of a Wiki site (convenience function)."""
+    site_key = (language, family)
+    site = site_cache.get(site_key)
+    if not site:
+        site = pywikibot.Site(language, family)
+        site_cache[site_key] = site
+    return site

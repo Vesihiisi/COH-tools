@@ -436,7 +436,7 @@ class Monument(object):
         for title in self.data_files:
             print(title)
 
-    def __init__(self, db_row_dict, mapping, data_files, existing):
+    def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         """
         Initialize the data object.
 
@@ -446,12 +446,10 @@ class Monument(object):
         :param existing: list of Wikidata items using a specific property
             that is optionally specified in the mapping file and is supposed to
             hold unique values
+        :param repository: data repository (Wikidata site)
         """
-        self.raw_data = db_row_dict
         self.props = utils.load_json(
             path.join(MAPPING_DIR, "props_general.json"))
-        self.common_items = utils.load_json(
-            path.join(MAPPING_DIR, "common_items.json"))
         self.adm0 = utils.load_json(path.join(MAPPING_DIR, "adm0.json"))
         self.sources = utils.load_json(
             path.join(MAPPING_DIR, "data_sources.json"))
@@ -459,9 +457,10 @@ class Monument(object):
             if not k.startswith("m_spec."):
                 setattr(self, k.replace("-", "_"), v)
         self.monuments_all_id = ""
+        self.construct_wd_item(mapping)
         self.data_files = data_files
         self.existing = existing
-        self.construct_wd_item(mapping)
+        self.repo = repository
         self.problem_report = {}
 
     def get_fields(self):

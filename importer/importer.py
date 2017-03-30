@@ -197,8 +197,9 @@ def get_items(connection,
         print("USING RANDOM SAMPLE OF " + str(short))
     filename = specific_table_name + "_" + utils.get_current_timestamp()
     problem_reports = []
+    wikidata_site = utils.create_site_instance("wikidata", "wikidata")
     for row in database_rows:
-        monument = class_to_use(row, mapping, data_files, existing)
+        monument = class_to_use(row, mapping, data_files, existing, wikidata_site)
         problem_report = monument.get_report()
         if table:
             raw_data = "<pre>" + str(row) + "</pre>\n"
@@ -208,7 +209,11 @@ def get_items(connection,
         if upload:
             live = True if upload == "live" else False
             uploader = Uploader(
-                monument, log=logger, tablename=country, live=live)
+                monument,
+                repo=wikidata_site,
+                log=logger,
+                tablename=country,
+                live=live)
             if "Q" in problem_report and problem_report["Q"] == "":
                 """
                 If the Monument didn't have an associated Qid,
