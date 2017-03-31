@@ -151,10 +151,12 @@ class SeFornminSv(Monument):
                 self.add_statement("location", socken)
             else:
                 try:
-                    socken = [x["item"] for x in socken_dict
-                              if x["itemLabel"].startswith(self.socken)][0]
-                    self.add_statement("location", socken)
-                except IndexError:
+                    possible_socken = [x["item"] for x in socken_dict
+                                       if x["itemLabel"].startswith(self.socken)]
+                    if len(possible_socken) != 1:
+                        raise ValueError
+                    self.add_statement("location", possible_socken[0])
+                except (IndexError, ValueError):
                     raw_socken = "{} ({})".format(self.socken, self.landskap)
                     self.add_to_report("socken", raw_socken)
 
