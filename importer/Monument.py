@@ -448,6 +448,7 @@ class Monument(object):
             hold unique values
         :param repository: data repository (Wikidata site)
         """
+        self.raw_data = db_row_dict
         self.props = utils.load_json(
             path.join(MAPPING_DIR, "props_general.json"))
         self.adm0 = utils.load_json(path.join(MAPPING_DIR, "adm0.json"))

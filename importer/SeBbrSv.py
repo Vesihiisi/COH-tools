@@ -166,7 +166,7 @@ class SeBbrSv(Monument):
                 wp_page = name.title
                 q_item = utils.q_from_wikipedia("sv", wp_page)
                 if q_item:
-                    if utils.is_whitelisted_P31(q_item, ["Q5"]):
+                    if utils.is_whitelisted_P31(q_item, self.repo, ["Q5"]):
                         self.add_statement("architect", q_item)
                     else:
                         self.add_to_report("arkitekt", self.arkitekt)
@@ -288,8 +288,8 @@ class SeBbrSv(Monument):
         """Set language of Wikipedia to use to match articles."""
         return super().exists_with_monument_article("sv")
 
-    def __init__(self, db_row_dict, mapping, data_files, existing):
-        Monument.__init__(self, db_row_dict, mapping, data_files, existing)
+    def __init__(self, db_row_dict, mapping, data_files, existing, repository):
+        Monument.__init__(self, db_row_dict, mapping, data_files, existing, repository)
         self.set_monuments_all_id()
         self.set_changed()
         self.wlm_source = self.create_wlm_source(self.monuments_all_id)
