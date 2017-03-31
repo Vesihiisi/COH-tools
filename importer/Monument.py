@@ -418,7 +418,17 @@ class Monument(object):
             if item and self.in_known_items(item):
                 self.upload = False
                 self.add_to_report("item_conflict", item)
+            else:
+                self.add_to_known_items(item, mapping)
         return item
+
+    def add_to_known_items(self, item, mapping):
+        """Add the item to the list of existing items with unique property."""
+        unique_prop = mapping.get_unique_prop()
+        base = self.wd_item["statements"]
+        if unique_prop in base:
+            unique_prop_value = base[unique_prop][0]['value']
+            self.existing[unique_prop_value] = item
 
     def construct_wd_item(self, mapping, data_files=None):
         """Create the empty structure of the data object."""
