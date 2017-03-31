@@ -95,6 +95,7 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                    {"class": SeFornminSv,
                     "data_files":
                     {"municipalities": "sweden_municipalities.json",
+                     "socken": "sweden_socken.json",
                      "types": "se-fornmin_(sv)_types.json"}},
                    "monuments_se-arbetsl_(sv)":
                    {"class":

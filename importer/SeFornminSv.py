@@ -145,12 +145,20 @@ class SeFornminSv(Monument):
             else:
                 self.add_to_report("plats", self.plats)
         if self.has_non_empty_attribute("socken"):
+            socken_dict = self.data_files["socken"]
             socken = self.get_socken(self.socken, self.landskap)
-            if socken is not None:
+            if socken:
                 self.add_statement("location", socken)
             else:
-                raw_socken = "{} ({})".format(self.socken, self.landskap)
-                self.add_to_report("socken", raw_socken)
+                try:
+                    possible_socken = [x["item"] for x in socken_dict
+                                       if x["itemLabel"].startswith(self.socken)]
+                    if len(possible_socken) != 1:
+                        raise ValueError
+                    self.add_statement("location", possible_socken[0])
+                except (IndexError, ValueError):
+                    raw_socken = "{} ({})".format(self.socken, self.landskap)
+                    self.add_to_report("socken", raw_socken)
 
     def set_monuments_all_id(self):
         """Map which column name in specific table to  ID in monuments_all."""
