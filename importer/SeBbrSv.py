@@ -161,7 +161,6 @@ class SeBbrSv(Monument):
         Check if it's a human.
         """
         if self.has_non_empty_attribute("arkitekt"):
-            print(self.arkitekt)
             architects = utils.get_wikilinks(self.arkitekt)
             for name in architects:
                 wp_page = name.title
