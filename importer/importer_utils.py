@@ -302,8 +302,11 @@ def get_rid_of_brackets(text):
 
 
 def get_text_inside_brackets(text):
+    """Get the content of the first encountered occurence of round brackets."""
     if "(" in text:
-        return text[text.find("(") + 1:text.find(")")]
+        first_bracket_index = text.find('(')
+        last_bracket_index = text.rfind(')')
+        return text[first_bracket_index + 1:last_bracket_index]
     else:
         return text
 
