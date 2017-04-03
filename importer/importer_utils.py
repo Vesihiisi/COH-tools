@@ -324,11 +324,10 @@ def get_text_inside_brackets(text):
             raise ValueError("Unmatched brackets encountered.")
         last_bracket_index += first_bracket_index
         result = text[first_bracket_index + 1:last_bracket_index]
-        if "(" in result or ")" in result:
-            if (result.find(')') > 0 and
-                    (result.find('(') > result.find(')') or
-                        result.find('(') < 0)):
-                raise ValueError("Unmatched brackets encountered.")
+        if (result.find(')') > 0 and
+                (result.find('(') > result.find(')') or
+                    result.find('(') < 0)):
+            raise ValueError("Unmatched brackets encountered.")
         return result
     else:
         return text
