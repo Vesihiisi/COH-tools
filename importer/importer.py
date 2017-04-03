@@ -242,12 +242,21 @@ def main(arguments):
     get_items(connection, country, language, upload, short, table)
 
 
+def on_labs():
+    # The name of the database is s51138__heritage_p on the server tools-db.
+    return path.isfile(path.expanduser("~") + "/replica.my.cnf")
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--host", default="localhost")
+    if on_labs():
+        parser.add_argument("--host", default="tools-db")
+        parser.add_argument("--db", default="s51138__heritage_p")
+    else:
+        parser.add_argument("--host", default="localhost")
+        parser.add_argument("--db", default="wlm")
     parser.add_argument("--user", default="root")
     parser.add_argument("--password", default="")
-    parser.add_argument("--db", default="wlm")
     parser.add_argument("--language", default="sv")
     parser.add_argument("--country", default="se-ship")
     parser.add_argument("--upload", action='store')
