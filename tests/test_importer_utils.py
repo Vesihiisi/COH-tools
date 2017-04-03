@@ -91,7 +91,7 @@ class TestStringMethods(unittest.TestCase):
 
     def test_get_text_inside_brackets_twice(self):
         text = "pre (foo) mid (bar) post"
-        output = ["foo", "bar"]
+        output = "foo"
         self.assertEqual(utils.get_text_inside_brackets(text), output)
 
     def test_get_text_inside_brackets_none(self):
