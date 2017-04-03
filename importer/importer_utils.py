@@ -14,6 +14,7 @@ from wikidataStuff.WikidataStuff import WikidataStuff as wds
 
 site_cache = {}
 
+
 def remove_empty_dicts_from_list(list_of_dicts):
     return [i for i in list_of_dicts if i]
 
@@ -302,19 +303,30 @@ def get_rid_of_brackets(text):
 
 
 def get_text_inside_brackets(text):
-    """Get the content of the first encountered occurence of round brackets."""
+    """
+    Get the content of the first encountered occurence of round brackets.
+
+    Handles nested brackets by getting the content of
+    the first level:
+        foo (cat) → cat
+        text (foo (bar (cat))) around → foo (bar (cat))
+
+    Does not handle multiple instances of brackets on the same level.
+        text (foo) text (bar) → ValueError
+    """
     if "(" in text:
         first_bracket_index = text.find('(')
-        last_bracket_index = text.rfind(')')
-        result = text[first_bracket_index + 1:last_bracket_index]
-        if "(" in result or ")" in result:
-            for character in result:
-                if character == "(":
-                    return result
-                elif character == ")":
-                    raise ValueError()
-        else:
-            return result
+        last_bracket_index = text[first_bracket_index:].rfind(')')
+        if last_bracket_index < 0 or text[:first_bracket_index].rfind(')') > 0:
+            raise ValueError("Unmatched brackets encountered.")
+        result = text[first_bracket_index +
+                      1:first_bracket_index + last_bracket_index]
+        for character in result:
+            if character == "(":
+                return result
+            elif character == ")":
+                raise ValueError("Unmatched brackets encountered.")
+        return result
     else:
         return text
 
@@ -412,7 +424,7 @@ def today_dict():
     """Get today's date as pywikibot-ready dictionary."""
     return datetime_object_to_dict(datetime.date.today())
 
-  
+
 def dict_to_iso_date(date_dict):
     """
     Convert pywikiboty-style date dictionary
