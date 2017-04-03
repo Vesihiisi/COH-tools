@@ -306,7 +306,15 @@ def get_text_inside_brackets(text):
     if "(" in text:
         first_bracket_index = text.find('(')
         last_bracket_index = text.rfind(')')
-        return text[first_bracket_index + 1:last_bracket_index]
+        result = text[first_bracket_index + 1:last_bracket_index]
+        if "(" in result or ")" in result:
+            for character in result:
+                if character == "(":
+                    return result
+                elif character == ")":
+                    raise ValueError()
+        else:
+            return result
     else:
         return text
 
