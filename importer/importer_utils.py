@@ -313,19 +313,19 @@ def get_text_inside_brackets(text):
 
     Does not handle multiple instances of brackets on the same level.
         text (foo) text (bar) → ValueError
+
+    Does not handle mismatched brackets.
+        foo (bar → ValueError
     """
     if "(" in text:
         first_bracket_index = text.find('(')
         last_bracket_index = text[first_bracket_index:].rfind(')')
         if last_bracket_index < 0 or text[:first_bracket_index].rfind(')') > 0:
             raise ValueError("Unmatched brackets encountered.")
-        result = text[first_bracket_index +
-                      1:first_bracket_index + last_bracket_index]
-        for character in result:
-            if character == "(":
-                return result
-            elif character == ")":
-                raise ValueError("Unmatched brackets encountered.")
+        last_bracket_index += first_bracket_index
+        result = text[first_bracket_index + 1:last_bracket_index]
+        if result.find(')') > 0 and result.find('(') > result.find(')'):
+            raise ValueError("Unmatched brackets encountered.")
         return result
     else:
         return text
