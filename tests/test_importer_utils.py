@@ -93,6 +93,18 @@ class TestStringMethods(unittest.TestCase):
         text = "pre (foo) mid (bar) post"
         self.assertRaises(ValueError, utils.get_text_inside_brackets, text)
 
+    def test_get_text_inside_brackets_broken_1(self):
+        text = "pre (foo"
+        self.assertRaises(ValueError, utils.get_text_inside_brackets, text)
+
+    def test_get_text_inside_brackets_broken_2(self):
+        text = "foo )bar( cat"
+        self.assertRaises(ValueError, utils.get_text_inside_brackets, text)
+
+    def test_get_text_inside_brackets_broken_3(self):
+        text = "foo) bar (cat)"
+        self.assertRaises(ValueError, utils.get_text_inside_brackets, text)
+
     def test_get_text_inside_brackets_none(self):
         text = "just text no brackets"
         output = "just text no brackets"
