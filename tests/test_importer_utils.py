@@ -79,6 +79,36 @@ class TestStringMethods(unittest.TestCase):
         output = "Kulla Gunnarstorp 1:21"
         self.assertEqual(utils.get_text_inside_brackets(text), output)
 
+    def test_get_text_inside_brackets_nested_one(self):
+        text = "outsidetext (foo (cat))"
+        output = "foo (cat)"
+        self.assertEqual(utils.get_text_inside_brackets(text), output)
+
+    def test_get_text_inside_brackets_nested_two(self):
+        text = "text (foo (bar (cat))) around"
+        output = "foo (bar (cat))"
+        self.assertEqual(utils.get_text_inside_brackets(text), output)
+
+    def test_get_text_inside_brackets_twice(self):
+        text = "pre (foo) mid (bar) post"
+        self.assertRaises(ValueError, utils.get_text_inside_brackets, text)
+
+    def test_get_text_inside_brackets_broken_1(self):
+        text = "pre (foo"
+        self.assertRaises(ValueError, utils.get_text_inside_brackets, text)
+
+    def test_get_text_inside_brackets_broken_2(self):
+        text = "foo )bar( cat"
+        self.assertRaises(ValueError, utils.get_text_inside_brackets, text)
+
+    def test_get_text_inside_brackets_broken_3(self):
+        text = "foo) bar (cat)"
+        self.assertRaises(ValueError, utils.get_text_inside_brackets, text)
+
+    def test_get_text_inside_brackets_broken_4(self):
+        text = "foo (bar))"
+        self.assertRaises(ValueError, utils.get_text_inside_brackets, text)
+
     def test_get_text_inside_brackets_none(self):
         text = "just text no brackets"
         output = "just text no brackets"
