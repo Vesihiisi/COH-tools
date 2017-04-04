@@ -249,10 +249,18 @@ def main(arguments):
 
 
 def get_db_credentials():
+    credentials = {}
     credentials_path = path.expanduser("~") + "/replica.my.cnf"
     print(credentials_path)
-    credentials_file = open(credentials_path, "r")
-    print(credentials_file.read())
+    with open('credentials_path') as f:
+        lines = f.readlines()
+    for line in lines:
+        if line.startswith("user"):
+            user = line.split("=")[-1].strip()
+        elif line.startswith("password"):
+            password = line.split("=")[-1].strip()
+    credentials["user"] = user
+    credentials["password"] = password
 
 
 def on_labs():
