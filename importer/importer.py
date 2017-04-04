@@ -252,7 +252,7 @@ def get_db_credentials():
     credentials = {}
     credentials_path = path.expanduser("~") + "/replica.my.cnf"
     print(credentials_path)
-    with open('credentials_path') as f:
+    with open(credentials_path) as f:
         lines = f.readlines()
     for line in lines:
         if line.startswith("user"):
