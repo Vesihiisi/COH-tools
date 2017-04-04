@@ -236,9 +236,11 @@ def main(arguments):
     arguments = vars(arguments)
     print(arguments)
     if on_labs():
-        get_db_credentials()
         arguments["host"] = "tools-db"
         arguments["db"] = "s51138__heritage_p"
+        credentials = get_db_credentials()
+        arguments["user"] = credentials["user"]
+        arguments["password"] = credentials["password"]
     connection = create_connection(arguments)
     country = arguments["country"]
     language = arguments["language"]
