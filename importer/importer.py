@@ -53,10 +53,10 @@ def make_count_query(specific_table):
 
 def create_connection(arguments):
     return pymysql.connect(
-        host=arguments.host,
-        user=arguments.user,
-        password=arguments.password,
-        db=arguments.db,
+        host=arguments["host"],
+        user=arguments["user"],
+        password=arguments["password"],
+        db=arguments["db"],
         charset="utf8")
 
 
@@ -233,15 +233,17 @@ def get_items(connection,
 
 
 def main(arguments):
+    arguments = vars(arguments)
+    print(arguments)
     if on_labs():
         arguments["host"] = "tools-db"
         arguments["db"] = "s51138__heritage_p"
     connection = create_connection(arguments)
-    country = arguments.country
-    language = arguments.language
-    short = arguments.short
-    upload = arguments.upload
-    table = arguments.table
+    country = arguments["country"]
+    language = arguments["language"]
+    short = arguments["short"]
+    upload = arguments["upload"]
+    table = arguments["table"]
     get_items(connection, country, language, upload, short, table)
 
 
@@ -268,4 +270,5 @@ if __name__ == "__main__":
                         action='store',)
     parser.add_argument("--table", action='store_true')
     args = parser.parse_args()
+    print(args)
     main(args)
