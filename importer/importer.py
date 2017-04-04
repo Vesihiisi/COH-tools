@@ -251,8 +251,8 @@ if __name__ == "__main__":
     arguments = {}
     parser = argparse.ArgumentParser()
     if on_labs():
-        arguments.host = "tools-db"
-        arguments.db = "s51138__heritage_p"
+        arguments["host"] = "tools-db"
+        arguments["db"] = "s51138__heritage_p"
     else:
         parser.add_argument("--host", default="localhost")
         parser.add_argument("--db", default="wlm")
