@@ -236,6 +236,7 @@ def main(arguments):
     arguments = vars(arguments)
     print(arguments)
     if on_labs():
+        get_db_credentials()
         arguments["host"] = "tools-db"
         arguments["db"] = "s51138__heritage_p"
     connection = create_connection(arguments)
@@ -245,6 +246,13 @@ def main(arguments):
     upload = arguments["upload"]
     table = arguments["table"]
     get_items(connection, country, language, upload, short, table)
+
+
+def get_db_credentials():
+    credentials_path = path.expanduser("~") + "/replica.my.cnf"
+    print(credentials_path)
+    credentials_file = open(credentials_path, "r")
+    print(credentials_file.read())
 
 
 def on_labs():
@@ -258,8 +266,8 @@ if __name__ == "__main__":
     if not on_labs():
         parser.add_argument("--host", default="localhost")
         parser.add_argument("--db", default="wlm")
-    parser.add_argument("--user", default="root")
-    parser.add_argument("--password", default="")
+        parser.add_argument("--user", default="root")
+        parser.add_argument("--password", default="")
     parser.add_argument("--language", default="sv")
     parser.add_argument("--country", default="se-ship")
     parser.add_argument("--upload", action='store')
