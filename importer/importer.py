@@ -233,6 +233,9 @@ def get_items(connection,
 
 
 def main(arguments):
+    if on_labs():
+        arguments["host"] = "tools-db"
+        arguments["db"] = "s51138__heritage_p"
     connection = create_connection(arguments)
     country = arguments.country
     language = arguments.language
@@ -250,10 +253,7 @@ def on_labs():
 if __name__ == "__main__":
     arguments = {}
     parser = argparse.ArgumentParser()
-    if on_labs():
-        arguments["host"] = "tools-db"
-        arguments["db"] = "s51138__heritage_p"
-    else:
+    if not on_labs():
         parser.add_argument("--host", default="localhost")
         parser.add_argument("--db", default="wlm")
     parser.add_argument("--user", default="root")
@@ -268,5 +268,4 @@ if __name__ == "__main__":
                         action='store',)
     parser.add_argument("--table", action='store_true')
     args = parser.parse_args()
-    print(args)
     main(args)
