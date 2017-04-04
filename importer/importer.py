@@ -265,6 +265,8 @@ def get_db_credentials():
             password = line.split("=")[-1].strip()
     credentials["user"] = user
     credentials["password"] = password
+    print(credentials)
+    return credentials
 
 
 def on_labs():
