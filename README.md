@@ -22,6 +22,8 @@ This the part that actually extracts the data from the WLM database, processes i
 python3 importer.py --host localhost --user foo --password bar --db wlm --country se-fornmin --language sv --short --upload live
 ```
 
+If you're running the script on the Toollabs server, leave out `host`, `db`, `user` and `passwords`, as these will be filled out automatically. 
+
 This will process the `monuments_se-fornmin_(sv)` table.
 
 `short` will only process the first 10 rows in the table.

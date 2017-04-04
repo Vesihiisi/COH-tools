@@ -234,7 +234,6 @@ def get_items(connection,
 
 def main(arguments):
     arguments = vars(arguments)
-    print(arguments)
     if on_labs():
         arguments["host"] = "tools-db"
         arguments["db"] = "s51138__heritage_p"
@@ -251,26 +250,23 @@ def main(arguments):
 
 
 def get_db_credentials():
+    """Get credentials to access the SQL db on Tolllabs."""
     credentials = {}
     credentials_path = path.expanduser("~") + "/replica.my.cnf"
-    print(credentials_path)
     with open(credentials_path) as f:
         lines = f.readlines()
-        print(lines)
     for line in lines:
-        print(line)
         if line.startswith("user"):
             user = line.split("=")[-1].strip()
         elif line.startswith("password"):
             password = line.split("=")[-1].strip()
     credentials["user"] = user
     credentials["password"] = password
-    print(credentials)
     return credentials
 
 
 def on_labs():
-    # The name of the database is s51138__heritage_p on the server tools-db.
+    """Check if running in the Toollabs environment."""
     return path.isfile(path.expanduser("~") + "/replica.my.cnf")
 
 
@@ -292,5 +288,4 @@ if __name__ == "__main__":
                         action='store',)
     parser.add_argument("--table", action='store_true')
     args = parser.parse_args()
-    print(args)
     main(args)
