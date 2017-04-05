@@ -22,6 +22,7 @@ class SeBbrSv(Monument):
             label = utils.get_rid_of_brackets(clean_name)
         except ValueError:
             label = clean_name
+            self.add_to_report("malformed_label", self.namn)
         self.add_label("sv", label)
 
     def set_bbr(self):
