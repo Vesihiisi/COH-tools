@@ -17,9 +17,12 @@ class SeBbrSv(Monument):
             Wickmanska gården (Paradis 35)
         We don't need the latter part (fastighetsbeteckning) in the label.
         """
-        label = utils.get_rid_of_brackets(utils.remove_markup(self.namn))
+        clean_name = utils.remove_markup(self.namn)
+        try:
+            label = utils.get_rid_of_brackets(clean_name)
+        except ValueError:
+            label = clean_name
         self.add_label("sv", label)
-        return
 
     def set_bbr(self):
         """
