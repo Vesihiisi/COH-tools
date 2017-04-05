@@ -68,6 +68,7 @@ class DkFortidsDa(Monument):
                 self.add_to_report("type", self.type)
 
     def set_monuments_all_id(self):
+        """Map which column name in specific table to  ID in monuments_all."""
         self.monuments_all_id = str(self.systemnummer)
 
     def set_id(self):
@@ -76,8 +77,11 @@ class DkFortidsDa(Monument):
         ref = self.wlm_source
         self.add_statement("danish_ancient_monument_id", danish_id, refs=[ref])
 
-    def __init__(self, db_row_dict, mapping, data_files, existing):
-        Monument.__init__(self, db_row_dict, mapping, data_files, existing)
+    def exists_with_monument_article(self, language):
+        return super().exists_with_monument_article("da", "monument_article")
+
+    def __init__(self, db_row_dict, mapping, data_files, existing, repository):
+        Monument.__init__(self, db_row_dict, mapping, data_files, existing, repository)
         self.set_monuments_all_id()
         self.set_changed()
         self.wlm_source = self.create_wlm_source(self.monuments_all_id)
@@ -88,11 +92,10 @@ class DkFortidsDa(Monument):
         self.set_is()
         self.update_labels()
         self.update_descriptions()
-        self.exists("da")
         self.set_commonscat()
         self.set_image("billede")
         self.set_coords(("lat", "lon"))
         self.set_adm_location()
         self.set_type()
         self.set_id()
-        self.exists_with_prop(mapping)
+        self.set_wd_item(self.find_matching_wikidata(mapping))
