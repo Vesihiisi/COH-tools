@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# -*- coding: utf-8  -*-
 import json
 import re
 import mwparserfromhell as wparser
@@ -8,6 +10,9 @@ import requests
 import pymysql
 import random
 from urllib.parse import quote
+from wikidataStuff.WikidataStuff import WikidataStuff as wds
+
+site_cache = {}
 
 
 def remove_empty_dicts_from_list(list_of_dicts):
@@ -138,21 +143,27 @@ def count_wikilinks(text):
 
 
 def q_from_wikipedia(language, page_title):
-    site = pywikibot.Site(language, "wikipedia")
-    page = pywikibot.Page(site, page_title)
-
+    """
+    Get the ID of the WD item linked to a wp page.
+    If the page has no item and is in the article
+    namespace, create an item for it.
+    """
+    wp_site = pywikibot.Site(language, "wikipedia")
+    page = pywikibot.Page(wp_site, page_title)
+    summary = "Creating item for {} on {}wp."
+    summary = summary.format(page_title, language)
+    wd_repo = create_site_instance("wikidata", "wikidata")
+    wdstuff = wds(wd_repo, edit_summary=summary)
     if page.exists():
         if page.isRedirectPage():
             page = page.getRedirectTarget()
         try:
             item = pywikibot.ItemPage.fromPage(page)
-            return item.getID()
         except pywikibot.NoPage:
-            print("Failed to get page for {} - {}."
-                  "It probably does not exist.".format(
-                      language, page_title)
-                  )
-            return
+            if page.namespace() != 0:  # main namespace
+                return
+            item = wdstuff.make_new_item_from_page(page, summary)
+        return item.getID()
 
 
 def q_from_first_wikilink(language, text):
@@ -292,8 +303,32 @@ def get_rid_of_brackets(text):
 
 
 def get_text_inside_brackets(text):
+    """
+    Get the content of the first encountered occurence of round brackets.
+
+    Handles nested brackets by getting the content of
+    the first level:
+        foo (cat) → cat
+        text (foo (bar (cat))) around → foo (bar (cat))
+
+    Does not handle multiple instances of brackets on the same level.
+        text (foo) text (bar) → ValueError
+
+    Does not handle mismatched brackets.
+        foo (bar → ValueError
+    """
     if "(" in text:
-        return text[text.find("(") + 1:text.find(")")]
+        first_bracket_index = text.find('(')
+        last_bracket_index = text[first_bracket_index:].rfind(')')
+        if last_bracket_index < 0 or text[:first_bracket_index].rfind(')') > 0:
+            raise ValueError("Unmatched brackets encountered.")
+        last_bracket_index += first_bracket_index
+        result = text[first_bracket_index + 1:last_bracket_index]
+        if (result.find(')') > 0 and
+                (result.find('(') > result.find(')') or
+                    result.find('(') < 0)):
+            raise ValueError("Unmatched brackets encountered.")
+        return result
     else:
         return text
 
@@ -328,20 +363,20 @@ def tuple_is_coords(sometuple):
 
 def file_is_on_commons(text):
     text = text.replace(" ", "_")
-    site = pywikibot.Site(fam="commons")
+    site = create_site_instance("commons", "commons")
     page = pywikibot.Page(site, "File:" + text)
     return page.exists()
 
 
 def commonscat_exists(text):
     text = text.replace(" ", "_")
-    site = pywikibot.Site(fam="commons")
+    site = create_site_instance("commons", "commons")
     page = pywikibot.Page(site, "Category:" + text)
     return page.exists()
 
 
 def wp_page_exists(language, title):
-    site = pywikibot.Site(language, "wikipedia")
+    site = create_site_instance(language, "wikipedia")
     page = pywikibot.Page(site, title)
     if page.exists():
         return True
@@ -387,6 +422,29 @@ def date_to_dict(datestring, dateformat):
     return date_dict
 
 
+def today_dict():
+    """Get today's date as pywikibot-ready dictionary."""
+    return datetime_object_to_dict(datetime.date.today())
+
+
+def dict_to_iso_date(date_dict):
+    """
+    Convert pywikiboty-style date dictionary
+    to ISO string ("2002-10-23").
+
+    @param date_dict: dictionary like
+    {"year" : 2002, "month" : 10, "day" : 23}
+    """
+    iso_date = ""
+    if "year" in date_dict:
+        iso_date += str(date_dict["year"])
+    if "month" in date_dict:
+        iso_date += "-" + str(date_dict["month"])
+    if "day" in date_dict:
+        iso_date += "-" + str(date_dict["day"])
+    return iso_date
+
+
 def append_line_to_file(text, filename):
     with open(filename, 'a') as f:
         f.write(text + "\n")
@@ -410,9 +468,8 @@ def get_random_list_sample(some_list, amount):
     return random.sample(some_list, amount)
 
 
-def get_P31(q_number):
+def get_P31(q_number, site):
     results = []
-    site = pywikibot.Site("wikidata", "wikidata")
     item = pywikibot.ItemPage(site, q_number)
     if item.exists() and item.claims.get("P31"):
         for claim in item.claims.get("P31"):
@@ -420,9 +477,9 @@ def get_P31(q_number):
     return results
 
 
-def is_whitelisted_P31(q_number, allowed_values):
+def is_whitelisted_P31(q_number, site, allowed_values):
     result = False
-    all_P31s = get_P31(q_number)
+    all_P31s = get_P31(q_number, site)
     if all_P31s:
         for P31 in all_P31s:
             if P31 in allowed_values:
@@ -439,3 +496,13 @@ def create_wlm_url(country, language, id):
     url_base = "https://tools.wmflabs.org/heritage/api/api.php?action=search&format=json&srcountry={}&srlanguage={}&srid={}"
     return url_base.format(
         country, language, quote(id))
+
+
+def create_site_instance(language, family):
+    """Create an instance of a Wiki site (convenience function)."""
+    site_key = (language, family)
+    site = site_cache.get(site_key)
+    if not site:
+        site = pywikibot.Site(language, family)
+        site_cache[site_key] = site
+    return site

@@ -88,13 +88,15 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                    "monuments_no_(no)": {"class": NoNo,
                                          "data_files": {}},
                    "monuments_se-bbr_(sv)": {"class": SeBbrSv,
-                                             "data_files": {}},
+                                             "data_files": {"functions": "se-bbr_(sv)_functions.json",
+                                             "settlements": "sweden_settlements.json"}},
                    "monuments_ee_(et)": {"class": EeEt,
                                          "data_files": {"counties": "estonia_counties.json"}},
                    "monuments_se-fornmin_(sv)":
                    {"class": SeFornminSv,
                     "data_files":
                     {"municipalities": "sweden_municipalities.json",
+                     "socken": "sweden_socken.json",
                      "types": "se-fornmin_(sv)_types.json"}},
                    "monuments_se-arbetsl_(sv)":
                    {"class":
@@ -197,8 +199,9 @@ def get_items(connection,
         print("USING RANDOM SAMPLE OF " + str(short))
     filename = specific_table_name + "_" + utils.get_current_timestamp()
     problem_reports = []
+    wikidata_site = utils.create_site_instance("wikidata", "wikidata")
     for row in database_rows:
-        monument = class_to_use(row, mapping, data_files, existing)
+        monument = class_to_use(row, mapping, data_files, existing, wikidata_site)
         problem_report = monument.get_report()
         if table:
             raw_data = "<pre>" + str(row) + "</pre>\n"
@@ -208,7 +211,11 @@ def get_items(connection,
         if upload:
             live = True if upload == "live" else False
             uploader = Uploader(
-                monument, log=logger, tablename=country, live=live)
+                monument,
+                repo=wikidata_site,
+                log=logger,
+                tablename=country,
+                live=live)
             if "Q" in problem_report and problem_report["Q"] == "":
                 """
                 If the Monument didn't have an associated Qid,

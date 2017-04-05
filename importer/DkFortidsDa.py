@@ -68,10 +68,6 @@ class DkFortidsDa(Monument):
                 self.add_to_report("type", self.type)
 
     def set_monuments_all_id(self):
-        """
-        Map which column name in specific table
-        is used as ID in monuments_all.
-        """
         self.monuments_all_id = str(self.systemnummer)
 
     def set_id(self):

@@ -93,13 +93,15 @@ class Uploader(object):
         return new_descriptions
 
     def make_image_item(self, filename):
-        commonssite = pywikibot.Site("commons", "commons")
+        commonssite = utils.create_site_instance("commons", "commons")
         imagelink = pywikibot.Link(
             filename, source=commonssite, defaultNamespace=6)
         return pywikibot.FilePage(imagelink)
 
     def make_coords_item(self, coordstuple):
         """
+        Create a Coordinate item.
+
         Default precision, such as used by
         http://pywikibot.readthedocs.io/en/latest/_modules/scripts/claimit/
         """
@@ -122,6 +124,8 @@ class Uploader(object):
 
     def make_time_item(self, quantity, repo):
         """
+        Create a WbTime item.
+
         This only works for full years.
         TODO
         Make it work for year range!
@@ -130,10 +134,13 @@ class Uploader(object):
         return pywikibot.WbTime(**value)
 
     def make_q_item(self, qnumber):
+        """Create a regular Item."""
         return self.wdstuff.QtoItemPage(qnumber)
 
     def item_has_prop(self, property_name, wd_item):
         """
+        Check if item has a specific property.
+
         This is different from WikidataStuff has_claim()
         because it checks whether the property exists,
         not if the statement matches.
@@ -221,11 +228,9 @@ class Uploader(object):
                                 qualifier = self.wdstuff.Qualifier(qual, value)
                                 wd_value.addQualifier(qualifier)
                         for ref in refs:
-                            """
-                            This only works if it's a url.
-                            If we have references of different sort,
-                            this will have to be appended.
-                            """
+                            # This only works if it's a url.
+                            # If we have references of different sort,
+                            # this will have to be appended.
                             if utils.is_valid_url(ref):
                                 ref = self.make_url_reference(ref)
                             else:
@@ -248,9 +253,7 @@ class Uploader(object):
         return item
 
     def get_username(self):
-        """
-        Get Wikidata login that will be used to upload.
-        """
+        """Get Wikidata login that will be used to upload."""
         return pywikibot.config.usernames["wikidata"]["wikidata"]
 
     def upload(self):
@@ -285,7 +288,22 @@ class Uploader(object):
             self.wd_item = self.wdstuff.QtoItemPage(self.TEST_ITEM)
             self.wd_item_q = self.TEST_ITEM
 
-    def __init__(self, monument_object, log=None, tablename=None, live=False):
+    def __init__(self,
+                 monument_object,
+                 repo,
+                 log=None,
+                 tablename=None,
+                 live=False):
+        """
+        Initialize an Upload object for a single Monument.
+
+        :param monument_object: Dictionary of Monument data
+        :param repo: Data repository of site to work on (Wikidata)
+        :param log: Enable logging to file
+        :param tablename: Name of db table, used in edit summary
+        :param live: Whether to work on real WD items or in the sandbox
+        """
+        self.repo = repo
         self.log = False
         self.summary = "#COH #WLM #{}".format(tablename)
         self.live = live
@@ -299,7 +317,5 @@ class Uploader(object):
         if log is not None:
             self.log = log
         self.data = monument_object.wd_item
-        site = pywikibot.Site("wikidata", "wikidata")
-        self.repo = site.data_repository()
         self.wdstuff = WDS(self.repo, edit_summary=self.summary)
         self.set_wd_item()

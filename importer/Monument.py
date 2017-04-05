@@ -8,6 +8,7 @@ MAPPING_DIR = "mappings"
 class Monument(object):
 
     def print_wd(self):
+        """Print the data object dictionary on screen."""
         print(
             json.dumps(self.wd_item,
                        sort_keys=True,
@@ -17,22 +18,7 @@ class Monument(object):
         )
 
     def print_wd_to_table(self):
-        """
-        {| class="wikitable"
-        |-
-        ! Header C1
-        ! Header C2
-        ! Header C3
-        |-
-        | R1C1
-        | R1C2
-        | R1C3
-        |-
-        | R2C1
-        | R2C2
-        | R2C3
-        |}
-        """
+        """Generate a wikitext preview table of the data item."""
         table = ""
         labels = self.wd_item["labels"]
         descriptions = self.wd_item["descriptions"]
@@ -62,7 +48,20 @@ class Monument(object):
                 value_to_print = ""
                 if utils.string_is_q_item(value):
                     value = utils.wd_template("Q", value)
-                value_to_print = value_to_print + str(value)
+                    value_to_print += str(value)
+                elif "quantity_value" in value:
+                    quantity = str(value["quantity_value"])
+                    if "unit" in value:
+                        value_to_print += "{quantity} {unit}".format(
+                            quantity=quantity,
+                            unit=utils.wd_template("Q", value["unit"]))
+                    else:
+                        value_to_print += quantity
+                elif "time_value" in value:
+                    value_to_print += utils.dict_to_iso_date(
+                        value["time_value"])
+                else:
+                    value_to_print += str(value)
                 quals = claim["quals"]
                 refs = claim["refs"]
                 if len(quals) == 0:
@@ -86,10 +85,31 @@ class Monument(object):
         table = table + "----------\n"
         return table
 
-    def add_statement(self, prop_name, value, quals={}, refs=[]):
+    def add_statement(self, prop_name, value, quals=None, refs=None):
         """
-        If prop already exists, this will append another value to the array,
+        Add a statement to the data object.
+
+        If the given property already exists, this will
+        append another value to the array,
         i.e. two statements with the same prop.
+
+        Refs is None as default. This means that
+        if it's left out, the WLM reference will be inserted
+        into the statement. The same if its value is
+        set to True. In order to use a custom reference
+        or more than one reference, it is inserted here as
+        either a single reference or a list of references,
+        respectively.
+        In order to not use any reference whatsoever,
+        the value of refs is to be set to False.
+
+        :param prop_name: name of the property,
+            as stated in the props library file
+        :param value: the value of the property
+        :param quals: a dictionary of qualifiers
+        :param refs: a list of references or a single reference.
+            Set None/True for the default reference,
+            set False to not add a reference.
         """
         base = self.wd_item["statements"]
         prop = self.props[prop_name]
@@ -100,18 +120,32 @@ class Monument(object):
             for k in quals:
                 prop_name = self.props[k]
                 qualifiers[prop_name] = quals[k]
+        if refs is None or refs is True:
+            refs = self.wlm_source
+        elif refs is False:
+            refs = []
+
+        if refs and not isinstance(refs, list):
+            refs = [refs]
         statement = {"value": value, "quals": qualifiers, "refs": refs}
         base[prop].append(statement)
 
     def remove_statement(self, prop_name):
+        """
+        Remove all statements with a given property from the data object.
+
+        :param prop_name: name of the property,
+            as stated in the props library file
+        """
         base = self.wd_item["statements"]
         prop = self.props[prop_name]
         if prop in base:
             del base[prop]
 
-    def substitute_statement(self, prop_name, value, quals={}, refs=[]):
+    def substitute_statement(self, prop_name, value, quals=None, refs=None):
         """
         Instead of adding to the array, replace the statement.
+
         This is so that instances of child classes
         can override default values...
         For example p31 museum -> art museum
@@ -126,88 +160,140 @@ class Monument(object):
             self.add_statement(prop_name, value, quals, refs)
 
     def set_wd_item(self, wd_item):
+        """Associate the data object with a Wikidata item."""
         if wd_item is not None:
             self.wd_item["wd-item"] = wd_item
             print("Associated WD item: ", wd_item)
 
     def add_label(self, language, text):
+        """
+        Add a label in a specific language.
+
+        :param language: code of language, e.g. "fi"
+        :param text: content of the label
+        """
         base = self.wd_item["labels"]
         base[language] = text
 
     def add_alias(self, language, text):
+        """
+        Add an alias in a specific language.
+
+        :param language: code of language, e.g. "fi"
+        :param text: content of the alias
+        """
         base = self.wd_item["aliases"]
         if language not in base:
             base[language] = []
         base[language].append(text)
 
     def add_description(self, language, text):
+        """
+        Add a description in a specific language.
+
+        :param language: code of language, e.g. "fi"
+        :param text: content of the description
+        """
         base = self.wd_item["descriptions"]
         base[language] = text
 
     def set_country(self):
+        """Set the country using the mapping file."""
         code = self.mapping["country_code"].lower()
         country = [item["item"]
                    for item in self.adm0 if item["code"].lower() == code][0]
-        ref = self.wlm_source
-        self.add_statement("country", country, refs=[ref])
+        self.add_statement("country", country)
 
     def set_is(self):
+        """Set the P31 property using the mapping file."""
         default_is = self.mapping["default_is"]
         self.add_statement("is", default_is["item"])
 
     def set_labels(self, language, content):
+        """
+        Add a label in a specific language using content with markup.
+
+        This will clean up markup, for instance if it's a Wiki-link
+        it will extract its title.
+
+        :param language: code of language, e.g. "fi"
+        :param text: content of the label
+        """
         self.add_label(language, utils.remove_markup(content))
 
     def set_heritage(self):
+        """Set the heritage status, using mapping file."""
         if "heritage" in self.mapping:
             heritage = self.mapping["heritage"]
-            ref = self.wlm_source
-            self.add_statement("heritage_status", heritage["item"], refs=[ref])
+            self.add_statement("heritage_status", heritage["item"])
 
     def set_coords(self, coord_keywords_tuple):
+        """
+        Add coordinates.
+
+        :param coord_keywords_tuple: names of the columns with
+            coordinates, like ("lat", "long")
+        """
         lat = coord_keywords_tuple[0]
         lon = coord_keywords_tuple[1]
         if self.has_non_empty_attribute(lat):
             if self.lat == 0 and self.lon == 0:
                 return
             else:
-                ref = self.wlm_source
+                latitude = getattr(self, lat)
+                longitude = getattr(self, lon)
                 self.add_statement(
-                    "coordinates", (getattr(self, lat), getattr(self, lon)), refs=[ref])
+                    "coordinates", (latitude, longitude))
 
     def set_image(self, image_keyword="image"):
+        """
+        Add image.
+
+        :param image_keyword: the name of the column with image path
+        """
         if self.has_non_empty_attribute(image_keyword):
-            self.add_statement("image", getattr(self, image_keyword))
+            image = getattr(self, image_keyword)
+            self.add_statement("image", image, refs=False)
 
     def set_commonscat(self, keyword="commonscat"):
+        """
+        Add a statement with Commons category.
+
+        :param keyword: the name of the column with commons category
+        """
         if self.has_non_empty_attribute(keyword):
-            self.add_statement("commonscat", getattr(self, keyword))
+            commonscat = getattr(self, keyword)
+            self.add_statement("commonscat", commonscat, refs=False)
 
     def set_registrant_url(self):
+        """Add the registrant url, if present in the data."""
         if self.has_non_empty_attribute("registrant_url"):
             self.wd_item["registrant_url"] = self.registrant_url
 
     def set_street_address(self, language, address_keyword):
         """
-        NOTE: P:located at street address says
-        "Include building number through to post code"
-        In most cases, there's no post code in the data!
-        In practice though, it's often omitted....
-        Compare with located on street (P669)
-        and its qualifier street number (P670).
+        Add the street address.
+
+        If parsing failed, add to problem report.
+
+        :param language: language code, e.g. "sv"
+        :param address_keyword: the name of the column with address
         """
         if self.has_non_empty_attribute(address_keyword):
+            possible_address = getattr(self, address_keyword)
             processed_address = utils.get_street_address(
-                getattr(self, address_keyword), language)
+                possible_address, language)
             if processed_address is not None:
-                ref = self.wlm_source
-                self.add_statement(
-                    "located_street", processed_address, refs=[ref])
+                self.add_statement("located_street", processed_address)
             else:
-                self.add_to_report(
-                    address_keyword, getattr(self, address_keyword))
+                self.add_to_report(address_keyword, possible_address)
 
     def has_non_empty_attribute(self, attr_name):
+        """
+        Check whether the data object has a non-empty attribute.
+
+        :param attr_name: name of the attribute
+        """
         if hasattr(self, attr_name):
             if getattr(self, attr_name) == "":
                 return False
@@ -218,28 +304,36 @@ class Monument(object):
         else:
             return False
 
-    def exists(self, language, article_keyword="monument_article"):
-        if self.has_non_empty_attribute(article_keyword):
-            wd_item = utils.q_from_wikipedia(
-                language, getattr(self, article_keyword))
-            self.set_wd_item(wd_item)
-
     def set_changed(self):
+        """Set the 'changed' field."""
         if self.changed:
             self.wd_item["changed"] = self.changed
 
     def set_source(self):
+        """Set the 'source' field if present in source data."""
         if self.has_non_empty_attribute("source"):
             self.wd_item["source"] = self.source
 
     def create_stated_in_source(self, source_item, pub_date):
+        """
+        Create a 'stated in' reference.
+
+        :param source_item: Wikidata item or URL used as a source
+        :param pub_date: publication date in the format 2014-12-23
+        """
         prop_stated = self.props["stated_in"]
         prop_date = self.props["publication_date"]
-        pub_date = utils.date_to_dict(pub_date, "%Y-%m-%d")  # 2014-12-23
+        pub_date = utils.date_to_dict(pub_date, "%Y-%m-%d")
         return {"source": {"prop": prop_stated, "value": source_item},
                 "published": {"prop": prop_date, "value": pub_date}}
 
     def create_wlm_source(self, monuments_all_id):
+        """
+        Create a reference to the WLM database.
+
+        :param monuments_all_id: the ID of the object in monuments_all,
+            used to create a URL to the entry in the online database.
+        """
         self.wlm_url = utils.create_wlm_url(self.mapping["table_name"],
                                             self.mapping["language"],
                                             monuments_all_id)
@@ -254,34 +348,90 @@ class Monument(object):
                 "reference_url": {"prop": prop_reference_url,
                                   "value": self.wlm_url}}
 
+    def exists_with_monument_article(self,
+                                     language,
+                                     article_keyword="monument_article"):
+        """Get the Wikidata item connected to monument_article (or equivalent), if any."""
+        if self.has_non_empty_attribute(article_keyword):
+            wd_item = utils.q_from_wikipedia(
+                language, getattr(self, article_keyword))
+            return wd_item
+        else:
+            return None
+
+    def exists_with_wd_item(self, wd_item_keyword="wd_item"):
+        """Get the Wikidata item connected to wd_item (or equivalent), if any."""
+        if wd_item_keyword in self.raw_data:
+            return self.raw_data[wd_item_keyword]
+        else:
+            return None
+
     def exists_with_prop(self, mapping):
-        if self.existing is None:
-            return
+        """
+        Get the Wikidata item that has the same value of a property as the data object.
+
+        The unique property is given in the mapping file.
+        """
         unique_prop = mapping.get_unique_prop()
         base = self.wd_item["statements"]
         if unique_prop in base:
             val_to_check = base[unique_prop][0]['value']
             if val_to_check in self.existing:
                 wd_item = self.existing[val_to_check]
-                print("Wikidata has item with {} = {}. Connecting with item {}.".format(
-                    unique_prop, val_to_check, wd_item))
-                # Check whether it already has self.wd_item
-                # from monument_article.
-                # This of course assumes that self.exist is run earlier.
-                # If it's a different one,
-                wd_item_from_monument_article = self.wd_item["wd-item"]
-                if wd_item != wd_item_from_monument_article:
-                    # different Q-numbers from monuments_all and
-                    # unique property
-                    self.wd_item["upload"] = False
-                else:
-                    pass  # match
-                self.set_wd_item(wd_item)
+                return wd_item
             else:
-                print("There's no item with {} = {} on Wikidata.".format(
-                    unique_prop, val_to_check))
+                return None
+
+    def in_known_items(self, wd_item):
+        """
+        Check if given item is in the list of items with a certain property.
+
+        This uses the list of items with a certain property
+        (specified in mapping) that was downloaded in the
+        beginning of the process.
+        """
+        return wd_item in self.existing.values()
+
+    def find_matching_wikidata(self, mapping):
+        """
+        Match the data object with a possible Wikidata item.
+
+        At first, use the downloaded list of Wikidata items
+        that use the optional unique property.
+        If it contains an item where this property has the same
+        value as this data item, assign this Wikidata item
+        to this data item.
+
+        If not, do a check using the 'wd_item' and 'monument_article'
+        fields. If this results in an item, compare it
+        with the downloaded list. If it's found in the list
+        then something is wrong, because at this stage it should
+        have been found by exists_with_prop()
+        and thus we should not have arrived to this stage in the
+        first place. So don't upload it (and log it).
+        """
+        item = self.exists_with_prop(mapping)
+        if not item:
+            item = self.exists_with_wd_item()
+            if not item:
+                item = self.exists_with_monument_article(self.mapping["language"])
+            if item and self.in_known_items(item):
+                self.upload = False
+                self.add_to_report("item_conflict", item)
+            else:
+                self.add_to_known_items(item, mapping)
+        return item
+
+    def add_to_known_items(self, item, mapping):
+        """Add the item to the list of existing items with unique property."""
+        unique_prop = mapping.get_unique_prop()
+        base = self.wd_item["statements"]
+        if unique_prop in base:
+            unique_prop_value = base[unique_prop][0]['value']
+            self.existing[unique_prop_value] = item
 
     def construct_wd_item(self, mapping, data_files=None):
+        """Create the empty structure of the data object."""
         self.wd_item = {}
         self.wd_item["upload"] = True
         self.wd_item["statements"] = {}
@@ -296,11 +446,21 @@ class Monument(object):
         for title in self.data_files:
             print(title)
 
-    def __init__(self, db_row_dict, mapping, data_files, existing):
+    def __init__(self, db_row_dict, mapping, data_files, existing, repository):
+        """
+        Initialize the data object.
+
+        :param db_row_dict: raw data from the database
+        :param mapping: mapping file object
+        :param data_files: resources like dictionaries of known placenames to match
+        :param existing: list of Wikidata items using a specific property
+            that is optionally specified in the mapping file and is supposed to
+            hold unique values
+        :param repository: data repository (Wikidata site)
+        """
+        self.raw_data = db_row_dict
         self.props = utils.load_json(
             path.join(MAPPING_DIR, "props_general.json"))
-        self.common_items = utils.load_json(
-            path.join(MAPPING_DIR, "common_items.json"))
         self.adm0 = utils.load_json(path.join(MAPPING_DIR, "adm0.json"))
         self.sources = utils.load_json(
             path.join(MAPPING_DIR, "data_sources.json"))
@@ -311,9 +471,11 @@ class Monument(object):
         self.construct_wd_item(mapping)
         self.data_files = data_files
         self.existing = existing
+        self.repo = repository
         self.problem_report = {}
 
     def get_fields(self):
+        """Get a sorted list of all the attributes of the data object."""
         return sorted(list(self.__dict__.keys()))
 
     def add_to_report(self, key_name, raw_data):
@@ -336,9 +498,7 @@ class Monument(object):
             self.problem_report["url"] = self.wlm_url
 
     def print_report(self):
-        """
-        Print the problem report on screen.
-        """
+        """Print the problem report on screen."""
         print(
             json.dumps(self.problem_report,
                        sort_keys=True,
@@ -348,4 +508,5 @@ class Monument(object):
         )
 
     def get_report(self):
+        """Retrieve the problem report."""
         return self.problem_report
