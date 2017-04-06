@@ -233,6 +233,7 @@ def get_items(connection,
 
 
 def main(arguments):
+    """Process the arguments and fetch data according to them"""
     arguments = vars(arguments)
     if on_labs():
         arguments["host"] = "tools-db"
@@ -271,6 +272,22 @@ def on_labs():
 
 
 if __name__ == "__main__":
+    """
+    Get command line arguments to get data from the database.
+
+    Options:
+        --host Name of the database host.
+        --db Name of the database to connect to.
+        --user Username to connect to the database.
+        --password Password to connect to the database.
+        --language Language code of the table to fetch, eg. "sv".
+        --country Country of the table to fetch, eg. "se-fornmin".
+        --upload Whether to upload the processed items. Two options:
+            --upload sandbox Upload to the Wikidata sandbox item.
+            --upload live Live upload to real Wikidata items.
+        --short <int> Only fetch a random sample of <int> items.
+        --table Save results of the processing to file as a wikitable.
+    """
     arguments = {}
     parser = argparse.ArgumentParser()
     if not on_labs():
