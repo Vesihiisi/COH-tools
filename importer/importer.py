@@ -259,11 +259,9 @@ def get_db_credentials():
         lines = f.readlines()
     for line in lines:
         if line.startswith("user"):
-            user = line.split("=")[-1].strip()
+            credentials["user"] = line.partition("=")[-1].strip()
         elif line.startswith("password"):
-            password = line.split("=")[-1].strip()
-    credentials["user"] = user
-    credentials["password"] = password
+            credentials["password"] = line.partition("=")[-1].strip()
     return credentials
 
 
