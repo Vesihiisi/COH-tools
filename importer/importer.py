@@ -52,6 +52,7 @@ def make_count_query(specific_table):
 
 
 def create_connection(arguments):
+    """Create a connection to the SQL database using arguments."""
     return pymysql.connect(
         host=arguments["host"],
         user=arguments["user"],
