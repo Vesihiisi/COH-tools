@@ -52,11 +52,12 @@ def make_count_query(specific_table):
 
 
 def create_connection(arguments):
+    """Create a connection to the SQL database using arguments."""
     return pymysql.connect(
-        host=arguments.host,
-        user=arguments.user,
-        password=arguments.password,
-        db=arguments.db,
+        host=arguments["host"],
+        user=arguments["user"],
+        password=arguments["password"],
+        db=arguments["db"],
         charset="utf8")
 
 
@@ -233,21 +234,66 @@ def get_items(connection,
 
 
 def main(arguments):
+    """Process the arguments and fetch data according to them"""
+    arguments = vars(arguments)
+    if on_labs():
+        arguments["host"] = "tools-db"
+        arguments["db"] = "s51138__heritage_p"
+        credentials = get_db_credentials()
+        arguments["user"] = credentials["user"]
+        arguments["password"] = credentials["password"]
     connection = create_connection(arguments)
-    country = arguments.country
-    language = arguments.language
-    short = arguments.short
-    upload = arguments.upload
-    table = arguments.table
+    country = arguments["country"]
+    language = arguments["language"]
+    short = arguments["short"]
+    upload = arguments["upload"]
+    table = arguments["table"]
     get_items(connection, country, language, upload, short, table)
 
 
+def get_db_credentials():
+    """Get credentials to access the SQL db on Tolllabs."""
+    credentials = {}
+    credentials_path = path.expanduser("~") + "/replica.my.cnf"
+    with open(credentials_path) as f:
+        lines = f.readlines()
+    for line in lines:
+        if line.startswith("user"):
+            credentials["user"] = line.partition("=")[-1].strip()
+        elif line.startswith("password"):
+            credentials["password"] = line.partition("=")[-1].strip()
+    return credentials
+
+
+def on_labs():
+    """Check if running in the Toollabs environment."""
+    return path.isfile(path.expanduser("~") + "/replica.my.cnf")
+
+
 if __name__ == "__main__":
+    """
+    Get command line arguments to get data from the database.
+
+    Options:
+        --host Name of the database host.
+        --db Name of the database to connect to.
+        --user Username to connect to the database.
+        --password Password to connect to the database.
+        --language Language code of the table to fetch, eg. "sv".
+        --country Country of the table to fetch, eg. "se-fornmin".
+        --upload Whether to upload the processed items. Two options:
+            --upload sandbox Upload to the Wikidata sandbox item.
+            --upload live Live upload to real Wikidata items.
+        --short <int> Only fetch a random sample of <int> items.
+        --table Save results of the processing to file as a wikitable.
+    """
+    arguments = {}
     parser = argparse.ArgumentParser()
-    parser.add_argument("--host", default="localhost")
-    parser.add_argument("--user", default="root")
-    parser.add_argument("--password", default="")
-    parser.add_argument("--db", default="wlm")
+    if not on_labs():
+        parser.add_argument("--host", default="localhost")
+        parser.add_argument("--db", default="wlm")
+        parser.add_argument("--user", default="root")
+        parser.add_argument("--password", default="")
     parser.add_argument("--language", default="sv")
     parser.add_argument("--country", default="se-ship")
     parser.add_argument("--upload", action='store')
@@ -258,5 +304,4 @@ if __name__ == "__main__":
                         action='store',)
     parser.add_argument("--table", action='store_true')
     args = parser.parse_args()
-    print(args)
     main(args)
