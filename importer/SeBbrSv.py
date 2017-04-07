@@ -16,10 +16,17 @@ class SeBbrSv(Monument):
         Original labels look like this:
             Wickmanska gården (Paradis 35)
         We don't need the latter part (fastighetsbeteckning) in the label.
+
+        If there's an error in parsing the brackets,
+        use the raw version.
         """
-        label = utils.get_rid_of_brackets(utils.remove_markup(self.namn))
+        clean_name = utils.remove_markup(self.namn)
+        try:
+            label = utils.get_rid_of_brackets(clean_name)
+        except ValueError:
+            label = clean_name
+            self.add_to_report("malformed_label", self.namn)
         self.add_label("sv", label)
-        return
 
     def set_bbr(self):
         """
@@ -214,8 +221,15 @@ class SeBbrSv(Monument):
 
         For example:
             (Knutse 2:19)
+
+        If there's an error in parsing the brackets,
+        use the raw version.
         """
-        fastighetsbeteckning = utils.get_text_inside_brackets(self.namn)
+        try:
+            fastighetsbeteckning = utils.get_text_inside_brackets(self.namn)
+        except ValueError:
+            fastighetsbeteckning = self.namn
+            self.add_to_report("malformed_label", self.namn)
         self.add_alias("sv", fastighetsbeteckning)
 
     def set_no_of_buildings(self):
