@@ -42,12 +42,13 @@ class SeFornminSv(Monument):
         DESC_BASE is used as default.
         """
         DESC_BASE = "fornminne"
-        description = ""
+        socken = self.socken
+        landskap = self.landskap
         if len(self.typ) > 0:
-            description = self.typ.lower()
+            instance_of = self.typ.lower()
         else:
-            description = DESC_BASE
-        description += " i " + self.landskap
+            instance_of = DESC_BASE
+        description = "{} i {}, {}".format(instance_of, socken, landskap)
         self.add_description("sv", description)
 
     def set_raa(self):
