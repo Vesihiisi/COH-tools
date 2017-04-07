@@ -42,6 +42,7 @@ class SeFornminSv(Monument):
             instance_of = self.typ.lower()
         else:
             instance_of = DESC_BASE
+
         if self.has_non_empty_attribute("namn"):
             description = "{} i {} ({})".format(
                 instance_of, landskap, self.raa_nr)
