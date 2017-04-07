@@ -30,24 +30,24 @@ class SeFornminSv(Monument):
         """
         Create a description based on the type and location.
 
-        All items should have the 'typ' field
-        filled out:
-            stensättning
-        as well as a 'landskap':
-            Blekinge
-        These are used to construct a description
-        in Swedish:
-            stensättning i Blekinge
-        If there's no specific 'typ',
-        DESC_BASE is used as default.
+        If the item has a name, which is used for the label,
+        add the RAÄ-number to the description in order to make
+        sure that the label + description combination is unique.
+        When there's no name, the RAÄ-number is used as the label,
+        which ensures its uniqueness.
         """
         DESC_BASE = "fornminne"
-        description = ""
+        landskap = self.landskap
         if len(self.typ) > 0:
-            description = self.typ.lower()
+            instance_of = self.typ.lower()
         else:
-            description = DESC_BASE
-        description += " i " + self.landskap
+            instance_of = DESC_BASE
+
+        if self.has_non_empty_attribute("namn"):
+            description = "{} i {} ({})".format(
+                instance_of, landskap, self.raa_nr)
+        else:
+            description = "{} i {}".format(instance_of, landskap)
         self.add_description("sv", description)
 
     def set_raa(self):
