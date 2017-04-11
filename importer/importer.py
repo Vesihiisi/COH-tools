@@ -43,8 +43,19 @@ class Mapping(object):
         self.file_content = self.load_mapping_file(countryname, languagename)
 
 
-def make_query(specific_table):
-    return ('select DISTINCT *  from `{}`').format(specific_table)
+def make_query(specific_table, offset):
+    """
+    Generate a query to retrieve data from database.
+
+    :param specific_table: Name of table to retrieve data from.
+    :param offset: Optional offset to start from.
+    """
+    query = 'select DISTINCT * from `{}`'.format(specific_table)
+    if isinstance(offset, int):
+        unlimited = "18446744073709551615"
+        # workaround for MySQL requiring a limit when using offset
+        query += " LIMIT {}, {};".format(str(offset), unlimited)
+    return query
 
 
 def make_count_query(specific_table):
@@ -166,7 +177,19 @@ def get_items(connection,
               language,
               upload,
               short=False,
+              offset=None,
               table=False):
+    """
+    Retrieve data from database and process it.
+
+    :param connection: Connection used to access the database.
+    :param country: Country of the dataset.
+    :param language: Language code of the dataset.
+    :param upload: Whether to upload the processed items.
+    :param short: Optional number of randomly selected rows to process.
+    :param offset: Optional offset to retrieve rows.
+    :param table: Whether to save the results as a wikitable.
+    """
     if upload:
         logger = Logger()
     country_language = {"country": country, "language": language}
@@ -180,7 +203,7 @@ def get_items(connection,
         existing = get_wd_items_using_prop(unique_prop)
     else:
         existing = None
-    query = make_query(specific_table_name)
+    query = make_query(specific_table_name, offset)
     if specific_table_name in SPECIFIC_TABLES:
         specific_table = SPECIFIC_TABLES[specific_table_name]
         class_to_use = specific_table["class"]
@@ -246,9 +269,10 @@ def main(arguments):
     country = arguments["country"]
     language = arguments["language"]
     short = arguments["short"]
+    offset = arguments["offset"]
     upload = arguments["upload"]
     table = arguments["table"]
-    get_items(connection, country, language, upload, short, table)
+    get_items(connection, country, language, upload, short, offset, table)
 
 
 def get_db_credentials():
@@ -299,6 +323,10 @@ if __name__ == "__main__":
     parser.add_argument("--upload", action='store')
     parser.add_argument("--short",
                         const=DEFAULT_SHORT,
+                        nargs='?',
+                        type=int,
+                        action='store',)
+    parser.add_argument("--offset",
                         nargs='?',
                         type=int,
                         action='store',)
