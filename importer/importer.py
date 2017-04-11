@@ -44,10 +44,15 @@ class Mapping(object):
 
 
 def make_query(specific_table, offset):
+    """
+    Generate a query to retrieve data from database.
+
+    :param specific_table: Name of table to retrieve data from.
+    :param offset: Optional offset to start from.
+    """
     query = 'select DISTINCT *  from `{}`'.format(specific_table)
     if isinstance(offset, int):
         query = query + " LIMIT {}, 18446744073709551615;".format(str(offset))
-    print(query)
     return query
 
 
@@ -172,6 +177,17 @@ def get_items(connection,
               short=False,
               offset=None,
               table=False):
+    """
+    Retrieve data from database and process it.
+
+    :param connection: Connection used to access the database.
+    :param country: Country of the dataset.
+    :param language: Language code of the dataset.
+    :param upload: Whether to upload the processed items.
+    :param short: Optional number of randomly selected rows to process.
+    :param offset: Optional offset to retrieve rows.
+    :param table: Whether to save the results as a wikitable.
+    """
     if upload:
         logger = Logger()
     country_language = {"country": country, "language": language}
