@@ -50,9 +50,10 @@ def make_query(specific_table, offset):
     :param specific_table: Name of table to retrieve data from.
     :param offset: Optional offset to start from.
     """
-    query = 'select DISTINCT *  from `{}`'.format(specific_table)
+    query = 'select DISTINCT * from `{}`'.format(specific_table)
     if isinstance(offset, int):
-        query = query + " LIMIT {}, 18446744073709551615;".format(str(offset))
+        unlimited = "18446744073709551615" # workaround for MySQL requiring a limit when using offset
+        query += " LIMIT {}, {};".format(str(offset), unlimited)
     return query
 
 
