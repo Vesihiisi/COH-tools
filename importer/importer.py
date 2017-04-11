@@ -52,7 +52,8 @@ def make_query(specific_table, offset):
     """
     query = 'select DISTINCT * from `{}`'.format(specific_table)
     if isinstance(offset, int):
-        unlimited = "18446744073709551615" # workaround for MySQL requiring a limit when using offset
+        unlimited = "18446744073709551615"
+        # workaround for MySQL requiring a limit when using offset
         query += " LIMIT {}, {};".format(str(offset), unlimited)
     return query
 
