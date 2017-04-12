@@ -172,6 +172,14 @@ def get_subclasses(q_item):
     return results
 
 
+def save_reports(problem_reports, tablename):
+    """Save the problem reports of the batch to a file."""
+    timestamp = datetime.date.today().strftime("%Y-%m-%d")
+    filename = "report_{}_{}.json".format(tablename, timestamp)
+    non_empty_reports = utils.remove_empty_dicts_from_list(problem_reports)
+    utils.json_to_file(filename, non_empty_reports)
+
+
 def get_items(connection,
               country,
               language,
@@ -246,12 +254,14 @@ def get_items(connection,
                 for it -- insert that id into the problem report.
                 """
                 problem_report["Q"] = uploader.wd_item_q
-            uploader.upload()
+            try:
+                uploader.upload()
+            except pywikibot.data.api.APIError:
+                save_reports(problem_reports)
+                return
             print("--------------------------------------------------")
         problem_reports.append(problem_report)
-    non_empty_reports = utils.remove_empty_dicts_from_list(problem_reports)
-    utils.json_to_file(
-        "report_" + specific_table_name + ".json", non_empty_reports)
+    save_reports(problem_reports)
     if table:
         print("SAVED TEST RESULTS TO " + filename)
 
