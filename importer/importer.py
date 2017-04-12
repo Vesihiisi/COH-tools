@@ -172,6 +172,12 @@ def get_subclasses(q_item):
     return results
 
 
+def save_reports(problem_reports, tablename, timestamp):
+    """Save the problem reports of the batch to a file."""
+    filename = "report_{}_{}.json".format(tablename, timestamp)
+    utils.json_to_file(filename, problem_reports)
+
+
 def get_items(connection,
               country,
               language,
@@ -190,6 +196,7 @@ def get_items(connection,
     :param offset: Optional offset to retrieve rows.
     :param table: Whether to save the results as a wikitable.
     """
+    started_at = utils.get_current_timestamp()
     if upload:
         logger = Logger()
     country_language = {"country": country, "language": language}
@@ -246,12 +253,12 @@ def get_items(connection,
                 for it -- insert that id into the problem report.
                 """
                 problem_report["Q"] = uploader.wd_item_q
+
             uploader.upload()
             print("--------------------------------------------------")
-        problem_reports.append(problem_report)
-    non_empty_reports = utils.remove_empty_dicts_from_list(problem_reports)
-    utils.json_to_file(
-        "report_" + specific_table_name + ".json", non_empty_reports)
+        if problem_report:  # dictionary is not empty
+            problem_reports.append(problem_report)
+            save_reports(problem_reports, specific_table_name, started_at)
     if table:
         print("SAVED TEST RESULTS TO " + filename)
 
