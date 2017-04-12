@@ -175,8 +175,7 @@ def get_subclasses(q_item):
 def save_reports(problem_reports, tablename, timestamp):
     """Save the problem reports of the batch to a file."""
     filename = "report_{}_{}.json".format(tablename, timestamp)
-    non_empty_reports = utils.remove_empty_dicts_from_list(problem_reports)
-    utils.json_to_file(filename, non_empty_reports)
+    utils.json_to_file(filename, problem_reports)
 
 
 def get_items(connection,
@@ -257,8 +256,9 @@ def get_items(connection,
 
             uploader.upload()
             print("--------------------------------------------------")
-        problem_reports.append(problem_report)
-        save_reports(problem_reports, specific_table_name, started_at)
+        if problem_report:  # dictionary is not empty
+            problem_reports.append(problem_report)
+            save_reports(problem_reports, specific_table_name, started_at)
     if table:
         print("SAVED TEST RESULTS TO " + filename)
 
