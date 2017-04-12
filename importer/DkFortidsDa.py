@@ -22,7 +22,9 @@ class DkFortidsDa(Monument):
         description_da = "{} i {}".format(monument_type, municipality_da)
         self.add_description("da", description_da)
         try:
-            location_en = [x["en"] for x in mun_dict if x["da"] == municipality_da][0]
+            location_en = [x["en"]
+                           for x in mun_dict if x["da"] == municipality_da]
+            location_en = location_en[0]
         except IndexError:
             location_en = "Denmark"
         description_en = "ancient monument in {}".format(location_en)
@@ -43,7 +45,9 @@ class DkFortidsDa(Monument):
                 try:
                     adm_q = utils.q_from_first_wikilink(
                         "da", self.kommune)
-                    municipality = [x["item"] for x in mun_dict if x["item"] == adm_q][0]
+                    municipality = [x["item"] for
+                                    x in mun_dict if x["item"] == adm_q]
+                    municipality = municipality[0]
                     ref = self.wlm_source
                     self.add_statement("located_adm", municipality, refs=[ref])
                 except IndexError:
@@ -61,7 +65,8 @@ class DkFortidsDa(Monument):
             try:
                 special_type = [table[x]["items"]
                                 for x in table
-                                if x == self.type][0][0]
+                                if x == self.type]
+                special_type = special_type[0][0]
                 ref = self.wlm_source
                 self.substitute_statement("is", special_type, refs=[ref])
             except IndexError:
@@ -81,7 +86,8 @@ class DkFortidsDa(Monument):
         return super().exists_with_monument_article("da", "monument_article")
 
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
-        Monument.__init__(self, db_row_dict, mapping, data_files, existing, repository)
+        Monument.__init__(self, db_row_dict, mapping,
+                          data_files, existing, repository)
         self.set_monuments_all_id()
         self.set_changed()
         self.wlm_source = self.create_wlm_source(self.monuments_all_id)
