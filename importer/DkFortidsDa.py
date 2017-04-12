@@ -21,6 +21,7 @@ class DkFortidsDa(Monument):
         municipality_da = utils.remove_markup(self.kommune)
         description_da = "{} i {}".format(monument_type, municipality_da)
         self.add_description("da", description_da)
+
         try:
             location_en = [x["en"]
                            for x in mun_dict if x["da"] == municipality_da]
@@ -28,8 +29,17 @@ class DkFortidsDa(Monument):
         except IndexError:
             location_en = "Denmark"
         description_en = "ancient monument in {}".format(location_en)
+
+        try:
+            location_sv = [x["sv"]
+                           for x in mun_dict if x["da"] == municipality_da]
+            location_sv = location_sv[0]
+        except IndexError:
+            location_sv = "Danmark"
+        description_sv = "fornlämning i {}".format(location_sv)
+
         self.add_description("en", description_en)
-        self.add_description("sv", "fornlämning i Danmark")
+        self.add_description("sv", description_sv)
 
     def set_adm_location(self):
         """
