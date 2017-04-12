@@ -48,8 +48,7 @@ class DkFortidsDa(Monument):
                     municipality = [x["item"] for
                                     x in mun_dict if x["item"] == adm_q]
                     municipality = municipality[0]
-                    ref = self.wlm_source
-                    self.add_statement("located_adm", municipality, refs=[ref])
+                    self.add_statement("located_adm", municipality)
                 except IndexError:
                     self.add_to_report("kommune", self.kommune)
 
@@ -68,7 +67,7 @@ class DkFortidsDa(Monument):
                                 if x == self.type]
                 special_type = special_type[0][0]
                 ref = self.wlm_source
-                self.substitute_statement("is", special_type, refs=[ref])
+                self.substitute_statement("is", special_type)
             except IndexError:
                 self.add_to_report("type", self.type)
 
@@ -79,8 +78,7 @@ class DkFortidsDa(Monument):
     def set_id(self):
         """Set ancient monument ID (P3596)."""
         danish_id = str(self.systemnummer)
-        ref = self.wlm_source
-        self.add_statement("danish_ancient_monument_id", danish_id, refs=[ref])
+        self.add_statement("danish_ancient_monument_id", danish_id)
 
     def exists_with_monument_article(self, language):
         return super().exists_with_monument_article("da", "monument_article")
