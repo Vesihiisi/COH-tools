@@ -230,6 +230,8 @@ def get_items(connection,
         print("No class defined for " + specific_table_name)
         return
     print_row_count(specific_table_name, connection)
+    if VERBOSE:
+        print("Will now attempt to make a SELECT query.")
     database_rows = select_query(query, connection)
     if short:
         database_rows = utils.get_random_list_sample(database_rows, short)
