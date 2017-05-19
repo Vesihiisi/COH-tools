@@ -137,14 +137,18 @@ class SeFornminSv(Monument):
         so use that as location as well.
         """
         if self.has_non_empty_attribute("plats"):
+            self.verbose_message("Found plats in raw data: {}".format(self.plats))
             wikilinks = utils.get_wikilinks(self.plats)
             if len(wikilinks) == 1:
+                self.verbose_message("Found wikilink: {}".format(wikilinks[0]))
                 target_page = wikilinks[0].title
+                self.verbose_message("")
                 wd_item = utils.q_from_wikipedia("sv", target_page)
                 self.add_statement("location", wd_item)
             else:
                 self.add_to_report("plats", self.plats)
         if self.has_non_empty_attribute("socken"):
+            self.verbose_message("Found socken in raw data: {}".format(self.socken))
             socken_dict = self.data_files["socken"]
             socken = self.get_socken(self.socken, self.landskap)
             if socken:
