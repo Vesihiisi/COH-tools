@@ -263,7 +263,8 @@ class Monument(object):
                 longitude = getattr(self, lon)
                 self.add_statement(
                     "coordinates", (latitude, longitude))
-                self.verbose_message("Set coords: {}, {}".format(latitude, longitude))
+                self.verbose_message(
+                    "Set coords: {}, {}".format(latitude, longitude))
 
     def set_image(self, image_keyword="image"):
         """
@@ -295,8 +296,8 @@ class Monument(object):
         """Add the registrant url, if present in the data."""
         if self.has_non_empty_attribute("registrant_url"):
             self.wd_item["registrant_url"] = self.registrant_url
-            self.verbose_message("Set registrant url: {}".format(self.registrant_url))
-
+            self.verbose_message(
+                "Set registrant url: {}".format(self.registrant_url))
 
     def set_street_address(self, language, address_keyword):
         """
@@ -313,7 +314,8 @@ class Monument(object):
                 possible_address, language)
             if processed_address is not None:
                 self.add_statement("located_street", processed_address)
-                self.verbose_message("Set address: ".)
+                self.verbose_message(
+                    "Set address: {}".format(processed_address))
             else:
                 self.add_to_report(address_keyword, possible_address)
 

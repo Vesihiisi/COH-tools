@@ -27,6 +27,8 @@ DEFAULT_SHORT = 10
 MAPPING_DIR = "mappings"
 MONUMENTS_ALL = "monuments_all"
 
+VERBOSE = False
+
 
 class Mapping(object):
 
@@ -100,7 +102,7 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                                          "data_files": {}},
                    "monuments_se-bbr_(sv)": {"class": SeBbrSv,
                                              "data_files": {"functions": "se-bbr_(sv)_functions.json",
-                                             "settlements": "sweden_settlements.json"}},
+                                                            "settlements": "sweden_settlements.json"}},
                    "monuments_ee_(et)": {"class": EeEt,
                                          "data_files": {"counties": "estonia_counties.json"}},
                    "monuments_se-fornmin_(sv)":
@@ -204,6 +206,8 @@ def get_items(connection,
         logger = Logger()
     country_language = {"country": country, "language": language}
     specific_table_name = utils.get_specific_table_name(country, language)
+    if VERBOSE:
+        print("Using dataset: ".format(specific_table_name))
     if not utils.table_exists(connection, specific_table_name):
         print("Table does not exist.")
         return
@@ -234,7 +238,8 @@ def get_items(connection,
     problem_reports = []
     wikidata_site = utils.create_site_instance("wikidata", "wikidata")
     for row in database_rows:
-        monument = class_to_use(row, mapping, data_files, existing, wikidata_site, verbose)
+        monument = class_to_use(row, mapping, data_files,
+                                existing, wikidata_site, verbose)
         problem_report = monument.get_report()
         if table:
             raw_data = "<pre>" + str(row) + "</pre>\n"
@@ -283,7 +288,10 @@ def main(arguments):
     upload = arguments["upload"]
     table = arguments["table"]
     verbose = arguments["verbose"]
-    get_items(connection, country, language, upload, short, offset, table, verbose)
+    if verbose:
+        VERBOSE = True
+    get_items(connection, country, language,
+              upload, short, offset, table, verbose)
 
 
 def get_db_credentials():
