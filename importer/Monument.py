@@ -129,6 +129,8 @@ class Monument(object):
             refs = [refs]
         statement = {"value": value, "quals": qualifiers, "refs": refs}
         base[prop].append(statement)
+        self.verbose_message(
+            "Added statement to data object, property {}".format(prop_name))
 
     def remove_statement(self, prop_name):
         """
@@ -141,6 +143,8 @@ class Monument(object):
         prop = self.props[prop_name]
         if prop in base:
             del base[prop]
+        self.verbose_message(
+            "Removed statement from data object, property {}".format(prop_name))
 
     def substitute_statement(self, prop_name, value, quals=None, refs=None):
         """
@@ -158,12 +162,16 @@ class Monument(object):
         else:
             self.remove_statement(prop_name)
             self.add_statement(prop_name, value, quals, refs)
+        self.verbose_message(
+            "Substituted statement in data object, property {}".format(prop_name))
 
     def set_wd_item(self, wd_item):
         """Associate the data object with a Wikidata item."""
         if wd_item is not None:
             self.wd_item["wd-item"] = wd_item
-            print("Associated WD item: ", wd_item)
+            self.verbose_message("Associated WD item: ".format(wd_item))
+        else:
+            self.verbose_message("No associated WD item.")
 
     def add_label(self, language, text):
         """
@@ -174,6 +182,7 @@ class Monument(object):
         """
         base = self.wd_item["labels"]
         base[language] = text
+        self.verbose_message("Added a label in {} : {}".format(language, text))
 
     def add_alias(self, language, text):
         """
@@ -186,6 +195,8 @@ class Monument(object):
         if language not in base:
             base[language] = []
         base[language].append(text)
+        self.verbose_message(
+            "Added an alias in {} : {}".format(language, text))
 
     def add_description(self, language, text):
         """
@@ -196,6 +207,8 @@ class Monument(object):
         """
         base = self.wd_item["descriptions"]
         base[language] = text
+        self.verbose_message(
+            "Added a description in {} : {}".format(language, text))
 
     def set_country(self):
         """Set the country using the mapping file."""
@@ -203,11 +216,13 @@ class Monument(object):
         country = [item["item"]
                    for item in self.adm0 if item["code"].lower() == code][0]
         self.add_statement("country", country)
+        self.verbose_message("Set country: {}".format(country))
 
     def set_is(self):
         """Set the P31 property using the mapping file."""
         default_is = self.mapping["default_is"]
         self.add_statement("is", default_is["item"])
+        self.verbose_message("Set P31: {}".format(default_is["item"]))
 
     def set_labels(self, language, content):
         """
@@ -226,6 +241,9 @@ class Monument(object):
         if "heritage" in self.mapping:
             heritage = self.mapping["heritage"]
             self.add_statement("heritage_status", heritage["item"])
+            self.verbose_message("Set heritage: ".format(heritage["item"]))
+        else:
+            self.verbose_message("Couldn't set heritage, none in mappin file.")
 
     def set_coords(self, coord_keywords_tuple):
         """
@@ -238,12 +256,14 @@ class Monument(object):
         lon = coord_keywords_tuple[1]
         if self.has_non_empty_attribute(lat):
             if self.lat == 0 and self.lon == 0:
+                self.verbose_message("Broken coords.")
                 return
             else:
                 latitude = getattr(self, lat)
                 longitude = getattr(self, lon)
                 self.add_statement(
                     "coordinates", (latitude, longitude))
+                self.verbose_message("Set coords: {}, {}".format(latitude, longitude))
 
     def set_image(self, image_keyword="image"):
         """
@@ -254,6 +274,9 @@ class Monument(object):
         if self.has_non_empty_attribute(image_keyword):
             image = getattr(self, image_keyword)
             self.add_statement("image", image, refs=False)
+            self.verbose_message("Set image: {}".format(image))
+        else:
+            self.verbose_message("No image")
 
     def set_commonscat(self, keyword="commonscat"):
         """
@@ -264,11 +287,16 @@ class Monument(object):
         if self.has_non_empty_attribute(keyword):
             commonscat = getattr(self, keyword)
             self.add_statement("commonscat", commonscat, refs=False)
+            self.verbose_message("Set commonscat: {}".format(commonscat))
+        else:
+            self.verbose_message("No commonscat.")
 
     def set_registrant_url(self):
         """Add the registrant url, if present in the data."""
         if self.has_non_empty_attribute("registrant_url"):
             self.wd_item["registrant_url"] = self.registrant_url
+            self.verbose_message("Set registrant url: {}".format(self.registrant_url))
+
 
     def set_street_address(self, language, address_keyword):
         """
@@ -285,6 +313,7 @@ class Monument(object):
                 possible_address, language)
             if processed_address is not None:
                 self.add_statement("located_street", processed_address)
+                self.verbose_message("Set address: ".)
             else:
                 self.add_to_report(address_keyword, possible_address)
 
@@ -414,7 +443,8 @@ class Monument(object):
         if not item:
             item = self.exists_with_wd_item()
             if not item:
-                item = self.exists_with_monument_article(self.mapping["language"])
+                item = self.exists_with_monument_article(
+                    self.mapping["language"])
             if item and self.in_known_items(item):
                 self.upload = False
                 self.add_to_report("item_conflict", item)
@@ -446,7 +476,7 @@ class Monument(object):
         for title in self.data_files:
             print(title)
 
-    def __init__(self, db_row_dict, mapping, data_files, existing, repository):
+    def __init__(self, db_row_dict, mapping, data_files, existing, repository, verbose):
         """
         Initialize the data object.
 
@@ -472,7 +502,12 @@ class Monument(object):
         self.data_files = data_files
         self.existing = existing
         self.repo = repository
+        self.verbose = verbose
         self.problem_report = {}
+
+    def verbose_message(self, message):
+        if self.verbose:
+            print(message)
 
     def get_fields(self):
         """Get a sorted list of all the attributes of the data object."""

@@ -184,7 +184,8 @@ def get_items(connection,
               upload,
               short=False,
               offset=None,
-              table=False):
+              table=False,
+              verbose=False):
     """
     Retrieve data from database and process it.
 
@@ -197,6 +198,8 @@ def get_items(connection,
     :param table: Whether to save the results as a wikitable.
     """
     started_at = utils.get_current_timestamp()
+    if verbose:
+        print("VERBOSE MODE ENABLED!")
     if upload:
         logger = Logger()
     country_language = {"country": country, "language": language}
@@ -231,7 +234,7 @@ def get_items(connection,
     problem_reports = []
     wikidata_site = utils.create_site_instance("wikidata", "wikidata")
     for row in database_rows:
-        monument = class_to_use(row, mapping, data_files, existing, wikidata_site)
+        monument = class_to_use(row, mapping, data_files, existing, wikidata_site, verbose)
         problem_report = monument.get_report()
         if table:
             raw_data = "<pre>" + str(row) + "</pre>\n"
@@ -279,7 +282,8 @@ def main(arguments):
     offset = arguments["offset"]
     upload = arguments["upload"]
     table = arguments["table"]
-    get_items(connection, country, language, upload, short, offset, table)
+    verbose = arguments["verbose"]
+    get_items(connection, country, language, upload, short, offset, table, verbose)
 
 
 def get_db_credentials():
@@ -338,5 +342,6 @@ if __name__ == "__main__":
                         type=int,
                         action='store',)
     parser.add_argument("--table", action='store_true')
+    parser.add_argument("--verbose", action='store_true')
     args = parser.parse_args()
     main(args)

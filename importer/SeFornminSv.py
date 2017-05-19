@@ -167,8 +167,11 @@ class SeFornminSv(Monument):
     def exists_with_monument_article(self, language):
         return super().exists_with_monument_article("sv", "artikel")
 
-    def __init__(self, db_row_dict, mapping, data_files, existing, repository):
-        Monument.__init__(self, db_row_dict, mapping, data_files, existing, repository)
+    def __init__(self, db_row_dict, mapping,
+                 data_files, existing, repository,
+                 verbose):
+        Monument.__init__(self, db_row_dict, mapping,
+                          data_files, existing, repository, verbose)
         self.set_monuments_all_id()
         self.set_changed()
         self.wlm_source = self.create_wlm_source(self.monuments_all_id)
