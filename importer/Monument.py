@@ -506,6 +506,7 @@ class Monument(object):
         self.repo = repository
         self.verbose = verbose
         self.problem_report = {}
+        self.verbose_message("Done initiating data object! :D")
 
     def verbose_message(self, message):
         if self.verbose:
