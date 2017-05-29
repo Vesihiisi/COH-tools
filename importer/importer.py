@@ -94,7 +94,8 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                                          "data_files": {"settlements": "poland_settlements.json"}},
                    "monuments_dk-fortidsminder_(da)": {"class": DkFortidsDa,
                                                        "data_files": {
-                                                           "types": "dk-fortidsminder_(da)_types.json"
+                                                           "types": "dk-fortidsminder_(da)_types.json",
+                                                           "municipalities": "denmark_municipalities.json"
                                                        }},
                    "monuments_no_(no)": {"class": NoNo,
                                          "data_files": {}},
