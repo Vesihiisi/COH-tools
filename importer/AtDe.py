@@ -1,6 +1,5 @@
 from Monument import Monument
 import importer_utils as utils
-from os import path
 
 
 MAPPING_DIR = "mappings"
@@ -16,17 +15,30 @@ class AtDe(Monument):
         """
         Set the street address.
 
-        These look really nice, judging from a manual
-        overview. The only quirk is stuff starting
-        with bei -- "bei Marstallweg 20". Can it just
-        be removed and the rest is a valid address,
-        or does it indicate the whole address is imprecise
-        and thus maybe shouldn't be included?
+        Most of these look good. Patterns for invalid ones:
+        * 251, gegenüber
+          Filtering by "starts with digit" and "contains comma",
+          as we can't rely only on "starts with digit" because
+          10. Oktober-Straße 18 is legit.
+        * zwischen Entensteinstraße 36 u. 38
+          Filtering by "zwischen", between.
+        * 76
+          Filtering by containing only digits.
         """
+        bad_address = None
         if self.has_non_empty_attribute("adresse"):
-            address = self.adresse
-            self.add_statement(
-                "located_street", address)
+            if utils.first_char_is_number(self.adresse) and "," in self.adresse:
+                bad_address = self.adresse
+            elif "zwischen" in self.adresse:
+                bad_address = self.adresse
+            elif self.adresse.isdigit():
+                bad_address = self.adresse
+            else:
+                address = self.adresse
+                self.add_statement(
+                    "located_street", address)
+        if bad_address:
+            self.add_to_report("adresse", self.adresse, "located_street")
 
     def set_heritage_id(self):
         heritage_id = self.objektid

@@ -64,6 +64,12 @@ class TestStringMethods(unittest.TestCase):
     def test_last_char_is_vowel_fail(self):
         self.assertFalse(utils.last_char_is_vowel("bar"))
 
+    def test_first_char_is_number_true(self):
+        self.assertTrue(utils.first_char_is_number("2 foo"))
+
+    def test_first_char_is_number_false(self):
+        self.assertFalse(utils.first_char_is_number("f2oo"))
+
     def test_get_rid_of_brackets_succeed(self):
         text = "Kulla Gunnarstorps mölla (Kulla Gunnarstorp 1:21)"
         output = "Kulla Gunnarstorps mölla"

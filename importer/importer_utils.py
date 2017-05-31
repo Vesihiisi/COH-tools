@@ -265,6 +265,11 @@ def last_char_is_vowel(text):
     return is_vowel(get_last_char(text))
 
 
+def first_char_is_number(text):
+    """Check if string starts with a number."""
+    return text[0].isdigit()
+
+
 def socken_to_q(socken, landskap):
     if last_char_is_vowel(socken) or get_last_char(socken) == "s":
         socken_name = socken + " socken"
