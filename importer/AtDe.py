@@ -8,8 +8,13 @@ MAPPING_DIR = "mappings"
 class AtDe(Monument):
 
     def update_labels(self):
-        de_label = self.name  # never wikilinked or wierd
-        self.add_label("de", de_label)
+        """
+        Set the labels.
+
+        The data does not contain any markup,
+        so we're adding them as is.
+        """
+        self.add_label("de", self.name)
 
     def set_street_address(self):
         """
@@ -27,7 +32,8 @@ class AtDe(Monument):
         """
         bad_address = None
         if self.has_non_empty_attribute("adresse"):
-            if utils.first_char_is_number(self.adresse) and "," in self.adresse:
+            if (utils.first_char_is_number(self.adresse) and
+                    "," in self.adresse):
                 bad_address = self.adresse
             elif "zwischen" in self.adresse:
                 bad_address = self.adresse
@@ -41,20 +47,30 @@ class AtDe(Monument):
             self.add_to_report("adresse", self.adresse, "located_street")
 
     def set_heritage_id(self):
-        heritage_id = self.objektid
-        self.add_statement("austria_heritage_id", heritage_id)
+        """Set the heritage ID, P2951"""
+        self.add_statement("austria_heritage_id", self.objektid)
 
     def set_monuments_all_id(self):
         """Map which column in table to ID in monuments_all."""
         self.monuments_all_id = self.objektid
 
     def set_adm_location(self):
+        """
+        Set the administrative location (municipality).
+
+        Using the gemeindekennzahl field, municipality ID,
+        mapped to municipality WD items in external file.
+        """
         all_codes = self.data_files["municipalities"]
         if self.has_non_empty_attribute("gemeindekennzahl"):
             municip_code = str(self.gemeindekennzahl)
             match = [x["item"]
                      for x in all_codes if x["value"] == municip_code]
-            self.add_statement("located_adm", municip_item=match[0])
+            if len(match) == 0:
+                self.add_to_report("gemeindekennzahl",
+                                   municip_code, "located_adm")
+            else:
+                self.add_statement("located_adm", municip_item=match[0])
 
     def exists_with_monument_article(self, language):
         return super().exists_with_monument_article("de", "artikel")
