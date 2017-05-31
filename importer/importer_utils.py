@@ -207,6 +207,15 @@ def parse_year(text):
     return year
 
 
+def get_longest_string(strings):
+    """
+    Get the longest string in a list.
+
+    :param strings: list of strings
+    """
+    return max(strings, key=len)
+
+
 def remove_characters(text, string_of_chars_to_remove):
     translator = str.maketrans(
         {key: None for key in string_of_chars_to_remove})

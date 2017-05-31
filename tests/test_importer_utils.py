@@ -152,6 +152,11 @@ class TestStringMethods(unittest.TestCase):
     def test_string_to_float_3(self):
         self.assertEqual(utils.string_to_float("32,11."), 32.11)
 
+    def test_get_longest_string_one(self):
+        strings = ["aaa", "xxxxxxxxxx", "vvvvvv"]
+        output = "xxxxxxxxxx"
+        self.assertEqual(utils.get_longest_string(strings), output)
+
 
 class TestDatetimeMethods(unittest.TestCase):
 
