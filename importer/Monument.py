@@ -478,7 +478,7 @@ class Monument(object):
         """Get a sorted list of all the attributes of the data object."""
         return sorted(list(self.__dict__.keys()))
 
-    def add_to_report(self, key_name, raw_data, prop=None):
+    def add_to_report(self, key_name, raw_data, prop_name=None):
         """
         Add data to problem report json.
 
@@ -490,6 +490,12 @@ class Monument(object):
 
         "socken": {"value": "Stockholm (Uppland)", "target":"PXX"}
         """
+        prop = None
+        if prop_name:
+            try:
+                prop = self.props[prop_name]
+            except KeyError:
+                prop = None
         self.problem_report[key_name] = {"value": raw_data,
                                          "target": prop}
         if "wd-item" not in self.problem_report:
