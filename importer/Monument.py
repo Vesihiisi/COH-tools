@@ -501,10 +501,7 @@ class Monument(object):
         """
         prop = None
         if prop_name:
-            try:
-                prop = self.props[prop_name]
-            except KeyError:
-                prop = None
+            prop = self.props.get(prop_name)
         self.problem_report[key_name] = {"value": raw_data,
                                          "target": prop}
         if "wd-item" not in self.problem_report:
