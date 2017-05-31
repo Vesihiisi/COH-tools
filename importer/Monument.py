@@ -478,7 +478,7 @@ class Monument(object):
         """Get a sorted list of all the attributes of the data object."""
         return sorted(list(self.__dict__.keys()))
 
-    def add_to_report(self, key_name, raw_data):
+    def add_to_report(self, key_name, raw_data, prop_name=None):
         """
         Add data to problem report json.
 
@@ -487,8 +487,23 @@ class Monument(object):
         in the report,
         add it to the report automatically.
         Add direct URL to item in WLM API.
+        Optionally, assign a Property ID that the data
+        should have been used as a value for.
+
+        :param key_name: name of the field containing
+                         the problematic data, e.g. the header of the column
+        :type key_name: string
+        :param raw_data: the data that we failed to process
+        :type raw_data: string
+        :param prop_name: name of the property,
+                          as stated in the props library file
+        :type prop_name: string
         """
-        self.problem_report[key_name] = raw_data
+        prop = None
+        if prop_name:
+            prop = self.props.get(prop_name)
+        self.problem_report[key_name] = {"value": raw_data,
+                                         "target": prop}
         if "wd-item" not in self.problem_report:
             if self.wd_item["wd-item"] is not None:
                 self.problem_report["Q"] = self.wd_item["wd-item"]
