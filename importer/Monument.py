@@ -478,7 +478,7 @@ class Monument(object):
         """Get a sorted list of all the attributes of the data object."""
         return sorted(list(self.__dict__.keys()))
 
-    def add_to_report(self, key_name, raw_data):
+    def add_to_report(self, key_name, prop, raw_data):
         """
         Add data to problem report json.
 
@@ -487,8 +487,11 @@ class Monument(object):
         in the report,
         add it to the report automatically.
         Add direct URL to item in WLM API.
+
+        "socken": {"value": "Stockholm (Uppland)", "target":"PXX"}
         """
-        self.problem_report[key_name] = raw_data
+        self.problem_report[key_name] = {"value": raw_data,
+                                         "target": prop}
         if "wd-item" not in self.problem_report:
             if self.wd_item["wd-item"] is not None:
                 self.problem_report["Q"] = self.wd_item["wd-item"]
