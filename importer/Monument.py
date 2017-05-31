@@ -487,8 +487,17 @@ class Monument(object):
         in the report,
         add it to the report automatically.
         Add direct URL to item in WLM API.
+        Optionally, assign a Property ID that the data
+        should have been used as a value for.
 
-        "socken": {"value": "Stockholm (Uppland)", "target":"PXX"}
+        :param key_name: name of the field containing
+                         the problematic data, e.g. the header of the column
+        :type key_name: string
+        :param raw_data: the data that we failed to process
+        :type raw_data: string
+        :param prop_name: name of the property,
+                          as stated in the props library file
+        :type prop_name: string
         """
         prop = None
         if prop_name:
