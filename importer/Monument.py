@@ -478,7 +478,7 @@ class Monument(object):
         """Get a sorted list of all the attributes of the data object."""
         return sorted(list(self.__dict__.keys()))
 
-    def add_to_report(self, key_name, prop, raw_data):
+    def add_to_report(self, key_name, raw_data, prop=None):
         """
         Add data to problem report json.
 
