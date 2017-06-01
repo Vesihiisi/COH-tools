@@ -7,20 +7,24 @@ MAPPING_DIR = "mappings"
 
 class AtDe(Monument):
 
-    def set_type(self):
+    def get_type_keyword(self):
         raw_name = self.name.lower()
         types = self.data_files["types"]["mappings"]
         keywords = list(types.keys())
         keywords = [x.lower() for x in keywords]
-        match = utils.get_longest_match(raw_name, keywords)
-        if match:
-            if isinstance(match, list):
+        return utils.get_longest_match(raw_name, keywords)
+
+    def set_type(self):
+        types = self.data_files["types"]["mappings"]
+        type_match = self.get_type_keyword()
+        if type_match:
+            if isinstance(type_match, list):
                 # multiple matches - report
                 self.add_to_report("type", self.name, "is")
             else:
                 # single match - add
                 match_item = [types[x]["items"]
-                              for x in types if x.lower() == match][0][0]
+                              for x in types if x.lower() == type_match][0][0]
                 self.substitute_statement("is", match_item)
         else:
             # no matches - report
@@ -34,6 +38,28 @@ class AtDe(Monument):
         so we're adding them as is.
         """
         self.add_label("de", self.name)
+
+    def set_descriptions(self):
+        type_match = self.get_type_keyword()
+        municipality_name = self.get_municipality_name()
+        base_desc_german_english = "{} in {}"
+        place_german = "Österreich"
+        place_english = "Austria"
+        type_german = "Denkmalgeschütztes Objekt"
+        type_english = "cultural property"
+
+        if isinstance(type_match, str):
+            type_german = type_match.title()
+        if municipality_name:
+            place_german = municipality_name
+            place_english = "{}, {}".format(municipality_name, "Austria")
+        desc_german = base_desc_german_english.format(
+            type_german, place_german)
+        desc_english = base_desc_german_english.format(
+            type_english, place_english)
+
+        self.add_description("de", desc_german)
+        self.add_description("en", desc_english)
 
     def set_street_address(self):
         """
@@ -73,6 +99,14 @@ class AtDe(Monument):
         """Map which column in table to ID in monuments_all."""
         self.monuments_all_id = self.objektid
 
+    def get_municipality_name(self):
+        all_codes = self.data_files["municipalities"]
+        municip_code = str(self.gemeindekennzahl)
+        match = [x["itemLabel"]
+                 for x in all_codes if x["value"] == municip_code]
+        if len(match) == 1:
+            return match[0]
+
     def set_adm_location(self):
         """
         Set the administrative location (municipality).
@@ -101,6 +135,7 @@ class AtDe(Monument):
         self.set_changed()
         self.wlm_source = self.create_wlm_source(self.monuments_all_id)
         self.update_labels()
+        self.set_descriptions()
         self.set_is()
         self.set_type()
         self.set_country()
