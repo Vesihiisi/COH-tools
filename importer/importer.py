@@ -175,8 +175,9 @@ def save_reports(problem_reports, tablename, timestamp):
 
 def load_data_files(file_dict):
     for key in file_dict.keys():
-        file_dict[key] = utils.load_json(
-            path.join(MAPPING_DIR, file_dict[key]))
+        json_path = path.join(MAPPING_DIR, file_dict[key])
+        file_dict[key] = utils.load_json(json_path)
+        print("Loaded offline data file: {}".format(json_path))
     return file_dict
 
 
@@ -190,12 +191,14 @@ def load_data(tablename):
     data_files = load_data_files(tablename["data_files"])
     if tablename.get("subclass_downloads"):
         for sub_title, sub_item in tablename.get("subclass_downloads").items():
-            data_files[subclass_title] = get_subclasses(subclass_item)
+            data_files[sub_title] = get_subclasses(sub_item)
+            print("Loaded online data: {}".format(sub_title))
     if tablename.get("lookup_downloads"):
         for l_title, l_path in tablename.get("lookup_downloads").items():
             lookup_table = Lt.LookupTable(l_path)
             lookup_json = lookup_table.get_json_table()
             data_files[l_title] = lookup_json
+            print("Loaded online data: {}".format(l_path))
     return data_files
 
 
