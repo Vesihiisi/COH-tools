@@ -1,3 +1,13 @@
+# -*- coding: utf-8 -*-
+"""
+Class to fetch online lookup table.
+
+Works with tables like this:
+https://www.wikidata.org/wiki/Wikidata:WikiProject_WLM/Mapping_tables/se-arbetsl_(sv)/types
+
+Download the table and turn it into a dictionary
+that can then be loaded into the Monument object.
+"""
 import pywikibot as pwb
 import mwparserfromhell as mwp
 
@@ -5,6 +15,7 @@ BASE_URL = "Wikidata:WikiProject WLM/Mapping tables/"
 
 
 class LookupTable(object):
+    """A lookup table converted from wikitext."""
 
     def filter_tr(self, node):
         return isinstance(node, mwp.nodes.tag.Tag) and node.tag == 'tr'
