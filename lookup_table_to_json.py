@@ -1,67 +1,60 @@
-import argparse
 import pywikibot as pwb
 import mwparserfromhell as mwp
-import json
-import wlmhelpers
 
 BASE_URL = "Wikidata:WikiProject WLM/Mapping tables/"
 
 
-def filter_tr(node):
-    return isinstance(node, mwp.nodes.tag.Tag) and node.tag == 'tr'
+class LookupTable(object):
 
+    def filter_tr(self, node):
+        return isinstance(node, mwp.nodes.tag.Tag) and node.tag == 'tr'
 
-def filter_td(node):
-    return isinstance(node, mwp.nodes.tag.Tag) and node.tag == 'td'
+    def filter_td(self, node):
+        return isinstance(node, mwp.nodes.tag.Tag) and node.tag == 'td'
 
+    def create_filename(self, tablename):
+        tablename = tablename.replace(" ", "_").replace("/", "_")
+        return "{}.json".format(tablename)
 
-def createFilename(tablename):
-    tablename = tablename.replace(" ", "_").replace("/", "_")
-    return "{}.json".format(tablename)
+    def fetch_page(self, tablename):
+        site = pwb.Site("wikidata", "wikidata")
+        page = pwb.Page(site, BASE_URL + tablename)
+        return page
 
+    def get_page_metadata(self, page):
+        timestamp = page.editTime().isoformat()
+        permalink = page.permalink()
+        return {'permalink': permalink, 'timestamp': timestamp}
 
-def fetch_page(tablename):
-    site = pwb.Site("wikidata", "wikidata")
-    page = pwb.Page(site, BASE_URL + tablename)
-    return page
+    def table_to_json(self, tablename):
+        lookupDict = {}
+        lookupDict["mappings"] = {}
+        page = self.fetch_page(tablename)
+        lookupDict["@meta"] = self.get_page_metadata(page)
+        parsed = mwp.parse(page.get())
+        table = parsed.filter_tags(matches=lambda node: node.tag == "table")
+        rows = table[0].contents.filter(
+            recursive=False, matches=self.filter_tr)
+        for row in rows:
+            cells = row.contents.filter(
+                recursive=False, matches=self.filter_td)
+            parsedWdItems = mwp.parse(cells[2].contents).filter_templates()
+            if len(parsedWdItems) > 0:
+                dictKey = cells[0].contents.title().strip()
+                for index, item in enumerate(parsedWdItems):
+                    itemID = item.params[0].title()
+                    if itemID[0] != "Q":
+                        itemID = "Q" + itemID
+                    parsedWdItems[index] = itemID
+                lookupDict["mappings"][dictKey] = {
+                    "items": parsedWdItems,
+                    "count": cells[1].contents.title().strip()}
+        return lookupDict
 
+    def get_json_table(self):
+        return self.json_table
 
-def get_page_metadata(page):
-    timestamp = page.editTime().isoformat()
-    permalink = page.permalink()
-    return {'permalink': permalink, 'timestamp': timestamp}
-
-
-def table_to_json(tablename):
-    lookupDict = {}
-    lookupDict["mappings"] = {}
-    page = fetch_page(tablename)
-    lookupDict["@meta"] = get_page_metadata(page)
-    parsed = mwp.parse(page.get())
-    table = parsed.filter_tags(matches=lambda node: node.tag == "table")
-    rows = table[0].contents.filter(recursive=False, matches=filter_tr)
-    for row in rows:
-        cells = row.contents.filter(recursive=False, matches=filter_td)
-        parsedWdItems = mwp.parse(cells[2].contents).filter_templates()
-        if len(parsedWdItems) > 0:
-            dictKey = cells[0].contents.title().strip()
-            for index, item in enumerate(parsedWdItems):
-                itemID = item.params[0].title()
-                if itemID[0] != "Q":
-                    itemID = "Q" + itemID
-                parsedWdItems[index] = itemID
-            lookupDict["mappings"][dictKey] = {
-                "items": parsedWdItems,
-                "count": cells[1].contents.title().strip()}
-    return lookupDict
-
-
-def main(args):
-    wlmhelpers.saveToJson(createFilename(args.name), table_to_json(args.name))
-
-
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("name")
-    args = parser.parse_args()
-    main(args)
+    def __init__(self, path):
+        #filename = self.create_filename(path)
+        self.json_table = self.table_to_json(path)
+        #self.save_to_json(filename, json_table)
