@@ -7,6 +7,9 @@ MAPPING_DIR = "mappings"
 
 class AtDe(Monument):
 
+    def set_type(self):
+        return
+
     def update_labels(self):
         """
         Set the labels.
@@ -26,7 +29,7 @@ class AtDe(Monument):
           as we can't rely only on "starts with digit" because
           10. Oktober-Straße 18 is legit.
         * zwischen Entensteinstraße 36 u. 38
-          Filtering by "zwischen", between.
+          Filtering by "zwischen".
         * 76
           Filtering by containing only digits.
         """
@@ -47,7 +50,7 @@ class AtDe(Monument):
             self.add_to_report("adresse", self.adresse, "located_street")
 
     def set_heritage_id(self):
-        """Set the heritage ID, P2951"""
+        """Set the heritage ID, P2951."""
         self.add_statement("austria_heritage_id", self.objektid)
 
     def set_monuments_all_id(self):
@@ -82,6 +85,7 @@ class AtDe(Monument):
         self.set_changed()
         self.wlm_source = self.create_wlm_source(self.monuments_all_id)
         self.update_labels()
+        self.set_type
         self.set_country()
         self.set_image("foto")
         self.set_heritage()
