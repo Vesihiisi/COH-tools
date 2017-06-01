@@ -153,12 +153,12 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual(utils.string_to_float("32,11."), 32.11)
 
     def test_get_longest_string_one(self):
-        in_list = ["aaa", "xxxxxxxxxx", "vvvvvv"]
-        output = "xxxxxxxxxx"
+        in_list = ["aaa", "aaaa"]
+        output = "aaaa"
         self.assertEqual(utils.get_longest_string(in_list), output)
 
     def test_get_longest_string_multiple(self):
-        in_list = ["123", "aaaaa", "bbbbb", "f"]
+        in_list = ["aaa", "aaaa", "aaaaa", "bbbbb"]
         output = ["aaaaa", "bbbbb"]
         self.assertEqual(utils.get_longest_string(in_list), output)
 
@@ -177,14 +177,7 @@ class TestStringMethods(unittest.TestCase):
     def test_get_longest_match_none(self):
         options = ["bro", "järnvägsbro", "kyrka"]
         raw_data = "skogskapellet"
-        output = []
-        self.assertEqual(utils.get_longest_match(raw_data, options), output)
-
-    def test_get_longest_match_multiple(self):
-        options = ["bro", "järnvägsbro", "kyrka"]
-        raw_data = "en bro och en kyrka"
-        output = ["bro", "kyrka"]
-        self.assertEqual(utils.get_longest_match(raw_data, options), output)
+        self.assertIsNone(utils.get_longest_match(raw_data, options))
 
 
 class TestDatetimeMethods(unittest.TestCase):
