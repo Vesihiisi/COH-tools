@@ -173,7 +173,9 @@ def save_reports(problem_reports, tablename, timestamp):
     utils.json_to_file(filename, problem_reports)
 
 
-def load_data_files(file_dict):
+def load_data_files(tablename):
+    """Load offline data files as specified in SPECIFIC_TABLES."""
+    file_dict = tablename["data_files"]
     for key in file_dict.keys():
         json_path = path.join(MAPPING_DIR, file_dict[key])
         file_dict[key] = utils.load_json(json_path)
@@ -188,7 +190,7 @@ def load_data(tablename):
     Loads both offline files and online ones
     specified in SPECIFIC TABLES.
     """
-    data_files = load_data_files(tablename["data_files"])
+    data_files = load_data_files(tablename)
     if tablename.get("subclass_downloads"):
         for sub_title, sub_item in tablename.get("subclass_downloads").items():
             data_files[sub_title] = get_subclasses(sub_item)

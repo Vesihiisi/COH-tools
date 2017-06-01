@@ -49,13 +49,13 @@ class LookupTable(object):
                 recursive=False, matches=self.filter_td)
             parsed_wd_items = mwp.parse(cells[2].contents).filter_templates()
             if len(parsed_wd_items) > 0:
-                dictKey = cells[0].contents.title().strip()
+                dict_key = cells[0].contents.title().strip()
                 for index, item in enumerate(parsed_wd_items):
                     itemID = item.params[0].title()
                     if itemID[0] != "Q":
                         itemID = "Q" + itemID
                     parsed_wd_items[index] = itemID
-                lookup_dict["mappings"][dictKey] = {
+                lookup_dict["mappings"][dict_key] = {
                     "items": parsed_wd_items,
                     "count": cells[1].contents.title().strip()}
         return lookup_dict
