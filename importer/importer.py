@@ -17,7 +17,7 @@ from XkSq import XkSq
 from ZaEn import ZaEn
 from Uploader import *
 from Logger import *
-from LookupTable import *
+import LookupTable as Lt
 from os import path
 import argparse
 import pymysql
@@ -193,7 +193,7 @@ def load_data(tablename):
             data_files[subclass_title] = get_subclasses(subclass_item)
     if tablename.get("lookup_downloads"):
         for l_title, l_path in tablename.get("lookup_downloads").items():
-            lookup_table = LookupTable(l_path)
+            lookup_table = Lt.LookupTable(l_path)
             lookup_json = lookup_table.get_json_table()
             data_files[l_title] = lookup_json
     return data_files

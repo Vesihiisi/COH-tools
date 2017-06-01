@@ -169,7 +169,6 @@ class SeFornminSv(Monument):
 
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping, data_files, existing, repository)
-        print(data_files.keys())
         self.set_monuments_all_id()
         self.set_changed()
         self.wlm_source = self.create_wlm_source(self.monuments_all_id)

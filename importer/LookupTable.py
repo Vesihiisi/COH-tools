@@ -13,17 +13,18 @@ class LookupTable(object):
         return isinstance(node, mwp.nodes.tag.Tag) and node.tag == 'td'
 
     def fetch_page(self, tablename):
+        """Download lookup table from given path."""
         site = pwb.Site("wikidata", "wikidata")
-        page = pwb.Page(site, BASE_URL + tablename)
-        return page
+        return pwb.Page(site, BASE_URL + tablename)
 
     def get_page_metadata(self, page):
+        """Get permalink and last changed timestamp of wiki page."""
         timestamp = page.editTime().isoformat()
         permalink = page.permalink()
         return {'permalink': permalink, 'timestamp': timestamp}
 
     def table_to_json(self, tablename):
-        print(tablename)
+        """Convert wikitable to json."""
         lookupDict = {}
         lookupDict["mappings"] = {}
         page = self.fetch_page(tablename)
@@ -49,6 +50,7 @@ class LookupTable(object):
         return lookupDict
 
     def get_json_table(self):
+        """Get the lookup table as json."""
         return self.json_table
 
     def __init__(self, lookup_path):
