@@ -8,7 +8,23 @@ MAPPING_DIR = "mappings"
 class AtDe(Monument):
 
     def set_type(self):
-        return
+        raw_name = self.name.lower()
+        types = self.data_files["types"]["mappings"]
+        keywords = list(types.keys())
+        keywords = [x.lower() for x in keywords]
+        match = utils.get_longest_match(raw_name, keywords)
+        if match:
+            if isinstance(match, list):
+                # multiple matches - report
+                self.add_to_report("type", self.name, "is")
+            else:
+                # single match - add
+                match_item = [types[x]["items"]
+                              for x in types if x.lower() == match][0][0]
+                self.substitute_statement("is", match_item)
+        else:
+            # no matches - report
+            self.add_to_report("type", self.name, "is")
 
     def update_labels(self):
         """
@@ -73,7 +89,7 @@ class AtDe(Monument):
                 self.add_to_report("gemeindekennzahl",
                                    municip_code, "located_adm")
             else:
-                self.add_statement("located_adm", municip_item=match[0])
+                self.add_statement("located_adm", match[0])
 
     def exists_with_monument_article(self, language):
         return super().exists_with_monument_article("de", "artikel")
@@ -85,7 +101,8 @@ class AtDe(Monument):
         self.set_changed()
         self.wlm_source = self.create_wlm_source(self.monuments_all_id)
         self.update_labels()
-        self.set_type
+        self.set_is()
+        self.set_type()
         self.set_country()
         self.set_image("foto")
         self.set_heritage()
