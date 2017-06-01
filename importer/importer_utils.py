@@ -209,11 +209,26 @@ def parse_year(text):
 
 def get_longest_string(strings):
     """
-    Get the longest string in a list.
+    Get the longest string(s) in a list.
 
     :param strings: list of strings
+    :return: single string if there's only one with the max length,
+             or a list of strings if there are several.
     """
-    return max(strings, key=len)
+    max_length = max(len(x) for x in strings)
+    matches = [x for x in strings if len(x) == max_length]
+    if len(matches) == 1:
+        return matches[0]
+    else:
+        return matches
+
+
+def get_longest_match(word, keywords):
+    matches = []
+    for k in keywords:
+        if word in k:
+            matches.append(k)
+    return get_longest_string(matches)
 
 
 def remove_characters(text, string_of_chars_to_remove):
