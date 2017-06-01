@@ -36,10 +36,10 @@ class LookupTable(object):
 
     def table_to_json(self, tablename):
         """Convert wikitable to json."""
-        lookupDict = {}
-        lookupDict["mappings"] = {}
+        lookup_dict = {}
+        lookup_dict["mappings"] = {}
         page = self.fetch_page(tablename)
-        lookupDict["@meta"] = self.get_page_metadata(page)
+        lookup_dict["@meta"] = self.get_page_metadata(page)
         parsed = mwp.parse(page.get())
         table = parsed.filter_tags(matches=lambda node: node.tag == "table")
         rows = table[0].contents.filter(
@@ -47,18 +47,18 @@ class LookupTable(object):
         for row in rows:
             cells = row.contents.filter(
                 recursive=False, matches=self.filter_td)
-            parsedWdItems = mwp.parse(cells[2].contents).filter_templates()
-            if len(parsedWdItems) > 0:
+            parsed_wd_items = mwp.parse(cells[2].contents).filter_templates()
+            if len(parsed_wd_items) > 0:
                 dictKey = cells[0].contents.title().strip()
-                for index, item in enumerate(parsedWdItems):
+                for index, item in enumerate(parsed_wd_items):
                     itemID = item.params[0].title()
                     if itemID[0] != "Q":
                         itemID = "Q" + itemID
-                    parsedWdItems[index] = itemID
-                lookupDict["mappings"][dictKey] = {
-                    "items": parsedWdItems,
+                    parsed_wd_items[index] = itemID
+                lookup_dict["mappings"][dictKey] = {
+                    "items": parsed_wd_items,
                     "count": cells[1].contents.title().strip()}
-        return lookupDict
+        return lookup_dict
 
     def get_json_table(self):
         """Get the lookup table as json."""
