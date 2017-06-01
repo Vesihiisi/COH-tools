@@ -8,6 +8,13 @@ MAPPING_DIR = "mappings"
 class AtDe(Monument):
 
     def get_type_keyword(self):
+        """
+        Extract type of monument from name.
+
+        Does matching of name against list of monument
+        types from
+        https://www.wikidata.org/wiki/Wikidata:WikiProject_WLM/Mapping_tables/at_(de)/types
+        """
         raw_name = self.name.lower()
         types = self.data_files["types"]["mappings"]
         keywords = list(types.keys())
@@ -15,6 +22,13 @@ class AtDe(Monument):
         return utils.get_longest_match(raw_name, keywords)
 
     def set_type(self):
+        """
+        Set specific P31, if possible.
+
+        Default P31 is cultural property.
+        If extracting a type keyword succeeded,
+        use the more specific item as P31.
+        """
         types = self.data_files["types"]["mappings"]
         type_match = self.get_type_keyword()
         if type_match:
@@ -113,6 +127,7 @@ class AtDe(Monument):
         self.monuments_all_id = self.objektid
 
     def get_municipality_name(self):
+        """Get municipality name based on gemeindekennzahl."""
         all_codes = self.data_files["municipalities"]
         municip_code = str(self.gemeindekennzahl)
         match = [x["itemLabel"]
