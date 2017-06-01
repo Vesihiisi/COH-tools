@@ -40,26 +40,39 @@ class AtDe(Monument):
         self.add_label("de", self.name)
 
     def set_descriptions(self):
+        """
+        Set descriptions in several languages.
+
+        Base format: $type in $country
+        If specific type in German exists, substitute for $type.
+        If municipality name exists, insert in all languages
+        """
         type_match = self.get_type_keyword()
         municipality_name = self.get_municipality_name()
         base_desc_german_english = "{} in {}"
+        base_desc_swedish = "{} i {}"
         place_german = "Österreich"
         place_english = "Austria"
+        place_swedish = "Österike"
         type_german = "Denkmalgeschütztes Objekt"
         type_english = "cultural property"
+        type_swedish = "kulturarv"
 
         if isinstance(type_match, str):
             type_german = type_match.title()
         if municipality_name:
             place_german = municipality_name
-            place_english = "{}, {}".format(municipality_name, "Austria")
+            place_swedish = "{}, {}".format(municipality_name, place_swedish)
+            place_english = "{}, {}".format(municipality_name, place_english)
         desc_german = base_desc_german_english.format(
             type_german, place_german)
         desc_english = base_desc_german_english.format(
             type_english, place_english)
+        desc_swedish = base_desc_swedish.format(type_swedish, place_swedish)
 
         self.add_description("de", desc_german)
         self.add_description("en", desc_english)
+        self.add_description("sv", desc_swedish)
 
     def set_street_address(self):
         """
