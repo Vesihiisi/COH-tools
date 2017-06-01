@@ -111,3 +111,4 @@ class AtDe(Monument):
         self.set_street_address()
         self.set_coords(("lat", "lon"))
         self.set_commonscat()
+        self.set_wd_item(self.find_matching_wikidata(mapping))
