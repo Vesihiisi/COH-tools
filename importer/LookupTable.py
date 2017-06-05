@@ -102,7 +102,7 @@ class LookupTable(object):
 
     def __init__(self, lookup_path):
         """
-        Initiate LookupTable object.
+        Initialize LookupTable object.
 
         :param lookup_path: name of the lookup table without
                             full path, eg. "se-fornmin (sv)/types"
