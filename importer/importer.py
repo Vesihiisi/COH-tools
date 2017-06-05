@@ -107,9 +107,12 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                                          "data_files": {"counties": "estonia_counties.json"}},
                    "monuments_se-fornmin_(sv)":
                    {"class": SeFornminSv,
-                             "data_files": {"municipalities": "sweden_municipalities.json",
-                                            "socken": "sweden_socken.json"},
-                             "lookup_downloads":{"types" : "se-fornmin_(sv)/types"},
+                    "data_files": {
+                        "municipalities": "sweden_municipalities.json",
+                        "socken": "sweden_socken.json"
+                    },
+                    "lookup_downloads": {
+                        "types": "se-fornmin_(sv)/types"},
                     },
                    "monuments_se-arbetsl_(sv)":
                    {"class":
