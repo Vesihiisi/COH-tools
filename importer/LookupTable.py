@@ -24,12 +24,24 @@ class LookupTable(object):
         return isinstance(node, mwp.nodes.tag.Tag) and node.tag == 'td'
 
     def fetch_page(self, tablename):
-        """Download lookup table from given path."""
+        """
+        Download lookup table from given path.
+
+        :param tablename: name of the lookup table without
+                          full path, eg. "se-fornmin (sv)/types"
+        :return: Pywikibot page object where the table is located
+        """
         site = pwb.Site("wikidata", "wikidata")
-        page = pwb.Page(site, BASE_URL + tablename)
-        return page
+        return pwb.Page(site, BASE_URL + tablename)
 
     def extract_table_from_page(self, page):
+        """
+        Get wikitable from page.
+
+        :param page: Pywikibot Page object containing table
+        :return: wikitable
+        :rtype: Mediawikiparser Tag object
+        """
         parsed = mwp.parse(page)
         table = parsed.filter_tags(matches=lambda node: node.tag == "table")
         return table[0]
@@ -41,13 +53,26 @@ class LookupTable(object):
         return {'permalink': permalink, 'timestamp': timestamp}
 
     def assemble_json_table(self, json_table, metadata):
+        """
+        Put lookup dictionary and metadata together.
+
+        :param json_table: lookup dictionary
+        :param metadata: metadata dictionary
+        :return: full mapping dictionary
+        """
         lookup_dict = {}
         lookup_dict["metadata"] = metadata
         lookup_dict["mappings"] = json_table
         return lookup_dict
 
     def table_to_json(self, wikitable):
-        """Convert wikitable to json."""
+        """
+        Convert wikitable to json.
+
+        :param wikitable: lookup wikitable
+        :type wikitable: Mediawikiparser Tag
+        :return: lookup dictionary
+        """
         lookup_dict = {}
         rows = wikitable.contents.filter(
             recursive=False, matches=self.filter_tr)
@@ -67,10 +92,6 @@ class LookupTable(object):
                     "count": cells[1].contents.title().strip()}
         return lookup_dict
 
-    def get_json_table(self):
-        """Get the lookup table as json."""
-        return self.json_table
-
     def convert_page_to_json_table(self):
         wikipage = self.fetch_page(self.lookup_path)
         wikitable = self.extract_table_from_page(wikipage.get())
@@ -79,4 +100,10 @@ class LookupTable(object):
         return self.assemble_json_table(json_table, metadata)
 
     def __init__(self, lookup_path):
+        """
+        Initiate LookupTable object.
+
+        :param lookup_path: name of the lookup table without
+                            full path, eg. "se-fornmin (sv)/types"
+        """
         self.lookup_path = lookup_path
