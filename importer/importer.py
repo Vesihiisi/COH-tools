@@ -201,7 +201,7 @@ def load_data(tablename):
     if tablename.get("lookup_downloads"):
         for l_title, l_path in tablename.get("lookup_downloads").items():
             lookup_table = Lt.LookupTable(l_path)
-            lookup_json = lookup_table.get_json_table()
+            lookup_json = lookup_table.convert_page_to_json_table()
             data_files[l_title] = lookup_json
             print("Loaded online data: {}".format(l_path))
     return data_files
