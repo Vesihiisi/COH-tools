@@ -84,7 +84,7 @@ class LookupTable(object):
                 dict_key = cells[0].contents.title().strip()
                 for index, item in enumerate(parsed_wd_items):
                     item_id = item.params[0].title()
-                    if item_id[0] != "Q":
+                    if not item_id.startswith("Q"):
                         item_id = "Q" + item_id
                     parsed_wd_items[index] = item_id
                 lookup_dict[dict_key] = {
