@@ -83,16 +83,17 @@ class LookupTable(object):
             if len(parsed_wd_items) > 0:
                 dict_key = cells[0].contents.title().strip()
                 for index, item in enumerate(parsed_wd_items):
-                    itemID = item.params[0].title()
-                    if itemID[0] != "Q":
-                        itemID = "Q" + itemID
-                    parsed_wd_items[index] = itemID
+                    item_id = item.params[0].title()
+                    if item_id[0] != "Q":
+                        item_id = "Q" + item_id
+                    parsed_wd_items[index] = item_id
                 lookup_dict[dict_key] = {
                     "items": parsed_wd_items,
                     "count": cells[1].contents.title().strip()}
         return lookup_dict
 
     def convert_page_to_json_table(self):
+        """Convert a lookup table from self.path to json representation."""
         wikipage = self.fetch_page(self.lookup_path)
         wikitable = self.extract_table_from_page(wikipage.get())
         json_table = self.table_to_json(wikitable)
