@@ -26,23 +26,30 @@ class LookupTable(object):
     def fetch_page(self, tablename):
         """Download lookup table from given path."""
         site = pwb.Site("wikidata", "wikidata")
-        return pwb.Page(site, BASE_URL + tablename)
+        page = pwb.Page(site, BASE_URL + tablename)
+        return page
 
-    def get_page_metadata(self, page):
+    def extract_table_from_page(self, page):
+        parsed = mwp.parse(page)
+        table = parsed.filter_tags(matches=lambda node: node.tag == "table")
+        return table[0]
+
+    def extract_metadata_from_page(self, page):
         """Get permalink and last changed timestamp of wiki page."""
         timestamp = page.editTime().isoformat()
         permalink = page.permalink()
         return {'permalink': permalink, 'timestamp': timestamp}
 
-    def table_to_json(self, tablename):
+    def assemble_json_table(self, json_table, metadata):
+        lookup_dict = {}
+        lookup_dict["metadata"] = metadata
+        lookup_dict["mappings"] = json_table
+        return lookup_dict
+
+    def table_to_json(self, wikitable):
         """Convert wikitable to json."""
         lookup_dict = {}
-        lookup_dict["mappings"] = {}
-        page = self.fetch_page(tablename)
-        lookup_dict["@meta"] = self.get_page_metadata(page)
-        parsed = mwp.parse(page.get())
-        table = parsed.filter_tags(matches=lambda node: node.tag == "table")
-        rows = table[0].contents.filter(
+        rows = wikitable.contents.filter(
             recursive=False, matches=self.filter_tr)
         for row in rows:
             cells = row.contents.filter(
@@ -55,7 +62,7 @@ class LookupTable(object):
                     if itemID[0] != "Q":
                         itemID = "Q" + itemID
                     parsed_wd_items[index] = itemID
-                lookup_dict["mappings"][dict_key] = {
+                lookup_dict[dict_key] = {
                     "items": parsed_wd_items,
                     "count": cells[1].contents.title().strip()}
         return lookup_dict
@@ -64,5 +71,12 @@ class LookupTable(object):
         """Get the lookup table as json."""
         return self.json_table
 
+    def convert_page_to_json_table(self):
+        wikipage = self.fetch_page(self.lookup_path)
+        wikitable = self.extract_table_from_page(wikipage.get())
+        json_table = self.table_to_json(wikitable)
+        metadata = self.extract_metadata_from_page(wikipage)
+        return self.assemble_json_table(json_table, metadata)
+
     def __init__(self, lookup_path):
-        self.json_table = self.table_to_json(lookup_path)
+        self.lookup_path = lookup_path
