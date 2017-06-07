@@ -12,9 +12,7 @@ class Uploader(object):
     TEST_ITEM = "Q4115189"
 
     def add_labels(self, target_item, labels, log):
-        """
-        Add labels and aliases.
-        """
+        """Add labels and aliases."""
         labels_for_upload = {}
         for language_key in labels:
             label_content = labels[language_key]
@@ -28,6 +26,7 @@ class Uploader(object):
             log.logit(message)
 
     def add_descriptions(self, target_item, descriptions, log):
+        """Add descriptions."""
         descriptions_for_upload = {}
         for language_key in descriptions:
             desc_content = descriptions[language_key]
