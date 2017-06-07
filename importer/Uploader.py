@@ -16,8 +16,7 @@ class Uploader(object):
         self.wdstuff.add_multiple_label_or_alias(labels, target_item)
         if log:
             t_id = target_item.getID()
-            message = "{} ADDED LABELS {}".format(
-                t_id, labels)
+            message = "{} ADDED LABELS {}".format(t_id, labels)
             log.logit(message)
 
     def add_descriptions(self, target_item, descriptions, log):
