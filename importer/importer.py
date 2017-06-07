@@ -17,6 +17,7 @@ from XkSq import XkSq
 from ZaEn import ZaEn
 from Uploader import *
 from Logger import *
+import LookupTable as Lt
 from os import path
 import argparse
 import pymysql
@@ -106,10 +107,13 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                                          "data_files": {"counties": "estonia_counties.json"}},
                    "monuments_se-fornmin_(sv)":
                    {"class": SeFornminSv,
-                    "data_files":
-                    {"municipalities": "sweden_municipalities.json",
-                     "socken": "sweden_socken.json",
-                     "types": "se-fornmin_(sv)_types.json"}},
+                    "data_files": {
+                        "municipalities": "sweden_municipalities.json",
+                        "socken": "sweden_socken.json"
+                    },
+                    "lookup_downloads": {
+                        "types": "se-fornmin_(sv)/types"},
+                    },
                    "monuments_se-arbetsl_(sv)":
                    {"class":
                     SeArbetslSv,
@@ -135,13 +139,6 @@ def select_query(query, connection):
     cursor.execute(query)
     result = cursor.fetchall()
     return result
-
-
-def load_data_files(file_dict):
-    for key in file_dict.keys():
-        file_dict[key] = utils.load_json(
-            path.join(MAPPING_DIR, file_dict[key]))
-    return file_dict
 
 
 def get_wd_items_using_prop(prop):
@@ -177,6 +174,37 @@ def save_reports(problem_reports, tablename, timestamp):
     """Save the problem reports of the batch to a file."""
     filename = "report_{}_{}.json".format(tablename, timestamp)
     utils.json_to_file(filename, problem_reports)
+
+
+def load_data_files(tablename):
+    """Load offline data files as specified in SPECIFIC_TABLES."""
+    file_dict = tablename["data_files"]
+    for key in file_dict.keys():
+        json_path = path.join(MAPPING_DIR, file_dict[key])
+        file_dict[key] = utils.load_json(json_path)
+        print("Loaded offline data file: {}".format(json_path))
+    return file_dict
+
+
+def load_data(tablename):
+    """
+    Get data files necessary for mappings.
+
+    Loads both offline files and online ones
+    specified in SPECIFIC TABLES.
+    """
+    data_files = load_data_files(tablename)
+    if tablename.get("subclass_downloads"):
+        for sub_title, sub_item in tablename.get("subclass_downloads").items():
+            data_files[sub_title] = get_subclasses(sub_item)
+            print("Loaded online data: {}".format(sub_title))
+    if tablename.get("lookup_downloads"):
+        for l_title, l_path in tablename.get("lookup_downloads").items():
+            lookup_table = Lt.LookupTable(l_path)
+            lookup_json = lookup_table.convert_page_to_json_table()
+            data_files[l_title] = lookup_json
+            print("Loaded online data: {}".format(l_path))
+    return data_files
 
 
 def get_items(connection,
@@ -215,11 +243,7 @@ def get_items(connection,
     if specific_table_name in SPECIFIC_TABLES:
         specific_table = SPECIFIC_TABLES[specific_table_name]
         class_to_use = specific_table["class"]
-        data_files = load_data_files(
-            specific_table["data_files"])
-        if specific_table.get("subclass_downloads"):
-            for subclass_title, subclass_item in specific_table.get("subclass_downloads").items():
-                data_files[subclass_title] = get_subclasses(subclass_item)
+        data_files = load_data(specific_table)
     else:
         print("No class defined for " + specific_table_name)
         return
