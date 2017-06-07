@@ -11,86 +11,21 @@ class Uploader(object):
 
     TEST_ITEM = "Q4115189"
 
-    def make_labels(self):
-        labels = self.data["labels"]
-        new_labels = []
-        for item in labels:
-            new_labels.append({'language': item, 'value': labels[item]})
-        return new_labels
-
-    def make_aliases(self):
-        aliases = self.data["aliases"]
-        new_aliases = []
-        for item in aliases:
-            language = item
-            for value in aliases[language]:
-                new_alias = {"language": language, "value": value}
-                new_aliases.append(new_alias)
-        return new_aliases
-
-    def add_labels(self, target_item, labels, aliases, log):
-        """
-        Add labels and aliases.
-
-        Normally, if the WD item already has a label in $lang
-        and the data object has another one, the new one
-        will be automatically added as an alias. Otherwise
-        (no existing label), it will be added as a label.
-        However, the data model supports an optional [aliases]
-        field as well.
-        Its contents will be added directly as an alias, without checking
-        if it could be a label first.
-        """
-        print(labels)
-        for label in labels:
-            target_item.get()
-            label_content = label['value']
-            language = label['language']
-            self.wdstuff.addLabelOrAlias(
-                language, label_content, target_item)
-            if log:
-                t_id = target_item.getID()
-                message = "{} ADDED LABEL {} {}".format(
-                    t_id, language, label_content)
-                log.logit(message)
-        for alias in aliases:
-            target_item.get()
-            name = alias["value"]
-            language = alias["language"]
-            t_aliases = target_item.aliases
-            if language in t_aliases and name in t_aliases[language]:
-                return
-            else:
-                summary = "Added [{}] alias to [[{}]], {}".format(
-                    language, target_item.title(), self.summary)
-                target_item.editAliases(
-                    {language: [name]}, summary=summary)
-            if log:
-                t_id = target_item.getID()
-                message = "{} ADDED ALIAS {} {}".format(
-                    t_id, language, name)
-                log.logit(message)
+    def add_labels(self, target_item, labels, log):
+        """Add labels and aliases."""
+        self.wdstuff.add_multiple_label_or_alias(labels, target_item)
+        if log:
+            t_id = target_item.getID()
+            message = "{} ADDED LABELS {}".format(t_id, labels)
+            log.logit(message)
 
     def add_descriptions(self, target_item, descriptions, log):
-        for description in descriptions:
-            target_item.get()
-            desc_content = descriptions[description]['value']
-            lang = descriptions[description]['language']
-            self.wdstuff.add_description(
-                lang, desc_content, target_item)
-            if log:
-                t_id = target_item.getID()
-                message = "{} ADDED DESCRIPTION {} {}".format(
-                    t_id, lang, desc_content)
-                log.logit(message)
-
-    def make_descriptions(self):
-        descriptions = self.data["descriptions"]
-        new_descriptions = {}
-        for item in descriptions:
-            new_descriptions[item] = {
-                'language': item, 'value': descriptions[item]}
-        return new_descriptions
+        """Add descriptions."""
+        self.wdstuff.add_multiple_descriptions(descriptions, target_item)
+        if log:
+            t_id = target_item.getID()
+            message = "{} ADDED DESCRIPTIONS {}".format(t_id, descriptions)
+            log.logit(message)
 
     def make_image_item(self, filename):
         commonssite = utils.create_site_instance("commons", "commons")
@@ -260,11 +195,10 @@ class Uploader(object):
         if self.data["upload"] is False:
             print("SKIPPING ITEM")
             return
-        labels = self.make_labels()
-        descriptions = self.make_descriptions()
-        aliases = self.make_aliases()
         claims = self.data["statements"]
-        self.add_labels(self.wd_item, labels, aliases, self.log)
+        labels = self.data["labels"]
+        descriptions = self.data["descriptions"]
+        self.add_labels(self.wd_item, labels, self.log)
         self.add_descriptions(self.wd_item, descriptions, self.log)
         self.add_claims(self.wd_item, claims, self.log)
 
