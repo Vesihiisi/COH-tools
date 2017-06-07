@@ -13,32 +13,20 @@ class Uploader(object):
 
     def add_labels(self, target_item, labels, log):
         """Add labels and aliases."""
-        labels_for_upload = {}
-        for language_key in labels:
-            label_content = labels[language_key]
-            labels_for_upload[language_key] = label_content
-        self.wdstuff.add_multiple_label_or_alias(
-            labels_for_upload, target_item)
+        self.wdstuff.add_multiple_label_or_alias(labels, target_item)
         if log:
             t_id = target_item.getID()
             message = "{} ADDED LABELS {}".format(
-                t_id, labels_for_upload)
+                t_id, labels)
             log.logit(message)
 
     def add_descriptions(self, target_item, descriptions, log):
         """Add descriptions."""
-        descriptions_for_upload = {}
-        for language_key in descriptions:
-            desc_content = descriptions[language_key]
-            descriptions_for_upload[language_key] = desc_content
-        self.wdstuff.add_multiple_descriptions(
-            descriptions_for_upload, target_item)
+        self.wdstuff.add_multiple_descriptions(descriptions, target_item)
         if log:
             t_id = target_item.getID()
-            message = "{} ADDED DESCRIPTIONS {}".format(
-                t_id, descriptions_for_upload)
+            message = "{} ADDED DESCRIPTIONS {}".format(t_id, descriptions)
             log.logit(message)
-
 
     def make_image_item(self, filename):
         commonssite = utils.create_site_instance("commons", "commons")
