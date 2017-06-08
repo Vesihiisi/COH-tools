@@ -5,14 +5,14 @@
     },
     "country_code": "no",
     "default_is": {
-        "item": "",
-        "name": "",
+        "item": "Q2065736",
+        "name": "cultural property",
         "comment" : ""
     },
     "heritage": {
-        "item": "",
-        "name": "",
-        "comment": "new q -- item on Riksantikvaren register?"
+        "item": "Q11970056",
+        "name": "heritage site in norway",
+        "comment": ""
     },
     "language": "nb",
     "table_name": "no",

@@ -381,9 +381,8 @@ class Monument(object):
                                      article_keyword="monument_article"):
         """Get the Wikidata item connected to monument_article (or equivalent), if any."""
         if self.has_non_empty_attribute(article_keyword):
-            article_link = utils.remove_markup(getattr(self, article_keyword))
             wd_item = utils.q_from_wikipedia(
-                language, article_link)
+                language, getattr(self, article_keyword))
             return wd_item
         else:
             return None
