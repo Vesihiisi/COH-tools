@@ -15,6 +15,7 @@
         "comment": "new q -- item on Riksantikvaren register?"
     },
     "language": "nb",
+    "table_name": "no",
     "unique": {
         "comment": "Kulturminne ID (norwegian)",
         "property": "P758"

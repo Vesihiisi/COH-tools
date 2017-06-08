@@ -2,15 +2,10 @@ from Monument import Monument
 import importer_utils as utils
 
 
-class NoNo(Monument):
-    """
-    A class to process monuments_no_(no).
+MAPPING_DIR = "mappings"
 
-    TODO.
-    there's an API:
-    https://data.norge.no/data/riksantikvaren/kulturminnes%C3%B8k
-    look into how we can benefit from it!
-    """
+
+class NoNo(Monument):
 
     def update_labels(self):
         """
@@ -34,20 +29,28 @@ class NoNo(Monument):
                 print(part, "----", part.capitalize())
 
     def set_no(self):
-        self.add_statement("norwegian_monument_id", self.id)
+        self.add_statement("norwegian_monument_id", str(self.id))
 
-    def __init__(self, db_row_dict, mapping, data_files, existing):
-        Monument.__init__(self, db_row_dict, mapping, data_files, existing)
+    def exists_with_monument_article(self, language):
+        return super().exists_with_monument_article("no", "monument_article")
+
+    def set_monuments_all_id(self):
+        """Map which column name in specific table to  ID in monuments_all."""
+        self.monuments_all_id = str(self.id)
+
+    def __init__(self, db_row_dict, mapping, data_files, existing, repository):
+        Monument.__init__(self, db_row_dict, mapping,
+                          data_files, existing, repository)
+        self.set_monuments_all_id()
+        self.set_changed()
         self.update_labels()
-        # self.exists("no")
-        self.set_commonscat()
+        self.wlm_source = self.create_wlm_source(self.monuments_all_id)
         self.set_image("bilde")
+        self.set_commonscat()
         self.set_coords(("lat", "lon"))
         self.set_no()
         # self.set_adm_location()
         # self.set_location()
         # self.set_sagsnr()
-        # self.set_address()
-        # self.set_inception()
-        self.exists_with_prop(mapping)
         self.print_wd()
+        self.set_wd_item(self.find_matching_wikidata(mapping))
