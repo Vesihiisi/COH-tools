@@ -40,7 +40,7 @@ class NoNo(Monument):
         self.add_label("nb", name)
 
     def set_no(self):
-        """Add the Norwegian monument ID P758"""
+        """Add the Norwegian monument ID P758."""
         self.add_statement("norwegian_monument_id", str(self.id))
 
     def get_municip_name(self):
