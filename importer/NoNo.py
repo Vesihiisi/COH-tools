@@ -7,15 +7,29 @@ MAPPING_DIR = "mappings"
 class NoNo(Monument):
 
     def update_descriptions(self):
+        """
+        Add descriptions in Bokmål.
+
+        In the format "$type in $municipality".
+        """
         category = self.kategori.lower()
         municip = self.get_municip_name()
         base_norwegian = "{} i {}"
         desc_norwegian = base_norwegian.format(category, municip)
-        print(desc_norwegian)
         self.add_description("nb", desc_norwegian)
 
     def update_labels(self):
-        self.add_label("nb", self.navn)
+        """
+        Add label in Bokmål.
+
+        Some of self.navn are in all caps.
+        These are normalized:
+        FÆRDER FYRSTASJON -> Færder Fyrstasjon
+        """
+        name = self.navn
+        if name.isupper():
+            name = name.title()
+        self.add_label("nb", name)
 
     def set_no(self):
         self.add_statement("norwegian_monument_id", str(self.id))
