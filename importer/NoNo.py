@@ -8,15 +8,23 @@ class NoNo(Monument):
 
     def update_descriptions(self):
         """
-        Add descriptions in Bokmål.
+        Add descriptions in several language.
 
-        In the format "$type in $municipality".
+        In the format "$type in $municipality, ($country if not nb)".
         """
         category = self.kategori.lower()
         municip = self.get_municip_name()
         base_norwegian = "{} i {}"
         desc_norwegian = base_norwegian.format(category, municip)
         self.add_description("nb", desc_norwegian)
+
+        base_english = "cultural property in {}, Norway"
+        desc_english = base_english.format(municip)
+        self.add_description("en", desc_english)
+
+        base_swedish = "kulturarv i {}, Norge"
+        desc_swedish = base_swedish.format(municip)
+        self.add_description("sv", desc_swedish)
 
     def update_labels(self):
         """
@@ -32,12 +40,15 @@ class NoNo(Monument):
         self.add_label("nb", name)
 
     def set_no(self):
+        """Add the Norwegian monument ID P758"""
         self.add_statement("norwegian_monument_id", str(self.id))
 
     def get_municip_name(self):
+        """Get the value of self.kommune without brackets."""
         return utils.remove_markup(self.kommune)
 
     def set_adm_location(self):
+        """Set the adm location based on kommunenummer and offline file."""
         all_codes = self.data_files["municipalities"]
         if self.has_non_empty_attribute("kommunenr"):
             municip_code = str(self.kommunenr)
@@ -52,6 +63,11 @@ class NoNo(Monument):
                 self.add_statement("located_adm", match[0])
 
     def set_special_type(self):
+        """
+        Set special 'is' based on self.kategori and online mapping.
+
+        https://www.wikidata.org/wiki/Wikidata:WikiProject_WLM/Mapping_tables/no_(no)/categories
+        """
         glossary = self.data_files["categories"]["mappings"]
         category = self.kategori.lower()
         try:
