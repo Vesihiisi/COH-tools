@@ -468,13 +468,21 @@ def get_random_list_sample(some_list, amount):
     return random.sample(some_list, amount)
 
 
-def get_P31(q_number, site):
+def get_value_of_property(q_number, property_id, site):
     results = []
     item = pywikibot.ItemPage(site, q_number)
-    if item.exists() and item.claims.get("P31"):
-        for claim in item.claims.get("P31"):
-            results.append(claim.getTarget().getID())
+    if item.exists() and item.claims.get(property_id):
+        for claim in item.claims.get(property_id):
+            target = claim.getTarget()
+            if isinstance(target, str):
+                target = target
+            else:
+                results.append(target.getID())
     return results
+
+
+def get_P31(q_number, site):
+    return get_value_of_property(q_number, "P31", site)
 
 
 def is_whitelisted_P31(q_number, site, allowed_values):
