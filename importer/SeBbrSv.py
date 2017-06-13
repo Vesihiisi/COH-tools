@@ -28,16 +28,19 @@ class SeBbrSv(Monument):
             self.add_to_report("malformed_label", self.namn)
         self.add_label("sv", label)
 
-    def set_bbr(self):
+    def create_bbr(self):
         """
-        Set the BBR ID property.
+        Create BBR link.
 
         This will get a link that looks like
             raa/bbr/21300000002805
         Depending on whether the prefix is raa/bbr/ or raa/bbra/
         """
-        bbr_link = utils.get_bbr_link(self.bbr)
-        self.add_statement("cultural_heritage_sweden", bbr_link)
+        self.bbr_link = utils.get_bbr_link(self.bbr)
+
+    def set_bbr(self):
+        """Set the BBR ID property."""
+        self.add_statement("cultural_heritage_sweden", self.bbr_link)
 
     def set_heritage_bbr(self):
         """
@@ -61,6 +64,7 @@ class SeBbrSv(Monument):
         We therefore need to look that up by
         querying the source database via their API.
         """
+        type_q = None
         protection_date = False
         kulturarv_id = self.wd_item["statements"][
             self.props["cultural_heritage_sweden"]][0]["value"]
@@ -109,7 +113,8 @@ class SeBbrSv(Monument):
             except ValueError:
                 self.add_to_report("protection_type", bbr_type)
         kulturarv_source = self.create_kulturarv_source(url)
-        self.add_statement(
+        if type_q:
+            self.add_statement(
             "heritage_status", type_q, qualifier, refs=[kulturarv_source])
 
     def create_kulturarv_source(self, url):
@@ -232,6 +237,10 @@ class SeBbrSv(Monument):
             self.add_to_report("malformed_label", self.namn)
         self.add_alias("sv", fastighetsbeteckning)
 
+    def get_no_of_buildings(self):
+        return utils.get_number_from_string(
+            utils.get_text_inside_brackets(self.funktion))
+
     def set_no_of_buildings(self):
         """
         Set how many buildings the item consists of.
@@ -242,12 +251,11 @@ class SeBbrSv(Monument):
         and how many as qualifier.
         Some items don't have any numbers, so we ignore those.
         """
-        extracted_no = utils.get_number_from_string(
-            utils.get_text_inside_brackets(self.funktion))
-        if extracted_no:
+        buildings = self.get_no_of_buildings()
+        if buildings:
             self.add_statement(
                 "has_parts_of_class", "Q41176",
-                {"quantity": {"quantity_value": extracted_no}})
+                {"quantity": {"quantity_value": buildings}})
 
     def set_adm_location(self):
         """
@@ -302,6 +310,26 @@ class SeBbrSv(Monument):
         """Set language of Wikipedia to use to match articles."""
         return super().exists_with_monument_article("sv")
 
+    def get_wditems_bbr_links(self):
+        result = []
+        associated_item = self.wd_item["wd-item"]
+        if associated_item:
+            heritage_links = utils.get_value_of_property(
+                associated_item, "P1260", self.repo)
+            for link in heritage_links:
+                if link.startswith("raa/bbr"):
+                    result.append(link)
+            return result
+
+    def check_wd_item(self):
+        bbr_url_on_wd = self.get_wditems_bbr_links()
+        if bbr_url_on_wd:
+            for url in bbr_url_on_wd:
+                if url != self.bbr_link:
+                    print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                    print(url)
+
+
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping, data_files, existing, repository)
         self.set_monuments_all_id()
@@ -319,6 +347,7 @@ class SeBbrSv(Monument):
         self.set_coords(("lat", "lon"))
         self.set_inception()
         self.set_no_of_buildings()
+        self.create_bbr()
         self.set_bbr()
         self.set_heritage_bbr()
         self.set_adm_location()
@@ -326,3 +355,4 @@ class SeBbrSv(Monument):
         self.set_location()
         self.set_function()
         self.set_wd_item(self.find_matching_wikidata(mapping))
+        self.check_wd_item()
