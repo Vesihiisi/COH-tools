@@ -474,10 +474,12 @@ def get_value_of_property(q_number, property_id, site):
     if item.exists() and item.claims.get(property_id):
         for claim in item.claims.get(property_id):
             target = claim.getTarget()
+            print(target)
             if isinstance(target, str):
                 target = target
             else:
-                results.append(target.getID())
+                target = target.getID()
+            results.append(target)
     return results
 
 
