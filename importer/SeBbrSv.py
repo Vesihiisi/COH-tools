@@ -313,6 +313,14 @@ class SeBbrSv(Monument):
         return super().exists_with_monument_article("sv")
 
     def get_wditems_bbr_links(self):
+        """
+        Get BBR links of associated WD item.
+
+        If the data object is associated
+        with a WD item, check if it has P1260
+        of the type raa/bbr(a) and get their
+        values.
+        """
         result = []
         associated_item = self.wd_item["wd-item"]
         if associated_item:
@@ -324,6 +332,15 @@ class SeBbrSv(Monument):
             return result
 
     def check_wd_item(self):
+        """
+        Detect BBR conflict in associated WD item.
+
+        Get any P1260 of associated WD item.
+        If it's a BBR ID that's different
+        from the one in the data object,
+        remove the association. Data will be uploaded
+        to a newly created WD item instead.
+        """
         bbr_url_on_wd = self.get_wditems_bbr_links()
         if bbr_url_on_wd:
             for url in bbr_url_on_wd:
