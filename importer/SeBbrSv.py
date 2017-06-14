@@ -89,14 +89,16 @@ class SeBbrSv(Monument):
             if "ns5:spec" in element:
                 bbr_type = element["ns5:spec"]
                 if bbr_type.startswith("Kyrkligt kulturminne"):
-                    # Kyrkligt kulturminne. 4 kap. KML -- these don't seem to have dates
+                    # Kyrkligt kulturminne. 4 kap. KML -- these don't seem to
+                    # have dates
                     type_q = "Q24284073"
                 elif bbr_type.startswith("Byggnadsminne"):
                     # Byggnadsminne (BM) 3 kap. KML (1977-02-25)
                     type_q = "Q24284072"
                     protection_date = bbr_type.split("(")[-1][:-1]
                 elif bbr_type.startswith("Statligt byggnadsminne"):
-                    # Statligt byggnadsminne (SBM). Förordning (2013:558) (1935-01-25)
+                    # Statligt byggnadsminne (SBM). Förordning (2013:558)
+                    # (1935-01-25)
                     type_q = "Q24284071"
                     protection_date = bbr_type.split("(")[-1][:-1]
         # The original set_heritage() added an empty claim
@@ -115,7 +117,7 @@ class SeBbrSv(Monument):
         kulturarv_source = self.create_kulturarv_source(url)
         if type_q:
             self.add_statement(
-            "heritage_status", type_q, qualifier, refs=[kulturarv_source])
+                "heritage_status", type_q, qualifier, refs=[kulturarv_source])
 
     def create_kulturarv_source(self, url):
         """
@@ -162,7 +164,7 @@ class SeBbrSv(Monument):
                     data_string = "{} ({})".format(function, self.funktion)
                     # report both this particular function and the whole
                     # string containing it
-                    self.add_to_report("funktion", data_string)
+                    self.add_to_report("funktion", data_string, "use")
 
     def set_architect(self):
         """
@@ -282,7 +284,7 @@ class SeBbrSv(Monument):
             self.add_statement("located_adm", municipality)
         except IndexError:
             print("Could not parse municipality: {}.".format(self.kommun))
-            self.add_to_report("kommun", self.kommun)
+            self.add_to_report("kommun", self.kommun, "located_adm")
 
     def set_inception(self):
         """
@@ -326,12 +328,11 @@ class SeBbrSv(Monument):
         if bbr_url_on_wd:
             for url in bbr_url_on_wd:
                 if url != self.bbr_link:
-                    print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-                    print(url)
-
+                    self.wd_item["wd-item"] = None
 
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
-        Monument.__init__(self, db_row_dict, mapping, data_files, existing, repository)
+        Monument.__init__(self, db_row_dict, mapping,
+                          data_files, existing, repository)
         self.set_monuments_all_id()
         self.set_changed()
         self.wlm_source = self.create_wlm_source(self.monuments_all_id)
