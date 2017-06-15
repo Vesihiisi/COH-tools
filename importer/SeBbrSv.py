@@ -126,7 +126,10 @@ class SeBbrSv(Monument):
                              {"time_value": date_dict}}
             except ValueError:
                 self.add_to_report("protection_type", bbr_type)
-        kulturarv_source = self.create_kulturarv_source(self.bbr_link)
+        h_property = self.props["cultural_heritage_sweden"]
+        kulturarv_id = self.wd_item["statements"][h_property][0]["value"]
+        url = "http://kulturarvsdata.se/{}".format(kulturarv_id)
+        kulturarv_source = self.create_kulturarv_source(url)
         if type_q:
             self.add_statement(
                 "heritage_status", type_q, qualifier, refs=[kulturarv_source])
