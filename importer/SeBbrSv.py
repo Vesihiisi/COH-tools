@@ -43,9 +43,17 @@ class SeBbrSv(Monument):
         self.add_statement("cultural_heritage_sweden", self.bbr_link)
 
     def get_online_data(self):
+        """
+        Retrieve online data about BBR complex.
+
+        This includes, inter alia, the legal protection
+        status and ID's of each part of the
+        compound.
+        """
         h_property = self.props["cultural_heritage_sweden"]
         kulturarv_id = self.wd_item["statements"][h_property][0]["value"]
         url = "http://kulturarvsdata.se/{}".format(kulturarv_id)
+        print("Retrieving online data from {}".format(url))
         # http://kulturarvsdata.se/raa/bbr/21300000023251
         url_list = url.split("/")
         url_list.insert(-1, "jsonld")
@@ -57,11 +65,12 @@ class SeBbrSv(Monument):
             result = data.json()
         except ValueError:
             result = None
-        return result
+        self.online_data = result
 
-    def get_parts(self, online_data):
+    def get_has_parts(self):
+        """Get any parts listed in online data."""
         results = []
-        for element in online_data["@graph"]:
+        for element in self.online_data["@graph"]:
             if "hasPart" in element:
                 results.extend[element["hasPart"]]
         return results
@@ -82,19 +91,13 @@ class SeBbrSv(Monument):
 
         ecclesiastical listed building complex (Q24284073)
         for older buildings owned by the Church of Sweden.
-
-        Which legal protection each monument goes under
-        is not stored in the WLM database.
-        We therefore need to look that up by
-        querying the source database via their API.
         """
         type_q = None
         protection_date = False
-        data = self.get_online_data()
-        if data is None:
+        if self.online_data is None:
             self.add_to_report("invalid_bbr_url", self.bbr_link)
             return
-        for element in data["@graph"]:
+        for element in self.online_data["@graph"]:
             if "ns5:spec" in element:
                 bbr_type = element["ns5:spec"]
                 if bbr_type.startswith("Kyrkligt kulturminne"):
@@ -351,13 +354,22 @@ class SeBbrSv(Monument):
         Detect BBR conflict in associated WD item.
 
         Get any P1260 of associated WD item.
+
+        If it's 1 BBR building link AND the compound consists of 1 building,
+        and the link is the same as the link to that building,
+        keep the item association.
+
         If it's a BBR ID that's different
         from the one in the data object,
         remove the association. Data will be uploaded
         to a newly created WD item instead.
         """
         bbr_url_on_wd = self.get_wditems_bbr_links()
+        parts_of_compound = self.get_has_parts()
         if bbr_url_on_wd:
+            if len(parts_of_compound) == 1 and len(bbr_url_on_wd) == 1:
+                if parts_of_compound[0] == bbr_url_on_wd[0]:
+                    return
             if any(url != self.bbr_link for url in bbr_url_on_wd):
                 self.wd_item["wd-item"] = None
 
@@ -367,6 +379,7 @@ class SeBbrSv(Monument):
         self.set_monuments_all_id()
         self.set_changed()
         self.wlm_source = self.create_wlm_source(self.monuments_all_id)
+        self.get_online_data()
         self.set_country()
         self.set_is()
         self.set_heritage()
