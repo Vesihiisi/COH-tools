@@ -59,6 +59,13 @@ class SeBbrSv(Monument):
             result = None
         return result
 
+    def get_parts(self, online_data):
+        results = []
+        for element in online_data["@graph"]:
+            if "hasPart" in element:
+                results.extend[element["hasPart"]]
+        return results
+
     def set_heritage_bbr(self):
         """
         Set the specific type of heritage status.
