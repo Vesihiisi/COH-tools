@@ -72,7 +72,7 @@ class SeBbrSv(Monument):
         results = []
         for element in self.online_data["@graph"]:
             if "hasPart" in element:
-                results.extend[element["hasPart"]]
+                results.extend(element["hasPart"])
         return results
 
     def set_heritage_bbr(self):
@@ -379,6 +379,8 @@ class SeBbrSv(Monument):
         self.set_monuments_all_id()
         self.set_changed()
         self.wlm_source = self.create_wlm_source(self.monuments_all_id)
+        self.create_bbr_link()
+        self.set_bbr()
         self.get_online_data()
         self.set_country()
         self.set_is()
@@ -392,8 +394,6 @@ class SeBbrSv(Monument):
         self.set_coords(("lat", "lon"))
         self.set_inception()
         self.set_no_of_buildings()
-        self.create_bbr_link()
-        self.set_bbr()
         self.set_heritage_bbr()
         self.set_adm_location()
         self.set_architect()
