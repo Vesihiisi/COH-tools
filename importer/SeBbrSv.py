@@ -42,6 +42,23 @@ class SeBbrSv(Monument):
         """Set the BBR ID property."""
         self.add_statement("cultural_heritage_sweden", self.bbr_link)
 
+    def get_online_data(self):
+        h_property = self.props["cultural_heritage_sweden"]
+        kulturarv_id = self.wd_item["statements"][h_property][0]["value"]
+        url = "http://kulturarvsdata.se/{}".format(kulturarv_id)
+        # http://kulturarvsdata.se/raa/bbr/21300000023251
+        url_list = url.split("/")
+        url_list.insert(-1, "jsonld")
+        url = "/".join(url_list)
+        # Request data in json format
+        # http://kulturarvsdata.se/raa/bbr/jsonld/21300000023251
+        data = requests.get(url)
+        try:
+            result = data.json()
+        except ValueError:
+            result = None
+        return result
+
     def set_heritage_bbr(self):
         """
         Set the specific type of heritage status.
@@ -66,24 +83,9 @@ class SeBbrSv(Monument):
         """
         type_q = None
         protection_date = False
-        kulturarv_id = self.wd_item["statements"][
-            self.props["cultural_heritage_sweden"]][0]["value"]
-        url = "http://kulturarvsdata.se/{}".format(kulturarv_id)
-        # http://kulturarvsdata.se/raa/bbr/21300000023251
-        url_list = url.split("/")
-        url_list.insert(-1, "jsonld")
-        url = "/".join(url_list)
-        # Request data in json format
-        # http://kulturarvsdata.se/raa/bbr/jsonld/21300000023251
-        data = requests.get(url)
-        try:
-            data = data.json()
-        except ValueError:
-            # Got a jsondecodeerror once, on bbr: 21420000015942
-            # utils.get_bbr_link gives a None from it.
-            # If it occurs, skip the heritage statement,
-            # but the question is whether the item shouldn't be skipped...
-            self.add_to_report("kulturarv_url", url)
+        data = self.get_online_data()
+        if data is None:
+            self.add_to_report("invalid_bbr_url", self.bbr_link)
             return
         for element in data["@graph"]:
             if "ns5:spec" in element:
@@ -114,11 +116,13 @@ class SeBbrSv(Monument):
                              {"time_value": date_dict}}
             except ValueError:
                 self.add_to_report("protection_type", bbr_type)
-        kulturarv_source = self.create_kulturarv_source(url)
+        kulturarv_source = self.create_kulturarv_source(self.bbr_link)
         if type_q:
             self.add_statement(
                 "heritage_status", type_q, qualifier, refs=[kulturarv_source])
         else:
+            h_property = self.props["cultural_heritage_sweden"]
+            kulturarv_id = self.wd_item["statements"][h_property][0]["value"]
             self.add_to_report("heritage_status",
                                kulturarv_id,
                                "heritage_status")
