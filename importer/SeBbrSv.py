@@ -51,8 +51,8 @@ class SeBbrSv(Monument):
         compound.
         """
         h_property = self.props["cultural_heritage_sweden"]
-        kulturarv_id = self.wd_item["statements"][h_property][0]["value"]
-        url = "http://kulturarvsdata.se/{}".format(kulturarv_id)
+        self.kulturarv_id = self.wd_item["statements"][h_property][0]["value"]
+        url = "http://kulturarvsdata.se/{}".format(self.kulturarv_id)
         print("Retrieving online data from {}".format(url))
         # http://kulturarvsdata.se/raa/bbr/21300000023251
         url_list = url.split("/")
@@ -126,18 +126,14 @@ class SeBbrSv(Monument):
                              {"time_value": date_dict}}
             except ValueError:
                 self.add_to_report("protection_type", bbr_type)
-        h_property = self.props["cultural_heritage_sweden"]
-        kulturarv_id = self.wd_item["statements"][h_property][0]["value"]
-        url = "http://kulturarvsdata.se/{}".format(kulturarv_id)
+        url = "http://kulturarvsdata.se/{}".format(self.kulturarv_id)
         kulturarv_source = self.create_kulturarv_source(url)
         if type_q:
             self.add_statement(
                 "heritage_status", type_q, qualifier, refs=[kulturarv_source])
         else:
-            h_property = self.props["cultural_heritage_sweden"]
-            kulturarv_id = self.wd_item["statements"][h_property][0]["value"]
             self.add_to_report("heritage_status",
-                               kulturarv_id,
+                               self.kulturarv_id,
                                "heritage_status")
 
     def create_kulturarv_source(self, url):
