@@ -365,12 +365,18 @@ class SeBbrSv(Monument):
         """
         bbr_url_on_wd = self.get_wditems_bbr_links()
         parts_of_compound = self.get_has_parts()
-        if bbr_url_on_wd:
-            if len(parts_of_compound) == 1 and len(bbr_url_on_wd) == 1:
+        if len(bbr_url_on_wd) == 1:
+            if bbr_url_on_wd[0] == self.bbr_link:
+                return
+            elif len(parts_of_compound) == 1:
                 if parts_of_compound[0] == bbr_url_on_wd[0]:
                     return
-            if any(url != self.bbr_link for url in bbr_url_on_wd):
-                self.wd_item["wd-item"] = None
+        elif len(bbr_url_on_wd) == 2:
+            if len(parts_of_compound) == 1:
+                if all(entry in bbr_url_on_wd
+                       for entry in [parts_of_compound[0], self.bbr_link]):
+                    return
+        self.wd_item["wd-item"] = None
 
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
