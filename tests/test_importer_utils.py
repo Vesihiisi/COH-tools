@@ -400,6 +400,14 @@ class TestWikidata(unittest.TestCase):
     def setUp(self):
         self.wikidata_site = utils.create_site_instance("wikidata", "wikidata")
 
+    def test_get_value_of_property_page(self):
+        runestone = "Q7899135"
+        country = "P17"
+        sweden = "Q34"
+        self.assertEqual(utils.get_value_of_property(runestone,
+                                                     country,
+                                                     self.wikidata_site), sweden)
+
     def test_get_value_of_property_string(self):
         se_heritage = "P1260"
         runestone = "Q7899135"

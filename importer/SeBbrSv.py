@@ -28,7 +28,7 @@ class SeBbrSv(Monument):
             self.add_to_report("malformed_label", self.namn)
         self.add_label("sv", label)
 
-    def create_bbr(self):
+    def create_bbr_link(self):
         """
         Create BBR link.
 
@@ -118,6 +118,10 @@ class SeBbrSv(Monument):
         if type_q:
             self.add_statement(
                 "heritage_status", type_q, qualifier, refs=[kulturarv_source])
+        else:
+            self.add_to_report("heritage_status",
+                               kulturarv_id,
+                               "heritage_status")
 
     def create_kulturarv_source(self, url):
         """
@@ -343,9 +347,8 @@ class SeBbrSv(Monument):
         """
         bbr_url_on_wd = self.get_wditems_bbr_links()
         if bbr_url_on_wd:
-            for url in bbr_url_on_wd:
-                if url != self.bbr_link:
-                    self.wd_item["wd-item"] = None
+            if any(url != self.bbr_link for url in bbr_url_on_wd):
+                self.wd_item["wd-item"] = None
 
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
@@ -365,7 +368,7 @@ class SeBbrSv(Monument):
         self.set_coords(("lat", "lon"))
         self.set_inception()
         self.set_no_of_buildings()
-        self.create_bbr()
+        self.create_bbr_link()
         self.set_bbr()
         self.set_heritage_bbr()
         self.set_adm_location()
