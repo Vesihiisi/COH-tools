@@ -28,16 +28,52 @@ class SeBbrSv(Monument):
             self.add_to_report("malformed_label", self.namn)
         self.add_label("sv", label)
 
-    def set_bbr(self):
+    def create_bbr_link(self):
         """
-        Set the BBR ID property.
+        Create BBR link.
 
         This will get a link that looks like
             raa/bbr/21300000002805
         Depending on whether the prefix is raa/bbr/ or raa/bbra/
         """
-        bbr_link = utils.get_bbr_link(self.bbr)
-        self.add_statement("cultural_heritage_sweden", bbr_link)
+        self.bbr_link = utils.get_bbr_link(self.bbr)
+
+    def set_bbr(self):
+        """Set the BBR ID property."""
+        self.add_statement("cultural_heritage_sweden", self.bbr_link)
+
+    def get_online_data(self):
+        """
+        Retrieve online data about BBR complex.
+
+        This includes, inter alia, the legal protection
+        status and ID's of each part of the
+        compound.
+        """
+        h_property = self.props["cultural_heritage_sweden"]
+        self.kulturarv_id = self.wd_item["statements"][h_property][0]["value"]
+        url = "http://kulturarvsdata.se/{}".format(self.kulturarv_id)
+        print("Retrieving online data from {}".format(url))
+        # http://kulturarvsdata.se/raa/bbr/21300000023251
+        url_list = url.split("/")
+        url_list.insert(-1, "jsonld")
+        url = "/".join(url_list)
+        # Request data in json format
+        # http://kulturarvsdata.se/raa/bbr/jsonld/21300000023251
+        data = requests.get(url)
+        try:
+            result = data.json()
+        except ValueError:
+            result = None
+        self.online_data = result
+
+    def get_has_parts(self):
+        """Get any parts listed in online data."""
+        results = []
+        for element in self.online_data["@graph"]:
+            if "hasPart" in element:
+                results.extend(element["hasPart"])
+        return results
 
     def set_heritage_bbr(self):
         """
@@ -55,44 +91,26 @@ class SeBbrSv(Monument):
 
         ecclesiastical listed building complex (Q24284073)
         for older buildings owned by the Church of Sweden.
-
-        Which legal protection each monument goes under
-        is not stored in the WLM database.
-        We therefore need to look that up by
-        querying the source database via their API.
         """
+        type_q = None
         protection_date = False
-        kulturarv_id = self.wd_item["statements"][
-            self.props["cultural_heritage_sweden"]][0]["value"]
-        url = "http://kulturarvsdata.se/{}".format(kulturarv_id)
-        # http://kulturarvsdata.se/raa/bbr/21300000023251
-        url_list = url.split("/")
-        url_list.insert(-1, "jsonld")
-        url = "/".join(url_list)
-        # Request data in json format
-        # http://kulturarvsdata.se/raa/bbr/jsonld/21300000023251
-        data = requests.get(url)
-        try:
-            data = data.json()
-        except ValueError:
-            # Got a jsondecodeerror once, on bbr: 21420000015942
-            # utils.get_bbr_link gives a None from it.
-            # If it occurs, skip the heritage statement,
-            # but the question is whether the item shouldn't be skipped...
-            self.add_to_report("kulturarv_url", url)
+        if self.online_data is None:
+            self.add_to_report("invalid_bbr_url", self.bbr_link)
             return
-        for element in data["@graph"]:
+        for element in self.online_data["@graph"]:
             if "ns5:spec" in element:
                 bbr_type = element["ns5:spec"]
                 if bbr_type.startswith("Kyrkligt kulturminne"):
-                    # Kyrkligt kulturminne. 4 kap. KML -- these don't seem to have dates
+                    # Kyrkligt kulturminne. 4 kap. KML -- these don't seem to
+                    # have dates
                     type_q = "Q24284073"
                 elif bbr_type.startswith("Byggnadsminne"):
                     # Byggnadsminne (BM) 3 kap. KML (1977-02-25)
                     type_q = "Q24284072"
                     protection_date = bbr_type.split("(")[-1][:-1]
                 elif bbr_type.startswith("Statligt byggnadsminne"):
-                    # Statligt byggnadsminne (SBM). Förordning (2013:558) (1935-01-25)
+                    # Statligt byggnadsminne (SBM). Förordning (2013:558)
+                    # (1935-01-25)
                     type_q = "Q24284071"
                     protection_date = bbr_type.split("(")[-1][:-1]
         # The original set_heritage() added an empty claim
@@ -108,9 +126,15 @@ class SeBbrSv(Monument):
                              {"time_value": date_dict}}
             except ValueError:
                 self.add_to_report("protection_type", bbr_type)
+        url = "http://kulturarvsdata.se/{}".format(self.kulturarv_id)
         kulturarv_source = self.create_kulturarv_source(url)
-        self.add_statement(
-            "heritage_status", type_q, qualifier, refs=[kulturarv_source])
+        if type_q:
+            self.add_statement(
+                "heritage_status", type_q, qualifier, refs=[kulturarv_source])
+        else:
+            self.add_to_report("heritage_status",
+                               self.kulturarv_id,
+                               "heritage_status")
 
     def create_kulturarv_source(self, url):
         """
@@ -157,7 +181,7 @@ class SeBbrSv(Monument):
                     data_string = "{} ({})".format(function, self.funktion)
                     # report both this particular function and the whole
                     # string containing it
-                    self.add_to_report("funktion", data_string)
+                    self.add_to_report("funktion", data_string, "use")
 
     def set_architect(self):
         """
@@ -232,6 +256,10 @@ class SeBbrSv(Monument):
             self.add_to_report("malformed_label", self.namn)
         self.add_alias("sv", fastighetsbeteckning)
 
+    def get_no_of_buildings(self):
+        return utils.get_number_from_string(
+            utils.get_text_inside_brackets(self.funktion))
+
     def set_no_of_buildings(self):
         """
         Set how many buildings the item consists of.
@@ -242,12 +270,11 @@ class SeBbrSv(Monument):
         and how many as qualifier.
         Some items don't have any numbers, so we ignore those.
         """
-        extracted_no = utils.get_number_from_string(
-            utils.get_text_inside_brackets(self.funktion))
-        if extracted_no:
+        buildings = self.get_no_of_buildings()
+        if buildings:
             self.add_statement(
                 "has_parts_of_class", "Q41176",
-                {"quantity": {"quantity_value": extracted_no}})
+                {"quantity": {"quantity_value": buildings}})
 
     def set_adm_location(self):
         """
@@ -274,7 +301,7 @@ class SeBbrSv(Monument):
             self.add_statement("located_adm", municipality)
         except IndexError:
             print("Could not parse municipality: {}.".format(self.kommun))
-            self.add_to_report("kommun", self.kommun)
+            self.add_to_report("kommun", self.kommun, "located_adm")
 
     def set_inception(self):
         """
@@ -302,11 +329,66 @@ class SeBbrSv(Monument):
         """Set language of Wikipedia to use to match articles."""
         return super().exists_with_monument_article("sv")
 
+    def get_wditems_bbr_links(self):
+        """
+        Get BBR links of associated WD item.
+
+        If the data object is associated
+        with a WD item, check if it has P1260
+        of the type raa/bbr(a) and get their
+        values.
+        """
+        result = []
+        associated_item = self.wd_item["wd-item"]
+        if associated_item:
+            heritage_links = utils.get_value_of_property(
+                associated_item, "P1260", self.repo)
+            for link in heritage_links:
+                if link.startswith("raa/bbr"):
+                    result.append(link)
+            return result
+
+    def check_wd_item(self):
+        """
+        Detect BBR conflict in associated WD item.
+
+        Get any P1260 of associated WD item.
+
+        If it's 1 BBR building link AND the compound consists of 1 building,
+        and the link is the same as the link to that building,
+        keep the item association.
+
+        If it's a BBR ID that's different
+        from the one in the data object,
+        remove the association. Data will be uploaded
+        to a newly created WD item instead.
+        """
+        bbr_url_on_wd = self.get_wditems_bbr_links()
+        parts_of_compound = self.get_has_parts()
+        if len(bbr_url_on_wd) == 1:
+            if bbr_url_on_wd[0] == self.bbr_link:
+                return
+            elif len(parts_of_compound) == 1:
+                if parts_of_compound[0] == bbr_url_on_wd[0]:
+                    return
+        elif len(bbr_url_on_wd) == 2:
+            if len(parts_of_compound) == 1:
+                if all(entry in bbr_url_on_wd
+                       for entry in [parts_of_compound[0], self.bbr_link]):
+                    return
+        elif len(bbr_url_on_wd) == 0:
+            return
+        self.wd_item["wd-item"] = None
+
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
-        Monument.__init__(self, db_row_dict, mapping, data_files, existing, repository)
+        Monument.__init__(self, db_row_dict, mapping,
+                          data_files, existing, repository)
         self.set_monuments_all_id()
         self.set_changed()
         self.wlm_source = self.create_wlm_source(self.monuments_all_id)
+        self.create_bbr_link()
+        self.set_bbr()
+        self.get_online_data()
         self.set_country()
         self.set_is()
         self.set_heritage()
@@ -319,10 +401,10 @@ class SeBbrSv(Monument):
         self.set_coords(("lat", "lon"))
         self.set_inception()
         self.set_no_of_buildings()
-        self.set_bbr()
         self.set_heritage_bbr()
         self.set_adm_location()
         self.set_architect()
         self.set_location()
         self.set_function()
         self.set_wd_item(self.find_matching_wikidata(mapping))
+        self.check_wd_item()
