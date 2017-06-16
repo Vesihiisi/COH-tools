@@ -376,6 +376,8 @@ class SeBbrSv(Monument):
                 if all(entry in bbr_url_on_wd
                        for entry in [parts_of_compound[0], self.bbr_link]):
                     return
+        elif len(bbr_url_on_wd) == 0:
+            return
         self.wd_item["wd-item"] = None
 
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
