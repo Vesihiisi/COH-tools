@@ -58,8 +58,17 @@ class EeEt(Monument):
 
     def set_location(self):
         location_raw = self.aadress  # very often not an address....
-        print(location_raw)
-        #  get stuff with https://www.wikidata.org/wiki/Property:P1140
+        wikilinks = utils.get_unique_wikilinks(location_raw)
+        if len(wikilinks) == 1:
+            glossary = self.data_files["settlements"]
+            target_name = wikilinks[0].title
+            target_item = [x["item"]
+                           for x in glossary
+                           if x["itemLabel"] == target_name]
+            try:
+                self.add_statement["location", target_item[0]]
+            except IndexError:
+                self.add_to_report("aadress", self.aadress, "location")
 
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
