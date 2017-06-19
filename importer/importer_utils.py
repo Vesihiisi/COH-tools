@@ -139,7 +139,7 @@ def get_wikilinks(text):
 
 
 def get_unique_wikilinks(text):
-    return set(get_wikilinks(text))
+    return list(set(get_wikilinks(text)))
 
 
 def count_wikilinks(text):
