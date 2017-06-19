@@ -105,7 +105,8 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                                              "settlements": "sweden_settlements.json"}},
                    "monuments_ee_(et)": {"class": EeEt,
                                          "data_files": {
-                                         "municipalities":"estonia_municipalities.json"},
+                                         "municipalities":"estonia_municipalities.json",
+                                         "settlements": "estonia_settlements.json"},
                                          "lookup_downloads":{"heritage_types":"ee (et)/types"}},
                    "monuments_se-fornmin_(sv)":
                    {"class": SeFornminSv,

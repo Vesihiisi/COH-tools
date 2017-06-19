@@ -139,7 +139,12 @@ def get_wikilinks(text):
 
 
 def get_unique_wikilinks(text):
-    return list(set(get_wikilinks(text)))
+    results = []
+    wikilinks = get_wikilinks(text)
+    for wikilink in wikilinks:
+        if wikilink not in results:
+            results.append(wikilink)
+    return results
 
 
 def count_wikilinks(text):

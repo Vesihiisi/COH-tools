@@ -221,11 +221,6 @@ class TestWikitext(unittest.TestCase):
         output = "Tegera Arena, huvudentrén"
         self.assertEqual(utils.remove_markup(text), output)
 
-    def test_get_unique_wikilinks(self):
-        text = "x [[foo]] and [[foo]] y"
-        output = ["[[foo]]"]
-        self.assertEqual(utils.get_unique_wikilinks(text), output)
-
     def test_count_wikilinks_none(self):
         text = "just text"
         self.assertEqual(utils.count_wikilinks(text), 0)
