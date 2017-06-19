@@ -266,7 +266,14 @@ class Monument(object):
         lon = coord_keywords_tuple[1]
         if self.has_non_empty_attribute(lat):
             if self.lat == 0 and self.lon == 0:
+                self.add_to_report("coordinates",
+                                   coord_keywords_tuple,
+                                   "coordinates")
                 return
+            elif self.lat is None or self.lon is None:
+                self.add_to_report("coordinates",
+                                   coord_keywords_tuple,
+                                   "coordinates")
             else:
                 latitude = getattr(self, lat)
                 longitude = getattr(self, lon)
