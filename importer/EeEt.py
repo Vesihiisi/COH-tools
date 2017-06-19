@@ -21,15 +21,20 @@ class EeEt(Monument):
         except IndexError:
             return
 
+    def set_monuments_all_id(self):
+        """Map which column name in specific table to  ID in monuments_all."""
+        self.monuments_all_id = str(self.number)
+
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
                           data_files, existing, repository)
+        self.set_changed()
+        self.set_monuments_all_id()
         self.update_labels()
-        # self.exists("et")
+        self.wlm_source = self.create_wlm_source(self.monuments_all_id)
         self.set_commonscat()
         self.set_image("pilt")
         self.set_coords(("lat", "lon"))
         self.set_no()
         self.set_adm_location()
-        # self.exists_with_prop(mapping)
-        self.print_wd()
+        self.set_wd_item(self.find_matching_wikidata(mapping))
