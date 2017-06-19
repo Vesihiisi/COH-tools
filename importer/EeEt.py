@@ -8,18 +8,43 @@ class EeEt(Monument):
         name = utils.remove_markup(self.nimi)
         self.add_label("et", name)
 
+    def update_heritage(self):
+        if self.has_non_empty_attribute("liik"):
+            special_heritage = self.liik.lower()
+            glossary = self.data_files["heritage_types"]["mappings"]
+            try:
+                heritage = [glossary[x]["items"]
+                            for x in glossary
+                            if x.lower() == special_heritage]
+                if len(heritage[0]) > 0:
+                    self.remove_statement("heritage_status")
+                    for typ in heritage[0]:
+                        self.add_statement("heritage_status", typ)
+            except IndexError:
+                return
+
     def set_no(self):
         register_no = str(self.registrant_url.split("=")[-1])
         self.add_statement("estonian_monument_id", register_no)
 
     def set_adm_location(self):
-        counties = self.data_files["counties"]
-        try:
-            county_item = [x["item"]
-                           for x in counties if x["et"] == self.maakond]
-            self.add_statement("located_adm", county_item[0])
-        except IndexError:
+        if self.maakond.lower() == "territoriaalmeri":
+            # territorial waters - stuff like shipwrecks
             return
+        try:
+            municip = self.omavalitsus
+            glossary = self.data_files["municipalities"]
+            municip_item = [x["item"]
+                            for x in glossary
+                            if x["itemLabel"] == municip]
+            if len(municip_item) == 0 and "vald" not in municip:
+                municip = municip + " vald"
+                municip_item = [x["item"]
+                                for x in glossary
+                                if x["itemLabel"] == municip]
+            self.add_statement("located_adm", municip_item[0])
+        except IndexError:
+            self.add_to_report("omavalitsus", self.omavalitsus, "located_adm")
 
     def set_monuments_all_id(self):
         """Map which column name in specific table to  ID in monuments_all."""
@@ -37,4 +62,6 @@ class EeEt(Monument):
         self.set_coords(("lat", "lon"))
         self.set_no()
         self.set_adm_location()
+        self.set_heritage()
+        self.update_heritage()
         self.set_wd_item(self.find_matching_wikidata(mapping))
