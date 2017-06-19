@@ -21,8 +21,9 @@ class EeEt(Monument):
         except IndexError:
             return
 
-    def __init__(self, db_row_dict, mapping, data_files, existing):
-        Monument.__init__(self, db_row_dict, mapping, data_files, existing)
+    def __init__(self, db_row_dict, mapping, data_files, existing, repository):
+        Monument.__init__(self, db_row_dict, mapping,
+                          data_files, existing, repository)
         self.update_labels()
         # self.exists("et")
         self.set_commonscat()
