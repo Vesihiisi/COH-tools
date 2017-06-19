@@ -8,6 +8,12 @@ class EeEt(Monument):
         name = utils.remove_markup(self.nimi)
         self.add_label("et", name)
 
+    def set_descriptions(self):
+        bases = {
+            "en" : "cultural property in {}, Estonia",
+            "sv" : "kulturarv i {}, Estland"
+        }
+
     def update_heritage(self):
         if self.has_non_empty_attribute("liik"):
             special_heritage = self.liik.lower()
@@ -50,12 +56,18 @@ class EeEt(Monument):
         """Map which column name in specific table to  ID in monuments_all."""
         self.monuments_all_id = str(self.number)
 
+    def set_location(self):
+        location_raw = self.aadress  # very often not an address....
+        print(location_raw)
+        #  get stuff with https://www.wikidata.org/wiki/Property:P1140
+
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
                           data_files, existing, repository)
         self.set_changed()
         self.set_monuments_all_id()
         self.update_labels()
+        self.set_descriptions()
         self.wlm_source = self.create_wlm_source(self.monuments_all_id)
         self.set_commonscat()
         self.set_image("pilt")
@@ -64,4 +76,6 @@ class EeEt(Monument):
         self.set_adm_location()
         self.set_heritage()
         self.update_heritage()
+        self.set_is()
+        self.set_location()
         self.set_wd_item(self.find_matching_wikidata(mapping))
