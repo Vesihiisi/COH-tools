@@ -5,12 +5,14 @@ import importer_utils as utils
 class EeEt(Monument):
 
     def update_labels(self):
+        """Add label in Estonian."""
         name = utils.remove_markup(self.nimi)
         self.add_label("et", name)
 
     def set_descriptions(self):
+        """Add descriptions in Swedish and English."""
         short_d = {"en": "cultural property in Estonia",
-                   "sv": "kulturarv i Estonia"}
+                   "sv": "kulturarv i Estland"}
         long_d = {
             "en": "cultural property in {}, Estonia",
             "sv": "kulturarv i {}, Estland"
@@ -25,6 +27,16 @@ class EeEt(Monument):
                 self.add_description(language, short_d[language])
 
     def update_heritage(self):
+        """
+        Substitute default heritage property with specific one.
+
+        Cultural properties can have one or more specific
+        types: https://et.wikipedia.org/wiki/Kultuurim%C3%A4lestis
+
+        Use the mapping table:
+        https://www.wikidata.org/wiki/Wikidata:WikiProject_WLM/Mapping_tables/ee_(et)/types
+        to substitute the generic type, if applicable.
+        """
         if self.has_non_empty_attribute("liik"):
             special_heritage = self.liik.lower()
             glossary = self.data_files["heritage_types"]["mappings"]
@@ -40,10 +52,18 @@ class EeEt(Monument):
                 return
 
     def set_no(self):
+        """Set Estonian cultural monument ID (P2948)."""
         register_no = str(self.registrant_url.split("=")[-1])
         self.add_statement("estonian_monument_id", register_no)
 
     def set_adm_location(self):
+        """
+        Set the administrative location.
+
+        Match the omavalitsus to item in offline list;
+        try both with and without "vald" as not all
+        labels have it.
+        """
         if self.maakond.lower() == "territoriaalmeri":
             # territorial waters - stuff like shipwrecks
             return
@@ -67,6 +87,25 @@ class EeEt(Monument):
         self.monuments_all_id = str(self.number)
 
     def set_location(self):
+        """
+        Set the location property, P276, based on aadress.
+
+        Despite its name, aadress does not always contain
+        address-like data. That's why we don't use it for
+        anything if it contains only text.
+        It's only used if it contains 1 unique wikilink;
+        sometimes it contains multiple instances of the same
+        wikilink e.g.
+            [[Võsivere|Võsivere küla]], Janise,
+            [[Võsivere|Võsivere küla]], Mossi,
+            [[Võsivere|Võsivere küla]], Rätsepa, [[Võsivere|Võsivere küla]], Tilmani,
+            [[Võsivere|Võsivere küla]], Viskaja(5)
+        As the content of one field. This will be counted as 1 wikilink.
+
+        The WD item associated with the wikilink
+        is then matched with a list of Estonian settlements,
+        and if there's a match, it's added as 'location'.
+        """
         location_raw = self.aadress  # very often not an address....
         wikilinks = utils.get_unique_wikilinks(location_raw)
         if len(wikilinks) == 1:
