@@ -15,12 +15,24 @@ class CzCs(Monument):
     def set_monuments_all_id(self):
         self.monuments_all_id = self.id_objektu
 
+    def set_heritage(self):
+        start_raw = self.monument_since
+        try:
+            start = start_raw.split("-")
+            start_date = {"time_value": {"year": int(
+                start[0]), "month": int(start[1]), "day": int(start[2])}}
+            heritage = self.mapping["heritage"]
+            self.add_statement("heritage_status", heritage[
+                               "item"], {"start_time": start_date})
+        except ValueError:
+            self.add_to_report("heritage_start_date", self.monument_since)
+
     def set_admin_location(self):
         if self.has_non_empty_attribute("municipality"):
             municip_dict = self.data_files["municipalities"]
             municip = self.municipality
             try:
-                municip_match = [x for x in municip_dict
+                municip_match = [x["item"] for x in municip_dict
                                  if x["cs"].lower() == municip.lower()][0]
                 self.add_statement("located_adm", municip_match)
             except IndexError:
