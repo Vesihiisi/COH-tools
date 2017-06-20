@@ -8,28 +8,22 @@ class CzCs(Monument):
         name = utils.remove_markup(self.name)
         self.add_label("cs", name)
 
-    def set_adm_location(self):
-        """
-        Set the administrative location.
-
-        TODO
-        Download all
-        """
-        print(self.municipality)
-
     def set_no(self):
         code = str(self.id_objektu)
         self.add_statement("czech_monument_id", code)
 
-    def __init__(self, db_row_dict, mapping, data_files, existing):
-        Monument.__init__(self, db_row_dict, mapping, data_files, existing)
+    def set_monuments_all_id(self):
+        self.monuments_all_id = self.id_objektu
+
+    def __init__(self, db_row_dict, mapping, data_files, existing, repository):
+        Monument.__init__(self, db_row_dict, mapping,
+                          data_files, existing, repository)
+        self.set_monuments_all_id()
+        self.set_changed()
+        self.wlm_source = self.create_wlm_source(self.monuments_all_id)
         self.update_labels()
-        # self.exists("sq")
         self.set_commonscat()
         self.set_image("image")
         self.set_coords(("lat", "lon"))
-        self.set_adm_location()
         self.set_no()
-        # self.set_location()
-        self.exists_with_prop(mapping)
-        # self.print_wd()
+        self.set_country()

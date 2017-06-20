@@ -10,10 +10,11 @@
         "name": ""
     },
     "heritage": {
-        "comment": "look at national monument of the Czech Republic and cultural monument of the Czech Republic!",
+        "comment": "",
         "item": "",
         "name": ""
     },
+    "table_name": "cz",
     "language": "cs",
     "unique": {
         "comment": "Czech cultural heritage ID",
