@@ -80,7 +80,7 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                                               "data_files":
                                               {"functions":
                                                "se-ship_(sv)_functions.json"}},
-                   "monuments_cz_(cs)": {"class": CzCs, "data_files": {}},
+                   "monuments_cz_(cs)": {"class": CzCs, "data_files": {"municipalities":"czech_republic_municipalities.json"}},
                    "monuments_hu_(hu)": {"class": HuHu, "data_files": {}},
                    "monuments_pt_(pt)": {"class": PtPt, "data_files": {}},
                    "monuments_ro_(ro)": {"class": RoRo, "data_files": {}},

@@ -15,6 +15,18 @@ class CzCs(Monument):
     def set_monuments_all_id(self):
         self.monuments_all_id = self.id_objektu
 
+    def set_admin_location(self):
+        if self.has_non_empty_attribute("municipality"):
+            municip_dict = self.data_files["municipalities"]
+            municip = self.municipality
+            try:
+                municip_match = [x for x in municip_dict
+                                 if x["cs"].lower() == municip.lower()][0]
+                self.add_statement("located_adm", municip_match)
+            except IndexError:
+                self.add_to_report(
+                    "municipality", self.municipality, "located_adm")
+
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
                           data_files, existing, repository)
@@ -27,3 +39,5 @@ class CzCs(Monument):
         self.set_coords(("lat", "lon"))
         self.set_no()
         self.set_country()
+        self.set_heritage()
+        self.set_admin_location()
