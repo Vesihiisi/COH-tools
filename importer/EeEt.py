@@ -9,10 +9,20 @@ class EeEt(Monument):
         self.add_label("et", name)
 
     def set_descriptions(self):
-        bases = {
-            "en" : "cultural property in {}, Estonia",
-            "sv" : "kulturarv i {}, Estland"
+        short_d = {"en": "cultural property in Estonia",
+                   "sv": "kulturarv i Estonia"}
+        long_d = {
+            "en": "cultural property in {}, Estonia",
+            "sv": "kulturarv i {}, Estland"
         }
+        if self.has_non_empty_attribute("omavalitsus"):
+            municip = self.omavalitsus
+            for language in long_d:
+                self.add_description(
+                    language, long_d[language].format(municip))
+        else:
+            for language in short_d:
+                self.add_description(language, short_d[language])
 
     def update_heritage(self):
         if self.has_non_empty_attribute("liik"):
@@ -66,7 +76,7 @@ class EeEt(Monument):
                            for x in glossary
                            if x["itemLabel"] == target_name]
             try:
-                self.add_statement["location", target_item[0]]
+                self.add_statement("location", target_item[0])
             except IndexError:
                 self.add_to_report("aadress", self.aadress, "location")
 
@@ -82,6 +92,7 @@ class EeEt(Monument):
         self.set_image("pilt")
         self.set_coords(("lat", "lon"))
         self.set_no()
+        self.set_country()
         self.set_adm_location()
         self.set_heritage()
         self.update_heritage()
