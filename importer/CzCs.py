@@ -8,6 +8,21 @@ class CzCs(Monument):
         name = utils.remove_markup(self.name)
         self.add_label("cs", name)
 
+    def update_descriptions(self):
+        bases_long = {
+            "en": "cultural property in {}, Czech Republic",
+            "sv": "kulturarv i {}, Tjeckien"}
+        bases_short = {
+            "en": "cultural property in the Czech Republic",
+            "sv": "kulturarv i Tjeckien"}
+        if self.has_non_empty_attribute("municipality"):
+            for language in bases_long:
+                self.add_description(language, bases_long[
+                                     language].format(self.municipality))
+        else:
+            for language in bases_short:
+                self.add_description(language, bases_short[language])
+
     def set_no(self):
         code = str(self.id_objektu)
         self.add_statement("czech_monument_id", code)
