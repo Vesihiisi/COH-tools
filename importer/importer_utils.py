@@ -2,6 +2,7 @@
 # -*- coding: utf-8  -*-
 import json
 import re
+import os
 import mwparserfromhell as wparser
 import string
 import pywikibot
@@ -32,6 +33,22 @@ def json_to_file(filename, json_content):
                   ensure_ascii=False,
                   default=datetime_convert)
         print("SAVED FILE " + filename)
+
+
+def create_dir(out_path):
+    """
+    Create a directory if it doesn't exist.
+
+    @param out_path: directory to create
+    """
+    if not out_path:
+        raise ValueError('Cannot a create directory without a name.')
+    if not os.path.exists(out_path):
+        os.mkdir(out_path)
+    elif os.path.isfile(out_path):
+        raise ValueError(
+            'Cannot create the directory "{}" as a file with that name '
+            'already exists.'.format(out_path))
 
 
 def get_specific_table_name(countryname, languagename):
