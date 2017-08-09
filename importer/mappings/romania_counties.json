@@ -35,6 +35,11 @@
     "itemLabel": "Bihor County"
   },
   {
+    "iso_code": "RO-B",
+    "item": "Q19660",
+    "itemLabel": "Bucharest"
+  },
+  {
     "iso_code": "RO-BC",
     "item": "Q179779",
     "itemLabel": "Bacău County"
