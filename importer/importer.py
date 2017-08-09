@@ -26,6 +26,7 @@ import importer_utils as utils
 
 DEFAULT_SHORT = 10
 MAPPING_DIR = "mappings"
+REPORTING_DIR = "reports"
 MONUMENTS_ALL = "monuments_all"
 
 
@@ -172,7 +173,9 @@ def get_subclasses(q_item):
 
 def save_reports(problem_reports, tablename, timestamp):
     """Save the problem reports of the batch to a file."""
-    filename = "report_{}_{}.json".format(tablename, timestamp)
+    utils.create_dir(REPORTING_DIR)
+    filename = path.join(
+        REPORTING_DIR, "report_{}_{}.json".format(tablename, timestamp))
     utils.json_to_file(filename, problem_reports)
 
 
