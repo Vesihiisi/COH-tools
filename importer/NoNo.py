@@ -39,7 +39,7 @@ class NoNo(Monument):
             name = name.title()
         self.add_label("nb", name)
 
-    def set_no(self):
+    def set_heritage_id(self):
         """Add the Norwegian monument ID P758."""
         self.add_statement("norwegian_monument_id", str(self.id))
 
@@ -51,16 +51,14 @@ class NoNo(Monument):
         """Set the adm location based on kommunenummer and offline file."""
         all_codes = self.data_files["municipalities"]
         if self.has_non_empty_attribute("kommunenr"):
-            municip_code = str(self.kommunenr)
-            if len(municip_code) == 3:
-                municip_code = "0" + municip_code
+            municip_code = str(self.kommunenr).zfill(4)
             match = [x["item"]
                      for x in all_codes if x["municipNumber"] == municip_code]
-            if len(match) == 0:
+            if len(match) == 1:
+                self.add_statement("located_adm", match[0])
+            else:
                 self.add_to_report("kommunenr",
                                    municip_code, "located_adm")
-            else:
-                self.add_statement("located_adm", match[0])
 
     def set_special_type(self):
         """
@@ -71,9 +69,10 @@ class NoNo(Monument):
         glossary = self.data_files["categories"]["mappings"]
         category = self.kategori.lower()
         try:
-            special_type = [glossary[x]["items"]
-                            for x in glossary
-                            if x.lower() == category][0][0]
+            type_lookup = [glossary[x]["items"]
+                           for x in glossary
+                           if x.lower() == category]
+            special_type = type_lookup[0][0]
             self.substitute_statement("is", special_type)
         except IndexError:
             self.add_to_report("kategori", self.kategori, "is")
@@ -97,6 +96,7 @@ class NoNo(Monument):
         self.set_image("bilde")
         self.set_commonscat()
         self.set_coords(("lat", "lon"))
-        self.set_no()
+        self.set_heritage()
+        self.set_heritage_id()
         self.set_adm_location()
         self.set_wd_item(self.find_matching_wikidata(mapping))
