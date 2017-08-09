@@ -6,8 +6,7 @@ class EeEt(Monument):
 
     def update_labels(self):
         """Add label in Estonian."""
-        name = utils.remove_markup(self.nimi)
-        self.add_label("et", name)
+        self.set_labels("et", self.nimi)
 
     def set_descriptions(self):
         """Add descriptions in Swedish and English."""
