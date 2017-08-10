@@ -1,5 +1,6 @@
 from CmFr import CmFr
 from CzCs import CzCs
+from AtDe import AtDe
 from DkBygningDa import DkBygningDa
 from DkFortidsDa import DkFortidsDa
 from EeEt import EeEt
@@ -86,9 +87,14 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                    "monuments_pt_(pt)": {"class": PtPt, "data_files": {}},
                    "monuments_ro_(ro)": {"class": RoRo, "data_files": {}},
                    "monuments_xk_(sq)": {"class": XkSq, "data_files": {}},
-                   "monuments_ie_(en)": {"class": IeEn, "data_files": {"counties": "ireland_counties.json"}},
+                   "monuments_ie_(en)": {"class": IeEn, "data_files":{"counties": "ireland_counties.json"}},
                    "monuments_za_(en)": {"class": ZaEn, "data_files": {}},
                    "monuments_cm_(fr)": {"class": CmFr, "data_files": {}},
+                   "monuments_at_(de)": {"class": AtDe, "data_files": {"municipalities":
+                                                                       "austria_municipalities.json"},
+                                                                       "lookup_downloads": {
+                                                                       "types": "at_(de)/types"},
+                                                                       },
                    "monuments_dk-bygninger_(da)": {"class": DkBygningDa,
                                                    "data_files": {},
                                                    "subclass_downloads": {"settlement": "Q486972"}},
@@ -103,7 +109,7 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                                          "data_files": {}},
                    "monuments_se-bbr_(sv)": {"class": SeBbrSv,
                                              "data_files": {"functions": "se-bbr_(sv)_functions.json",
-                                             "settlements": "sweden_settlements.json"}},
+                                                            "settlements": "sweden_settlements.json"}},
                    "monuments_ee_(et)": {"class": EeEt,
                                          "data_files": {"counties": "estonia_counties.json"}},
                    "monuments_se-fornmin_(sv)":
@@ -259,7 +265,8 @@ def get_items(connection,
     problem_reports = []
     wikidata_site = utils.create_site_instance("wikidata", "wikidata")
     for row in database_rows:
-        monument = class_to_use(row, mapping, data_files, existing, wikidata_site)
+        monument = class_to_use(row, mapping, data_files,
+                                existing, wikidata_site)
         problem_report = monument.get_report()
         if table:
             raw_data = "<pre>" + str(row) + "</pre>\n"
