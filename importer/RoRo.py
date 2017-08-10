@@ -43,3 +43,4 @@ class RoRo(Monument):
         self.set_commonscat()
         self.set_image("imagine")
         self.set_adm_location()
+        self.set_wd_item(self.find_matching_wikidata(mapping))
