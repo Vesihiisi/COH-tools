@@ -71,7 +71,7 @@ class AtDe(Monument):
             type_german = type_match.title()
         if municipality_name:
             place_german = municipality_name
-        desc_german = base_desc_german_english.format(
+        desc_german = base_desc_german.format(
             type_german, place_german)
 
         self.add_description("de", desc_german)
