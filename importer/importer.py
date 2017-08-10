@@ -90,8 +90,10 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                    "monuments_za_(en)": {"class": ZaEn, "data_files": {}},
                    "monuments_cm_(fr)": {"class": CmFr, "data_files": {}},
                    "monuments_at_(de)": {"class": AtDe, "data_files": {"municipalities":
-                                                                       "austria_municipalities.json",
-                                                                       "types": "at_(de)_types.json"}},
+                                                                       "austria_municipalities.json"},
+                                                                       "lookup_downloads": {
+                                                                       "types": "at_(de)/types"},
+                                                                       },
                    "monuments_dk-bygninger_(da)": {"class": DkBygningDa,
                                                    "data_files": {},
                                                    "subclass_downloads": {"settlement": "Q486972"}},
