@@ -236,6 +236,11 @@ class TestDatetimeMethods(unittest.TestCase):
         output = "1999-10"
         self.assertEqual(utils.dict_to_iso_date(date_dict), output)
 
+    def test_parse_date_spanish(self):
+        date_text = "6 de diciembre de 1995"
+        output = "06-12-1995"
+        self.assertEqual(utils.parse_date_spanish(date_text), output)
+
 
 class TestWikitext(unittest.TestCase):
 

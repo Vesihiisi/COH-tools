@@ -463,6 +463,19 @@ def is_valid_url(url):
         return False
 
 
+def parse_date_spanish(datestring):
+    months = ["enero",
+              "febrero", "marzo", "abril",
+              "mayo", "junio", "julio",
+              "agosto", "septiembre", "octubre",
+              "noviembre", "diciembre"]
+    date_parts = datestring.split(" ")
+    day = date_parts[0].zfill(2)
+    month = str(months.index(date_parts[2]) + 1)
+    year = date_parts[4]
+    return "-".join([day, month, year])
+
+
 def datetime_object_to_dict(datetime_object):
     date_dict = {}
     date_dict["year"] = datetime_object.year
