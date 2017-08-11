@@ -6,14 +6,15 @@
     "country_code": "cz",
     "default_is": {
         "comment": "",
-        "item": "",
-        "name": ""
+        "item": "Q2065736",
+        "name": "cultural property"
     },
     "heritage": {
-        "comment": "look at national monument of the Czech Republic and cultural monument of the Czech Republic!",
-        "item": "",
+        "comment": "cultural monument of the Czech Republic",
+        "item": "Q385405",
         "name": ""
     },
+    "table_name": "cz",
     "language": "cs",
     "unique": {
         "comment": "Czech cultural heritage ID",
