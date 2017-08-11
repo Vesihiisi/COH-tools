@@ -4,6 +4,16 @@ import importer_utils as utils
 
 class ClEs(Monument):
 
+    def update_labels(self):
+        self.add_label("es", utils.get_rid_of_brackets(self.monumento))
+
+    def update_descriptions(self):
+        descs = {
+            "es": "Monumento Nacional de Chile",
+            "en": "national monument of Chile"}
+        for lang in descs:
+            self.add_description(lang, descs[lang])
+
     def update_heritage(self):
         heritages = {"MH": "Q35863415", "ZT": "Q6171610"}
         if self.tipo in heritages.keys():
@@ -41,7 +51,6 @@ class ClEs(Monument):
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
                           data_files, existing, repository)
-        print(self.tipo)
         if self.tipo == "SN":
             print("Discarding natural area {}.".format(self.monumento))
             self.upload = False
@@ -51,10 +60,12 @@ class ClEs(Monument):
         self.wlm_source = self.create_wlm_source(self.monuments_all_id)
         self.set_heritage()
         self.update_heritage()
+        self.update_labels()
+        self.update_descriptions()
         self.set_country()
         self.set_source()
         self.set_coords(("lat", "lon"))
         self.set_commonscat()
         self.set_image("imagen")
         self.set_adm_location()
-        # self.print_wd()
+        self.print_wd()
