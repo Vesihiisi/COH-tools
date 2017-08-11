@@ -7,6 +7,7 @@ from EeEt import EeEt
 from HuHu import HuHu
 from IeEn import IeEn
 from NoNo import NoNo
+from NlGemNl import NlGemNl
 from PlPl import PlPl
 from PtPt import PtPt
 from RoRo import RoRo
@@ -83,6 +84,7 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                                               {"functions":
                                                "se-ship_(sv)_functions.json"}},
                    "monuments_cz_(cs)": {"class": CzCs, "data_files": {}},
+                   "monuments_nl-gem_(nl)": {"class": NlGemNl, "data_files": {}},
                    "monuments_hu_(hu)": {"class": HuHu, "data_files": {}},
                    "monuments_pt_(pt)": {"class": PtPt, "data_files": {}},
                    "monuments_ro_(ro)": {"class": RoRo, "data_files": {}},

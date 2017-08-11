@@ -1,0 +1,21 @@
+{
+    "country": {
+        "item": "Q55",
+        "name": "Netherlands"
+    },
+    "country_code": "nl",
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "Q2650048",
+        "name": "municipal monument in the netherlands"
+    },
+    "language": "nl",
+    "table_name": "nl-gem",
+    "unique": {
+        "comment": "WLM id???",
+        "property": "P2186"
+    }
+}
