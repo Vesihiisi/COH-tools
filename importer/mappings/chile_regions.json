@@ -1,0 +1,77 @@
+[
+  {
+    "iso_code": "CL-AP",
+    "item": "Q2109",
+    "itemLabel": "Arica y Parinacota Region"
+  },
+  {
+    "iso_code": "CL-TA",
+    "item": "Q2114",
+    "itemLabel": "Tarapacá Region"
+  },
+  {
+    "iso_code": "CL-AN",
+    "item": "Q2118",
+    "itemLabel": "Antofagasta Region"
+  },
+  {
+    "iso_code": "CL-AT",
+    "item": "Q2120",
+    "itemLabel": "Atacama Region"
+  },
+  {
+    "iso_code": "CL-CO",
+    "item": "Q2121",
+    "itemLabel": "Coquimbo Region"
+  },
+  {
+    "iso_code": "CL-RM",
+    "item": "Q2131",
+    "itemLabel": "Santiago Metropolitan Region"
+  },
+  {
+    "iso_code": "CL-LI",
+    "item": "Q2133",
+    "itemLabel": "Libertador General Bernardo O'Higgins Region"
+  },
+  {
+    "iso_code": "CL-ML",
+    "item": "Q2166",
+    "itemLabel": "Maule Region"
+  },
+  {
+    "iso_code": "CL-BI",
+    "item": "Q2170",
+    "itemLabel": "Central Region"
+  },
+  {
+    "iso_code": "CL-AR",
+    "item": "Q2176",
+    "itemLabel": "Araucanía Region"
+  },
+  {
+    "iso_code": "CL-LR",
+    "item": "Q2177",
+    "itemLabel": "Los Ríos Region"
+  },
+  {
+    "iso_code": "CL-LL",
+    "item": "Q2178",
+    "itemLabel": "Los Lagos Region"
+  },
+  {
+    "iso_code": "CL-AI",
+    "item": "Q2181",
+    "itemLabel": "Aysén Region"
+  },
+  {
+    "iso_code": "CL-MA",
+    "item": "Q2189",
+    "itemLabel": "Magallanes y la Antártica Chilena Region"
+  },
+  {
+    "iso_code": "CL-VS",
+    "item": "Q219458",
+    "itemLabel": "Valparaíso Region"
+  }
+]
