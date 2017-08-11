@@ -1,5 +1,6 @@
 from CmFr import CmFr
 from CzCs import CzCs
+from ClEs import ClEs
 from AtDe import AtDe
 from DkBygningDa import DkBygningDa
 from DkFortidsDa import DkFortidsDa
@@ -82,6 +83,7 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                                               "data_files":
                                               {"functions":
                                                "se-ship_(sv)_functions.json"}},
+                   "monuments_cl_(es)": {"class": ClEs, "data_files": {}},
                    "monuments_cz_(cs)": {"class": CzCs, "data_files": {}},
                    "monuments_hu_(hu)": {"class": HuHu, "data_files": {}},
                    "monuments_pt_(pt)": {"class": PtPt, "data_files": {}},

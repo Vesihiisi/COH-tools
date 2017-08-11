@@ -1,0 +1,21 @@
+{
+    "country": {
+        "item": "Q298",
+        "name": "Chile"
+    },
+    "country_code": "cl",
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "",
+        "name": ""
+    },
+    "language": "es",
+    "table_name": "cl",
+    "unique": {
+        "comment": "",
+        "property": ""
+    }
+}
