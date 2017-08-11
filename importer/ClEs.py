@@ -4,6 +4,16 @@ import importer_utils as utils
 
 class ClEs(Monument):
 
+    def update_heritage(self):
+        heritages = {"MH": "Q35863415", "ZT": "Q6171610"}
+        if self.tipo in heritages.keys():
+            self.remove_statement("heritage_status")
+            protection_date = utils.parse_date_spanish(self.fecha)
+            date_dict = utils.date_to_dict(protection_date, "%d-%m-%Y")
+            start_time = {"start_time": {"time_value": date_dict}}
+            self.add_statement("heritage_status",
+                               heritages[self.tipo], start_time)
+
     def set_monuments_all_id(self):
         """Map which column name in specific table to  ID in monuments_all."""
         self.monuments_all_id = str(self.id)
@@ -31,10 +41,16 @@ class ClEs(Monument):
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
                           data_files, existing, repository)
+        print(self.tipo)
+        if self.tipo == "SN":
+            print("Discarding natural area {}.".format(self.monumento))
+            self.upload = False
+            return
         self.set_monuments_all_id()
         self.set_changed()
         self.wlm_source = self.create_wlm_source(self.monuments_all_id)
         self.set_heritage()
+        self.update_heritage()
         self.set_country()
         self.set_source()
         self.set_coords(("lat", "lon"))
