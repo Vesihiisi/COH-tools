@@ -48,11 +48,22 @@ class ClEs(Monument):
         else:
             self.add_to_report("comuna", self.comuna, "located_adm")
 
+    def exists_with_monument_article(self, language):
+        return super().exists_with_monument_article("es", "monumento_enlace")
+
+    def set_parts(self):
+        if self.has_non_empty_attribute("enlace"):
+            parts_raw = self.enlace
+            parts_links = utils.get_wikilinks(parts_raw)
+            for link in parts_links:
+                part_q = utils.q_from_wikipedia("es", link.title)
+                if part_q:
+                    self.add_statement("has_part", part_q)
+
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
                           data_files, existing, repository)
         if self.tipo == "SN":
-            print("Discarding natural area {}.".format(self.monumento))
             self.upload = False
             return
         self.set_monuments_all_id()
@@ -68,4 +79,9 @@ class ClEs(Monument):
         self.set_commonscat()
         self.set_image("imagen")
         self.set_adm_location()
-        self.print_wd()
+        self.set_parts()
+        # The following is commented out because
+        # we're still waiting for the ID property:
+        # https://www.wikidata.org/wiki/Wikidata:Property_proposal/Chilean_National_Monuments_ID
+        # Once it's done it'll be added to the mapping file
+        # self.set_wd_item(self.find_matching_wikidata(mapping))
