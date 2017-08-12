@@ -88,3 +88,4 @@ class NlGemNl(Monument):
         self.set_architect()
         self.set_inception()
         self.set_address()
+        self.set_wd_item(self.find_matching_wikidata(mapping))
