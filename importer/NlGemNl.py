@@ -60,13 +60,15 @@ class NlGemNl(Monument):
             "en": "municipal monument in {}"
         }
         placenames = {
-        "en": "the Netherlands", "nl":"Nederland", "fy":"Nederlân"
+            "en": "the Netherlands",
+            "nl": "Nederland",
+            "fy": "Nederlân"
         }
         for lang in desc_dict:
             try:
                 placename = [x[lang] for x
-                                   in self.data_files["municipalities"]
-                                   if x["value"] == self.gemcode][0]
+                             in self.data_files["municipalities"]
+                             if x["value"] == self.gemcode][0]
             except (KeyError, IndexError):
                 placename = placenames[lang]
             self.add_description(lang, desc_dict[lang].format(placename))
