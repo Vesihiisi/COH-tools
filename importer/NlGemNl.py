@@ -5,6 +5,11 @@ import importer_utils as utils
 class NlGemNl(Monument):
 
     def set_adm_location(self):
+        """
+        Set administrative location.
+
+        Use the Municipality ID to resolve to wd item.
+        """
         municipal_match = [
             x["item"] for x in self.data_files["municipalities"]
             if x["value"] == self.gemcode]
@@ -18,6 +23,13 @@ class NlGemNl(Monument):
         self.monuments_all_id = "{}/{}".format(self.gemcode, self.objnr)
 
     def set_architect(self):
+        """
+        Set architect.
+
+        Only if it's wikilinked. There's a lot of free text
+        ones which cannot be matched to anything as they don't
+        have nlwp articles, only have initials not full names etc.
+        """
         if self.has_non_empty_attribute("architect"):
             if utils.count_wikilinks(self.architect) > 0:
                 wikilinks = utils.get_wikilinks(self.architect)
@@ -27,6 +39,11 @@ class NlGemNl(Monument):
                         self.add_statement("architect", arch_q)
 
     def set_inception(self):
+        """
+        Set building date.
+
+        Only if it's a single, full year, i.e. no "ca." or ranges.
+        """
         if (self.has_non_empty_attribute("bouwjaar") and
            utils.legit_year(self.bouwjaar)):
             self.add_statement(
@@ -47,9 +64,25 @@ class NlGemNl(Monument):
             self.add_statement("located_street", street_address)
 
     def set_heritage_id(self):
+        """
+        Set the WLM ID.
+
+        The ID's used in the lists are made up, since
+        there's no general register of municipal monuments
+        (each municipality does their own).
+        """
         self.add_statement("wlm_id", self.monuments_all_id)
 
     def update_labels(self):
+        """
+        Set labels in Dutch.
+
+        In most cases, we use the (de-markuped if needed)
+        object field. There's a fair number of momuments
+        without this field filled out, but those always
+        have the street address, so that one is used
+        as a label instead.
+        """
         if self.object == "":
             label_material = self.adres
         else:
@@ -58,6 +91,12 @@ class NlGemNl(Monument):
                        utils.remove_markup(label_material))
 
     def update_descriptions(self):
+        """
+        Set descriptions in several languages.
+
+        Attempt to use correct placenames
+        in Dutch/Frisian.
+        """
         desc_dict = {
             "nl": "gemeentelijk monument in {}",
             "fy": "gemeentlik monumint yn {}",
