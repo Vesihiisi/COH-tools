@@ -1,2012 +1,2624 @@
 [
   {
-    "item": "Q9807",
-    "itemLabel": "'s-Hertogenbosch",
-    "value": "0796"
-  },
-  {
-    "item": "Q300665",
-    "itemLabel": "Aa en Hunze",
-    "value": "1680"
-  },
-  {
-    "item": "Q9808",
-    "itemLabel": "Aalburg",
-    "value": "0738"
-  },
-  {
-    "item": "Q9897",
-    "itemLabel": "Aalsmeer",
-    "value": "0358"
-  },
-  {
-    "item": "Q275909",
-    "itemLabel": "Aalten",
-    "value": "0197"
-  },
-  {
-    "item": "Q341024",
-    "itemLabel": "Achtkarspelen",
-    "value": "0059"
-  },
-  {
-    "item": "Q736131",
-    "itemLabel": "Alblasserdam",
-    "value": "0482"
-  },
-  {
-    "item": "Q934525",
-    "itemLabel": "Albrandswaard",
-    "value": "0613"
-  },
-  {
-    "item": "Q972",
-    "itemLabel": "Alkmaar",
-    "value": "0361"
-  },
-  {
-    "item": "Q988",
-    "itemLabel": "Almelo",
-    "value": "0141"
-  },
-  {
-    "item": "Q83178",
-    "itemLabel": "Almere",
-    "value": "0034"
-  },
-  {
-    "item": "Q213246",
-    "itemLabel": "Alphen aan den Rijn",
-    "value": "0484"
-  },
-  {
-    "item": "Q9809",
-    "itemLabel": "Alphen-Chaam",
-    "value": "1723"
-  },
-  {
-    "item": "Q208259",
-    "itemLabel": "Ameland",
-    "value": "0060"
-  },
-  {
-    "item": "Q992",
-    "itemLabel": "Amersfoort",
-    "value": "0307"
-  },
-  {
-    "item": "Q9898",
-    "itemLabel": "Amstelveen",
-    "value": "0362"
-  },
-  {
-    "item": "Q9899",
-    "itemLabel": "Amsterdam",
-    "value": "0363"
-  },
-  {
-    "item": "Q101918",
-    "itemLabel": "Apeldoorn",
-    "value": "0200"
-  },
-  {
-    "item": "Q995",
-    "itemLabel": "Appingedam",
-    "value": "0003"
-  },
-  {
-    "item": "Q1310",
-    "itemLabel": "Arnhem",
-    "value": "0202"
-  },
-  {
-    "item": "Q798",
-    "itemLabel": "Assen",
-    "value": "0106"
-  },
-  {
-    "item": "Q9810",
-    "itemLabel": "Asten",
-    "value": "0743"
-  },
-  {
-    "item": "Q9811",
-    "itemLabel": "Baarle-Nassau",
-    "value": "0744"
-  },
-  {
-    "item": "Q10027",
-    "itemLabel": "Baarn",
-    "value": "0308"
-  },
-  {
-    "item": "Q204239",
-    "itemLabel": "Barendrecht",
-    "value": "0489"
-  },
-  {
-    "item": "Q164098",
-    "itemLabel": "Barneveld",
-    "value": "0203"
-  },
-  {
-    "item": "Q461142",
-    "itemLabel": "Bedum",
-    "value": "0005"
-  },
-  {
-    "item": "Q9806",
-    "itemLabel": "Beek",
-    "value": "0888"
-  },
-  {
-    "item": "Q9900",
-    "itemLabel": "Beemster",
-    "value": "0370"
-  },
-  {
-    "item": "Q9805",
-    "itemLabel": "Beesel",
-    "value": "0889"
-  },
-  {
-    "item": "Q747965",
-    "itemLabel": "Bellingwedde",
-    "value": "0007"
-  },
-  {
-    "item": "Q18088965",
-    "itemLabel": "Berg en Dal",
-    "value": "0241"
-  },
-  {
-    "item": "Q18088965",
-    "itemLabel": "Berg en Dal",
-    "value": "1945"
-  },
-  {
-    "item": "Q35159872",
-    "itemLabel": "Bergambacht",
-    "value": "0491"
-  },
-  {
-    "item": "Q9812",
-    "itemLabel": "Bergeijk",
-    "value": "1724"
-  },
-  {
-    "item": "Q9804",
-    "itemLabel": "Bergen",
-    "value": "0893"
-  },
-  {
-    "item": "Q9901",
-    "itemLabel": "Bergen",
-    "value": "0373"
-  },
-  {
-    "item": "Q9814",
-    "itemLabel": "Bergen op Zoom",
-    "value": "0748"
-  },
-  {
-    "item": "Q47104",
-    "itemLabel": "Berkelland",
-    "value": "1859"
-  },
-  {
-    "item": "Q9815",
-    "itemLabel": "Bernheze",
-    "value": "1721"
-  },
-  {
-    "item": "Q9816",
-    "itemLabel": "Best",
-    "value": "0753"
-  },
-  {
-    "item": "Q851244",
-    "itemLabel": "Beuningen",
-    "value": "0209"
-  },
-  {
-    "item": "Q9905",
-    "itemLabel": "Beverwijk",
-    "value": "0375"
-  },
-  {
-    "item": "Q863961",
-    "itemLabel": "Binnenmaas",
-    "value": "0585"
-  },
-  {
-    "item": "Q9817",
-    "itemLabel": "Bladel",
-    "value": "1728"
-  },
-  {
-    "item": "Q9906",
-    "itemLabel": "Blaricum",
-    "value": "0376"
-  },
-  {
-    "item": "Q9908",
-    "itemLabel": "Bloemendaal",
-    "value": "0377"
-  },
-  {
-    "item": "Q889423",
-    "itemLabel": "Bodegraven-Reeuwijk",
-    "value": "1901"
-  },
-  {
-    "item": "Q9818",
-    "itemLabel": "Boekel",
-    "value": "0755"
-  },
-  {
-    "item": "Q840641",
-    "itemLabel": "Boornsterhem",
-    "value": "0055"
-  },
-  {
-    "item": "Q835118",
-    "itemLabel": "Borger-Odoorn",
-    "value": "1681"
-  },
-  {
-    "item": "Q9997",
-    "itemLabel": "Borne",
-    "value": "0147"
-  },
-  {
-    "item": "Q10071",
-    "itemLabel": "Borsele",
-    "value": "0654"
-  },
-  {
-    "item": "Q9819",
-    "itemLabel": "Boxmeer",
-    "value": "0756"
-  },
-  {
-    "item": "Q9821",
-    "itemLabel": "Boxtel",
-    "value": "0757"
-  },
-  {
-    "item": "Q9822",
-    "itemLabel": "Breda",
-    "value": "0758"
-  },
-  {
-    "item": "Q462663",
-    "itemLabel": "Brielle",
-    "value": "0501"
-  },
-  {
-    "item": "Q747999",
-    "itemLabel": "Bronckhorst",
-    "value": "1876"
-  },
-  {
-    "item": "Q843895",
-    "itemLabel": "Brummen",
-    "value": "0213"
-  },
-  {
-    "item": "Q9803",
-    "itemLabel": "Brunssum",
-    "value": "0899"
-  },
-  {
-    "item": "Q10032",
-    "itemLabel": "Bunnik",
-    "value": "0312"
-  },
-  {
-    "item": "Q10034",
-    "itemLabel": "Bunschoten",
-    "value": "0313"
-  },
-  {
-    "item": "Q73061",
-    "itemLabel": "Buren",
-    "value": "0214"
-  },
-  {
-    "item": "Q9909",
-    "itemLabel": "Bussum",
-    "value": "0381"
-  },
-  {
-    "item": "Q734860",
-    "itemLabel": "Capelle aan den IJssel",
-    "value": "0502"
-  },
-  {
-    "item": "Q9910",
-    "itemLabel": "Castricum",
-    "value": "0383"
-  },
-  {
-    "item": "Q60453",
-    "itemLabel": "Coevorden",
-    "value": "0109"
-  },
-  {
-    "item": "Q9823",
-    "itemLabel": "Cranendonck",
-    "value": "1706"
-  },
-  {
-    "item": "Q290475",
-    "itemLabel": "Cromstrijen",
-    "value": "0611"
-  },
-  {
-    "item": "Q9827",
-    "itemLabel": "Cuijk",
-    "value": "1684"
-  },
-  {
-    "item": "Q816699",
-    "itemLabel": "Culemborg",
-    "value": "0216"
-  },
-  {
-    "item": "Q9998",
-    "itemLabel": "Dalfsen",
-    "value": "0148"
-  },
-  {
-    "item": "Q389213",
-    "itemLabel": "Dantumadeel",
-    "value": "1891"
-  },
-  {
-    "item": "Q10035",
-    "itemLabel": "De Bilt",
-    "value": "0310"
-  },
-  {
-    "item": "Q2114866",
-    "itemLabel": "De Friese Meren",
-    "value": "1940"
-  },
-  {
-    "item": "Q2114866",
-    "itemLabel": "De Friese Meren",
-    "value": "1921"
-  },
-  {
-    "item": "Q840663",
-    "itemLabel": "De Marne",
-    "value": "1663"
-  },
-  {
-    "item": "Q10036",
-    "itemLabel": "De Ronde Venen",
-    "value": "0736"
-  },
-  {
-    "item": "Q835108",
-    "itemLabel": "De Wolden",
-    "value": "1690"
-  },
-  {
-    "item": "Q690",
-    "itemLabel": "Delft",
-    "value": "0503"
-  },
-  {
-    "item": "Q322986",
-    "itemLabel": "Delfzijl",
-    "value": "0010"
-  },
-  {
-    "item": "Q36600",
-    "itemLabel": "Den Haag",
-    "value": "0518"
-  },
-  {
-    "item": "Q9911",
-    "itemLabel": "Den Helder",
-    "value": "0400"
-  },
-  {
-    "item": "Q9828",
-    "itemLabel": "Deurne",
-    "value": "0762"
-  },
-  {
-    "item": "Q10001",
-    "itemLabel": "Deventer",
-    "value": "0150"
-  },
-  {
-    "item": "Q9913",
-    "itemLabel": "Diemen",
-    "value": "0384"
-  },
-  {
-    "item": "Q9999",
-    "itemLabel": "Dinkelland",
-    "value": "1774"
-  },
-  {
-    "item": "Q165736",
-    "itemLabel": "Doesburg",
-    "value": "0221"
-  },
-  {
-    "item": "Q145845",
-    "itemLabel": "Doetinchem",
-    "value": "0222"
-  },
-  {
-    "item": "Q9829",
-    "itemLabel": "Dongen",
-    "value": "0766"
-  },
-  {
-    "item": "Q851299",
-    "itemLabel": "Dongeradeel",
-    "value": "0058"
-  },
-  {
-    "item": "Q26421",
-    "itemLabel": "Dordrecht",
-    "value": "0505"
-  },
-  {
-    "item": "Q9915",
-    "itemLabel": "Drechterland",
-    "value": "0498"
-  },
-  {
-    "item": "Q9830",
-    "itemLabel": "Drimmelen",
-    "value": "1719"
-  },
-  {
-    "item": "Q328087",
-    "itemLabel": "Dronten",
-    "value": "0303"
-  },
-  {
-    "item": "Q932142",
-    "itemLabel": "Druten",
-    "value": "0225"
-  },
-  {
-    "item": "Q613989",
-    "itemLabel": "Duiven",
-    "value": "0226"
-  },
-  {
-    "item": "Q9802",
-    "itemLabel": "Echt-Susteren",
-    "value": "1711"
-  },
-  {
-    "item": "Q9917",
-    "itemLabel": "Edam-Volendam",
-    "value": "0385"
-  },
-  {
-    "item": "Q26555",
-    "itemLabel": "Ede",
-    "value": "0228"
-  },
-  {
-    "item": "Q10037",
-    "itemLabel": "Eemnes",
-    "value": "0317"
-  },
-  {
-    "item": "Q255972",
-    "itemLabel": "Eemsmond",
-    "value": "1651"
-  },
-  {
-    "item": "Q9831",
-    "itemLabel": "Eersel",
-    "value": "0770"
-  },
-  {
-    "item": "Q9766",
-    "itemLabel": "Eijsden-Margraten",
-    "value": "1903"
-  },
-  {
-    "item": "Q9832",
-    "itemLabel": "Eindhoven",
-    "value": "0772"
-  },
-  {
-    "item": "Q165662",
-    "itemLabel": "Elburg",
-    "value": "0230"
-  },
-  {
-    "item": "Q14641",
-    "itemLabel": "Emmen",
-    "value": "0114"
-  },
-  {
-    "item": "Q9918",
-    "itemLabel": "Enkhuizen",
-    "value": "0388"
-  },
-  {
-    "item": "Q10002",
-    "itemLabel": "Enschede",
-    "value": "0153"
-  },
-  {
-    "item": "Q238396",
-    "itemLabel": "Epe",
-    "value": "0232"
-  },
-  {
-    "item": "Q753920",
-    "itemLabel": "Ermelo",
-    "value": "0233"
-  },
-  {
-    "item": "Q9833",
-    "itemLabel": "Etten-Leur",
-    "value": "0777"
-  },
-  {
-    "item": "Q750772",
-    "itemLabel": "Ferwerderadeel",
-    "value": "1722"
-  },
-  {
-    "item": "Q683658",
-    "itemLabel": "Franekeradeel",
-    "value": "0070"
-  },
-  {
-    "item": "Q850707",
-    "itemLabel": "Gaasterland-Sloten",
-    "value": "0653"
-  },
-  {
-    "item": "Q9834",
-    "itemLabel": "Geertruidenberg",
-    "value": "0779"
-  },
-  {
-    "item": "Q171536",
-    "itemLabel": "Geldermalsen",
-    "value": "0236"
-  },
-  {
-    "item": "Q9835",
-    "itemLabel": "Geldrop-Mierlo",
-    "value": "1771"
-  },
-  {
-    "item": "Q892526",
-    "itemLabel": "gemeente Groningen",
-    "value": "0014"
-  },
-  {
-    "item": "Q9836",
-    "itemLabel": "Gemert-Bakel",
-    "value": "1652"
-  },
-  {
-    "item": "Q9800",
-    "itemLabel": "Gennep",
-    "value": "0907"
-  },
-  {
-    "item": "Q1124998",
-    "itemLabel": "Giessenlanden",
-    "value": "0689"
-  },
-  {
-    "item": "Q9837",
-    "itemLabel": "Gilze en Rijen",
-    "value": "0784"
-  },
-  {
-    "item": "Q933459",
-    "itemLabel": "Goeree-Overflakkee",
-    "value": "1924"
-  },
-  {
-    "item": "Q10072",
-    "itemLabel": "Goes",
-    "value": "0664"
-  },
-  {
-    "item": "Q9838",
-    "itemLabel": "Goirle",
-    "value": "0785"
-  },
-  {
-    "item": "Q18335889",
-    "itemLabel": "Gooise Meren",
-    "value": "1942"
-  },
-  {
-    "item": "Q244327",
-    "itemLabel": "Gorinchem",
-    "value": "0512"
-  },
-  {
-    "item": "Q84125",
-    "itemLabel": "Gouda",
-    "value": "0513"
-  },
-  {
-    "item": "Q9839",
-    "itemLabel": "Grave",
-    "value": "0786"
-  },
-  {
-    "item": "Q605986",
-    "itemLabel": "Grootegast",
-    "value": "0015"
-  },
-  {
-    "item": "Q9767",
-    "itemLabel": "Gulpen-Wittem",
-    "value": "1729"
-  },
-  {
-    "item": "Q10003",
-    "itemLabel": "Haaksbergen",
-    "value": "0158"
-  },
-  {
-    "item": "Q9840",
-    "itemLabel": "Haaren",
-    "value": "0788"
-  },
-  {
-    "item": "Q9920",
-    "itemLabel": "Haarlem",
-    "value": "0392"
-  },
-  {
-    "item": "Q9921",
-    "itemLabel": "Haarlemmerliede en Spaarnwoude",
-    "value": "0393"
-  },
-  {
-    "item": "Q9924",
-    "itemLabel": "Haarlemmermeer",
-    "value": "0394"
-  },
-  {
-    "item": "Q9841",
-    "itemLabel": "Halderberge",
-    "value": "1655"
-  },
-  {
-    "item": "Q3916626",
-    "itemLabel": "Hardenberg",
-    "value": "0160"
-  },
-  {
-    "item": "Q58931",
-    "itemLabel": "Harderwijk",
-    "value": "0243"
-  },
-  {
-    "item": "Q953012",
-    "itemLabel": "Hardinxveld-Giessendam",
-    "value": "0523"
-  },
-  {
-    "item": "Q691754",
-    "itemLabel": "Haren",
-    "value": "0017"
-  },
-  {
-    "item": "Q2536628",
-    "itemLabel": "Harlingen",
-    "value": "0072"
-  },
-  {
-    "item": "Q58797",
-    "itemLabel": "Hattem",
-    "value": "0244"
-  },
-  {
-    "item": "Q9926",
-    "itemLabel": "Heemskerk",
-    "value": "0396"
-  },
-  {
-    "item": "Q9928",
-    "itemLabel": "Heemstede",
-    "value": "0397"
-  },
-  {
-    "item": "Q615491",
-    "itemLabel": "Heerde",
-    "value": "0246"
-  },
-  {
-    "item": "Q574558",
-    "itemLabel": "Heerenveen",
-    "value": "0074"
-  },
-  {
-    "item": "Q9930",
-    "itemLabel": "Heerhugowaard",
-    "value": "0398"
-  },
-  {
-    "item": "Q9799",
-    "itemLabel": "Heerlen",
-    "value": "0917"
-  },
-  {
-    "item": "Q9843",
-    "itemLabel": "Heeze-Leende",
-    "value": "1658"
-  },
-  {
-    "item": "Q9932",
-    "itemLabel": "Heiloo",
-    "value": "0399"
-  },
-  {
-    "item": "Q10005",
-    "itemLabel": "Hellendoorn",
-    "value": "0163"
-  },
-  {
-    "item": "Q826130",
-    "itemLabel": "Hellevoetsluis",
-    "value": "0530"
-  },
-  {
-    "item": "Q9844",
-    "itemLabel": "Helmond",
-    "value": "0794"
-  },
-  {
-    "item": "Q538725",
-    "itemLabel": "Hendrik-Ido-Ambacht",
-    "value": "0531"
-  },
-  {
-    "item": "Q10006",
-    "itemLabel": "Hengelo",
-    "value": "0164"
-  },
-  {
-    "item": "Q850722",
-    "itemLabel": "het Bildt",
-    "value": "0063"
-  },
-  {
-    "item": "Q932155",
-    "itemLabel": "Heumen",
-    "value": "0252"
-  },
-  {
-    "item": "Q9845",
-    "itemLabel": "Heusden",
-    "value": "0797"
-  },
-  {
-    "item": "Q932116",
-    "itemLabel": "Hillegom",
-    "value": "0534"
-  },
-  {
-    "item": "Q9846",
-    "itemLabel": "Hilvarenbeek",
-    "value": "0798"
-  },
-  {
-    "item": "Q9934",
-    "itemLabel": "Hilversum",
-    "value": "0402"
-  },
-  {
-    "item": "Q9996",
-    "itemLabel": "Hof van Twente",
-    "value": "1735"
-  },
-  {
-    "item": "Q9936",
-    "itemLabel": "Hollands Kroon",
-    "value": "1911"
-  },
-  {
-    "item": "Q208012",
-    "itemLabel": "Hoogeveen",
-    "value": "0118"
-  },
-  {
-    "item": "Q73069",
-    "itemLabel": "Hoogezand-Sappemeer",
-    "value": "0018"
-  },
-  {
-    "item": "Q9938",
-    "itemLabel": "Hoorn",
-    "value": "0405"
-  },
-  {
-    "item": "Q9797",
-    "itemLabel": "Horst aan de Maas",
-    "value": "1507"
-  },
-  {
-    "item": "Q10044",
-    "itemLabel": "Houten",
-    "value": "0321"
-  },
-  {
-    "item": "Q9939",
-    "itemLabel": "Huizen",
-    "value": "0406"
-  },
-  {
-    "item": "Q10073",
-    "itemLabel": "Hulst",
-    "value": "0677"
-  },
-  {
-    "item": "Q10045",
-    "itemLabel": "IJsselstein",
-    "value": "0353"
-  },
-  {
-    "item": "Q1348471",
-    "itemLabel": "Kaag en Braassem",
-    "value": "1884"
-  },
-  {
-    "item": "Q23814173",
-    "itemLabel": "Kampen",
-    "value": "0166"
-  },
-  {
-    "item": "Q10074",
-    "itemLabel": "Kapelle",
-    "value": "0678"
-  },
-  {
-    "item": "Q208764",
-    "itemLabel": "Katwijk",
-    "value": "0537"
-  },
-  {
-    "item": "Q9796",
-    "itemLabel": "Kerkrade",
-    "value": "0928"
-  },
-  {
-    "item": "Q9940",
-    "itemLabel": "Koggenland",
-    "value": "1598"
-  },
-  {
-    "item": "Q571198",
-    "itemLabel": "Kollumerland en Nieuwkruisland",
-    "value": "0079"
-  },
-  {
-    "item": "Q952194",
-    "itemLabel": "Korendijk",
-    "value": "0588"
-  },
-  {
-    "item": "Q739449",
-    "itemLabel": "Krimpen aan den IJssel",
-    "value": "0542"
-  },
-  {
-    "item": "Q15991891",
-    "itemLabel": "Krimpenerwaard",
-    "value": "1931"
-  },
-  {
-    "item": "Q9848",
-    "itemLabel": "Laarbeek",
-    "value": "1659"
-  },
-  {
-    "item": "Q9849",
-    "itemLabel": "Landerd",
-    "value": "1685"
-  },
-  {
-    "item": "Q9795",
-    "itemLabel": "Landgraaf",
-    "value": "0882"
-  },
-  {
-    "item": "Q9942",
-    "itemLabel": "Landsmeer",
-    "value": "0415"
-  },
-  {
-    "item": "Q9944",
-    "itemLabel": "Langedijk",
-    "value": "0416"
-  },
-  {
-    "item": "Q1144739",
-    "itemLabel": "Lansingerland",
-    "value": "1621"
-  },
-  {
-    "item": "Q9945",
-    "itemLabel": "Laren",
-    "value": "0417"
-  },
-  {
-    "item": "Q835096",
-    "itemLabel": "Leek",
-    "value": "0022"
-  },
-  {
-    "item": "Q388575",
-    "itemLabel": "Leerdam",
-    "value": "0545"
-  },
-  {
-    "item": "Q2311189",
-    "itemLabel": "Leeuwarden",
-    "value": "0080"
-  },
-  {
-    "item": "Q778989",
-    "itemLabel": "Leeuwarderadeel",
-    "value": "0081"
-  },
-  {
-    "item": "Q43631",
-    "itemLabel": "Leiden",
-    "value": "0546"
-  },
-  {
-    "item": "Q1000817",
-    "itemLabel": "Leiderdorp",
-    "value": "0547"
-  },
-  {
-    "item": "Q112675",
-    "itemLabel": "Leidschendam-Voorburg",
-    "value": "1916"
-  },
-  {
-    "item": "Q166065",
-    "itemLabel": "Lelystad",
-    "value": "0995"
-  },
-  {
-    "item": "Q840628",
-    "itemLabel": "Lemsterland",
-    "value": "0082"
-  },
-  {
-    "item": "Q9793",
-    "itemLabel": "Leudal",
-    "value": "1640"
-  },
-  {
-    "item": "Q10046",
-    "itemLabel": "Leusden",
-    "value": "0327"
-  },
-  {
-    "item": "Q952948",
-    "itemLabel": "Lingewaal",
-    "value": "0733"
-  },
-  {
-    "item": "Q952939",
-    "itemLabel": "Lingewaard",
-    "value": "1705"
-  },
-  {
-    "item": "Q332730",
-    "itemLabel": "Lisse",
-    "value": "0553"
-  },
-  {
-    "item": "Q851310",
-    "itemLabel": "Littenseradeel",
-    "value": "0140"
-  },
-  {
-    "item": "Q932058",
-    "itemLabel": "Lochem",
-    "value": "0262"
-  },
-  {
-    "item": "Q9850",
-    "itemLabel": "Loon op Zand",
-    "value": "0809"
-  },
-  {
-    "item": "Q10047",
-    "itemLabel": "Lopik",
-    "value": "0331"
-  },
-  {
-    "item": "Q849574",
-    "itemLabel": "Loppersum",
-    "value": "0024"
-  },
-  {
-    "item": "Q10015",
-    "itemLabel": "Losser",
-    "value": "0168"
-  },
-  {
-    "item": "Q904544",
-    "itemLabel": "Maasdriel",
-    "value": "0263"
-  },
-  {
-    "item": "Q9792",
-    "itemLabel": "Maasgouw",
-    "value": "1641"
-  },
-  {
-    "item": "Q497130",
-    "itemLabel": "Maassluis",
-    "value": "0556"
-  },
-  {
-    "item": "Q1309",
-    "itemLabel": "Maastricht",
-    "value": "0935"
-  },
-  {
-    "item": "Q841525",
-    "itemLabel": "Marum",
-    "value": "0025"
-  },
-  {
-    "item": "Q9947",
-    "itemLabel": "Medemblik",
-    "value": "0420"
-  },
-  {
-    "item": "Q9772",
-    "itemLabel": "Meerssen",
-    "value": "0938"
-  },
-  {
-    "item": "Q475366",
-    "itemLabel": "Menaldumadeel",
-    "value": "1908"
-  },
-  {
-    "item": "Q932066",
-    "itemLabel": "Menterwolde",
-    "value": "1987"
-  },
-  {
-    "item": "Q60425",
-    "itemLabel": "Meppel",
-    "value": "0119"
-  },
-  {
-    "item": "Q10076",
-    "itemLabel": "Middelburg",
-    "value": "0687"
-  },
-  {
-    "item": "Q952206",
-    "itemLabel": "Midden-Delfland",
-    "value": "1842"
-  },
-  {
-    "item": "Q835125",
-    "itemLabel": "Midden-Drenthe",
-    "value": "1731"
-  },
-  {
-    "item": "Q9853",
-    "itemLabel": "Mill en Sint Hubert",
-    "value": "0815"
-  },
-  {
-    "item": "Q9854",
-    "itemLabel": "Moerdijk",
-    "value": "1709"
-  },
-  {
-    "item": "Q1943433",
-    "itemLabel": "Molenwaard",
-    "value": "1927"
-  },
-  {
-    "item": "Q952963",
-    "itemLabel": "Montferland",
-    "value": "1955"
-  },
-  {
-    "item": "Q10048",
-    "itemLabel": "Montfoort",
-    "value": "0335"
-  },
-  {
-    "item": "Q9791",
-    "itemLabel": "Mook en Middelaar",
-    "value": "0944"
-  },
-  {
-    "item": "Q34616830",
-    "itemLabel": "Muiden",
-    "value": "0424"
-  },
-  {
-    "item": "Q9949",
-    "itemLabel": "Naarden",
-    "value": "0425"
-  },
-  {
-    "item": "Q952997",
-    "itemLabel": "Neder-Betuwe",
-    "value": "1740"
-  },
-  {
-    "item": "Q9789",
-    "itemLabel": "Nederweert",
-    "value": "0946"
-  },
-  {
-    "item": "Q932089",
-    "itemLabel": "Neerijnen",
-    "value": "0304"
-  },
-  {
-    "item": "Q10050",
-    "itemLabel": "Nieuwegein",
-    "value": "0356"
-  },
-  {
-    "item": "Q948866",
-    "itemLabel": "Nieuwkoop",
-    "value": "0569"
-  },
-  {
-    "item": "Q73226",
-    "itemLabel": "Nijkerk",
-    "value": "0267"
-  },
-  {
-    "item": "Q47887",
-    "itemLabel": "Nijmegen",
-    "value": "0268"
-  },
-  {
-    "item": "Q14853527",
-    "itemLabel": "Nissewaard",
-    "value": "1930"
-  },
-  {
-    "item": "Q10077",
-    "itemLabel": "Noord-Beveland",
-    "value": "1695"
-  },
-  {
-    "item": "Q835083",
-    "itemLabel": "Noordenveld",
-    "value": "1699"
-  },
-  {
+    "en": "Noordoostpolder",
+    "fy": "Noardeastpolder",
     "item": "Q69262",
-    "itemLabel": "Noordoostpolder",
+    "nl": "Noordoostpolder",
     "value": "0171"
   },
   {
-    "item": "Q455464",
-    "itemLabel": "Noordwijk",
-    "value": "0575"
-  },
-  {
-    "item": "Q848988",
-    "itemLabel": "Noordwijkerhout",
-    "value": "0576"
-  },
-  {
-    "item": "Q9855",
-    "itemLabel": "Nuenen, Gerwen en Nederwetten",
-    "value": "0820"
-  },
-  {
-    "item": "Q931997",
-    "itemLabel": "Nunspeet",
-    "value": "0302"
-  },
-  {
-    "item": "Q9787",
-    "itemLabel": "Nuth",
-    "value": "0951"
-  },
-  {
-    "item": "Q94747",
-    "itemLabel": "Oegstgeest",
-    "value": "0579"
-  },
-  {
-    "item": "Q9856",
-    "itemLabel": "Oirschot",
-    "value": "0823"
-  },
-  {
-    "item": "Q9857",
-    "itemLabel": "Oisterwijk",
-    "value": "0824"
-  },
-  {
-    "item": "Q1347872",
-    "itemLabel": "Oldambt",
-    "value": "1895"
-  },
-  {
-    "item": "Q932042",
-    "itemLabel": "Oldebroek",
-    "value": "0269"
-  },
-  {
-    "item": "Q10016",
-    "itemLabel": "Oldenzaal",
-    "value": "0173"
-  },
-  {
-    "item": "Q10017",
-    "itemLabel": "Olst-Wijhe",
-    "value": "1773"
-  },
-  {
-    "item": "Q10018",
-    "itemLabel": "Ommen",
-    "value": "0175"
-  },
-  {
-    "item": "Q9786",
-    "itemLabel": "Onderbanken",
-    "value": "0881"
-  },
-  {
-    "item": "Q1147580",
-    "itemLabel": "Oost Gelre",
-    "value": "1586"
-  },
-  {
-    "item": "Q9858",
-    "itemLabel": "Oosterhout",
-    "value": "0826"
-  },
-  {
-    "item": "Q259205",
-    "itemLabel": "Ooststellingwerf",
-    "value": "0085"
-  },
-  {
-    "item": "Q9951",
-    "itemLabel": "Oostzaan",
-    "value": "0431"
-  },
-  {
-    "item": "Q9952",
-    "itemLabel": "Opmeer",
-    "value": "0432"
-  },
-  {
-    "item": "Q840632",
-    "itemLabel": "Opsterland",
-    "value": "0086"
-  },
-  {
-    "item": "Q9859",
-    "itemLabel": "Oss",
-    "value": "0828"
-  },
-  {
-    "item": "Q795623",
-    "itemLabel": "Oud-Beijerland",
-    "value": "0584"
-  },
-  {
-    "item": "Q932031",
-    "itemLabel": "Oude IJsselstreek",
-    "value": "1509"
-  },
-  {
-    "item": "Q9953",
-    "itemLabel": "Ouder-Amstel",
-    "value": "0437"
-  },
-  {
-    "item": "Q10051",
-    "itemLabel": "Oudewater",
-    "value": "0589"
-  },
-  {
-    "item": "Q600871",
-    "itemLabel": "Overbetuwe",
-    "value": "1734"
-  },
-  {
-    "item": "Q934511",
-    "itemLabel": "Papendrecht",
-    "value": "0590"
-  },
-  {
-    "item": "Q9785",
-    "itemLabel": "Peel en Maas",
-    "value": "1894"
-  },
-  {
-    "item": "Q932077",
-    "itemLabel": "Pekela",
-    "value": "0765"
-  },
-  {
-    "item": "Q281768",
-    "itemLabel": "Pijnacker-Nootdorp",
-    "value": "1926"
-  },
-  {
-    "item": "Q9954",
-    "itemLabel": "Purmerend",
-    "value": "0439"
-  },
-  {
-    "item": "Q939948",
-    "itemLabel": "Putten",
-    "value": "0273"
-  },
-  {
-    "item": "Q10019",
-    "itemLabel": "Raalte",
-    "value": "0177"
-  },
-  {
-    "item": "Q10078",
-    "itemLabel": "Reimerswaal",
-    "value": "0703"
-  },
-  {
-    "item": "Q691725",
-    "itemLabel": "Renkum",
-    "value": "0274"
-  },
-  {
-    "item": "Q10039",
-    "itemLabel": "Renswoude",
-    "value": "0339"
-  },
-  {
-    "item": "Q9860",
-    "itemLabel": "Reusel-De Mierden",
-    "value": "1667"
-  },
-  {
-    "item": "Q843899",
-    "itemLabel": "Rheden",
-    "value": "0275"
-  },
-  {
-    "item": "Q10040",
-    "itemLabel": "Rhenen",
-    "value": "0340"
-  },
-  {
-    "item": "Q222220",
-    "itemLabel": "Ridderkerk",
-    "value": "0597"
-  },
-  {
-    "item": "Q518739",
-    "itemLabel": "Rijnwaarden",
-    "value": "0196"
-  },
-  {
-    "item": "Q952183",
-    "itemLabel": "Rijnwoude",
-    "value": "1672"
-  },
-  {
-    "item": "Q10020",
-    "itemLabel": "Rijssen-Holten",
-    "value": "1742"
-  },
-  {
-    "item": "Q506745",
-    "itemLabel": "Rijswijk",
-    "value": "0603"
-  },
-  {
-    "item": "Q9784",
-    "itemLabel": "Roerdalen",
-    "value": "1669"
-  },
-  {
-    "item": "Q8167972",
-    "itemLabel": "Roermond",
-    "value": "0957"
-  },
-  {
-    "item": "Q9861",
-    "itemLabel": "Roosendaal",
-    "value": "1674"
-  },
-  {
-    "item": "Q2680952",
-    "itemLabel": "Rotterdam",
-    "value": "0599"
-  },
-  {
-    "item": "Q372592",
-    "itemLabel": "Rozendaal",
-    "value": "0277"
-  },
-  {
-    "item": "Q9862",
-    "itemLabel": "Rucphen",
-    "value": "0840"
-  },
-  {
-    "item": "Q9955",
-    "itemLabel": "Schagen",
-    "value": "0441"
-  },
-  {
-    "item": "Q225521",
-    "itemLabel": "Scharsterland",
-    "value": "0051"
-  },
-  {
-    "item": "Q939964",
-    "itemLabel": "Scherpenzeel",
-    "value": "0279"
-  },
-  {
-    "item": "Q204709",
-    "itemLabel": "Schiedam",
-    "value": "0606"
-  },
-  {
-    "item": "Q208011",
-    "itemLabel": "Schiermonnikoog",
-    "value": "0088"
-  },
-  {
-    "item": "Q9864",
-    "itemLabel": "Schijndel",
-    "value": "0844"
-  },
-  {
-    "item": "Q9782",
-    "itemLabel": "Schinnen",
-    "value": "0962"
-  },
-  {
-    "item": "Q10079",
-    "itemLabel": "Schouwen-Duiveland",
-    "value": "1676"
-  },
-  {
-    "item": "Q9769",
-    "itemLabel": "Simpelveld",
-    "value": "0965"
-  },
-  {
-    "item": "Q9865",
-    "itemLabel": "Sint Anthonis",
-    "value": "1702"
-  },
-  {
-    "item": "Q9866",
-    "itemLabel": "Sint-Michielsgestel",
-    "value": "0845"
-  },
-  {
-    "item": "Q9867",
-    "itemLabel": "Sint-Oedenrode",
-    "value": "0846"
-  },
-  {
-    "item": "Q9781",
-    "itemLabel": "Sittard-Geleen",
-    "value": "1883"
-  },
-  {
-    "item": "Q750760",
-    "itemLabel": "Sliedrecht",
-    "value": "0610"
-  },
-  {
-    "item": "Q850211",
-    "itemLabel": "Slochteren",
-    "value": "0040"
-  },
-  {
-    "item": "Q10080",
-    "itemLabel": "Sluis",
-    "value": "1714"
-  },
-  {
-    "item": "Q507065",
-    "itemLabel": "Smallingerland",
-    "value": "0090"
-  },
-  {
-    "item": "Q10041",
-    "itemLabel": "Soest",
-    "value": "0342"
-  },
-  {
-    "item": "Q9868",
-    "itemLabel": "Someren",
-    "value": "0847"
-  },
-  {
-    "item": "Q9869",
-    "itemLabel": "Son en Breugel",
-    "value": "0848"
-  },
-  {
-    "item": "Q73074",
-    "itemLabel": "Stadskanaal",
-    "value": "0037"
-  },
-  {
-    "item": "Q10021",
-    "itemLabel": "Staphorst",
-    "value": "0180"
-  },
-  {
-    "item": "Q9962",
-    "itemLabel": "Stede Broec",
-    "value": "0532"
-  },
-  {
-    "item": "Q9870",
-    "itemLabel": "Steenbergen",
-    "value": "0851"
-  },
-  {
-    "item": "Q10022",
-    "itemLabel": "Steenwijkerland",
-    "value": "1708"
-  },
-  {
-    "item": "Q9780",
-    "itemLabel": "Stein",
-    "value": "0971"
-  },
-  {
-    "item": "Q10042",
-    "itemLabel": "Stichtse Vecht",
-    "value": "1904"
-  },
-  {
-    "item": "Q858607",
-    "itemLabel": "Strijen",
-    "value": "0617"
-  },
-  {
-    "item": "Q1473276",
-    "itemLabel": "Súdwest-Fryslân",
-    "value": "1900"
-  },
-  {
-    "item": "Q849566",
-    "itemLabel": "Ten Boer",
-    "value": "0009"
-  },
-  {
-    "item": "Q10081",
-    "itemLabel": "Terneuzen",
-    "value": "0715"
-  },
-  {
-    "item": "Q204412",
-    "itemLabel": "Terschelling",
-    "value": "0093"
-  },
-  {
-    "item": "Q9966",
-    "itemLabel": "Texel",
-    "value": "0448"
-  },
-  {
-    "item": "Q1368003",
-    "itemLabel": "Teylingen",
-    "value": "1525"
-  },
-  {
-    "item": "Q10082",
-    "itemLabel": "Tholen",
-    "value": "0716"
-  },
-  {
-    "item": "Q73221",
-    "itemLabel": "Tiel",
-    "value": "0281"
-  },
-  {
-    "item": "Q840636",
-    "itemLabel": "Tietjerksteradeel",
-    "value": "0737"
-  },
-  {
-    "item": "Q26430",
-    "itemLabel": "Tilburg",
-    "value": "0855"
-  },
-  {
-    "item": "Q10023",
-    "itemLabel": "Tubbergen",
-    "value": "0183"
-  },
-  {
-    "item": "Q10024",
-    "itemLabel": "Twenterand",
-    "value": "1700"
-  },
-  {
-    "item": "Q840457",
-    "itemLabel": "Tynaarlo",
-    "value": "1730"
-  },
-  {
-    "item": "Q9872",
-    "itemLabel": "Uden",
-    "value": "0856"
-  },
-  {
-    "item": "Q9967",
-    "itemLabel": "Uitgeest",
-    "value": "0450"
-  },
-  {
-    "item": "Q9969",
-    "itemLabel": "Uithoorn",
-    "value": "0451"
-  },
-  {
-    "item": "Q273746",
-    "itemLabel": "Urk",
-    "value": "0184"
-  },
-  {
-    "item": "Q803",
-    "itemLabel": "Utrecht",
-    "value": "0344"
-  },
-  {
-    "item": "Q10043",
-    "itemLabel": "Utrechtse Heuvelrug",
-    "value": "1581"
-  },
-  {
-    "item": "Q9768",
-    "itemLabel": "Vaals",
-    "value": "0981"
-  },
-  {
-    "item": "Q9771",
-    "itemLabel": "Valkenburg aan de Geul",
-    "value": "0994"
-  },
-  {
-    "item": "Q9873",
-    "itemLabel": "Valkenswaard",
-    "value": "0858"
-  },
-  {
-    "item": "Q73065",
-    "itemLabel": "Veendam",
-    "value": "0047"
-  },
-  {
-    "item": "Q1840",
-    "itemLabel": "Veenendaal",
-    "value": "0345"
-  },
-  {
-    "item": "Q10083",
-    "itemLabel": "Veere",
-    "value": "0717"
-  },
-  {
-    "item": "Q9874",
-    "itemLabel": "Veghel",
-    "value": "0860"
-  },
-  {
-    "item": "Q9875",
-    "itemLabel": "Veldhoven",
-    "value": "0861"
-  },
-  {
-    "item": "Q9970",
-    "itemLabel": "Velsen",
-    "value": "0453"
-  },
-  {
-    "item": "Q9777",
-    "itemLabel": "Venlo",
-    "value": "0983"
-  },
-  {
-    "item": "Q9775",
-    "itemLabel": "Venray",
-    "value": "0984"
-  },
-  {
-    "item": "Q10052",
-    "itemLabel": "Vianen",
-    "value": "0620"
-  },
-  {
-    "item": "Q210007",
-    "itemLabel": "Vlaardingen",
-    "value": "0622"
-  },
-  {
-    "item": "Q840460",
-    "itemLabel": "Vlagtwedde",
-    "value": "0048"
-  },
-  {
-    "item": "Q207851",
-    "itemLabel": "Vlieland",
-    "value": "0096"
-  },
-  {
-    "item": "Q10084",
-    "itemLabel": "Vlissingen",
-    "value": "0718"
-  },
-  {
-    "item": "Q9770",
-    "itemLabel": "Voerendaal",
-    "value": "0986"
-  },
-  {
-    "item": "Q848324",
-    "itemLabel": "Voorschoten",
-    "value": "0626"
-  },
-  {
-    "item": "Q384772",
-    "itemLabel": "Voorst",
-    "value": "0285"
-  },
-  {
-    "item": "Q9876",
-    "itemLabel": "Vught",
-    "value": "0865"
-  },
-  {
-    "item": "Q9877",
-    "itemLabel": "Waalre",
-    "value": "0866"
-  },
-  {
-    "item": "Q745038",
-    "itemLabel": "Waalwijk",
-    "value": "0867"
-  },
-  {
-    "item": "Q826048",
-    "itemLabel": "Waddinxveen",
-    "value": "0627"
-  },
-  {
-    "item": "Q1305",
-    "itemLabel": "Wageningen",
-    "value": "0289"
-  },
-  {
-    "item": "Q505601",
-    "itemLabel": "Wassenaar",
-    "value": "0629"
-  },
-  {
-    "item": "Q9971",
-    "itemLabel": "Waterland",
-    "value": "0852"
-  },
-  {
-    "item": "Q9774",
-    "itemLabel": "Weert",
-    "value": "0988"
-  },
-  {
-    "item": "Q9974",
-    "itemLabel": "Weesp",
-    "value": "0457"
-  },
-  {
-    "item": "Q9880",
-    "itemLabel": "Werkendam",
-    "value": "0870"
-  },
-  {
-    "item": "Q658081",
-    "itemLabel": "West Maas en Waal",
-    "value": "0668"
-  },
-  {
-    "item": "Q747920",
-    "itemLabel": "Westerveld",
-    "value": "1701"
-  },
-  {
-    "item": "Q524808",
-    "itemLabel": "Westervoort",
-    "value": "0293"
-  },
-  {
-    "item": "Q26556",
-    "itemLabel": "Westland",
-    "value": "1783"
-  },
-  {
-    "item": "Q753913",
-    "itemLabel": "Weststellingwerf",
-    "value": "0098"
-  },
-  {
-    "item": "Q935657",
-    "itemLabel": "Westvoorne",
-    "value": "0614"
-  },
-  {
-    "item": "Q10025",
-    "itemLabel": "Wierden",
-    "value": "0189"
-  },
-  {
+    "en": "Wijchen",
+    "fy": "Wijchen",
     "item": "Q72981",
-    "itemLabel": "Wijchen",
+    "nl": "Wijchen",
     "value": "0296"
   },
   {
-    "item": "Q9975",
-    "itemLabel": "Wijdemeren",
-    "value": "1696"
+    "en": "Buren",
+    "fy": "Buren",
+    "item": "Q73061",
+    "nl": "Buren",
+    "value": "0214"
   },
   {
-    "item": "Q10053",
-    "itemLabel": "Wijk bij Duurstede",
-    "value": "0352"
+    "en": "Heerhugowaard",
+    "fy": "Heerhugowaard",
+    "item": "Q9930",
+    "nl": "Heerhugowaard",
+    "value": "0398"
   },
   {
-    "item": "Q1025079",
-    "itemLabel": "Winsum",
-    "value": "0053"
+    "en": "Heemstede",
+    "fy": "Hiemstee",
+    "item": "Q9928",
+    "nl": "Heemstede",
+    "value": "0397"
   },
   {
-    "item": "Q72974",
-    "itemLabel": "Winterswijk",
-    "value": "0294"
+    "en": "Delft",
+    "fy": "Delft",
+    "item": "Q690",
+    "nl": "Delft",
+    "value": "0503"
   },
   {
-    "item": "Q9881",
-    "itemLabel": "Woensdrecht",
-    "value": "0873"
+    "en": "Kerkrade",
+    "fy": "Kerkrade",
+    "item": "Q9796",
+    "nl": "Kerkrade",
+    "value": "0928"
   },
   {
-    "item": "Q5128",
-    "itemLabel": "Woerden",
-    "value": "0632"
+    "en": "Zwolle",
+    "fy": "Swol",
+    "item": "Q793",
+    "nl": "Zwolle",
+    "value": "0193"
   },
   {
-    "item": "Q9976",
-    "itemLabel": "Wormerland",
-    "value": "0880"
+    "en": "Hoogezand-Sappemeer",
+    "fy": "Hegesân-Sappemar",
+    "item": "Q73069",
+    "nl": "Hoogezand-Sappemeer",
+    "value": "0018"
   },
   {
-    "item": "Q10055",
-    "itemLabel": "Woudenberg",
-    "value": "0351"
+    "en": "Tiel",
+    "fy": "Tiel",
+    "item": "Q73221",
+    "nl": "Tiel",
+    "value": "0281"
   },
   {
-    "item": "Q9882",
-    "itemLabel": "Woudrichem",
-    "value": "0874"
+    "en": "Hilversum",
+    "fy": "Hilfertsom",
+    "item": "Q9934",
+    "nl": "Hilversum",
+    "value": "0402"
   },
   {
-    "item": "Q9978",
-    "itemLabel": "Zaanstad",
-    "value": "0479"
+    "en": "Heiloo",
+    "fy": "Heiloo",
+    "item": "Q9932",
+    "nl": "Heiloo",
+    "value": "0399"
   },
   {
-    "item": "Q1532373",
-    "itemLabel": "Zaltbommel",
-    "value": "0297"
+    "en": "Assen",
+    "fy": "Assen",
+    "item": "Q798",
+    "nl": "Assen",
+    "value": "0106"
   },
   {
-    "item": "Q9980",
-    "itemLabel": "Zandvoort",
-    "value": "0473"
+    "en": "Nijkerk",
+    "fy": "Nijkerk",
+    "item": "Q73226",
+    "nl": "Nijkerk",
+    "value": "0267"
   },
   {
-    "item": "Q184288",
-    "itemLabel": "Zederik",
-    "value": "0707"
+    "en": "Almere",
+    "fy": "Almere",
+    "item": "Q83178",
+    "nl": "Almere",
+    "value": "0034"
   },
   {
-    "item": "Q9981",
-    "itemLabel": "Zeevang",
-    "value": "0478"
+    "en": "Heerlen",
+    "fy": "Heerlen",
+    "item": "Q9799",
+    "nl": "Heerlen",
+    "value": "0917"
   },
   {
+    "en": "Hoorn",
+    "fy": "Hoarn",
+    "item": "Q9938",
+    "nl": "Hoorn",
+    "value": "0405"
+  },
+  {
+    "en": "Huizen",
+    "fy": "Huizen",
+    "item": "Q9939",
+    "nl": "Huizen",
+    "value": "0406"
+  },
+  {
+    "en": "Hollands Kroon",
+    "fy": "Hollâns Kroan",
+    "item": "Q9936",
+    "nl": "Hollands Kroon",
+    "value": "1911"
+  },
+  {
+    "en": "Utrecht",
+    "fy": "Utert",
+    "item": "Q803",
+    "nl": "Utrecht",
+    "value": "0344"
+  },
+  {
+    "en": "Gouda",
+    "fy": "Gouda",
+    "item": "Q84125",
+    "nl": "Gouda",
+    "value": "0513"
+  },
+  {
+    "en": "Apeldoorn",
+    "fy": "Apeldoarn",
+    "item": "Q101918",
+    "nl": "Apeldoorn",
+    "value": "0200"
+  },
+  {
+    "en": "Alkmaar",
+    "fy": "Alkmar",
+    "item": "Q972",
+    "nl": "Alkmaar",
+    "value": "0361"
+  },
+  {
+    "en": "Landsmeer",
+    "fy": "Lânsmar",
+    "item": "Q9942",
+    "nl": "Landsmeer",
+    "value": "0415"
+  },
+  {
+    "en": "Koggenland",
+    "fy": "Koggelân",
+    "item": "Q9940",
+    "nl": "Koggenland",
+    "value": "1598"
+  },
+  {
+    "en": "Doetinchem",
+    "fy": "Doetinchem",
+    "item": "Q145845",
+    "nl": "Doetinchem",
+    "value": "0222"
+  },
+  {
+    "en": "Beek",
+    "fy": "Beek",
+    "item": "Q9806",
+    "nl": "Beek",
+    "value": "0888"
+  },
+  {
+    "en": "'s-Hertogenbosch",
+    "fy": "De Bosk",
+    "item": "Q9807",
+    "nl": "'s-Hertogenbosch",
+    "value": "0796"
+  },
+  {
+    "en": "Almelo",
+    "fy": "Almelo",
+    "item": "Q988",
+    "nl": "Almelo",
+    "value": "0141"
+  },
+  {
+    "en": "Amersfoort",
+    "fy": "Amersfoart",
+    "item": "Q992",
+    "nl": "Amersfoort",
+    "value": "0307"
+  },
+  {
+    "en": "Barneveld",
+    "fy": "Barneveld",
+    "item": "Q164098",
+    "nl": "Barneveld",
+    "value": "0203"
+  },
+  {
+    "en": "Elburg",
+    "fy": "Elburch",
+    "item": "Q165662",
+    "nl": "Elburg",
+    "value": "0230"
+  },
+  {
+    "en": "Langedijk",
+    "fy": "Langedyk",
+    "item": "Q9944",
+    "nl": "Langedijk",
+    "value": "0416"
+  },
+  {
+    "en": "Laren",
+    "fy": "Laren",
+    "item": "Q9945",
+    "nl": "Laren",
+    "value": "0417"
+  },
+  {
+    "en": "Appingedam",
+    "fy": "Appingedam",
+    "item": "Q995",
+    "nl": "Appingedam",
+    "value": "0003"
+  },
+  {
+    "en": "Medemblik",
+    "fy": "Medemblik",
+    "item": "Q9947",
+    "nl": "Medemblik",
+    "value": "0420"
+  },
+  {
+    "en": "Oostzaan",
+    "fy": "Eastsaan",
+    "item": "Q9951",
+    "nl": "Oostzaan",
+    "value": "0431"
+  },
+  {
+    "en": "Naarden",
+    "fy": "Naarden",
+    "item": "Q9949",
+    "nl": "Naarden",
+    "value": "0425"
+  },
+  {
+    "en": "Lelystad",
+    "fy": "Lelystêd",
+    "item": "Q166065",
+    "nl": "Lelystad",
+    "value": "0995"
+  },
+  {
+    "en": "Opmeer",
+    "fy": "Opmar",
+    "item": "Q9952",
+    "nl": "Opmeer",
+    "value": "0432"
+  },
+  {
+    "en": "Ouder-Amstel",
+    "fy": "Alder-Amstel",
+    "item": "Q9953",
+    "nl": "Ouder-Amstel",
+    "value": "0437"
+  },
+  {
+    "en": "Maastricht",
+    "fy": "Maastricht",
+    "item": "Q1309",
+    "nl": "Maastricht",
+    "value": "0935"
+  },
+  {
+    "en": "Zeewolde",
+    "fy": "Seewâld",
     "item": "Q184454",
-    "itemLabel": "Zeewolde",
+    "nl": "Zeewolde",
     "value": "0050"
   },
   {
-    "item": "Q10056",
-    "itemLabel": "Zeist",
-    "value": "0355"
+    "en": "Purmerend",
+    "fy": "Purmerein",
+    "item": "Q9954",
+    "nl": "Purmerend",
+    "value": "0439"
   },
   {
-    "item": "Q197050",
-    "itemLabel": "Zevenaar",
-    "value": "0299"
+    "en": "Schagen",
+    "fy": "Skagen",
+    "item": "Q9955",
+    "nl": "Schagen",
+    "value": "0441"
   },
   {
-    "item": "Q26432",
-    "itemLabel": "Zoetermeer",
-    "value": "0637"
+    "en": "Arnhem",
+    "fy": "Arnhim",
+    "item": "Q1310",
+    "nl": "Arnhem",
+    "value": "0202"
   },
   {
-    "item": "Q218259",
-    "itemLabel": "Zoeterwoude",
-    "value": "0638"
+    "en": "Stede Broec",
+    "fy": "Stêde Broec",
+    "item": "Q9962",
+    "nl": "Stede Broec",
+    "value": "0532"
   },
   {
+    "en": "Texel",
+    "fy": "Tessel",
+    "item": "Q9966",
+    "nl": "Texel",
+    "value": "0448"
+  },
+  {
+    "en": "Woerden",
+    "fy": "Woerden",
+    "item": "Q5128",
+    "nl": "Woerden",
+    "value": "0632"
+  },
+  {
+    "en": "Uitgeest",
+    "fy": "Utgeast",
+    "item": "Q9967",
+    "nl": "Uitgeest",
+    "value": "0450"
+  },
+  {
+    "en": "Velsen",
+    "fy": "Felsen",
+    "item": "Q9970",
+    "nl": "Velsen",
+    "value": "0453"
+  },
+  {
+    "en": "Uithoorn",
+    "fy": "Uthoarn",
+    "item": "Q9969",
+    "nl": "Uithoorn",
+    "value": "0451"
+  },
+  {
+    "en": "Terschelling",
+    "fy": "Skylge",
+    "item": "Q204412",
+    "nl": "Terschelling",
+    "value": "0093"
+  },
+  {
+    "en": "Schiedam",
+    "fy": "Skiedam",
+    "item": "Q204709",
+    "nl": "Schiedam",
+    "value": "0606"
+  },
+  {
+    "en": "Waterland",
+    "fy": "Wetterlân",
+    "item": "Q9971",
+    "nl": "Waterland",
+    "value": "0852"
+  },
+  {
+    "en": "Weesp",
+    "fy": "Weesp",
+    "item": "Q9974",
+    "nl": "Weesp",
+    "value": "0457"
+  },
+  {
+    "en": "Vlieland",
+    "fy": "Flylân",
+    "item": "Q207851",
+    "nl": "Vlieland",
+    "value": "0096"
+  },
+  {
+    "en": "Schiermonnikoog",
+    "fy": "Skiermûntseach",
+    "item": "Q208011",
+    "nl": "Schiermonnikoog",
+    "value": "0088"
+  },
+  {
+    "en": "Eindhoven",
+    "fy": "Eindhoven",
+    "item": "Q9832",
+    "nl": "Eindhoven",
+    "value": "0772"
+  },
+  {
+    "en": "Wijdemeren",
+    "fy": "Widemarren",
+    "item": "Q9975",
+    "nl": "Wijdemeren",
+    "value": "1696"
+  },
+  {
+    "en": "Wormerland",
+    "fy": "Wormerlân",
+    "item": "Q9976",
+    "nl": "Wormerland",
+    "value": "0880"
+  },
+  {
+    "en": "Hoogeveen",
+    "fy": "Hoogeveen",
+    "item": "Q208012",
+    "nl": "Hoogeveen",
+    "value": "0118"
+  },
+  {
+    "en": "Ameland",
+    "fy": "It Amelân",
+    "item": "Q208259",
+    "nl": "Ameland",
+    "value": "0060"
+  },
+  {
+    "en": "Zaanstad",
+    "fy": "Saanstêd",
+    "item": "Q9978",
+    "nl": "Zaanstad",
+    "value": "0479"
+  },
+  {
+    "en": "Zandvoort",
+    "fy": "Sânfoart",
+    "item": "Q9980",
+    "nl": "Zandvoort",
+    "value": "0473"
+  },
+  {
+    "en": "Vaals",
+    "fy": "Faals",
+    "item": "Q9768",
+    "nl": "Vaals",
+    "value": "0981"
+  },
+  {
+    "en": "Simpelveld",
+    "fy": "Simpelveld",
+    "item": "Q9769",
+    "nl": "Simpelveld",
+    "value": "0965"
+  },
+  {
+    "en": "Katwijk",
+    "fy": "Katwijk",
+    "item": "Q208764",
+    "nl": "Katwijk",
+    "value": "0537"
+  },
+  {
+    "en": "Vlaardingen",
+    "fy": "Flaardingen",
+    "item": "Q210007",
+    "nl": "Vlaardingen",
+    "value": "0622"
+  },
+  {
+    "en": "Zeevang",
+    "fy": "Seefang",
+    "item": "Q9981",
+    "nl": "Zeevang",
+    "value": "0478"
+  },
+  {
+    "en": "Hof van Twente",
+    "fy": "Hof van Twente",
+    "item": "Q9996",
+    "nl": "Hof van Twente",
+    "value": "1735"
+  },
+  {
+    "en": "Borne",
+    "fy": "Borne",
+    "item": "Q9997",
+    "nl": "Borne",
+    "value": "0147"
+  },
+  {
+    "en": "Venlo",
+    "fy": "Fenlo",
+    "item": "Q9777",
+    "nl": "Venlo",
+    "value": "0983"
+  },
+  {
+    "en": "Zuidhorn",
+    "fy": "Súdhorn",
     "item": "Q210234",
-    "itemLabel": "Zuidhorn",
+    "nl": "Zuidhorn",
     "value": "0056"
   },
   {
-    "item": "Q228673",
-    "itemLabel": "Zuidplas",
-    "value": "1892"
+    "en": "Alphen aan den Rijn",
+    "fy": "Alfen oan de Ryn",
+    "item": "Q213246",
+    "nl": "Alphen aan den Rijn",
+    "value": "0484"
   },
   {
-    "item": "Q9883",
-    "itemLabel": "Zundert",
-    "value": "0879"
+    "en": "Skarsterlân",
+    "fy": "Skarsterlân",
+    "item": "Q225521",
+    "nl": "Scharsterland",
+    "value": "0051"
   },
   {
-    "item": "Q15858232",
-    "itemLabel": "Zutphen",
-    "value": "0301"
+    "en": "Dalfsen",
+    "fy": "Dalfsen",
+    "item": "Q9998",
+    "nl": "Dalfsen",
+    "value": "0148"
   },
   {
+    "en": "Dinkelland",
+    "fy": "Dinkellân",
+    "item": "Q9999",
+    "nl": "Dinkelland",
+    "value": "1774"
+  },
+  {
+    "en": "Grave",
+    "fy": "Grave",
+    "item": "Q9839",
+    "nl": "Grave",
+    "value": "0786"
+  },
+  {
+    "en": "Helmond",
+    "fy": "Helmond",
+    "item": "Q9844",
+    "nl": "Helmond",
+    "value": "0794"
+  },
+  {
+    "en": "Enschede",
+    "fy": "Ynskedee",
+    "item": "Q10002",
+    "nl": "Enschede",
+    "value": "0153"
+  },
+  {
+    "en": "Haaksbergen",
+    "fy": "Haaksbergen",
+    "item": "Q10003",
+    "nl": "Haaksbergen",
+    "value": "0158"
+  },
+  {
+    "en": "Lemsterland",
+    "fy": "Lemsterlân",
+    "item": "Q840628",
+    "nl": "Lemsterland",
+    "value": "0082"
+  },
+  {
+    "en": "Opsterland",
+    "fy": "Opsterlân",
+    "item": "Q840632",
+    "nl": "Opsterland",
+    "value": "0086"
+  },
+  {
+    "en": "Deventer",
+    "fy": "Dimter",
+    "item": "Q10001",
+    "nl": "Deventer",
+    "value": "0150"
+  },
+  {
+    "en": "Ooststellingwerf",
+    "fy": "Eaststellingwerf",
+    "item": "Q259205",
+    "nl": "Ooststellingwerf",
+    "value": "0085"
+  },
+  {
+    "en": "Urk",
+    "fy": "Urk",
+    "item": "Q273746",
+    "nl": "Urk",
+    "value": "0184"
+  },
+  {
+    "en": "Gorinchem",
+    "fy": "Garkum",
+    "item": "Q244327",
+    "nl": "Gorinchem",
+    "value": "0512"
+  },
+  {
+    "en": "Eemsmond",
+    "fy": "Eemsmond",
+    "item": "Q255972",
+    "nl": "Eemsmond",
+    "value": "1651"
+  },
+  {
+    "en": "Hengelo",
+    "fy": "Hengelo",
+    "item": "Q10006",
+    "nl": "Hengelo",
+    "value": "0164"
+  },
+  {
+    "en": "Hellendoorn",
+    "fy": "Hellendoorn",
+    "item": "Q10005",
+    "nl": "Hellendoorn",
+    "value": "0163"
+  },
+  {
+    "en": "Tytsjerksteradiel",
+    "fy": "Tytsjerksteradiel",
+    "item": "Q840636",
+    "nl": "Tietjerksteradeel",
+    "value": "0737"
+  },
+  {
+    "en": "Boarnsterhim",
+    "fy": "Boarnsterhim",
+    "item": "Q840641",
+    "nl": "Boornsterhem",
+    "value": "0055"
+  },
+  {
+    "en": "De Marne",
+    "fy": "De Marne",
+    "item": "Q840663",
+    "nl": "De Marne",
+    "value": "1663"
+  },
+  {
+    "en": "Losser",
+    "fy": "Losser",
+    "item": "Q10015",
+    "nl": "Losser",
+    "value": "0168"
+  },
+  {
+    "en": "Oldenzaal",
+    "fy": "Oldenseal",
+    "item": "Q10016",
+    "nl": "Oldenzaal",
+    "value": "0173"
+  },
+  {
+    "en": "Olst-Wijhe",
+    "fy": "Olst-Wijhe",
+    "item": "Q10017",
+    "nl": "Olst-Wijhe",
+    "value": "1773"
+  },
+  {
+    "en": "Marum",
+    "fy": "Mearum (gemeente)",
+    "item": "Q841525",
+    "nl": "Marum",
+    "value": "0025"
+  },
+  {
+    "en": "Brummen",
+    "fy": "Brummen (gemeente)",
+    "item": "Q843895",
+    "nl": "Brummen",
+    "value": "0213"
+  },
+  {
+    "en": "Rheden",
+    "fy": "Rheden",
+    "item": "Q843899",
+    "nl": "Rheden",
+    "value": "0275"
+  },
+  {
+    "en": "Aa en Hunze",
+    "fy": "Aa en Hunze",
+    "item": "Q300665",
+    "nl": "Aa en Hunze",
+    "value": "1680"
+  },
+  {
+    "en": "Ommen",
+    "fy": "Ommen",
+    "item": "Q10018",
+    "nl": "Ommen",
+    "value": "0175"
+  },
+  {
+    "en": "Raalte",
+    "fy": "Raalte",
+    "item": "Q10019",
+    "nl": "Raalte",
+    "value": "0177"
+  },
+  {
+    "en": "Delfzijl",
+    "fy": "Delfsyl",
+    "item": "Q322986",
+    "nl": "Delfzijl",
+    "value": "0010"
+  },
+  {
+    "en": "Dronten",
+    "fy": "Dronten",
+    "item": "Q328087",
+    "nl": "Dronten",
+    "value": "0303"
+  },
+  {
+    "en": "Voorschoten",
+    "fy": "Voorschoten",
+    "item": "Q848324",
+    "nl": "Voorschoten",
+    "value": "0626"
+  },
+  {
+    "en": "Ten Boer",
+    "fy": "Ten Boer",
+    "item": "Q849566",
+    "nl": "Ten Boer",
+    "value": "0009"
+  },
+  {
+    "en": "Steenwijkerland",
+    "fy": "Stienwikerlân",
+    "item": "Q10022",
+    "nl": "Steenwijkerland",
+    "value": "1708"
+  },
+  {
+    "en": "Rijssen-Holten",
+    "fy": "Rijssen-Holten",
+    "item": "Q10020",
+    "nl": "Rijssen-Holten",
+    "value": "1742"
+  },
+  {
+    "en": "Staphorst",
+    "fy": "Staphorst",
+    "item": "Q10021",
+    "nl": "Staphorst",
+    "value": "0180"
+  },
+  {
+    "en": "Loppersum",
+    "fy": "Loppersum",
+    "item": "Q849574",
+    "nl": "Loppersum",
+    "value": "0024"
+  },
+  {
+    "en": "Gaasterlân-Sleat",
+    "fy": "Gaasterlân-Sleat",
+    "item": "Q850707",
+    "nl": "Gaasterland-Sloten",
+    "value": "0653"
+  },
+  {
+    "en": "Lisse",
+    "fy": "Lisse",
+    "item": "Q332730",
+    "nl": "Lisse",
+    "value": "0553"
+  },
+  {
+    "en": "Achtkarspelen",
+    "fy": "Achtkarspelen",
+    "item": "Q341024",
+    "nl": "Achtkarspelen",
+    "value": "0059"
+  },
+  {
+    "en": "Tubbergen",
+    "fy": "Tubbergen",
+    "item": "Q10023",
+    "nl": "Tubbergen",
+    "value": "0183"
+  },
+  {
+    "en": "Twenterand",
+    "fy": "Twinterâne",
+    "item": "Q10024",
+    "nl": "Twenterand",
+    "value": "1700"
+  },
+  {
+    "en": "Wierden",
+    "fy": "Wierden",
+    "item": "Q10025",
+    "nl": "Wierden",
+    "value": "0189"
+  },
+  {
+    "en": "het Bildt",
+    "fy": "it Bilt",
+    "item": "Q850722",
+    "nl": "het Bildt",
+    "value": "0063"
+  },
+  {
+    "en": "Dongeradeel",
+    "fy": "Dongeradiel",
+    "item": "Q851299",
+    "nl": "Dongeradeel",
+    "value": "0058"
+  },
+  {
+    "en": "Bunschoten",
+    "fy": "Bunskoat",
+    "item": "Q10034",
+    "nl": "Bunschoten",
+    "value": "0313"
+  },
+  {
+    "en": "De Bilt",
+    "fy": "De Bilt",
+    "item": "Q10035",
+    "nl": "De Bilt",
+    "value": "0310"
+  },
+  {
+    "en": "Leerdam",
+    "fy": "Leardaam",
+    "item": "Q388575",
+    "nl": "Leerdam",
+    "value": "0545"
+  },
+  {
+    "en": "Dantumadiel",
+    "fy": "Dantumadiel",
+    "item": "Q389213",
+    "nl": "Dantumadeel",
+    "value": "1891"
+  },
+  {
+    "en": "Zwartewaterland",
+    "fy": "Swartewetterlân",
     "item": "Q10026",
-    "itemLabel": "Zwartewaterland",
+    "nl": "Zwartewaterland",
     "value": "1896"
   },
   {
+    "en": "Baarn",
+    "fy": "Baarn",
+    "item": "Q10027",
+    "nl": "Baarn",
+    "value": "0308"
+  },
+  {
+    "en": "Bunnik",
+    "fy": "Bunnik",
+    "item": "Q10032",
+    "nl": "Bunnik",
+    "value": "0312"
+  },
+  {
+    "en": "Voorst",
+    "fy": "Voorst",
+    "item": "Q384772",
+    "nl": "Voorst",
+    "value": "0285"
+  },
+  {
+    "en": "Oss",
+    "fy": "Oss",
+    "item": "Q9859",
+    "nl": "Oss",
+    "value": "0828"
+  },
+  {
+    "en": "Littenseradiel",
+    "fy": "Littenseradiel",
+    "item": "Q851310",
+    "nl": "Littenseradeel",
+    "value": "0140"
+  },
+  {
+    "en": "Strijen",
+    "fy": "Strijen",
+    "item": "Q858607",
+    "nl": "Strijen",
+    "value": "0617"
+  },
+  {
+    "en": "Groningen",
+    "fy": "Grins",
+    "item": "Q892526",
+    "nl": "gemeente Groningen",
+    "value": "0014"
+  },
+  {
+    "en": "Bedum",
+    "fy": "Bedum",
+    "item": "Q461142",
+    "nl": "Bedum",
+    "value": "0005"
+  },
+  {
+    "en": "Renswoude",
+    "fy": "Renswoude",
+    "item": "Q10039",
+    "nl": "Renswoude",
+    "value": "0339"
+  },
+  {
+    "en": "Eemnes",
+    "fy": "Iemnes",
+    "item": "Q10037",
+    "nl": "Eemnes",
+    "value": "0317"
+  },
+  {
+    "en": "Menameradiel",
+    "fy": "Menameradiel",
+    "item": "Q475366",
+    "nl": "Menaldumadeel",
+    "value": "1908"
+  },
+  {
+    "en": "Wassenaar",
+    "fy": "Wassenaar",
+    "item": "Q505601",
+    "nl": "Wassenaar",
+    "value": "0629"
+  },
+  {
+    "en": "Soest",
+    "fy": "Soest",
+    "item": "Q10041",
+    "nl": "Soest",
+    "value": "0342"
+  },
+  {
+    "en": "Leusden",
+    "fy": "Leusden",
+    "item": "Q10046",
+    "nl": "Leusden",
+    "value": "0327"
+  },
+  {
+    "en": "Houten",
+    "fy": "Houten",
+    "item": "Q10044",
+    "nl": "Houten",
+    "value": "0321"
+  },
+  {
+    "en": "Goeree-Overflakkee",
+    "fy": "Goeree-Oerflakkee",
+    "item": "Q933459",
+    "nl": "Goeree-Overflakkee",
+    "value": "1924"
+  },
+  {
+    "en": "Smallingerland",
+    "fy": "Smellingerlân",
+    "item": "Q507065",
+    "nl": "Smallingerland",
+    "value": "0090"
+  },
+  {
+    "en": "Wijk bij Duurstede",
+    "fy": "Wyk by Duurstede",
+    "item": "Q10053",
+    "nl": "Wijk bij Duurstede",
+    "value": "0352"
+  },
+  {
+    "en": "Putten",
+    "fy": "Putten",
+    "item": "Q939948",
+    "nl": "Putten",
+    "value": "0273"
+  },
+  {
+    "en": "Scherpenzeel",
+    "fy": "Skerpenseel",
+    "item": "Q939964",
+    "nl": "Scherpenzeel",
+    "value": "0279"
+  },
+  {
+    "en": "Woudenberg",
+    "fy": "Wâldenberch",
+    "item": "Q10055",
+    "nl": "Woudenberg",
+    "value": "0351"
+  },
+  {
+    "en": "Zeist",
+    "fy": "Zeist",
+    "item": "Q10056",
+    "nl": "Zeist",
+    "value": "0355"
+  },
+  {
+    "en": "Aalsmeer",
+    "fy": "Aalsmear",
+    "item": "Q9897",
+    "nl": "Aalsmeer",
+    "value": "0358"
+  },
+  {
+    "en": "Kollumerland en Nieuwkruisland",
+    "fy": "Kollumerlân",
+    "item": "Q571198",
+    "nl": "Kollumerland en Nieuwkruisland",
+    "value": "0079"
+  },
+  {
+    "en": "Heerenveen",
+    "fy": "It Hearrenfean",
+    "item": "Q574558",
+    "nl": "Heerenveen",
+    "value": "0074"
+  },
+  {
+    "en": "Borsele",
+    "fy": "Borsele",
+    "item": "Q10071",
+    "nl": "Borsele",
+    "value": "0654"
+  },
+  {
+    "en": "Kapelle",
+    "fy": "Kapelle",
+    "item": "Q10074",
+    "nl": "Kapelle",
+    "value": "0678"
+  },
+  {
+    "en": "Goes",
+    "fy": "Goes",
+    "item": "Q10072",
+    "nl": "Goes",
+    "value": "0664"
+  },
+  {
+    "en": "Hulst",
+    "fy": "Hulst",
+    "item": "Q10073",
+    "nl": "Hulst",
+    "value": "0677"
+  },
+  {
+    "en": "Amstelveen",
+    "fy": "Amstelfean",
+    "item": "Q9898",
+    "nl": "Amstelveen",
+    "value": "0362"
+  },
+  {
+    "en": "Reimerswaal",
+    "fy": "Reimerswiel",
+    "item": "Q10078",
+    "nl": "Reimerswaal",
+    "value": "0703"
+  },
+  {
+    "en": "Schouwen-Duiveland",
+    "fy": "Skouwen-Duvelân",
+    "item": "Q10079",
+    "nl": "Schouwen-Duiveland",
+    "value": "1676"
+  },
+  {
+    "en": "Middelburg",
+    "fy": "Middelburch",
+    "item": "Q10076",
+    "nl": "Middelburg",
+    "value": "0687"
+  },
+  {
+    "en": "Noord-Beveland",
+    "fy": "Noard-Bevelân",
+    "item": "Q10077",
+    "nl": "Noord-Beveland",
+    "value": "1695"
+  },
+  {
+    "en": "Grootegast",
+    "fy": "Gruttegast",
+    "item": "Q605986",
+    "nl": "Grootegast",
+    "value": "0015"
+  },
+  {
+    "en": "Amsterdam",
+    "fy": "Amsterdam",
+    "item": "Q9899",
+    "nl": "Amsterdam",
+    "value": "0363"
+  },
+  {
+    "en": "Beemster",
+    "fy": "Beemster",
+    "item": "Q9900",
+    "nl": "Beemster",
+    "value": "0370"
+  },
+  {
+    "en": "Winsum",
+    "fy": "Winsum",
+    "item": "Q1025079",
+    "nl": "Winsum",
+    "value": "0053"
+  },
+  {
+    "en": "Bergen",
+    "fy": "Bergen",
+    "item": "Q9901",
+    "nl": "Bergen",
+    "value": "0373"
+  },
+  {
+    "en": "Blaricum",
+    "fy": "Blaricum",
+    "item": "Q9906",
+    "nl": "Blaricum",
+    "value": "0376"
+  },
+  {
+    "en": "Beverwijk",
+    "fy": "Beverwyk",
+    "item": "Q9905",
+    "nl": "Beverwijk",
+    "value": "0375"
+  },
+  {
+    "en": "Tholen",
+    "fy": "Toalen",
+    "item": "Q10082",
+    "nl": "Tholen",
+    "value": "0716"
+  },
+  {
+    "en": "Terneuzen",
+    "fy": "Terneuzen",
+    "item": "Q10081",
+    "nl": "Terneuzen",
+    "value": "0715"
+  },
+  {
+    "en": "Bloemendaal",
+    "fy": "Blommedaal",
+    "item": "Q9908",
+    "nl": "Bloemendaal",
+    "value": "0377"
+  },
+  {
+    "en": "Bussum",
+    "fy": "Bussum",
+    "item": "Q9909",
+    "nl": "Bussum",
+    "value": "0381"
+  },
+  {
+    "en": "Vlissingen",
+    "fy": "Flissingen",
+    "item": "Q10084",
+    "nl": "Vlissingen",
+    "value": "0718"
+  },
+  {
+    "en": "Franekeradeel",
+    "fy": "Frjentsjerteradiel",
+    "item": "Q683658",
+    "nl": "Franekeradeel",
+    "value": "0070"
+  },
+  {
+    "en": "Emmen",
+    "fy": "Emmen",
+    "item": "Q14641",
+    "nl": "Emmen",
+    "value": "0114"
+  },
+  {
+    "en": "Dordrecht",
+    "fy": "Doardt",
+    "item": "Q26421",
+    "nl": "Dordrecht",
+    "value": "0505"
+  },
+  {
+    "en": "Castricum",
+    "fy": "Kastrikum",
+    "item": "Q9910",
+    "nl": "Castricum",
+    "value": "0383"
+  },
+  {
+    "en": "Den Helder",
+    "fy": "De Helder",
+    "item": "Q9911",
+    "nl": "Den Helder",
+    "value": "0400"
+  },
+  {
+    "en": "Oldambt",
+    "fy": "Oldambt",
+    "item": "Q1347872",
+    "nl": "Oldambt",
+    "value": "1895"
+  },
+  {
+    "en": "Drechterland",
+    "fy": "Drechterlân",
+    "item": "Q9915",
+    "nl": "Drechterland",
+    "value": "0498"
+  },
+  {
+    "en": "Diemen",
+    "fy": "Diemen",
+    "item": "Q9913",
+    "nl": "Diemen",
+    "value": "0384"
+  },
+  {
+    "en": "Tilburg",
+    "fy": "Tilburch",
+    "item": "Q26430",
+    "nl": "Tilburg",
+    "value": "0855"
+  },
+  {
+    "en": "Krimpen aan den IJssel",
+    "fy": "Krimpen aan den IJssel",
+    "item": "Q739449",
+    "nl": "Krimpen aan den IJssel",
+    "value": "0542"
+  },
+  {
+    "en": "Zoetermeer",
+    "fy": "Soetermar",
+    "item": "Q26432",
+    "nl": "Zoetermeer",
+    "value": "0637"
+  },
+  {
+    "en": "Súdwest-Fryslân",
+    "fy": "Súdwest-Fryslân",
+    "item": "Q1473276",
+    "nl": "Súdwest-Fryslân",
+    "value": "1900"
+  },
+  {
+    "en": "De Fryske Marren",
+    "fy": "De Fryske Marren",
+    "item": "Q2114866",
+    "nl": "De Friese Meren",
+    "value": "1940"
+  },
+  {
+    "en": "De Fryske Marren",
+    "fy": "De Fryske Marren",
+    "item": "Q2114866",
+    "nl": "De Friese Meren",
+    "value": "1921"
+  },
+  {
+    "en": "Enkhuizen",
+    "fy": "Inkhuzen",
+    "item": "Q9918",
+    "nl": "Enkhuizen",
+    "value": "0388"
+  },
+  {
+    "en": "Edam-Volendam",
+    "fy": "Edam-Foalendam",
+    "item": "Q9917",
+    "nl": "Edam-Volendam",
+    "value": "0385"
+  },
+  {
+    "en": "Haarlem",
+    "fy": "Haarlim",
+    "item": "Q9920",
+    "nl": "Haarlem",
+    "value": "0392"
+  },
+  {
+    "en": "Haarlemmerliede en Spaarnwoude",
+    "fy": "Haarlimmerlide en Spaarnwâld",
+    "item": "Q9921",
+    "nl": "Haarlemmerliede en Spaarnwoude",
+    "value": "0393"
+  },
+  {
+    "en": "The Hague",
+    "fy": "De Haach",
+    "item": "Q36600",
+    "nl": "Den Haag",
+    "value": "0518"
+  },
+  {
+    "en": "Leeuwarden",
+    "fy": "Ljouwert",
+    "item": "Q2311189",
+    "nl": "Leeuwarden",
+    "value": "0080"
+  },
+  {
+    "en": "Harlingen",
+    "fy": "Harns",
+    "item": "Q2536628",
+    "nl": "Harlingen",
+    "value": "0072"
+  },
+  {
+    "en": "Westerveld",
+    "fy": "Westerfjild",
+    "item": "Q747920",
+    "nl": "Westerveld",
+    "value": "1701"
+  },
+  {
+    "en": "Bronckhorst",
+    "fy": "Bronckhorst",
+    "item": "Q747999",
+    "nl": "Bronckhorst",
+    "value": "1876"
+  },
+  {
+    "en": "Heemskerk",
+    "fy": "Hiemstsjerk",
+    "item": "Q9926",
+    "nl": "Heemskerk",
+    "value": "0396"
+  },
+  {
+    "en": "Haarlemmermeer",
+    "fy": "Haarlimmermar",
+    "item": "Q9924",
+    "nl": "Haarlemmermeer",
+    "value": "0394"
+  },
+  {
+    "en": "Ferwerderadiel",
+    "fy": "Ferwerderadiel",
+    "item": "Q750772",
+    "nl": "Ferwerderadeel",
+    "value": "1722"
+  },
+  {
+    "en": "Weststellingwerf",
+    "fy": "Weststellingwerf",
+    "item": "Q753913",
+    "nl": "Weststellingwerf",
+    "value": "0098"
+  },
+  {
+    "en": "Nijmegen",
+    "fy": "Nymwegen",
+    "item": "Q47887",
+    "nl": "Nijmegen",
+    "value": "0268"
+  },
+  {
+    "en": "Leeuwarderadeel",
+    "fy": "Ljouwerteradiel",
+    "item": "Q778989",
+    "nl": "Leeuwarderadeel",
+    "value": "0081"
+  },
+  {
+    "en": "Leiden",
+    "fy": "Leien",
+    "item": "Q43631",
+    "nl": "Leiden",
+    "value": "0546"
+  },
+  {
+    "en": "Harderwijk",
+    "fy": "Hurderwyk",
+    "item": "Q58931",
+    "nl": "Harderwijk",
+    "value": "0243"
+  },
+  {
+    "en": "Noordenveld",
+    "fy": "Noardenfjild",
+    "item": "Q835083",
+    "nl": "Noordenveld",
+    "value": "1699"
+  },
+  {
+    "en": "Leek",
+    "fy": "De Like",
+    "item": "Q835096",
+    "nl": "Leek",
+    "value": "0022"
+  },
+  {
+    "en": "De Wolden",
+    "fy": "De Wolden",
+    "item": "Q835108",
+    "nl": "De Wolden",
+    "value": "1690"
+  },
+  {
+    "en": "Meppel",
+    "fy": "Meppel",
+    "item": "Q60425",
+    "nl": "Meppel",
+    "value": "0119"
+  },
+  {
+    "en": "Coevorden",
+    "fy": "Coevorden",
+    "item": "Q60453",
+    "nl": "Coevorden",
+    "value": "0109"
+  },
+  {
+    "en": "Vlagtwedde",
+    "fy": "Vlagtwedde (gemeente)",
+    "item": "Q840460",
+    "nl": "Vlagtwedde",
+    "value": "0048"
+  },
+  {
+    "en": "Borger-Odoorn",
+    "fy": "Borger-Odoorn",
+    "item": "Q835118",
+    "nl": "Borger-Odoorn",
+    "value": "1681"
+  },
+  {
+    "en": "Midden-Drenthe",
+    "fy": "Midden-Drinte",
+    "item": "Q835125",
+    "nl": "Midden-Drenthe",
+    "value": "1731"
+  },
+  {
+    "en": "Tynaarlo",
+    "fy": "Tynaarlo",
+    "item": "Q840457",
+    "nl": "Tynaarlo",
+    "value": "1730"
+  },
+  {
+    "en": "Stein",
+    "item": "Q9780",
+    "nl": "Stein",
+    "value": "0971"
+  },
+  {
+    "en": "Sittard-Geleen",
+    "item": "Q9781",
+    "nl": "Sittard-Geleen",
+    "value": "1883"
+  },
+  {
+    "en": "Onderbanken",
+    "item": "Q9786",
+    "nl": "Onderbanken",
+    "value": "0881"
+  },
+  {
+    "en": "Nuth",
+    "item": "Q9787",
+    "nl": "Nuth",
+    "value": "0951"
+  },
+  {
+    "en": "Roerdalen",
+    "item": "Q9784",
+    "nl": "Roerdalen",
+    "value": "1669"
+  },
+  {
+    "en": "Peel en Maas",
+    "item": "Q9785",
+    "nl": "Peel en Maas",
+    "value": "1894"
+  },
+  {
+    "en": "Mook en Middelaar",
+    "item": "Q9791",
+    "nl": "Mook en Middelaar",
+    "value": "0944"
+  },
+  {
+    "en": "Nederweert",
+    "item": "Q9789",
+    "nl": "Nederweert",
+    "value": "0946"
+  },
+  {
+    "en": "Landgraaf",
+    "item": "Q9795",
+    "nl": "Landgraaf",
+    "value": "0882"
+  },
+  {
+    "en": "Maasgouw",
+    "item": "Q9792",
+    "nl": "Maasgouw",
+    "value": "1641"
+  },
+  {
+    "en": "Leudal",
+    "item": "Q9793",
+    "nl": "Leudal",
+    "value": "1640"
+  },
+  {
+    "en": "Horst aan de Maas",
+    "item": "Q9797",
+    "nl": "Horst aan de Maas",
+    "value": "1507"
+  },
+  {
+    "en": "Echt-Susteren",
+    "item": "Q9802",
+    "nl": "Echt-Susteren",
+    "value": "1711"
+  },
+  {
+    "en": "Brunssum",
+    "item": "Q9803",
+    "nl": "Brunssum",
+    "value": "0899"
+  },
+  {
+    "en": "Gennep",
+    "item": "Q9800",
+    "nl": "Gennep",
+    "value": "0907"
+  },
+  {
+    "en": "Bergen",
+    "item": "Q9804",
+    "nl": "Bergen",
+    "value": "0893"
+  },
+  {
+    "en": "Beesel",
+    "item": "Q9805",
+    "nl": "Beesel",
+    "value": "0889"
+  },
+  {
+    "en": "Asten",
+    "item": "Q9810",
+    "nl": "Asten",
+    "value": "0743"
+  },
+  {
+    "en": "Baarle-Nassau",
+    "item": "Q9811",
+    "nl": "Baarle-Nassau",
+    "value": "0744"
+  },
+  {
+    "en": "Aalburg",
+    "item": "Q9808",
+    "nl": "Aalburg",
+    "value": "0738"
+  },
+  {
+    "en": "Alphen-Chaam",
+    "item": "Q9809",
+    "nl": "Alphen-Chaam",
+    "value": "1723"
+  },
+  {
+    "en": "Bergen op Zoom",
+    "item": "Q9814",
+    "nl": "Bergen op Zoom",
+    "value": "0748"
+  },
+  {
+    "en": "Bernheze",
+    "item": "Q9815",
+    "nl": "Bernheze",
+    "value": "1721"
+  },
+  {
+    "en": "Bergeijk",
+    "item": "Q9812",
+    "nl": "Bergeijk",
+    "value": "1724"
+  },
+  {
+    "en": "Boekel",
+    "item": "Q9818",
+    "nl": "Boekel",
+    "value": "0755"
+  },
+  {
+    "en": "Boxmeer",
+    "item": "Q9819",
+    "nl": "Boxmeer",
+    "value": "0756"
+  },
+  {
+    "en": "Best",
+    "item": "Q9816",
+    "nl": "Best",
+    "value": "0753"
+  },
+  {
+    "en": "Bladel",
+    "item": "Q9817",
+    "nl": "Bladel",
+    "value": "1728"
+  },
+  {
+    "en": "Breda",
+    "item": "Q9822",
+    "nl": "Breda",
+    "value": "0758"
+  },
+  {
+    "en": "Cranendonck",
+    "item": "Q9823",
+    "nl": "Cranendonck",
+    "value": "1706"
+  },
+  {
+    "en": "Boxtel",
+    "item": "Q9821",
+    "nl": "Boxtel",
+    "value": "0757"
+  },
+  {
+    "en": "Cuijk",
+    "item": "Q9827",
+    "nl": "Cuijk",
+    "value": "1684"
+  },
+  {
+    "en": "Drimmelen",
+    "item": "Q9830",
+    "nl": "Drimmelen",
+    "value": "1719"
+  },
+  {
+    "en": "Eersel",
+    "item": "Q9831",
+    "nl": "Eersel",
+    "value": "0770"
+  },
+  {
+    "en": "Deurne",
+    "item": "Q9828",
+    "nl": "Deurne",
+    "value": "0762"
+  },
+  {
+    "en": "Dongen",
+    "item": "Q9829",
+    "nl": "Dongen",
+    "value": "0766"
+  },
+  {
+    "en": "Geertruidenberg",
+    "item": "Q9834",
+    "nl": "Geertruidenberg",
+    "value": "0779"
+  },
+  {
+    "en": "Geldrop-Mierlo",
+    "item": "Q9835",
+    "nl": "Geldrop-Mierlo",
+    "value": "1771"
+  },
+  {
+    "en": "Etten-Leur",
+    "item": "Q9833",
+    "nl": "Etten-Leur",
+    "value": "0777"
+  },
+  {
+    "en": "Goirle",
+    "item": "Q9838",
+    "nl": "Goirle",
+    "value": "0785"
+  },
+  {
+    "en": "Gemert-Bakel",
+    "item": "Q9836",
+    "nl": "Gemert-Bakel",
+    "value": "1652"
+  },
+  {
+    "en": "Gilze en Rijen",
+    "item": "Q9837",
+    "nl": "Gilze en Rijen",
+    "value": "0784"
+  },
+  {
+    "en": "Heeze-Leende",
+    "item": "Q9843",
+    "nl": "Heeze-Leende",
+    "value": "1658"
+  },
+  {
+    "en": "Haaren",
+    "item": "Q9840",
+    "nl": "Haaren",
+    "value": "0788"
+  },
+  {
+    "en": "Halderberge",
+    "item": "Q9841",
+    "nl": "Halderberge",
+    "value": "1655"
+  },
+  {
+    "en": "Hilvarenbeek",
+    "item": "Q9846",
+    "nl": "Hilvarenbeek",
+    "value": "0798"
+  },
+  {
+    "en": "Heusden",
+    "item": "Q9845",
+    "nl": "Heusden",
+    "value": "0797"
+  },
+  {
+    "en": "Loon op Zand",
+    "item": "Q9850",
+    "nl": "Loon op Zand",
+    "value": "0809"
+  },
+  {
+    "en": "Laarbeek",
+    "item": "Q9848",
+    "nl": "Laarbeek",
+    "value": "1659"
+  },
+  {
+    "en": "Landerd",
+    "item": "Q9849",
+    "nl": "Landerd",
+    "value": "1685"
+  },
+  {
+    "en": "Moerdijk",
+    "item": "Q9854",
+    "nl": "Moerdijk",
+    "value": "1709"
+  },
+  {
+    "en": "Nuenen, Gerwen en Nederwetten",
+    "item": "Q9855",
+    "nl": "Nuenen, Gerwen en Nederwetten",
+    "value": "0820"
+  },
+  {
+    "en": "Mill en Sint Hubert",
+    "item": "Q9853",
+    "nl": "Mill en Sint Hubert",
+    "value": "0815"
+  },
+  {
+    "en": "Oosterhout",
+    "item": "Q9858",
+    "nl": "Oosterhout",
+    "value": "0826"
+  },
+  {
+    "en": "Oirschot",
+    "item": "Q9856",
+    "nl": "Oirschot",
+    "value": "0823"
+  },
+  {
+    "en": "Oisterwijk",
+    "item": "Q9857",
+    "nl": "Oisterwijk",
+    "value": "0824"
+  },
+  {
+    "en": "Rucphen",
+    "item": "Q9862",
+    "nl": "Rucphen",
+    "value": "0840"
+  },
+  {
+    "en": "Reusel-De Mierden",
+    "item": "Q9860",
+    "nl": "Reusel-De Mierden",
+    "value": "1667"
+  },
+  {
+    "en": "Roosendaal",
+    "item": "Q9861",
+    "nl": "Roosendaal",
+    "value": "1674"
+  },
+  {
+    "en": "Sint-Michielsgestel",
+    "item": "Q9866",
+    "nl": "Sint-Michielsgestel",
+    "value": "0845"
+  },
+  {
+    "en": "Sint-Oedenrode",
+    "item": "Q9867",
+    "nl": "Sint-Oedenrode",
+    "value": "0846"
+  },
+  {
+    "en": "Schijndel",
+    "item": "Q9864",
+    "nl": "Schijndel",
+    "value": "0844"
+  },
+  {
+    "en": "Sint Anthonis",
+    "item": "Q9865",
+    "nl": "Sint Anthonis",
+    "value": "1702"
+  },
+  {
+    "en": "Steenbergen",
+    "item": "Q9870",
+    "nl": "Steenbergen",
+    "value": "0851"
+  },
+  {
+    "en": "Someren",
+    "item": "Q9868",
+    "nl": "Someren",
+    "value": "0847"
+  },
+  {
+    "en": "Son en Breugel",
+    "item": "Q9869",
+    "nl": "Son en Breugel",
+    "value": "0848"
+  },
+  {
+    "en": "Veghel",
+    "item": "Q9874",
+    "nl": "Veghel",
+    "value": "0860"
+  },
+  {
+    "en": "Veldhoven",
+    "item": "Q9875",
+    "nl": "Veldhoven",
+    "value": "0861"
+  },
+  {
+    "en": "Uden",
+    "item": "Q9872",
+    "nl": "Uden",
+    "value": "0856"
+  },
+  {
+    "en": "Valkenswaard",
+    "item": "Q9873",
+    "nl": "Valkenswaard",
+    "value": "0858"
+  },
+  {
+    "en": "Vught",
+    "item": "Q9876",
+    "nl": "Vught",
+    "value": "0865"
+  },
+  {
+    "en": "Waalre",
+    "item": "Q9877",
+    "nl": "Waalre",
+    "value": "0866"
+  },
+  {
+    "en": "Woudrichem",
+    "item": "Q9882",
+    "nl": "Woudrichem",
+    "value": "0874"
+  },
+  {
+    "en": "Zundert",
+    "item": "Q9883",
+    "nl": "Zundert",
+    "value": "0879"
+  },
+  {
+    "en": "Werkendam",
+    "item": "Q9880",
+    "nl": "Werkendam",
+    "value": "0870"
+  },
+  {
+    "en": "Woensdrecht",
+    "item": "Q9881",
+    "nl": "Woensdrecht",
+    "value": "0873"
+  },
+  {
+    "en": "De Ronde Venen",
+    "item": "Q10036",
+    "nl": "De Ronde Venen",
+    "value": "0736"
+  },
+  {
+    "en": "Stichtse Vecht",
+    "item": "Q10042",
+    "nl": "Stichtse Vecht",
+    "value": "1904"
+  },
+  {
+    "en": "Utrechtse Heuvelrug",
+    "item": "Q10043",
+    "nl": "Utrechtse Heuvelrug",
+    "value": "1581"
+  },
+  {
+    "en": "Rhenen",
+    "item": "Q10040",
+    "nl": "Rhenen",
+    "value": "0340"
+  },
+  {
+    "en": "Lopik",
+    "item": "Q10047",
+    "nl": "Lopik",
+    "value": "0331"
+  },
+  {
+    "en": "IJsselstein",
+    "item": "Q10045",
+    "nl": "IJsselstein",
+    "value": "0353"
+  },
+  {
+    "en": "Nieuwegein",
+    "item": "Q10050",
+    "nl": "Nieuwegein",
+    "value": "0356"
+  },
+  {
+    "en": "Oudewater",
+    "item": "Q10051",
+    "nl": "Oudewater",
+    "value": "0589"
+  },
+  {
+    "en": "Montfoort",
+    "item": "Q10048",
+    "nl": "Montfoort",
+    "value": "0335"
+  },
+  {
+    "en": "Vianen",
+    "item": "Q10052",
+    "nl": "Vianen",
+    "value": "0620"
+  },
+  {
+    "en": "Veere",
+    "item": "Q10083",
+    "nl": "Veere",
+    "value": "0717"
+  },
+  {
+    "en": "Sluis",
+    "item": "Q10080",
+    "nl": "Sluis",
+    "value": "1714"
+  },
+  {
+    "en": "Ede",
+    "item": "Q26555",
+    "nl": "Ede",
+    "value": "0228"
+  },
+  {
+    "en": "Westland",
+    "item": "Q26556",
+    "nl": "Westland",
+    "value": "1783"
+  },
+  {
+    "en": "Berkelland",
+    "item": "Q47104",
+    "nl": "Berkelland",
+    "value": "1859"
+  },
+  {
+    "en": "Hattem",
+    "item": "Q58797",
+    "nl": "Hattem",
+    "value": "0244"
+  },
+  {
+    "en": "Winterswijk",
+    "item": "Q72974",
+    "nl": "Winterswijk",
+    "value": "0294"
+  },
+  {
+    "en": "Veendam",
+    "item": "Q73065",
+    "nl": "Veendam",
+    "value": "0047"
+  },
+  {
+    "en": "Stadskanaal",
+    "item": "Q73074",
+    "nl": "Stadskanaal",
+    "value": "0037"
+  },
+  {
+    "en": "Oegstgeest",
+    "item": "Q94747",
+    "nl": "Oegstgeest",
+    "value": "0579"
+  },
+  {
+    "en": "Leidschendam-Voorburg",
+    "item": "Q112675",
+    "nl": "Leidschendam-Voorburg",
+    "value": "1916"
+  },
+  {
+    "en": "Doesburg",
+    "item": "Q165736",
+    "nl": "Doesburg",
+    "value": "0221"
+  },
+  {
+    "en": "Geldermalsen",
+    "item": "Q171536",
+    "nl": "Geldermalsen",
+    "value": "0236"
+  },
+  {
+    "en": "Zederik",
+    "item": "Q184288",
+    "nl": "Zederik",
+    "value": "0707"
+  },
+  {
+    "en": "Zevenaar",
+    "item": "Q197050",
+    "nl": "Zevenaar",
+    "value": "0299"
+  },
+  {
+    "en": "Barendrecht",
+    "item": "Q204239",
+    "nl": "Barendrecht",
+    "value": "0489"
+  },
+  {
+    "en": "Zoeterwoude",
+    "item": "Q218259",
+    "nl": "Zoeterwoude",
+    "value": "0638"
+  },
+  {
+    "en": "Ridderkerk",
+    "item": "Q222220",
+    "nl": "Ridderkerk",
+    "value": "0597"
+  },
+  {
+    "en": "Zuidplas",
+    "item": "Q228673",
+    "nl": "Zuidplas",
+    "value": "1892"
+  },
+  {
+    "en": "Epe",
+    "item": "Q238396",
+    "nl": "Epe",
+    "value": "0232"
+  },
+  {
+    "en": "Zwijndrecht",
     "item": "Q244692",
-    "itemLabel": "Zwijndrecht",
+    "nl": "Zwijndrecht",
     "value": "0642"
   },
   {
-    "item": "Q793",
-    "itemLabel": "Zwolle",
-    "value": "0193"
+    "en": "Aalten",
+    "item": "Q275909",
+    "nl": "Aalten",
+    "value": "0197"
+  },
+  {
+    "en": "Pijnacker-Nootdorp",
+    "item": "Q281768",
+    "nl": "Pijnacker-Nootdorp",
+    "value": "1926"
+  },
+  {
+    "en": "Cromstrijen",
+    "item": "Q290475",
+    "nl": "Cromstrijen",
+    "value": "0611"
+  },
+  {
+    "en": "Rozendaal",
+    "item": "Q372592",
+    "nl": "Rozendaal",
+    "value": "0277"
+  },
+  {
+    "en": "Noordwijk",
+    "item": "Q455464",
+    "nl": "Noordwijk",
+    "value": "0575"
+  },
+  {
+    "en": "Brielle",
+    "item": "Q462663",
+    "nl": "Brielle",
+    "value": "0501"
+  },
+  {
+    "en": "Maassluis",
+    "item": "Q497130",
+    "nl": "Maassluis",
+    "value": "0556"
+  },
+  {
+    "en": "Rijswijk",
+    "item": "Q506745",
+    "nl": "Rijswijk",
+    "value": "0603"
+  },
+  {
+    "en": "Rijnwaarden",
+    "item": "Q518739",
+    "nl": "Rijnwaarden",
+    "value": "0196"
+  },
+  {
+    "en": "Westervoort",
+    "item": "Q524808",
+    "nl": "Westervoort",
+    "value": "0293"
+  },
+  {
+    "en": "Hendrik-Ido-Ambacht",
+    "item": "Q538725",
+    "nl": "Hendrik-Ido-Ambacht",
+    "value": "0531"
+  },
+  {
+    "en": "Overbetuwe",
+    "item": "Q600871",
+    "nl": "Overbetuwe",
+    "value": "1734"
+  },
+  {
+    "en": "Duiven",
+    "item": "Q613989",
+    "nl": "Duiven",
+    "value": "0226"
+  },
+  {
+    "en": "Heerde",
+    "item": "Q615491",
+    "nl": "Heerde",
+    "value": "0246"
+  },
+  {
+    "en": "West Maas en Waal",
+    "item": "Q658081",
+    "nl": "West Maas en Waal",
+    "value": "0668"
+  },
+  {
+    "en": "Renkum",
+    "item": "Q691725",
+    "nl": "Renkum",
+    "value": "0274"
+  },
+  {
+    "en": "Haren",
+    "item": "Q691754",
+    "nl": "Haren",
+    "value": "0017"
+  },
+  {
+    "en": "Capelle aan den IJssel",
+    "item": "Q734860",
+    "nl": "Capelle aan den IJssel",
+    "value": "0502"
+  },
+  {
+    "en": "Alblasserdam",
+    "item": "Q736131",
+    "nl": "Alblasserdam",
+    "value": "0482"
+  },
+  {
+    "en": "Waalwijk",
+    "item": "Q745038",
+    "nl": "Waalwijk",
+    "value": "0867"
+  },
+  {
+    "en": "Bellingwedde",
+    "item": "Q747965",
+    "nl": "Bellingwedde",
+    "value": "0007"
+  },
+  {
+    "en": "Sliedrecht",
+    "item": "Q750760",
+    "nl": "Sliedrecht",
+    "value": "0610"
+  },
+  {
+    "en": "Ermelo",
+    "item": "Q753920",
+    "nl": "Ermelo",
+    "value": "0233"
+  },
+  {
+    "en": "Oud-Beijerland",
+    "item": "Q795623",
+    "nl": "Oud-Beijerland",
+    "value": "0584"
+  },
+  {
+    "en": "Culemborg",
+    "item": "Q816699",
+    "nl": "Culemborg",
+    "value": "0216"
+  },
+  {
+    "en": "Waddinxveen",
+    "item": "Q826048",
+    "nl": "Waddinxveen",
+    "value": "0627"
+  },
+  {
+    "en": "Hellevoetsluis",
+    "item": "Q826130",
+    "nl": "Hellevoetsluis",
+    "value": "0530"
+  },
+  {
+    "en": "Noordwijkerhout",
+    "item": "Q848988",
+    "nl": "Noordwijkerhout",
+    "value": "0576"
+  },
+  {
+    "en": "Slochteren",
+    "item": "Q850211",
+    "nl": "Slochteren",
+    "value": "0040"
+  },
+  {
+    "en": "Beuningen",
+    "item": "Q851244",
+    "nl": "Beuningen",
+    "value": "0209"
+  },
+  {
+    "en": "Binnenmaas",
+    "item": "Q863961",
+    "nl": "Binnenmaas",
+    "value": "0585"
+  },
+  {
+    "en": "Bodegraven-Reeuwijk",
+    "item": "Q889423",
+    "nl": "Bodegraven-Reeuwijk",
+    "value": "1901"
+  },
+  {
+    "en": "Maasdriel",
+    "item": "Q904544",
+    "nl": "Maasdriel",
+    "value": "0263"
+  },
+  {
+    "en": "Nunspeet",
+    "item": "Q931997",
+    "nl": "Nunspeet",
+    "value": "0302"
+  },
+  {
+    "en": "Oude IJsselstreek",
+    "item": "Q932031",
+    "nl": "Oude IJsselstreek",
+    "value": "1509"
+  },
+  {
+    "en": "Oldebroek",
+    "item": "Q932042",
+    "nl": "Oldebroek",
+    "value": "0269"
+  },
+  {
+    "en": "Lochem",
+    "item": "Q932058",
+    "nl": "Lochem",
+    "value": "0262"
+  },
+  {
+    "en": "Menterwolde",
+    "item": "Q932066",
+    "nl": "Menterwolde",
+    "value": "1987"
+  },
+  {
+    "en": "Pekela",
+    "item": "Q932077",
+    "nl": "Pekela",
+    "value": "0765"
+  },
+  {
+    "en": "Neerijnen",
+    "item": "Q932089",
+    "nl": "Neerijnen",
+    "value": "0304"
+  },
+  {
+    "en": "Hillegom",
+    "item": "Q932116",
+    "nl": "Hillegom",
+    "value": "0534"
+  },
+  {
+    "en": "Druten",
+    "item": "Q932142",
+    "nl": "Druten",
+    "value": "0225"
+  },
+  {
+    "en": "Heumen",
+    "item": "Q932155",
+    "nl": "Heumen",
+    "value": "0252"
+  },
+  {
+    "en": "Papendrecht",
+    "item": "Q934511",
+    "nl": "Papendrecht",
+    "value": "0590"
+  },
+  {
+    "en": "Albrandswaard",
+    "item": "Q934525",
+    "nl": "Albrandswaard",
+    "value": "0613"
+  },
+  {
+    "en": "Westvoorne",
+    "item": "Q935657",
+    "nl": "Westvoorne",
+    "value": "0614"
+  },
+  {
+    "en": "Nieuwkoop",
+    "item": "Q948866",
+    "nl": "Nieuwkoop",
+    "value": "0569"
+  },
+  {
+    "en": "Rijnwoude",
+    "item": "Q952183",
+    "nl": "Rijnwoude",
+    "value": "1672"
+  },
+  {
+    "en": "Korendijk",
+    "item": "Q952194",
+    "nl": "Korendijk",
+    "value": "0588"
+  },
+  {
+    "en": "Midden-Delfland",
+    "item": "Q952206",
+    "nl": "Midden-Delfland",
+    "value": "1842"
+  },
+  {
+    "en": "Lingewaard",
+    "item": "Q952939",
+    "nl": "Lingewaard",
+    "value": "1705"
+  },
+  {
+    "en": "Lingewaal",
+    "item": "Q952948",
+    "nl": "Lingewaal",
+    "value": "0733"
+  },
+  {
+    "en": "Montferland",
+    "item": "Q952963",
+    "nl": "Montferland",
+    "value": "1955"
+  },
+  {
+    "en": "Neder-Betuwe",
+    "item": "Q952997",
+    "nl": "Neder-Betuwe",
+    "value": "1740"
+  },
+  {
+    "en": "Hardinxveld-Giessendam",
+    "item": "Q953012",
+    "nl": "Hardinxveld-Giessendam",
+    "value": "0523"
+  },
+  {
+    "en": "Leiderdorp",
+    "item": "Q1000817",
+    "nl": "Leiderdorp",
+    "value": "0547"
+  },
+  {
+    "en": "Giessenlanden",
+    "item": "Q1124998",
+    "nl": "Giessenlanden",
+    "value": "0689"
+  },
+  {
+    "en": "Lansingerland",
+    "item": "Q1144739",
+    "nl": "Lansingerland",
+    "value": "1621"
+  },
+  {
+    "en": "Oost Gelre",
+    "item": "Q1147580",
+    "nl": "Oost Gelre",
+    "value": "1586"
+  },
+  {
+    "en": "Kaag en Braassem",
+    "item": "Q1348471",
+    "nl": "Kaag en Braassem",
+    "value": "1884"
+  },
+  {
+    "en": "Teylingen",
+    "item": "Q1368003",
+    "nl": "Teylingen",
+    "value": "1525"
+  },
+  {
+    "en": "Zaltbommel",
+    "item": "Q1532373",
+    "nl": "Zaltbommel",
+    "value": "0297"
+  },
+  {
+    "en": "Molenwaard",
+    "item": "Q1943433",
+    "nl": "Molenwaard",
+    "value": "1927"
+  },
+  {
+    "en": "Rotterdam",
+    "item": "Q2680952",
+    "nl": "Rotterdam",
+    "value": "0599"
+  },
+  {
+    "en": "Hardenberg",
+    "item": "Q3916626",
+    "nl": "Hardenberg",
+    "value": "0160"
+  },
+  {
+    "en": "Roermond",
+    "item": "Q8167972",
+    "nl": "Roermond",
+    "value": "0957"
+  },
+  {
+    "en": "Nissewaard",
+    "item": "Q14853527",
+    "nl": "Nissewaard",
+    "value": "1930"
+  },
+  {
+    "en": "Zutphen",
+    "item": "Q15858232",
+    "nl": "Zutphen",
+    "value": "0301"
+  },
+  {
+    "en": "Krimpenerwaard",
+    "item": "Q15991891",
+    "nl": "Krimpenerwaard",
+    "value": "1931"
+  },
+  {
+    "en": "Berg en Dal",
+    "item": "Q18088965",
+    "nl": "Berg en Dal",
+    "value": "1945"
+  },
+  {
+    "en": "Berg en Dal",
+    "item": "Q18088965",
+    "nl": "Berg en Dal",
+    "value": "0241"
+  },
+  {
+    "en": "Gooise Meren",
+    "item": "Q18335889",
+    "nl": "Gooise Meren",
+    "value": "1942"
+  },
+  {
+    "en": "Kampen",
+    "item": "Q23814173",
+    "nl": "Kampen",
+    "value": "0166"
+  },
+  {
+    "en": "Muiden",
+    "item": "Q34616830",
+    "nl": "Muiden",
+    "value": "0424"
+  },
+  {
+    "en": "Bergambacht",
+    "item": "Q35159872",
+    "nl": "Bergambacht",
+    "value": "0491"
+  },
+  {
+    "en": "Wageningen",
+    "item": "Q1305",
+    "nl": "Wageningen",
+    "value": "0289"
+  },
+  {
+    "en": "Veenendaal",
+    "item": "Q1840",
+    "nl": "Veenendaal",
+    "value": "0345"
+  },
+  {
+    "en": "Eijsden-Margraten",
+    "item": "Q9766",
+    "nl": "Eijsden-Margraten",
+    "value": "1903"
+  },
+  {
+    "en": "Gulpen-Wittem",
+    "item": "Q9767",
+    "nl": "Gulpen-Wittem",
+    "value": "1729"
+  },
+  {
+    "en": "Voerendaal",
+    "item": "Q9770",
+    "nl": "Voerendaal",
+    "value": "0986"
+  },
+  {
+    "en": "Valkenburg aan de Geul",
+    "item": "Q9771",
+    "nl": "Valkenburg aan de Geul",
+    "value": "0994"
+  },
+  {
+    "en": "Weert",
+    "item": "Q9774",
+    "nl": "Weert",
+    "value": "0988"
+  },
+  {
+    "en": "Venray",
+    "item": "Q9775",
+    "nl": "Venray",
+    "value": "0984"
+  },
+  {
+    "en": "Meerssen",
+    "item": "Q9772",
+    "nl": "Meerssen",
+    "value": "0938"
+  },
+  {
+    "en": "Schinnen",
+    "item": "Q9782",
+    "nl": "Schinnen",
+    "value": "0962"
   }
 ]

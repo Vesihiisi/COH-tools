@@ -56,8 +56,20 @@ class NlGemNl(Monument):
     def update_descriptions(self):
         desc_dict = {
             "nl": "gemeentelijk monument in {}",
-            "en": "municipal monument in {}, the Netherlands"
+            "fy": "gemeentlik monumint yn {}",
+            "en": "municipal monument in {}"
         }
+        placenames = {
+        "en": "the Netherlands", "nl":"Nederland", "fy":"Nederlân"
+        }
+        for lang in desc_dict:
+            try:
+                placename = [x[lang] for x
+                                   in self.data_files["municipalities"]
+                                   if x["value"] == self.gemcode][0]
+            except (KeyError, IndexError):
+                placename = placenames[lang]
+            self.add_description(lang, desc_dict[lang].format(placename))
 
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
