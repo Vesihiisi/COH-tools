@@ -50,6 +50,13 @@ class NlGemNl(Monument):
                 "inception", {"time_value": {"year": self.bouwjaar}})
 
     def set_address(self):
+        """
+        Set Located at street address.
+
+        Validation: must contain digit.
+        Many instances of addresses within {{sorteer}} template,
+        so we strip those first.
+        """
         street_address = False
         if self.has_non_empty_attribute("adres"):
             if len(utils.wparser.parse(self.adres).filter_templates()) == 1:
@@ -130,7 +137,7 @@ class NlGemNl(Monument):
         self.set_image()
         self.set_coords(("lat", "lon"))
         self.set_commonscat()
-        # self.set_architect()
+        self.set_architect()
         self.set_inception()
         self.set_address()
-        # self.set_wd_item(self.find_matching_wikidata(mapping))
+        self.set_wd_item(self.find_matching_wikidata(mapping))
