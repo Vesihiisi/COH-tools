@@ -44,8 +44,20 @@ class NlGemNl(Monument):
                 if utils.contains_digit(self.adres):
                     street_address = self.adres
         if street_address:
-            print(street_address)
             self.add_statement("located_street", street_address)
+
+    def set_heritage_id(self):
+        self.add_statement("wlm_id", self.monuments_all_id)
+
+    def update_labels(self):
+        label = utils.remove_markup(self.object)
+        label = self.add_label("nl", label)
+
+    def update_descriptions(self):
+        desc_dict = {
+            "nl": "gemeentelijk monument in {}",
+            "en": "municipal monument in {}, the Netherlands"
+        }
 
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
@@ -53,6 +65,9 @@ class NlGemNl(Monument):
         self.set_monuments_all_id()
         self.set_changed()
         self.wlm_source = self.create_wlm_source(self.monuments_all_id)
+        self.set_heritage_id()
+        self.update_labels()
+        self.update_descriptions()
         self.set_country()
         self.set_adm_location()
         self.set_image()
