@@ -50,8 +50,12 @@ class NlGemNl(Monument):
         self.add_statement("wlm_id", self.monuments_all_id)
 
     def update_labels(self):
-        label = utils.remove_markup(self.object)
-        label = self.add_label("nl", label)
+        if self.object == "":
+            label_material = self.adres
+        else:
+            label_material = self.object
+        self.add_label("nl",
+                       utils.remove_markup(label_material))
 
     def update_descriptions(self):
         desc_dict = {
@@ -87,7 +91,7 @@ class NlGemNl(Monument):
         self.set_image()
         self.set_coords(("lat", "lon"))
         self.set_commonscat()
-        self.set_architect()
+        # self.set_architect()
         self.set_inception()
         self.set_address()
-        self.set_wd_item(self.find_matching_wikidata(mapping))
+        # self.set_wd_item(self.find_matching_wikidata(mapping))
