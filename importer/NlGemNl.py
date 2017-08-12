@@ -19,14 +19,33 @@ class NlGemNl(Monument):
 
     def set_architect(self):
         if self.has_non_empty_attribute("architect"):
-            print(self.architect)
             if utils.count_wikilinks(self.architect) > 0:
                 wikilinks = utils.get_wikilinks(self.architect)
                 for wl in wikilinks:
                     arch_q = utils.q_from_wikipedia("nl", wl.title)
                     if arch_q:
                         self.add_statement("architect", arch_q)
-                        print(arch_q)
+
+    def set_inception(self):
+        if (self.has_non_empty_attribute("bouwjaar") and
+           utils.legit_year(self.bouwjaar)):
+            self.add_statement(
+                "inception", {"time_value": {"year": self.bouwjaar}})
+
+    def set_address(self):
+        street_address = False
+        if self.has_non_empty_attribute("adres"):
+            if len(utils.wparser.parse(self.adres).filter_templates()) == 1:
+                address_try = utils.wparser.parse(
+                    self.adres).filter_templates()[0].params[0]
+                if utils.contains_digit(address_try):
+                    street_address = address_try
+            else:
+                if utils.contains_digit(self.adres):
+                    street_address = self.adres
+        if street_address:
+            print(street_address)
+            self.add_statement("located_street", street_address)
 
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
@@ -40,3 +59,5 @@ class NlGemNl(Monument):
         self.set_coords(("lat", "lon"))
         self.set_commonscat()
         self.set_architect()
+        self.set_inception()
+        self.set_address()
