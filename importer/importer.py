@@ -4,6 +4,7 @@ from AtDe import AtDe
 from DkBygningDa import DkBygningDa
 from DkFortidsDa import DkFortidsDa
 from EeEt import EeEt
+from CoEs import CoEs
 from HuHu import HuHu
 from IeEn import IeEn
 from NoNo import NoNo
@@ -89,6 +90,7 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                    "monuments_xk_(sq)": {"class": XkSq, "data_files": {}},
                    "monuments_ie_(en)": {"class": IeEn, "data_files":{"counties": "ireland_counties.json"}},
                    "monuments_za_(en)": {"class": ZaEn, "data_files": {}},
+                   "monuments_co_(es)": {"class": CoEs, "data_files": {"departments":"colombia_departments.json"}},
                    "monuments_cm_(fr)": {"class": CmFr, "data_files": {}},
                    "monuments_at_(de)": {"class": AtDe, "data_files": {"municipalities":
                                                                        "austria_municipalities.json"},
