@@ -6,6 +6,7 @@ from DkFortidsDa import DkFortidsDa
 from EeEt import EeEt
 from HuHu import HuHu
 from IeEn import IeEn
+from KeEn import KeEn
 from NoNo import NoNo
 from PlPl import PlPl
 from PtPt import PtPt
@@ -84,6 +85,7 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                                                "se-ship_(sv)_functions.json"}},
                    "monuments_cz_(cs)": {"class": CzCs, "data_files": {}},
                    "monuments_hu_(hu)": {"class": HuHu, "data_files": {}},
+                   "monuments_ke_(en)": {"class": KeEn, "data_files": {}},
                    "monuments_pt_(pt)": {"class": PtPt, "data_files": {}},
                    "monuments_ro_(ro)": {"class": RoRo, "data_files": {}},
                    "monuments_xk_(sq)": {"class": XkSq, "data_files": {}},
