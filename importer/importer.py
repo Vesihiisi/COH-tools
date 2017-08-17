@@ -7,7 +7,6 @@ from EeEt import EeEt
 from HuHu import HuHu
 from IeEn import IeEn
 from NoNo import NoNo
-from PlPl import PlPl
 from PtPt import PtPt
 from RoRo import RoRo
 from SeArbetslSv import SeArbetslSv
@@ -88,7 +87,7 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                    "monuments_ro_(ro)": {"class": RoRo, "data_files": {}},
                    "monuments_xk_(sq)": {"class": XkSq, "data_files": {}},
                    "monuments_ie_(en)": {"class": IeEn, "data_files":{"counties": "ireland_counties.json"}},
-                   "monuments_za_(en)": {"class": ZaEn, "data_files": {}},
+                   "monuments_za_(en)": {"class": ZaEn, "data_files": {"settlements":"south_africa_settlements.json", "provinces":"south_africa_provinces.json", "administrative": "south_africa_administrative.json"}},
                    "monuments_cm_(fr)": {"class": CmFr, "data_files": {}},
                    "monuments_at_(de)": {"class": AtDe, "data_files": {"municipalities":
                                                                        "austria_municipalities.json"},
@@ -98,8 +97,6 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                    "monuments_dk-bygninger_(da)": {"class": DkBygningDa,
                                                    "data_files": {},
                                                    "subclass_downloads": {"settlement": "Q486972"}},
-                   "monuments_pl_(pl)": {"class": PlPl,
-                                         "data_files": {"settlements": "poland_settlements.json"}},
                    "monuments_dk-fortidsminder_(da)": {"class": DkFortidsDa,
                                                        "data_files": {
                                                            "types": "dk-fortidsminder_(da)_types.json",

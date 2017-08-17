@@ -1,0 +1,8590 @@
+[
+  {
+    "item": "Q813857",
+    "itemLabel": "Bedford, Eastern Cape"
+  },
+  {
+    "item": "Q815085",
+    "itemLabel": "Bela-Bela"
+  },
+  {
+    "item": "Q694016",
+    "itemLabel": "Arniston"
+  },
+  {
+    "item": "Q131662",
+    "itemLabel": "Polokwane"
+  },
+  {
+    "item": "Q148289",
+    "itemLabel": "Zastron"
+  },
+  {
+    "item": "Q440672",
+    "itemLabel": "Wupperthal"
+  },
+  {
+    "item": "Q473216",
+    "itemLabel": "Fort Beaufort"
+  },
+  {
+    "item": "Q585092",
+    "itemLabel": "Jeffreys Bay"
+  },
+  {
+    "item": "Q593434",
+    "itemLabel": "Dewetsdorp"
+  },
+  {
+    "item": "Q652552",
+    "itemLabel": "Dordrecht, Eastern Cape"
+  },
+  {
+    "item": "Q676470",
+    "itemLabel": "Napier, Western Cape"
+  },
+  {
+    "item": "Q736360",
+    "itemLabel": "Springfontein"
+  },
+  {
+    "item": "Q763449",
+    "itemLabel": "Mouille Point"
+  },
+  {
+    "item": "Q808291",
+    "itemLabel": "Barkly East"
+  },
+  {
+    "item": "Q6217146",
+    "itemLabel": "Johannesburg CBD"
+  },
+  {
+    "item": "Q5468",
+    "itemLabel": "Durban"
+  },
+  {
+    "item": "Q5460",
+    "itemLabel": "Stellenbosch"
+  },
+  {
+    "item": "Q37701",
+    "itemLabel": "Bloemfontein"
+  },
+  {
+    "item": "Q3926",
+    "itemLabel": "Pretoria"
+  },
+  {
+    "item": "Q5465",
+    "itemLabel": "Cape Town"
+  },
+  {
+    "item": "Q34647",
+    "itemLabel": "Johannesburg"
+  },
+  {
+    "item": "Q3948",
+    "itemLabel": "Brits"
+  },
+  {
+    "item": "Q68594",
+    "itemLabel": "Spoegrivier"
+  },
+  {
+    "item": "Q116448",
+    "itemLabel": "Muizenberg"
+  },
+  {
+    "item": "Q138412",
+    "itemLabel": "Munster"
+  },
+  {
+    "item": "Q182049",
+    "itemLabel": "Rustenburg"
+  },
+  {
+    "item": "Q187320",
+    "itemLabel": "Kleinmond"
+  },
+  {
+    "item": "Q209533",
+    "itemLabel": "Bhisho"
+  },
+  {
+    "item": "Q209537",
+    "itemLabel": "East London"
+  },
+  {
+    "item": "Q238991",
+    "itemLabel": "Winburg"
+  },
+  {
+    "item": "Q319416",
+    "itemLabel": "Aberdeen"
+  },
+  {
+    "item": "Q269474",
+    "itemLabel": "Douglas"
+  },
+  {
+    "item": "Q125434",
+    "itemLabel": "Port Elizabeth"
+  },
+  {
+    "item": "Q378376",
+    "itemLabel": "Noordhoek, Cape Town"
+  },
+  {
+    "item": "Q379223",
+    "itemLabel": "Cato Manor"
+  },
+  {
+    "item": "Q353952",
+    "itemLabel": "Adelaide"
+  },
+  {
+    "item": "Q503056",
+    "itemLabel": "Vereeniging"
+  },
+  {
+    "item": "Q536114",
+    "itemLabel": "Carletonville"
+  },
+  {
+    "item": "Q543861",
+    "itemLabel": "Ohrigstad"
+  },
+  {
+    "item": "Q125905",
+    "itemLabel": "Kimberley"
+  },
+  {
+    "item": "Q625378",
+    "itemLabel": "Carnarvon"
+  },
+  {
+    "item": "Q580468",
+    "itemLabel": "Broederstroom"
+  },
+  {
+    "item": "Q610600",
+    "itemLabel": "Queenstown"
+  },
+  {
+    "item": "Q625374",
+    "itemLabel": "Marydale"
+  },
+  {
+    "item": "Q629274",
+    "itemLabel": "Pearly Beach"
+  },
+  {
+    "item": "Q631231",
+    "itemLabel": "Margate, KwaZulu-Natal"
+  },
+  {
+    "item": "Q726350",
+    "itemLabel": "Ashton"
+  },
+  {
+    "item": "Q636253",
+    "itemLabel": "Newlands"
+  },
+  {
+    "item": "Q638513",
+    "itemLabel": "Matatiele"
+  },
+  {
+    "item": "Q639518",
+    "itemLabel": "Midrand"
+  },
+  {
+    "item": "Q646067",
+    "itemLabel": "Bethulie"
+  },
+  {
+    "item": "Q646845",
+    "itemLabel": "Warden, Free State"
+  },
+  {
+    "item": "Q665395",
+    "itemLabel": "Ncotshane"
+  },
+  {
+    "item": "Q667463",
+    "itemLabel": "Wynberg"
+  },
+  {
+    "item": "Q370456",
+    "itemLabel": "George"
+  },
+  {
+    "item": "Q777884",
+    "itemLabel": "Caledon"
+  },
+  {
+    "item": "Q816070",
+    "itemLabel": "Bellville"
+  },
+  {
+    "item": "Q747174",
+    "itemLabel": "Bethal"
+  },
+  {
+    "item": "Q805287",
+    "itemLabel": "Ballito"
+  },
+  {
+    "item": "Q808304",
+    "itemLabel": "Barkly West"
+  },
+  {
+    "item": "Q813395",
+    "itemLabel": "Beaufort West"
+  },
+  {
+    "item": "Q761408",
+    "itemLabel": "Springs"
+  },
+  {
+    "item": "Q498225",
+    "itemLabel": "Nkandla"
+  },
+  {
+    "item": "Q251137",
+    "itemLabel": "Knysna"
+  },
+  {
+    "item": "Q614689",
+    "itemLabel": "Rivonia"
+  },
+  {
+    "item": "Q794527",
+    "itemLabel": "Shelly Beach"
+  },
+  {
+    "item": "Q818106",
+    "itemLabel": "Benoni"
+  },
+  {
+    "item": "Q211055",
+    "itemLabel": "Mahikeng"
+  },
+  {
+    "item": "Q121395",
+    "itemLabel": "Port Shepstone"
+  },
+  {
+    "item": "Q311700",
+    "itemLabel": "Witbank"
+  },
+  {
+    "item": "Q185591",
+    "itemLabel": "Pietermaritzburg"
+  },
+  {
+    "item": "Q250300",
+    "itemLabel": "Namakgale"
+  },
+  {
+    "item": "Q264014",
+    "itemLabel": "Kroonstad"
+  },
+  {
+    "item": "Q283653",
+    "itemLabel": "Soebatsfontein"
+  },
+  {
+    "item": "Q493499",
+    "itemLabel": "Nakop"
+  },
+  {
+    "item": "Q301107",
+    "itemLabel": "Belfast, Mpumalanga"
+  },
+  {
+    "item": "Q306688",
+    "itemLabel": "Abbotsdale"
+  },
+  {
+    "item": "Q310006",
+    "itemLabel": "Golela"
+  },
+  {
+    "item": "Q339531",
+    "itemLabel": "Campbell, Northern Cape"
+  },
+  {
+    "item": "Q363299",
+    "itemLabel": "Kloof"
+  },
+  {
+    "item": "Q367465",
+    "itemLabel": "Griekwastad"
+  },
+  {
+    "item": "Q454587",
+    "itemLabel": "Amanzimtoti"
+  },
+  {
+    "item": "Q742514",
+    "itemLabel": "Standerton"
+  },
+  {
+    "item": "Q493459",
+    "itemLabel": "Aurora, Western Cape"
+  },
+  {
+    "item": "Q506170",
+    "itemLabel": "Nieuwoudtville"
+  },
+  {
+    "item": "Q605167",
+    "itemLabel": "Potchefstroom"
+  },
+  {
+    "item": "Q740554",
+    "itemLabel": "Hogsback, Eastern Cape"
+  },
+  {
+    "item": "Q744437",
+    "itemLabel": "Randfontein"
+  },
+  {
+    "item": "Q807828",
+    "itemLabel": "Barberton"
+  },
+  {
+    "item": "Q667485",
+    "itemLabel": "Garies"
+  },
+  {
+    "item": "Q249969",
+    "itemLabel": "Qamata"
+  },
+  {
+    "item": "Q618063",
+    "itemLabel": "Hopetown"
+  },
+  {
+    "item": "Q743069",
+    "itemLabel": "De Aar"
+  },
+  {
+    "item": "Q68597",
+    "itemLabel": "Pampierstad"
+  },
+  {
+    "item": "Q118638",
+    "itemLabel": "Volksrust"
+  },
+  {
+    "item": "Q143395",
+    "itemLabel": "Southbroom"
+  },
+  {
+    "item": "Q184412",
+    "itemLabel": "Zeerust"
+  },
+  {
+    "item": "Q251153",
+    "itemLabel": "Schmidtsdrift"
+  },
+  {
+    "item": "Q285782",
+    "itemLabel": "Glencoe, KwaZulu-Natal"
+  },
+  {
+    "item": "Q326927",
+    "itemLabel": "Mokopane"
+  },
+  {
+    "item": "Q544201",
+    "itemLabel": "Lebowakgomo"
+  },
+  {
+    "item": "Q358762",
+    "itemLabel": "Mmabatho"
+  },
+  {
+    "item": "Q478285",
+    "itemLabel": "Vanwyksdorp"
+  },
+  {
+    "item": "Q540535",
+    "itemLabel": "Suurbraak"
+  },
+  {
+    "item": "Q600605",
+    "itemLabel": "Kalk Bay"
+  },
+  {
+    "item": "Q619523",
+    "itemLabel": "Fordsburg"
+  },
+  {
+    "item": "Q638505",
+    "itemLabel": "Redelinghuys"
+  },
+  {
+    "item": "Q667534",
+    "itemLabel": "Riviersonderend"
+  },
+  {
+    "item": "Q746576",
+    "itemLabel": "Friemersheim"
+  },
+  {
+    "item": "Q993721",
+    "itemLabel": "Germiston"
+  },
+  {
+    "item": "Q187601",
+    "itemLabel": "Hlabisa"
+  },
+  {
+    "item": "Q155456",
+    "itemLabel": "Lady Grey, Eastern Cape"
+  },
+  {
+    "item": "Q170313",
+    "itemLabel": "Nelspruit"
+  },
+  {
+    "item": "Q225041",
+    "itemLabel": "Lambert's Bay"
+  },
+  {
+    "item": "Q608877",
+    "itemLabel": "Ladybrand"
+  },
+  {
+    "item": "Q456564",
+    "itemLabel": "Llandudno, Cape Town"
+  },
+  {
+    "item": "Q504984",
+    "itemLabel": "Lulekani"
+  },
+  {
+    "item": "Q575780",
+    "itemLabel": "Upington"
+  },
+  {
+    "item": "Q644506",
+    "itemLabel": "Krugersdorp"
+  },
+  {
+    "item": "Q656049",
+    "itemLabel": "Melmoth"
+  },
+  {
+    "item": "Q786298",
+    "itemLabel": "Modder River, Northern Cape"
+  },
+  {
+    "item": "Q809120",
+    "itemLabel": "Barrydale"
+  },
+  {
+    "item": "Q1027294",
+    "itemLabel": "Newcastle"
+  },
+  {
+    "item": "Q1021157",
+    "itemLabel": "Hanover"
+  },
+  {
+    "item": "Q1013421",
+    "itemLabel": "Ulundi"
+  },
+  {
+    "item": "Q1021700",
+    "itemLabel": "Paternoster, Western Cape"
+  },
+  {
+    "item": "Q1021911",
+    "itemLabel": "McGregor, Western Cape"
+  },
+  {
+    "item": "Q1021900",
+    "itemLabel": "Somerset East"
+  },
+  {
+    "item": "Q1023254",
+    "itemLabel": "Vryheid"
+  },
+  {
+    "item": "Q1027291",
+    "itemLabel": "Vryburg"
+  },
+  {
+    "item": "Q1015631",
+    "itemLabel": "Welkom"
+  },
+  {
+    "item": "Q1054450",
+    "itemLabel": "Centurion"
+  },
+  {
+    "item": "Q1026420",
+    "itemLabel": "Sandton"
+  },
+  {
+    "item": "Q1025649",
+    "itemLabel": "Worcester"
+  },
+  {
+    "item": "Q1027521",
+    "itemLabel": "Ermelo"
+  },
+  {
+    "item": "Q1027757",
+    "itemLabel": "Calvinia"
+  },
+  {
+    "item": "Q1021731",
+    "itemLabel": "Prieska"
+  },
+  {
+    "item": "Q1030948",
+    "itemLabel": "Camperdown"
+  },
+  {
+    "item": "Q1021915",
+    "itemLabel": "Kranskop"
+  },
+  {
+    "item": "Q1017486",
+    "itemLabel": "Bushbuckridge"
+  },
+  {
+    "item": "Q1020192",
+    "itemLabel": "Uitenhage"
+  },
+  {
+    "item": "Q1013370",
+    "itemLabel": "Simon's Town"
+  },
+  {
+    "item": "Q1014910",
+    "itemLabel": "Burgersdorp"
+  },
+  {
+    "item": "Q1021715",
+    "itemLabel": "Hoedspruit"
+  },
+  {
+    "item": "Q1021722",
+    "itemLabel": "Matjiesfontein"
+  },
+  {
+    "item": "Q1021918",
+    "itemLabel": "Heidelberg, Western Cape"
+  },
+  {
+    "item": "Q1021884",
+    "itemLabel": "Stutterheim"
+  },
+  {
+    "item": "Q1025086",
+    "itemLabel": "Franschhoek"
+  },
+  {
+    "item": "Q1025965",
+    "itemLabel": "Kuruman"
+  },
+  {
+    "item": "Q1023257",
+    "itemLabel": "Swellendam"
+  },
+  {
+    "item": "Q1025657",
+    "itemLabel": "Clanwilliam"
+  },
+  {
+    "item": "Q1021891",
+    "itemLabel": "Greytown"
+  },
+  {
+    "item": "Q1013435",
+    "itemLabel": "Skukuza"
+  },
+  {
+    "item": "Q1013531",
+    "itemLabel": "Mtubatuba"
+  },
+  {
+    "item": "Q1013975",
+    "itemLabel": "Vioolsdrif"
+  },
+  {
+    "item": "Q1015647",
+    "itemLabel": "Klerksdorp"
+  },
+  {
+    "item": "Q1016100",
+    "itemLabel": "King William's Town"
+  },
+  {
+    "item": "Q1018158",
+    "itemLabel": "Butterworth, Eastern Cape"
+  },
+  {
+    "item": "Q1020914",
+    "itemLabel": "Mthatha"
+  },
+  {
+    "item": "Q1021735",
+    "itemLabel": "Jozini"
+  },
+  {
+    "item": "Q1021906",
+    "itemLabel": "De Rust"
+  },
+  {
+    "item": "Q1025654",
+    "itemLabel": "Thohoyandou"
+  },
+  {
+    "item": "Q1027839",
+    "itemLabel": "Whittlesea, Eastern Cape"
+  },
+  {
+    "item": "Q1025661",
+    "itemLabel": "Musina"
+  },
+  {
+    "item": "Q1014271",
+    "itemLabel": "Marikana"
+  },
+  {
+    "item": "Q1013366",
+    "itemLabel": "Sabie"
+  },
+  {
+    "item": "Q1013413",
+    "itemLabel": "Paulpietersburg"
+  },
+  {
+    "item": "Q1014580",
+    "itemLabel": "Ficksburg"
+  },
+  {
+    "item": "Q1018144",
+    "itemLabel": "Paarl"
+  },
+  {
+    "item": "Q1021742",
+    "itemLabel": "Senekal"
+  },
+  {
+    "item": "Q1021877",
+    "itemLabel": "Clarens, Free State"
+  },
+  {
+    "item": "Q1025682",
+    "itemLabel": "St Francis Bay"
+  },
+  {
+    "item": "Q1027286",
+    "itemLabel": "Virginia, Free State"
+  },
+  {
+    "item": "Q1013375",
+    "itemLabel": "Hout Bay"
+  },
+  {
+    "item": "Q1020378",
+    "itemLabel": "Mvezo"
+  },
+  {
+    "item": "Q1021895",
+    "itemLabel": "Riebeek West"
+  },
+  {
+    "item": "Q1027048",
+    "itemLabel": "Calitzdorp"
+  },
+  {
+    "item": "Q1164458",
+    "itemLabel": "Dannhauser"
+  },
+  {
+    "item": "Q827295",
+    "itemLabel": "Jansenville"
+  },
+  {
+    "item": "Q827319",
+    "itemLabel": "Willowmore"
+  },
+  {
+    "item": "Q841592",
+    "itemLabel": "Dwarskersbos"
+  },
+  {
+    "item": "Q1408118",
+    "itemLabel": "Tygerberg"
+  },
+  {
+    "item": "Q862013",
+    "itemLabel": "Petrus Steyn"
+  },
+  {
+    "item": "Q898384",
+    "itemLabel": "Brandvlei"
+  },
+  {
+    "item": "Q901864",
+    "itemLabel": "Braunschweig, Eastern Cape"
+  },
+  {
+    "item": "Q1341350",
+    "itemLabel": "Vredendal"
+  },
+  {
+    "item": "Q985791",
+    "itemLabel": "Mkuze"
+  },
+  {
+    "item": "Q989955",
+    "itemLabel": "Vanderbijlpark"
+  },
+  {
+    "item": "Q993112",
+    "itemLabel": "Chrissiesmeer"
+  },
+  {
+    "item": "Q994009",
+    "itemLabel": "Bultfontein"
+  },
+  {
+    "item": "Q993842",
+    "itemLabel": "Yzerfontein"
+  },
+  {
+    "item": "Q1003321",
+    "itemLabel": "De Doorns"
+  },
+  {
+    "item": "Q1003374",
+    "itemLabel": "Graafwater"
+  },
+  {
+    "item": "Q1003313",
+    "itemLabel": "Nieu-Bethesda"
+  },
+  {
+    "item": "Q1003332",
+    "itemLabel": "Moorreesburg"
+  },
+  {
+    "item": "Q1003349",
+    "itemLabel": "Villiersdorp"
+  },
+  {
+    "item": "Q2000158",
+    "itemLabel": "Ventersdorp"
+  },
+  {
+    "item": "Q1540958",
+    "itemLabel": "Grabouw"
+  },
+  {
+    "item": "Q1572867",
+    "itemLabel": "Hamburg, Eastern Cape"
+  },
+  {
+    "item": "Q1590213",
+    "itemLabel": "Macassar, Western Cape"
+  },
+  {
+    "item": "Q1992221",
+    "itemLabel": "Robertsvlei"
+  },
+  {
+    "item": "Q1937242",
+    "itemLabel": "Tulbagh"
+  },
+  {
+    "item": "Q862017",
+    "itemLabel": "Oranjeville"
+  },
+  {
+    "item": "Q891229",
+    "itemLabel": "Boksburg"
+  },
+  {
+    "item": "Q896447",
+    "itemLabel": "Braamfontein"
+  },
+  {
+    "item": "Q993220",
+    "itemLabel": "Lusikisiki"
+  },
+  {
+    "item": "Q1003335",
+    "itemLabel": "Greyton"
+  },
+  {
+    "item": "Q1003348",
+    "itemLabel": "Molteno, Eastern Cape"
+  },
+  {
+    "item": "Q1003356",
+    "itemLabel": "Okiep"
+  },
+  {
+    "item": "Q1011020",
+    "itemLabel": "Orania, Northern Cape"
+  },
+  {
+    "item": "Q1184513",
+    "itemLabel": "Delmas, Mpumalanga"
+  },
+  {
+    "item": "Q1437581",
+    "itemLabel": "Phuthaditjhaba"
+  },
+  {
+    "item": "Q1951573",
+    "itemLabel": "Mtunzini"
+  },
+  {
+    "item": "Q1528852",
+    "itemLabel": "Giyani"
+  },
+  {
+    "item": "Q1536549",
+    "itemLabel": "Leipoldtville"
+  },
+  {
+    "item": "Q1565776",
+    "itemLabel": "Wakkerstroom"
+  },
+  {
+    "item": "Q1925174",
+    "itemLabel": "Nababeep"
+  },
+  {
+    "item": "Q1992773",
+    "itemLabel": "Dysselsdorp"
+  },
+  {
+    "item": "Q1993670",
+    "itemLabel": "Hoopstad"
+  },
+  {
+    "item": "Q2011842",
+    "itemLabel": "Lutzville"
+  },
+  {
+    "item": "Q831326",
+    "itemLabel": "Bethlehem"
+  },
+  {
+    "item": "Q1002188",
+    "itemLabel": "Middelburg"
+  },
+  {
+    "item": "Q985819",
+    "itemLabel": "Richmond"
+  },
+  {
+    "item": "Q985805",
+    "itemLabel": "Wartburg"
+  },
+  {
+    "item": "Q827279",
+    "itemLabel": "Ixopo"
+  },
+  {
+    "item": "Q927822",
+    "itemLabel": "Laingsburg"
+  },
+  {
+    "item": "Q862008",
+    "itemLabel": "Paul Roux"
+  },
+  {
+    "item": "Q879903",
+    "itemLabel": "Blackheath"
+  },
+  {
+    "item": "Q894766",
+    "itemLabel": "Botrivier"
+  },
+  {
+    "item": "Q1003352",
+    "itemLabel": "Underberg"
+  },
+  {
+    "item": "Q1127739",
+    "itemLabel": "Constantia"
+  },
+  {
+    "item": "Q927671",
+    "itemLabel": "Bronkhorstspruit"
+  },
+  {
+    "item": "Q943414",
+    "itemLabel": "Vanrhynsdorp"
+  },
+  {
+    "item": "Q951161",
+    "itemLabel": "Grahamstown"
+  },
+  {
+    "item": "Q963786",
+    "itemLabel": "Sasolburg"
+  },
+  {
+    "item": "Q964666",
+    "itemLabel": "Tzaneen"
+  },
+  {
+    "item": "Q985827",
+    "itemLabel": "Estcourt"
+  },
+  {
+    "item": "Q985798",
+    "itemLabel": "Sun City, North West"
+  },
+  {
+    "item": "Q985839",
+    "itemLabel": "Pinetown"
+  },
+  {
+    "item": "Q993103",
+    "itemLabel": "Klawer"
+  },
+  {
+    "item": "Q998580",
+    "itemLabel": "Hillcrest, KwaZulu-Natal"
+  },
+  {
+    "item": "Q1003362",
+    "itemLabel": "Citrusdal"
+  },
+  {
+    "item": "Q1003369",
+    "itemLabel": "Darling"
+  },
+  {
+    "item": "Q1003353",
+    "itemLabel": "Loeriesfontein"
+  },
+  {
+    "item": "Q1003382",
+    "itemLabel": "Kommetjie"
+  },
+  {
+    "item": "Q874262",
+    "itemLabel": "Ladysmith"
+  },
+  {
+    "item": "Q933049",
+    "itemLabel": "Harding"
+  },
+  {
+    "item": "Q1082602",
+    "itemLabel": "Christiana, North West"
+  },
+  {
+    "item": "Q1150364",
+    "itemLabel": "Bochum"
+  },
+  {
+    "item": "Q1102116",
+    "itemLabel": "Clocolan"
+  },
+  {
+    "item": "Q1111613",
+    "itemLabel": "Modimolle"
+  },
+  {
+    "item": "Q1533623",
+    "itemLabel": "Prince Albert"
+  },
+  {
+    "item": "Q1613385",
+    "itemLabel": "Hermannsburg"
+  },
+  {
+    "item": "Q892830",
+    "itemLabel": "Bonnievale"
+  },
+  {
+    "item": "Q936777",
+    "itemLabel": "Bishopscourt"
+  },
+  {
+    "item": "Q1931836",
+    "itemLabel": "Middelburg"
+  },
+  {
+    "item": "Q1471757",
+    "itemLabel": "Richards Bay"
+  },
+  {
+    "item": "Q1534385",
+    "itemLabel": "Wellington"
+  },
+  {
+    "item": "Q993179",
+    "itemLabel": "Pofadder"
+  },
+  {
+    "item": "Q985813",
+    "itemLabel": "Fauresmith"
+  },
+  {
+    "item": "Q1934696",
+    "itemLabel": "Siyabuswa"
+  },
+  {
+    "item": "Q1956442",
+    "itemLabel": "Deneysville"
+  },
+  {
+    "item": "Q2006534",
+    "itemLabel": "Piketberg"
+  },
+  {
+    "item": "Q993081",
+    "itemLabel": "Hopefield"
+  },
+  {
+    "item": "Q897489",
+    "itemLabel": "Brakpan"
+  },
+  {
+    "item": "Q933028",
+    "itemLabel": "Scottburgh"
+  },
+  {
+    "item": "Q820535",
+    "itemLabel": "Smithfield, Free State"
+  },
+  {
+    "item": "Q827309",
+    "itemLabel": "Kareedouw"
+  },
+  {
+    "item": "Q985837",
+    "itemLabel": "New Hanover"
+  },
+  {
+    "item": "Q861704",
+    "itemLabel": "Petrusburg"
+  },
+  {
+    "item": "Q950305",
+    "itemLabel": "Mountain View, Gauteng"
+  },
+  {
+    "item": "Q985835",
+    "itemLabel": "Gingindlovu"
+  },
+  {
+    "item": "Q995615",
+    "itemLabel": "Mossel Bay"
+  },
+  {
+    "item": "Q1003345",
+    "itemLabel": "Elands Bay"
+  },
+  {
+    "item": "Q1003309",
+    "itemLabel": "Kleinfontein"
+  },
+  {
+    "item": "Q1003338",
+    "itemLabel": "Keimoes"
+  },
+  {
+    "item": "Q1004226",
+    "itemLabel": "Pongola"
+  },
+  {
+    "item": "Q1256430",
+    "itemLabel": "Thaba 'Nchu"
+  },
+  {
+    "item": "Q1290313",
+    "itemLabel": "Somerset West"
+  },
+  {
+    "item": "Q1233509",
+    "itemLabel": "Heilbron"
+  },
+  {
+    "item": "Q1367652",
+    "itemLabel": "Eshowe"
+  },
+  {
+    "item": "Q1395427",
+    "itemLabel": "Piet Retief, Mpumalanga"
+  },
+  {
+    "item": "Q1928316",
+    "itemLabel": "Graskop"
+  },
+  {
+    "item": "Q1996236",
+    "itemLabel": "Nongoma"
+  },
+  {
+    "item": "Q1501295",
+    "itemLabel": "Genadendal"
+  },
+  {
+    "item": "Q1517405",
+    "itemLabel": "Sophiatown"
+  },
+  {
+    "item": "Q1586262",
+    "itemLabel": "Harrismith"
+  },
+  {
+    "item": "Q1503458",
+    "itemLabel": "Howick"
+  },
+  {
+    "item": "Q2003910",
+    "itemLabel": "Alice, Eastern Cape"
+  },
+  {
+    "item": "Q1946653",
+    "itemLabel": "Mooi River"
+  },
+  {
+    "item": "Q1003314",
+    "itemLabel": "Pringle Bay"
+  },
+  {
+    "item": "Q1576076",
+    "itemLabel": "Kempton Park"
+  },
+  {
+    "item": "Q841626",
+    "itemLabel": "Struisbaai"
+  },
+  {
+    "item": "Q922360",
+    "itemLabel": "Plettenberg Bay"
+  },
+  {
+    "item": "Q951049",
+    "itemLabel": "Oudtshoorn"
+  },
+  {
+    "item": "Q993209",
+    "itemLabel": "Tarkastad"
+  },
+  {
+    "item": "Q820397",
+    "itemLabel": "Bergville"
+  },
+  {
+    "item": "Q841610",
+    "itemLabel": "Eendekuil"
+  },
+  {
+    "item": "Q841619",
+    "itemLabel": "Wepener"
+  },
+  {
+    "item": "Q849888",
+    "itemLabel": "Britstown"
+  },
+  {
+    "item": "Q862002",
+    "itemLabel": "Rouxville"
+  },
+  {
+    "item": "Q913974",
+    "itemLabel": "Fish Hoek"
+  },
+  {
+    "item": "Q917030",
+    "itemLabel": "Cathcart, Eastern Cape"
+  },
+  {
+    "item": "Q917011",
+    "itemLabel": "Umzimkulu"
+  },
+  {
+    "item": "Q985795",
+    "itemLabel": "Hibberdene"
+  },
+  {
+    "item": "Q993170",
+    "itemLabel": "Port Nolloth"
+  },
+  {
+    "item": "Q993990",
+    "itemLabel": "Velddrif"
+  },
+  {
+    "item": "Q1003379",
+    "itemLabel": "Porterville, Western Cape"
+  },
+  {
+    "item": "Q1003376",
+    "itemLabel": "Steytlerville"
+  },
+  {
+    "item": "Q1003389",
+    "itemLabel": "Touws River"
+  },
+  {
+    "item": "Q1004768",
+    "itemLabel": "Hluhluwe"
+  },
+  {
+    "item": "Q985875",
+    "itemLabel": "Parow"
+  },
+  {
+    "item": "Q1138465",
+    "itemLabel": "Cradock, Eastern Cape"
+  },
+  {
+    "item": "Q1004667",
+    "itemLabel": "Graaff-Reinet"
+  },
+  {
+    "item": "Q1265538",
+    "itemLabel": "Dundee, KwaZulu-Natal"
+  },
+  {
+    "item": "Q1339143",
+    "itemLabel": "Empangeni"
+  },
+  {
+    "item": "Q1921038",
+    "itemLabel": "Stilbaai"
+  },
+  {
+    "item": "Q1493629",
+    "itemLabel": "Gansbaai"
+  },
+  {
+    "item": "Q1983656",
+    "itemLabel": "Vrede"
+  },
+  {
+    "item": "Q1989529",
+    "itemLabel": "Nigel, Gauteng"
+  },
+  {
+    "item": "Q2219930",
+    "itemLabel": "Sannieshof"
+  },
+  {
+    "item": "Q2232441",
+    "itemLabel": "Colesberg"
+  },
+  {
+    "item": "Q2319046",
+    "itemLabel": "Pniel"
+  },
+  {
+    "item": "Q2359215",
+    "itemLabel": "Groot-Jongensfontein"
+  },
+  {
+    "item": "Q2416618",
+    "itemLabel": "Verkeerdevlei"
+  },
+  {
+    "item": "Q2463927",
+    "itemLabel": "Blyvooruitzicht"
+  },
+  {
+    "item": "Q2022406",
+    "itemLabel": "Kleinbaai"
+  },
+  {
+    "item": "Q1619054",
+    "itemLabel": "Himeville"
+  },
+  {
+    "item": "Q1708628",
+    "itemLabel": "Memel, Free State"
+  },
+  {
+    "item": "Q1750319",
+    "itemLabel": "Sutherland, Northern Cape"
+  },
+  {
+    "item": "Q1820620",
+    "itemLabel": "Langebaanweg"
+  },
+  {
+    "item": "Q1831572",
+    "itemLabel": "Goedverwacht"
+  },
+  {
+    "item": "Q1838956",
+    "itemLabel": "Infanta, Western Cape"
+  },
+  {
+    "item": "Q1863805",
+    "itemLabel": "Kliprand"
+  },
+  {
+    "item": "Q1866599",
+    "itemLabel": "Flagstaff, Eastern Cape"
+  },
+  {
+    "item": "Q1869336",
+    "itemLabel": "Grotto Bay"
+  },
+  {
+    "item": "Q1896233",
+    "itemLabel": "Phalaborwa"
+  },
+  {
+    "item": "Q2043573",
+    "itemLabel": "Alicedale"
+  },
+  {
+    "item": "Q2096887",
+    "itemLabel": "Umkomaas"
+  },
+  {
+    "item": "Q2110377",
+    "itemLabel": "Secunda, Mpumalanga"
+  },
+  {
+    "item": "Q2142207",
+    "itemLabel": "Suiderstrand"
+  },
+  {
+    "item": "Q2170906",
+    "itemLabel": "Randvaal"
+  },
+  {
+    "item": "Q2191277",
+    "itemLabel": "Tweespruit"
+  },
+  {
+    "item": "Q2282472",
+    "itemLabel": "Green Point, Cape Town"
+  },
+  {
+    "item": "Q2296366",
+    "itemLabel": "Randburg"
+  },
+  {
+    "item": "Q2312386",
+    "itemLabel": "Wolseley, Western Cape"
+  },
+  {
+    "item": "Q2315287",
+    "itemLabel": "Vanwyksvlei"
+  },
+  {
+    "item": "Q2322296",
+    "itemLabel": "Kranshoek"
+  },
+  {
+    "item": "Q2326713",
+    "itemLabel": "Hartenbos"
+  },
+  {
+    "item": "Q2331526",
+    "itemLabel": "Allanridge"
+  },
+  {
+    "item": "Q2365106",
+    "itemLabel": "Murraysburg"
+  },
+  {
+    "item": "Q2370739",
+    "itemLabel": "Fochville"
+  },
+  {
+    "item": "Q2390599",
+    "itemLabel": "Eksteenfontein"
+  },
+  {
+    "item": "Q2407036",
+    "itemLabel": "Dana Baai"
+  },
+  {
+    "item": "Q2446136",
+    "itemLabel": "Waterval Boven"
+  },
+  {
+    "item": "Q1637702",
+    "itemLabel": "Alberton"
+  },
+  {
+    "item": "Q2038408",
+    "itemLabel": "Ceres"
+  },
+  {
+    "item": "Q1613480",
+    "itemLabel": "Hermanus"
+  },
+  {
+    "item": "Q2188357",
+    "itemLabel": "Haarlem"
+  },
+  {
+    "item": "Q1676136",
+    "itemLabel": "Izingolweni"
+  },
+  {
+    "item": "Q1681268",
+    "itemLabel": "Patensie"
+  },
+  {
+    "item": "Q1689721",
+    "itemLabel": "Vredefort"
+  },
+  {
+    "item": "Q1800611",
+    "itemLabel": "Montagu"
+  },
+  {
+    "item": "Q1752035",
+    "itemLabel": "Arcadia"
+  },
+  {
+    "item": "Q2093759",
+    "itemLabel": "Victoria Bay"
+  },
+  {
+    "item": "Q2301363",
+    "itemLabel": "Springbok"
+  },
+  {
+    "item": "Q2096823",
+    "itemLabel": "Robertson"
+  },
+  {
+    "item": "Q2046203",
+    "itemLabel": "White River, Mpumalanga"
+  },
+  {
+    "item": "Q2064570",
+    "itemLabel": "Jakkalsfontein"
+  },
+  {
+    "item": "Q2105689",
+    "itemLabel": "Doringbaai"
+  },
+  {
+    "item": "Q2151133",
+    "itemLabel": "Cape St. Francis"
+  },
+  {
+    "item": "Q2234104",
+    "itemLabel": "Wesselsbron"
+  },
+  {
+    "item": "Q2243420",
+    "itemLabel": "Merweville"
+  },
+  {
+    "item": "Q2256832",
+    "itemLabel": "Boshof"
+  },
+  {
+    "item": "Q2296645",
+    "itemLabel": "Danielskuil"
+  },
+  {
+    "item": "Q2465269",
+    "itemLabel": "Sedgefield"
+  },
+  {
+    "item": "Q2302331",
+    "itemLabel": "Modjadjiskloof"
+  },
+  {
+    "item": "Q2304161",
+    "itemLabel": "Ottosdal"
+  },
+  {
+    "item": "Q2327720",
+    "itemLabel": "Stilfontein"
+  },
+  {
+    "item": "Q2402089",
+    "itemLabel": "Kaapsehoop"
+  },
+  {
+    "item": "Q2418250",
+    "itemLabel": "Bo-Kaap"
+  },
+  {
+    "item": "Q2460230",
+    "itemLabel": "Koffiefontein"
+  },
+  {
+    "item": "Q2462251",
+    "itemLabel": "Vosburg"
+  },
+  {
+    "item": "Q2038395",
+    "itemLabel": "Wilderness"
+  },
+  {
+    "item": "Q2120963",
+    "itemLabel": "Riversdale"
+  },
+  {
+    "item": "Q2407668",
+    "itemLabel": "Strand"
+  },
+  {
+    "item": "Q1752859",
+    "itemLabel": "Greenside"
+  },
+  {
+    "item": "Q1870711",
+    "itemLabel": "Kriel"
+  },
+  {
+    "item": "Q2208947",
+    "itemLabel": "Reitz"
+  },
+  {
+    "item": "Q1820072",
+    "itemLabel": "Lephalale"
+  },
+  {
+    "item": "Q2039911",
+    "itemLabel": "Herolds Bay"
+  },
+  {
+    "item": "Q2127917",
+    "itemLabel": "Vaalbank"
+  },
+  {
+    "item": "Q1614521",
+    "itemLabel": "Herschel, Eastern Cape"
+  },
+  {
+    "item": "Q1619162",
+    "itemLabel": "Sterkspruit"
+  },
+  {
+    "item": "Q1640898",
+    "itemLabel": "Bredasdorp"
+  },
+  {
+    "item": "Q1641474",
+    "itemLabel": "Louis Trichardt"
+  },
+  {
+    "item": "Q1643816",
+    "itemLabel": "Saldanha"
+  },
+  {
+    "item": "Q1671256",
+    "itemLabel": "Kokstad, KwaZulu-Natal"
+  },
+  {
+    "item": "Q1693203",
+    "itemLabel": "Port Alfred"
+  },
+  {
+    "item": "Q2290391",
+    "itemLabel": "Strandfontein"
+  },
+  {
+    "item": "Q1779827",
+    "itemLabel": "Komatipoort"
+  },
+  {
+    "item": "Q1788096",
+    "itemLabel": "Orkney, North West"
+  },
+  {
+    "item": "Q1832033",
+    "itemLabel": "Warrenton, Northern Cape"
+  },
+  {
+    "item": "Q1836921",
+    "itemLabel": "Lydenburg"
+  },
+  {
+    "item": "Q1853724",
+    "itemLabel": "Leydsdorp"
+  },
+  {
+    "item": "Q2460233",
+    "itemLabel": "Jagersfontein"
+  },
+  {
+    "item": "Q1888978",
+    "itemLabel": "Mandeni"
+  },
+  {
+    "item": "Q2450605",
+    "itemLabel": "Cullinan"
+  },
+  {
+    "item": "Q2081633",
+    "itemLabel": "Malalane"
+  },
+  {
+    "item": "Q2096873",
+    "itemLabel": "Weenen"
+  },
+  {
+    "item": "Q2171191",
+    "itemLabel": "Vaalwater"
+  },
+  {
+    "item": "Q2174536",
+    "itemLabel": "Riebeek-Kasteel"
+  },
+  {
+    "item": "Q2189479",
+    "itemLabel": "KwaMhlanga"
+  },
+  {
+    "item": "Q2206221",
+    "itemLabel": "Port Beaufort"
+  },
+  {
+    "item": "Q2319575",
+    "itemLabel": "Rawsonville"
+  },
+  {
+    "item": "Q2344448",
+    "itemLabel": "Strydenburg"
+  },
+  {
+    "item": "Q2383969",
+    "itemLabel": "Salt River, Cape Town"
+  },
+  {
+    "item": "Q2426070",
+    "itemLabel": "Trompsburg"
+  },
+  {
+    "item": "Q2460816",
+    "itemLabel": "Hartswater"
+  },
+  {
+    "item": "Q1736557",
+    "itemLabel": "Kathu"
+  },
+  {
+    "item": "Q2383557",
+    "itemLabel": "Sea Point"
+  },
+  {
+    "item": "Q1886509",
+    "itemLabel": "Languedoc"
+  },
+  {
+    "item": "Q2096879",
+    "itemLabel": "Taung"
+  },
+  {
+    "item": "Q1800028",
+    "itemLabel": "Ladismith"
+  },
+  {
+    "item": "Q1880498",
+    "itemLabel": "Elliot, Eastern Cape"
+  },
+  {
+    "item": "Q1888772",
+    "itemLabel": "Vanderkloof"
+  },
+  {
+    "item": "Q2082049",
+    "itemLabel": "Delareyville"
+  },
+  {
+    "item": "Q2082023",
+    "itemLabel": "Marble Hall"
+  },
+  {
+    "item": "Q2152772",
+    "itemLabel": "Ritchie, Northern Cape"
+  },
+  {
+    "item": "Q2156005",
+    "itemLabel": "Oyster Bay, Eastern Cape"
+  },
+  {
+    "item": "Q2166182",
+    "itemLabel": "Roodepoort"
+  },
+  {
+    "item": "Q2168232",
+    "itemLabel": "Prince Alfred Hamlet"
+  },
+  {
+    "item": "Q2186417",
+    "itemLabel": "Van Dyksbaai"
+  },
+  {
+    "item": "Q2188373",
+    "itemLabel": "Balfour, Mpumalanga"
+  },
+  {
+    "item": "Q2208720",
+    "itemLabel": "Kroondal"
+  },
+  {
+    "item": "Q2343782",
+    "itemLabel": "Morgenzon"
+  },
+  {
+    "item": "Q2375906",
+    "itemLabel": "Onrusrivier"
+  },
+  {
+    "item": "Q2390929",
+    "itemLabel": "Geluksburg"
+  },
+  {
+    "item": "Q2397071",
+    "itemLabel": "Krokodilpoort"
+  },
+  {
+    "item": "Q2430105",
+    "itemLabel": "Op-die-Berg"
+  },
+  {
+    "item": "Q2459294",
+    "itemLabel": "Tugela Ferry"
+  },
+  {
+    "item": "Q2082061",
+    "itemLabel": "Meyerton"
+  },
+  {
+    "item": "Q2143142",
+    "itemLabel": "Aliwal North"
+  },
+  {
+    "item": "Q1703876",
+    "itemLabel": "Ottoshoop"
+  },
+  {
+    "item": "Q1825081",
+    "itemLabel": "Buffelsbaai"
+  },
+  {
+    "item": "Q1892042",
+    "itemLabel": "Maphumulo"
+  },
+  {
+    "item": "Q1856170",
+    "itemLabel": "Qunu"
+  },
+  {
+    "item": "Q1856529",
+    "itemLabel": "Alexander Bay, Northern Cape"
+  },
+  {
+    "item": "Q1878933",
+    "itemLabel": "Badplaas"
+  },
+  {
+    "item": "Q2082031",
+    "itemLabel": "Groblersdal"
+  },
+  {
+    "item": "Q2085849",
+    "itemLabel": "Kaapmuiden"
+  },
+  {
+    "item": "Q2119634",
+    "itemLabel": "Humansdorp"
+  },
+  {
+    "item": "Q2119900",
+    "itemLabel": "Carolina, Mpumalanga"
+  },
+  {
+    "item": "Q2167759",
+    "itemLabel": "Temba, Gauteng"
+  },
+  {
+    "item": "Q2213261",
+    "itemLabel": "Greylingstad"
+  },
+  {
+    "item": "Q3643012",
+    "itemLabel": "Pella"
+  },
+  {
+    "item": "Q3643047",
+    "itemLabel": "Hutchinson"
+  },
+  {
+    "item": "Q3642961",
+    "itemLabel": "Pomeroy"
+  },
+  {
+    "item": "Q3642183",
+    "itemLabel": "Burgersfort"
+  },
+  {
+    "item": "Q3642180",
+    "itemLabel": "Lady Frere"
+  },
+  {
+    "item": "Q3642306",
+    "itemLabel": "Dealesville"
+  },
+  {
+    "item": "Q3642193",
+    "itemLabel": "Victoria West"
+  },
+  {
+    "item": "Q3642314",
+    "itemLabel": "Edenville, Free State"
+  },
+  {
+    "item": "Q3642342",
+    "itemLabel": "Edenburg"
+  },
+  {
+    "item": "Q3642309",
+    "itemLabel": "Kamieskroon"
+  },
+  {
+    "item": "Q3642298",
+    "itemLabel": "Olifantshoek"
+  },
+  {
+    "item": "Q3642296",
+    "itemLabel": "Umtentweni"
+  },
+  {
+    "item": "Q3642550",
+    "itemLabel": "Bizana, Eastern Cape"
+  },
+  {
+    "item": "Q3642709",
+    "itemLabel": "Alldays"
+  },
+  {
+    "item": "Q3642507",
+    "itemLabel": "Philipstown, Northern Cape"
+  },
+  {
+    "item": "Q3642568",
+    "itemLabel": "Hennenman"
+  },
+  {
+    "item": "Q3642475",
+    "itemLabel": "Wasbank"
+  },
+  {
+    "item": "Q3642588",
+    "itemLabel": "Odendaalsrus"
+  },
+  {
+    "item": "Q3642609",
+    "itemLabel": "Saron, Western Cape"
+  },
+  {
+    "item": "Q3642601",
+    "itemLabel": "Vermont, Western Cape"
+  },
+  {
+    "item": "Q3642944",
+    "itemLabel": "Bethelsdorp"
+  },
+  {
+    "item": "Q3643057",
+    "itemLabel": "Balfour, Eastern Cape"
+  },
+  {
+    "item": "Q3642981",
+    "itemLabel": "Luckhoff"
+  },
+  {
+    "item": "Q3642987",
+    "itemLabel": "Park Rynie"
+  },
+  {
+    "item": "Q3643045",
+    "itemLabel": "Mount Fletcher"
+  },
+  {
+    "item": "Q3643009",
+    "itemLabel": "Shakaskraal"
+  },
+  {
+    "item": "Q3643036",
+    "itemLabel": "Swartruggens"
+  },
+  {
+    "item": "Q3643209",
+    "itemLabel": "Deelfontein"
+  },
+  {
+    "item": "Q3643133",
+    "itemLabel": "Rheenendal"
+  },
+  {
+    "item": "Q3643549",
+    "itemLabel": "Makwassie"
+  },
+  {
+    "item": "Q3643553",
+    "itemLabel": "Umzinto"
+  },
+  {
+    "item": "Q3643575",
+    "itemLabel": "Viljoensdrif"
+  },
+  {
+    "item": "Q3642712",
+    "itemLabel": "Vivo"
+  },
+  {
+    "item": "Q3642992",
+    "itemLabel": "Kingsburgh"
+  },
+  {
+    "item": "Q3642191",
+    "itemLabel": "Peddie"
+  },
+  {
+    "item": "Q3643291",
+    "itemLabel": "Hankey"
+  },
+  {
+    "item": "Q3643216",
+    "itemLabel": "Koringberg"
+  },
+  {
+    "item": "Q3643234",
+    "itemLabel": "Waterkloof"
+  },
+  {
+    "item": "Q3643543",
+    "itemLabel": "Marquard"
+  },
+  {
+    "item": "Q3642267",
+    "itemLabel": "Noupoort"
+  },
+  {
+    "item": "Q3642301",
+    "itemLabel": "Mount Ayliff"
+  },
+  {
+    "item": "Q3642324",
+    "itemLabel": "Joubertina"
+  },
+  {
+    "item": "Q3642286",
+    "itemLabel": "Steinkopf, Northern Cape"
+  },
+  {
+    "item": "Q3642338",
+    "itemLabel": "Libode"
+  },
+  {
+    "item": "Q3642331",
+    "itemLabel": "Windsorton"
+  },
+  {
+    "item": "Q3642608",
+    "itemLabel": "Jamestown, Eastern Cape"
+  },
+  {
+    "item": "Q3642626",
+    "itemLabel": "Leeudoringstad"
+  },
+  {
+    "item": "Q3642582",
+    "itemLabel": "Wolmaransstad"
+  },
+  {
+    "item": "Q3642713",
+    "itemLabel": "Roedtan"
+  },
+  {
+    "item": "Q3643030",
+    "itemLabel": "Arlington, Free State"
+  },
+  {
+    "item": "Q3642970",
+    "itemLabel": "Trichardt"
+  },
+  {
+    "item": "Q3643044",
+    "itemLabel": "Ofcolaco"
+  },
+  {
+    "item": "Q3643099",
+    "itemLabel": "Kenhardt"
+  },
+  {
+    "item": "Q3643053",
+    "itemLabel": "Ugie, Eastern Cape"
+  },
+  {
+    "item": "Q3643522",
+    "itemLabel": "Belhar"
+  },
+  {
+    "item": "Q3643076",
+    "itemLabel": "Tweeling"
+  },
+  {
+    "item": "Q3642317",
+    "itemLabel": "Cala, Eastern Cape"
+  },
+  {
+    "item": "Q3642292",
+    "itemLabel": "Hobhouse, Free State"
+  },
+  {
+    "item": "Q3642274",
+    "itemLabel": "Venterstad"
+  },
+  {
+    "item": "Q3642303",
+    "itemLabel": "Sterkstroom"
+  },
+  {
+    "item": "Q3642542",
+    "itemLabel": "Concordia, Northern Cape"
+  },
+  {
+    "item": "Q3642516",
+    "itemLabel": "Milnerton"
+  },
+  {
+    "item": "Q3642593",
+    "itemLabel": "Wittedrif"
+  },
+  {
+    "item": "Q3642949",
+    "itemLabel": "Bathurst, Eastern Cape"
+  },
+  {
+    "item": "Q3642956",
+    "itemLabel": "Klipplaat"
+  },
+  {
+    "item": "Q3643067",
+    "itemLabel": "Cofimvaba"
+  },
+  {
+    "item": "Q3643041",
+    "itemLabel": "Hotazel"
+  },
+  {
+    "item": "Q3643087",
+    "itemLabel": "Hazyview"
+  },
+  {
+    "item": "Q3643141",
+    "itemLabel": "Groot Brak Rivier"
+  },
+  {
+    "item": "Q3643163",
+    "itemLabel": "Ramatlabama"
+  },
+  {
+    "item": "Q3643565",
+    "itemLabel": "Sezela"
+  },
+  {
+    "item": "Q3643574",
+    "itemLabel": "Sheepmoor"
+  },
+  {
+    "item": "Q3643050",
+    "itemLabel": "Edenvale"
+  },
+  {
+    "item": "Q3643557",
+    "itemLabel": "Hofmeyr"
+  },
+  {
+    "item": "Q3642187",
+    "itemLabel": "Kleinzee"
+  },
+  {
+    "item": "Q3642280",
+    "itemLabel": "Melkbosstrand"
+  },
+  {
+    "item": "Q3642328",
+    "itemLabel": "Frankfort, Free State"
+  },
+  {
+    "item": "Q3642577",
+    "itemLabel": "Kylemore, Western Cape"
+  },
+  {
+    "item": "Q3642762",
+    "itemLabel": "Waterval Onder"
+  },
+  {
+    "item": "Q3643003",
+    "itemLabel": "Kwambonambi"
+  },
+  {
+    "item": "Q3643025",
+    "itemLabel": "Haenertsburg"
+  },
+  {
+    "item": "Q3643020",
+    "itemLabel": "Niekerkshoop"
+  },
+  {
+    "item": "Q3643135",
+    "itemLabel": "Glentana"
+  },
+  {
+    "item": "Q3643154",
+    "itemLabel": "Magaliesburg"
+  },
+  {
+    "item": "Q3643570",
+    "itemLabel": "Hattingspruit"
+  },
+  {
+    "item": "Q3643560",
+    "itemLabel": "Seymour, Eastern Cape"
+  },
+  {
+    "item": "Q3642344",
+    "itemLabel": "Excelsior, Free State"
+  },
+  {
+    "item": "Q3642271",
+    "itemLabel": "Ventersburg"
+  },
+  {
+    "item": "Q3642472",
+    "itemLabel": "Hertzogville"
+  },
+  {
+    "item": "Q3642486",
+    "itemLabel": "Groot Marico"
+  },
+  {
+    "item": "Q3642499",
+    "itemLabel": "Pearston"
+  },
+  {
+    "item": "Q3642525",
+    "itemLabel": "Koppies"
+  },
+  {
+    "item": "Q3642534",
+    "itemLabel": "Vierfontein"
+  },
+  {
+    "item": "Q3642967",
+    "itemLabel": "Lindley, Free State"
+  },
+  {
+    "item": "Q3643016",
+    "itemLabel": "Kirkwood, Eastern Cape"
+  },
+  {
+    "item": "Q3643033",
+    "itemLabel": "Kestell"
+  },
+  {
+    "item": "Q3642998",
+    "itemLabel": "Uvongo"
+  },
+  {
+    "item": "Q3643061",
+    "itemLabel": "Rhodes, Eastern Cape"
+  },
+  {
+    "item": "Q3643094",
+    "itemLabel": "Maclear, Eastern Cape"
+  },
+  {
+    "item": "Q3643140",
+    "itemLabel": "Phokeng"
+  },
+  {
+    "item": "Q2742675",
+    "itemLabel": "Stanford, Western Cape"
+  },
+  {
+    "item": "Q2797119",
+    "itemLabel": "Kurland Estate"
+  },
+  {
+    "item": "Q2883519",
+    "itemLabel": "Bantry Bay, Cape Town"
+  },
+  {
+    "item": "Q2935301",
+    "itemLabel": "Hondeklip Bay"
+  },
+  {
+    "item": "Q2962517",
+    "itemLabel": "Alkmaar, Mpumalanga"
+  },
+  {
+    "item": "Q2982574",
+    "itemLabel": "Coligny, North West"
+  },
+  {
+    "item": "Q3041548",
+    "itemLabel": "Durbanville"
+  },
+  {
+    "item": "Q3114526",
+    "itemLabel": "Kalbaskraal"
+  },
+  {
+    "item": "Q3211104",
+    "itemLabel": "Pierre van Ryneveld Park"
+  },
+  {
+    "item": "Q3280389",
+    "itemLabel": "Maitland, Cape Town"
+  },
+  {
+    "item": "Q3392656",
+    "itemLabel": "Plumstead, Cape Town"
+  },
+  {
+    "item": "Q2671213",
+    "itemLabel": "Lichtenburg"
+  },
+  {
+    "item": "Q2511466",
+    "itemLabel": "Wemmershoek"
+  },
+  {
+    "item": "Q2539888",
+    "itemLabel": "Jan Kempdorp"
+  },
+  {
+    "item": "Q2565925",
+    "itemLabel": "Nkowankowa"
+  },
+  {
+    "item": "Q2566863",
+    "itemLabel": "Groenkloof"
+  },
+  {
+    "item": "Q2568503",
+    "itemLabel": "Mookgophong"
+  },
+  {
+    "item": "Q2580369",
+    "itemLabel": "Volmoed"
+  },
+  {
+    "item": "Q2604557",
+    "itemLabel": "Port St Johns"
+  },
+  {
+    "item": "Q2620432",
+    "itemLabel": "Vredenburg"
+  },
+  {
+    "item": "Q2975541",
+    "itemLabel": "Claremont"
+  },
+  {
+    "item": "Q2979103",
+    "itemLabel": "Clifton"
+  },
+  {
+    "item": "Q3113320",
+    "itemLabel": "Malmesbury"
+  },
+  {
+    "item": "Q2671910",
+    "itemLabel": "Gouritsmond"
+  },
+  {
+    "item": "Q2730024",
+    "itemLabel": "Bitterfontein"
+  },
+  {
+    "item": "Q3347444",
+    "itemLabel": "Glenwood"
+  },
+  {
+    "item": "Q2884412",
+    "itemLabel": "Colenso, KwaZulu-Natal"
+  },
+  {
+    "item": "Q2911666",
+    "itemLabel": "Bothasig"
+  },
+  {
+    "item": "Q3070774",
+    "itemLabel": "Machadodorp"
+  },
+  {
+    "item": "Q3087534",
+    "itemLabel": "Fresnaye, Cape Town"
+  },
+  {
+    "item": "Q3095436",
+    "itemLabel": "Gardens"
+  },
+  {
+    "item": "Q3129312",
+    "itemLabel": "Hectorspruit"
+  },
+  {
+    "item": "Q3136256",
+    "itemLabel": "Umhlanga"
+  },
+  {
+    "item": "Q3024549",
+    "itemLabel": "Despatch"
+  },
+  {
+    "item": "Q3307989",
+    "itemLabel": "L'Agulhas"
+  },
+  {
+    "item": "Q3348676",
+    "itemLabel": "Ocean View, Cape Town"
+  },
+  {
+    "item": "Q3362390",
+    "itemLabel": "Panorama, Cape Town"
+  },
+  {
+    "item": "Q3006929",
+    "itemLabel": "Monument Park"
+  },
+  {
+    "item": "Q3170506",
+    "itemLabel": "Chatsworth"
+  },
+  {
+    "item": "Q3387032",
+    "itemLabel": "Leeu-Gamka"
+  },
+  {
+    "item": "Q3093451",
+    "itemLabel": "Lynnwood"
+  },
+  {
+    "item": "Q2992348",
+    "itemLabel": "Pilgrim's Rest"
+  },
+  {
+    "item": "Q2568514",
+    "itemLabel": "Langebaan"
+  },
+  {
+    "item": "Q2633575",
+    "itemLabel": "Bloemhof"
+  },
+  {
+    "item": "Q2842892",
+    "itemLabel": "Theunissen"
+  },
+  {
+    "item": "Q3020285",
+    "itemLabel": "De Waterkant"
+  },
+  {
+    "item": "Q3025268",
+    "itemLabel": "Observatory"
+  },
+  {
+    "item": "Q3344742",
+    "itemLabel": "Mount Edgecombe"
+  },
+  {
+    "item": "Q2728432",
+    "itemLabel": "Perdekop"
+  },
+  {
+    "item": "Q2933194",
+    "itemLabel": "Jacobsbaai"
+  },
+  {
+    "item": "Q2593872",
+    "itemLabel": "Viljoenskroon"
+  },
+  {
+    "item": "Q2609896",
+    "itemLabel": "Fraserburg"
+  },
+  {
+    "item": "Q2949835",
+    "itemLabel": "Breidbach"
+  },
+  {
+    "item": "Q2613726",
+    "itemLabel": "Gordon's Bay"
+  },
+  {
+    "item": "Q2671197",
+    "itemLabel": "Westonaria"
+  },
+  {
+    "item": "Q2894189",
+    "itemLabel": "Avontuur"
+  },
+  {
+    "item": "Q2897143",
+    "itemLabel": "Bergvliet"
+  },
+  {
+    "item": "Q2907090",
+    "itemLabel": "Bloubergstrand"
+  },
+  {
+    "item": "Q2911831",
+    "itemLabel": "Botshabelo, Mpumalanga"
+  },
+  {
+    "item": "Q2946336",
+    "itemLabel": "Ebenhaeser"
+  },
+  {
+    "item": "Q3041130",
+    "itemLabel": "Dullstroom"
+  },
+  {
+    "item": "Q3070760",
+    "itemLabel": "Mount Frere"
+  },
+  {
+    "item": "Q3073398",
+    "itemLabel": "Rondebosch"
+  },
+  {
+    "item": "Q3093449",
+    "itemLabel": "Constantia Park"
+  },
+  {
+    "item": "Q3166678",
+    "itemLabel": "West Driefontein"
+  },
+  {
+    "item": "Q3211098",
+    "itemLabel": "Kloofsig"
+  },
+  {
+    "item": "Q3365526",
+    "itemLabel": "Bapsfontein"
+  },
+  {
+    "item": "Q2788523",
+    "itemLabel": "Klapmuts"
+  },
+  {
+    "item": "Q3006868",
+    "itemLabel": "Menlo Park"
+  },
+  {
+    "item": "Q2546981",
+    "itemLabel": "Brenton-on-Sea"
+  },
+  {
+    "item": "Q2553018",
+    "itemLabel": "Amersfoort, Mpumalanga"
+  },
+  {
+    "item": "Q2568047",
+    "itemLabel": "Schweizer-Reneke"
+  },
+  {
+    "item": "Q2586861",
+    "itemLabel": "Breyten"
+  },
+  {
+    "item": "Q2611079",
+    "itemLabel": "Mondlo"
+  },
+  {
+    "item": "Q2627782",
+    "itemLabel": "Nelspoort"
+  },
+  {
+    "item": "Q2669923",
+    "itemLabel": "Klein Brak Rivier"
+  },
+  {
+    "item": "Q2678218",
+    "itemLabel": "Philippolis"
+  },
+  {
+    "item": "Q2695453",
+    "itemLabel": "Steynsburg"
+  },
+  {
+    "item": "Q2753004",
+    "itemLabel": "Hendrina"
+  },
+  {
+    "item": "Q2795307",
+    "itemLabel": "Bothaville"
+  },
+  {
+    "item": "Q2805770",
+    "itemLabel": "Brandfort"
+  },
+  {
+    "item": "Q3070767",
+    "itemLabel": "Marloth Park"
+  },
+  {
+    "item": "Q3132723",
+    "itemLabel": "Hillbrow"
+  },
+  {
+    "item": "Q3135348",
+    "itemLabel": "Higgovale, Cape Town"
+  },
+  {
+    "item": "Q3152900",
+    "itemLabel": "Amsterdam, Mpumalanga"
+  },
+  {
+    "item": "Q3347750",
+    "itemLabel": "Elandsrand"
+  },
+  {
+    "item": "Q2516019",
+    "itemLabel": "Babanango"
+  },
+  {
+    "item": "Q2647523",
+    "itemLabel": "Hartbeesfontein"
+  },
+  {
+    "item": "Q2750593",
+    "itemLabel": "Petrusville"
+  },
+  {
+    "item": "Q2474400",
+    "itemLabel": "Rooi-Els, Western Cape"
+  },
+  {
+    "item": "Q2492144",
+    "itemLabel": "Umzumbe, KwaZulu-Natal"
+  },
+  {
+    "item": "Q2514168",
+    "itemLabel": "Reddersburg"
+  },
+  {
+    "item": "Q2549949",
+    "itemLabel": "Albertinia, Western Cape"
+  },
+  {
+    "item": "Q2580907",
+    "itemLabel": "Postmasburg"
+  },
+  {
+    "item": "Q2630680",
+    "itemLabel": "Table View"
+  },
+  {
+    "item": "Q2657161",
+    "itemLabel": "Allen Grove"
+  },
+  {
+    "item": "Q2720273",
+    "itemLabel": "KwaNgema"
+  },
+  {
+    "item": "Q2735782",
+    "itemLabel": "Keurboomstrand"
+  },
+  {
+    "item": "Q2778759",
+    "itemLabel": "Ingogo"
+  },
+  {
+    "item": "Q2780999",
+    "itemLabel": "Herbertsdale"
+  },
+  {
+    "item": "Q2835080",
+    "itemLabel": "Parys"
+  },
+  {
+    "item": "Q2866207",
+    "itemLabel": "Uniondale, Western Cape"
+  },
+  {
+    "item": "Q2935571",
+    "itemLabel": "Camps Bay"
+  },
+  {
+    "item": "Q3073402",
+    "itemLabel": "Tamboerskloof"
+  },
+  {
+    "item": "Q3073400",
+    "itemLabel": "Vredehoek"
+  },
+  {
+    "item": "Q3174560",
+    "itemLabel": "Davel"
+  },
+  {
+    "item": "Q2491104",
+    "itemLabel": "Mpophomeni"
+  },
+  {
+    "item": "Q2607381",
+    "itemLabel": "Jacobsdal"
+  },
+  {
+    "item": "Q2624429",
+    "itemLabel": "Gouda, Western Cape"
+  },
+  {
+    "item": "Q2656096",
+    "itemLabel": "St Helena Bay"
+  },
+  {
+    "item": "Q2675839",
+    "itemLabel": "Koekenaap"
+  },
+  {
+    "item": "Q4853791",
+    "itemLabel": "Edgemead"
+  },
+  {
+    "item": "Q4883928",
+    "itemLabel": "Bellevue East"
+  },
+  {
+    "item": "Q4890182",
+    "itemLabel": "Benrose"
+  },
+  {
+    "item": "Q4899409",
+    "itemLabel": "Beverley Gardens"
+  },
+  {
+    "item": "Q4924207",
+    "itemLabel": "Blairgowrie, Gauteng"
+  },
+  {
+    "item": "Q4942612",
+    "itemLabel": "Bonteheuwel"
+  },
+  {
+    "item": "Q4944129",
+    "itemLabel": "Booysens, Gauteng"
+  },
+  {
+    "item": "Q4947694",
+    "itemLabel": "Boston, KwaZulu-Natal"
+  },
+  {
+    "item": "Q4956194",
+    "itemLabel": "Bramley Park"
+  },
+  {
+    "item": "Q4963516",
+    "itemLabel": "Mbewuleni"
+  },
+  {
+    "item": "Q4966947",
+    "itemLabel": "Bridle Park"
+  },
+  {
+    "item": "Q4980509",
+    "itemLabel": "Bryanston, Gauteng"
+  },
+  {
+    "item": "Q4980518",
+    "itemLabel": "Bryanston West, Gauteng"
+  },
+  {
+    "item": "Q4997198",
+    "itemLabel": "Bulwer"
+  },
+  {
+    "item": "Q5016719",
+    "itemLabel": "Alexandria, Eastern Cape"
+  },
+  {
+    "item": "Q5032784",
+    "itemLabel": "Cannon Rocks"
+  },
+  {
+    "item": "Q5072640",
+    "itemLabel": "Chantelle, South Africa"
+  },
+  {
+    "item": "Q5086944",
+    "itemLabel": "Chartwell, Gauteng"
+  },
+  {
+    "item": "Q5123527",
+    "itemLabel": "City and Suburban, Gauteng"
+  },
+  {
+    "item": "Q5136534",
+    "itemLabel": "Ifafa Beach"
+  },
+  {
+    "item": "Q5142071",
+    "itemLabel": "Colchester, Eastern Cape"
+  },
+  {
+    "item": "Q4891158",
+    "itemLabel": "Berea"
+  },
+  {
+    "item": "Q5140893",
+    "itemLabel": "Coffee Bay"
+  },
+  {
+    "item": "Q4889581",
+    "itemLabel": "Benmore Gardens"
+  },
+  {
+    "item": "Q4938798",
+    "itemLabel": "Boknesstrand"
+  },
+  {
+    "item": "Q4947313",
+    "itemLabel": "Bosmont"
+  },
+  {
+    "item": "Q4956184",
+    "itemLabel": "Bramley, Gauteng"
+  },
+  {
+    "item": "Q4973638",
+    "itemLabel": "Bromhof"
+  },
+  {
+    "item": "Q4980499",
+    "itemLabel": "Bryanbrink"
+  },
+  {
+    "item": "Q4980510",
+    "itemLabel": "Bryanston East, Gauteng"
+  },
+  {
+    "item": "Q4982457",
+    "itemLabel": "Buccleuch, Gauteng"
+  },
+  {
+    "item": "Q4985937",
+    "itemLabel": "Buffelspruit"
+  },
+  {
+    "item": "Q5042933",
+    "itemLabel": "Carlswald"
+  },
+  {
+    "item": "Q5090260",
+    "itemLabel": "Cheltondale"
+  },
+  {
+    "item": "Q5137122",
+    "itemLabel": "Clynton"
+  },
+  {
+    "item": "Q5141118",
+    "itemLabel": "Coghlan, Eastern Cape"
+  },
+  {
+    "item": "Q5138677",
+    "itemLabel": "Ingwavuma"
+  },
+  {
+    "item": "Q4859566",
+    "itemLabel": "Barbeque Downs"
+  },
+  {
+    "item": "Q4875215",
+    "itemLabel": "Bazley, KwaZulu-Natal"
+  },
+  {
+    "item": "Q4875885",
+    "itemLabel": "Beachview, Eastern Cape"
+  },
+  {
+    "item": "Q4879251",
+    "itemLabel": "Bedfordview"
+  },
+  {
+    "item": "Q4891002",
+    "itemLabel": "Berario"
+  },
+  {
+    "item": "Q4892343",
+    "itemLabel": "Berlin, Eastern Cape"
+  },
+  {
+    "item": "Q4901664",
+    "itemLabel": "Bhekindoda"
+  },
+  {
+    "item": "Q4915757",
+    "itemLabel": "Birchleigh"
+  },
+  {
+    "item": "Q4917624",
+    "itemLabel": "Bishop Lavis"
+  },
+  {
+    "item": "Q4972009",
+    "itemLabel": "Broadacres, Gauteng"
+  },
+  {
+    "item": "Q4978782",
+    "itemLabel": "Bruma, Gauteng"
+  },
+  {
+    "item": "Q5018341",
+    "itemLabel": "Calais, Limpopo"
+  },
+  {
+    "item": "Q5093877",
+    "itemLabel": "Chesterville, KwaZulu-Natal"
+  },
+  {
+    "item": "Q5113691",
+    "itemLabel": "Chrisville"
+  },
+  {
+    "item": "Q5116423",
+    "itemLabel": "Chuniespoort"
+  },
+  {
+    "item": "Q5123151",
+    "itemLabel": "City Deep, Gauteng"
+  },
+  {
+    "item": "Q5137845",
+    "itemLabel": "Coalbrook, Free State"
+  },
+  {
+    "item": "Q5049640",
+    "itemLabel": "Casteel"
+  },
+  {
+    "item": "Q4849819",
+    "itemLabel": "Doornkop"
+  },
+  {
+    "item": "Q4891159",
+    "itemLabel": "Berea, Durban"
+  },
+  {
+    "item": "Q4918173",
+    "itemLabel": "Bisi, Eastern Cape"
+  },
+  {
+    "item": "Q4926478",
+    "itemLabel": "Blikkiesdorp"
+  },
+  {
+    "item": "Q4928475",
+    "itemLabel": "Bloubosrand"
+  },
+  {
+    "item": "Q4929232",
+    "itemLabel": "Blue Hills, Gauteng"
+  },
+  {
+    "item": "Q4936555",
+    "itemLabel": "Bodiam, Eastern Cape"
+  },
+  {
+    "item": "Q4941079",
+    "itemLabel": "Bonaero Park"
+  },
+  {
+    "item": "Q4948615",
+    "itemLabel": "Botha's Hill"
+  },
+  {
+    "item": "Q4971711",
+    "itemLabel": "Brixton, Gauteng"
+  },
+  {
+    "item": "Q4997157",
+    "itemLabel": "Bultfontein, Gauteng"
+  },
+  {
+    "item": "Q5000105",
+    "itemLabel": "Burnshill"
+  },
+  {
+    "item": "Q5004123",
+    "itemLabel": "Byldrift"
+  },
+  {
+    "item": "Q5019070",
+    "itemLabel": "Calderwood, Eastern Cape"
+  },
+  {
+    "item": "Q5063139",
+    "itemLabel": "Century City, Cape Town"
+  },
+  {
+    "item": "Q5074587",
+    "itemLabel": "Charl Cilliers, Mpumalanga"
+  },
+  {
+    "item": "Q5102124",
+    "itemLabel": "Chislehurston"
+  },
+  {
+    "item": "Q5137081",
+    "itemLabel": "Clydesdale, KwaZulu-Natal"
+  },
+  {
+    "item": "Q4850797",
+    "itemLabel": "Balgowan, KwaZulu-Natal"
+  },
+  {
+    "item": "Q4854168",
+    "itemLabel": "Eerste Rivier"
+  },
+  {
+    "item": "Q4859564",
+    "itemLabel": "Barbeque Downs Business Park"
+  },
+  {
+    "item": "Q4880134",
+    "itemLabel": "Beestekraal"
+  },
+  {
+    "item": "Q4883886",
+    "itemLabel": "Bellevue, Gauteng"
+  },
+  {
+    "item": "Q4895842",
+    "itemLabel": "Bertrams, Gauteng"
+  },
+  {
+    "item": "Q4915983",
+    "itemLabel": "Birdhaven, Gauteng"
+  },
+  {
+    "item": "Q4916876",
+    "itemLabel": "Birnam, Gauteng"
+  },
+  {
+    "item": "Q4918322",
+    "itemLabel": "Bismark, Limpopo"
+  },
+  {
+    "item": "Q4930624",
+    "itemLabel": "Bluff, KwaZulu-Natal"
+  },
+  {
+    "item": "Q4933775",
+    "itemLabel": "Grassy Park"
+  },
+  {
+    "item": "Q4936332",
+    "itemLabel": "Hammanskraal"
+  },
+  {
+    "item": "Q4938312",
+    "itemLabel": "Boikarabelo"
+  },
+  {
+    "item": "Q4944452",
+    "itemLabel": "Bordeaux, Gauteng"
+  },
+  {
+    "item": "Q4953144",
+    "itemLabel": "Braamfontein Werf"
+  },
+  {
+    "item": "Q4956192",
+    "itemLabel": "Bramley North"
+  },
+  {
+    "item": "Q4969275",
+    "itemLabel": "Britannia Bay"
+  },
+  {
+    "item": "Q4998567",
+    "itemLabel": "Burgersdorp, Limpopo"
+  },
+  {
+    "item": "Q5001380",
+    "itemLabel": "Bush Hill, Gauteng"
+  },
+  {
+    "item": "Q5025319",
+    "itemLabel": "Cambridge, Eastern Cape"
+  },
+  {
+    "item": "Q5179475",
+    "itemLabel": "Kenton-on-Sea"
+  },
+  {
+    "item": "Q5183992",
+    "itemLabel": "Creighton, KwaZulu-Natal"
+  },
+  {
+    "item": "Q5184560",
+    "itemLabel": "Cresta, Gauteng"
+  },
+  {
+    "item": "Q5189416",
+    "itemLabel": "Crown North"
+  },
+  {
+    "item": "Q5212911",
+    "itemLabel": "Damonsville"
+  },
+  {
+    "item": "Q5272253",
+    "itemLabel": "Dibeng"
+  },
+  {
+    "item": "Q5274960",
+    "itemLabel": "Diep River, Cape Town"
+  },
+  {
+    "item": "Q5283649",
+    "itemLabel": "Dithakong"
+  },
+  {
+    "item": "Q5179456",
+    "itemLabel": "Kenilworth"
+  },
+  {
+    "item": "Q5296759",
+    "itemLabel": "Donnybrook, KwaZulu-Natal"
+  },
+  {
+    "item": "Q5297240",
+    "itemLabel": "Doornfontein"
+  },
+  {
+    "item": "Q5315350",
+    "itemLabel": "Dunkeld"
+  },
+  {
+    "item": "Q5338135",
+    "itemLabel": "Edinburgh, Mpumalanga"
+  },
+  {
+    "item": "Q5364613",
+    "itemLabel": "Elladoone"
+  },
+  {
+    "item": "Q5367473",
+    "itemLabel": "Elsburg"
+  },
+  {
+    "item": "Q5373389",
+    "itemLabel": "Emmarentia"
+  },
+  {
+    "item": "Q5383864",
+    "itemLabel": "Epping, Cape Town"
+  },
+  {
+    "item": "Q5435617",
+    "itemLabel": "Farmall, Gauteng"
+  },
+  {
+    "item": "Q5367849",
+    "itemLabel": "Elton Hill"
+  },
+  {
+    "item": "Q5350627",
+    "itemLabel": "Ekuvukeni"
+  },
+  {
+    "item": "Q5163683",
+    "itemLabel": "Constantia Kloof"
+  },
+  {
+    "item": "Q5177348",
+    "itemLabel": "Country Life Park"
+  },
+  {
+    "item": "Q5274965",
+    "itemLabel": "Diepgezet"
+  },
+  {
+    "item": "Q5314883",
+    "itemLabel": "Dundonald, Mpumalanga"
+  },
+  {
+    "item": "Q5316291",
+    "itemLabel": "Durban North"
+  },
+  {
+    "item": "Q5336977",
+    "itemLabel": "Edenburg, Gauteng"
+  },
+  {
+    "item": "Q5347138",
+    "itemLabel": "Eerstehoek"
+  },
+  {
+    "item": "Q5350620",
+    "itemLabel": "EkuPhakameni"
+  },
+  {
+    "item": "Q5353844",
+    "itemLabel": "Elcedes"
+  },
+  {
+    "item": "Q5384874",
+    "itemLabel": "Erand"
+  },
+  {
+    "item": "Q5415941",
+    "itemLabel": "Evans Park"
+  },
+  {
+    "item": "Q5430501",
+    "itemLabel": "Fairland, Gauteng"
+  },
+  {
+    "item": "Q5442416",
+    "itemLabel": "Felixton"
+  },
+  {
+    "item": "Q5179725",
+    "itemLabel": "Cowies Hill"
+  },
+  {
+    "item": "Q5189285",
+    "itemLabel": "Crown, Gauteng"
+  },
+  {
+    "item": "Q5189606",
+    "itemLabel": "Crowthorne, Gauteng"
+  },
+  {
+    "item": "Q5242489",
+    "itemLabel": "Dawn Park"
+  },
+  {
+    "item": "Q5254489",
+    "itemLabel": "Delportshoop"
+  },
+  {
+    "item": "Q5256769",
+    "itemLabel": "Dendron, Limpopo"
+  },
+  {
+    "item": "Q5261400",
+    "itemLabel": "Derby, North West"
+  },
+  {
+    "item": "Q5297177",
+    "itemLabel": "Doonside, KwaZulu-Natal"
+  },
+  {
+    "item": "Q5297241",
+    "itemLabel": "Doornlaagte"
+  },
+  {
+    "item": "Q5309207",
+    "itemLabel": "Drummond, KwaZulu-Natal"
+  },
+  {
+    "item": "Q5323660",
+    "itemLabel": "EMacambini"
+  },
+  {
+    "item": "Q5328252",
+    "itemLabel": "East Driefontein"
+  },
+  {
+    "item": "Q5338776",
+    "itemLabel": "Edleen"
+  },
+  {
+    "item": "Q5365597",
+    "itemLabel": "Elliotdale"
+  },
+  {
+    "item": "Q5438187",
+    "itemLabel": "Fauna, Bloemfontein"
+  },
+  {
+    "item": "Q5200520",
+    "itemLabel": "Kraaifontein"
+  },
+  {
+    "item": "Q5179207",
+    "itemLabel": "Kamatsamo"
+  },
+  {
+    "item": "Q5179638",
+    "itemLabel": "Cowdray Park, Gauteng"
+  },
+  {
+    "item": "Q5181670",
+    "itemLabel": "Craighall"
+  },
+  {
+    "item": "Q5181846",
+    "itemLabel": "Cramerview"
+  },
+  {
+    "item": "Q5184147",
+    "itemLabel": "Kidd's Beach"
+  },
+  {
+    "item": "Q5209481",
+    "itemLabel": "Dainfern"
+  },
+  {
+    "item": "Q5224095",
+    "itemLabel": "Darnall, KwaZulu-Natal"
+  },
+  {
+    "item": "Q5225261",
+    "itemLabel": "Darrenwood"
+  },
+  {
+    "item": "Q5258084",
+    "itemLabel": "Dennehof, Gauteng"
+  },
+  {
+    "item": "Q5274963",
+    "itemLabel": "Diepdale"
+  },
+  {
+    "item": "Q5283669",
+    "itemLabel": "Ditholong"
+  },
+  {
+    "item": "Q5302159",
+    "itemLabel": "Douglasdale, Gauteng"
+  },
+  {
+    "item": "Q5308607",
+    "itemLabel": "Droste Park"
+  },
+  {
+    "item": "Q5329855",
+    "itemLabel": "Eastcliff, Gauteng"
+  },
+  {
+    "item": "Q5353433",
+    "itemLabel": "Elandspark"
+  },
+  {
+    "item": "Q5358128",
+    "itemLabel": "Electron, Gauteng"
+  },
+  {
+    "item": "Q5379390",
+    "itemLabel": "Enon, South Africa"
+  },
+  {
+    "item": "Q5383994",
+    "itemLabel": "Epsom Downs, Gauteng"
+  },
+  {
+    "item": "Q5401267",
+    "itemLabel": "Esther Park"
+  },
+  {
+    "item": "Q5430743",
+    "itemLabel": "Fairview, Gauteng"
+  },
+  {
+    "item": "Q5430903",
+    "itemLabel": "Fairway, Gauteng"
+  },
+  {
+    "item": "Q5430925",
+    "itemLabel": "Fairwood, Gauteng"
+  },
+  {
+    "item": "Q5317963",
+    "itemLabel": "Dwarsrivier"
+  },
+  {
+    "item": "Q5142556",
+    "itemLabel": "Coldstream, Eastern Cape"
+  },
+  {
+    "item": "Q5177457",
+    "itemLabel": "Country View"
+  },
+  {
+    "item": "Q5189363",
+    "itemLabel": "Crown Gardens"
+  },
+  {
+    "item": "Q5200939",
+    "itemLabel": "Cyrildene"
+  },
+  {
+    "item": "Q5307399",
+    "itemLabel": "Driefontein, Mpumalanga"
+  },
+  {
+    "item": "Q5315354",
+    "itemLabel": "Dunkeld West"
+  },
+  {
+    "item": "Q5316697",
+    "itemLabel": "Durnacol"
+  },
+  {
+    "item": "Q5319620",
+    "itemLabel": "Dzanani"
+  },
+  {
+    "item": "Q5876440",
+    "itemLabel": "Hoekwil"
+  },
+  {
+    "item": "Q6000208",
+    "itemLabel": "Illovo, Gauteng"
+  },
+  {
+    "item": "Q6000214",
+    "itemLabel": "Illovo, KwaZulu-Natal"
+  },
+  {
+    "item": "Q6152256",
+    "itemLabel": "Jane Furse"
+  },
+  {
+    "item": "Q6182121",
+    "itemLabel": "Jericho, North West"
+  },
+  {
+    "item": "Q6386525",
+    "itemLabel": "Kelso, KwaZulu-Natal"
+  },
+  {
+    "item": "Q6407296",
+    "itemLabel": "Killarney, Gauteng"
+  },
+  {
+    "item": "Q6419728",
+    "itemLabel": "Klarinet"
+  },
+  {
+    "item": "Q6420729",
+    "itemLabel": "Klevehill Park"
+  },
+  {
+    "item": "Q5698789",
+    "itemLabel": "Heideveld"
+  },
+  {
+    "item": "Q5674344",
+    "itemLabel": "Hartebeeskop"
+  },
+  {
+    "item": "Q6427833",
+    "itemLabel": "Koloti"
+  },
+  {
+    "item": "Q5748283",
+    "itemLabel": "Heuwelsig"
+  },
+  {
+    "item": "Q5764449",
+    "itemLabel": "Hilton, KwaZulu-Natal"
+  },
+  {
+    "item": "Q5900131",
+    "itemLabel": "Hopewell, KwaZulu-Natal"
+  },
+  {
+    "item": "Q6146167",
+    "itemLabel": "Jamestown, Western Cape"
+  },
+  {
+    "item": "Q6180444",
+    "itemLabel": "Jeppestown South"
+  },
+  {
+    "item": "Q6371262",
+    "itemLabel": "Karkams"
+  },
+  {
+    "item": "Q6389677",
+    "itemLabel": "Kennedy Road, Durban"
+  },
+  {
+    "item": "Q6421110",
+    "itemLabel": "Klipfontein, Mpumalanga"
+  },
+  {
+    "item": "Q6421122",
+    "itemLabel": "Klipriviersberg"
+  },
+  {
+    "item": "Q5658192",
+    "itemLabel": "Harkerville"
+  },
+  {
+    "item": "Q5685141",
+    "itemLabel": "Hawkins Estate"
+  },
+  {
+    "item": "Q6149061",
+    "itemLabel": "Jan Hofmeyer"
+  },
+  {
+    "item": "Q6294511",
+    "itemLabel": "Joubert Park"
+  },
+  {
+    "item": "Q6305555",
+    "itemLabel": "Jukskei Park"
+  },
+  {
+    "item": "Q6344296",
+    "itemLabel": "Kabokweni"
+  },
+  {
+    "item": "Q6356416",
+    "itemLabel": "Kambula"
+  },
+  {
+    "item": "Q6356529",
+    "itemLabel": "Kameel-rivier B"
+  },
+  {
+    "item": "Q6360608",
+    "itemLabel": "Kanana, North West"
+  },
+  {
+    "item": "Q6373368",
+    "itemLabel": "Karridene"
+  },
+  {
+    "item": "Q6383536",
+    "itemLabel": "Kei Mouth"
+  },
+  {
+    "item": "Q6391402",
+    "itemLabel": "Kensington, Gauteng"
+  },
+  {
+    "item": "Q6404048",
+    "itemLabel": "Kibler Park"
+  },
+  {
+    "item": "Q6406706",
+    "itemLabel": "Kildare, Mpumalanga"
+  },
+  {
+    "item": "Q6421123",
+    "itemLabel": "Klipriviersberg Estate"
+  },
+  {
+    "item": "Q6435750",
+    "itemLabel": "Kraaipan"
+  },
+  {
+    "item": "Q5681356",
+    "itemLabel": "Hatfield, Pretoria"
+  },
+  {
+    "item": "Q5759325",
+    "itemLabel": "Highlands, Gauteng"
+  },
+  {
+    "item": "Q5912944",
+    "itemLabel": "Houghton Estate"
+  },
+  {
+    "item": "Q5916914",
+    "itemLabel": "Houtkoppen"
+  },
+  {
+    "item": "Q5946730",
+    "itemLabel": "Hurlingham, Gauteng"
+  },
+  {
+    "item": "Q6081161",
+    "itemLabel": "Isipingo"
+  },
+  {
+    "item": "Q6180441",
+    "itemLabel": "Jeppestown"
+  },
+  {
+    "item": "Q6306088",
+    "itemLabel": "Julesburg, Limpopo"
+  },
+  {
+    "item": "Q6375292",
+    "itemLabel": "Katberg"
+  },
+  {
+    "item": "Q6391427",
+    "itemLabel": "Kensington B"
+  },
+  {
+    "item": "Q6391996",
+    "itemLabel": "Kentani"
+  },
+  {
+    "item": "Q6394877",
+    "itemLabel": "Loopspruit"
+  },
+  {
+    "item": "Q6397868",
+    "itemLabel": "Kew, Gauteng"
+  },
+  {
+    "item": "Q6426314",
+    "itemLabel": "Koingnaas"
+  },
+  {
+    "item": "Q6435928",
+    "itemLabel": "Krakeel River"
+  },
+  {
+    "item": "Q6428067",
+    "itemLabel": "Komaggas"
+  },
+  {
+    "item": "Q5690119",
+    "itemLabel": "Headway Hill"
+  },
+  {
+    "item": "Q5738590",
+    "itemLabel": "Heriotdale"
+  },
+  {
+    "item": "Q5759396",
+    "itemLabel": "Highlands North, Gauteng"
+  },
+  {
+    "item": "Q5946588",
+    "itemLabel": "Hurl Park"
+  },
+  {
+    "item": "Q6013527",
+    "itemLabel": "Inanda, Gauteng"
+  },
+  {
+    "item": "Q6094912",
+    "itemLabel": "Itsoseng"
+  },
+  {
+    "item": "Q6356532",
+    "itemLabel": "Kameeldrift"
+  },
+  {
+    "item": "Q6389285",
+    "itemLabel": "Kenilworth, Gauteng"
+  },
+  {
+    "item": "Q6392466",
+    "itemLabel": "Kentview, Gauteng"
+  },
+  {
+    "item": "Q6392532",
+    "itemLabel": "Kenwyn, Cape Town"
+  },
+  {
+    "item": "Q6395826",
+    "itemLabel": "Mahlabatini"
+  },
+  {
+    "item": "Q6403493",
+    "itemLabel": "Khyber Rock"
+  },
+  {
+    "item": "Q6433263",
+    "itemLabel": "Kosmos, North West"
+  },
+  {
+    "item": "Q6487354",
+    "itemLabel": "Lansdowne, Cape Town"
+  },
+  {
+    "item": "Q6530329",
+    "itemLabel": "Lesetlheng"
+  },
+  {
+    "item": "Q6552244",
+    "itemLabel": "Linden, Gauteng"
+  },
+  {
+    "item": "Q6724647",
+    "itemLabel": "Macleantown"
+  },
+  {
+    "item": "Q6738717",
+    "itemLabel": "Makapanstad"
+  },
+  {
+    "item": "Q6741236",
+    "itemLabel": "Malamulele"
+  },
+  {
+    "item": "Q6745040",
+    "itemLabel": "Malvern, Gauteng"
+  },
+  {
+    "item": "Q6754838",
+    "itemLabel": "Maranzhe"
+  },
+  {
+    "item": "Q6671285",
+    "itemLabel": "Lone Hill"
+  },
+  {
+    "item": "Q6732499",
+    "itemLabel": "Magudu"
+  },
+  {
+    "item": "Q6450691",
+    "itemLabel": "Kyalami Agricultural Holdings"
+  },
+  {
+    "item": "Q6485875",
+    "itemLabel": "Langeloop"
+  },
+  {
+    "item": "Q6530571",
+    "itemLabel": "Leslie, Mpumalanga"
+  },
+  {
+    "item": "Q6533511",
+    "itemLabel": "Letsitele"
+  },
+  {
+    "item": "Q6548391",
+    "itemLabel": "Lillydale, Mpumalanga"
+  },
+  {
+    "item": "Q6554487",
+    "itemLabel": "Linmeyer"
+  },
+  {
+    "item": "Q6729636",
+    "itemLabel": "Magaliessig"
+  },
+  {
+    "item": "Q6741295",
+    "itemLabel": "Malanshof"
+  },
+  {
+    "item": "Q6749193",
+    "itemLabel": "Manguzi"
+  },
+  {
+    "item": "Q6750569",
+    "itemLabel": "Mankweng"
+  },
+  {
+    "item": "Q6754535",
+    "itemLabel": "Marabastad, Pretoria"
+  },
+  {
+    "item": "Q6771616",
+    "itemLabel": "Marlboro, Gauteng"
+  },
+  {
+    "item": "Q6771624",
+    "itemLabel": "Marlboro Gardens"
+  },
+  {
+    "item": "Q6463512",
+    "itemLabel": "La Lucia"
+  },
+  {
+    "item": "Q6543645",
+    "itemLabel": "Lidgetton"
+  },
+  {
+    "item": "Q6552539",
+    "itemLabel": "Lindley, Gauteng"
+  },
+  {
+    "item": "Q6652965",
+    "itemLabel": "Littlefillan"
+  },
+  {
+    "item": "Q6681559",
+    "itemLabel": "Lorraine, Limpopo"
+  },
+  {
+    "item": "Q6708158",
+    "itemLabel": "Lyme Park, Gauteng"
+  },
+  {
+    "item": "Q6728464",
+    "itemLabel": "Madras, Mpumalanga"
+  },
+  {
+    "item": "Q6729635",
+    "itemLabel": "Magalies View"
+  },
+  {
+    "item": "Q6750567",
+    "itemLabel": "Mankwe"
+  },
+  {
+    "item": "Q6772287",
+    "itemLabel": "Maroeladal"
+  },
+  {
+    "item": "Q6450694",
+    "itemLabel": "Kyalami Estates"
+  },
+  {
+    "item": "Q6450692",
+    "itemLabel": "Kyalami Business Park"
+  },
+  {
+    "item": "Q6464922",
+    "itemLabel": "La Rochelle, Gauteng"
+  },
+  {
+    "item": "Q6520888",
+    "itemLabel": "Leliefontein, Northern Cape"
+  },
+  {
+    "item": "Q6552155",
+    "itemLabel": "Lindberg Park"
+  },
+  {
+    "item": "Q6698824",
+    "itemLabel": "Ludlow, Mpumalanga"
+  },
+  {
+    "item": "Q6710389",
+    "itemLabel": "Lyttelton, Gauteng"
+  },
+  {
+    "item": "Q6727750",
+    "itemLabel": "Madikwe"
+  },
+  {
+    "item": "Q6450615",
+    "itemLabel": "Kya Sand"
+  },
+  {
+    "item": "Q6463836",
+    "itemLabel": "La Mercy"
+  },
+  {
+    "item": "Q6509556",
+    "itemLabel": "Leandra, Mpumalanga"
+  },
+  {
+    "item": "Q6516526",
+    "itemLabel": "Leeufontein"
+  },
+  {
+    "item": "Q6523429",
+    "itemLabel": "Lenyenye"
+  },
+  {
+    "item": "Q6544108",
+    "itemLabel": "Liefde en Vrede"
+  },
+  {
+    "item": "Q6680550",
+    "itemLabel": "Lorentzville"
+  },
+  {
+    "item": "Q6689430",
+    "itemLabel": "Louisvale"
+  },
+  {
+    "item": "Q6689837",
+    "itemLabel": "Louterwater"
+  },
+  {
+    "item": "Q6734179",
+    "itemLabel": "Mahlabathini"
+  },
+  {
+    "item": "Q6740454",
+    "itemLabel": "Makumeke"
+  },
+  {
+    "item": "Q6740507",
+    "itemLabel": "Makwane"
+  },
+  {
+    "item": "Q6745006",
+    "itemLabel": "Maluti, Eastern Cape"
+  },
+  {
+    "item": "Q6754239",
+    "itemLabel": "Mapumulo"
+  },
+  {
+    "item": "Q6755285",
+    "itemLabel": "Marburg, KwaZulu-Natal"
+  },
+  {
+    "item": "Q6756936",
+    "itemLabel": "Marchand, Northern Cape"
+  },
+  {
+    "item": "Q7138613",
+    "itemLabel": "Parkmore"
+  },
+  {
+    "item": "Q6983651",
+    "itemLabel": "Ncwadi"
+  },
+  {
+    "item": "Q7007012",
+    "itemLabel": "New Doornfontein"
+  },
+  {
+    "item": "Q7048491",
+    "itemLabel": "Nomcamba"
+  },
+  {
+    "item": "Q7058097",
+    "itemLabel": "Northern Acres, Gauteng"
+  },
+  {
+    "item": "Q7060747",
+    "itemLabel": "Norvalspont"
+  },
+  {
+    "item": "Q7061580",
+    "itemLabel": "Norwood, Gauteng"
+  },
+  {
+    "item": "Q7067523",
+    "itemLabel": "Nquthu"
+  },
+  {
+    "item": "Q7070683",
+    "itemLabel": "Nuwerus"
+  },
+  {
+    "item": "Q7099627",
+    "itemLabel": "Orange Grove, Gauteng"
+  },
+  {
+    "item": "Q7099887",
+    "itemLabel": "Gariepdam"
+  },
+  {
+    "item": "Q7100220",
+    "itemLabel": "Orchards, Gauteng"
+  },
+  {
+    "item": "Q7108018",
+    "itemLabel": "Osummit"
+  },
+  {
+    "item": "Q7138502",
+    "itemLabel": "Parkhurst, Gauteng"
+  },
+  {
+    "item": "Q7162703",
+    "itemLabel": "Penge, Limpopo"
+  },
+  {
+    "item": "Q6984616",
+    "itemLabel": "Nebo, Limpopo"
+  },
+  {
+    "item": "Q7018233",
+    "itemLabel": "Newington, Mpumalanga"
+  },
+  {
+    "item": "Q7018324",
+    "itemLabel": "Newlands, Gauteng"
+  },
+  {
+    "item": "Q7051384",
+    "itemLabel": "Norkem Park"
+  },
+  {
+    "item": "Q7053389",
+    "itemLabel": "Norscot"
+  },
+  {
+    "item": "Q7054780",
+    "itemLabel": "North Champayne Estates"
+  },
+  {
+    "item": "Q7074074",
+    "itemLabel": "Oaklands, Gauteng"
+  },
+  {
+    "item": "Q7087244",
+    "itemLabel": "Olivedale, Gauteng"
+  },
+  {
+    "item": "Q7092170",
+    "itemLabel": "Onderstepoort"
+  },
+  {
+    "item": "Q7106563",
+    "itemLabel": "Oshabeni"
+  },
+  {
+    "item": "Q7138740",
+    "itemLabel": "Parkview, Gauteng"
+  },
+  {
+    "item": "Q7155368",
+    "itemLabel": "Paulshof"
+  },
+  {
+    "item": "Q7166990",
+    "itemLabel": "Percelia Estate"
+  },
+  {
+    "item": "Q6983648",
+    "itemLabel": "Ncora"
+  },
+  {
+    "item": "Q7022639",
+    "itemLabel": "Ngqeleni"
+  },
+  {
+    "item": "Q7059660",
+    "itemLabel": "Northriding"
+  },
+  {
+    "item": "Q7061595",
+    "itemLabel": "Norwood, Western Cape"
+  },
+  {
+    "item": "Q7071237",
+    "itemLabel": "Nyoni, KwaZulu-Natal"
+  },
+  {
+    "item": "Q7095111",
+    "itemLabel": "Onverwacht, Limpopo"
+  },
+  {
+    "item": "Q7127970",
+    "itemLabel": "Palm Beach, KwaZulu-Natal"
+  },
+  {
+    "item": "Q7131325",
+    "itemLabel": "Pankop"
+  },
+  {
+    "item": "Q7138733",
+    "itemLabel": "Parktown"
+  },
+  {
+    "item": "Q7138737",
+    "itemLabel": "Parktown North"
+  },
+  {
+    "item": "Q7074743",
+    "itemLabel": "Oberholzer"
+  },
+  {
+    "item": "Q7007784",
+    "itemLabel": "New Germany, KwaZulu-Natal"
+  },
+  {
+    "item": "Q7020608",
+    "itemLabel": "Newtown, Johannesburg"
+  },
+  {
+    "item": "Q7021851",
+    "itemLabel": "Ngagane"
+  },
+  {
+    "item": "Q7057562",
+    "itemLabel": "Northam, Limpopo"
+  },
+  {
+    "item": "Q7059426",
+    "itemLabel": "Northgate, Gauteng"
+  },
+  {
+    "item": "Q7078684",
+    "itemLabel": "Oerder Park"
+  },
+  {
+    "item": "Q7103458",
+    "itemLabel": "Ormonde, Gauteng"
+  },
+  {
+    "item": "Q7109462",
+    "itemLabel": "Ottery, Cape Town"
+  },
+  {
+    "item": "Q7137666",
+    "itemLabel": "Park Central, Gauteng"
+  },
+  {
+    "item": "Q7144572",
+    "itemLabel": "Paterson, Eastern Cape"
+  },
+  {
+    "item": "Q7178290",
+    "itemLabel": "Petervale"
+  },
+  {
+    "item": "Q6967307",
+    "itemLabel": "Nasrec"
+  },
+  {
+    "item": "Q6983658",
+    "itemLabel": "Ndabeni"
+  },
+  {
+    "item": "Q7006469",
+    "itemLabel": "New Centre, Gauteng"
+  },
+  {
+    "item": "Q7031922",
+    "itemLabel": "Nietgedacht"
+  },
+  {
+    "item": "Q7067519",
+    "itemLabel": "Nqamakwe"
+  },
+  {
+    "item": "Q7070951",
+    "itemLabel": "Nyavani"
+  },
+  {
+    "item": "Q7073820",
+    "itemLabel": "Oakdene, Gauteng"
+  },
+  {
+    "item": "Q7075455",
+    "itemLabel": "Observatory, Gauteng"
+  },
+  {
+    "item": "Q7097988",
+    "itemLabel": "Ophirton"
+  },
+  {
+    "item": "Q7113868",
+    "itemLabel": "Overport"
+  },
+  {
+    "item": "Q7124349",
+    "itemLabel": "Pageview, Gauteng"
+  },
+  {
+    "item": "Q7134239",
+    "itemLabel": "Paradise Beach, Eastern Cape"
+  },
+  {
+    "item": "Q7138578",
+    "itemLabel": "Parklands, Cape Town"
+  },
+  {
+    "item": "Q5567577",
+    "itemLabel": "Glen Athol"
+  },
+  {
+    "item": "Q5567582",
+    "itemLabel": "Glen Austin"
+  },
+  {
+    "item": "Q5568119",
+    "itemLabel": "Glenadrienne"
+  },
+  {
+    "item": "Q5568558",
+    "itemLabel": "Glenhazel"
+  },
+  {
+    "item": "Q5569211",
+    "itemLabel": "Gleniffer"
+  },
+  {
+    "item": "Q5602531",
+    "itemLabel": "Green Farm, Limpopo"
+  },
+  {
+    "item": "Q5608460",
+    "itemLabel": "Greymont"
+  },
+  {
+    "item": "Q5638501",
+    "itemLabel": "Haga Haga"
+  },
+  {
+    "item": "Q3565574",
+    "itemLabel": "Walmer Estate, Cape Town"
+  },
+  {
+    "item": "Q3643597",
+    "itemLabel": "Villiers, Free State"
+  },
+  {
+    "item": "Q3643680",
+    "itemLabel": "Fouriesburg"
+  },
+  {
+    "item": "Q3644341",
+    "itemLabel": "Dennehof, Western Cape"
+  },
+  {
+    "item": "Q3644419",
+    "itemLabel": "Komga"
+  },
+  {
+    "item": "Q3644445",
+    "itemLabel": "Keiskammahoek"
+  },
+  {
+    "item": "Q3644552",
+    "itemLabel": "Rosettenville"
+  },
+  {
+    "item": "Q3847738",
+    "itemLabel": "Mariannhill"
+  },
+  {
+    "item": "Q4698599",
+    "itemLabel": "Airdlin"
+  },
+  {
+    "item": "Q4713440",
+    "itemLabel": "Aldara Park"
+  },
+  {
+    "item": "Q4815602",
+    "itemLabel": "Athlone, Cape Town"
+  },
+  {
+    "item": "Q4815650",
+    "itemLabel": "Atholl Gardens"
+  },
+  {
+    "item": "Q5445046",
+    "itemLabel": "Ferndale, Gauteng"
+  },
+  {
+    "item": "Q5461441",
+    "itemLabel": "Florida Hills"
+  },
+  {
+    "item": "Q5467280",
+    "itemLabel": "Forbesdale"
+  },
+  {
+    "item": "Q5468908",
+    "itemLabel": "Forest Hill, Gauteng"
+  },
+  {
+    "item": "Q5568138",
+    "itemLabel": "Glenanda"
+  },
+  {
+    "item": "Q5568221",
+    "itemLabel": "Glencairn, Cape Town"
+  },
+  {
+    "item": "Q5568487",
+    "itemLabel": "Glenesk"
+  },
+  {
+    "item": "Q5604520",
+    "itemLabel": "Greenside, Mpumalanga"
+  },
+  {
+    "item": "Q3643589",
+    "itemLabel": "Williston"
+  },
+  {
+    "item": "Q3493630",
+    "itemLabel": "Atlantis"
+  },
+  {
+    "item": "Q3644425",
+    "itemLabel": "Irene"
+  },
+  {
+    "item": "Q3643608",
+    "itemLabel": "Charlestown"
+  },
+  {
+    "item": "Q3644460",
+    "itemLabel": "Woodstock"
+  },
+  {
+    "item": "Q3551340",
+    "itemLabel": "University Estate"
+  },
+  {
+    "item": "Q3643615",
+    "itemLabel": "Cornelia, Free State"
+  },
+  {
+    "item": "Q3643783",
+    "itemLabel": "Koster"
+  },
+  {
+    "item": "Q3643780",
+    "itemLabel": "Louwsburg"
+  },
+  {
+    "item": "Q3644072",
+    "itemLabel": "Nature's Valley"
+  },
+  {
+    "item": "Q3644243",
+    "itemLabel": "Hartbeespoort"
+  },
+  {
+    "item": "Q3644233",
+    "itemLabel": "Soekmekaar"
+  },
+  {
+    "item": "Q3644367",
+    "itemLabel": "Loerie, Eastern Cape"
+  },
+  {
+    "item": "Q3644422",
+    "itemLabel": "Loxton, Northern Cape"
+  },
+  {
+    "item": "Q3644429",
+    "itemLabel": "Kinross"
+  },
+  {
+    "item": "Q3644253",
+    "itemLabel": "Dalton"
+  },
+  {
+    "item": "Q4711417",
+    "itemLabel": "Florida"
+  },
+  {
+    "item": "Q4831563",
+    "itemLabel": "Crawford"
+  },
+  {
+    "item": "Q4707832",
+    "itemLabel": "Brooklyn"
+  },
+  {
+    "item": "Q3644260",
+    "itemLabel": "Evander"
+  },
+  {
+    "item": "Q4688491",
+    "itemLabel": "Aeroton"
+  },
+  {
+    "item": "Q4712277",
+    "itemLabel": "Albertskroon"
+  },
+  {
+    "item": "Q4733498",
+    "itemLabel": "Alma, Limpopo"
+  },
+  {
+    "item": "Q4815646",
+    "itemLabel": "Atholhurst"
+  },
+  {
+    "item": "Q4815647",
+    "itemLabel": "Atholl, Gauteng"
+  },
+  {
+    "item": "Q4819538",
+    "itemLabel": "Auckland Park"
+  },
+  {
+    "item": "Q4841989",
+    "itemLabel": "Bagleyston"
+  },
+  {
+    "item": "Q5465114",
+    "itemLabel": "Fontainebleau, Gauteng"
+  },
+  {
+    "item": "Q5468944",
+    "itemLabel": "Forest Hills, Kloof"
+  },
+  {
+    "item": "Q5490764",
+    "itemLabel": "Frankfort, Eastern Cape"
+  },
+  {
+    "item": "Q5562438",
+    "itemLabel": "Gillview"
+  },
+  {
+    "item": "Q5569422",
+    "itemLabel": "Glenvista"
+  },
+  {
+    "item": "Q5582119",
+    "itemLabel": "Gonubie"
+  },
+  {
+    "item": "Q5583701",
+    "itemLabel": "Goodwood, North West"
+  },
+  {
+    "item": "Q5597866",
+    "itemLabel": "Gravelotte, Limpopo"
+  },
+  {
+    "item": "Q5610286",
+    "itemLabel": "Grootdraai"
+  },
+  {
+    "item": "Q5637687",
+    "itemLabel": "Haddon, Gauteng"
+  },
+  {
+    "item": "Q3513979",
+    "itemLabel": "Boggomsbaai"
+  },
+  {
+    "item": "Q3545448",
+    "itemLabel": "Groblershoop"
+  },
+  {
+    "item": "Q3643594",
+    "itemLabel": "Amalia, North West"
+  },
+  {
+    "item": "Q3643772",
+    "itemLabel": "Van Reenen"
+  },
+  {
+    "item": "Q3644236",
+    "itemLabel": "Willowvale, Eastern Cape"
+  },
+  {
+    "item": "Q3644379",
+    "itemLabel": "Lothair"
+  },
+  {
+    "item": "Q5604579",
+    "itemLabel": "Greenstone Hill"
+  },
+  {
+    "item": "Q4777935",
+    "itemLabel": "Augrabies"
+  },
+  {
+    "item": "Q5476301",
+    "itemLabel": "Fourways"
+  },
+  {
+    "item": "Q5583705",
+    "itemLabel": "Goodwood"
+  },
+  {
+    "item": "Q4680379",
+    "itemLabel": "Adams Mission"
+  },
+  {
+    "item": "Q4712299",
+    "itemLabel": "Albertville, Gauteng"
+  },
+  {
+    "item": "Q4731448",
+    "itemLabel": "Allemansdrift"
+  },
+  {
+    "item": "Q4805472",
+    "itemLabel": "Brackenfell"
+  },
+  {
+    "item": "Q4808352",
+    "itemLabel": "Assagay"
+  },
+  {
+    "item": "Q5445283",
+    "itemLabel": "Ferreirasdorp"
+  },
+  {
+    "item": "Q5461427",
+    "itemLabel": "Florida Glen"
+  },
+  {
+    "item": "Q5469119",
+    "itemLabel": "Forest Town, Gauteng"
+  },
+  {
+    "item": "Q5500577",
+    "itemLabel": "Freedom Park, North West"
+  },
+  {
+    "item": "Q3643767",
+    "itemLabel": "Thabazimbi"
+  },
+  {
+    "item": "Q5577123",
+    "itemLabel": "Goedgevonden"
+  },
+  {
+    "item": "Q5607623",
+    "itemLabel": "Gresswold"
+  },
+  {
+    "item": "Q5641938",
+    "itemLabel": "Halfway Gardens"
+  },
+  {
+    "item": "Q3644265",
+    "itemLabel": "Port Edward"
+  },
+  {
+    "item": "Q3445665",
+    "itemLabel": "Henley on Klip"
+  },
+  {
+    "item": "Q3475517",
+    "itemLabel": "Schotsche Kloof, Cape Town"
+  },
+  {
+    "item": "Q3495331",
+    "itemLabel": "St James, Cape Town"
+  },
+  {
+    "item": "Q3643600",
+    "itemLabel": "Van Stadensrus"
+  },
+  {
+    "item": "Q3644267",
+    "itemLabel": "Cedarville, South Africa"
+  },
+  {
+    "item": "Q3644544",
+    "itemLabel": "Dutywa"
+  },
+  {
+    "item": "Q3643770",
+    "itemLabel": "Ennerdale"
+  },
+  {
+    "item": "Q4217424",
+    "itemLabel": "Cato Ridge"
+  },
+  {
+    "item": "Q4664288",
+    "itemLabel": "Abbotsford, Johannesburg"
+  },
+  {
+    "item": "Q4681358",
+    "itemLabel": "Addo, Eastern Cape"
+  },
+  {
+    "item": "Q4707236",
+    "itemLabel": "Alan Manor"
+  },
+  {
+    "item": "Q4720929",
+    "itemLabel": "Alexandria, Mpumalanga"
+  },
+  {
+    "item": "Q4739816",
+    "itemLabel": "Amandelbult"
+  },
+  {
+    "item": "Q4779323",
+    "itemLabel": "Apel, Limpopo"
+  },
+  {
+    "item": "Q4807820",
+    "itemLabel": "Aspen Hills, Gauteng"
+  },
+  {
+    "item": "Q4818778",
+    "itemLabel": "Capri Village"
+  },
+  {
+    "item": "Q3644189",
+    "itemLabel": "Slangrivier"
+  },
+  {
+    "item": "Q5515187",
+    "itemLabel": "Ga-Molepo"
+  },
+  {
+    "item": "Q5515196",
+    "itemLabel": "Ga Masemola"
+  },
+  {
+    "item": "Q5562384",
+    "itemLabel": "Gillitts"
+  },
+  {
+    "item": "Q5641947",
+    "itemLabel": "Halfway House Estate"
+  },
+  {
+    "item": "Q3495899",
+    "itemLabel": "Onseepkans"
+  },
+  {
+    "item": "Q3643684",
+    "itemLabel": "Cookhouse"
+  },
+  {
+    "item": "Q3643578",
+    "itemLabel": "Steynsrus"
+  },
+  {
+    "item": "Q3643586",
+    "itemLabel": "Stella, North West"
+  },
+  {
+    "item": "Q3644240",
+    "itemLabel": "Indwe"
+  },
+  {
+    "item": "Q3644375",
+    "itemLabel": "Rayton"
+  },
+  {
+    "item": "Q3644424",
+    "itemLabel": "Kei Road"
+  },
+  {
+    "item": "Q3644432",
+    "itemLabel": "Ogies"
+  },
+  {
+    "item": "Q3644436",
+    "itemLabel": "Oviston"
+  },
+  {
+    "item": "Q3644440",
+    "itemLabel": "Reivilo"
+  },
+  {
+    "item": "Q4692190",
+    "itemLabel": "Aggeneys"
+  },
+  {
+    "item": "Q4739332",
+    "itemLabel": "Amalgam, Gauteng"
+  },
+  {
+    "item": "Q4761710",
+    "itemLabel": "Anerley, KwaZulu-Natal"
+  },
+  {
+    "item": "Q4825404",
+    "itemLabel": "Austrey, North West"
+  },
+  {
+    "item": "Q5442555",
+    "itemLabel": "Fellside, Gauteng"
+  },
+  {
+    "item": "Q5515188",
+    "itemLabel": "Ga-Kgapane"
+  },
+  {
+    "item": "Q5519119",
+    "itemLabel": "Gallo Manor"
+  },
+  {
+    "item": "Q5521543",
+    "itemLabel": "Ganyesa"
+  },
+  {
+    "item": "Q7330730",
+    "itemLabel": "Richmond"
+  },
+  {
+    "item": "Q7416278",
+    "itemLabel": "Sandhurst"
+  },
+  {
+    "item": "Q7195518",
+    "itemLabel": "Pinelands, Cape Town"
+  },
+  {
+    "item": "Q7205097",
+    "itemLabel": "Plooysville"
+  },
+  {
+    "item": "Q7243785",
+    "itemLabel": "Prince Albert Road, Western Cape"
+  },
+  {
+    "item": "Q7258345",
+    "itemLabel": "Pudimoe"
+  },
+  {
+    "item": "Q7291735",
+    "itemLabel": "Randjespark"
+  },
+  {
+    "item": "Q7292023",
+    "itemLabel": "Randpark Ridge"
+  },
+  {
+    "item": "Q7333175",
+    "itemLabel": "Rietfontein"
+  },
+  {
+    "item": "Q7333185",
+    "itemLabel": "Rietpoort"
+  },
+  {
+    "item": "Q7337133",
+    "itemLabel": "River Bend, Gauteng"
+  },
+  {
+    "item": "Q7366179",
+    "itemLabel": "Rooiboklaagte"
+  },
+  {
+    "item": "Q7368551",
+    "itemLabel": "Rosendal, Free State"
+  },
+  {
+    "item": "Q7378821",
+    "itemLabel": "Ruiterhof"
+  },
+  {
+    "item": "Q7333180",
+    "itemLabel": "Rietpan"
+  },
+  {
+    "item": "Q7366177",
+    "itemLabel": "Rooiberg"
+  },
+  {
+    "item": "Q7192727",
+    "itemLabel": "Piet Plessis"
+  },
+  {
+    "item": "Q7205096",
+    "itemLabel": "Plooysburg"
+  },
+  {
+    "item": "Q7268063",
+    "itemLabel": "Qolora Mouth"
+  },
+  {
+    "item": "Q7270856",
+    "itemLabel": "Queensburgh"
+  },
+  {
+    "item": "Q7290259",
+    "itemLabel": "Ramsgate, KwaZulu-Natal"
+  },
+  {
+    "item": "Q7308129",
+    "itemLabel": "Regents Park, Gauteng"
+  },
+  {
+    "item": "Q7319091",
+    "itemLabel": "Rewlatch"
+  },
+  {
+    "item": "Q7319675",
+    "itemLabel": "Reynolds View"
+  },
+  {
+    "item": "Q7333148",
+    "itemLabel": "Riepen Park"
+  },
+  {
+    "item": "Q7333172",
+    "itemLabel": "Rietbron"
+  },
+  {
+    "item": "Q7336205",
+    "itemLabel": "Risiville"
+  },
+  {
+    "item": "Q7360985",
+    "itemLabel": "Rolle, Mpumalanga"
+  },
+  {
+    "item": "Q7365443",
+    "itemLabel": "Ronaldsey"
+  },
+  {
+    "item": "Q7442234",
+    "itemLabel": "Seaview, Eastern Cape"
+  },
+  {
+    "item": "Q7487254",
+    "itemLabel": "Shallcross, Durban"
+  },
+  {
+    "item": "Q7517399",
+    "itemLabel": "Simba, Gauteng"
+  },
+  {
+    "item": "Q7528274",
+    "itemLabel": "Sir Lowry's Pass Village"
+  },
+  {
+    "item": "Q7534828",
+    "itemLabel": "Skhiming"
+  },
+  {
+    "item": "Q7237529",
+    "itemLabel": "Praegville"
+  },
+  {
+    "item": "Q7242178",
+    "itemLabel": "Pretoria North"
+  },
+  {
+    "item": "Q7245243",
+    "itemLabel": "Prinshof"
+  },
+  {
+    "item": "Q7249558",
+    "itemLabel": "Prolecon"
+  },
+  {
+    "item": "Q7271940",
+    "itemLabel": "Quigney, Eastern Cape"
+  },
+  {
+    "item": "Q7272770",
+    "itemLabel": "Qumbu"
+  },
+  {
+    "item": "Q7289799",
+    "itemLabel": "Ramokoka"
+  },
+  {
+    "item": "Q7292022",
+    "itemLabel": "Randpark"
+  },
+  {
+    "item": "Q7292040",
+    "itemLabel": "Randview"
+  },
+  {
+    "item": "Q7305921",
+    "itemLabel": "Redhouse, Eastern Cape"
+  },
+  {
+    "item": "Q7308013",
+    "itemLabel": "Regency Park Estate"
+  },
+  {
+    "item": "Q7338850",
+    "itemLabel": "Riviera, Gauteng"
+  },
+  {
+    "item": "Q7352072",
+    "itemLabel": "Robertsham"
+  },
+  {
+    "item": "Q7365538",
+    "itemLabel": "Rondebosch East"
+  },
+  {
+    "item": "Q7404755",
+    "itemLabel": "Salisbury Claims"
+  },
+  {
+    "item": "Q7418938",
+    "itemLabel": "Sans Souci, KwaZulu-Natal"
+  },
+  {
+    "item": "Q7462543",
+    "itemLabel": "Shakadza"
+  },
+  {
+    "item": "Q7535840",
+    "itemLabel": "Skipskop"
+  },
+  {
+    "item": "Q7542342",
+    "itemLabel": "Slurry, North West"
+  },
+  {
+    "item": "Q7405938",
+    "itemLabel": "Salt Rock"
+  },
+  {
+    "item": "Q7506936",
+    "itemLabel": "Sibasa"
+  },
+  {
+    "item": "Q7375355",
+    "itemLabel": "Rozendal"
+  },
+  {
+    "item": "Q7227301",
+    "itemLabel": "Pomfret, North West"
+  },
+  {
+    "item": "Q7238219",
+    "itemLabel": "Praktiseer"
+  },
+  {
+    "item": "Q7296217",
+    "itemLabel": "Raumarais Park"
+  },
+  {
+    "item": "Q7332809",
+    "itemLabel": "Ridgeway, Gauteng"
+  },
+  {
+    "item": "Q7333063",
+    "itemLabel": "Riebeeckstad"
+  },
+  {
+    "item": "Q7335822",
+    "itemLabel": "Risana"
+  },
+  {
+    "item": "Q7336339",
+    "itemLabel": "Rispark"
+  },
+  {
+    "item": "Q7368060",
+    "itemLabel": "Rosebank, Gauteng"
+  },
+  {
+    "item": "Q7383794",
+    "itemLabel": "Zebediela"
+  },
+  {
+    "item": "Q7404396",
+    "itemLabel": "Salfred"
+  },
+  {
+    "item": "Q7430257",
+    "itemLabel": "Scarborough, Cape Town"
+  },
+  {
+    "item": "Q7535271",
+    "itemLabel": "Skilpadshek"
+  },
+  {
+    "item": "Q7241239",
+    "itemLabel": "President Ridge"
+  },
+  {
+    "item": "Q7281959",
+    "itemLabel": "Raedene Estate"
+  },
+  {
+    "item": "Q7337277",
+    "itemLabel": "River Club, Gauteng"
+  },
+  {
+    "item": "Q7369919",
+    "itemLabel": "Rossouw, Eastern Cape"
+  },
+  {
+    "item": "Q7416488",
+    "itemLabel": "Sandown, Gauteng"
+  },
+  {
+    "item": "Q7428433",
+    "itemLabel": "Savoy Estate"
+  },
+  {
+    "item": "Q7428860",
+    "itemLabel": "Saxonwold"
+  },
+  {
+    "item": "Q7447540",
+    "itemLabel": "Selby, Gauteng"
+  },
+  {
+    "item": "Q7456738",
+    "itemLabel": "Setlagole"
+  },
+  {
+    "item": "Q7496592",
+    "itemLabel": "Shikishela"
+  },
+  {
+    "item": "Q7845095",
+    "itemLabel": "Trojan, Gauteng"
+  },
+  {
+    "item": "Q7849506",
+    "itemLabel": "Tseki"
+  },
+  {
+    "item": "Q7849629",
+    "itemLabel": "Tshipise"
+  },
+  {
+    "item": "Q7878139",
+    "itemLabel": "Uitkoms"
+  },
+  {
+    "item": "Q7881451",
+    "itemLabel": "Umdloti"
+  },
+  {
+    "item": "Q7930665",
+    "itemLabel": "Village Main, Gauteng"
+  },
+  {
+    "item": "Q8028525",
+    "itemLabel": "Witsand"
+  },
+  {
+    "item": "Q8026115",
+    "itemLabel": "Winston Park"
+  },
+  {
+    "item": "Q8033095",
+    "itemLabel": "Woodmead"
+  },
+  {
+    "item": "Q7876579",
+    "itemLabel": "Ubombo"
+  },
+  {
+    "item": "Q7907808",
+    "itemLabel": "Vaal Reefs"
+  },
+  {
+    "item": "Q8028512",
+    "itemLabel": "Witpoort"
+  },
+  {
+    "item": "Q11021121",
+    "itemLabel": "Potsdam"
+  },
+  {
+    "item": "Q10420874",
+    "itemLabel": "Aston Bay, South Africa"
+  },
+  {
+    "item": "Q10466228",
+    "itemLabel": "Dalmanutha"
+  },
+  {
+    "item": "Q11007003",
+    "itemLabel": "Bakerville"
+  },
+  {
+    "item": "Q7847056",
+    "itemLabel": "Troyeville"
+  },
+  {
+    "item": "Q7848110",
+    "itemLabel": "Trust Feed"
+  },
+  {
+    "item": "Q7849843",
+    "itemLabel": "Tsolo"
+  },
+  {
+    "item": "Q7854876",
+    "itemLabel": "Turffontein"
+  },
+  {
+    "item": "Q7855036",
+    "itemLabel": "Turkey, Limpopo"
+  },
+  {
+    "item": "Q7878812",
+    "itemLabel": "Ulco, Northern Cape"
+  },
+  {
+    "item": "Q7914527",
+    "itemLabel": "Vandia Grove"
+  },
+  {
+    "item": "Q7921512",
+    "itemLabel": "Vermaaklikheid"
+  },
+  {
+    "item": "Q7943102",
+    "itemLabel": "Vrieskraal"
+  },
+  {
+    "item": "Q7974522",
+    "itemLabel": "Waterval"
+  },
+  {
+    "item": "Q7982990",
+    "itemLabel": "Wentworth, Durban"
+  },
+  {
+    "item": "Q7987273",
+    "itemLabel": "Westcliff, Gauteng"
+  },
+  {
+    "item": "Q8022430",
+    "itemLabel": "Willowild"
+  },
+  {
+    "item": "Q8026541",
+    "itemLabel": "Winterveld"
+  },
+  {
+    "item": "Q8040079",
+    "itemLabel": "Wynberg, Gauteng"
+  },
+  {
+    "item": "Q10610936",
+    "itemLabel": "Ngcobo"
+  },
+  {
+    "item": "Q10657170",
+    "itemLabel": "Rosslyn"
+  },
+  {
+    "item": "Q7849847",
+    "itemLabel": "Tsomo"
+  },
+  {
+    "item": "Q8072427",
+    "itemLabel": "Zinkwazi Beach"
+  },
+  {
+    "item": "Q7829807",
+    "itemLabel": "Towerby"
+  },
+  {
+    "item": "Q7851621",
+    "itemLabel": "Tugela, KwaZulu-Natal"
+  },
+  {
+    "item": "Q7857464",
+    "itemLabel": "Twee Rivieren"
+  },
+  {
+    "item": "Q7857519",
+    "itemLabel": "Tweeriviere"
+  },
+  {
+    "item": "Q10676708",
+    "itemLabel": "KwaDukuza"
+  },
+  {
+    "item": "Q7881536",
+    "itemLabel": "Umgababa"
+  },
+  {
+    "item": "Q7913620",
+    "itemLabel": "Van Riebeeck Park"
+  },
+  {
+    "item": "Q7962393",
+    "itemLabel": "Walkerville, South Africa"
+  },
+  {
+    "item": "Q7962947",
+    "itemLabel": "Wallacedene"
+  },
+  {
+    "item": "Q7980512",
+    "itemLabel": "Welbedacht"
+  },
+  {
+    "item": "Q7982095",
+    "itemLabel": "Weltevredenpark"
+  },
+  {
+    "item": "Q7996207",
+    "itemLabel": "Whites, Free State"
+  },
+  {
+    "item": "Q8003519",
+    "itemLabel": "Willaway"
+  },
+  {
+    "item": "Q8032904",
+    "itemLabel": "Woodlands, Gauteng"
+  },
+  {
+    "item": "Q8052507",
+    "itemLabel": "Yeoville"
+  },
+  {
+    "item": "Q8072437",
+    "itemLabel": "Zinniaville"
+  },
+  {
+    "item": "Q10954427",
+    "itemLabel": "Venterspos"
+  },
+  {
+    "item": "Q11033131",
+    "itemLabel": "ISithebe"
+  },
+  {
+    "item": "Q7852098",
+    "itemLabel": "Tulisa Park"
+  },
+  {
+    "item": "Q7859893",
+    "itemLabel": "Tylden, Eastern Cape"
+  },
+  {
+    "item": "Q7913800",
+    "itemLabel": "Van Zylsrus"
+  },
+  {
+    "item": "Q7939001",
+    "itemLabel": "Vlakfontein"
+  },
+  {
+    "item": "Q7989769",
+    "itemLabel": "Westville, KwaZulu-Natal"
+  },
+  {
+    "item": "Q8025492",
+    "itemLabel": "Winklespruit"
+  },
+  {
+    "item": "Q8030605",
+    "itemLabel": "Wolwekraal"
+  },
+  {
+    "item": "Q8075447",
+    "itemLabel": "Zuurbekom"
+  },
+  {
+    "item": "Q10964684",
+    "itemLabel": "Devon, Gauteng"
+  },
+  {
+    "item": "Q10969186",
+    "itemLabel": "Heathfield, Cape Town"
+  },
+  {
+    "item": "Q10993937",
+    "itemLabel": "Pennington, KwaZulu-Natal"
+  },
+  {
+    "item": "Q7830270",
+    "itemLabel": "Townsview"
+  },
+  {
+    "item": "Q7832399",
+    "itemLabel": "Trafalgar, KwaZulu-Natal"
+  },
+  {
+    "item": "Q7849628",
+    "itemLabel": "Tshitale"
+  },
+  {
+    "item": "Q7854856",
+    "itemLabel": "Turf Club, Gauteng"
+  },
+  {
+    "item": "Q7926503",
+    "itemLabel": "Victoria, Gauteng"
+  },
+  {
+    "item": "Q7943717",
+    "itemLabel": "Vuwani"
+  },
+  {
+    "item": "Q7969700",
+    "itemLabel": "Warner Beach"
+  },
+  {
+    "item": "Q7982129",
+    "itemLabel": "Welverdiend"
+  },
+  {
+    "item": "Q7983826",
+    "itemLabel": "Wesley, Eastern Cape"
+  },
+  {
+    "item": "Q7990408",
+    "itemLabel": "Weza, KwaZulu-Natal"
+  },
+  {
+    "item": "Q7999174",
+    "itemLabel": "Wierda Valley"
+  },
+  {
+    "item": "Q8022439",
+    "itemLabel": "Willows, Bloemfontein"
+  },
+  {
+    "item": "Q8026530",
+    "itemLabel": "Winterton, KwaZulu-Natal"
+  },
+  {
+    "item": "Q8028322",
+    "itemLabel": "Witkoppen"
+  },
+  {
+    "item": "Q8033785",
+    "itemLabel": "Wooldridge, Eastern Cape"
+  },
+  {
+    "item": "Q10925601",
+    "itemLabel": "Impendle"
+  },
+  {
+    "item": "Q10969056",
+    "itemLabel": "Healdtown"
+  },
+  {
+    "item": "Q11022849",
+    "itemLabel": "Nottingham Road"
+  },
+  {
+    "item": "Q15216147",
+    "itemLabel": "Eersteling"
+  },
+  {
+    "item": "Q14943754",
+    "itemLabel": "Northcliff"
+  },
+  {
+    "item": "Q15179071",
+    "itemLabel": "Albert Falls"
+  },
+  {
+    "item": "Q15183299",
+    "itemLabel": "Apiesdoring"
+  },
+  {
+    "item": "Q15192613",
+    "itemLabel": "Ashburton, KwaZulu-Natal"
+  },
+  {
+    "item": "Q15198234",
+    "itemLabel": "Belgrade, KwaZulu-Natal"
+  },
+  {
+    "item": "Q15203433",
+    "itemLabel": "Border Post, Eastern Cape"
+  },
+  {
+    "item": "Q15205635",
+    "itemLabel": "Buffelshoek"
+  },
+  {
+    "item": "Q15205637",
+    "itemLabel": "Buffelsrivier"
+  },
+  {
+    "item": "Q15207787",
+    "itemLabel": "Cassel, South Africa"
+  },
+  {
+    "item": "Q15213264",
+    "itemLabel": "Debe Nek"
+  },
+  {
+    "item": "Q15215516",
+    "itemLabel": "Dwarsberg"
+  },
+  {
+    "item": "Q15216402",
+    "itemLabel": "Eldorado, Limpopo"
+  },
+  {
+    "item": "Q15217489",
+    "itemLabel": "Faure, South Africa"
+  },
+  {
+    "item": "Q15218008",
+    "itemLabel": "Foreshore, Cape Town"
+  },
+  {
+    "item": "Q15221333",
+    "itemLabel": "Ganalaagte"
+  },
+  {
+    "item": "Q15221734",
+    "itemLabel": "Glaudina"
+  },
+  {
+    "item": "Q15221862",
+    "itemLabel": "Goodhome"
+  },
+  {
+    "item": "Q15223023",
+    "itemLabel": "Harfield Village"
+  },
+  {
+    "item": "Q15223454",
+    "itemLabel": "Heatonville"
+  },
+  {
+    "item": "Q15223800",
+    "itemLabel": "Heuweloord"
+  },
+  {
+    "item": "Q15227306",
+    "itemLabel": "Hyde Park, Gauteng"
+  },
+  {
+    "item": "Q15228606",
+    "itemLabel": "Imvani"
+  },
+  {
+    "item": "Q15229307",
+    "itemLabel": "Jan Hofmeyer, Gauteng"
+  },
+  {
+    "item": "Q15203905",
+    "itemLabel": "Boskop"
+  },
+  {
+    "item": "Q15215107",
+    "itemLabel": "Driekop"
+  },
+  {
+    "item": "Q15222172",
+    "itemLabel": "Groenvlei"
+  },
+  {
+    "item": "Q15221096",
+    "itemLabel": "Frederikstad"
+  },
+  {
+    "item": "Q15177853",
+    "itemLabel": "Abbotspoort"
+  },
+  {
+    "item": "Q15196470",
+    "itemLabel": "Bandelierkop"
+  },
+  {
+    "item": "Q15198721",
+    "itemLabel": "Bethanie, North West"
+  },
+  {
+    "item": "Q15212442",
+    "itemLabel": "Da Gama Park"
+  },
+  {
+    "item": "Q15212766",
+    "itemLabel": "Danskraal"
+  },
+  {
+    "item": "Q15213243",
+    "itemLabel": "De Villiersdale"
+  },
+  {
+    "item": "Q15215105",
+    "itemLabel": "Driefontein, North West"
+  },
+  {
+    "item": "Q15216629",
+    "itemLabel": "Enable, Limpopo"
+  },
+  {
+    "item": "Q15217910",
+    "itemLabel": "Florisbad"
+  },
+  {
+    "item": "Q15218385",
+    "itemLabel": "Franklin, KwaZulu-Natal"
+  },
+  {
+    "item": "Q15223799",
+    "itemLabel": "Heuningvlei"
+  },
+  {
+    "item": "Q15227041",
+    "itemLabel": "Hurlingham Gardens"
+  },
+  {
+    "item": "Q15228840",
+    "itemLabel": "Isando"
+  },
+  {
+    "item": "Q15205835",
+    "itemLabel": "Bungeni"
+  },
+  {
+    "item": "Q15216385",
+    "itemLabel": "Elandskraal"
+  },
+  {
+    "item": "Q15221381",
+    "itemLabel": "Ganspan"
+  },
+  {
+    "item": "Q15178360",
+    "itemLabel": "Agincourt, Mpumalanga"
+  },
+  {
+    "item": "Q15196150",
+    "itemLabel": "Bain's Vlei"
+  },
+  {
+    "item": "Q15196326",
+    "itemLabel": "Balloon, Limpopo"
+  },
+  {
+    "item": "Q15198168",
+    "itemLabel": "Beitbridge, Limpopo"
+  },
+  {
+    "item": "Q15198763",
+    "itemLabel": "Bettysgoed"
+  },
+  {
+    "item": "Q15198983",
+    "itemLabel": "Bhucanana"
+  },
+  {
+    "item": "Q15202093",
+    "itemLabel": "Boekenhouthoek"
+  },
+  {
+    "item": "Q15202863",
+    "itemLabel": "Bolotwa"
+  },
+  {
+    "item": "Q15212535",
+    "itemLabel": "Daggakraal"
+  },
+  {
+    "item": "Q15214077",
+    "itemLabel": "Dinokana"
+  },
+  {
+    "item": "Q15216780",
+    "itemLabel": "Eseldrift"
+  },
+  {
+    "item": "Q15217798",
+    "itemLabel": "Fisantekraal"
+  },
+  {
+    "item": "Q15221434",
+    "itemLabel": "Garsfontein"
+  },
+  {
+    "item": "Q15221758",
+    "itemLabel": "Glendale Heights, South Africa"
+  },
+  {
+    "item": "Q15224305",
+    "itemLabel": "Hlobane"
+  },
+  {
+    "item": "Q15224936",
+    "itemLabel": "Honingfontein"
+  },
+  {
+    "item": "Q15228379",
+    "itemLabel": "Illovo Beach"
+  },
+  {
+    "item": "Q15228609",
+    "itemLabel": "Inadan"
+  },
+  {
+    "item": "Q15204144",
+    "itemLabel": "Brakfontein"
+  },
+  {
+    "item": "Q15224298",
+    "itemLabel": "Hlabeni"
+  },
+  {
+    "item": "Q15228618",
+    "itemLabel": "Inchanga"
+  },
+  {
+    "item": "Q15195857",
+    "itemLabel": "Baccle's Farm"
+  },
+  {
+    "item": "Q15196776",
+    "itemLabel": "Barklieside"
+  },
+  {
+    "item": "Q15196877",
+    "itemLabel": "Barseba"
+  },
+  {
+    "item": "Q15200615",
+    "itemLabel": "Blythswood, Eastern Cape"
+  },
+  {
+    "item": "Q15203896",
+    "itemLabel": "Boschfontein"
+  },
+  {
+    "item": "Q15205634",
+    "itemLabel": "Buffelsdraai"
+  },
+  {
+    "item": "Q15205935",
+    "itemLabel": "Burgerregt"
+  },
+  {
+    "item": "Q15212194",
+    "itemLabel": "Cunningmoor"
+  },
+  {
+    "item": "Q15213619",
+    "itemLabel": "Dennilton"
+  },
+  {
+    "item": "Q15214117",
+    "itemLabel": "Dirkiesdorp"
+  },
+  {
+    "item": "Q15222957",
+    "itemLabel": "Hanover Park, Cape Town"
+  },
+  {
+    "item": "Q15224343",
+    "itemLabel": "Hobeni"
+  },
+  {
+    "item": "Q15228642",
+    "itemLabel": "Indermark"
+  },
+  {
+    "item": "Q15224301",
+    "itemLabel": "Hlanganani"
+  },
+  {
+    "item": "Q15199745",
+    "itemLabel": "Blinkwater"
+  },
+  {
+    "item": "Q15196202",
+    "itemLabel": "Bakoven"
+  },
+  {
+    "item": "Q15198723",
+    "itemLabel": "Bethany, Free State"
+  },
+  {
+    "item": "Q15205874",
+    "itemLabel": "Buntingville, Eastern Cape"
+  },
+  {
+    "item": "Q15208623",
+    "itemLabel": "Ceza, KwaZulu-Natal"
+  },
+  {
+    "item": "Q15210835",
+    "itemLabel": "Clarkebury"
+  },
+  {
+    "item": "Q15210996",
+    "itemLabel": "Cloneen"
+  },
+  {
+    "item": "Q15211130",
+    "itemLabel": "Coerney"
+  },
+  {
+    "item": "Q15211585",
+    "itemLabel": "Cool Air, KwaZulu-Natal"
+  },
+  {
+    "item": "Q15214061",
+    "itemLabel": "Dingaanstat"
+  },
+  {
+    "item": "Q15215104",
+    "itemLabel": "Driefontein, KwaZulu-Natal"
+  },
+  {
+    "item": "Q15216146",
+    "itemLabel": "Eerstegoud"
+  },
+  {
+    "item": "Q15216383",
+    "itemLabel": "Elandsdoorn"
+  },
+  {
+    "item": "Q15217692",
+    "itemLabel": "Finale, Limpopo"
+  },
+  {
+    "item": "Q15221744",
+    "itemLabel": "Glen Cowie"
+  },
+  {
+    "item": "Q15221793",
+    "itemLabel": "Goedehoop"
+  },
+  {
+    "item": "Q15222176",
+    "itemLabel": "Grootdrink"
+  },
+  {
+    "item": "Q15222188",
+    "itemLabel": "Groutville"
+  },
+  {
+    "item": "Q15223754",
+    "itemLabel": "Hertzog, Eastern Cape"
+  },
+  {
+    "item": "Q15228679",
+    "itemLabel": "Inglewood, Eastern Cape"
+  },
+  {
+    "item": "Q15229127",
+    "itemLabel": "Jacobsdal, North West"
+  },
+  {
+    "item": "Q12742802",
+    "itemLabel": "Umbogintwini"
+  },
+  {
+    "item": "Q13034180",
+    "itemLabel": "Acornhoek"
+  },
+  {
+    "item": "Q13034496",
+    "itemLabel": "Clarkson, Eastern Cape"
+  },
+  {
+    "item": "Q13034699",
+    "itemLabel": "Elardus Park"
+  },
+  {
+    "item": "Q13034808",
+    "itemLabel": "Geysdorp"
+  },
+  {
+    "item": "Q13034814",
+    "itemLabel": "Glückstadt, KwaZulu-Natal"
+  },
+  {
+    "item": "Q13034913",
+    "itemLabel": "Henkries"
+  },
+  {
+    "item": "Q13035053",
+    "itemLabel": "Jeppes Reef"
+  },
+  {
+    "item": "Q13035272",
+    "itemLabel": "Lions River"
+  },
+  {
+    "item": "Q13035767",
+    "itemLabel": "Pevensey, KwaZulu-Natal"
+  },
+  {
+    "item": "Q13035877",
+    "itemLabel": "Protem, Western Cape"
+  },
+  {
+    "item": "Q13036042",
+    "itemLabel": "Simondium"
+  },
+  {
+    "item": "Q13036366",
+    "itemLabel": "Westminster, Free State"
+  },
+  {
+    "item": "Q14211683",
+    "itemLabel": "Cintsa"
+  },
+  {
+    "item": "Q13036279",
+    "itemLabel": "Verkykerskop"
+  },
+  {
+    "item": "Q14080276",
+    "itemLabel": "Askham"
+  },
+  {
+    "item": "Q12740300",
+    "itemLabel": "Sada, Eastern Cape"
+  },
+  {
+    "item": "Q13034232",
+    "itemLabel": "Amaliënstein"
+  },
+  {
+    "item": "Q13034447",
+    "itemLabel": "Buysdorp"
+  },
+  {
+    "item": "Q13034524",
+    "itemLabel": "Cresslawn"
+  },
+  {
+    "item": "Q13034695",
+    "itemLabel": "Elandslaagte, KwaZulu-Natal"
+  },
+  {
+    "item": "Q13034649",
+    "itemLabel": "Three Anchor Bay"
+  },
+  {
+    "item": "Q13034752",
+    "itemLabel": "Frere, KwaZulu-Natal"
+  },
+  {
+    "item": "Q13034822",
+    "itemLabel": "Goodhouse"
+  },
+  {
+    "item": "Q13035130",
+    "itemLabel": "Karatara"
+  },
+  {
+    "item": "Q13035216",
+    "itemLabel": "Koopmansfontein"
+  },
+  {
+    "item": "Q13036111",
+    "itemLabel": "Stompneus Bay"
+  },
+  {
+    "item": "Q13036112",
+    "itemLabel": "Stormsvlei"
+  },
+  {
+    "item": "Q13036293",
+    "itemLabel": "Viljoenshof"
+  },
+  {
+    "item": "Q13035739",
+    "itemLabel": "Papendorp"
+  },
+  {
+    "item": "Q12739584",
+    "itemLabel": "Roossenekal"
+  },
+  {
+    "item": "Q12739595",
+    "itemLabel": "Rosetta, KwaZulu-Natal"
+  },
+  {
+    "item": "Q13034342",
+    "itemLabel": "Biesiesvlei"
+  },
+  {
+    "item": "Q13034385",
+    "itemLabel": "Boetsap"
+  },
+  {
+    "item": "Q13034416",
+    "itemLabel": "Bray, North West"
+  },
+  {
+    "item": "Q13034564",
+    "itemLabel": "De Vlugt"
+  },
+  {
+    "item": "Q13034917",
+    "itemLabel": "Hermon, South Africa"
+  },
+  {
+    "item": "Q13034925",
+    "itemLabel": "Herold, Western Cape"
+  },
+  {
+    "item": "Q13035178",
+    "itemLabel": "Klaarstroom"
+  },
+  {
+    "item": "Q13035278",
+    "itemLabel": "Lekkersing"
+  },
+  {
+    "item": "Q13035375",
+    "itemLabel": "Luneburg, South Africa"
+  },
+  {
+    "item": "Q13035500",
+    "itemLabel": "Muden, KwaZulu-Natal"
+  },
+  {
+    "item": "Q13035984",
+    "itemLabel": "Salem, Eastern Cape"
+  },
+  {
+    "item": "Q13036097",
+    "itemLabel": "Steenberg, Cape Town"
+  },
+  {
+    "item": "Q13036189",
+    "itemLabel": "Thornville, KwaZulu-Natal"
+  },
+  {
+    "item": "Q13035155",
+    "itemLabel": "Kendrew"
+  },
+  {
+    "item": "Q14806526",
+    "itemLabel": "Valdezia"
+  },
+  {
+    "item": "Q14871979",
+    "itemLabel": "Venterskroon"
+  },
+  {
+    "item": "Q13035467",
+    "itemLabel": "Misgund"
+  },
+  {
+    "item": "Q13035884",
+    "itemLabel": "Putsonderwater"
+  },
+  {
+    "item": "Q13036348",
+    "itemLabel": "Warburton, Mpumalanga"
+  },
+  {
+    "item": "Q12735125",
+    "itemLabel": "Maselspoort"
+  },
+  {
+    "item": "Q13034381",
+    "itemLabel": "Boesmansriviermond"
+  },
+  {
+    "item": "Q13034858",
+    "itemLabel": "Grootmis"
+  },
+  {
+    "item": "Q13034894",
+    "itemLabel": "Helpmekaar"
+  },
+  {
+    "item": "Q13035391",
+    "itemLabel": "Malgas"
+  },
+  {
+    "item": "Q13035626",
+    "itemLabel": "New Guelderland"
+  },
+  {
+    "item": "Q13036309",
+    "itemLabel": "Vleesbaai"
+  },
+  {
+    "item": "Q13036355",
+    "itemLabel": "Waterkloof Ridge"
+  },
+  {
+    "item": "Q13036419",
+    "itemLabel": "Wittewater"
+  },
+  {
+    "item": "Q14834037",
+    "itemLabel": "Mutale"
+  },
+  {
+    "item": "Q14514902",
+    "itemLabel": "Kasouga"
+  },
+  {
+    "item": "Q14860542",
+    "itemLabel": "De Hoop, Western Cape"
+  },
+  {
+    "item": "Q15229640",
+    "itemLabel": "Johannesburg North"
+  },
+  {
+    "item": "Q15240957",
+    "itemLabel": "Kwaggafontein"
+  },
+  {
+    "item": "Q15241180",
+    "itemLabel": "Laaste Hoop"
+  },
+  {
+    "item": "Q15243189",
+    "itemLabel": "Lyden"
+  },
+  {
+    "item": "Q15243203",
+    "itemLabel": "Lynnwood Manor"
+  },
+  {
+    "item": "Q15243445",
+    "itemLabel": "Madeira, Limpopo"
+  },
+  {
+    "item": "Q15251319",
+    "itemLabel": "Mathulini"
+  },
+  {
+    "item": "Q15252469",
+    "itemLabel": "Mbazwana"
+  },
+  {
+    "item": "Q15252589",
+    "itemLabel": "Meadowridge"
+  },
+  {
+    "item": "Q15256590",
+    "itemLabel": "Motswedi"
+  },
+  {
+    "item": "Q15262266",
+    "itemLabel": "Ngodwana"
+  },
+  {
+    "item": "Q15262506",
+    "itemLabel": "North Doornfontein"
+  },
+  {
+    "item": "Q15263633",
+    "itemLabel": "Okkerneutboom"
+  },
+  {
+    "item": "Q15264930",
+    "itemLabel": "Ozwathini"
+  },
+  {
+    "item": "Q15264994",
+    "itemLabel": "Pachsdraai"
+  },
+  {
+    "item": "Q15275701",
+    "itemLabel": "Schoonoord, South Africa"
+  },
+  {
+    "item": "Q15276812",
+    "itemLabel": "Shaka's Rock"
+  },
+  {
+    "item": "Q15616155",
+    "itemLabel": "Krugerspos"
+  },
+  {
+    "item": "Q15744549",
+    "itemLabel": "Wegdraai"
+  },
+  {
+    "item": "Q15260139",
+    "itemLabel": "Mpofu"
+  },
+  {
+    "item": "Q15262882",
+    "itemLabel": "Ntabamhlophe"
+  },
+  {
+    "item": "Q15270491",
+    "itemLabel": "Queensberry Bay"
+  },
+  {
+    "item": "Q15229624",
+    "itemLabel": "Joe Slovo, Cape Town"
+  },
+  {
+    "item": "Q15229818",
+    "itemLabel": "Judith's Paarl"
+  },
+  {
+    "item": "Q15240967",
+    "itemLabel": "Kya Sands, Johannesburg"
+  },
+  {
+    "item": "Q15243327",
+    "itemLabel": "Mabalstad"
+  },
+  {
+    "item": "Q15243339",
+    "itemLabel": "Mabeskraal"
+  },
+  {
+    "item": "Q15245631",
+    "itemLabel": "Manthe, North West"
+  },
+  {
+    "item": "Q15251287",
+    "itemLabel": "Mathibestad"
+  },
+  {
+    "item": "Q15251349",
+    "itemLabel": "Mathys Zyn Loop"
+  },
+  {
+    "item": "Q15252622",
+    "itemLabel": "Mecklenburg, Limpopo"
+  },
+  {
+    "item": "Q15254022",
+    "itemLabel": "Modderspruit"
+  },
+  {
+    "item": "Q15266916",
+    "itemLabel": "Pivaanspoort"
+  },
+  {
+    "item": "Q15273239",
+    "itemLabel": "Rondedraai"
+  },
+  {
+    "item": "Q15273390",
+    "itemLabel": "Rotterdam, Limpopo"
+  },
+  {
+    "item": "Q15275705",
+    "itemLabel": "Schuinsrand"
+  },
+  {
+    "item": "Q15275709",
+    "itemLabel": "Schulzendal"
+  },
+  {
+    "item": "Q15278961",
+    "itemLabel": "Springbokfontein"
+  },
+  {
+    "item": "Q15284684",
+    "itemLabel": "Brandwag"
+  },
+  {
+    "item": "Q15616137",
+    "itemLabel": "Levubu"
+  },
+  {
+    "item": "Q15233182",
+    "itemLabel": "Kameelkop"
+  },
+  {
+    "item": "Q15243169",
+    "itemLabel": "Lwamondo"
+  },
+  {
+    "item": "Q15240460",
+    "itemLabel": "Kranspoort"
+  },
+  {
+    "item": "Q15275000",
+    "itemLabel": "Sandbaai"
+  },
+  {
+    "item": "Q15233033",
+    "itemLabel": "Kalkspruit"
+  },
+  {
+    "item": "Q15238654",
+    "itemLabel": "Klipheuvel"
+  },
+  {
+    "item": "Q15238656",
+    "itemLabel": "Kliprivier"
+  },
+  {
+    "item": "Q15240490",
+    "itemLabel": "Kromdraai, Limpopo"
+  },
+  {
+    "item": "Q15242360",
+    "itemLabel": "Lime Acres"
+  },
+  {
+    "item": "Q15243937",
+    "itemLabel": "Majeakgoro"
+  },
+  {
+    "item": "Q15252480",
+    "itemLabel": "Mbongolwane"
+  },
+  {
+    "item": "Q15253277",
+    "itemLabel": "Metz, Limpopo"
+  },
+  {
+    "item": "Q15254186",
+    "itemLabel": "Mogogelo"
+  },
+  {
+    "item": "Q15256305",
+    "itemLabel": "Morokweng"
+  },
+  {
+    "item": "Q15261964",
+    "itemLabel": "New Brighton, Gauteng"
+  },
+  {
+    "item": "Q15274196",
+    "itemLabel": "Saaiplaas"
+  },
+  {
+    "item": "Q15275014",
+    "itemLabel": "Sandfontein"
+  },
+  {
+    "item": "Q15277813",
+    "itemLabel": "Silwerkrans"
+  },
+  {
+    "item": "Q15616042",
+    "itemLabel": "Teebus"
+  },
+  {
+    "item": "Q15728117",
+    "itemLabel": "Lesseyton"
+  },
+  {
+    "item": "Q15235008",
+    "itemLabel": "Kayser's Beach"
+  },
+  {
+    "item": "Q15238816",
+    "itemLabel": "Koffiekraal"
+  },
+  {
+    "item": "Q15240434",
+    "itemLabel": "Kraalhoek"
+  },
+  {
+    "item": "Q15241181",
+    "itemLabel": "Laatsgevonden"
+  },
+  {
+    "item": "Q15241240",
+    "itemLabel": "Laersdrif"
+  },
+  {
+    "item": "Q15241357",
+    "itemLabel": "Lake View Estate"
+  },
+  {
+    "item": "Q15244428",
+    "itemLabel": "Manaar"
+  },
+  {
+    "item": "Q15256204",
+    "itemLabel": "Moretele"
+  },
+  {
+    "item": "Q15256279",
+    "itemLabel": "Morningside Manor"
+  },
+  {
+    "item": "Q15262422",
+    "itemLabel": "Nkantolo"
+  },
+  {
+    "item": "Q15262452",
+    "itemLabel": "Noordwyk"
+  },
+  {
+    "item": "Q15265843",
+    "itemLabel": "Pella, North West"
+  },
+  {
+    "item": "Q15268605",
+    "itemLabel": "Primrose, South Africa"
+  },
+  {
+    "item": "Q15272550",
+    "itemLabel": "Rietkol"
+  },
+  {
+    "item": "Q15975801",
+    "itemLabel": "Vleischfontein"
+  },
+  {
+    "item": "Q15233183",
+    "itemLabel": "Kameelputs"
+  },
+  {
+    "item": "Q15238647",
+    "itemLabel": "Kleinfontein, KwaZulu-Natal"
+  },
+  {
+    "item": "Q15238655",
+    "itemLabel": "Klipkraal"
+  },
+  {
+    "item": "Q15242596",
+    "itemLabel": "Lochiel, Mpumalanga"
+  },
+  {
+    "item": "Q15242983",
+    "itemLabel": "Louieville"
+  },
+  {
+    "item": "Q15243006",
+    "itemLabel": "Louwna"
+  },
+  {
+    "item": "Q15243638",
+    "itemLabel": "Magneetshoogte"
+  },
+  {
+    "item": "Q15252279",
+    "itemLabel": "Mayfield Park, Gauteng"
+  },
+  {
+    "item": "Q15253400",
+    "itemLabel": "Mill Hill, Gauteng"
+  },
+  {
+    "item": "Q15262273",
+    "itemLabel": "Ngwegweni"
+  },
+  {
+    "item": "Q15263925",
+    "itemLabel": "Olifantshoek, Limpopo"
+  },
+  {
+    "item": "Q15272387",
+    "itemLabel": "Reuven, Gauteng"
+  },
+  {
+    "item": "Q15272551",
+    "itemLabel": "Rietvlei"
+  },
+  {
+    "item": "Q15273253",
+    "itemLabel": "Rookdale"
+  },
+  {
+    "item": "Q15273302",
+    "itemLabel": "Roseacre, Gauteng"
+  },
+  {
+    "item": "Q15506998",
+    "itemLabel": "Pienaarsrivier"
+  },
+  {
+    "item": "Q15615677",
+    "itemLabel": "Talana, KwaZulu-Natal"
+  },
+  {
+    "item": "Q15616167",
+    "itemLabel": "Kommadagga"
+  },
+  {
+    "item": "Q257196",
+    "itemLabel": "Kgatelopele Local Municipality"
+  },
+  {
+    "item": "Q267665",
+    "itemLabel": "Fetakgomo Local Municipality"
+  },
+  {
+    "item": "Q278422",
+    "itemLabel": "Msinga Local Municipality"
+  },
+  {
+    "item": "Q310008",
+    "itemLabel": "eMadlangeni Local Municipality"
+  },
+  {
+    "item": "Q311812",
+    "itemLabel": "eDumbe Local Municipality"
+  },
+  {
+    "item": "Q311805",
+    "itemLabel": "UMlalazi Local Municipality"
+  },
+  {
+    "item": "Q394771",
+    "itemLabel": "ǃKheis Local Municipality"
+  },
+  {
+    "item": "Q427568",
+    "itemLabel": "Naledi Local Municipality"
+  },
+  {
+    "item": "Q522028",
+    "itemLabel": "Stellenbosch Local Municipality"
+  },
+  {
+    "item": "Q527085",
+    "itemLabel": "Ntabankulu Local Municipality"
+  },
+  {
+    "item": "Q583728",
+    "itemLabel": "Mbizana Local Municipality"
+  },
+  {
+    "item": "Q615965",
+    "itemLabel": "Umzimvubu Local Municipality"
+  },
+  {
+    "item": "Q617894",
+    "itemLabel": "Maletswai Local Municipality"
+  },
+  {
+    "item": "Q767727",
+    "itemLabel": "Emalahleni Local Municipality"
+  },
+  {
+    "item": "Q670226",
+    "itemLabel": "Bushbuckridge Local Municipality"
+  },
+  {
+    "item": "Q670966",
+    "itemLabel": "Elundini Local Municipality"
+  },
+  {
+    "item": "Q737965",
+    "itemLabel": "Mutale Local Municipality"
+  },
+  {
+    "item": "Q775608",
+    "itemLabel": "Naledi Local Municipality"
+  },
+  {
+    "item": "Q775825",
+    "itemLabel": "Okhahlamba Local Municipality"
+  },
+  {
+    "item": "Q820158",
+    "itemLabel": "Bergrivier Local Municipality"
+  },
+  {
+    "item": "Q885465",
+    "itemLabel": "Blouberg Local Municipality"
+  },
+  {
+    "item": "Q928276",
+    "itemLabel": "Greater Kokstad Local Municipality"
+  },
+  {
+    "item": "Q934141",
+    "itemLabel": "Rustenburg Local Municipality"
+  },
+  {
+    "item": "Q971361",
+    "itemLabel": "Langeberg Local Municipality"
+  },
+  {
+    "item": "Q177535",
+    "itemLabel": "UPhongolo Local Municipality"
+  },
+  {
+    "item": "Q205363",
+    "itemLabel": "Inkwanca Local Municipality"
+  },
+  {
+    "item": "Q311662",
+    "itemLabel": "UMdoni Local Municipality"
+  },
+  {
+    "item": "Q311797",
+    "itemLabel": "UMuziwabantu Local Municipality"
+  },
+  {
+    "item": "Q617500",
+    "itemLabel": "Victor Khanye Local Municipality"
+  },
+  {
+    "item": "Q638488",
+    "itemLabel": "Hlabisa Local Municipality"
+  },
+  {
+    "item": "Q815084",
+    "itemLabel": "Bela-Bela Local Municipality"
+  },
+  {
+    "item": "Q878862",
+    "itemLabel": "Bitou Local Municipality"
+  },
+  {
+    "item": "Q922256",
+    "itemLabel": "Mafube Local Municipality"
+  },
+  {
+    "item": "Q962633",
+    "itemLabel": "Elias Motsoaledi Local Municipality"
+  },
+  {
+    "item": "Q1301527",
+    "itemLabel": "Govan Mbeki Local Municipality"
+  },
+  {
+    "item": "Q1308343",
+    "itemLabel": "Thabazimbi Local Municipality"
+  },
+  {
+    "item": "Q1316771",
+    "itemLabel": "Ngwathe Local Municipality"
+  },
+  {
+    "item": "Q1386037",
+    "itemLabel": "Ezingoleni Local Municipality"
+  },
+  {
+    "item": "Q253979",
+    "itemLabel": "Phumelela Local Municipality"
+  },
+  {
+    "item": "Q254505",
+    "itemLabel": "Umvoti Local Municipality"
+  },
+  {
+    "item": "Q259411",
+    "itemLabel": "Thembelihle Local Municipality"
+  },
+  {
+    "item": "Q304168",
+    "itemLabel": "Abaqulusi Local Municipality"
+  },
+  {
+    "item": "Q390436",
+    "itemLabel": "Aganang Local Municipality"
+  },
+  {
+    "item": "Q596849",
+    "itemLabel": "Nyandeni Local Municipality"
+  },
+  {
+    "item": "Q600842",
+    "itemLabel": "Mantsopa Local Municipality"
+  },
+  {
+    "item": "Q616669",
+    "itemLabel": "Cape Agulhas Local Municipality"
+  },
+  {
+    "item": "Q671160",
+    "itemLabel": "Mohokare Local Municipality"
+  },
+  {
+    "item": "Q685192",
+    "itemLabel": "Emnambithi-Ladysmith Local Municipality"
+  },
+  {
+    "item": "Q739997",
+    "itemLabel": "Musina Local Municipality"
+  },
+  {
+    "item": "Q762131",
+    "itemLabel": "Engcobo Local Municipality"
+  },
+  {
+    "item": "Q767965",
+    "itemLabel": "Matzikama Local Municipality"
+  },
+  {
+    "item": "Q797426",
+    "itemLabel": "Ba-Phalaborwa Local Municipality"
+  },
+  {
+    "item": "Q812021",
+    "itemLabel": "Baviaans Local Municipality"
+  },
+  {
+    "item": "Q905003",
+    "itemLabel": "Breede Valley Local Municipality"
+  },
+  {
+    "item": "Q1028399",
+    "itemLabel": "Camdeboo Local Municipality"
+  },
+  {
+    "item": "Q1227128",
+    "itemLabel": "Dipaleseng Local Municipality"
+  },
+  {
+    "item": "Q1254147",
+    "itemLabel": "Dr JS Moroka Local Municipality"
+  },
+  {
+    "item": "Q1303780",
+    "itemLabel": "Pixley ka Seme Local Municipality"
+  },
+  {
+    "item": "Q1339806",
+    "itemLabel": "Emthanjeni Local Municipality"
+  },
+  {
+    "item": "Q1417176",
+    "itemLabel": "Oudtshoorn Local Municipality"
+  },
+  {
+    "item": "Q120788",
+    "itemLabel": "Mkhondo Local Municipality"
+  },
+  {
+    "item": "Q138717",
+    "itemLabel": "The Big Five False Bay Local Municipality"
+  },
+  {
+    "item": "Q178591",
+    "itemLabel": "Laingsburg Local Municipality"
+  },
+  {
+    "item": "Q253683",
+    "itemLabel": "Kareeberg Local Municipality"
+  },
+  {
+    "item": "Q303647",
+    "itemLabel": "Kou-Kamma Local Municipality"
+  },
+  {
+    "item": "Q430520",
+    "itemLabel": "Sakhisizwe Local Municipality"
+  },
+  {
+    "item": "Q452531",
+    "itemLabel": "Amahlathi Local Municipality"
+  },
+  {
+    "item": "Q474835",
+    "itemLabel": "Witzenberg Local Municipality"
+  },
+  {
+    "item": "Q575104",
+    "itemLabel": "Mookgophong Local Municipality"
+  },
+  {
+    "item": "Q612412",
+    "itemLabel": "Ventersdorp Local Municipality"
+  },
+  {
+    "item": "Q685302",
+    "itemLabel": "Nketoana Local Municipality"
+  },
+  {
+    "item": "Q781995",
+    "itemLabel": "Renosterberg Local Municipality"
+  },
+  {
+    "item": "Q786096",
+    "itemLabel": "Ubuhlebezwe Local Municipality"
+  },
+  {
+    "item": "Q813381",
+    "itemLabel": "Beaufort West Local Municipality"
+  },
+  {
+    "item": "Q859983",
+    "itemLabel": "Joe Morolong Local Municipality"
+  },
+  {
+    "item": "Q885667",
+    "itemLabel": "Blue Crane Route Local Municipality"
+  },
+  {
+    "item": "Q925168",
+    "itemLabel": "Nongoma Local Municipality"
+  },
+  {
+    "item": "Q1052585",
+    "itemLabel": "Cederberg Local Municipality"
+  },
+  {
+    "item": "Q1255574",
+    "itemLabel": "Drakenstein Local Municipality"
+  },
+  {
+    "item": "Q1298937",
+    "itemLabel": "Mpofana Local Municipality"
+  },
+  {
+    "item": "Q1341026",
+    "itemLabel": "Endumeni Local Municipality"
+  },
+  {
+    "item": "Q1394367",
+    "itemLabel": "Nokeng tsa Taemane Local Municipality"
+  },
+  {
+    "item": "Q123716",
+    "itemLabel": "Lukhanji Local Municipality"
+  },
+  {
+    "item": "Q127787",
+    "itemLabel": "Mogale City Local Municipality"
+  },
+  {
+    "item": "Q241617",
+    "itemLabel": "Jozini Local Municipality"
+  },
+  {
+    "item": "Q311795",
+    "itemLabel": "UMshwathi Local Municipality"
+  },
+  {
+    "item": "Q311792",
+    "itemLabel": "uMngeni Local Municipality"
+  },
+  {
+    "item": "Q311800",
+    "itemLabel": "UMhlathuze Local Municipality"
+  },
+  {
+    "item": "Q509059",
+    "itemLabel": "Ntambanana Local Municipality"
+  },
+  {
+    "item": "Q582629",
+    "itemLabel": "Maruleng Local Municipality"
+  },
+  {
+    "item": "Q595051",
+    "itemLabel": "Lekwa Local Municipality"
+  },
+  {
+    "item": "Q673459",
+    "itemLabel": "Gariep Local Municipality"
+  },
+  {
+    "item": "Q692264",
+    "itemLabel": "Tsantsabane Local Municipality"
+  },
+  {
+    "item": "Q727225",
+    "itemLabel": "Nxuba Local Municipality"
+  },
+  {
+    "item": "Q926143",
+    "itemLabel": "Siyathemba Local Municipality"
+  },
+  {
+    "item": "Q965471",
+    "itemLabel": "Sol Plaatje Local Municipality"
+  },
+  {
+    "item": "Q1023251",
+    "itemLabel": "Umzumbe"
+  },
+  {
+    "item": "Q1225159",
+    "itemLabel": "Dihlabeng Local Municipality"
+  },
+  {
+    "item": "Q1225310",
+    "itemLabel": "Dikgatlong Local Municipality"
+  },
+  {
+    "item": "Q1335678",
+    "itemLabel": "Emfuleni Local Municipality"
+  },
+  {
+    "item": "Q6885792",
+    "itemLabel": "Mmakau"
+  },
+  {
+    "item": "Q6888071",
+    "itemLabel": "Modderfontein, Gauteng"
+  },
+  {
+    "item": "Q6907289",
+    "itemLabel": "Mooiplaas, Mpumalanga"
+  },
+  {
+    "item": "Q6920199",
+    "itemLabel": "Mount Coke"
+  },
+  {
+    "item": "Q6922252",
+    "itemLabel": "Mount Moreland"
+  },
+  {
+    "item": "Q6928351",
+    "itemLabel": "Mqanduli"
+  },
+  {
+    "item": "Q6945214",
+    "itemLabel": "My Darling, Limpopo"
+  },
+  {
+    "item": "Q7562210",
+    "itemLabel": "Sonop"
+  },
+  {
+    "item": "Q7569262",
+    "itemLabel": "Southdale, Gauteng"
+  },
+  {
+    "item": "Q7594034",
+    "itemLabel": "St Lucia Estuary"
+  },
+  {
+    "item": "Q7594032",
+    "itemLabel": "St Lucia, KwaZulu-Natal"
+  },
+  {
+    "item": "Q7596592",
+    "itemLabel": "Stafford, Gauteng"
+  },
+  {
+    "item": "Q7597397",
+    "itemLabel": "Stamford Hill, Durban"
+  },
+  {
+    "item": "Q7622029",
+    "itemLabel": "Strathavon"
+  },
+  {
+    "item": "Q7623751",
+    "itemLabel": "Strijdompark"
+  },
+  {
+    "item": "Q7797763",
+    "itemLabel": "Three Rivers Proper"
+  },
+  {
+    "item": "Q7813394",
+    "itemLabel": "Toitskraal"
+  },
+  {
+    "item": "Q11925365",
+    "itemLabel": "Rooigrond"
+  },
+  {
+    "item": "Q15976093",
+    "itemLabel": "Papendorp"
+  },
+  {
+    "item": "Q12726467",
+    "itemLabel": "De Wildt"
+  },
+  {
+    "item": "Q11051321",
+    "itemLabel": "Adendorp"
+  },
+  {
+    "item": "Q11135251",
+    "itemLabel": "Magogong"
+  },
+  {
+    "item": "Q12721623",
+    "itemLabel": "Bell, Eastern Cape"
+  },
+  {
+    "item": "Q20972614",
+    "itemLabel": "Dwarsfontein"
+  },
+  {
+    "item": "Q20972702",
+    "itemLabel": "Droogte"
+  },
+  {
+    "item": "Q28359615",
+    "itemLabel": "Richwood"
+  },
+  {
+    "item": "Q21064982",
+    "itemLabel": "Erasmia"
+  },
+  {
+    "item": "Q28040593",
+    "itemLabel": "Blouberg"
+  },
+  {
+    "item": "Q20972618",
+    "itemLabel": "Shiluvane"
+  },
+  {
+    "item": "Q20972623",
+    "itemLabel": "Sangoma, Limpopo"
+  },
+  {
+    "item": "Q20972609",
+    "itemLabel": "Bordeaux, Limpopo"
+  },
+  {
+    "item": "Q25685846",
+    "itemLabel": "Dr Beyers Naudé Local Municipality"
+  },
+  {
+    "item": "Q18108",
+    "itemLabel": "Utrecht"
+  },
+  {
+    "item": "Q174421",
+    "itemLabel": "Molopo Local Municipality"
+  },
+  {
+    "item": "Q218020",
+    "itemLabel": "Zoar"
+  },
+  {
+    "item": "Q1013403",
+    "itemLabel": "Kakamas"
+  },
+  {
+    "item": "Q1003342",
+    "itemLabel": "Elim"
+  },
+  {
+    "item": "Q2530032",
+    "itemLabel": "Birkenhead"
+  },
+  {
+    "item": "Q428102",
+    "itemLabel": "Tsitsikamma National Park"
+  },
+  {
+    "item": "Q505912",
+    "itemLabel": "De Kelders"
+  },
+  {
+    "item": "Q3355106",
+    "itemLabel": "Oranjezicht"
+  },
+  {
+    "item": "Q519630",
+    "itemLabel": "South African townships"
+  },
+  {
+    "item": "Q850471",
+    "itemLabel": "Betty's Bay"
+  },
+  {
+    "item": "Q3575986",
+    "itemLabel": "Zonnebloem"
+  },
+  {
+    "item": "Q6781789",
+    "itemLabel": "Maryvale, Gauteng"
+  },
+  {
+    "item": "Q6813617",
+    "itemLabel": "Melrose, Gauteng"
+  },
+  {
+    "item": "Q6813661",
+    "itemLabel": "Melrose North"
+  },
+  {
+    "item": "Q6813840",
+    "itemLabel": "Melville, Gauteng"
+  },
+  {
+    "item": "Q6818893",
+    "itemLabel": "Meredale"
+  },
+  {
+    "item": "Q6841157",
+    "itemLabel": "Middeldrift, Limpopo"
+  },
+  {
+    "item": "Q6841777",
+    "itemLabel": "Middledrift"
+  },
+  {
+    "item": "Q6912962",
+    "itemLabel": "Morningside, Durban"
+  },
+  {
+    "item": "Q6916030",
+    "itemLabel": "Mosesetjane"
+  },
+  {
+    "item": "Q6917624",
+    "itemLabel": "Mothibistad"
+  },
+  {
+    "item": "Q6930135",
+    "itemLabel": "Mseleni"
+  },
+  {
+    "item": "Q6944311",
+    "itemLabel": "Muyexe"
+  },
+  {
+    "item": "Q7641203",
+    "itemLabel": "Sunset Acres"
+  },
+  {
+    "item": "Q7570785",
+    "itemLabel": "Southfork, Gauteng"
+  },
+  {
+    "item": "Q7605838",
+    "itemLabel": "Steelpoort"
+  },
+  {
+    "item": "Q7653940",
+    "itemLabel": "Swartkops"
+  },
+  {
+    "item": "Q7796483",
+    "itemLabel": "Thornton, Cape Town"
+  },
+  {
+    "item": "Q6911964",
+    "itemLabel": "Morgans Bay"
+  },
+  {
+    "item": "Q7368057",
+    "itemLabel": "Rosebank"
+  },
+  {
+    "item": "Q2716648",
+    "itemLabel": "Hotagterklip"
+  },
+  {
+    "item": "Q6799832",
+    "itemLabel": "Mbuzini"
+  },
+  {
+    "item": "Q7571511",
+    "itemLabel": "Soutpan"
+  },
+  {
+    "item": "Q7653938",
+    "itemLabel": "Swartklip"
+  },
+  {
+    "item": "Q6912963",
+    "itemLabel": "Morningside, Gauteng"
+  },
+  {
+    "item": "Q1721138",
+    "itemLabel": "Kagisano Local Municipality"
+  },
+  {
+    "item": "Q7559799",
+    "itemLabel": "Somerset, Mpumalanga"
+  },
+  {
+    "item": "Q7570520",
+    "itemLabel": "Southern Suburbs, Cape Town"
+  },
+  {
+    "item": "Q7635416",
+    "itemLabel": "Suideroord"
+  },
+  {
+    "item": "Q7640583",
+    "itemLabel": "Sunningdale, Gauteng"
+  },
+  {
+    "item": "Q7658388",
+    "itemLabel": "Swinburne, Free State"
+  },
+  {
+    "item": "Q7735864",
+    "itemLabel": "The Gardens, Gauteng"
+  },
+  {
+    "item": "Q7797747",
+    "itemLabel": "Three Rivers East"
+  },
+  {
+    "item": "Q12120361",
+    "itemLabel": "Mazeppa Bay"
+  },
+  {
+    "item": "Q6813651",
+    "itemLabel": "Melrose Estate"
+  },
+  {
+    "item": "Q6842998",
+    "itemLabel": "Midridge Park"
+  },
+  {
+    "item": "Q6859488",
+    "itemLabel": "Millgate Farm"
+  },
+  {
+    "item": "Q6888074",
+    "itemLabel": "Moddergat, Mpumalanga"
+  },
+  {
+    "item": "Q6890048",
+    "itemLabel": "Moedwil"
+  },
+  {
+    "item": "Q6890350",
+    "itemLabel": "Moffat View"
+  },
+  {
+    "item": "Q6890774",
+    "itemLabel": "Mogwase"
+  },
+  {
+    "item": "Q6907120",
+    "itemLabel": "Moodie Hill"
+  },
+  {
+    "item": "Q6907293",
+    "itemLabel": "Mooinooi"
+  },
+  {
+    "item": "Q6912124",
+    "itemLabel": "Moria, Limpopo"
+  },
+  {
+    "item": "Q6915074",
+    "itemLabel": "Moruleng"
+  },
+  {
+    "item": "Q6927241",
+    "itemLabel": "Mowbray, Cape Town"
+  },
+  {
+    "item": "Q11072981",
+    "itemLabel": "Ndwedwe"
+  },
+  {
+    "item": "Q6930513",
+    "itemLabel": "Mtwalume"
+  },
+  {
+    "item": "Q6933861",
+    "itemLabel": "Muldersdrift"
+  },
+  {
+    "item": "Q6937538",
+    "itemLabel": "Murchison, Limpopo"
+  },
+  {
+    "item": "Q7576430",
+    "itemLabel": "Spes Bona"
+  },
+  {
+    "item": "Q7594172",
+    "itemLabel": "St Mark’s, Eastern Cape"
+  },
+  {
+    "item": "Q7605807",
+    "itemLabel": "Steeledale"
+  },
+  {
+    "item": "Q7616061",
+    "itemLabel": "Steynsdorp"
+  },
+  {
+    "item": "Q7620269",
+    "itemLabel": "Stormsrivier"
+  },
+  {
+    "item": "Q7641016",
+    "itemLabel": "Sunrise-on-Sea"
+  },
+  {
+    "item": "Q7660238",
+    "itemLabel": "Sydney on Vaal"
+  },
+  {
+    "item": "Q7708829",
+    "itemLabel": "Thaba Phatswa"
+  },
+  {
+    "item": "Q7783515",
+    "itemLabel": "Theta, Gauteng"
+  },
+  {
+    "item": "Q7796418",
+    "itemLabel": "Thornham, Eastern Cape"
+  },
+  {
+    "item": "Q7813459",
+    "itemLabel": "Tokai, Cape Town"
+  },
+  {
+    "item": "Q7820956",
+    "itemLabel": "Tonga, Mpumalanga"
+  },
+  {
+    "item": "Q5181671",
+    "itemLabel": "Craighall Park"
+  },
+  {
+    "item": "Q6773867",
+    "itemLabel": "Marshalltown, Gauteng"
+  },
+  {
+    "item": "Q6787636",
+    "itemLabel": "Matjitjileng"
+  },
+  {
+    "item": "Q6797105",
+    "itemLabel": "Mayfair, Gauteng"
+  },
+  {
+    "item": "Q6820299",
+    "itemLabel": "Merriman, Northern Cape"
+  },
+  {
+    "item": "Q6820373",
+    "itemLabel": "Merrivale, KwaZulu-Natal"
+  },
+  {
+    "item": "Q6898697",
+    "itemLabel": "Mondeor"
+  },
+  {
+    "item": "Q6904940",
+    "itemLabel": "Monte Vista, Cape Town"
+  },
+  {
+    "item": "Q6927638",
+    "itemLabel": "Moyeni"
+  },
+  {
+    "item": "Q6933782",
+    "itemLabel": "Mulbarton, Gauteng"
+  },
+  {
+    "item": "Q12727539",
+    "itemLabel": "Eloff"
+  },
+  {
+    "item": "Q7558863",
+    "itemLabel": "Solridge"
+  },
+  {
+    "item": "Q7567477",
+    "itemLabel": "South Hills, Gauteng"
+  },
+  {
+    "item": "Q7570789",
+    "itemLabel": "Southgate, Gauteng"
+  },
+  {
+    "item": "Q7580893",
+    "itemLabel": "Springfield, Gauteng"
+  },
+  {
+    "item": "Q7640586",
+    "itemLabel": "Sunningdale Ridge"
+  },
+  {
+    "item": "Q15976206",
+    "itemLabel": "Erasmusrand"
+  },
+  {
+    "item": "Q7659764",
+    "itemLabel": "Sydenham, Gauteng"
+  },
+  {
+    "item": "Q7672894",
+    "itemLabel": "Tabankulu"
+  },
+  {
+    "item": "Q7735587",
+    "itemLabel": "The Gables, Gauteng"
+  },
+  {
+    "item": "Q7739675",
+    "itemLabel": "The Hill, Gauteng"
+  },
+  {
+    "item": "Q7810498",
+    "itemLabel": "Tiyani"
+  },
+  {
+    "item": "Q5216659",
+    "itemLabel": "Daniel Brink Park"
+  },
+  {
+    "item": "Q11142530",
+    "itemLabel": "Mamre, Western Cape"
+  },
+  {
+    "item": "Q11165068",
+    "itemLabel": "Rosmead"
+  },
+  {
+    "item": "Q11295202",
+    "itemLabel": "AMatikulu"
+  },
+  {
+    "item": "Q6773263",
+    "itemLabel": "Marseilles, Free State"
+  },
+  {
+    "item": "Q6799686",
+    "itemLabel": "Mbibana"
+  },
+  {
+    "item": "Q1419305",
+    "itemLabel": "Ikwezi Local Municipality"
+  },
+  {
+    "item": "Q1447551",
+    "itemLabel": "Ubuntu Local Municipality"
+  },
+  {
+    "item": "Q1516786",
+    "itemLabel": "Hessequa Local Municipality"
+  },
+  {
+    "item": "Q1526250",
+    "itemLabel": "Tswelopele Local Municipality"
+  },
+  {
+    "item": "Q1531415",
+    "itemLabel": "Midvaal Local Municipality"
+  },
+  {
+    "item": "Q1544427",
+    "itemLabel": "Greater Giyani Local Municipality"
+  },
+  {
+    "item": "Q1717872",
+    "itemLabel": "Ndwedwe Local Municipality"
+  },
+  {
+    "item": "Q1740579",
+    "itemLabel": "ǁKhara Hais Local Municipality"
+  },
+  {
+    "item": "Q1777700",
+    "itemLabel": "Knysna Local Municipality"
+  },
+  {
+    "item": "Q1892065",
+    "itemLabel": "Maphumulo Local Municipality"
+  },
+  {
+    "item": "Q1922799",
+    "itemLabel": "Nkomazi Local Municipality"
+  },
+  {
+    "item": "Q1951578",
+    "itemLabel": "Mthonjaneni Local Municipality"
+  },
+  {
+    "item": "Q1964128",
+    "itemLabel": "Nama Khoi Local Municipality"
+  },
+  {
+    "item": "Q2042454",
+    "itemLabel": "Overstrand Local Municipality"
+  },
+  {
+    "item": "Q2067601",
+    "itemLabel": "Setsoto Local Municipality"
+  },
+  {
+    "item": "Q2067619",
+    "itemLabel": "UMhlabuyalingana Local Municipality"
+  },
+  {
+    "item": "Q2081805",
+    "itemLabel": "City of Matlosana"
+  },
+  {
+    "item": "Q2096545",
+    "itemLabel": "Umzimkhulu Local Municipality"
+  },
+  {
+    "item": "Q1492854",
+    "itemLabel": "Gamagara Local Municipality"
+  },
+  {
+    "item": "Q1537865",
+    "itemLabel": "Makhado Local Municipality"
+  },
+  {
+    "item": "Q1584028",
+    "itemLabel": "Hantam Local Municipality"
+  },
+  {
+    "item": "Q1594423",
+    "itemLabel": "Tokologo Local Municipality"
+  },
+  {
+    "item": "Q1617222",
+    "itemLabel": "Hibiscus Coast Local Municipality"
+  },
+  {
+    "item": "Q1643020",
+    "itemLabel": "Albert Luthuli Local Municipality"
+  },
+  {
+    "item": "Q1659754",
+    "itemLabel": "Imbabazane Local Municipality"
+  },
+  {
+    "item": "Q1660258",
+    "itemLabel": "Impendle Local Municipality"
+  },
+  {
+    "item": "Q1672186",
+    "itemLabel": "Khâi-Ma Local Municipality"
+  },
+  {
+    "item": "Q1723052",
+    "itemLabel": "Kamiesberg Local Municipality"
+  },
+  {
+    "item": "Q1815498",
+    "itemLabel": "Lephalale Local Municipality"
+  },
+  {
+    "item": "Q1883735",
+    "itemLabel": "Magareng Local Municipality"
+  },
+  {
+    "item": "Q1886243",
+    "itemLabel": "Makana Local Municipality"
+  },
+  {
+    "item": "Q1887939",
+    "itemLabel": "Maluti-a-Phofung Local Municipality"
+  },
+  {
+    "item": "Q1926544",
+    "itemLabel": "Mhlontlo Local Municipality"
+  },
+  {
+    "item": "Q1972906",
+    "itemLabel": "Ndlambe Local Municipality"
+  },
+  {
+    "item": "Q1994391",
+    "itemLabel": "Nkonkobe Local Municipality"
+  },
+  {
+    "item": "Q2006810",
+    "itemLabel": "Vulamehlo Local Municipality"
+  },
+  {
+    "item": "Q2026410",
+    "itemLabel": "Westonaria Local Municipality"
+  },
+  {
+    "item": "Q2065087",
+    "itemLabel": "Tswaing Local Municipality"
+  },
+  {
+    "item": "Q1514156",
+    "itemLabel": "Kopanong Local Municipality"
+  },
+  {
+    "item": "Q1544453",
+    "itemLabel": "Greater Taung Local Municipality"
+  },
+  {
+    "item": "Q1670648",
+    "itemLabel": "Tsolwana Local Municipality"
+  },
+  {
+    "item": "Q1681863",
+    "itemLabel": "Umtshezi Local Municipality"
+  },
+  {
+    "item": "Q1759943",
+    "itemLabel": "KwaDukuza Local Municipality"
+  },
+  {
+    "item": "Q1785553",
+    "itemLabel": "Kouga Local Municipality"
+  },
+  {
+    "item": "Q1816588",
+    "itemLabel": "Lekwa-Teemane Local Municipality"
+  },
+  {
+    "item": "Q1889000",
+    "itemLabel": "Mandeni Local Municipality"
+  },
+  {
+    "item": "Q1894966",
+    "itemLabel": "Umjindi Local Municipality"
+  },
+  {
+    "item": "Q1907111",
+    "itemLabel": "Masilonyana Local Municipality"
+  },
+  {
+    "item": "Q1931418",
+    "itemLabel": "Theewaterskloof Local Municipality"
+  },
+  {
+    "item": "Q1932200",
+    "itemLabel": "Mier Local Municipality"
+  },
+  {
+    "item": "Q1941297",
+    "itemLabel": "Mnquma Local Municipality"
+  },
+  {
+    "item": "Q1942488",
+    "itemLabel": "Mogalakwena Local Municipality"
+  },
+  {
+    "item": "Q1943437",
+    "itemLabel": "Molemole Local Municipality"
+  },
+  {
+    "item": "Q1945552",
+    "itemLabel": "Umsobomvu Local Municipality"
+  },
+  {
+    "item": "Q1947071",
+    "itemLabel": "Moqhaka Local Municipality"
+  },
+  {
+    "item": "Q1964073",
+    "itemLabel": "Nala Local Municipality"
+  },
+  {
+    "item": "Q2006772",
+    "itemLabel": "Prince Albert Local Municipality"
+  },
+  {
+    "item": "Q2042724",
+    "itemLabel": "Kgetlengrivier Local Municipality"
+  },
+  {
+    "item": "Q1487822",
+    "itemLabel": "Ga-Segonyana Local Municipality"
+  },
+  {
+    "item": "Q1509947",
+    "itemLabel": "Modimolle Local Municipality"
+  },
+  {
+    "item": "Q1530051",
+    "itemLabel": "Swartland Local Municipality"
+  },
+  {
+    "item": "Q1544454",
+    "itemLabel": "Greater Tzaneen Local Municipality"
+  },
+  {
+    "item": "Q1632782",
+    "itemLabel": "Swellendam Local Municipality"
+  },
+  {
+    "item": "Q1642573",
+    "itemLabel": "Mbhashe Local Municipality"
+  },
+  {
+    "item": "Q1671635",
+    "itemLabel": "Intsika Yethu Local Municipality"
+  },
+  {
+    "item": "Q1721381",
+    "itemLabel": "Kai ǃGarib Local Municipality"
+  },
+  {
+    "item": "Q1723822",
+    "itemLabel": "Kannaland Local Municipality"
+  },
+  {
+    "item": "Q1734288",
+    "itemLabel": "Karoo Hoogland Local Municipality"
+  },
+  {
+    "item": "Q1794872",
+    "itemLabel": "Kwa Sani Local Municipality"
+  },
+  {
+    "item": "Q1820064",
+    "itemLabel": "Lepelle-Nkumpi Local Municipality"
+  },
+  {
+    "item": "Q1873451",
+    "itemLabel": "Matjhabeng Local Municipality"
+  },
+  {
+    "item": "Q1888475",
+    "itemLabel": "Mamusa Local Municipality"
+  },
+  {
+    "item": "Q1921092",
+    "itemLabel": "Merafong City Local Municipality"
+  },
+  {
+    "item": "Q1941155",
+    "itemLabel": "Mkhambathini Local Municipality"
+  },
+  {
+    "item": "Q1983450",
+    "itemLabel": "Newcastle Local Municipality"
+  },
+  {
+    "item": "Q2003963",
+    "itemLabel": "Nquthu Local Municipality"
+  },
+  {
+    "item": "Q2006821",
+    "itemLabel": "Senqu Local Municipality"
+  },
+  {
+    "item": "Q2084908",
+    "itemLabel": "Msukaligwa Local Municipality"
+  },
+  {
+    "item": "Q1517371",
+    "itemLabel": "Great Kei Local Municipality"
+  },
+  {
+    "item": "Q1544434",
+    "itemLabel": "Greater Letaba Local Municipality"
+  },
+  {
+    "item": "Q1660415",
+    "itemLabel": "Polokwane Local Municipality"
+  },
+  {
+    "item": "Q1661010",
+    "itemLabel": "Indaka Local Municipality"
+  },
+  {
+    "item": "Q1663481",
+    "itemLabel": "Ingwe Local Municipality"
+  },
+  {
+    "item": "Q1671847",
+    "itemLabel": "Inxuba Yethemba Local Municipality"
+  },
+  {
+    "item": "Q1681141",
+    "itemLabel": "Mbonambi Local Municipality"
+  },
+  {
+    "item": "Q1693384",
+    "itemLabel": "Matatiele Local Municipality"
+  },
+  {
+    "item": "Q1707740",
+    "itemLabel": "Mossel Bay Local Municipality"
+  },
+  {
+    "item": "Q1792173",
+    "itemLabel": "Kungwini Local Municipality"
+  },
+  {
+    "item": "Q1815510",
+    "itemLabel": "Msunduzi Local Municipality"
+  },
+  {
+    "item": "Q1820684",
+    "itemLabel": "Lesedi Local Municipality"
+  },
+  {
+    "item": "Q1821165",
+    "itemLabel": "Letsemeng Local Municipality"
+  },
+  {
+    "item": "Q1856473",
+    "itemLabel": "Ulundi Local Municipality"
+  },
+  {
+    "item": "Q1925949",
+    "itemLabel": "Metsimaholo Local Municipality"
+  },
+  {
+    "item": "Q1983195",
+    "itemLabel": "Richmond Local Municipality"
+  },
+  {
+    "item": "Q1984351",
+    "itemLabel": "Ngqushwa Local Municipality"
+  },
+  {
+    "item": "Q2006754",
+    "itemLabel": "Siyancuma Local Municipality"
+  },
+  {
+    "item": "Q2006800",
+    "itemLabel": "Phokwane Local Municipality"
+  },
+  {
+    "item": "Q2006784",
+    "itemLabel": "Saldanha Bay Local Municipality"
+  },
+  {
+    "item": "Q2006792",
+    "itemLabel": "Thulamela Local Municipality"
+  },
+  {
+    "item": "Q2086957",
+    "itemLabel": "Randfontein Local Municipality"
+  },
+  {
+    "item": "Q5188787",
+    "itemLabel": "Crossroads"
+  },
+  {
+    "item": "Q4941852",
+    "itemLabel": "Bongelethu"
+  },
+  {
+    "item": "Q5131908",
+    "itemLabel": "Clermont, KwaZulu-Natal"
+  },
+  {
+    "item": "Q5177189",
+    "itemLabel": "Kagiso"
+  },
+  {
+    "item": "Q5995300",
+    "itemLabel": "Ikageng"
+  },
+  {
+    "item": "Q6003484",
+    "itemLabel": "Imbali"
+  },
+  {
+    "item": "Q6497896",
+    "itemLabel": "Laudium"
+  },
+  {
+    "item": "Q8073531",
+    "itemLabel": "Zola"
+  },
+  {
+    "item": "Q6894238",
+    "itemLabel": "Mohlakeng"
+  },
+  {
+    "item": "Q6917597",
+    "itemLabel": "Motherwell, Eastern Cape"
+  },
+  {
+    "item": "Q7019937",
+    "itemLabel": "Nyanga"
+  },
+  {
+    "item": "Q7106881",
+    "itemLabel": "Osizweni"
+  },
+  {
+    "item": "Q7005676",
+    "itemLabel": "New Brighton"
+  },
+  {
+    "item": "Q7333189",
+    "itemLabel": "Rietvallei, Gauteng"
+  },
+  {
+    "item": "Q7427387",
+    "itemLabel": "Saulsville"
+  },
+  {
+    "item": "Q7563836",
+    "itemLabel": "Soshanguve"
+  },
+  {
+    "item": "Q7849323",
+    "itemLabel": "Tsakane"
+  },
+  {
+    "item": "Q5312112",
+    "itemLabel": "Duduza"
+  },
+  {
+    "item": "Q8072844",
+    "itemLabel": "Zithobeni"
+  },
+  {
+    "item": "Q5331936",
+    "itemLabel": "Ebony Park"
+  },
+  {
+    "item": "Q5518488",
+    "itemLabel": "Galeshewe"
+  },
+  {
+    "item": "Q7067669",
+    "itemLabel": "Ntuzuma"
+  },
+  {
+    "item": "Q6099693",
+    "itemLabel": "Ivory Park"
+  },
+  {
+    "item": "Q6826793",
+    "itemLabel": "Mfuleni"
+  },
+  {
+    "item": "Q7048709",
+    "itemLabel": "Nomzamo"
+  },
+  {
+    "item": "Q7099614",
+    "itemLabel": "Orange Farm"
+  },
+  {
+    "item": "Q7186736",
+    "itemLabel": "Phoenix, Durban"
+  },
+  {
+    "item": "Q7278722",
+    "itemLabel": "Rabie Ridge"
+  },
+  {
+    "item": "Q7295470",
+    "itemLabel": "Ratanang"
+  },
+  {
+    "item": "Q7295471",
+    "itemLabel": "Ratanda"
+  },
+  {
+    "item": "Q7310089",
+    "itemLabel": "Reiger Park"
+  },
+  {
+    "item": "Q4944180",
+    "itemLabel": "Bophelong"
+  },
+  {
+    "item": "Q7708864",
+    "itemLabel": "Thabong"
+  },
+  {
+    "item": "Q5286976",
+    "itemLabel": "Dobsonville"
+  },
+  {
+    "item": "Q5314643",
+    "itemLabel": "Duncan Village"
+  },
+  {
+    "item": "Q5347139",
+    "itemLabel": "Eersterust"
+  },
+  {
+    "item": "Q5459675",
+    "itemLabel": "Ibhayi"
+  },
+  {
+    "item": "Q6395891",
+    "itemLabel": "Mahwelereng"
+  },
+  {
+    "item": "Q6403230",
+    "itemLabel": "Khutsong"
+  },
+  {
+    "item": "Q6890385",
+    "itemLabel": "Mofulatshepe"
+  },
+  {
+    "item": "Q7366121",
+    "itemLabel": "Roodepan"
+  },
+  {
+    "item": "Q7427479",
+    "itemLabel": "Saundershoogte"
+  },
+  {
+    "item": "Q7695110",
+    "itemLabel": "Teisesville"
+  },
+  {
+    "item": "Q7781202",
+    "itemLabel": "Thembalihle"
+  },
+  {
+    "item": "Q7881442",
+    "itemLabel": "Umbumbulu"
+  },
+  {
+    "item": "Q5277177",
+    "itemLabel": "Dimbaza"
+  },
+  {
+    "item": "Q5405099",
+    "itemLabel": "Etwatwa"
+  },
+  {
+    "item": "Q6004187",
+    "itemLabel": "Imizamo Yethu"
+  },
+  {
+    "item": "Q14658015",
+    "itemLabel": "Leratswana"
+  },
+  {
+    "item": "Q6449873",
+    "itemLabel": "KwaThema"
+  },
+  {
+    "item": "Q6482240",
+    "itemLabel": "Lamontville"
+  },
+  {
+    "item": "Q6588027",
+    "itemLabel": "Manenberg"
+  },
+  {
+    "item": "Q6726114",
+    "itemLabel": "Madadeni"
+  },
+  {
+    "item": "Q6890214",
+    "itemLabel": "Moemaneng"
+  },
+  {
+    "item": "Q7070678",
+    "itemLabel": "Nuwe Eersterus"
+  },
+  {
+    "item": "Q7307193",
+    "itemLabel": "Refilwe"
+  },
+  {
+    "item": "Q7316910",
+    "itemLabel": "Retreat, Cape Town"
+  },
+  {
+    "item": "Q4860484",
+    "itemLabel": "Evaton"
+  },
+  {
+    "item": "Q13034655",
+    "itemLabel": "Dunoon, Cape Town"
+  },
+  {
+    "item": "Q4938403",
+    "itemLabel": "Boipatong"
+  },
+  {
+    "item": "Q4938511",
+    "itemLabel": "Boitumelong"
+  },
+  {
+    "item": "Q7786667",
+    "itemLabel": "Thokoza"
+  },
+  {
+    "item": "Q8066080",
+    "itemLabel": "Zandspruit"
+  },
+  {
+    "item": "Q8069264",
+    "itemLabel": "Zenzeleni"
+  },
+  {
+    "item": "Q5873562",
+    "itemLabel": "Hlohlolwane"
+  },
+  {
+    "item": "Q6503638",
+    "itemLabel": "Lawley, Gauteng"
+  },
+  {
+    "item": "Q6740509",
+    "itemLabel": "Makwarela"
+  },
+  {
+    "item": "Q6936880",
+    "itemLabel": "Munsieville"
+  },
+  {
+    "item": "Q7186446",
+    "itemLabel": "Phiri, Soweto"
+  },
+  {
+    "item": "Q7251201",
+    "itemLabel": "Protea Glen"
+  },
+  {
+    "item": "Q8075657",
+    "itemLabel": "Zwelitsha"
+  },
+  {
+    "item": "Q10987686",
+    "itemLabel": "Matlakeng"
+  },
+  {
+    "item": "Q12730377",
+    "itemLabel": "Inanda, KwaZulu-Natal"
+  },
+  {
+    "item": "Q15251630",
+    "itemLabel": "Matsulu"
+  },
+  {
+    "item": "Q15252586",
+    "itemLabel": "Meadowlands, Gauteng"
+  },
+  {
+    "item": "Q20976284",
+    "itemLabel": "Rodenbeck"
+  },
+  {
+    "item": "Q15229625",
+    "itemLabel": "Joe Slovo Park"
+  },
+  {
+    "item": "Q26840043",
+    "itemLabel": "Chloe"
+  },
+  {
+    "item": "Q19709733",
+    "itemLabel": "Vandyksdrif"
+  },
+  {
+    "item": "Q15690558",
+    "itemLabel": "Sanddrif"
+  },
+  {
+    "item": "Q15975712",
+    "itemLabel": "Tshikota"
+  },
+  {
+    "item": "Q15975781",
+    "itemLabel": "Nkwifa"
+  },
+  {
+    "item": "Q15975758",
+    "itemLabel": "Tentergate"
+  },
+  {
+    "item": "Q15975761",
+    "itemLabel": "Uitkyk, North West"
+  },
+  {
+    "item": "Q15975788",
+    "itemLabel": "Van Stadensriviermond"
+  },
+  {
+    "item": "Q30139258",
+    "itemLabel": "Q30139258"
+  },
+  {
+    "item": "Q19707586",
+    "itemLabel": "Mhluzi"
+  },
+  {
+    "item": "Q17111654",
+    "itemLabel": "Vrededorp, Gauteng"
+  },
+  {
+    "item": "Q23015640",
+    "itemLabel": "Gompo"
+  },
+  {
+    "item": "Q1229689",
+    "itemLabel": "District Six"
+  },
+  {
+    "item": "Q2263903",
+    "itemLabel": "Elgin"
+  },
+  {
+    "item": "Q2347801",
+    "itemLabel": "Emalahleni Local Municipality"
+  },
+  {
+    "item": "Q1594009",
+    "itemLabel": "Heidelberg"
+  },
+  {
+    "item": "Q2182810",
+    "itemLabel": "Ditsobotla Local Municipality"
+  },
+  {
+    "item": "Q2895008",
+    "itemLabel": "Q2895008"
+  },
+  {
+    "item": "Q2785987",
+    "itemLabel": "Hawston"
+  },
+  {
+    "item": "Q3642336",
+    "itemLabel": "Riebeek East"
+  },
+  {
+    "item": "Q2473039",
+    "itemLabel": "Local Municipality of Madibeng"
+  },
+  {
+    "item": "Q2226422",
+    "itemLabel": "Thembisile Hani Local Municipality"
+  },
+  {
+    "item": "Q4931109",
+    "itemLabel": "George Local Municipality"
+  },
+  {
+    "item": "Q2554117",
+    "itemLabel": "Moretele Local Municipality"
+  },
+  {
+    "item": "Q2576308",
+    "itemLabel": "Mahikeng Local Municipality"
+  },
+  {
+    "item": "Q2576328",
+    "itemLabel": "Tlokwe Local Municipality"
+  },
+  {
+    "item": "Q5318361",
+    "itemLabel": "Dwyka"
+  },
+  {
+    "item": "Q2671202",
+    "itemLabel": "Ramotshere Moiloa Local Municipality"
+  },
+  {
+    "item": "Q3644604",
+    "itemLabel": "Nkandla Local Municipality"
+  },
+  {
+    "item": "Q7230657",
+    "itemLabel": "Port Grosvenor"
+  },
+  {
+    "item": "Q2194994",
+    "itemLabel": "Ngquza Hill Local Municipality"
+  },
+  {
+    "item": "Q4833492",
+    "itemLabel": "Dannhauser Local Municipality"
+  },
+  {
+    "item": "Q2286969",
+    "itemLabel": "Mbombela Local Municipality"
+  },
+  {
+    "item": "Q5168855",
+    "itemLabel": "Copperton"
+  },
+  {
+    "item": "Q2671219",
+    "itemLabel": "Ratlou Local Municipality"
+  },
+  {
+    "item": "Q3459149",
+    "itemLabel": "Kruisfontein"
+  },
+  {
+    "item": "Q3643416",
+    "itemLabel": "Kagisano-Molopo Local Municipality"
+  },
+  {
+    "item": "Q7333132",
+    "itemLabel": "Riemvasmaak"
+  },
+  {
+    "item": "Q2230868",
+    "itemLabel": "Moses Kotane Local Municipality"
+  },
+  {
+    "item": "Q2292410",
+    "itemLabel": "Steve Tshwete Local Municipality"
+  },
+  {
+    "item": "Q2486320",
+    "itemLabel": "Makhuduthamaga Local Municipality"
+  },
+  {
+    "item": "Q2576320",
+    "itemLabel": "Maquassi Hills Local Municipality"
+  },
+  {
+    "item": "Q2634207",
+    "itemLabel": "Ephraim Mogale Local Municipality"
+  },
+  {
+    "item": "Q2671208",
+    "itemLabel": "Greater Tubatse Local Municipality"
+  },
+  {
+    "item": "Q12735414",
+    "itemLabel": "Q12735414"
+  },
+  {
+    "item": "Q12739581",
+    "itemLabel": "Q12739581"
+  },
+  {
+    "item": "Q12741723",
+    "itemLabel": "Q12741723"
+  },
+  {
+    "item": "Q3195708",
+    "itemLabel": "Fisherhaven"
+  },
+  {
+    "item": "Q13036116",
+    "itemLabel": "Q13036116"
+  },
+  {
+    "item": "Q917867",
+    "itemLabel": "Natal Province"
+  },
+  {
+    "item": "Q3642686",
+    "itemLabel": "Baardskeerdersbos"
+  },
+  {
+    "item": "Q3642615",
+    "itemLabel": "Franskraalstrand"
+  },
+  {
+    "item": "Q3643167",
+    "itemLabel": "Kuils River"
+  },
+  {
+    "item": "Q14213536",
+    "itemLabel": "Q14213536"
+  },
+  {
+    "item": "Q14213835",
+    "itemLabel": "Q14213835"
+  },
+  {
+    "item": "Q12731542",
+    "itemLabel": "KaNyamazane"
+  },
+  {
+    "item": "Q2162456",
+    "itemLabel": "Sunday's River Valley Local Municipality"
+  },
+  {
+    "item": "Q2317194",
+    "itemLabel": "Emakhazeni Local Municipality"
+  },
+  {
+    "item": "Q7641002",
+    "itemLabel": "Sunrella"
+  },
+  {
+    "item": "Q5179521",
+    "itemLabel": "Keurboomsrivier"
+  },
+  {
+    "item": "Q2655391",
+    "itemLabel": "Thaba Chweu Local Municipality"
+  },
+  {
+    "item": "Q2783921",
+    "itemLabel": "King Sabata Dalindyebo Local Municipality"
+  },
+  {
+    "item": "Q10975369",
+    "itemLabel": "Mtubatuba Local Municipality"
+  },
+  {
+    "item": "Q5758559",
+    "itemLabel": "Highgate Ostrich Show Farm"
+  },
+  {
+    "item": "Q15976163",
+    "itemLabel": "Q15976163"
+  },
+  {
+    "item": "Q6035363",
+    "itemLabel": "Inner City, Johannesburg"
+  },
+  {
+    "item": "Q5471292",
+    "itemLabel": "Fort Hare"
+  },
+  {
+    "item": "Q15975794",
+    "itemLabel": "Balmoral"
+  },
+  {
+    "item": "Q14833732",
+    "itemLabel": "Port St. Johns Local Municipality"
+  },
+  {
+    "item": "Q15962428",
+    "itemLabel": "Philadelphia"
+  },
+  {
+    "item": "Q15975799",
+    "itemLabel": "Mayfield, KwaZulu-Natal"
+  },
+  {
+    "item": "Q15975742",
+    "itemLabel": "Taaiboschgroet"
+  },
+  {
+    "item": "Q15975756",
+    "itemLabel": "Supingstad"
+  },
+  {
+    "item": "Q15975745",
+    "itemLabel": "Tiekiedraai"
+  },
+  {
+    "item": "Q15975775",
+    "itemLabel": "Sterkwater"
+  },
+  {
+    "item": "Q15975797",
+    "itemLabel": "Vaal Marina"
+  },
+  {
+    "item": "Q7838911",
+    "itemLabel": "Trevallyn, Gauteng"
+  },
+  {
+    "item": "Q8251259",
+    "itemLabel": "Richtersveld Local Municipality"
+  },
+  {
+    "item": "Q14231157",
+    "itemLabel": "Riverlands"
+  },
+  {
+    "item": "Q15975737",
+    "itemLabel": "Wonderkop"
+  },
+  {
+    "item": "Q19706051",
+    "itemLabel": "Q19706051"
+  },
+  {
+    "item": "Q19707756",
+    "itemLabel": "Q19707756"
+  },
+  {
+    "item": "Q20431186",
+    "itemLabel": "Q20431186"
+  },
+  {
+    "item": "Q13035488",
+    "itemLabel": "Moreleta Park"
+  },
+  {
+    "item": "Q15975785",
+    "itemLabel": "Skeerpoort"
+  },
+  {
+    "item": "Q15975793",
+    "itemLabel": "Skoenmakerskop"
+  },
+  {
+    "item": "Q15975776",
+    "itemLabel": "Tosca, North West"
+  },
+  {
+    "item": "Q20965889",
+    "itemLabel": "Rietfontein"
+  },
+  {
+    "item": "Q23011874",
+    "itemLabel": "Q23011874"
+  },
+  {
+    "item": "Q23011873",
+    "itemLabel": "Q23011873"
+  },
+  {
+    "item": "Q23055017",
+    "itemLabel": "Q23055017"
+  },
+  {
+    "item": "Q12724242",
+    "itemLabel": "Coalville, South Africa"
+  },
+  {
+    "item": "Q12731752",
+    "itemLabel": "KwaGuqa"
+  },
+  {
+    "item": "Q12734806",
+    "itemLabel": "Maokeng"
+  },
+  {
+    "item": "Q12740562",
+    "itemLabel": "Sea Park"
+  },
+  {
+    "item": "Q15975744",
+    "itemLabel": "Beaconsfield, Kimberley"
+  },
+  {
+    "item": "Q15975768",
+    "itemLabel": "Dominionville"
+  },
+  {
+    "item": "Q15975633",
+    "itemLabel": "Wattville"
+  },
+  {
+    "item": "Q15975779",
+    "itemLabel": "Onverwacht, Gauteng"
+  },
+  {
+    "item": "Q15975760",
+    "itemLabel": "Syferskuil"
+  },
+  {
+    "item": "Q15975765",
+    "itemLabel": "Tjakastad"
+  },
+  {
+    "item": "Q15975800",
+    "itemLabel": "Shigalo"
+  },
+  {
+    "item": "Q15975774",
+    "itemLabel": "Villa Nora"
+  },
+  {
+    "item": "Q15975759",
+    "itemLabel": "Wolvenkop"
+  },
+  {
+    "item": "Q15975791",
+    "itemLabel": "Matjiesrivier"
+  },
+  {
+    "item": "Q25613922",
+    "itemLabel": "Q25613922"
+  },
+  {
+    "item": "Q12731162",
+    "itemLabel": "Iswepe"
+  },
+  {
+    "item": "Q15975796",
+    "itemLabel": "Kiepersol"
+  },
+  {
+    "item": "Q15975752",
+    "itemLabel": "Waayhoek"
+  },
+  {
+    "item": "Q15975786",
+    "itemLabel": "Trappe's Valley"
+  },
+  {
+    "item": "Q21551473",
+    "itemLabel": "Kocksoord"
+  },
+  {
+    "item": "Q27070658",
+    "itemLabel": "Q27070658"
+  },
+  {
+    "item": "Q1005268",
+    "itemLabel": "Mpumalanga"
+  },
+  {
+    "item": "Q1002006",
+    "itemLabel": "Buffalo City Metropolitan Municipality"
+  },
+  {
+    "item": "Q1159185",
+    "itemLabel": "Mangaung Metropolitan Municipality"
+  },
+  {
+    "item": "Q1553423",
+    "itemLabel": "Gugulethu"
+  },
+  {
+    "item": "Q1639345",
+    "itemLabel": "Atteridgeville"
+  },
+  {
+    "item": "Q2307316",
+    "itemLabel": "Alexandra"
+  },
+  {
+    "item": "Q1847830",
+    "itemLabel": "Pacaltsdorp"
+  },
+  {
+    "item": "Q2403301",
+    "itemLabel": "Wembezi"
+  },
+  {
+    "item": "Q2612280",
+    "itemLabel": "Katlehong"
+  },
+  {
+    "item": "Q311544",
+    "itemLabel": "eThekwini"
+  },
+  {
+    "item": "Q326891",
+    "itemLabel": "Ekurhuleni Metropolitan Municipality"
+  },
+  {
+    "item": "Q741111",
+    "itemLabel": "Khayelitsha"
+  },
+  {
+    "item": "Q1185115",
+    "itemLabel": "City of Cape Town"
+  },
+  {
+    "item": "Q3347036",
+    "itemLabel": "Chatsworth"
+  },
+  {
+    "item": "Q3642478",
+    "itemLabel": "Verulam"
+  },
+  {
+    "item": "Q993189",
+    "itemLabel": "Tongaat"
+  },
+  {
+    "item": "Q3644550",
+    "itemLabel": "Sebokeng"
+  },
+  {
+    "item": "Q3885934",
+    "itemLabel": "Orlando, Soweto"
+  },
+  {
+    "item": "Q1580709",
+    "itemLabel": "Tembisa"
+  },
+  {
+    "item": "Q217426",
+    "itemLabel": "Soweto"
+  },
+  {
+    "item": "Q1888203",
+    "itemLabel": "Mamelodi"
+  },
+  {
+    "item": "Q3642766",
+    "itemLabel": "Diepsloot"
+  },
+  {
+    "item": "Q2192984",
+    "itemLabel": "Ezibeleni"
+  },
+  {
+    "item": "Q2468130",
+    "itemLabel": "Ga-Rankuwa"
+  },
+  {
+    "item": "Q2522086",
+    "itemLabel": "Embalenhle"
+  },
+  {
+    "item": "Q183292",
+    "itemLabel": "Umlazi"
+  },
+  {
+    "item": "Q127067",
+    "itemLabel": "Langa"
+  },
+  {
+    "item": "Q2683075",
+    "itemLabel": "Ekangala"
+  },
+  {
+    "item": "Q984406",
+    "itemLabel": "Mdantsane"
+  },
+  {
+    "item": "Q985865",
+    "itemLabel": "ESikhawini"
+  },
+  {
+    "item": "Q1094207",
+    "itemLabel": "City of Tshwane Metropolitan Municipality"
+  },
+  {
+    "item": "Q1283585",
+    "itemLabel": "Edendale, KwaZulu-Natal"
+  },
+  {
+    "item": "Q1856565",
+    "itemLabel": "Nelson Mandela Bay Metropolitan Municipality"
+  },
+  {
+    "item": "Q4804351",
+    "itemLabel": "Blue Downs"
+  },
+  {
+    "item": "Q2614805",
+    "itemLabel": "Delft, Cape Town"
+  },
+  {
+    "item": "Q2751060",
+    "itemLabel": "Lenasia"
+  },
+  {
+    "item": "Q3078599",
+    "itemLabel": "Mitchell's Plain"
+  },
+  {
+    "item": "Q747507",
+    "itemLabel": "Mabopane"
+  },
+  {
+    "item": "Q3297270",
+    "itemLabel": "Masiphumelele"
+  },
+  {
+    "item": "Q3379145",
+    "itemLabel": "Philippi, Cape Town"
+  },
+  {
+    "item": "Q993090",
+    "itemLabel": "Dingleton"
+  },
+  {
+    "item": "Q993137",
+    "itemLabel": "Kayamandi"
+  },
+  {
+    "item": "Q3643931",
+    "itemLabel": "Kliptown"
+  },
+  {
+    "item": "Q3195801",
+    "itemLabel": "Olievenhoutbosch"
+  },
+  {
+    "item": "Q3299631",
+    "itemLabel": "Vosloorus"
+  },
+  {
+    "item": "Q894856",
+    "itemLabel": "Botshabelo"
+  },
+  {
+    "item": "Q3642863",
+    "itemLabel": "Daveyton"
+  },
+  {
+    "item": "Q1422014",
+    "itemLabel": "Sharpeville"
+  },
+  {
+    "item": "Q4849326",
+    "itemLabel": "Diepmeadow"
+  },
+  {
+    "item": "Q4859222",
+    "itemLabel": "Elsie's River"
+  },
+  {
+    "item": "Q2346838",
+    "itemLabel": "City of Johannesburg Metropolitan Municipality"
+  },
+  {
+    "item": "Q2584600",
+    "itemLabel": "Seshego"
+  },
+  {
+    "item": "Q3347043",
+    "itemLabel": "KwaMashu"
+  },
+  {
+    "item": "Q3437588",
+    "itemLabel": "Bekkersdal"
+  },
+  {
+    "item": "Q17065808",
+    "itemLabel": "Klein Constantia"
+  },
+  {
+    "item": "Q20408536",
+    "itemLabel": "Mosega"
+  }
+]

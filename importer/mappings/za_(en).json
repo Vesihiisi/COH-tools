@@ -6,13 +6,14 @@
     "country_code": "za",
     "default_is": {
         "comment": "",
-        "item": "",
-        "name": ""
+        "item": "Q2065736",
+        "name": "cultural property"
     },
     "heritage": {
         "comment": "All items in the WLM tables are provincial sites",
         "item": "Q7252700",
         "name": "Provincial heritage site"
     },
-    "language": "en"
+    "language": "en",
+    "table_name": "za"
 }

@@ -1,0 +1,47 @@
+[
+  {
+    "iso": "ZA-NL",
+    "item": "Q81725",
+    "itemLabel": "KwaZulu-Natal"
+  },
+  {
+    "iso": "ZA-WC",
+    "item": "Q127167",
+    "itemLabel": "Western Cape"
+  },
+  {
+    "iso": "ZA-EC",
+    "item": "Q130840",
+    "itemLabel": "Eastern Cape"
+  },
+  {
+    "iso": "ZA-MP",
+    "item": "Q132410",
+    "itemLabel": "Mpumalanga"
+  },
+  {
+    "iso": "ZA-NC",
+    "item": "Q132418",
+    "itemLabel": "Northern Cape"
+  },
+  {
+    "iso": "ZA-GT",
+    "item": "Q133083",
+    "itemLabel": "Gauteng"
+  },
+  {
+    "iso": "ZA-LP",
+    "item": "Q134907",
+    "itemLabel": "Limpopo"
+  },
+  {
+    "iso": "ZA-FS",
+    "item": "Q160284",
+    "itemLabel": "Free State"
+  },
+  {
+    "iso": "ZA-NW",
+    "item": "Q165956",
+    "itemLabel": "North West"
+  }
+]

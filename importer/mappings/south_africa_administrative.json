@@ -1,0 +1,1182 @@
+[
+  {
+    "item": "Q81725",
+    "itemLabel": "KwaZulu-Natal"
+  },
+  {
+    "item": "Q127167",
+    "itemLabel": "Western Cape"
+  },
+  {
+    "item": "Q130840",
+    "itemLabel": "Eastern Cape"
+  },
+  {
+    "item": "Q132410",
+    "itemLabel": "Mpumalanga"
+  },
+  {
+    "item": "Q132418",
+    "itemLabel": "Northern Cape"
+  },
+  {
+    "item": "Q133083",
+    "itemLabel": "Gauteng"
+  },
+  {
+    "item": "Q134907",
+    "itemLabel": "Limpopo"
+  },
+  {
+    "item": "Q160284",
+    "itemLabel": "Free State"
+  },
+  {
+    "item": "Q165956",
+    "itemLabel": "North West"
+  },
+  {
+    "item": "Q190959",
+    "itemLabel": "Transvaal"
+  },
+  {
+    "item": "Q24451",
+    "itemLabel": "Kruger National Park"
+  },
+  {
+    "item": "Q206508",
+    "itemLabel": "Mountain Zebra National Park"
+  },
+  {
+    "item": "Q120788",
+    "itemLabel": "Mkhondo Local Municipality"
+  },
+  {
+    "item": "Q123716",
+    "itemLabel": "Lukhanji Local Municipality"
+  },
+  {
+    "item": "Q127787",
+    "itemLabel": "Mogale City Local Municipality"
+  },
+  {
+    "item": "Q138717",
+    "itemLabel": "The Big Five False Bay Local Municipality"
+  },
+  {
+    "item": "Q177535",
+    "itemLabel": "UPhongolo Local Municipality"
+  },
+  {
+    "item": "Q178591",
+    "itemLabel": "Laingsburg Local Municipality"
+  },
+  {
+    "item": "Q205363",
+    "itemLabel": "Inkwanca Local Municipality"
+  },
+  {
+    "item": "Q241617",
+    "itemLabel": "Jozini Local Municipality"
+  },
+  {
+    "item": "Q253683",
+    "itemLabel": "Kareeberg Local Municipality"
+  },
+  {
+    "item": "Q253979",
+    "itemLabel": "Phumelela Local Municipality"
+  },
+  {
+    "item": "Q254505",
+    "itemLabel": "Umvoti Local Municipality"
+  },
+  {
+    "item": "Q257196",
+    "itemLabel": "Kgatelopele Local Municipality"
+  },
+  {
+    "item": "Q259411",
+    "itemLabel": "Thembelihle Local Municipality"
+  },
+  {
+    "item": "Q267665",
+    "itemLabel": "Fetakgomo Local Municipality"
+  },
+  {
+    "item": "Q278422",
+    "itemLabel": "Msinga Local Municipality"
+  },
+  {
+    "item": "Q303647",
+    "itemLabel": "Kou-Kamma Local Municipality"
+  },
+  {
+    "item": "Q304168",
+    "itemLabel": "Abaqulusi Local Municipality"
+  },
+  {
+    "item": "Q310008",
+    "itemLabel": "eMadlangeni Local Municipality"
+  },
+  {
+    "item": "Q311662",
+    "itemLabel": "UMdoni Local Municipality"
+  },
+  {
+    "item": "Q311792",
+    "itemLabel": "uMngeni Local Municipality"
+  },
+  {
+    "item": "Q311795",
+    "itemLabel": "UMshwathi Local Municipality"
+  },
+  {
+    "item": "Q311797",
+    "itemLabel": "UMuziwabantu Local Municipality"
+  },
+  {
+    "item": "Q311800",
+    "itemLabel": "UMhlathuze Local Municipality"
+  },
+  {
+    "item": "Q311805",
+    "itemLabel": "UMlalazi Local Municipality"
+  },
+  {
+    "item": "Q311812",
+    "itemLabel": "eDumbe Local Municipality"
+  },
+  {
+    "item": "Q390436",
+    "itemLabel": "Aganang Local Municipality"
+  },
+  {
+    "item": "Q394771",
+    "itemLabel": "ǃKheis Local Municipality"
+  },
+  {
+    "item": "Q427568",
+    "itemLabel": "Naledi Local Municipality"
+  },
+  {
+    "item": "Q430520",
+    "itemLabel": "Sakhisizwe Local Municipality"
+  },
+  {
+    "item": "Q452531",
+    "itemLabel": "Amahlathi Local Municipality"
+  },
+  {
+    "item": "Q474835",
+    "itemLabel": "Witzenberg Local Municipality"
+  },
+  {
+    "item": "Q509059",
+    "itemLabel": "Ntambanana Local Municipality"
+  },
+  {
+    "item": "Q522028",
+    "itemLabel": "Stellenbosch Local Municipality"
+  },
+  {
+    "item": "Q527085",
+    "itemLabel": "Ntabankulu Local Municipality"
+  },
+  {
+    "item": "Q575104",
+    "itemLabel": "Mookgophong Local Municipality"
+  },
+  {
+    "item": "Q582629",
+    "itemLabel": "Maruleng Local Municipality"
+  },
+  {
+    "item": "Q583728",
+    "itemLabel": "Mbizana Local Municipality"
+  },
+  {
+    "item": "Q595051",
+    "itemLabel": "Lekwa Local Municipality"
+  },
+  {
+    "item": "Q596849",
+    "itemLabel": "Nyandeni Local Municipality"
+  },
+  {
+    "item": "Q600842",
+    "itemLabel": "Mantsopa Local Municipality"
+  },
+  {
+    "item": "Q612412",
+    "itemLabel": "Ventersdorp Local Municipality"
+  },
+  {
+    "item": "Q615965",
+    "itemLabel": "Umzimvubu Local Municipality"
+  },
+  {
+    "item": "Q616669",
+    "itemLabel": "Cape Agulhas Local Municipality"
+  },
+  {
+    "item": "Q617500",
+    "itemLabel": "Victor Khanye Local Municipality"
+  },
+  {
+    "item": "Q617894",
+    "itemLabel": "Maletswai Local Municipality"
+  },
+  {
+    "item": "Q638488",
+    "itemLabel": "Hlabisa Local Municipality"
+  },
+  {
+    "item": "Q670226",
+    "itemLabel": "Bushbuckridge Local Municipality"
+  },
+  {
+    "item": "Q670966",
+    "itemLabel": "Elundini Local Municipality"
+  },
+  {
+    "item": "Q671160",
+    "itemLabel": "Mohokare Local Municipality"
+  },
+  {
+    "item": "Q673459",
+    "itemLabel": "Gariep Local Municipality"
+  },
+  {
+    "item": "Q685192",
+    "itemLabel": "Emnambithi-Ladysmith Local Municipality"
+  },
+  {
+    "item": "Q685302",
+    "itemLabel": "Nketoana Local Municipality"
+  },
+  {
+    "item": "Q692264",
+    "itemLabel": "Tsantsabane Local Municipality"
+  },
+  {
+    "item": "Q727225",
+    "itemLabel": "Nxuba Local Municipality"
+  },
+  {
+    "item": "Q737965",
+    "itemLabel": "Mutale Local Municipality"
+  },
+  {
+    "item": "Q739997",
+    "itemLabel": "Musina Local Municipality"
+  },
+  {
+    "item": "Q762131",
+    "itemLabel": "Engcobo Local Municipality"
+  },
+  {
+    "item": "Q767727",
+    "itemLabel": "Emalahleni Local Municipality"
+  },
+  {
+    "item": "Q767965",
+    "itemLabel": "Matzikama Local Municipality"
+  },
+  {
+    "item": "Q775608",
+    "itemLabel": "Naledi Local Municipality"
+  },
+  {
+    "item": "Q775825",
+    "itemLabel": "Okhahlamba Local Municipality"
+  },
+  {
+    "item": "Q781995",
+    "itemLabel": "Renosterberg Local Municipality"
+  },
+  {
+    "item": "Q786096",
+    "itemLabel": "Ubuhlebezwe Local Municipality"
+  },
+  {
+    "item": "Q797426",
+    "itemLabel": "Ba-Phalaborwa Local Municipality"
+  },
+  {
+    "item": "Q812021",
+    "itemLabel": "Baviaans Local Municipality"
+  },
+  {
+    "item": "Q813381",
+    "itemLabel": "Beaufort West Local Municipality"
+  },
+  {
+    "item": "Q815084",
+    "itemLabel": "Bela-Bela Local Municipality"
+  },
+  {
+    "item": "Q820158",
+    "itemLabel": "Bergrivier Local Municipality"
+  },
+  {
+    "item": "Q859983",
+    "itemLabel": "Joe Morolong Local Municipality"
+  },
+  {
+    "item": "Q878862",
+    "itemLabel": "Bitou Local Municipality"
+  },
+  {
+    "item": "Q885465",
+    "itemLabel": "Blouberg Local Municipality"
+  },
+  {
+    "item": "Q885667",
+    "itemLabel": "Blue Crane Route Local Municipality"
+  },
+  {
+    "item": "Q905003",
+    "itemLabel": "Breede Valley Local Municipality"
+  },
+  {
+    "item": "Q922256",
+    "itemLabel": "Mafube Local Municipality"
+  },
+  {
+    "item": "Q925168",
+    "itemLabel": "Nongoma Local Municipality"
+  },
+  {
+    "item": "Q926143",
+    "itemLabel": "Siyathemba Local Municipality"
+  },
+  {
+    "item": "Q928276",
+    "itemLabel": "Greater Kokstad Local Municipality"
+  },
+  {
+    "item": "Q934141",
+    "itemLabel": "Rustenburg Local Municipality"
+  },
+  {
+    "item": "Q962633",
+    "itemLabel": "Elias Motsoaledi Local Municipality"
+  },
+  {
+    "item": "Q965471",
+    "itemLabel": "Sol Plaatje Local Municipality"
+  },
+  {
+    "item": "Q971361",
+    "itemLabel": "Langeberg Local Municipality"
+  },
+  {
+    "item": "Q1023251",
+    "itemLabel": "Umzumbe"
+  },
+  {
+    "item": "Q1028399",
+    "itemLabel": "Camdeboo Local Municipality"
+  },
+  {
+    "item": "Q1052585",
+    "itemLabel": "Cederberg Local Municipality"
+  },
+  {
+    "item": "Q1225159",
+    "itemLabel": "Dihlabeng Local Municipality"
+  },
+  {
+    "item": "Q1225310",
+    "itemLabel": "Dikgatlong Local Municipality"
+  },
+  {
+    "item": "Q1227128",
+    "itemLabel": "Dipaleseng Local Municipality"
+  },
+  {
+    "item": "Q1254147",
+    "itemLabel": "Dr JS Moroka Local Municipality"
+  },
+  {
+    "item": "Q1255574",
+    "itemLabel": "Drakenstein Local Municipality"
+  },
+  {
+    "item": "Q1298937",
+    "itemLabel": "Mpofana Local Municipality"
+  },
+  {
+    "item": "Q1301527",
+    "itemLabel": "Govan Mbeki Local Municipality"
+  },
+  {
+    "item": "Q1303780",
+    "itemLabel": "Pixley ka Seme Local Municipality"
+  },
+  {
+    "item": "Q1308343",
+    "itemLabel": "Thabazimbi Local Municipality"
+  },
+  {
+    "item": "Q1316771",
+    "itemLabel": "Ngwathe Local Municipality"
+  },
+  {
+    "item": "Q1335678",
+    "itemLabel": "Emfuleni Local Municipality"
+  },
+  {
+    "item": "Q1339806",
+    "itemLabel": "Emthanjeni Local Municipality"
+  },
+  {
+    "item": "Q1341026",
+    "itemLabel": "Endumeni Local Municipality"
+  },
+  {
+    "item": "Q1386037",
+    "itemLabel": "Ezingoleni Local Municipality"
+  },
+  {
+    "item": "Q1394367",
+    "itemLabel": "Nokeng tsa Taemane Local Municipality"
+  },
+  {
+    "item": "Q1417176",
+    "itemLabel": "Oudtshoorn Local Municipality"
+  },
+  {
+    "item": "Q1419305",
+    "itemLabel": "Ikwezi Local Municipality"
+  },
+  {
+    "item": "Q1447551",
+    "itemLabel": "Ubuntu Local Municipality"
+  },
+  {
+    "item": "Q1487822",
+    "itemLabel": "Ga-Segonyana Local Municipality"
+  },
+  {
+    "item": "Q1492854",
+    "itemLabel": "Gamagara Local Municipality"
+  },
+  {
+    "item": "Q1509947",
+    "itemLabel": "Modimolle Local Municipality"
+  },
+  {
+    "item": "Q1514156",
+    "itemLabel": "Kopanong Local Municipality"
+  },
+  {
+    "item": "Q1516786",
+    "itemLabel": "Hessequa Local Municipality"
+  },
+  {
+    "item": "Q1517371",
+    "itemLabel": "Great Kei Local Municipality"
+  },
+  {
+    "item": "Q1526250",
+    "itemLabel": "Tswelopele Local Municipality"
+  },
+  {
+    "item": "Q1530051",
+    "itemLabel": "Swartland Local Municipality"
+  },
+  {
+    "item": "Q1531415",
+    "itemLabel": "Midvaal Local Municipality"
+  },
+  {
+    "item": "Q1537865",
+    "itemLabel": "Makhado Local Municipality"
+  },
+  {
+    "item": "Q1544427",
+    "itemLabel": "Greater Giyani Local Municipality"
+  },
+  {
+    "item": "Q1544434",
+    "itemLabel": "Greater Letaba Local Municipality"
+  },
+  {
+    "item": "Q1544453",
+    "itemLabel": "Greater Taung Local Municipality"
+  },
+  {
+    "item": "Q1544454",
+    "itemLabel": "Greater Tzaneen Local Municipality"
+  },
+  {
+    "item": "Q1584028",
+    "itemLabel": "Hantam Local Municipality"
+  },
+  {
+    "item": "Q1594423",
+    "itemLabel": "Tokologo Local Municipality"
+  },
+  {
+    "item": "Q1617222",
+    "itemLabel": "Hibiscus Coast Local Municipality"
+  },
+  {
+    "item": "Q1632782",
+    "itemLabel": "Swellendam Local Municipality"
+  },
+  {
+    "item": "Q1642573",
+    "itemLabel": "Mbhashe Local Municipality"
+  },
+  {
+    "item": "Q1643020",
+    "itemLabel": "Albert Luthuli Local Municipality"
+  },
+  {
+    "item": "Q1659754",
+    "itemLabel": "Imbabazane Local Municipality"
+  },
+  {
+    "item": "Q1660258",
+    "itemLabel": "Impendle Local Municipality"
+  },
+  {
+    "item": "Q1660415",
+    "itemLabel": "Polokwane Local Municipality"
+  },
+  {
+    "item": "Q1661010",
+    "itemLabel": "Indaka Local Municipality"
+  },
+  {
+    "item": "Q1663481",
+    "itemLabel": "Ingwe Local Municipality"
+  },
+  {
+    "item": "Q1670648",
+    "itemLabel": "Tsolwana Local Municipality"
+  },
+  {
+    "item": "Q1671635",
+    "itemLabel": "Intsika Yethu Local Municipality"
+  },
+  {
+    "item": "Q1671847",
+    "itemLabel": "Inxuba Yethemba Local Municipality"
+  },
+  {
+    "item": "Q1672186",
+    "itemLabel": "Khâi-Ma Local Municipality"
+  },
+  {
+    "item": "Q1681141",
+    "itemLabel": "Mbonambi Local Municipality"
+  },
+  {
+    "item": "Q1681863",
+    "itemLabel": "Umtshezi Local Municipality"
+  },
+  {
+    "item": "Q1693384",
+    "itemLabel": "Matatiele Local Municipality"
+  },
+  {
+    "item": "Q1707740",
+    "itemLabel": "Mossel Bay Local Municipality"
+  },
+  {
+    "item": "Q1717872",
+    "itemLabel": "Ndwedwe Local Municipality"
+  },
+  {
+    "item": "Q1721381",
+    "itemLabel": "Kai ǃGarib Local Municipality"
+  },
+  {
+    "item": "Q1723052",
+    "itemLabel": "Kamiesberg Local Municipality"
+  },
+  {
+    "item": "Q1723822",
+    "itemLabel": "Kannaland Local Municipality"
+  },
+  {
+    "item": "Q1734288",
+    "itemLabel": "Karoo Hoogland Local Municipality"
+  },
+  {
+    "item": "Q1740579",
+    "itemLabel": "ǁKhara Hais Local Municipality"
+  },
+  {
+    "item": "Q1759943",
+    "itemLabel": "KwaDukuza Local Municipality"
+  },
+  {
+    "item": "Q1777700",
+    "itemLabel": "Knysna Local Municipality"
+  },
+  {
+    "item": "Q1785553",
+    "itemLabel": "Kouga Local Municipality"
+  },
+  {
+    "item": "Q1792173",
+    "itemLabel": "Kungwini Local Municipality"
+  },
+  {
+    "item": "Q1794872",
+    "itemLabel": "Kwa Sani Local Municipality"
+  },
+  {
+    "item": "Q1815498",
+    "itemLabel": "Lephalale Local Municipality"
+  },
+  {
+    "item": "Q1815510",
+    "itemLabel": "Msunduzi Local Municipality"
+  },
+  {
+    "item": "Q1816588",
+    "itemLabel": "Lekwa-Teemane Local Municipality"
+  },
+  {
+    "item": "Q1820064",
+    "itemLabel": "Lepelle-Nkumpi Local Municipality"
+  },
+  {
+    "item": "Q1820684",
+    "itemLabel": "Lesedi Local Municipality"
+  },
+  {
+    "item": "Q1821165",
+    "itemLabel": "Letsemeng Local Municipality"
+  },
+  {
+    "item": "Q1856473",
+    "itemLabel": "Ulundi Local Municipality"
+  },
+  {
+    "item": "Q1873451",
+    "itemLabel": "Matjhabeng Local Municipality"
+  },
+  {
+    "item": "Q1883735",
+    "itemLabel": "Magareng Local Municipality"
+  },
+  {
+    "item": "Q1886243",
+    "itemLabel": "Makana Local Municipality"
+  },
+  {
+    "item": "Q1887939",
+    "itemLabel": "Maluti-a-Phofung Local Municipality"
+  },
+  {
+    "item": "Q1888475",
+    "itemLabel": "Mamusa Local Municipality"
+  },
+  {
+    "item": "Q1889000",
+    "itemLabel": "Mandeni Local Municipality"
+  },
+  {
+    "item": "Q1892065",
+    "itemLabel": "Maphumulo Local Municipality"
+  },
+  {
+    "item": "Q1894966",
+    "itemLabel": "Umjindi Local Municipality"
+  },
+  {
+    "item": "Q1907111",
+    "itemLabel": "Masilonyana Local Municipality"
+  },
+  {
+    "item": "Q1921092",
+    "itemLabel": "Merafong City Local Municipality"
+  },
+  {
+    "item": "Q1922799",
+    "itemLabel": "Nkomazi Local Municipality"
+  },
+  {
+    "item": "Q1925949",
+    "itemLabel": "Metsimaholo Local Municipality"
+  },
+  {
+    "item": "Q1926544",
+    "itemLabel": "Mhlontlo Local Municipality"
+  },
+  {
+    "item": "Q1931418",
+    "itemLabel": "Theewaterskloof Local Municipality"
+  },
+  {
+    "item": "Q1932200",
+    "itemLabel": "Mier Local Municipality"
+  },
+  {
+    "item": "Q1941155",
+    "itemLabel": "Mkhambathini Local Municipality"
+  },
+  {
+    "item": "Q1941297",
+    "itemLabel": "Mnquma Local Municipality"
+  },
+  {
+    "item": "Q1942488",
+    "itemLabel": "Mogalakwena Local Municipality"
+  },
+  {
+    "item": "Q1943437",
+    "itemLabel": "Molemole Local Municipality"
+  },
+  {
+    "item": "Q1945552",
+    "itemLabel": "Umsobomvu Local Municipality"
+  },
+  {
+    "item": "Q1947071",
+    "itemLabel": "Moqhaka Local Municipality"
+  },
+  {
+    "item": "Q1951578",
+    "itemLabel": "Mthonjaneni Local Municipality"
+  },
+  {
+    "item": "Q1964073",
+    "itemLabel": "Nala Local Municipality"
+  },
+  {
+    "item": "Q1964128",
+    "itemLabel": "Nama Khoi Local Municipality"
+  },
+  {
+    "item": "Q1972906",
+    "itemLabel": "Ndlambe Local Municipality"
+  },
+  {
+    "item": "Q1983195",
+    "itemLabel": "Richmond Local Municipality"
+  },
+  {
+    "item": "Q1983450",
+    "itemLabel": "Newcastle Local Municipality"
+  },
+  {
+    "item": "Q1984351",
+    "itemLabel": "Ngqushwa Local Municipality"
+  },
+  {
+    "item": "Q1994391",
+    "itemLabel": "Nkonkobe Local Municipality"
+  },
+  {
+    "item": "Q2003963",
+    "itemLabel": "Nquthu Local Municipality"
+  },
+  {
+    "item": "Q2006754",
+    "itemLabel": "Siyancuma Local Municipality"
+  },
+  {
+    "item": "Q2006772",
+    "itemLabel": "Prince Albert Local Municipality"
+  },
+  {
+    "item": "Q2006784",
+    "itemLabel": "Saldanha Bay Local Municipality"
+  },
+  {
+    "item": "Q2006792",
+    "itemLabel": "Thulamela Local Municipality"
+  },
+  {
+    "item": "Q2006800",
+    "itemLabel": "Phokwane Local Municipality"
+  },
+  {
+    "item": "Q2006810",
+    "itemLabel": "Vulamehlo Local Municipality"
+  },
+  {
+    "item": "Q2006821",
+    "itemLabel": "Senqu Local Municipality"
+  },
+  {
+    "item": "Q2026410",
+    "itemLabel": "Westonaria Local Municipality"
+  },
+  {
+    "item": "Q2042454",
+    "itemLabel": "Overstrand Local Municipality"
+  },
+  {
+    "item": "Q2042724",
+    "itemLabel": "Kgetlengrivier Local Municipality"
+  },
+  {
+    "item": "Q2065087",
+    "itemLabel": "Tswaing Local Municipality"
+  },
+  {
+    "item": "Q2067601",
+    "itemLabel": "Setsoto Local Municipality"
+  },
+  {
+    "item": "Q2067619",
+    "itemLabel": "UMhlabuyalingana Local Municipality"
+  },
+  {
+    "item": "Q2081805",
+    "itemLabel": "City of Matlosana"
+  },
+  {
+    "item": "Q2084908",
+    "itemLabel": "Msukaligwa Local Municipality"
+  },
+  {
+    "item": "Q2086957",
+    "itemLabel": "Randfontein Local Municipality"
+  },
+  {
+    "item": "Q2096545",
+    "itemLabel": "Umzimkhulu Local Municipality"
+  },
+  {
+    "item": "Q2162456",
+    "itemLabel": "Sunday's River Valley Local Municipality"
+  },
+  {
+    "item": "Q2182810",
+    "itemLabel": "Ditsobotla Local Municipality"
+  },
+  {
+    "item": "Q2194994",
+    "itemLabel": "Ngquza Hill Local Municipality"
+  },
+  {
+    "item": "Q2226422",
+    "itemLabel": "Thembisile Hani Local Municipality"
+  },
+  {
+    "item": "Q2230868",
+    "itemLabel": "Moses Kotane Local Municipality"
+  },
+  {
+    "item": "Q2286969",
+    "itemLabel": "Mbombela Local Municipality"
+  },
+  {
+    "item": "Q2292410",
+    "itemLabel": "Steve Tshwete Local Municipality"
+  },
+  {
+    "item": "Q2317194",
+    "itemLabel": "Emakhazeni Local Municipality"
+  },
+  {
+    "item": "Q2347801",
+    "itemLabel": "Emalahleni Local Municipality"
+  },
+  {
+    "item": "Q2473039",
+    "itemLabel": "Local Municipality of Madibeng"
+  },
+  {
+    "item": "Q2486320",
+    "itemLabel": "Makhuduthamaga Local Municipality"
+  },
+  {
+    "item": "Q2554117",
+    "itemLabel": "Moretele Local Municipality"
+  },
+  {
+    "item": "Q2576308",
+    "itemLabel": "Mahikeng Local Municipality"
+  },
+  {
+    "item": "Q2576320",
+    "itemLabel": "Maquassi Hills Local Municipality"
+  },
+  {
+    "item": "Q2576328",
+    "itemLabel": "Tlokwe Local Municipality"
+  },
+  {
+    "item": "Q2634207",
+    "itemLabel": "Ephraim Mogale Local Municipality"
+  },
+  {
+    "item": "Q2655391",
+    "itemLabel": "Thaba Chweu Local Municipality"
+  },
+  {
+    "item": "Q2671202",
+    "itemLabel": "Ramotshere Moiloa Local Municipality"
+  },
+  {
+    "item": "Q2671208",
+    "itemLabel": "Greater Tubatse Local Municipality"
+  },
+  {
+    "item": "Q2671219",
+    "itemLabel": "Ratlou Local Municipality"
+  },
+  {
+    "item": "Q2783921",
+    "itemLabel": "King Sabata Dalindyebo Local Municipality"
+  },
+  {
+    "item": "Q3643416",
+    "itemLabel": "Kagisano-Molopo Local Municipality"
+  },
+  {
+    "item": "Q3644604",
+    "itemLabel": "Nkandla Local Municipality"
+  },
+  {
+    "item": "Q4833492",
+    "itemLabel": "Dannhauser Local Municipality"
+  },
+  {
+    "item": "Q4931109",
+    "itemLabel": "George Local Municipality"
+  },
+  {
+    "item": "Q8251259",
+    "itemLabel": "Richtersveld Local Municipality"
+  },
+  {
+    "item": "Q10975369",
+    "itemLabel": "Mtubatuba Local Municipality"
+  },
+  {
+    "item": "Q14833732",
+    "itemLabel": "Port St. Johns Local Municipality"
+  },
+  {
+    "item": "Q17638843",
+    "itemLabel": "Saint-Grégoire-le-Grand"
+  },
+  {
+    "item": "Q26350462",
+    "itemLabel": "Dr Nkosazana Dlamini Zuma Local Municipality"
+  },
+  {
+    "item": "Q311544",
+    "itemLabel": "eThekwini"
+  },
+  {
+    "item": "Q326891",
+    "itemLabel": "Ekurhuleni Metropolitan Municipality"
+  },
+  {
+    "item": "Q1002006",
+    "itemLabel": "Buffalo City Metropolitan Municipality"
+  },
+  {
+    "item": "Q1094207",
+    "itemLabel": "City of Tshwane Metropolitan Municipality"
+  },
+  {
+    "item": "Q1159185",
+    "itemLabel": "Mangaung Metropolitan Municipality"
+  },
+  {
+    "item": "Q1185115",
+    "itemLabel": "City of Cape Town"
+  },
+  {
+    "item": "Q1856565",
+    "itemLabel": "Nelson Mandela Bay Metropolitan Municipality"
+  },
+  {
+    "item": "Q2346838",
+    "itemLabel": "City of Johannesburg Metropolitan Municipality"
+  },
+  {
+    "item": "Q139117",
+    "itemLabel": "Metsweding District Municipality"
+  },
+  {
+    "item": "Q220249",
+    "itemLabel": "Eden District Municipality"
+  },
+  {
+    "item": "Q311668",
+    "itemLabel": "UThungulu District Municipality"
+  },
+  {
+    "item": "Q311794",
+    "itemLabel": "iLembe District Municipality"
+  },
+  {
+    "item": "Q311803",
+    "itemLabel": "Umgungundlovu District Municipality"
+  },
+  {
+    "item": "Q384731",
+    "itemLabel": "John Taolo Gaetsewe District Municipality"
+  },
+  {
+    "item": "Q452565",
+    "itemLabel": "Amajuba District Municipality"
+  },
+  {
+    "item": "Q455705",
+    "itemLabel": "Amathole District Municipality"
+  },
+  {
+    "item": "Q549746",
+    "itemLabel": "Sisonke District Municipality"
+  },
+  {
+    "item": "Q611074",
+    "itemLabel": "Mopani District Municipality"
+  },
+  {
+    "item": "Q617646",
+    "itemLabel": "Namakwa District Municipality"
+  },
+  {
+    "item": "Q654849",
+    "itemLabel": "Joe Gqabi District Municipality"
+  },
+  {
+    "item": "Q692290",
+    "itemLabel": "Capricorn District Municipality"
+  },
+  {
+    "item": "Q891165",
+    "itemLabel": "Bojanala Platinum District Municipality"
+  },
+  {
+    "item": "Q1024985",
+    "itemLabel": "Cacadu District Municipality"
+  },
+  {
+    "item": "Q1053888",
+    "itemLabel": "Central Karoo District Municipality"
+  },
+  {
+    "item": "Q1077283",
+    "itemLabel": "Chris Hani District Municipality"
+  },
+  {
+    "item": "Q1150452",
+    "itemLabel": "Dr Kenneth Kaunda District Municipality"
+  },
+  {
+    "item": "Q1244497",
+    "itemLabel": "Ehlanzeni District Municipality"
+  },
+  {
+    "item": "Q1254171",
+    "itemLabel": "Dr Ruth Segomotsi Mompati District Municipality"
+  },
+  {
+    "item": "Q1263830",
+    "itemLabel": "Frances Baard District Municipality"
+  },
+  {
+    "item": "Q1324549",
+    "itemLabel": "Uthukela District Municipality"
+  },
+  {
+    "item": "Q1410315",
+    "itemLabel": "Fezile Dabi District Municipality"
+  },
+  {
+    "item": "Q1437719",
+    "itemLabel": "Thabo Mofutsanyana District Municipality"
+  },
+  {
+    "item": "Q1515346",
+    "itemLabel": "Gert Sibande District Municipality"
+  },
+  {
+    "item": "Q1544445",
+    "itemLabel": "Sekhukhune District Municipality"
+  },
+  {
+    "item": "Q1654018",
+    "itemLabel": "Umkhanyakude District Municipality"
+  },
+  {
+    "item": "Q1664120",
+    "itemLabel": "Alfred Nzo District Municipality"
+  },
+  {
+    "item": "Q1773268",
+    "itemLabel": "ZF Mgcawu District Municipality"
+  },
+  {
+    "item": "Q1789890",
+    "itemLabel": "West Rand District Municipality"
+  },
+  {
+    "item": "Q1816477",
+    "itemLabel": "Lejweleputswa District Municipality"
+  },
+  {
+    "item": "Q1856181",
+    "itemLabel": "Nkangala District Municipality"
+  },
+  {
+    "item": "Q1886098",
+    "itemLabel": "Pixley ka Seme District Municipality"
+  },
+  {
+    "item": "Q1899307",
+    "itemLabel": "Overberg District Municipality"
+  },
+  {
+    "item": "Q1974486",
+    "itemLabel": "Cape Winelands District Municipality"
+  },
+  {
+    "item": "Q1984191",
+    "itemLabel": "Ngaka Modiri Molema District Municipality"
+  },
+  {
+    "item": "Q2006764",
+    "itemLabel": "Xhariep District Municipality"
+  },
+  {
+    "item": "Q2007299",
+    "itemLabel": "OR Tambo District Municipality"
+  },
+  {
+    "item": "Q2038939",
+    "itemLabel": "Sedibeng District Municipality"
+  },
+  {
+    "item": "Q2091235",
+    "itemLabel": "Ugu District Municipality"
+  },
+  {
+    "item": "Q2096830",
+    "itemLabel": "Waterberg District Municipality"
+  },
+  {
+    "item": "Q2226837",
+    "itemLabel": "Umzinyathi District Municipality"
+  },
+  {
+    "item": "Q2305610",
+    "itemLabel": "Vhembe District Municipality"
+  },
+  {
+    "item": "Q2309262",
+    "itemLabel": "Zululand District Municipality"
+  },
+  {
+    "item": "Q2562901",
+    "itemLabel": "West Coast District Municipality"
+  }
+]
