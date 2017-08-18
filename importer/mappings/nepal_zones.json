@@ -1,0 +1,72 @@
+[
+    {
+        "item": "Q9046",
+        "itemLabel": "Bagmati Zone",
+        "iso": "NP-BA"
+    },
+    {
+        "item": "Q9060",
+        "itemLabel": "Bheri Zone",
+        "iso": "NP-BH"
+    },
+    {
+        "item": "Q9088",
+        "itemLabel": "Dhaulagiri Zone",
+        "iso": "NP-DH"
+    },
+    {
+        "item": "Q9133",
+        "itemLabel": "Gandaki Zone",
+        "iso": "NP-GA"
+    },
+    {
+        "item": "Q9152",
+        "itemLabel": "Janakpur Zone",
+        "iso": "NP-JA"
+    },
+    {
+        "item": "Q9164",
+        "itemLabel": "Karnali Zone",
+        "iso": "NP-KA"
+    },
+    {
+        "item": "Q9170",
+        "itemLabel": "Kosi Zone",
+        "iso": "NP-KO"
+    },
+    {
+        "item": "Q9172",
+        "itemLabel": "Lumbini Zone",
+        "iso": "NP-LU"
+    },
+    {
+        "item": "Q9178",
+        "itemLabel": "Mahakali Zone",
+        "iso": "NP-MA"
+    },
+    {
+        "item": "Q9180",
+        "itemLabel": "Mechi Zone",
+        "iso": "NP-ME"
+    },
+    {
+        "item": "Q9183",
+        "itemLabel": "Narayani Zone",
+        "iso": "NP-NA"
+    },
+    {
+        "item": "Q9185",
+        "itemLabel": "Rapti Zone",
+        "iso": "NP-RA"
+    },
+    {
+        "item": "Q9195",
+        "itemLabel": "Sagarmatha Zone",
+        "iso": "NP-SA"
+    },
+    {
+        "item": "Q9196",
+        "itemLabel": "Seti Zone",
+        "iso": "NP-SE"
+    }
+]
