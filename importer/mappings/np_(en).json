@@ -1,0 +1,21 @@
+{
+    "country": {
+        "item": "Q837",
+        "name": "Nepal"
+    },
+    "country_code": "np",
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "",
+        "name": ""
+    },
+    "language": "en",
+    "table_name": "np",
+    "unique": {
+        "comment": "WLM id",
+        "property": "P2186"
+    }
+}
