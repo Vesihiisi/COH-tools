@@ -1,0 +1,417 @@
+[
+    {
+        "item": "Q7788",
+        "itemLabel": "Хабаровский край",
+        "value": "RU-KHA"
+    },
+    {
+        "item": "Q7797",
+        "itemLabel": "Сахалинская область",
+        "value": "RU-SAK"
+    },
+    {
+        "item": "Q649",
+        "itemLabel": "Москва",
+        "value": "RU-MOW"
+    },
+    {
+        "item": "Q1749",
+        "itemLabel": "Калининградская область",
+        "value": "RU-KGD"
+    },
+    {
+        "item": "Q2073",
+        "itemLabel": "Республика Коми",
+        "value": "RU-KO"
+    },
+    {
+        "item": "Q2164",
+        "itemLabel": "Ненецкий автономный округ",
+        "value": "RU-NEN"
+    },
+    {
+        "item": "Q2347",
+        "itemLabel": "Смоленская область",
+        "value": "RU-SMO"
+    },
+    {
+        "item": "Q3329",
+        "itemLabel": "Белгородская область",
+        "value": "RU-BEL"
+    },
+    {
+        "item": "Q3734",
+        "itemLabel": "Адыгея",
+        "value": "RU-AD"
+    },
+    {
+        "item": "Q3941",
+        "itemLabel": "Астраханская область",
+        "value": "RU-AST"
+    },
+    {
+        "item": "Q5334",
+        "itemLabel": "Саратовская область",
+        "value": "RU-SAR"
+    },
+    {
+        "item": "Q5422",
+        "itemLabel": "Удмуртия",
+        "value": "RU-UD"
+    },
+    {
+        "item": "Q5446",
+        "itemLabel": "Марий Эл",
+        "value": "RU-ME"
+    },
+    {
+        "item": "Q5545",
+        "itemLabel": "Пензенская область",
+        "value": "RU-PNZ"
+    },
+    {
+        "item": "Q1914",
+        "itemLabel": "Республика Карелия",
+        "value": "RU-KR"
+    },
+    {
+        "item": "Q2292",
+        "itemLabel": "Тверская область",
+        "value": "RU-TVE"
+    },
+    {
+        "item": "Q3510",
+        "itemLabel": "Липецкая область",
+        "value": "RU-LIP"
+    },
+    {
+        "item": "Q5267",
+        "itemLabel": "Кабардино-Балкария",
+        "value": "RU-KB"
+    },
+    {
+        "item": "Q5387",
+        "itemLabel": "Кировская область",
+        "value": "RU-KIR"
+    },
+    {
+        "item": "Q5400",
+        "itemLabel": "Пермский край",
+        "value": "RU-PER"
+    },
+    {
+        "item": "Q5462",
+        "itemLabel": "Свердловская область",
+        "value": "RU-SVE"
+    },
+    {
+        "item": "Q5714",
+        "itemLabel": "Челябинская область",
+        "value": "RU-CHE"
+    },
+    {
+        "item": "Q5741",
+        "itemLabel": "Курганская область",
+        "value": "RU-KGN"
+    },
+    {
+        "item": "Q5835",
+        "itemLabel": "Омская область",
+        "value": "RU-OMS"
+    },
+    {
+        "item": "Q5884",
+        "itemLabel": "Томская область",
+        "value": "RU-TOM"
+    },
+    {
+        "item": "Q6543",
+        "itemLabel": "Хакасия",
+        "value": "RU-KK"
+    },
+    {
+        "item": "Q7730",
+        "itemLabel": "Еврейская автономная область",
+        "value": "RU-YEV"
+    },
+    {
+        "item": "Q7948",
+        "itemLabel": "Камчатский край",
+        "value": "RU-KAM"
+    },
+    {
+        "item": "Q656",
+        "itemLabel": "Санкт-Петербург",
+        "value": "RU-SPE"
+    },
+    {
+        "item": "Q960",
+        "itemLabel": "Тыва",
+        "value": "RU-TY"
+    },
+    {
+        "item": "Q2240",
+        "itemLabel": "Новгородская область",
+        "value": "RU-NGR"
+    },
+    {
+        "item": "Q2448",
+        "itemLabel": "Ярославская область",
+        "value": "RU-YAR"
+    },
+    {
+        "item": "Q2596",
+        "itemLabel": "Костромская область",
+        "value": "RU-KOS"
+    },
+    {
+        "item": "Q2702",
+        "itemLabel": "Владимирская область",
+        "value": "RU-VLA"
+    },
+    {
+        "item": "Q2792",
+        "itemLabel": "Тульская область",
+        "value": "RU-TUL"
+    },
+    {
+        "item": "Q2810",
+        "itemLabel": "Брянская область",
+        "value": "RU-BRY"
+    },
+    {
+        "item": "Q3178",
+        "itemLabel": "Курская область",
+        "value": "RU-KRS"
+    },
+    {
+        "item": "Q3573",
+        "itemLabel": "Ростовская область",
+        "value": "RU-ROS"
+    },
+    {
+        "item": "Q3680",
+        "itemLabel": "Краснодарский край",
+        "value": "RU-KDA"
+    },
+    {
+        "item": "Q3953",
+        "itemLabel": "Калмыкия",
+        "value": "RU-KL"
+    },
+    {
+        "item": "Q4341",
+        "itemLabel": "Приморский край",
+        "value": "RU-PRI"
+    },
+    {
+        "item": "Q5187",
+        "itemLabel": "Чечня",
+        "value": "RU-CE"
+    },
+    {
+        "item": "Q5824",
+        "itemLabel": "Тюменская область",
+        "value": "RU-TYU"
+    },
+    {
+        "item": "Q5942",
+        "itemLabel": "Алтайский край",
+        "value": "RU-ALT"
+    },
+    {
+        "item": "Q6585",
+        "itemLabel": "Иркутская область",
+        "value": "RU-IRK"
+    },
+    {
+        "item": "Q6605",
+        "itemLabel": "Якутия",
+        "value": "RU-SA"
+    },
+    {
+        "item": "Q6838",
+        "itemLabel": "Забайкальский край",
+        "value": "RU-ZAB"
+    },
+    {
+        "item": "Q7984",
+        "itemLabel": "Чукотский автономный округ",
+        "value": "RU-CHU"
+    },
+    {
+        "item": "Q2191",
+        "itemLabel": "Ленинградская область",
+        "value": "RU-LEN"
+    },
+    {
+        "item": "Q2246",
+        "itemLabel": "Нижегородская область",
+        "value": "RU-NIZ"
+    },
+    {
+        "item": "Q2842",
+        "itemLabel": "Калужская область",
+        "value": "RU-KLU"
+    },
+    {
+        "item": "Q3447",
+        "itemLabel": "Воронежская область",
+        "value": "RU-VOR"
+    },
+    {
+        "item": "Q3550",
+        "itemLabel": "Тамбовская область",
+        "value": "RU-TAM"
+    },
+    {
+        "item": "Q3819",
+        "itemLabel": "Волгоградская область",
+        "value": "RU-VGG"
+    },
+    {
+        "item": "Q5237",
+        "itemLabel": "Республика Северная Осетия-Алания",
+        "value": "RU-SE"
+    },
+    {
+        "item": "Q5466",
+        "itemLabel": "Чувашия",
+        "value": "RU-CU"
+    },
+    {
+        "item": "Q5710",
+        "itemLabel": "Башкортостан",
+        "value": "RU-BA"
+    },
+    {
+        "item": "Q6076",
+        "itemLabel": "Кемеровская область",
+        "value": "RU-KEM"
+    },
+    {
+        "item": "Q6407",
+        "itemLabel": "Ямало-Ненецкий автономный округ",
+        "value": "RU-YAN"
+    },
+    {
+        "item": "Q6886",
+        "itemLabel": "Амурская область",
+        "value": "RU-AMU"
+    },
+    {
+        "item": "Q1875",
+        "itemLabel": "Архангельская область",
+        "value": "RU-ARK"
+    },
+    {
+        "item": "Q2654",
+        "itemLabel": "Ивановская область",
+        "value": "RU-IVA"
+    },
+    {
+        "item": "Q5118",
+        "itemLabel": "Дагестан",
+        "value": "RU-DA"
+    },
+    {
+        "item": "Q5219",
+        "itemLabel": "Ингушетия",
+        "value": "RU-IN"
+    },
+    {
+        "item": "Q5971",
+        "itemLabel": "Республика Алтай",
+        "value": "RU-AL"
+    },
+    {
+        "item": "Q1697",
+        "itemLabel": "Московская область",
+        "value": "RU-MOS"
+    },
+    {
+        "item": "Q1727",
+        "itemLabel": "Самарская область",
+        "value": "RU-SAM"
+    },
+    {
+        "item": "Q1759",
+        "itemLabel": "Мурманская область",
+        "value": "RU-MUR"
+    },
+    {
+        "item": "Q2015",
+        "itemLabel": "Вологодская область",
+        "value": "RU-VLG"
+    },
+    {
+        "item": "Q2218",
+        "itemLabel": "Псковская область",
+        "value": "RU-PSK"
+    },
+    {
+        "item": "Q2753",
+        "itemLabel": "Рязанская область",
+        "value": "RU-RYA"
+    },
+    {
+        "item": "Q3129",
+        "itemLabel": "Орловская область",
+        "value": "RU-ORL"
+    },
+    {
+        "item": "Q5207",
+        "itemLabel": "Ставропольский край",
+        "value": "RU-STA"
+    },
+    {
+        "item": "Q5328",
+        "itemLabel": "Карачаево-Черкесия",
+        "value": "RU-KC"
+    },
+    {
+        "item": "Q5338",
+        "itemLabel": "Оренбургская область",
+        "value": "RU-ORE"
+    },
+    {
+        "item": "Q5340",
+        "itemLabel": "Мордовия",
+        "value": "RU-MO"
+    },
+    {
+        "item": "Q5481",
+        "itemLabel": "Татарстан",
+        "value": "RU-TA"
+    },
+    {
+        "item": "Q5634",
+        "itemLabel": "Ульяновская область",
+        "value": "RU-ULY"
+    },
+    {
+        "item": "Q5851",
+        "itemLabel": "Новосибирская область",
+        "value": "RU-NVS"
+    },
+    {
+        "item": "Q6320",
+        "itemLabel": "Ханты-Мансийский автономный округ — Югра",
+        "value": "RU-KHM"
+    },
+    {
+        "item": "Q6563",
+        "itemLabel": "Красноярский край",
+        "value": "RU-KYA"
+    },
+    {
+        "item": "Q6809",
+        "itemLabel": "Бурятия",
+        "value": "RU-BU"
+    },
+    {
+        "item": "Q7971",
+        "itemLabel": "Магаданская область",
+        "value": "RU-MAG"
+    }
+]
