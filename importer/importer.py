@@ -4,6 +4,7 @@ from AtDe import AtDe
 from DkBygningDa import DkBygningDa
 from DkFortidsDa import DkFortidsDa
 from EeEt import EeEt
+from ByBeTarask import ByBeTarask
 from HuHu import HuHu
 from IeEn import IeEn
 from NoNo import NoNo
@@ -83,6 +84,7 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                                               {"functions":
                                                "se-ship_(sv)_functions.json"}},
                    "monuments_cz_(cs)": {"class": CzCs, "data_files": {}},
+                   "monuments_by_(be-tarask)": {"class": ByBeTarask, "data_files": {}},
                    "monuments_hu_(hu)": {"class": HuHu, "data_files": {}},
                    "monuments_pt_(pt)": {"class": PtPt, "data_files": {}},
                    "monuments_ro_(ro)": {"class": RoRo, "data_files": {}},
