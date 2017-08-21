@@ -84,7 +84,7 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                                               {"functions":
                                                "se-ship_(sv)_functions.json"}},
                    "monuments_cz_(cs)": {"class": CzCs, "data_files": {}},
-                   "monuments_by_(be-tarask)": {"class": ByBeTarask, "data_files": {}},
+                   "monuments_by_(be-tarask)": {"class": ByBeTarask, "data_files": {}, "subclass_downloads": {"settlement": "Q486972"}},
                    "monuments_hu_(hu)": {"class": HuHu, "data_files": {}},
                    "monuments_pt_(pt)": {"class": PtPt, "data_files": {}},
                    "monuments_ro_(ro)": {"class": RoRo, "data_files": {}},

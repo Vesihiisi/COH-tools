@@ -5,7 +5,15 @@ import importer_utils as utils
 class ByBeTarask(Monument):
 
     def set_location(self):
-        print(self.place)
+        if self.has_non_empty_attribute("place"):
+            place_item = utils.q_from_first_wikilink("be-tarask", self.place.title())
+            place_item_ids = utils.get_P31(place_item, self.repo)
+            for p31_value in place_item_ids:
+                if p31_value in self.data_files["settlement"]:
+                    self.add_statement("location", place_item)
+                    # there can be more than one P31, but after first positive
+                    # we can leave
+                    return
 
     def update_labels(self):
         name = utils.remove_markup(self.name)
