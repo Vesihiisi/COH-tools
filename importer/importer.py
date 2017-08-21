@@ -8,6 +8,7 @@ from HuHu import HuHu
 from IeEn import IeEn
 from NoNo import NoNo
 from PlPl import PlPl
+from MtDe import MtDe
 from PtPt import PtPt
 from RoRo import RoRo
 from SeArbetslSv import SeArbetslSv
@@ -84,6 +85,7 @@ SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
                                                "se-ship_(sv)_functions.json"}},
                    "monuments_cz_(cs)": {"class": CzCs, "data_files": {}},
                    "monuments_hu_(hu)": {"class": HuHu, "data_files": {}},
+                   "monuments_mt_(de)": {"class": MtDe, "data_files": {}},
                    "monuments_pt_(pt)": {"class": PtPt, "data_files": {}},
                    "monuments_ro_(ro)": {"class": RoRo, "data_files": {}},
                    "monuments_xk_(sq)": {"class": XkSq, "data_files": {}},
