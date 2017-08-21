@@ -57,7 +57,6 @@ def create_connection(arguments):
         db=arguments["db"],
         charset="utf8")
 
-
 def get_row_count(tablename, connection):
     count_query = make_count_query(tablename)
     return select_query(count_query, connection)[0]['COUNT(*)']
