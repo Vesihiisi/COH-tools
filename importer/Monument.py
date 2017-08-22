@@ -34,7 +34,6 @@ class Monument(object):
         self.existing = existing
         self.repo = repository
         self.problem_report = {}
-        self.data_files = None
         self.lookup_downloads = None
 
     def print_wd(self):
