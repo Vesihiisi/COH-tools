@@ -98,7 +98,6 @@ class SeFornminSv(Monument):
         without the word kommun or genitive.
         """
         municip_dict = self.data_files["municipalities"]
-        print(municip_dict)
         if self.kommun == "Göteborg":
             municip_name = "Gothenburg"
         else:
