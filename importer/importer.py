@@ -164,7 +164,7 @@ def get_items(connection,
     if not utils.table_exists(connection, dataset.table_name):
         print("Table does not exist.")
         return
-    mapping = Mapping(dataset.country, dataset.language)
+    mapping = Mapping(dataset)
     unique_prop = mapping.get_unique_prop()
     if unique_prop is not None:
         existing = get_wd_items_using_prop(unique_prop)
