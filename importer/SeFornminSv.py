@@ -97,7 +97,7 @@ class SeFornminSv(Monument):
         Just the name of the municipality
         without the word kommun or genitive.
         """
-        municip_dict = self.data_files["municipalities"]
+        municip_dict = dataset.data_files["municipalities"]
         if self.kommun == "Göteborg":
             municip_name = "Gothenburg"
         else:
@@ -124,7 +124,7 @@ class SeFornminSv(Monument):
         Replace the original P31 rather than adding to it.
         """
         if self.has_non_empty_attribute("typ"):
-            table = self.data_files["types"]["mappings"]
+            table = dataset.data_files["types"]["mappings"]
             type_to_search_for = self.typ.lower()
             try:
                 special_type = [table[x]["items"]
@@ -163,7 +163,7 @@ class SeFornminSv(Monument):
             else:
                 self.add_to_report("plats", self.plats)
         if self.has_non_empty_attribute("socken"):
-            socken_dict = self.data_files["socken"]
+            socken_dict = dataset.data_files["socken"]
             socken = self.get_socken(self.socken, self.landskap)
             if socken:
                 self.add_statement("location", socken)
