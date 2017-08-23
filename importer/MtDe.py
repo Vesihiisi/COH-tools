@@ -6,6 +6,12 @@ import importer as importer
 class MtDe(Monument):
 
     def set_adm_location(self):
+        """
+        Set the administrative location.
+
+        Use the 'gemeinde' field as
+        municipality.
+        """
         municip_raw = self.gemeinde
         municip_q = utils.q_from_wikipedia("de", municip_raw)
         if municip_q:
@@ -23,6 +29,14 @@ class MtDe(Monument):
             self.add_label(language, labels[language])
 
     def update_descriptions(self):
+        """
+        Set the descriptions in English.
+
+        Try to add the place name. Since the municipality
+        names are titles of articles, sometimes they
+        have the form of "$municipality (Malta)", in which
+        case remove the bracketed part.
+        """
         placename = "Malta"
         description = "cultural property in {}"
         if self.has_non_empty_attribute("gemeinde"):
@@ -37,6 +51,14 @@ class MtDe(Monument):
         self.add_statement("malta_monument_id", self.inventarnummer)
 
     def set_street_address(self):
+        """
+        Set the street address.
+
+        These all have nice looking street addresses, which, however,
+        do not include the municipality name.
+        So add it to the address after stripping potential
+        bracketed part.
+        """
         if utils.contains_digit(self.adresse):
             city_clean = utils.get_rid_of_brackets(self.gemeinde)
             address = "{}, {}".format(self.adresse, city_clean)
