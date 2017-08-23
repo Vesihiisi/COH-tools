@@ -8,6 +8,7 @@ class CoEs(Monument):
     def set_heritage_id(self):
         """
         Set the WLM ID as heritage ID.
+
         The ID numbers in this dataset
         are not real.
         Note that since the WLM identifiers are not
