@@ -6,6 +6,15 @@ import importer as importer
 class RuRu(Monument):
 
     def set_adm_location(self):
+        """
+        Set the administrative location.
+
+        Preferably try to resolve the 'district' (район/округ,
+        the field contains different types so that's why we're
+        matching it against the whole big list of administrative
+        divisions of different kinds).
+        If that doesn't work, use the higher level субъект.
+        """
         level_three = self.data_files["administrative"]
         level_two = self.data_files["subyekty"]
         district_match = [x for x in level_three if x[
@@ -21,6 +30,15 @@ class RuRu(Monument):
                 self.add_to_report("district", self.district, "located_adm")
 
     def set_location(self):
+        """
+        Set the location property using 'city' field.
+
+        Of course it's often a village etc. :)
+        Make sure that the target page has a P31 of a
+        settlement, to avoid disambigs etc.
+        Also, compare with 'administrative location' of the
+        object, and don't add if it's the same.
+        """
         if self.has_non_empty_attribute("city"):
             city_q_try = utils.q_from_wikipedia("ru", self.city)
             try:
@@ -68,6 +86,7 @@ class RuRu(Monument):
         self.set_coords(("lat", "lon"))
         self.update_labels()
         self.set_wd_item(self.find_matching_wikidata(mapping))
+
 
 if __name__ == "__main__":
     """Point of entrance for importer."""
