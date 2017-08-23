@@ -26,10 +26,11 @@ If you're running the script on the Toollabs server, leave out `host`, `db`, `us
 
 This will process the `monuments_at_(de)` table.
 
-`short` will only process the first 10 rows in the table.
+`short` will only process the first 10 rows in the table, optionally you can add a digit to choose how many rows will be processed, eg. `short 15`.
 
 `upload` to upload the created claims to Wikidata. You can leave it out if you want to debug the Monument object processing. **By default** this will use the [Wikidata Sandbox](https://www.wikidata.org/wiki/Q4115189). Add `live` to work on actual live Wikidata items, assuming you're 100% positive you want to do that.
 
+`table` will generate a preview file of how the data would be processed, ready to paste into a Wiki page, eg. https://www.wikidata.org/wiki/Wikidata:WikiProject_WLM/Mapping_tables/at_(de)/preview.
 
 **Monument.py** – A general Monument class with methods that are shared by all the dataset-specific classes.
 
