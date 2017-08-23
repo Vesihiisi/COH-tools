@@ -6,6 +6,12 @@ import importer as importer
 class BoEs(Monument):
 
     def set_adm_location(self):
+        """
+        Set the administrative location.
+
+        Try to use the more specific municipality first,
+        then the department if that didn't work.
+        """
         adm_match = None
         if self.has_non_empty_attribute("municipio"):
             adm_match = utils.q_from_first_wikilink("es", self.municipio)
@@ -25,6 +31,13 @@ class BoEs(Monument):
         self.monuments_all_id = str(self.id)
 
     def set_heritage_id(self):
+        """
+        The ID numbers here are not real.
+
+        Note that since the WLM identifiers are not
+        globally unique, this might need to be
+        prefixed by country if convention is laid down.
+        """
         self.add_statement("wlm_id", str(self.id))
 
     def exists_with_monument_article(self, language):
