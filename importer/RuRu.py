@@ -51,7 +51,8 @@ class RuRu(Monument):
                 for p31_value in city_q_is:
                     if p31_value in self.data_files["settlement"]:
                         self.add_statement("location", city_q_try)
-                        # there can be more than one P31, but after first positive
+                        # there can be more than one P31,
+                        # but after first positive
                         # we can leave
                         return
                     else:
@@ -59,6 +60,10 @@ class RuRu(Monument):
 
     def update_labels(self):
         self.add_label("ru", self.name)
+
+    def update_descriptions(self):
+        desc = "cultural heritage site in Russia"
+        self.add_description("en", desc)
 
     def set_heritage_id(self):
         self.add_statement("kulturnoe-nasledie", self.id)
@@ -85,6 +90,7 @@ class RuRu(Monument):
         self.set_heritage_id()
         self.set_coords(("lat", "lon"))
         self.update_labels()
+        self.update_descriptions()
         self.set_wd_item(self.find_matching_wikidata(mapping))
 
 
