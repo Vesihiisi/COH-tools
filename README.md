@@ -12,19 +12,19 @@ The scripts in the root catalogue are for creating mapping tables and such:
 * **lookup_table_to_json.py** – download a lookup table and convert it to a JSON file [like this](https://gist.github.com/Vesihiisi/5ae8d5715d93cd77543edbb2e6d5d855)
 * **wlmhelpers.py** – utilities for interacting with MySQL database
 
-## Importer
+## Dataset scripts
 
-This the part that actually extracts the data from the WLM database, processes it and uploads it to Wikidata:
+Each of the tables in the WLM database has a separate script that extracts the data, processes it and uploads it to Wikidata. The script is named after the namespace + language combination of the table, eg. `monuments_at_(de)` -> `AtDe.py`.
 
-**importer.py** – the main script. Pass your MySQL credentials to it:
+Run the specific script to import the data, using your MySQL credentials and optional flags:
 
 ```
-python3 importer.py --host localhost --user foo --password bar --db wlm --country se-fornmin --language sv --short --upload live
+python3 AtDe.py --host localhost --user foo --password bar --db wlm --short --upload live
 ```
 
 If you're running the script on the Toollabs server, leave out `host`, `db`, `user` and `passwords`, as these will be filled out automatically. 
 
-This will process the `monuments_se-fornmin_(sv)` table.
+This will process the `monuments_at_(de)` table.
 
 `short` will only process the first 10 rows in the table.
 
