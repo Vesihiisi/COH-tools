@@ -5,6 +5,17 @@ import importer as importer
 
 class CoEs(Monument):
 
+    def set_heritage_id(self):
+        """
+        Set the WLM ID as heritage ID.
+        The ID numbers in this dataset
+        are not real.
+        Note that since the WLM identifiers are not
+        globally unique, this might need to be
+        prefixed by country if convention is laid down.
+        """
+        self.add_statement("wlm_id", str(self.id))
+
     def update_descriptions(self):
         descs = {
             "en": "national monument of Colombia",
@@ -22,6 +33,13 @@ class CoEs(Monument):
         self.add_label("es", spanish)
 
     def set_adm_location(self):
+        """
+        Set the administrative location.
+
+        First try to resolve the municipality,
+        and if that doesn't work use the department
+        which is a higher unit.
+        """
         match = None
         dep_dic = self.data_files["departments"]
         if self.has_non_empty_attribute("municipio"):
@@ -45,6 +63,7 @@ class CoEs(Monument):
         self.set_changed()
         self.wlm_source = self.create_wlm_source(self.monuments_all_id)
         self.set_heritage()
+        self.set_heritage_id()
         self.set_country()
         self.set_source()
         self.set_registrant_url()
