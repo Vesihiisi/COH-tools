@@ -30,9 +30,8 @@ This will process the `monuments_at_(de)` table.
 
 `upload` to upload the created claims to Wikidata. You can leave it out if you want to debug the Monument object processing. **By default** this will use the [Wikidata Sandbox](https://www.wikidata.org/wiki/Q4115189). Add `live` to work on actual live Wikidata items, assuming you're 100% positive you want to do that.
 
-Each row in the database is used to create a Monument object using data from the SPECIFIC_TABLES dictionary, which maps database tables to classes and, optionally, extra data files that can be passed to the constructor.
 
-**Monument.py** – Monument classes. Includes both a general parent class Monument() and special child classes that inherit from it, one per database table. Those are used to process table-specific data.
+**Monument.py** – A general Monument class with methods that are shared by all the dataset-specific classes.
 
 **Uploader.py** – converts Monument objects into Wikidata-ready data dictionaries and uploads them. Currently locked to the Wikidata sandbox.
 
