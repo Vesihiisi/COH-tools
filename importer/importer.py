@@ -1,22 +1,3 @@
-from CmFr import CmFr
-from CzCs import CzCs
-from AtDe import AtDe
-from DkBygningDa import DkBygningDa
-from DkFortidsDa import DkFortidsDa
-from EeEt import EeEt
-from HuHu import HuHu
-from IeEn import IeEn
-from NoNo import NoNo
-from NlGemNl import NlGemNl
-from PlPl import PlPl
-from PtPt import PtPt
-from RoRo import RoRo
-from SeArbetslSv import SeArbetslSv
-from SeBbrSv import SeBbrSv
-from SeFornminSv import SeFornminSv
-from SeShipSv import SeShipSv
-from XkSq import XkSq
-from ZaEn import ZaEn
 from Uploader import *
 from Logger import *
 import LookupTable as Lt
@@ -34,17 +15,18 @@ MONUMENTS_ALL = "monuments_all"
 
 class Mapping(object):
 
-    def load_mapping_file(self, countryname, languagename):
-        filename = path.join(
-            MAPPING_DIR, "{}_({}).json".format(countryname, languagename))
+    def __init__(self, dataset):
+        self.dataset = dataset
+        self.file_content = self.load_mapping_file()
+
+    def load_mapping_file(self):
+        filename = path.join(MAPPING_DIR, self.dataset.mapping_file)
         return utils.load_json(filename)
 
     def get_unique_prop(self):
-        if "unique" in self.file_content and self.file_content["unique"]["property"] != "":
+        if ("unique" in self.file_content and
+                self.file_content["unique"]["property"] != ""):
             return self.file_content["unique"]["property"]
-
-    def __init__(self, countryname, languagename):
-        self.file_content = self.load_mapping_file(countryname, languagename)
 
 
 def make_query(specific_table, offset):
@@ -74,63 +56,6 @@ def create_connection(arguments):
         password=arguments["password"],
         db=arguments["db"],
         charset="utf8")
-
-
-"""
-There must be a better way to do this.....
-"""
-SPECIFIC_TABLES = {"monuments_se-ship_(sv)": {"class": SeShipSv,
-                                              "data_files":
-                                              {"functions":
-                                               "se-ship_(sv)_functions.json"}},
-                   "monuments_cz_(cs)": {"class": CzCs, "data_files": {}},
-                   "monuments_nl-gem_(nl)": {"class": NlGemNl, "data_files": {"municipalities": "netherlands_municipalities.json"}},
-                   "monuments_hu_(hu)": {"class": HuHu, "data_files": {}},
-                   "monuments_pt_(pt)": {"class": PtPt, "data_files": {}},
-                   "monuments_ro_(ro)": {"class": RoRo, "data_files": {}},
-                   "monuments_xk_(sq)": {"class": XkSq, "data_files": {}},
-                   "monuments_ie_(en)": {"class": IeEn, "data_files":{"counties": "ireland_counties.json"}},
-                   "monuments_za_(en)": {"class": ZaEn, "data_files": {}},
-                   "monuments_cm_(fr)": {"class": CmFr, "data_files": {}},
-                   "monuments_at_(de)": {"class": AtDe, "data_files": {"municipalities":
-                                                                       "austria_municipalities.json"},
-                                                                       "lookup_downloads": {
-                                                                       "types": "at_(de)/types"},
-                                                                       },
-                   "monuments_dk-bygninger_(da)": {"class": DkBygningDa,
-                                                   "data_files": {},
-                                                   "subclass_downloads": {"settlement": "Q486972"}},
-                   "monuments_pl_(pl)": {"class": PlPl,
-                                         "data_files": {"settlements": "poland_settlements.json"}},
-                   "monuments_dk-fortidsminder_(da)": {"class": DkFortidsDa,
-                                                       "data_files": {
-                                                           "types": "dk-fortidsminder_(da)_types.json",
-                                                           "municipalities": "denmark_municipalities.json"
-                                                       }},
-                   "monuments_no_(no)": {"class": NoNo,
-                                         "data_files": {}},
-                   "monuments_se-bbr_(sv)": {"class": SeBbrSv,
-                                             "data_files": {"functions": "se-bbr_(sv)_functions.json",
-                                                            "settlements": "sweden_settlements.json"}},
-                   "monuments_ee_(et)": {"class": EeEt,
-                                         "data_files": {"counties": "estonia_counties.json"}},
-                   "monuments_se-fornmin_(sv)":
-                   {"class": SeFornminSv,
-                    "data_files": {
-                        "municipalities": "sweden_municipalities.json",
-                        "socken": "sweden_socken.json"
-                    },
-                    "lookup_downloads": {
-                        "types": "se-fornmin_(sv)/types"},
-                    },
-                   "monuments_se-arbetsl_(sv)":
-                   {"class":
-                    SeArbetslSv,
-                    "data_files":
-                    {"municipalities": "sweden_municipalities.json",
-                     "types": "se-arbetsl_(sv)_types.json",
-                     "settlements": "sweden_settlements.json"}}
-                   }
 
 
 def get_row_count(tablename, connection):
@@ -187,9 +112,9 @@ def save_reports(problem_reports, tablename, timestamp):
     utils.json_to_file(filename, problem_reports)
 
 
-def load_data_files(tablename):
-    """Load offline data files as specified in SPECIFIC_TABLES."""
-    file_dict = tablename["data_files"]
+def load_data_files(dataset):
+    """Load offline data files as specified in the dataset."""
+    file_dict = dataset.data_files
     for key in file_dict.keys():
         json_path = path.join(MAPPING_DIR, file_dict[key])
         file_dict[key] = utils.load_json(json_path)
@@ -197,20 +122,19 @@ def load_data_files(tablename):
     return file_dict
 
 
-def load_data(tablename):
+def load_data(dataset):
     """
     Get data files necessary for mappings.
 
-    Loads both offline files and online ones
-    specified in SPECIFIC TABLES.
+    Loads both offline files and online ones specified in the dataset.
     """
-    data_files = load_data_files(tablename)
-    if tablename.get("subclass_downloads"):
-        for sub_title, sub_item in tablename.get("subclass_downloads").items():
+    data_files = load_data_files(dataset)
+    if dataset.subclass_downloads:
+        for sub_title, sub_item in dataset.subclass_downloads.items():
             data_files[sub_title] = get_subclasses(sub_item)
             print("Loaded online data: {}".format(sub_title))
-    if tablename.get("lookup_downloads"):
-        for l_title, l_path in tablename.get("lookup_downloads").items():
+    if dataset.lookup_downloads:
+        for l_title, l_path in dataset.lookup_downloads.items():
             lookup_table = Lt.LookupTable(l_path)
             lookup_json = lookup_table.convert_page_to_json_table()
             data_files[l_title] = lookup_json
@@ -219,8 +143,7 @@ def load_data(tablename):
 
 
 def get_items(connection,
-              country,
-              language,
+              dataset,
               upload,
               short=False,
               offset=None,
@@ -229,8 +152,7 @@ def get_items(connection,
     Retrieve data from database and process it.
 
     :param connection: Connection used to access the database.
-    :param country: Country of the dataset.
-    :param language: Language code of the dataset.
+    :param dataset: The Database instance to work on.
     :param upload: Whether to upload the processed items.
     :param short: Optional number of randomly selected rows to process.
     :param offset: Optional offset to retrieve rows.
@@ -239,36 +161,30 @@ def get_items(connection,
     started_at = utils.get_current_timestamp()
     if upload:
         logger = Logger()
-    country_language = {"country": country, "language": language}
-    specific_table_name = utils.get_specific_table_name(country, language)
-    if not utils.table_exists(connection, specific_table_name):
+    if not utils.table_exists(connection, dataset.table_name):
         print("Table does not exist.")
         return
-    mapping = Mapping(country, language)
+    mapping = Mapping(dataset)
     unique_prop = mapping.get_unique_prop()
     if unique_prop is not None:
         existing = get_wd_items_using_prop(unique_prop)
     else:
         existing = None
-    query = make_query(specific_table_name, offset)
-    if specific_table_name in SPECIFIC_TABLES:
-        specific_table = SPECIFIC_TABLES[specific_table_name]
-        class_to_use = specific_table["class"]
-        data_files = load_data(specific_table)
-    else:
-        print("No class defined for " + specific_table_name)
-        return
-    print_row_count(specific_table_name, connection)
+    query = make_query(dataset.table_name, offset)
+
+    print_row_count(dataset.table_name, connection)
     database_rows = select_query(query, connection)
     if short:
         database_rows = utils.get_random_list_sample(database_rows, short)
         print("USING RANDOM SAMPLE OF " + str(short))
-    filename = specific_table_name + "_" + utils.get_current_timestamp()
+    filename = "{0} {1}".format(
+        dataset.table_name, utils.get_current_timestamp())
     problem_reports = []
     wikidata_site = utils.create_site_instance("wikidata", "wikidata")
+    data_files = load_data(dataset)
     for row in database_rows:
-        monument = class_to_use(row, mapping, data_files,
-                                existing, wikidata_site)
+        monument = dataset.monument_class(
+            row, mapping, data_files, existing, wikidata_site)
         problem_report = monument.get_report()
         if table:
             raw_data = "<pre>" + str(row) + "</pre>\n"
@@ -281,7 +197,7 @@ def get_items(connection,
                 monument,
                 repo=wikidata_site,
                 log=logger,
-                tablename=country,
+                tablename=dataset.country,
                 live=live)
             if "Q" in problem_report and problem_report["Q"] == "":
                 """
@@ -295,12 +211,12 @@ def get_items(connection,
             print("--------------------------------------------------")
         if problem_report:  # dictionary is not empty
             problem_reports.append(problem_report)
-            save_reports(problem_reports, specific_table_name, started_at)
+            save_reports(problem_reports, dataset.table_name, started_at)
     if table:
         print("SAVED TEST RESULTS TO " + filename)
 
 
-def main(arguments):
+def main(arguments, dataset=None):
     """Process the arguments and fetch data according to them"""
     arguments = vars(arguments)
     if on_labs():
@@ -310,13 +226,103 @@ def main(arguments):
         arguments["user"] = credentials["user"]
         arguments["password"] = credentials["password"]
     connection = create_connection(arguments)
-    country = arguments["country"]
-    language = arguments["language"]
     short = arguments["short"]
     offset = arguments["offset"]
     upload = arguments["upload"]
     table = arguments["table"]
-    get_items(connection, country, language, upload, short, offset, table)
+
+    dataset = dataset or make_dataset(
+        arguments["country"], arguments["language"])
+    get_items(connection, dataset, upload, short, offset, table)
+
+
+def make_dataset(country, language):
+    """
+    Construct a dataset instance for the provided country and language codes.
+
+    Only kept for backwards-compatibility with older monument classes.
+    """
+    from Monument import Dataset
+    from CmFr import CmFr
+    from CzCs import CzCs
+    from AtDe import AtDe
+    from DkBygningDa import DkBygningDa
+    from DkFortidsDa import DkFortidsDa
+    from EeEt import EeEt
+    from HuHu import HuHu
+    from IeEn import IeEn
+    from NoNo import NoNo
+    from PlPl import PlPl
+    from PtPt import PtPt
+    from RoRo import RoRo
+    from SeArbetslSv import SeArbetslSv
+    from SeBbrSv import SeBbrSv
+    from SeShipSv import SeShipSv
+    from XkSq import XkSq
+    from ZaEn import ZaEn
+    SPECIFIC_TABLES = {
+        "monuments_se-ship_(sv)": {
+            "class": SeShipSv,
+            "data_files": {
+                "functions": "se-ship_(sv)_functions.json"}},
+        "monuments_cz_(cs)": {"class": CzCs, "data_files": {}},
+        "monuments_hu_(hu)": {"class": HuHu, "data_files": {}},
+        "monuments_pt_(pt)": {"class": PtPt, "data_files": {}},
+        "monuments_ro_(ro)": {"class": RoRo, "data_files": {}},
+        "monuments_xk_(sq)": {"class": XkSq, "data_files": {}},
+        "monuments_ie_(en)": {
+            "class": IeEn,
+            "data_files": {"counties": "ireland_counties.json"}},
+        "monuments_za_(en)": {"class": ZaEn, "data_files": {}},
+        "monuments_cm_(fr)": {"class": CmFr, "data_files": {}},
+        "monuments_at_(de)": {
+            "class": AtDe,
+            "data_files": {
+                "municipalities": "austria_municipalities.json"},
+            "lookup_downloads": {
+                "types": "at_(de)/types"}},
+        "monuments_dk-bygninger_(da)": {
+            "class": DkBygningDa,
+            "data_files": {},
+            "subclass_downloads": {"settlement": "Q486972"}},
+        "monuments_pl_(pl)": {
+            "class": PlPl,
+            "data_files": {"settlements": "poland_settlements.json"}},
+        "monuments_dk-fortidsminder_(da)": {
+            "class": DkFortidsDa,
+            "data_files": {
+                "types": "dk-fortidsminder_(da)_types.json",
+                "municipalities": "denmark_municipalities.json"}},
+        "monuments_no_(no)": {"class": NoNo, "data_files": {}},
+        "monuments_se-bbr_(sv)": {
+            "class": SeBbrSv,
+            "data_files": {
+                "functions": "se-bbr_(sv)_functions.json",
+                "settlements": "sweden_settlements.json"}},
+        "monuments_ee_(et)": {
+            "class": EeEt,
+            "data_files": {"counties": "estonia_counties.json"}},
+        "monuments_se-arbetsl_(sv)": {
+            "class": SeArbetslSv,
+            "data_files": {
+                "municipalities": "sweden_municipalities.json",
+                "types": "se-arbetsl_(sv)_types.json",
+                "settlements": "sweden_settlements.json"}}
+        }
+    specific_table_name = utils.get_specific_table_name(country, language)
+    specific_table = None
+    if specific_table_name in SPECIFIC_TABLES:
+        specific_table = SPECIFIC_TABLES[specific_table_name]
+    else:
+        print("No class defined for {0}.".format(specific_table_name))
+        exit()
+
+    dataset = Dataset(country, language, specific_table["class"])
+    dataset.data_files = specific_table.get("data_files")
+    dataset.lookup_downloads = specific_table.get("lookup_downloads")
+    dataset.subclass_downloads = specific_table.get("subclass_downloads")
+
+    return dataset
 
 
 def get_db_credentials():
@@ -338,9 +344,9 @@ def on_labs():
     return path.isfile(path.expanduser("~") + "/replica.my.cnf")
 
 
-if __name__ == "__main__":
+def handle_args():
     """
-    Get command line arguments to get data from the database.
+    Parse and handle command line arguments to get data from the database.
 
     Options:
         --host Name of the database host.
@@ -355,7 +361,6 @@ if __name__ == "__main__":
         --short <int> Only fetch a random sample of <int> items.
         --table Save results of the processing to file as a wikitable.
     """
-    arguments = {}
     parser = argparse.ArgumentParser()
     if not on_labs():
         parser.add_argument("--host", default="localhost")
@@ -375,5 +380,10 @@ if __name__ == "__main__":
                         type=int,
                         action='store',)
     parser.add_argument("--table", action='store_true')
-    args = parser.parse_args()
+    return parser.parse_args()
+
+
+if __name__ == "__main__":
+    """Command line entry point for importer."""
+    args = handle_args()
     main(args)

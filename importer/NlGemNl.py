@@ -1,5 +1,6 @@
-from Monument import Monument
+from Monument import Monument, Dataset
 import importer_utils as utils
+import importer as importer
 
 
 class NlGemNl(Monument):
@@ -141,3 +142,13 @@ class NlGemNl(Monument):
         self.set_inception()
         self.set_address()
         self.set_wd_item(self.find_matching_wikidata(mapping))
+
+if __name__ == "__main__":
+    """Command line entry point for importer."""
+    args = importer.handle_args()
+    dataset = Dataset("nl-gem", "nl", NlGemNl)
+    dataset.data_files = {
+        "municipalities": "netherlands_municipalities.json",
+    }
+    dataset.lookup_downloads = {}
+    importer.main(args, dataset)
