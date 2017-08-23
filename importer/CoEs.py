@@ -1,5 +1,6 @@
-from Monument import Monument
+from Monument import Monument, Dataset
 import importer_utils as utils
+import importer as importer
 
 
 class CoEs(Monument):
@@ -53,3 +54,14 @@ class CoEs(Monument):
         self.update_labels()
         self.update_descriptions()
         self.set_wd_item(self.find_matching_wikidata(mapping))
+
+
+if __name__ == "__main__":
+    """Point of entrance for importer."""
+    args = importer.handle_args()
+    dataset = Dataset("co", "es", CoEs)
+    dataset.data_files = {
+        "departments": "colombia_departments.json",
+    }
+    dataset.lookup_downloads = {}
+    importer.main(args, dataset)
