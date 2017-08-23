@@ -1,5 +1,6 @@
-from Monument import Monument
+from Monument import Monument, Dataset
 import importer_utils as utils
+import importer as importer
 
 
 class MtDe(Monument):
@@ -62,3 +63,12 @@ class MtDe(Monument):
         self.set_adm_location()
         self.set_street_address()
         self.set_wd_item(self.find_matching_wikidata(mapping))
+
+
+if __name__ == "__main__":
+    """Point of entrance for importer."""
+    args = importer.handle_args()
+    dataset = Dataset("mt", "de", MtDe)
+    dataset.data_files = {}
+    dataset.lookup_downloads = {}
+    importer.main(args, dataset)
