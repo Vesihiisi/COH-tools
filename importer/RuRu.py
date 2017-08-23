@@ -1,5 +1,6 @@
-from Monument import Monument
+from Monument import Monument, Dataset
 import importer_utils as utils
+import importer as importer
 
 
 class RuRu(Monument):
@@ -7,11 +8,13 @@ class RuRu(Monument):
     def set_adm_location(self):
         level_three = self.data_files["administrative"]
         level_two = self.data_files["subyekty"]
-        district_match = [x for x in level_three if x["itemLabel"] == self.district]
+        district_match = [x for x in level_three if x[
+            "itemLabel"] == self.district]
         if len(district_match) == 1:
             self.add_statement("located_adm", district_match[0]["item"])
         else:
-            sub_match = [x for x in level_two if x["value"].lower() == self.region_iso]
+            sub_match = [x for x in level_two if x[
+                "value"].lower() == self.region_iso]
             if len(sub_match) == 1:
                 self.add_statement("located_adm", sub_match[0]["item"])
             else:
@@ -21,7 +24,8 @@ class RuRu(Monument):
         if self.has_non_empty_attribute("city"):
             city_q_try = utils.q_from_wikipedia("ru", self.city)
             try:
-                administrative_q = self.wd_item["statements"]["P131"][0]["value"]
+                administrative_q = self.wd_item[
+                    "statements"]["P131"][0]["value"]
             except KeyError:
                 administrative_q = None
             if city_q_try and city_q_try != administrative_q:
@@ -64,3 +68,15 @@ class RuRu(Monument):
         self.set_coords(("lat", "lon"))
         self.update_labels()
         self.set_wd_item(self.find_matching_wikidata(mapping))
+
+if __name__ == "__main__":
+    """Point of entrance for importer."""
+    args = importer.handle_args()
+    dataset = Dataset("ru", "ru", RuRu)
+    dataset.data_files = {
+        "administrative": "russia_administrative.json",
+        "subyekty": "russia_subyekty.json"
+    }
+    dataset.lookup_downloads = {}
+    dataset.subclass_downloads = {"settlement": "Q486972"}
+    importer.main(args, dataset)
