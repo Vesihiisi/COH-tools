@@ -12,27 +12,27 @@ The scripts in the root catalogue are for creating mapping tables and such:
 * **lookup_table_to_json.py** – download a lookup table and convert it to a JSON file [like this](https://gist.github.com/Vesihiisi/5ae8d5715d93cd77543edbb2e6d5d855)
 * **wlmhelpers.py** – utilities for interacting with MySQL database
 
-## Importer
+## Dataset scripts
 
-This the part that actually extracts the data from the WLM database, processes it and uploads it to Wikidata:
+Each of the tables in the WLM database has a separate script that extracts the data, processes it and uploads it to Wikidata. The script is named after the namespace + language combination of the table, eg. `monuments_at_(de)` -> `AtDe.py`.
 
-**importer.py** – the main script. Pass your MySQL credentials to it:
+Run the specific script to import the data, using your MySQL credentials and optional flags:
 
 ```
-python3 importer.py --host localhost --user foo --password bar --db wlm --country se-fornmin --language sv --short --upload live
+python3 AtDe.py --host localhost --user foo --password bar --db wlm --short --upload live
 ```
 
 If you're running the script on the Toollabs server, leave out `host`, `db`, `user` and `passwords`, as these will be filled out automatically. 
 
-This will process the `monuments_se-fornmin_(sv)` table.
+This will process the `monuments_at_(de)` table.
 
-`short` will only process the first 10 rows in the table.
+`short` will only process the first 10 rows in the table, optionally you can add a digit to choose how many rows will be processed, eg. `short 15`.
 
 `upload` to upload the created claims to Wikidata. You can leave it out if you want to debug the Monument object processing. **By default** this will use the [Wikidata Sandbox](https://www.wikidata.org/wiki/Q4115189). Add `live` to work on actual live Wikidata items, assuming you're 100% positive you want to do that.
 
-Each row in the database is used to create a Monument object using data from the SPECIFIC_TABLES dictionary, which maps database tables to classes and, optionally, extra data files that can be passed to the constructor.
+`table` will generate a preview file of how the data would be processed, ready to paste into a Wiki page, eg. https://www.wikidata.org/wiki/Wikidata:WikiProject_WLM/Mapping_tables/at_(de)/preview.
 
-**Monument.py** – Monument classes. Includes both a general parent class Monument() and special child classes that inherit from it, one per database table. Those are used to process table-specific data.
+**Monument.py** – A general Monument class with methods that are shared by all the dataset-specific classes.
 
 **Uploader.py** – converts Monument objects into Wikidata-ready data dictionaries and uploads them. Currently locked to the Wikidata sandbox.
 
