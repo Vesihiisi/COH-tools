@@ -7,6 +7,34 @@ MAPPING_DIR = "mappings"
 
 class Monument(object):
 
+    def __init__(self, db_row_dict, mapping, data_files, existing, repository):
+        """
+        Initialize the data object.
+
+        :param db_row_dict: raw data from the database
+        :param mapping: mapping file object
+        :param data_files: resources like dictionaries of known placenames to match
+        :param existing: list of Wikidata items using a specific property
+            that is optionally specified in the mapping file and is supposed to
+            hold unique values
+        :param repository: data repository (Wikidata site)
+        """
+        self.raw_data = db_row_dict
+        self.props = utils.load_json(
+            path.join(MAPPING_DIR, "props_general.json"))
+        self.adm0 = utils.load_json(path.join(MAPPING_DIR, "adm0.json"))
+        self.sources = utils.load_json(
+            path.join(MAPPING_DIR, "data_sources.json"))
+        for k, v in db_row_dict.items():
+            if not k.startswith("m_spec."):
+                setattr(self, k.replace("-", "_"), v)
+        self.monuments_all_id = ""
+        self.construct_wd_item(mapping)
+        self.data_files = data_files
+        self.existing = existing
+        self.repo = repository
+        self.problem_report = {}
+
     def print_wd(self):
         """Print the data object dictionary on screen."""
         print(
@@ -446,34 +474,6 @@ class Monument(object):
         for title in self.data_files:
             print(title)
 
-    def __init__(self, db_row_dict, mapping, data_files, existing, repository):
-        """
-        Initialize the data object.
-
-        :param db_row_dict: raw data from the database
-        :param mapping: mapping file object
-        :param data_files: resources like dictionaries of known placenames to match
-        :param existing: list of Wikidata items using a specific property
-            that is optionally specified in the mapping file and is supposed to
-            hold unique values
-        :param repository: data repository (Wikidata site)
-        """
-        self.raw_data = db_row_dict
-        self.props = utils.load_json(
-            path.join(MAPPING_DIR, "props_general.json"))
-        self.adm0 = utils.load_json(path.join(MAPPING_DIR, "adm0.json"))
-        self.sources = utils.load_json(
-            path.join(MAPPING_DIR, "data_sources.json"))
-        for k, v in db_row_dict.items():
-            if not k.startswith("m_spec."):
-                setattr(self, k.replace("-", "_"), v)
-        self.monuments_all_id = ""
-        self.construct_wd_item(mapping)
-        self.data_files = data_files
-        self.existing = existing
-        self.repo = repository
-        self.problem_report = {}
-
     def get_fields(self):
         """Get a sorted list of all the attributes of the data object."""
         return sorted(list(self.__dict__.keys()))
@@ -525,3 +525,32 @@ class Monument(object):
     def get_report(self):
         """Retrieve the problem report."""
         return self.problem_report
+
+
+class Dataset(object):
+    """A collection of Monum ents of the same type."""
+
+    def __init__(self, country, language, monument_class):
+        """
+        Initialise a dataset.
+
+        :param country: Country/Dataset code of the dataset.
+        :param language: Language code of the dataset.
+        :param monument_class: the sub-class of Monument to use.
+        """
+        self.country = country
+        self.language = language
+        self.monument_class = monument_class
+        self.data_files = None
+        self.subclass_downloads = None
+        self.lookup_downloads = None
+
+    @property
+    def table_name(self):
+        """Return the expected database table name for the dataset."""
+        return "monuments_{}_({})".format(self.country, self.language)
+
+    @property
+    def mapping_file(self):
+        """Return the expected mapping file name for the dataset."""
+        return "{}_({}).json".format(self.country, self.language)
