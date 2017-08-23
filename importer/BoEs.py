@@ -1,5 +1,6 @@
-from Monument import Monument
+from Monument import Monument, Dataset
 import importer_utils as utils
+import importer as importer
 
 
 class BoEs(Monument):
@@ -45,3 +46,12 @@ class BoEs(Monument):
         self.set_coords(("lat", "lon"))
         self.update_labels()
         self.set_wd_item(self.find_matching_wikidata(mapping))
+
+
+if __name__ == "__main__":
+    """Command line entry point for importer."""
+    args = importer.handle_args()
+    dataset = Dataset("bo", "es", BoEs)
+    dataset.data_files = {}
+    dataset.lookup_downloads = {}
+    importer.main(args, dataset)
