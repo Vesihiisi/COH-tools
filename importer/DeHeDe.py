@@ -5,6 +5,12 @@ import importer as importer
 
 class DeHeDe(Monument):
 
+    def set_location(self):
+        if self.has_non_empty_attribute("ortsteil"):
+            location_q = utils.q_from_wikipedia("de", self.ortsteil)
+            if location_q:
+                self.add_statement("location", location_q)
+
     def set_adm_location(self):
         city_q = utils.q_from_wikipedia("de", self.stadt)
         self.add_statement("located_adm", city_q)
@@ -65,6 +71,7 @@ class DeHeDe(Monument):
         self.set_commonscat()
         self.set_country()
         self.set_adm_location()
+        self.set_location()
         self.set_coords(("lat", "lon"))
         self.set_heritage()
         self.set_heritage_id()
