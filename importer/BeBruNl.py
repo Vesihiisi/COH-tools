@@ -5,6 +5,11 @@ import importer as importer
 
 class BeBruNl(Monument):
 
+    def set_address(self):
+        street_with_no = utils.remove_markup(self.adres.title()).rstrip(',')
+        whole_address = "{}, {}".format(street_with_no, self.plaats)
+        self.add_statement("located_street", whole_address)
+
     def set_special_is(self):
         objtype = self.objtype.lower()
         types = self.data_files["type"]["mappings"]
@@ -20,6 +25,8 @@ class BeBruNl(Monument):
             if utils.count_wikilinks(self.bouwdoor) == 1:
                 arch_q = utils.q_from_first_wikilink("nl", self.bouwdoor)
                 self.add_statement("architect", arch_q)
+            else:
+                self.add_to_report("bouwdoor", self.bouwdoor, "architect")
 
     def update_labels(self):
         dutch = utils.remove_markup(self.omschrijving)
@@ -30,6 +37,8 @@ class BeBruNl(Monument):
             if utils.legit_year(self.bouwjaar):
                 self.add_statement(
                     "inception", {"time_value": {"year": self.bouwjaar}})
+            else:
+                self.add_to_report("bouwjaar", self.bouwjaar, "inception")
 
     def set_monuments_all_id(self):
         self.monuments_all_id = self.code
@@ -58,6 +67,7 @@ class BeBruNl(Monument):
         self.set_special_is()
         self.set_coords(("lat", "lon"))
         self.set_building_year()
+        self.set_address()
         self.update_labels()
         # self.set_wd_item(self.find_matching_wikidata(mapping))
 
