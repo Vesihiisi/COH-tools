@@ -1,0 +1,21 @@
+{
+    "country": {
+        "item": "Q40",
+        "name": "Germany"
+    },
+    "country_code": "de",
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "Q11691318",
+        "name": "kulturdenkmal"
+    },
+    "language": "de",
+    "table_name": "de-he",
+    "unique": {
+        "comment": "denkXweb identifier",
+        "property": "P1769"
+    }
+}
