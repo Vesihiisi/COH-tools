@@ -71,6 +71,13 @@ class BeBruNl(Monument):
         dutch = utils.remove_markup(self.omschrijving)
         self.add_label("nl", dutch)
 
+    def update_descriptions(self):
+        dutch = "{} in {}, België".format(self.objtype.lower(), self.plaats)
+        self.add_description("nl", dutch)
+
+        english = "heritage site in {}, Belgium".format(self.plaats)
+        self.add_description("en", english)
+
     def set_building_year(self):
         if self.has_non_empty_attribute("bouwjaar"):
             if utils.legit_year(self.bouwjaar):
@@ -110,6 +117,7 @@ class BeBruNl(Monument):
         self.set_building_year()
         self.set_address()
         self.update_labels()
+        self.update_descriptions()
         self.set_wd_item(self.find_matching_wikidata(mapping))
 
 
