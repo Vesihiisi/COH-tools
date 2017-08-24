@@ -20,6 +20,19 @@ class BeBruNl(Monument):
             for q in special_types:
                 self.add_statement("is", q)
 
+    def set_style(self):
+        if self.has_non_empty_attribute("bouwstijl"):
+            style_raw = self.bouwstijl.lower()
+            styles = self.data_files["style"]["mappings"]
+            arch_style = [styles[x]["items"]
+                          for x in styles if x.lower() == style_raw]
+            if len(arch_style) > 0:
+                for q in arch_style:
+                    self.add_statement("architectural_style", q)
+            else:
+                self.add_to_report(
+                    "bouwstijl", self.bouwstijl, "architectural_style")
+
     def set_architect(self):
         if self.has_non_empty_attribute("bouwdoor"):
             if utils.count_wikilinks(self.bouwdoor) == 1:
@@ -63,6 +76,7 @@ class BeBruNl(Monument):
         self.set_image()
         self.set_commonscat()
         self.set_architect()
+        self.set_style()
         self.set_is()
         self.set_special_is()
         self.set_coords(("lat", "lon"))
@@ -77,5 +91,6 @@ if __name__ == "__main__":
     args = importer.handle_args()
     dataset = Dataset("be-bru", "nl", BeBruNl)
     dataset.data_files = {}
-    dataset.lookup_downloads = {"type": "be-bru (nl)/objtype"}
+    dataset.lookup_downloads = {"type": "be-bru (nl)/objtype",
+                                "style": "be-bru (nl)/bouwstijl"}
     importer.main(args, dataset)
