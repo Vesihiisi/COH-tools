@@ -5,6 +5,32 @@ import importer as importer
 
 class BeBruNl(Monument):
 
+    def set_adm_location(self):
+        brussel_region = "Q240"
+        location = self.plaats
+        municip_dict = self.data_files["municipalities"]
+        if location:
+            location_match = [x for x in municip_dict if x[
+                "itemLabel"] == location]
+            if len(location_match) == 1:
+                self.add_statement("located_adm", location_match[0]["item"])
+        else:
+            self.add_statement("located_adm", brussel_region)
+
+    def set_heritage(self):
+        if self.has_non_empty_attribute("beschermd"):
+            prot_date = self.beschermd
+            try:
+                date_dict = utils.date_to_dict(prot_date, "%d/%m/%Y")
+                qualifier = {"start_time": {"time_value": date_dict}}
+                heritage = self.mapping["heritage"]["item"]
+                self.add_statement("heritage_status", heritage, qualifier)
+            except ValueError:
+                self.add_to_report("beschermd", self.beschermd)
+                return super().set_heritage()
+        else:
+            return super().set_heritage()
+
     def set_address(self):
         street_with_no = utils.remove_markup(self.adres.title()).rstrip(',')
         whole_address = "{}, {}".format(street_with_no, self.plaats)
@@ -17,7 +43,7 @@ class BeBruNl(Monument):
                          for x in types if x.lower() == objtype]
         if len(special_types) > 0:
             self.remove_statement("is")
-            for q in special_types:
+            for q in special_types[0]:
                 self.add_statement("is", q)
 
     def set_style(self):
@@ -27,7 +53,7 @@ class BeBruNl(Monument):
             arch_style = [styles[x]["items"]
                           for x in styles if x.lower() == style_raw]
             if len(arch_style) > 0:
-                for q in arch_style:
+                for q in arch_style[0]:
                     self.add_statement("architectural_style", q)
             else:
                 self.add_to_report(
@@ -74,6 +100,7 @@ class BeBruNl(Monument):
         self.set_heritage()
         self.set_country()
         self.set_image()
+        self.set_adm_location()
         self.set_commonscat()
         self.set_architect()
         self.set_style()
@@ -83,14 +110,14 @@ class BeBruNl(Monument):
         self.set_building_year()
         self.set_address()
         self.update_labels()
-        # self.set_wd_item(self.find_matching_wikidata(mapping))
+        self.set_wd_item(self.find_matching_wikidata(mapping))
 
 
 if __name__ == "__main__":
     """Point of entrance for importer."""
     args = importer.handle_args()
     dataset = Dataset("be-bru", "nl", BeBruNl)
-    dataset.data_files = {}
+    dataset.data_files = {"municipalities": "belgium_municipalities.json"}
     dataset.lookup_downloads = {"type": "be-bru (nl)/objtype",
                                 "style": "be-bru (nl)/bouwstijl"}
     importer.main(args, dataset)
