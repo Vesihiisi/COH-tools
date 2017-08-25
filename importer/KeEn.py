@@ -60,13 +60,10 @@ class KeEn(Monument):
         self.set_wd_item(self.find_matching_wikidata(mapping))
 
 
-
 if __name__ == "__main__":
     """Command line entry point for importer."""
     args = importer.handle_args()
     dataset = Dataset("ke", "en", KeEn)
-    dataset.data_files = {
-    }
-    dataset.lookup_downloads = {
-    }
+    dataset.data_files = {}
+    dataset.lookup_downloads = {}
     importer.main(args, dataset)
