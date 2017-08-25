@@ -32,8 +32,9 @@ class BoEs(Monument):
 
     def set_heritage_id(self):
         """
-        The ID numbers here are not real.
+        Set the WLM ID.
 
+        The ID numbers here are not real.
         Note that since the WLM identifiers are not
         globally unique, this might need to be
         prefixed by country if convention is laid down.
