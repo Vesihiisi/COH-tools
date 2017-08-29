@@ -1,0 +1,21 @@
+{
+    "country": {
+        "item": "Q717",
+        "name": "Venezuela"
+    },
+    "country_code": "ve",
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "Q28478883",
+        "name": "national historical monument of Venezuela"
+    },
+    "language": "es",
+    "table_name": "ve",
+    "unique": {
+        "comment": "WLM ID",
+        "property": "P2186"
+    }
+}
