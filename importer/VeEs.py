@@ -32,19 +32,20 @@ class VeEs(Monument):
             self.add_to_report("municipio", self.municipio, "located_adm")
 
     def set_heritage_id(self):
-        """
-        Set WML ID.
-
-        Will need to be enhanced with country prefix
-        once there's consensus on that.
-        """
-        self.add_statement("wlm_id", self.id)
+        wlm = "{}-{}".format(self.mapping["country_code"].upper(), self.id)
+        self.add_statement("wlm_id", wlm)
 
     def update_labels(self):
         self.add_label("es", utils.remove_markup(self.monumento))
 
     def set_monuments_all_id(self):
         self.monuments_all_id = self.id
+
+    def update_descriptions(self):
+        desc = "national historical monument of Venezuela"
+        if self.has_non_empty_attribute("ciudad"):
+            desc = desc + " in {}".format(utils.remove_markup(self.ciudad))
+        self.add_description("en", desc)
 
     def exists_with_monument_article(self, language):
         return super().exists_with_monument_article("es", "monumento_enlace")
@@ -55,7 +56,6 @@ class VeEs(Monument):
         self.set_monuments_all_id()
         self.set_changed()
         self.wlm_source = self.create_wlm_source(self.monuments_all_id)
-        self.update_labels()
         self.set_adm_location()
         self.set_location()
         self.set_is()
@@ -65,7 +65,9 @@ class VeEs(Monument):
         self.set_heritage_id()
         self.set_coords(("lat", "lon"))
         self.set_commonscat()
-        # self.set_wd_item(self.find_matching_wikidata(mapping))
+        self.update_labels()
+        self.update_descriptions()
+        self.set_wd_item(self.find_matching_wikidata(mapping))
 
 
 if __name__ == "__main__":
