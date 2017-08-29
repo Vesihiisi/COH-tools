@@ -41,6 +41,10 @@ class GhEn(Monument):
         if self.has_non_empty_attribute("alternative_names"):
             self.add_label("en", self.alternative_names)
 
+    def update_descriptions(self):
+        desc = "material cultural heritage site in Ghana"
+        self.add_description("en", desc)
+
     def set_monuments_all_id(self):
         """Map which column name in specific table to  ID in monuments_all."""
         self.monuments_all_id = self.id
@@ -66,6 +70,7 @@ class GhEn(Monument):
         self.set_heritage()
         self.set_heritage_id()
         self.update_labels()
+        self.update_descriptions()
         self.set_wd_item(self.find_matching_wikidata(mapping))
 
 
