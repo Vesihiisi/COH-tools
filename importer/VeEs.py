@@ -5,6 +5,14 @@ import importer as importer
 
 class VeEs(Monument):
 
+    def set_location(self):
+        locat_raw = self.ciudad.lower()
+        location_dic = self.data_files["settlements"]
+        locat_match = [x for x in location_dic if x[
+            "itemLabel"].lower() == locat_raw]
+        if len(locat_match) == 1:
+            self.add_statement("location", locat_match[0]["item"])
+
     def set_adm_location(self):
         wikilinks = utils.get_wikilinks(self.municipio)
         # can be more than 1
@@ -49,6 +57,7 @@ class VeEs(Monument):
         self.wlm_source = self.create_wlm_source(self.monuments_all_id)
         self.update_labels()
         self.set_adm_location()
+        self.set_location()
         self.set_is()
         self.set_country()
         self.set_image()
@@ -63,6 +72,7 @@ if __name__ == "__main__":
     """Command line entry point for importer."""
     args = importer.handle_args()
     dataset = Dataset("ve", "es", VeEs)
-    dataset.data_files = {"states": "venezuela_states.json"}
+    dataset.data_files = {"states": "venezuela_states.json",
+                          "settlements": "venezuela_settlements.json"}
     dataset.lookup_downloads = {}
     importer.main(args, dataset)
