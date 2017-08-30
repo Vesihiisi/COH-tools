@@ -1,0 +1,21 @@
+{
+    "country": {
+        "item": "Q32",
+        "name": "Luxembourg"
+    },
+    "country_code": "lu",
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "Q38179530",
+        "name": "national monument of Luxembourg"
+    },
+    "language": "lb",
+    "table_name": "lu",
+    "unique": {
+        "comment": "WLM ID",
+        "property": "P2186"
+    }
+}
