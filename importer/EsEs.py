@@ -5,6 +5,37 @@ import importer as importer
 
 class EsEs(Monument):
 
+    def set_heritage_with_date(self):
+        heritage = self.mapping["heritage"]["item"]
+        if self.has_non_empty_attribute("fecha"):
+            # 20 de febrero de 1985
+            months = ["enero", "febrero", "marzo",
+                      "abril", "mayo", "junio",
+                      "julio", "agosto",
+                      "septiembre", "octubre",
+                      "noviembre", "diciembre", ]
+            date_parts = self.fecha.split(" ")
+            if len(date_parts) != 5:
+                self.add_to_report("fecha", self.fecha)
+                self.add_statement("heritage_status", heritage)
+                return
+            else:
+                day = str(date_parts[0])
+                month = str(months.index(date_parts[2]) + 1)
+                year = str(date_parts[4])
+                date_string = "{}-{}-{}".format(year,
+                                                month.zfill(2), day.zfill(2))
+                try:
+                    date_dict = utils.date_to_dict(date_string, "%Y-%m-%d")
+                except ValueError:
+                    self.add_to_report("fecha", self.fecha)
+                    self.add_statement("heritage_status", heritage)
+                    return
+                qualifier = {"start_time": {"time_value": date_dict}}
+                self.add_statement("heritage_status", heritage, qualifier)
+        else:
+            self.add_statement("heritage_status", heritage)
+
     def set_adm_location(self):
         adm_q = None
         municip_dic = self.data_files["municipalities"]
@@ -62,7 +93,7 @@ class EsEs(Monument):
         self.set_monuments_all_id()
         self.set_changed()
         self.wlm_source = self.create_wlm_source(self.monuments_all_id)
-        self.set_heritage()
+        self.set_heritage_with_date()
         self.set_heritage_id()
         self.set_country()
         self.set_adm_location()
@@ -72,7 +103,7 @@ class EsEs(Monument):
         self.set_commonscat()
         self.set_image("imagen")
         self.update_labels()
-        # self.set_wd_item(self.find_matching_wikidata(mapping))
+        self.set_wd_item(self.find_matching_wikidata(mapping))
 
 
 if __name__ == "__main__":
