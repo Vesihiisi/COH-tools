@@ -77,6 +77,22 @@ class EsEs(Monument):
         spanish = utils.remove_markup(self.nombre)
         self.add_label("es", spanish)
 
+    def update_descriptions(self):
+        desc_dic = {"es": "Bien de Interés Cultural",
+                    "en": "cultural property in Spain"}
+        for lg in desc_dic:
+            self.add_description(lg, desc_dic[lg])
+
+    def set_location(self):
+        if self.has_non_empty_attribute("lugar"):
+            if utils.count_wikilinks(self.lugar) == 1:
+                adm_loc = self.wd_item["statements"]["P131"][0]["value"]
+                loc_q = utils.q_from_first_wikilink("es", self.lugar)
+                if loc_q != adm_loc:
+                    self.add_statement("location", loc_q)
+            else:
+                self.add_to_report("lugar", self.lugar, "location")
+
     def set_heritage_id(self):
         self.add_statement("bien_de_interes", str(self.bic))
 
@@ -97,12 +113,14 @@ class EsEs(Monument):
         self.set_heritage_id()
         self.set_country()
         self.set_adm_location()
+        self.set_location()
         self.set_is()
         self.set_special_is()
         self.set_coords(("lat", "lon"))
         self.set_commonscat()
         self.set_image("imagen")
         self.update_labels()
+        self.update_descriptions()
         self.set_wd_item(self.find_matching_wikidata(mapping))
 
 
