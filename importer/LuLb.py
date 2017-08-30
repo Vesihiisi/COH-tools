@@ -5,6 +5,19 @@ import importer as importer
 
 class LuLb(Monument):
 
+    def set_location(self):
+        if self.has_non_empty_attribute("uertschaft"):
+            loc_q = utils.q_from_wikipedia("lb", self.uertschaft)
+            if loc_q:
+                try:
+                    adm_loc = self.wd_item["statements"]["P131"][0]["value"]
+                except KeyError:
+                    adm_loc = None
+                if loc_q != adm_loc:
+                    self.add_statement("location", loc_q)
+            else:
+                self.add_to_report("uertschaft", self.uertschaft, "location")
+
     def set_adm_location(self):
         adm_q = None
         dis_dic = self.data_files["districts"]
@@ -19,10 +32,6 @@ class LuLb(Monument):
         else:
             self.add_to_report("region-iso", self.region_iso, "located_adm")
 
-    def update_labels(self):
-        lb = utils.remove_markup(self.offiziellen_numm)
-        self.add_label("lb", lb)
-
     def set_heritage_id(self):
         """Set WLM ID with country's ISO-prefix."""
         ccode = self.mapping["country_code"].upper()
@@ -33,6 +42,15 @@ class LuLb(Monument):
         """Map which column name in specific table to  ID in monuments_all."""
         self.monuments_all_id = self.id
 
+    def update_descriptions(self):
+        descs = {"en": "National Monument of Luxembourg"}
+        for lg in descs:
+            self.add_description(lg, descs[lg])
+
+    def update_labels(self):
+        lb = utils.remove_markup(self.offiziellen_numm)
+        self.add_label("lb", lb)
+
     def exists_with_monument_article(self, language):
         return super().exists_with_monument_article("lb", "monument_article")
 
@@ -42,13 +60,18 @@ class LuLb(Monument):
         self.set_monuments_all_id()
         self.set_changed()
         self.wlm_source = self.create_wlm_source(self.monuments_all_id)
+        self.set_heritage_id()
         self.set_country()
+        self.set_coords(("lat", "lon"))
         self.set_adm_location()
+        self.set_location()
         self.set_is()
         self.set_heritage()
-        self.set_heritage_id()
+        self.set_image("bild")
+        self.set_commonscat()
         self.update_labels()
-        # self.set_wd_item(self.find_matching_wikidata(mapping))
+        self.update_descriptions()
+        self.set_wd_item(self.find_matching_wikidata(mapping))
 
 
 if __name__ == "__main__":
