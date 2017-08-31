@@ -79,7 +79,9 @@ class NlGemNl(Monument):
         there's no general register of municipal monuments
         (each municipality does their own).
         """
-        self.add_statement("wlm_id", self.monuments_all_id)
+        country = self.mapping["country_code"].upper()
+        wlm_id = "{}-{}".format(country, self.monuments_all_id)
+        self.add_statement("wlm_id", wlm_id)
 
     def update_labels(self):
         """
@@ -142,6 +144,7 @@ class NlGemNl(Monument):
         self.set_inception()
         self.set_address()
         self.set_wd_item(self.find_matching_wikidata(mapping))
+
 
 if __name__ == "__main__":
     """Command line entry point for importer."""
