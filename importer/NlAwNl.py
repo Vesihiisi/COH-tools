@@ -5,6 +5,23 @@ import importer as importer
 
 class NlAwNl(Monument):
 
+    def set_address(self):
+        if self.has_non_empty_attribute("adres"):
+            if utils.contains_digit(self.adres):
+                town = utils.remove_markup(self.plaats)
+                address = "{}, {}".format(self.adres, town)
+                self.add_statement("located_street", address)
+            else:
+                self.add_to_report("adres", self.adres, "located_street")
+
+    def update_labels(self):
+        nl = utils.remove_markup(self.omschrijving)
+        self.add_label("nl", nl)
+
+    def set_adm_location(self):
+        aruba = "Q21203"
+        self.add_statement("located_adm", aruba)
+
     def set_location(self):
         loc_q = None
         loc_dic = self.data_files["settlements"]
@@ -51,12 +68,15 @@ class NlAwNl(Monument):
         self.set_heritage()
         self.set_country()
         self.set_location()
+        self.set_adm_location()
+        self.set_address()
         self.set_is()
         self.set_coords(("lat", "lon"))
         self.set_image()
         self.set_commonscat()
         self.set_inception()
-        # self.set_wd_item(self.find_matching_wikidata(mapping))
+        self.update_labels()
+        self.set_wd_item(self.find_matching_wikidata(mapping))
 
 
 if __name__ == "__main__":
