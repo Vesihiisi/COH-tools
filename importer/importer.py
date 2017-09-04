@@ -251,7 +251,6 @@ def make_dataset(country, language):
     from EeEt import EeEt
     from HuHu import HuHu
     from IeEn import IeEn
-    from NoNo import NoNo
     from PlPl import PlPl
     from PtPt import PtPt
     from RoRo import RoRo
@@ -293,7 +292,6 @@ def make_dataset(country, language):
             "data_files": {
                 "types": "dk-fortidsminder_(da)_types.json",
                 "municipalities": "denmark_municipalities.json"}},
-        "monuments_no_(no)": {"class": NoNo, "data_files": {}},
         "monuments_se-bbr_(sv)": {
             "class": SeBbrSv,
             "data_files": {

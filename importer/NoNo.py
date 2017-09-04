@@ -1,10 +1,26 @@
-from Monument import Monument
+from Monument import Monument, Dataset
 import importer_utils as utils
-
-MAPPING_DIR = "mappings"
+import importer as importer
 
 
 class NoNo(Monument):
+
+    def __init__(self, db_row_dict, mapping, data_files, existing, repository):
+        Monument.__init__(self, db_row_dict, mapping,
+                          data_files, existing, repository)
+        self.set_monuments_all_id()
+        self.set_changed()
+        self.wlm_source = self.create_wlm_source(self.monuments_all_id)
+        self.update_labels()
+        self.update_descriptions()
+        self.set_special_type()
+        self.set_image("bilde")
+        self.set_commonscat()
+        self.set_coords(("lat", "lon"))
+        self.set_heritage()
+        self.set_heritage_id()
+        self.set_adm_location()
+        self.set_wd_item(self.find_matching_wikidata(mapping))
 
     def update_descriptions(self):
         """
@@ -84,19 +100,15 @@ class NoNo(Monument):
         """Map which column name in specific table to  ID in monuments_all."""
         self.monuments_all_id = str(self.id)
 
-    def __init__(self, db_row_dict, mapping, data_files, existing, repository):
-        Monument.__init__(self, db_row_dict, mapping,
-                          data_files, existing, repository)
-        self.set_monuments_all_id()
-        self.set_changed()
-        self.wlm_source = self.create_wlm_source(self.monuments_all_id)
-        self.update_labels()
-        self.update_descriptions()
-        self.set_special_type()
-        self.set_image("bilde")
-        self.set_commonscat()
-        self.set_coords(("lat", "lon"))
-        self.set_heritage()
-        self.set_heritage_id()
-        self.set_adm_location()
-        self.set_wd_item(self.find_matching_wikidata(mapping))
+
+if __name__ == "__main__":
+    """Command line entry point for importer."""
+    args = importer.handle_args()
+    dataset = Dataset("no", "no", NoNo)
+    dataset.data_files = {
+        "municipalities": "norway_municipalities.json"
+    }
+    dataset.lookup_downloads = {
+        "categories": "no (no)/categories"
+    }
+    importer.main(args, dataset)
