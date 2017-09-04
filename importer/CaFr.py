@@ -5,7 +5,24 @@ import importer as importer
 
 class CaFr(Monument):
 
+    def set_address(self):
+        if self.has_non_empty_attribute("adresse"):
+            print(self.adresse)
+
+    def set_location(self):
+        if self.has_non_empty_attribute("lieu"):
+            loc_raw = self.lieu
+            if utils.count_wikilinks(loc_raw) == 1:
+                loc_q = utils.q_from_first_wikilink("fr", loc_raw)
+                if loc_q is not None:
+                    self.add_statement("location", loc_q)
+                else:
+                    self.add_to_report("lieu", self.lieu, "location")
+            else:
+                self.add_to_report("lieu", self.lieu, "location")
+
     def set_adm_location(self):
+        print(self.data_files)
         adm_q = None
         municip_raw = self.municipalite
         adm_q = utils.q_from_first_wikilink("fr", municip_raw)
@@ -13,11 +30,17 @@ class CaFr(Monument):
         if adm_q is None:
             self.add_to_report(
                 "municipalite", self.municipalite, "located_adm")
-            prov_raw = self.prov_iso
-            prov_match = [x for x in self.data_files[
-                "provinces"] if x["iso"] == prov_raw]
-            if len(prov_match) == 1:
-                adm_q = prov_match[0]["item"]
+            if self.has_non_empty_attribute("prov_iso"):
+                prov_raw = self.prov_iso
+                prov_match = [x for x in self.data_files[
+                    "provinces"] if x["iso"] == prov_raw]
+                if len(prov_match) == 1:
+                    adm_q = prov_match[0]["item"]
+                else:
+                    self.add_to_report(
+                        "prov_iso", self.prov_iso, "located_adm")
+            else:
+                self.add_to_report("prov_iso", self.prov_iso, "located_adm")
 
         if adm_q:
             self.add_statement("located_adm", adm_q)
@@ -51,18 +74,20 @@ class CaFr(Monument):
         self.set_heritage()
         self.set_country()
         self.set_adm_location()
+        self.set_location()
+        self.set_address()
         self.set_is()
         self.set_image()
         self.set_commonscat()
         self.set_coords(("lat", "lon"))
         self.set_inception()
-        self.set_wd_item(self.find_matching_wikidata(mapping))
+        # self.set_wd_item(self.find_matching_wikidata(mapping))
 
 
 if __name__ == "__main__":
     """Command line entry point for importer."""
     args = importer.handle_args()
     dataset = Dataset("ca", "fr", CaFr)
-    dataset.data_files = {"provinces": "canda_provinces_fr.json"}
+    dataset.data_files = {"provinces": "canada_provinces_fr.json"}
     dataset.lookup_downloads = {}
     importer.main(args, dataset)
