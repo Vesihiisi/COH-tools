@@ -15,6 +15,7 @@
         "name": "heritage place of canada"
     },
     "language": "fr",
+    "table_name": "ca",
     "unique": {
         "comment": "canadian register of historic places",
         "property": "P477"
