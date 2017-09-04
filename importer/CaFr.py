@@ -6,8 +6,15 @@ import importer as importer
 class CaFr(Monument):
 
     def set_address(self):
+        town_string = None
         if self.has_non_empty_attribute("adresse"):
-            print(self.adresse)
+            if self.has_non_empty_attribute("municipalite"):
+                town_string = utils.remove_markup(self.municipalite)
+            if town_string is not None:
+                street_string = "{}, {}".format(self.adresse, town_string)
+            else:
+                street_string = self.adresse
+            self.add_statement("located_street", street_string)
 
     def set_location(self):
         if self.has_non_empty_attribute("lieu"):
@@ -22,7 +29,6 @@ class CaFr(Monument):
                 self.add_to_report("lieu", self.lieu, "location")
 
     def set_adm_location(self):
-        print(self.data_files)
         adm_q = None
         municip_raw = self.municipalite
         adm_q = utils.q_from_first_wikilink("fr", municip_raw)
