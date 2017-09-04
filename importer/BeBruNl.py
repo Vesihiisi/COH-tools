@@ -58,8 +58,7 @@ class BeBruNl(Monument):
         if self.has_non_empty_attribute("bouwstijl"):
             style_raw = self.bouwstijl.lower()
             styles = self.data_files["style"]["mappings"]
-            arch_style = [styles[x]["items"]
-                          for x in styles if x.lower() == style_raw]
+            arch_style = utils.get_matching_items_from_dict(style_raw, styles)
             if len(arch_style) > 0:
                 for q in arch_style[0]:
                     self.add_statement("architectural_style", q)
@@ -94,21 +93,15 @@ class BeBruNl(Monument):
             else:
                 self.add_to_report("bouwjaar", self.bouwjaar, "inception")
 
-    def set_monuments_all_id(self):
-        self.monuments_all_id = self.code
-
     def set_heritage_id(self):
         self.add_statement("heritage_brussels", self.code)
-
-    def exists_with_monument_article(self, language):
-        return super().exists_with_monument_article("nl", "monument_article")
 
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
                           data_files, existing, repository)
-        self.set_monuments_all_id()
+        self.set_monuments_all_id("code")
         self.set_changed()
-        self.wlm_source = self.create_wlm_source(self.monuments_all_id)
+        self.set_wlm_source()
         self.set_source()
         self.set_registrant_url()
         self.set_heritage_id()
@@ -121,7 +114,7 @@ class BeBruNl(Monument):
         self.set_style()
         self.set_is()
         self.set_special_is()
-        self.set_coords(("lat", "lon"))
+        self.set_coords()
         self.set_building_year()
         self.set_address()
         self.update_labels()
