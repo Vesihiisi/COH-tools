@@ -10,14 +10,23 @@ class BeBruNl(Monument):
         location = self.plaats
         municip_dict = self.data_files["municipalities"]
         if location:
-            location_match = [x for x in municip_dict if x[
-                "itemLabel"] == location]
+            location_match = [x for x in municip_dict
+                              if x["itemLabel"] == location]
             if len(location_match) == 1:
                 self.add_statement("located_adm", location_match[0]["item"])
         else:
             self.add_statement("located_adm", brussel_region)
 
     def set_heritage(self):
+        """
+        Set heritage status with or without start date.
+
+        If possible to parse the date of when
+        the heritage status was assigned, add it
+        as qualifier to the heritage status property.
+        Otherwise, add default heritage status
+        without start date.
+        """
         if self.has_non_empty_attribute("beschermd"):
             prot_date = self.beschermd
             try:
@@ -39,8 +48,7 @@ class BeBruNl(Monument):
     def set_special_is(self):
         objtype = self.objtype.lower()
         types = self.data_files["type"]["mappings"]
-        special_types = [types[x]["items"]
-                         for x in types if x.lower() == objtype]
+        special_types = utils.get_matching_items_from_dict(objtype, types)
         if len(special_types) > 0:
             self.remove_statement("is")
             for q in special_types[0]:
