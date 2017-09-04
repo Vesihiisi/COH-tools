@@ -1,0 +1,22 @@
+{
+    "country": {
+        "item": "Q16",
+        "name": "Canada"
+    },
+    "country_code": "ca",
+    "default_is": {
+        "comment": "",
+        "item": "Q2065736",
+        "name": "Cultural property"
+    },
+    "heritage": {
+        "comment": "",
+        "item": "Q14469659",
+        "name": "heritage place of canada"
+    },
+    "language": "fr",
+    "unique": {
+        "comment": "canadian register of historic places",
+        "property": "P477"
+    }
+}
