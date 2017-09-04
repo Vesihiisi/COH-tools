@@ -248,7 +248,6 @@ def make_dataset(country, language):
     from AtDe import AtDe
     from DkBygningDa import DkBygningDa
     from DkFortidsDa import DkFortidsDa
-    from EeEt import EeEt
     from HuHu import HuHu
     from IeEn import IeEn
     from NoNo import NoNo
@@ -299,13 +298,6 @@ def make_dataset(country, language):
             "data_files": {
                 "functions": "se-bbr_(sv)_functions.json",
                 "settlements": "sweden_settlements.json"}},
-        "monuments_ee_(et)": {
-            "class": EeEt,
-            "data_files": {
-                "municipalities": "estonia_municipalities.json",
-                "settlements": "estonia_settlements.json"},
-            "lookup_downloads": {
-                "heritage_types": "ee (et)/types"}},
         "monuments_se-arbetsl_(sv)": {
             "class": SeArbetslSv,
             "data_files": {

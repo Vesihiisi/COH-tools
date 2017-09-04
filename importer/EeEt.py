@@ -1,5 +1,6 @@
-from Monument import Monument
+from Monument import Monument, Dataset
 import importer_utils as utils
+import importer as importer
 
 
 class EeEt(Monument):
@@ -137,3 +138,17 @@ class EeEt(Monument):
         self.set_is()
         self.set_location()
         self.set_wd_item(self.find_matching_wikidata(mapping))
+
+
+if __name__ == "__main__":
+    """Command line entry point for importer."""
+    args = importer.handle_args()
+    dataset = Dataset("ee", "et", EeEt)
+    dataset.data_files = {
+        "municipalities": "estonia_municipalities.json",
+        "settlements": "estonia_settlements.json"
+    }
+    dataset.lookup_downloads = {
+        "heritage_types": "ee (et)/types"
+    }
+    importer.main(args, dataset)
