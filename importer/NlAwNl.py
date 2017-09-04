@@ -18,6 +18,10 @@ class NlAwNl(Monument):
         nl = utils.remove_markup(self.omschrijving)
         self.add_label("nl", nl)
 
+    def update_descriptions(self):
+        desc = "cultural heritage monument in Aruba"
+        self.add_description("en", desc)
+
     def set_adm_location(self):
         aruba = "Q21203"
         self.add_statement("located_adm", aruba)
@@ -76,6 +80,7 @@ class NlAwNl(Monument):
         self.set_commonscat()
         self.set_inception()
         self.update_labels()
+        self.update_descriptions()
         self.set_wd_item(self.find_matching_wikidata(mapping))
 
 
