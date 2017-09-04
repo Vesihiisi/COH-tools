@@ -191,6 +191,17 @@ def q_from_first_wikilink(language, text):
         return
 
 
+def get_matching_items_from_dict(value, dict_name):
+    """
+    Return all items in a dict for which the label matches the provided value.
+
+    @param value: the value to match
+    @param dict_name: the dict to look in
+    """
+    return [dict_name[x]["items"]
+            for x in dict_name if x.lower() == value]
+
+
 def legit_year(text):
     year = None
     if text and text.isdigit():

@@ -24,6 +24,33 @@ class TestWLMStuff(unittest.TestCase):
         self.assertEqual(utils.create_wlm_url(dataset, lang, id_no), output)
 
 
+class TestDictionaryMethods(unittest.TestCase):
+
+    def setUp(self):
+        self.lookup_table = {
+            'Foo': {'items': ['Q7777'], 'count': '222'},
+            'Foo and cat': {'items': ['Q8888', 'Q1234'], 'count': '111'}
+        }
+
+    def test_get_matching_items_from_dict_one(self):
+        search_term = "foo"
+        output = [['Q7777']]
+        self.assertEqual(utils.get_matching_items_from_dict(
+            search_term, self.lookup_table), output)
+
+    def test_get_matching_items_from_dict_two(self):
+        search_term = "foo and cat"
+        output = [['Q8888', 'Q1234']]
+        self.assertEqual(utils.get_matching_items_from_dict(
+            search_term, self.lookup_table), output)
+
+    def test_get_matching_items_from_dict_none(self):
+        search_term = "bbb"
+        output = []
+        self.assertEqual(utils.get_matching_items_from_dict(
+            search_term, self.lookup_table), output)
+
+
 class TestStringMethods(unittest.TestCase):
 
     def test_contains_digit(self):
