@@ -1,0 +1,52 @@
+[
+    {
+        "item": "Q176",
+        "itemLabel": "Québec",
+        "iso": "CA-QC"
+    },
+    {
+        "item": "Q1904",
+        "itemLabel": "Ontario",
+        "iso": "CA-ON"
+    },
+    {
+        "item": "Q1948",
+        "itemLabel": "Manitoba",
+        "iso": "CA-MB"
+    },
+    {
+        "item": "Q1951",
+        "itemLabel": "Alberta",
+        "iso": "CA-AB"
+    },
+    {
+        "item": "Q1952",
+        "itemLabel": "Nouvelle-Écosse",
+        "iso": "CA-NS"
+    },
+    {
+        "item": "Q1965",
+        "itemLabel": "Nouveau-Brunswick",
+        "iso": "CA-NB"
+    },
+    {
+        "item": "Q1974",
+        "itemLabel": "Colombie-Britannique",
+        "iso": "CA-BC"
+    },
+    {
+        "item": "Q1979",
+        "itemLabel": "Île-du-Prince-Édouard",
+        "iso": "CA-PE"
+    },
+    {
+        "item": "Q1989",
+        "itemLabel": "Saskatchewan",
+        "iso": "CA-SK"
+    },
+    {
+        "item": "Q2003",
+        "itemLabel": "Terre-Neuve-et-Labrador",
+        "iso": "CA-NL"
+    }
+]
