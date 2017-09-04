@@ -301,7 +301,11 @@ def make_dataset(country, language):
                 "settlements": "sweden_settlements.json"}},
         "monuments_ee_(et)": {
             "class": EeEt,
-            "data_files": {"counties": "estonia_counties.json"}},
+            "data_files": {
+                "municipalities": "estonia_municipalities.json",
+                "settlements": "estonia_settlements.json"},
+            "lookup_downloads": {
+                "heritage_types": "ee (et)/types"}},
         "monuments_se-arbetsl_(sv)": {
             "class": SeArbetslSv,
             "data_files": {
