@@ -5,6 +5,15 @@ import importer as importer
 
 class CaFr(Monument):
 
+    def set_inception(self):
+        if self.has_non_empty_attribute("construction"):
+            if utils.legit_year(self.construction):
+                year = {"time_value": {"year": self.construction}}
+                self.add_statement("inception", year)
+            else:
+                self.add_to_report(
+                    "construction", self.construction, "inception")
+
     def set_heritage_id(self):
         self.add_statement("canadian_register", str(self.numero))
 
@@ -25,6 +34,7 @@ class CaFr(Monument):
         self.set_heritage()
         self.set_country()
         self.set_is()
+        self.set_inception()
         self.set_wd_item(self.find_matching_wikidata(mapping))
 
 
