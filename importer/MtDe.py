@@ -18,7 +18,7 @@ class MtDe(Monument):
         adm_q = utils.q_from_wikipedia("de", municip_raw)
         if adm_q is None:
             adm_iso_match = [x for x in self.data_files[
-                "regions"] if x["iso"] == self.region_iso]
+                "councils"] if x["iso"] == self.region_iso]
             if len(adm_iso_match) == 1:
                 adm_q = adm_iso_match[0]["item"]
 
