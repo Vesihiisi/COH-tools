@@ -71,13 +71,13 @@ class TestDictionaryMethods(unittest.TestCase):
 
     def test_get_matching_items_from_dict_one(self):
         search_term = "foo"
-        output = [['Q7777']]
+        output = ['Q7777']
         self.assertEqual(utils.get_matching_items_from_dict(
             search_term, self.lookup_table), output)
 
     def test_get_matching_items_from_dict_two(self):
         search_term = "foo and cat"
-        output = [['Q8888', 'Q1234']]
+        output = ['Q8888', 'Q1234']
         self.assertEqual(utils.get_matching_items_from_dict(
             search_term, self.lookup_table), output)
 

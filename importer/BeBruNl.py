@@ -53,7 +53,7 @@ class BeBruNl(Monument):
         special_types = utils.get_matching_items_from_dict(objtype, types)
         if len(special_types) > 0:
             self.remove_statement("is")
-            for q in special_types[0]:
+            for q in special_types:
                 self.add_statement("is", q)
 
     def set_style(self):
@@ -62,7 +62,7 @@ class BeBruNl(Monument):
             styles = self.data_files["style"]["mappings"]
             arch_style = utils.get_matching_items_from_dict(style_raw, styles)
             if len(arch_style) > 0:
-                for q in arch_style[0]:
+                for q in arch_style:
                     self.add_statement("architectural_style", q)
             else:
                 self.add_to_report(

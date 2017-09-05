@@ -198,8 +198,12 @@ def get_matching_items_from_dict(value, dict_name):
     @param value: the value to match
     @param dict_name: the dict to look in
     """
-    return [dict_name[x]["items"]
-            for x in dict_name if x.lower() == value]
+    matches = [dict_name[x]["items"]
+               for x in dict_name if x.lower() == value]
+    if len(matches) == 0:
+        return []
+    else:
+        return matches[0]
 
 
 def get_item_from_dict_by_key(dict_name,
