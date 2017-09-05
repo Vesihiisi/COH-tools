@@ -10,8 +10,8 @@ class BeBruNl(Monument):
         location = self.plaats
         municip_dict = self.data_files["municipalities"]
         if location:
-            location_match = [x for x in municip_dict
-                              if x["itemLabel"] == location]
+            location_match = utils.get_item_from_dict_by_key(
+                "itemLabel", location, municip_dict)
             if len(location_match) == 1:
                 self.add_statement("located_adm", location_match[0]["item"])
         else:
