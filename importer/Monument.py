@@ -255,13 +255,14 @@ class Monument(object):
             heritage = self.mapping["heritage"]
             self.add_statement("heritage_status", heritage["item"])
 
-    def set_coords(self, coord_keywords_tuple):
+    def set_coords(self, coord_keywords_tuple=None):
         """
         Add coordinates.
 
-        :param coord_keywords_tuple: names of the columns with
-            coordinates, like ("lat", "long")
+        :param coord_keywords_tuple: optionally, names of the columns with
+            coordinates -- by default ("lat", "lon")
         """
+        coord_keywords_tuple = coord_keywords_tuple or ("lat", "lon")
         lat = coord_keywords_tuple[0]
         lon = coord_keywords_tuple[1]
         if self.has_non_empty_attribute(lat):
@@ -272,6 +273,29 @@ class Monument(object):
                 longitude = getattr(self, lon)
                 self.add_statement(
                     "coordinates", (latitude, longitude))
+
+    def set_monuments_all_id(self, id_keyword):
+        """
+        Add self.monuments_all_id.
+
+        This is used in order to create url's
+        to the monument's post in the API
+        (used as sources).
+
+        :param id_keyword: the name of the column to be used
+        """
+        self.monuments_all_id = getattr(self, id_keyword)
+
+    def set_wlm_source(self):
+        """
+        Create default reference and embed in object.
+
+        Use the monuments_all_id to build url
+        to correct post in the API and make reference
+        to be used by default with all the statements.
+        """
+        wlm_source = self.create_wlm_source(self.monuments_all_id)
+        self.wlm_source = wlm_source
 
     def set_image(self, image_keyword="image"):
         """

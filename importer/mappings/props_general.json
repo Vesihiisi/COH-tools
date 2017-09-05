@@ -37,5 +37,7 @@
   "stated_in": "P248",
   "use": "P366",
   "width": "P2049",
-  "wlm_id": "P2186"
+  "wlm_id": "P2186",
+  "architectural_style": "P149",
+  "heritage_brussels": "P3600"
 }
