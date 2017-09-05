@@ -17,10 +17,12 @@ class MtDe(Monument):
         municip_raw = self.gemeinde
         adm_q = utils.q_from_wikipedia("de", municip_raw)
         if adm_q is None:
-            adm_iso_match = [x for x in self.data_files[
-                "councils"] if x["iso"] == self.region_iso]
+            adm_dict = self.data_files["councils"]
+            adm_iso_match = utils.get_item_from_dict_by_key(dict_name=adm_dict,
+                                                            search_term=self.region_iso,
+                                                            search_in="iso")
             if len(adm_iso_match) == 1:
-                adm_q = adm_iso_match[0]["item"]
+                adm_q = adm_iso_match[0]
 
         if adm_q:
             self.add_statement("located_adm", adm_q)
@@ -56,9 +58,6 @@ class MtDe(Monument):
                 placename = "{}, {}".format(municip_base, "Malta")
                 self.add_description(lg, descr.format(placename))
 
-    def set_monuments_all_id(self):
-        self.monuments_all_id = self.inventarnummer
-
     def set_heritage_id(self):
         id_no = self.inventarnummer.zfill(5)
         qual_url = {"described_at_url": self.registrant_url}
@@ -84,15 +83,15 @@ class MtDe(Monument):
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
                           data_files, existing, repository)
-        self.set_monuments_all_id()
+        self.set_monuments_all_id("inventarnummer")
         self.set_registrant_url()
         self.set_changed()
-        self.wlm_source = self.create_wlm_source(self.monuments_all_id)
+        self.set_wlm_source()
         self.set_country()
         self.set_heritage_id()
         self.set_image("foto")
         self.set_commonscat()
-        self.set_coords(("lat", "lon"))
+        self.set_coords()
         self.set_is()
         self.set_heritage()
         self.update_labels()
@@ -107,5 +106,4 @@ if __name__ == "__main__":
     args = importer.handle_args()
     dataset = Dataset("mt", "de", MtDe)
     dataset.data_files = {"councils": "malta_councils.json"}
-    dataset.lookup_downloads = {}
     importer.main(args, dataset)
