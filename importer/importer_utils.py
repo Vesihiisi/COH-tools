@@ -202,15 +202,31 @@ def get_matching_items_from_dict(value, dict_name):
             for x in dict_name if x.lower() == value]
 
 
-def get_item_from_dict_by_key(key_field, value, dict_name):
+def get_item_from_dict_by_key(dict_name,
+                              search_term,
+                              search_in,
+                              return_content_of="item"):
     """
     Return all items in a dict with a certain field match.
 
-    @param key_field: the field in which to look for matching value
-    @param value: the value to match
+    It will normally return the content of the field
+    'item' which is expected to contain a Q-item.
+    It is, however, possible to overwrite the name
+    of the field whose contents should be returned.
+
     @param dict_name: the dictionary to look in
+    @pram search_term: the value to match
+    @param search_in: the field in which to look for matching value
+    @param return_content_of: the field whose content to return
     """
-    return [x for x in dict_name if x[key_field] == value]
+    results = []
+    matches = [x for x in dict_name if x[search_in] == search_term]
+    if len(matches) == 0:
+        return []
+    else:
+        for match in matches:
+            results.append(match[return_content_of])
+        return results
 
 
 def legit_year(text):

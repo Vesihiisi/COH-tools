@@ -31,24 +31,43 @@ class TestDictionaryMethods(unittest.TestCase):
             'Foo': {'items': ['Q7777'], 'count': '222'},
             'Foo and cat': {'items': ['Q8888', 'Q1234'], 'count': '111'}
         }
-        self.query_results_table = [
-            {"name": "Foo", "iso_code": "222"},
-            {"name": "cat", "iso_code": "mjau"}
+        self.query_results_table_with_default_key = [
+            {"item": "Foo", "iso_code": "222"},
+            {"item": "cat", "iso_code": "mjau"}
+        ]
+        self.query_results_table_with_non_default_key = [
+            {"name": "Aaa", "iso_code": "55"},
+            {"name": "Ggg", "iso_code": "00"}
         ]
 
-    def test_get_item_from_dict_by_key_one(self):
+    def test_get_item_from_dict_by_key_one_default(self):
+        dic = self.query_results_table_with_default_key
         search_term = "mjau"
         key_field = "iso_code"
-        output = [{"name": "cat", "iso_code": "mjau"}]
-        self.assertEqual(utils.get_item_from_dict_by_key(
-            key_field, search_term, self.query_results_table), output)
+        output = ["cat"]
+        matches = utils.get_item_from_dict_by_key(
+            dict_name=dic, search_term=search_term, search_in=key_field)
+        self.assertEqual(matches, output)
+
+    def test_get_item_from_dict_by_key_one_non_default(self):
+        dic = self.query_results_table_with_non_default_key
+        search_term = "55"
+        key_field = "iso_code"
+        value_field = "name"
+        output = ["Aaa"]
+        matches = utils.get_item_from_dict_by_key(
+            dict_name=dic, search_term=search_term, search_in=key_field,
+            return_content_of=value_field)
+        self.assertEqual(matches, output)
 
     def test_get_item_from_dict_by_key_none(self):
         search_term = "999",
         key_field = "iso_code"
         output = []
-        self.assertEqual(utils.get_item_from_dict_by_key(
-            key_field, search_term, self.query_results_table), output)
+        dic = self.query_results_table_with_default_key
+        matches = utils.get_item_from_dict_by_key(
+            dict_name=dic, search_term=search_term, search_in=key_field)
+        self.assertEqual(matches, output)
 
     def test_get_matching_items_from_dict_one(self):
         search_term = "foo"
