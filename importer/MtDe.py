@@ -51,11 +51,13 @@ class MtDe(Monument):
             "en": "cultural property in {}",
             "mt": "propjeta' kulturali ġewwa {}"
         }
+
         placename = "Malta"
-        for lg, descr in patterns.items():
-            if self.has_non_empty_attribute("gemeinde"):
+        if self.has_non_empty_attribute("gemeinde"):
                 municip_base = utils.get_rid_of_brackets(self.gemeinde)
                 placename = "{}, {}".format(municip_base, "Malta")
+
+        for lg, descr in patterns.items():
                 self.add_description(lg, descr.format(placename))
 
     def set_heritage_id(self):
