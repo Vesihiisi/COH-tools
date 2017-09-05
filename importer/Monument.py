@@ -541,7 +541,7 @@ class Dataset(object):
         self.country = country
         self.language = language
         self.monument_class = monument_class
-        self.data_files = None
+        self.data_files = {}
         self.subclass_downloads = None
         self.lookup_downloads = None
 
