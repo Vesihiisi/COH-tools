@@ -9,13 +9,21 @@ class MtDe(Monument):
         """
         Set the administrative location.
 
-        Use the 'gemeinde' field as
-        municipality.
+        Use the 'gemeinde' field to resolve
+        municipality via wp link first, then if unable,
+        region-iso code via mapping.
         """
+        adm_q = None
         municip_raw = self.gemeinde
-        municip_q = utils.q_from_wikipedia("de", municip_raw)
-        if municip_q:
-            self.add_statement("located_adm", municip_q)
+        adm_q = utils.q_from_wikipedia("de", municip_raw)
+        if adm_q is None:
+            adm_iso_match = [x for x in self.data_files[
+                "regions"] if x["iso"] == self.region_iso]
+            if len(adm_iso_match) == 1:
+                adm_q = adm_iso_match[0]["item"]
+
+        if adm_q:
+            self.add_statement("located_adm", adm_q)
         else:
             self.add_to_report("gemeinde", self.gemeinde, "located_adm")
 
@@ -25,30 +33,36 @@ class MtDe(Monument):
             "en": self.name_en,
             "mt": self.name_mt
         }
-        for language in labels:
-            self.add_label(language, labels[language])
+        for lang, label in labels.items():
+            self.add_label(lang, label)
 
     def update_descriptions(self):
         """
-        Set the descriptions in English.
+        Set the descriptions in en and mt.
 
         Try to add the place name. Since the municipality
         names are titles of articles, sometimes they
         have the form of "$municipality (Malta)", in which
         case remove the bracketed part.
         """
+        patterns = {
+            "en": "cultural property in {}",
+            "mt": "propjeta' kulturali ġewwa {}"
+        }
         placename = "Malta"
-        description = "cultural property in {}"
-        if self.has_non_empty_attribute("gemeinde"):
-            municip_base = utils.get_rid_of_brackets(self.gemeinde)
-            placename = "{}, {}".format(municip_base, "Malta")
-        self.add_description("en", description.format(placename))
+        for lg, descr in patterns.items():
+            if self.has_non_empty_attribute("gemeinde"):
+                municip_base = utils.get_rid_of_brackets(self.gemeinde)
+                placename = "{}, {}".format(municip_base, "Malta")
+                self.add_description(lg, descr.format(placename))
 
     def set_monuments_all_id(self):
         self.monuments_all_id = self.inventarnummer
 
     def set_heritage_id(self):
-        self.add_statement("malta_monument_id", self.inventarnummer)
+        id_no = self.inventarnummer.zfill(5)
+        qual_url = {"described_at_url": self.registrant_url}
+        self.add_statement("malta_monument_id", id_no, qual_url)
 
     def set_street_address(self):
         """
@@ -71,6 +85,7 @@ class MtDe(Monument):
         Monument.__init__(self, db_row_dict, mapping,
                           data_files, existing, repository)
         self.set_monuments_all_id()
+        self.set_registrant_url()
         self.set_changed()
         self.wlm_source = self.create_wlm_source(self.monuments_all_id)
         self.set_country()
@@ -91,6 +106,6 @@ if __name__ == "__main__":
     """Point of entrance for importer."""
     args = importer.handle_args()
     dataset = Dataset("mt", "de", MtDe)
-    dataset.data_files = {}
+    dataset.data_files = {"councils": "malta_councils.json"}
     dataset.lookup_downloads = {}
     importer.main(args, dataset)
