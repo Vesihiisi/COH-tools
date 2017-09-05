@@ -11,9 +11,11 @@ class BeBruNl(Monument):
         municip_dict = self.data_files["municipalities"]
         if location:
             location_match = utils.get_item_from_dict_by_key(
-                "itemLabel", location, municip_dict)
+                dict_name=municip_dict,
+                search_term=location,
+                search_in="itemLabel")
             if len(location_match) == 1:
-                self.add_statement("located_adm", location_match[0]["item"])
+                self.add_statement("located_adm", location_match)
         else:
             self.add_statement("located_adm", brussel_region)
 
