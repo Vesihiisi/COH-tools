@@ -1,0 +1,21 @@
+{
+    "country": {
+        "item": "Q31",
+        "name": "Belgium"
+    },
+    "country_code": "be",
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "Q19346745",
+        "name": "protected heritage site in Brussels "
+    },
+    "language": "nl",
+    "table_name": "be-bru",
+    "unique": {
+        "comment": "protected heritage site in Brussels ID",
+        "property": "P3600"
+    }
+}
