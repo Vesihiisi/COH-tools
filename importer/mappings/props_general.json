@@ -10,6 +10,7 @@
   "czech_monument_id": "P762",
   "draft": "P2262",
   "denkXweb": "P1769",
+  "described_at_url": "P973",
   "estonian_monument_id": "P2948",
   "has_parts_of_class": "P2670",
   "heritage_status": "P1435",
@@ -38,5 +39,7 @@
   "stated_in": "P248",
   "use": "P366",
   "width": "P2049",
-  "wlm_id": "P2186"
+  "wlm_id": "P2186",
+  "architectural_style": "P149",
+  "heritage_brussels": "P3600"
 }
