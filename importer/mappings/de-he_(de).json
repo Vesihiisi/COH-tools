@@ -1,6 +1,6 @@
 {
     "country": {
-        "item": "Q40",
+        "item": "Q183",
         "name": "Germany"
     },
     "country_code": "de",
@@ -10,7 +10,7 @@
     },
     "heritage": {
         "item": "Q11691318",
-        "name": "kulturdenkmal"
+        "name": "Kulturdenkmal"
     },
     "language": "de",
     "table_name": "de-he",
