@@ -260,7 +260,7 @@ class Monument(object):
         Add coordinates.
 
         :param coord_keywords_tuple: optionally, names of the columns with
-            coordinates -- by default ("lat", "long")
+            coordinates -- by default ("lat", "lon")
         """
         coord_keywords_tuple = coord_keywords_tuple or ("lat", "lon")
         lat = coord_keywords_tuple[0]

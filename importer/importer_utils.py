@@ -202,6 +202,17 @@ def get_matching_items_from_dict(value, dict_name):
             for x in dict_name if x.lower() == value]
 
 
+def get_item_from_dict_by_key(key_field, value, dict_name):
+    """
+    Return all items in a dict with a certain field match.
+
+    @param key_field: the field in which to look for matching value
+    @param value: the value to match
+    @param dict_name: the dictionary to look in
+    """
+    return [x for x in dict_name if x[key_field] == value]
+
+
 def legit_year(text):
     year = None
     if text and text.isdigit():

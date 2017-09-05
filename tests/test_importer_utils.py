@@ -31,6 +31,24 @@ class TestDictionaryMethods(unittest.TestCase):
             'Foo': {'items': ['Q7777'], 'count': '222'},
             'Foo and cat': {'items': ['Q8888', 'Q1234'], 'count': '111'}
         }
+        self.query_results_table = [
+            {"name": "Foo", "iso_code": "222"},
+            {"name": "cat", "iso_code": "mjau"}
+        ]
+
+    def test_get_item_from_dict_by_key_one(self):
+        search_term = "mjau"
+        key_field = "iso_code"
+        output = [{"name": "cat", "iso_code": "mjau"}]
+        self.assertEqual(utils.get_item_from_dict_by_key(
+            key_field, search_term, self.query_results_table), output)
+
+    def test_get_item_from_dict_by_key_none(self):
+        search_term = "999",
+        key_field = "iso_code"
+        output = []
+        self.assertEqual(utils.get_item_from_dict_by_key(
+            key_field, search_term, self.query_results_table), output)
 
     def test_get_matching_items_from_dict_one(self):
         search_term = "foo"
