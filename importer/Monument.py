@@ -403,11 +403,17 @@ class Monument(object):
     def exists_with_monument_article(self,
                                      language,
                                      article_keyword="monument_article"):
-        """Get the Wikidata item connected to monument_article (or equivalent), if any."""
+        """
+        Get the wd item connected to monument_article (or equivalent), if any.
+
+        Ignore if the linked article contains # in the title,
+        indicating a section.
+        """
         if self.has_non_empty_attribute(article_keyword):
-            wd_item = utils.q_from_wikipedia(
-                language, getattr(self, article_keyword))
-            return wd_item
+            article_title = getattr(self, article_keyword)
+            if "#" not in article_title:
+                wd_item = utils.q_from_wikipedia(language, article_title)
+                return wd_item
         else:
             return None
 
