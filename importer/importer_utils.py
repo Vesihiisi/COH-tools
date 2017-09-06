@@ -171,9 +171,11 @@ def q_from_wikipedia(language, page_title):
     summary = summary.format(page_title, language)
     wd_repo = create_site_instance("wikidata", "wikidata")
     wdstuff = wds(wd_repo, edit_summary=summary)
-    if page.exists() and not page.isDisambig():
+    if page.exists():
         if page.isRedirectPage():
             page = page.getRedirectTarget()
+        if page.isDisambig():
+            return
         try:
             item = pywikibot.ItemPage.fromPage(page)
         except pywikibot.NoPage:
