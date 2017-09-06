@@ -70,7 +70,7 @@ class Uploader(object):
         return pywikibot.WbTime(**value)
 
     def make_q_item(self, q_number):
-        """Create a regular Item."""
+        """Create a regular Item, if target is not a disambiguation."""
         q_item = None
         disambiguation_page = "Q4167410"
         instances = utils.get_P31(q_number, self.repo)
