@@ -5,6 +5,7 @@ from os import path
 
 MAPPING_DIR = "mappings"
 PROPS = utils.load_json(path.join(MAPPING_DIR, "props_general.json"))
+P31_BLACKLIST = utils.load_json(path.join(MAPPING_DIR, "P31_blacklist.json"))
 
 
 class Uploader(object):
@@ -212,7 +213,8 @@ class Uploader(object):
         Determine WD item to manipulate.
 
         In live mode, if data object has associated WD item,
-        edit it. Otherwise, create a new WD item.
+        check whether it doesn't have a disallowed P31,
+        and if it doesn't edit it. Otherwise, create a new WD item.
         In sandbox mode, all edits are done on the WD Sandbox item.
         """
         if self.live:
@@ -220,9 +222,18 @@ class Uploader(object):
                 self.wd_item = self.create_new_item(self.log)
                 self.wd_item_q = self.wd_item.getID()
             else:
+                disallowed = [x["item"] for x in P31_BLACKLIST]
                 item_q = self.data["wd-item"]
-                self.wd_item = self.wdstuff.QtoItemPage(item_q)
-                self.wd_item_q = item_q
+                itemP31 = utils.get_P31(item_q, self.repo)
+                if len(set(disallowed).intersection(set(itemP31))) > 0:
+                    # this means one of this item's P31's is in the
+                    # disallowed list so we do
+                    # the same as when self.data["wd-item"] is None
+                    self.wd_item = self.create_new_item(self.log)
+                    self.wd_item_q = self.wd_item.getID()
+                else:
+                    self.wd_item = self.wdstuff.QtoItemPage(item_q)
+                    self.wd_item_q = item_q
         else:
             self.wd_item = self.wdstuff.QtoItemPage(self.TEST_ITEM)
             self.wd_item_q = self.TEST_ITEM
