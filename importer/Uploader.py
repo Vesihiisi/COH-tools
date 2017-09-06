@@ -68,9 +68,14 @@ class Uploader(object):
         value = quantity['time_value']
         return pywikibot.WbTime(**value)
 
-    def make_q_item(self, qnumber):
+    def make_q_item(self, q_number):
         """Create a regular Item."""
-        return self.wdstuff.QtoItemPage(qnumber)
+        q_item = None
+        disambiguation_page = "Q4167410"
+        instances = utils.get_P31(q_number, self.repo)
+        if disambiguation_page not in instances:
+            q_item = self.wdstuff.QtoItemPage(q_number)
+        return q_item
 
     def item_has_prop(self, property_name, wd_item):
         """
