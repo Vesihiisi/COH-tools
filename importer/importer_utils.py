@@ -98,6 +98,7 @@ def remove_markup(text):
     if "[" in text:
         text = wparser.parse(text)
         text = text.strip_code()
+    text = text.replace("&nbsp;", " ")
     return remove_multiple_spaces(text.strip())
 
 

@@ -318,6 +318,11 @@ class TestWikitext(unittest.TestCase):
         output = "Tegera Arena, huvudentrén"
         self.assertEqual(utils.remove_markup(text), output)
 
+    def test_remove_markup_nonbreaking_space(self):
+        text = "abc&nbsp;abc"
+        output = "abc abc"
+        self.assertEqual(utils.remove_markup(text), output)
+
     def test_remove_markup_pipe(self):
         text = "[[Tegera Arena|Arenan]], huvudentrén"
         output = "Arenan, huvudentrén"
