@@ -174,6 +174,8 @@ def q_from_wikipedia(language, page_title):
     if page.exists():
         if page.isRedirectPage():
             page = page.getRedirectTarget()
+        if page.isDisambig():
+            return
         try:
             item = pywikibot.ItemPage.fromPage(page)
         except pywikibot.NoPage:

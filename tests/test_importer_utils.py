@@ -564,6 +564,10 @@ class TestWikipedia(unittest.TestCase):
         self.assertIsNone(
             utils.q_from_wikipedia("sv", "This page does not exist"))
 
+    def test_q_from_wikipedia_disambig(self):
+        wiki_page = utils.q_from_wikipedia("fi", "1 (täsmennyssivu)")
+        self.assertIsNone(wiki_page)
+
     def test_q_from_first_wikilink(self):
         text = ("'''Norrala socken'''"
                 " ligger i [[Hälsingland]], ingår sedan 1971 i "
