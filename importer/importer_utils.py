@@ -98,7 +98,6 @@ def remove_markup(text):
     if "[" in text:
         text = wparser.parse(text)
         text = text.strip_code()
-    text = text.replace("&nbsp;", " ")
     return remove_multiple_spaces(text.strip())
 
 
@@ -175,6 +174,8 @@ def q_from_wikipedia(language, page_title):
     if page.exists():
         if page.isRedirectPage():
             page = page.getRedirectTarget()
+        if page.isDisambig():
+            return
         try:
             item = pywikibot.ItemPage.fromPage(page)
         except pywikibot.NoPage:
