@@ -171,7 +171,7 @@ def q_from_wikipedia(language, page_title):
     summary = summary.format(page_title, language)
     wd_repo = create_site_instance("wikidata", "wikidata")
     wdstuff = wds(wd_repo, edit_summary=summary)
-    if page.exists():
+    if page.exists() and not page.isDisambig():
         if page.isRedirectPage():
             page = page.getRedirectTarget()
         try:
