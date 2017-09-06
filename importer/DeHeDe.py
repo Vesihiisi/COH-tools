@@ -14,7 +14,6 @@ class DeHeDe(Monument):
                 self.add_to_report("ortsteil", self.ortsteil, "location")
 
     def set_adm_location(self):
-        city_q = None
         city_q = utils.q_from_wikipedia("de", self.stadt)
         if city_q:
             self.add_statement("located_adm", city_q)
@@ -51,8 +50,7 @@ class DeHeDe(Monument):
         self.add_label("de", german)
 
     def set_heritage_id(self):
-        described_qual = {"described_at_url": self.registrant_url}
-        self.add_statement("denkXweb", str(self.nummer), described_qual)
+        self.add_statement("denkXweb", str(self.nummer))
 
     def set_street_address(self):
         """
@@ -79,7 +77,7 @@ class DeHeDe(Monument):
                           data_files, existing, repository)
         self.set_monuments_all_id("nummer")
         self.set_changed()
-        self.wlm_source = self.create_wlm_source(self.monuments_all_id)
+        self.set_wlm_source()
         self.set_source()
         self.set_registrant_url()
         self.set_image("bild")
