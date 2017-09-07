@@ -2,6 +2,7 @@
 # -*- coding: utf-8  -*-
 import json
 import re
+import os
 import mwparserfromhell as wparser
 import string
 import pywikibot
@@ -32,6 +33,22 @@ def json_to_file(filename, json_content):
                   ensure_ascii=False,
                   default=datetime_convert)
         print("SAVED FILE " + filename)
+
+
+def create_dir(out_path):
+    """
+    Create a directory if it doesn't exist.
+
+    @param out_path: directory to create
+    """
+    if not out_path:
+        raise ValueError('Cannot a create directory without a name.')
+    if not os.path.exists(out_path):
+        os.mkdir(out_path)
+    elif os.path.isfile(out_path):
+        raise ValueError(
+            'Cannot create the directory "{}" as a file with that name '
+            'already exists.'.format(out_path))
 
 
 def get_specific_table_name(countryname, languagename):
@@ -216,6 +233,44 @@ def parse_year(text):
     return year
 
 
+def get_longest_string(in_list):
+    """
+    Get the longest string(s) in a list.
+
+    :param in_list: list of strings
+    :return: single string if there's only one with the max length,
+             or a list of strings if there are several.
+    """
+    if len(in_list) == 0:
+        return None
+    max_length = max(len(x) for x in in_list)
+    matches = [x for x in in_list if len(x) == max_length]
+    if len(matches) == 1:
+        return matches[0]
+    else:
+        return matches
+
+
+def get_longest_match(word, keywords):
+    """
+    Given a list of keywords, get longest keyword that overlaps with input.
+
+    A naive attempt to match words in languages that use
+    compound nouns written together. Given a string and a list of
+    keywords, return the longest of these keywords that's
+    contained in the input string. That way, if the keyword list
+    contains both a simple word ("bro") and its compound ("järnvägsbro"),
+    we only get the more specific one:
+        * "götaälvsbron" -> "bro"
+        * "en stor järnvägsbro" -> "järnvägsbro"
+    """
+    matches = []
+    for k in keywords:
+        if k in word:
+            matches.append(k)
+    return get_longest_string(matches)
+
+
 def remove_characters(text, string_of_chars_to_remove):
     translator = str.maketrans(
         {key: None for key in string_of_chars_to_remove})
@@ -272,6 +327,11 @@ def get_last_char(text):
 
 def last_char_is_vowel(text):
     return is_vowel(get_last_char(text))
+
+
+def first_char_is_number(text):
+    """Check if string starts with a number."""
+    return text[0].isdigit()
 
 
 def socken_to_q(socken, landskap):
