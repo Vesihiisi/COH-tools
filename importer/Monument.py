@@ -286,6 +286,7 @@ class Monument(object):
         """
         self.monuments_all_id = str(getattr(self, id_keyword))
 
+
     def set_wlm_source(self):
         """
         Create default reference and embed in object.
