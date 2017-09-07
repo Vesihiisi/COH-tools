@@ -78,7 +78,7 @@ class Uploader(object):
             q_item = self.wdstuff.QtoItemPage(q_number)
             if self.wd_item_q and self.wd_item_q == q_item:
                 q_item = None
-        return q_item
+            return q_item
 
     def item_has_prop(self, property_name, wd_item):
         """
