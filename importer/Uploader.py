@@ -76,6 +76,8 @@ class Uploader(object):
         instances = utils.get_P31(q_number, self.repo)
         if disambiguation_page not in instances:
             q_item = self.wdstuff.QtoItemPage(q_number)
+            if self.wd_item_q and self.wd_item_q == q_item:
+                q_item = None
         return q_item
 
     def item_has_prop(self, property_name, wd_item):
@@ -229,6 +231,9 @@ class Uploader(object):
                     # this means one of this item's P31's is in the
                     # disallowed list so we do
                     # the same as when self.data["wd-item"] is None
+                    if self.log:
+                        message = "{} -- SET AS WD-ITEM BUT POSSIBLY WRONG AND THUS REMOVED".format(item_q)
+                        self.log.logit(message)
                     self.wd_item = self.create_new_item(self.log)
                     self.wd_item_q = self.wd_item.getID()
                 else:
