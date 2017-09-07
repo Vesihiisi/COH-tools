@@ -33,14 +33,18 @@ class NlAwNl(Monument):
             if utils.count_wikilinks(self.plaats) == 1:
                 loc_q = utils.q_from_first_wikilink("nl", self.plaats)
             else:
-                loc_match = [x for x in loc_dic if x[
-                    "itemLabel"] == self.plaats]
+
+                loc_match = utils.get_item_from_dict_by_key(dict_name=loc_dic,
+                                                            search_term=self.plaats,
+                                                            search_in="itemLabel",
+                                                            return_content_of="item")
                 if len(loc_match) == 1:
-                    loc_q = loc_match[0]["item"]
-        if loc_q:
-            self.add_statement("location", loc_q)
-        else:
-            self.add_to_report("plaats", self.plaats, "location")
+                    loc_q = loc_match[0]
+                    print(loc_q)
+            if loc_q:
+                self.add_statement("location", loc_q)
+            else:
+                self.add_to_report("plaats", self.plaats, "location")
 
     def set_inception(self):
         if self.has_non_empty_attribute("bouwjaar"):
@@ -51,31 +55,24 @@ class NlAwNl(Monument):
                 self.add_to_report("bouwjaar", self.bouwjaar, "inception")
 
     def set_heritage_id(self):
-        country = self.mapping["country_code"].upper()
-        wlm = "{}-{}".format(country, str(self.objectnr))
+        wlm_name = self.mapping["table_name"].upper()
+        wlm = "{}-{}".format(wlm_name, str(self.objectnr))
         self.add_statement("wlm_id", wlm)
-
-    def set_monuments_all_id(self):
-        """Map which column name in specific table to  ID in monuments_all."""
-        self.monuments_all_id = self.objectnr
-
-    def exists_with_monument_article(self, language):
-        return super().exists_with_monument_article("nl", "monument_article")
 
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
                           data_files, existing, repository)
-        self.set_monuments_all_id()
+        self.set_monuments_all_id("objectnr")
         self.set_changed()
-        self.wlm_source = self.create_wlm_source(self.monuments_all_id)
+        self.set_wlm_source()
         self.set_heritage_id()
         self.set_heritage()
         self.set_country()
+        self.set_coords()
         self.set_location()
         self.set_adm_location()
         self.set_address()
         self.set_is()
-        self.set_coords(("lat", "lon"))
         self.set_image()
         self.set_commonscat()
         self.set_inception()
@@ -89,5 +86,4 @@ if __name__ == "__main__":
     args = importer.handle_args()
     dataset = Dataset("nl-aw", "nl", NlAwNl)
     dataset.data_files = {"settlements": "aruba_settlements.json"}
-    dataset.lookup_downloads = {}
     importer.main(args, dataset)
