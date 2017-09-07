@@ -284,7 +284,7 @@ class Monument(object):
 
         :param id_keyword: the name of the column to be used
         """
-        self.monuments_all_id = getattr(self, id_keyword)
+        self.monuments_all_id = str(getattr(self, id_keyword))
 
     def set_wlm_source(self):
         """

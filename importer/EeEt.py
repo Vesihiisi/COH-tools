@@ -5,10 +5,6 @@ import importer as importer
 
 class EeEt(Monument):
 
-    def update_labels(self):
-        """Add label in Estonian."""
-        self.set_labels("et", self.nimi)
-
     def set_descriptions(self):
         """Add descriptions in Swedish and English."""
         short_d = {"en": "cultural property in Estonia",
@@ -51,7 +47,7 @@ class EeEt(Monument):
             except IndexError:
                 return
 
-    def set_no(self):
+    def set_heritage_id(self):
         """Set Estonian cultural monument ID (P2948)."""
         register_no = str(self.registrant_url.split("=")[-1])
         self.add_statement("estonian_monument_id", register_no)
@@ -82,10 +78,6 @@ class EeEt(Monument):
         except IndexError:
             self.add_to_report("omavalitsus", self.omavalitsus, "located_adm")
 
-    def set_monuments_all_id(self):
-        """Map which column name in specific table to  ID in monuments_all."""
-        self.monuments_all_id = str(self.number)
-
     def set_location(self):
         """
         Set the location property, P276, based on aadress.
@@ -111,32 +103,34 @@ class EeEt(Monument):
         if len(wikilinks) == 1:
             glossary = self.data_files["settlements"]
             target_name = wikilinks[0].title
-            target_item = [x["item"]
-                           for x in glossary
-                           if x["itemLabel"] == target_name]
-            try:
+            target_item = utils.get_item_from_dict_by_key(dict_name=glossary,
+                                                          search_term=target_name,
+                                                          search_in="itemLabel",)
+            if len(target_item) == 1:
                 self.add_statement("location", target_item[0])
-            except IndexError:
+            else:
                 self.add_to_report("aadress", self.aadress, "location")
+        else:
+            self.add_to_report("aadress", self.aadress, "location")
 
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
                           data_files, existing, repository)
         self.set_changed()
-        self.set_monuments_all_id()
-        self.update_labels()
-        self.set_descriptions()
-        self.wlm_source = self.create_wlm_source(self.monuments_all_id)
+        self.set_monuments_all_id("number")
+        self.set_wlm_source()
+        self.set_heritage_id()
+        self.set_heritage()
+        self.set_coords()
         self.set_commonscat()
         self.set_image("pilt")
-        self.set_coords(("lat", "lon"))
-        self.set_no()
         self.set_country()
         self.set_adm_location()
-        self.set_heritage()
         self.update_heritage()
         self.set_is()
         self.set_location()
+        self.set_labels("et", self.nimi)
+        self.set_descriptions()
         self.set_wd_item(self.find_matching_wikidata(mapping))
 
 
