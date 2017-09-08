@@ -1,0 +1,96 @@
+from Monument import Monument, Dataset
+import importer_utils as utils
+import importer as importer
+
+
+class IrFa(Monument):
+
+    def update_labels(self):
+        name = utils.remove_markup(self.name)
+        self.add_label("fa", name)
+
+    def update_descriptions(self):
+        desc = "Iranian national heritage site"
+        self.add_description("en", desc)
+
+    def convert_fa_date_to_iso(self):
+        """
+        Convert the farsi date to standard iso format
+        """
+        self.registration_date
+        raise NotImplementedError
+
+
+    def set_adm_location(self):
+        adm_q = None
+        adm_dic = self.data_files["provinces"]
+        if self.has_non_empty_attribute("ISO"):
+            adm_match = utils.get_item_from_dict_by_key(
+                dict_name=adm_dic,
+                search_term=self.ISO,
+                search_in="iso")
+            if len(adm_match) == 1:
+                adm_q = adm_match[0]
+
+            if adm_q:
+                self.add_statement("located_adm", adm_q)
+            else:
+                self.add_to_report(
+                    "ISO", self.ISO, "located_adm")
+
+    # not ready
+    def set_location(self):
+        if self.has_non_empty_attribute("city"):
+            raise NotImplementedError
+
+    # not ready
+    def set_heritage(self):
+        """Set the heritage status, using mapping file."""
+        if self.has_non_empty_attribute("registration_date"):
+            iso_date = self.convert_fa_date_to_iso()
+            if iso_date:
+                date_dict = utils.date_to_dict(iso_date, "%d/%m/%Y")  # wrong format?
+                qualifier = {"start_time": {"time_value": date_dict}}
+                heritage = self.mapping["heritage"]["item"]
+                self.add_statement("heritage_status", heritage, qualifier)
+        else
+            super.set_heritage()
+
+    # check that these are always ok
+    def set_address(self):
+        if self.has_non_empty_attribute("address"):
+            self.add_statement("located_street", self.address)
+
+    def set_heritage_id(self):
+        self.add_statement("heritage_iran", self.id)
+
+    def __init__(self, db_row_dict, mapping, data_files, existing, repository):
+        Monument.__init__(self, db_row_dict, mapping,
+                          data_files, existing, repository)
+        self.set_monuments_all_id("id")
+        self.set_changed()
+        self.set_wlm_source()
+        self.set_heritage_id()
+        self.set_heritage()
+        self.set_country()
+        self.set_coords()
+        self.set_adm_location()
+        self.set_address()
+        self.set_is()  # can we do it so that it only sets this if it doesn't already exist?
+        self.set_image()
+        self.set_commonscat()
+        self.update_labels()
+        self.update_descriptions()
+        self.set_wd_item(self.find_matching_wikidata(mapping))
+
+
+if __name__ == "__main__":
+    """Command line entry point for importer."""
+    args = importer.handle_args()
+    dataset = Dataset("ir", "fa", IrFa)
+    dataset.data_files = {
+        "provinces": "iran_provinces.json"
+    }
+    dataset.lookup_downloads = {
+    }
+    importer.main(args, dataset)
