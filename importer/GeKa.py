@@ -45,11 +45,11 @@ class GeKa(Monument):
 
     def set_adm_location(self):
         adm_q = None
-        adm_dic = self.data_files["districts"]
+        adm_dic = self.data_files["admin"]
         if self.has_non_empty_attribute("municipality"):
             if utils.count_wikilinks(self.municipality) == 1:
                 adm_try = utils.q_from_first_wikilink("ka", self.municipality)
-                # ensure this is a district
+                # ensure this is an administrative unit
                 if any(x['item'] == adm_try for x in adm_dic):
                     adm_q = adm_try
             else:
@@ -128,7 +128,7 @@ if __name__ == "__main__":
     args = importer.handle_args()
     dataset = Dataset("ge", "ka", GeKa)
     dataset.data_files = {
-        "districts": "georgia_districts.json"
+        "admin": "georgia_admin.json"
     }
     dataset.lookup_downloads = {
         "types": "ge (ka)/types"
