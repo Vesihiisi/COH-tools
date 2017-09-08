@@ -21,8 +21,8 @@ class GeKa(Monument):
         Types may include NATIONAL_IMPORTANCE_STR which should be used only
         for heritage status.
         """
-        raw_type = self.type.lower()
-        raw_type = raw_type.replace("<br />", ",")
+        raw_type = self.type.replace("<br />", ",")
+        raw_type = utils.remove_markup(raw_type)
         types = [typ.strip() for typ in raw_type.split(',')]
         if self.NATIONAL_IMPORTANCE_STR in types:
             types.remove(self.NATIONAL_IMPORTANCE_STR)
