@@ -1,3 +1,4 @@
+from dateparser.calendars.jalali import JalaliCalendar
 from Monument import Monument, Dataset
 import importer_utils as utils
 import importer as importer
@@ -12,14 +13,6 @@ class IrFa(Monument):
     def update_descriptions(self):
         desc = "Iranian national heritage site"
         self.add_description("en", desc)
-
-    def convert_fa_date_to_iso(self):
-        """
-        Convert the farsi date to standard iso format
-        """
-        self.registration_date
-        raise NotImplementedError
-
 
     def set_adm_location(self):
         adm_q = None
@@ -47,13 +40,14 @@ class IrFa(Monument):
     def set_heritage(self):
         """Set the heritage status, using mapping file."""
         if self.has_non_empty_attribute("registration_date"):
-            iso_date = self.convert_fa_date_to_iso()
+            iso_date = JalaliCalendar(self.registration_date).get_date()
             if iso_date:
-                date_dict = utils.date_to_dict(iso_date, "%d/%m/%Y")  # wrong format?
+                date_dict = utils.datetime_to_dict(
+                    iso_date.get('date_obj'), "%Y%m%d")
                 qualifier = {"start_time": {"time_value": date_dict}}
                 heritage = self.mapping["heritage"]["item"]
                 self.add_statement("heritage_status", heritage, qualifier)
-        else
+        else:
             super.set_heritage()
 
     # check that these are always ok
