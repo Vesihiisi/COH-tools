@@ -49,8 +49,7 @@ class EeEt(Monument):
 
     def set_heritage_id(self):
         """Set Estonian cultural monument ID (P2948)."""
-        register_no = str(self.registrant_url.split("=")[-1])
-        self.add_statement("estonian_monument_id", register_no)
+        self.add_statement("estonian_monument_id", self.number)
 
     def set_adm_location(self):
         """
