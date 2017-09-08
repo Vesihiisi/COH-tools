@@ -81,6 +81,22 @@ class GeKa(Monument):
         else:
             super().set_heritage()
 
+    def set_address(self):
+        """
+        Set the street address.
+
+        Only if the 'address' field contains a digit.
+        Form the address as "$address, $municipality".
+        """
+        if self.has_non_empty_attribute("address"):
+            if utils.contains_digit(self.address):
+                address = utils.remove_markup(self.address)
+                placename = utils.remove_markup(self.municipality)
+                street_address = "{}, {}".format(address, placename)
+                self.add_statement("located_street", street_address)
+            else:
+                self.add_to_report("address", self.address, "located_street")
+
     def set_heritage_id(self):
         self.add_statement("heritage_georgia", self.id)
 
@@ -97,7 +113,7 @@ class GeKa(Monument):
         self.set_country()
         self.set_coords()
         self.set_adm_location()
-        # self.set_address()  # use self.address as location or address
+        self.set_address()
         self.set_is()
         self.set_image()
         self.set_commonscat()
