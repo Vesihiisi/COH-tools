@@ -15,38 +15,20 @@ class IrFa(Monument):
         self.add_description("en", desc)
 
     def set_adm_location(self):
-        adm_q = None
-        adm_dic = self.data_files["provinces"]
-        if self.has_non_empty_attribute("ISO"):
-            adm_match = utils.get_item_from_dict_by_key(
-                dict_name=adm_dic,
-                search_term=self.ISO,
-                search_in="iso")
-            if len(adm_match) == 1:
-                adm_q = adm_match[0]
-
-            if adm_q:
-                self.add_statement("located_adm", adm_q)
-            else:
-                self.add_to_report(
-                    "ISO", self.ISO, "located_adm")
+        self.set_from_dict_match(
+            lookup_dict=self.data_files["provinces"],
+            dict_label="iso",
+            value_label="ISO",
+            prop="located_adm"
+        )
 
     def set_location(self):
-        city_q = None
-        city_dic = self.data_files["cities"]
-        if self.has_non_empty_attribute("city"):
-            adm_match = utils.get_item_from_dict_by_key(
-                dict_name=city_dic,
-                search_term=self.city,
-                search_in="itemLabel")
-            if len(adm_match) == 1:
-                city_q = adm_match[0]
-
-            if city_q:
-                self.add_statement("location", city_q)
-            else:
-                self.add_to_report(
-                    "city", self.city, "location")
+        self.set_from_dict_match(
+            lookup_dict=self.data_files["cities"],
+            dict_label="itemLabel",
+            value_label="city",
+            prop="location"
+        )
 
     def set_heritage(self):
         """Set the heritage status, using mapping file."""
