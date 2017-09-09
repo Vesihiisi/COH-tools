@@ -64,7 +64,7 @@ class IrFa(Monument):
         self.set_adm_location()
         self.set_location()
         self.set_address()
-        self.set_is()  # can we do it so that it only sets this if it doesn't already exist?
+        self.set_is()
         self.set_image()
         self.set_commonscat()
         self.update_labels()
