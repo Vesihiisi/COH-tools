@@ -31,12 +31,23 @@ class IrFa(Monument):
                 self.add_to_report(
                     "ISO", self.ISO, "located_adm")
 
-    # not ready
     def set_location(self):
+        city_q = None
+        city_dic = self.data_files["cities"]
         if self.has_non_empty_attribute("city"):
-            raise NotImplementedError
+            adm_match = utils.get_item_from_dict_by_key(
+                dict_name=city_dic,
+                search_term=self.city,
+                search_in="itemLabel")
+            if len(adm_match) == 1:
+                city_q = adm_match[0]
 
-    # not ready
+            if city_q:
+                self.add_statement("location", city_q)
+            else:
+                self.add_to_report(
+                    "city", self.city, "location")
+
     def set_heritage(self):
         """Set the heritage status, using mapping file."""
         if self.has_non_empty_attribute("registration_date"):
@@ -69,6 +80,7 @@ class IrFa(Monument):
         self.set_country()
         self.set_coords()
         self.set_adm_location()
+        self.set_location()
         self.set_address()
         self.set_is()  # can we do it so that it only sets this if it doesn't already exist?
         self.set_image()
@@ -83,7 +95,8 @@ if __name__ == "__main__":
     args = importer.handle_args()
     dataset = Dataset("ir", "fa", IrFa)
     dataset.data_files = {
-        "provinces": "iran_provinces.json"
+        "provinces": "iran_provinces.json",  # http://tinyurl.com/yd9xed2s
+        "cities": "iran_cities.json"  # http://tinyurl.com/ybslxkm9
     }
     dataset.lookup_downloads = {
     }
