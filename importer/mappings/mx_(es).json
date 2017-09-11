@@ -1,0 +1,21 @@
+{
+    "country": {
+        "item": "Q96",
+        "name": "Mexico"
+    },
+    "country_code": "mx",
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "",
+        "name": ""
+    },
+    "language": "es",
+    "table_name": "mx",
+    "unique": {
+        "comment": "",
+        "property": ""
+    }
+}
