@@ -5,15 +5,14 @@
     },
     "country_code": "xk",
     "default_is": {
-        "item": "",
-        "name": "",
-        "comment" : ""
+        "item": "Q2065736",
+        "name": "cultural property"
     },
     "heritage": {
         "item": "Q6906963",
         "name": "monument of Kosovo",
-        "comment": ""
     },
+    "table_name": "xk",
     "language": "sq",
         "unique": {
         "comment": "Cultural Heritage Kosovo ID",
