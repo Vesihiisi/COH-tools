@@ -5,6 +5,15 @@ import importer as importer
 
 class MxEs(Monument):
 
+    def set_location(self):
+        loc_q = None
+        loc_raw = self.localidad
+        if utils.count_wikilinks(loc_raw) == 1:
+            loc_q = utils.q_from_first_wikilink("es", loc_raw)
+
+        if loc_q:
+            self.add_statement("location", loc_q)
+
     def set_adm_location(self):
         adm_q = None
         munic_raw = self.municipio
@@ -33,6 +42,7 @@ class MxEs(Monument):
         self.set_coords()
         self.set_country()
         self.set_adm_location()
+        self.set_location()
         self.set_is()
         self.set_wd_item(self.find_matching_wikidata(mapping))
 
