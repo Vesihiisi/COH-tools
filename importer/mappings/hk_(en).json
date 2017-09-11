@@ -1,0 +1,21 @@
+{
+    "country": {
+        "item": "Q233",
+        "name": "malta"
+    },
+    "country_code": "mt",
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "Q1939635",
+        "name": "declared monument"
+    },
+    "language": "en",
+    "table_name": "hk",
+    "unique": {
+        "comment": "WLM ID",
+        "property": "P2186"
+    }
+}
