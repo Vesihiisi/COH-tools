@@ -1,9 +1,9 @@
 {
     "country": {
-        "item": "Q8646",
-        "name": "Hongkong"
+        "item": "Q148",
+        "name": "China"
     },
-    "country_code": "hk",
+    "country_code": "cn",
     "default_is": {
         "item": "Q2065736",
         "name": "cultural property"
