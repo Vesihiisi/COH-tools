@@ -2,6 +2,7 @@ from wikidataStuff.WikidataStuff import WikidataStuff as WDS
 import pywikibot
 import importer_utils as utils
 from os import path
+import sys
 
 MAPPING_DIR = "mappings"
 PROPS = utils.load_json(path.join(MAPPING_DIR, "props_general.json"))
@@ -74,10 +75,13 @@ class Uploader(object):
         q_item = None
         disambiguation_page = "Q4167410"
         instances = utils.get_P31(q_number, self.repo)
-        if disambiguation_page not in instances:
-            q_item = self.wdstuff.QtoItemPage(q_number)
-            if self.wd_item_q and self.wd_item_q == q_item:
-                q_item = None
+        q_item = self.wdstuff.QtoItemPage(q_number)
+
+        if (disambiguation_page in instances or
+           (self.wd_item_q and self.wd_item_q == q_item)):
+            mes = "{} cannot be added as target of claim. Exiting."
+            sys.exit(mes.format(q_item))
+        else:
             return q_item
 
     def item_has_prop(self, property_name, wd_item):
