@@ -6,19 +6,29 @@ import importer as importer
 
 class HkEn(Monument):
 
+    def set_heritage_id(self):
+        wlm_code = self.mapping["table_name"].upper()
+        id_no = "{}-{}".format(wlm_code, self.id)
+        self.add_statement("wlm_id", id_no)
+
     def set_heritage(self):
+        """
+        Set heritage status.
+
+        If declaration_date present and parseable,
+        add it as start_time qualifier
+        """
+        qualifier = None
         if self.has_non_empty_attribute("declaration_date"):
             parsed_d = dateparser.parse(self.declaration_date)
+            print(parsed_d)
             # will give None when failure
             if parsed_d:
                 date_dict = utils.datetime_object_to_dict(parsed_d)
                 qualifier = {"start_time": {"time_value": date_dict}}
-                heritage = self.mapping["heritage"]["item"]
-                self.add_statement("heritage_status", heritage, qualifier)
-            else:
-                super.set_heritage()
-        else:
-            super.set_heritage()
+
+        heritage = self.mapping["heritage"]["item"]
+        self.add_statement("heritage_status", heritage, qualifier)
 
     def set_admin_location(self):
         hkong = "Q8646"
@@ -36,6 +46,10 @@ class HkEn(Monument):
         english = utils.remove_markup(self.name)
         self.add_label("en", english)
 
+    def update_descriptions(self):
+        english = "declared monument of Hong Kong"
+        self.add_description("en", english)
+
     def exists_with_monument_article(self, language):
         return super().exists_with_monument_article("en", "monument_article")
 
@@ -46,6 +60,7 @@ class HkEn(Monument):
         self.set_registrant_url()
         self.set_changed()
         self.set_wlm_source()
+        self.set_heritage_id()
         self.set_heritage()
         self.set_coords()
         self.set_country()
@@ -53,7 +68,8 @@ class HkEn(Monument):
         self.set_location()
         self.set_image()
         self.update_labels()
-        # self.set_wd_item(self.find_matching_wikidata(mapping))
+        self.update_descriptions()
+        self.set_wd_item(self.find_matching_wikidata(mapping))
 
 
 if __name__ == "__main__":
