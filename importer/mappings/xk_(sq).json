@@ -10,11 +10,11 @@
     },
     "heritage": {
         "item": "Q6906963",
-        "name": "monument of Kosovo",
+        "name": "monument of Kosovo"
     },
     "table_name": "xk",
     "language": "sq",
-        "unique": {
+    "unique": {
         "comment": "Cultural Heritage Kosovo ID",
         "property": "P3227"
     }

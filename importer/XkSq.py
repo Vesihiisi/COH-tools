@@ -1,10 +1,50 @@
-import dateparser
 from Monument import Monument, Dataset
 import importer_utils as utils
 import importer as importer
 
 
 class XkSq(Monument):
+
+    def set_inception(self):
+        if utils.legit_year(self.date_period):
+            inc_year = {"time_value": {"year": self.date_period}}
+            self.add_statement("inception", inc_year)
+        else:
+            # this will give a lot of results... :/
+            self.add_to_report("date_period", self.date_period, "inception")
+
+    def set_location(self):
+        if self.has_non_empty_attribute("place"):
+            settl_dic = self.data_files["settlements"]
+            s_match = utils.get_item_from_dict_by_key(dict_name=settl_dic,
+                                                      search_term=self.place,
+                                                      search_in="itemLabel")
+            if len(s_match) == 1:
+                self.add_statement("location", s_match[0])
+            else:
+                self.add_to_report("place", self.place, "location")
+
+    def set_adm_location(self):
+        municip_raw = self.municipality.lower()
+        municp_dic = self.data_files["municipalities"]["mappings"]
+        municip_matches = utils.get_matching_items_from_dict(
+            municip_raw, municp_dic)
+        if len(municip_matches) == 1:
+            self.add_statement("located_adm", municip_matches[0])
+        else:
+            self.add_to_report(
+                "municipality", self.municipality, "located_adm")
+
+    def set_heritage_id(self):
+        self.add_statement("kosovo_monument_id", str(self.idno))
+
+    def update_labels(self):
+        albanian = utils.remove_markup(self.name)
+        self.add_label("sq", albanian)
+
+    def update_descriptions(self):
+        english = "cultural heritage monument of Kosovo"
+        self.add_description("en", english)
 
     def exists_with_monument_article(self, language):
         return super().exists_with_monument_article("sq", "monument_article")
@@ -17,7 +57,16 @@ class XkSq(Monument):
         self.set_changed()
         self.set_wlm_source()
         self.set_heritage_id()
+        self.set_coords()
+        self.set_country()
+        self.set_adm_location()
+        self.set_location()
+        self.set_is()
         self.set_heritage()
+        self.set_heritage()
+        self.set_inception()
+        self.update_labels()
+        self.update_descriptions()
         self.set_wd_item(self.find_matching_wikidata(mapping))
 
 
@@ -25,4 +74,6 @@ if __name__ == "__main__":
     """Point of entrance for importer."""
     args = importer.handle_args()
     dataset = Dataset("xk", "sq", XkSq)
+    dataset.data_files = {"settlements": "kosovo_settlements.json"}
+    dataset.lookup_downloads = {"municipalities": "xk (sq)/municipalities"}
     importer.main(args, dataset)
