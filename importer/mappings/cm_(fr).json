@@ -1,18 +1,21 @@
 {
-    "country": {
-        "item": "Q1009",
-        "name": "Cameroon"
-    },
-    "country_code": "cm",
-    "default_is": {
-        "comment": "",
-        "item": "",
-        "name": ""
-    },
-    "heritage": {
-        "comment": "",
-        "item": "",
-        "name": ""
-    },
-    "language": "fr"
+"country": {
+    "item": "Q1009",
+    "name": "Cameroon"
+},
+"country_code": "cm",
+"default_is": {
+    "item": "Q2065736",
+    "name": "cultural property"
+},
+"heritage": {
+    "item": "Q39484924",
+    "name": "monument of Cameroon"
+},
+"unique": {
+    "comment": "WLM ID",
+    "property": "P2186"
+},
+"table_name": "cm",
+"language": "fr"
 }
