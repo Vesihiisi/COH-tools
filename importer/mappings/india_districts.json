@@ -1,0 +1,2602 @@
+[
+    {
+        "item": "Q15188",
+        "itemLabel": "Nilgiris district"
+    },
+    {
+        "item": "Q15201",
+        "itemLabel": "Tiruchirappalli district"
+    },
+    {
+        "item": "Q15204",
+        "itemLabel": "Tiruvallur district"
+    },
+    {
+        "item": "Q15382",
+        "itemLabel": "Krishna district"
+    },
+    {
+        "item": "Q15381",
+        "itemLabel": "Kurnool District"
+    },
+    {
+        "item": "Q15438",
+        "itemLabel": "Lohit district"
+    },
+    {
+        "item": "Q15432",
+        "itemLabel": "Papum Pare district"
+    },
+    {
+        "item": "Q15459",
+        "itemLabel": "West Kameng district"
+    },
+    {
+        "item": "Q42197",
+        "itemLabel": "Bongaigaon district"
+    },
+    {
+        "item": "Q42461",
+        "itemLabel": "Darrang district"
+    },
+    {
+        "item": "Q42522",
+        "itemLabel": "Goalpara district"
+    },
+    {
+        "item": "Q42542",
+        "itemLabel": "Karimganj district"
+    },
+    {
+        "item": "Q42686",
+        "itemLabel": "Nagaon district"
+    },
+    {
+        "item": "Q46925",
+        "itemLabel": "Pali district"
+    },
+    {
+        "item": "Q15340",
+        "itemLabel": "Hyderabad District"
+    },
+    {
+        "item": "Q15136",
+        "itemLabel": "Coimbatore district"
+    },
+    {
+        "item": "Q15150",
+        "itemLabel": "Cuddalore district"
+    },
+    {
+        "item": "Q15152",
+        "itemLabel": "Dharmapuri district"
+    },
+    {
+        "item": "Q15185",
+        "itemLabel": "Nagapattinam district"
+    },
+    {
+        "item": "Q15186",
+        "itemLabel": "Perambalur district"
+    },
+    {
+        "item": "Q15190",
+        "itemLabel": "Pudukkottai district"
+    },
+    {
+        "item": "Q15196",
+        "itemLabel": "Theni district"
+    },
+    {
+        "item": "Q15197",
+        "itemLabel": "Tiruvarur district"
+    },
+    {
+        "item": "Q15207",
+        "itemLabel": "Tiruvannamalai district"
+    },
+    {
+        "item": "Q15338",
+        "itemLabel": "East Godavari district"
+    },
+    {
+        "item": "Q15371",
+        "itemLabel": "Khammam district"
+    },
+    {
+        "item": "Q15424",
+        "itemLabel": "East Kameng district"
+    },
+    {
+        "item": "Q15388",
+        "itemLabel": "Ranga Reddy district"
+    },
+    {
+        "item": "Q15404",
+        "itemLabel": "West Godavari district"
+    },
+    {
+        "item": "Q15453",
+        "itemLabel": "West Siang district"
+    },
+    {
+        "item": "Q15464",
+        "itemLabel": "Upper Subansiri district"
+    },
+    {
+        "item": "Q15465",
+        "itemLabel": "Upper Siang district"
+    },
+    {
+        "item": "Q41249",
+        "itemLabel": "Barpeta district"
+    },
+    {
+        "item": "Q42479",
+        "itemLabel": "Dibrugarh District"
+    },
+    {
+        "item": "Q42505",
+        "itemLabel": "Hailakandi district"
+    },
+    {
+        "item": "Q42517",
+        "itemLabel": "Golaghat district"
+    },
+    {
+        "item": "Q42774",
+        "itemLabel": "Dima Hasao district"
+    },
+    {
+        "item": "Q42779",
+        "itemLabel": "Nalbari district"
+    },
+    {
+        "item": "Q43086",
+        "itemLabel": "Aurangabad District"
+    },
+    {
+        "item": "Q15112",
+        "itemLabel": "Ariyalur district"
+    },
+    {
+        "item": "Q15212",
+        "itemLabel": "Anantapur district"
+    },
+    {
+        "item": "Q15157",
+        "itemLabel": "Kanchipuram district"
+    },
+    {
+        "item": "Q15213",
+        "itemLabel": "Chittoor district"
+    },
+    {
+        "item": "Q15184",
+        "itemLabel": "Madurai district"
+    },
+    {
+        "item": "Q15198",
+        "itemLabel": "Thoothukudi district"
+    },
+    {
+        "item": "Q15209",
+        "itemLabel": "Virudhunagar district"
+    },
+    {
+        "item": "Q15373",
+        "itemLabel": "Karimnagar district"
+    },
+    {
+        "item": "Q15419",
+        "itemLabel": "East Siang district"
+    },
+    {
+        "item": "Q15386",
+        "itemLabel": "Medak district"
+    },
+    {
+        "item": "Q15395",
+        "itemLabel": "Srikakulam district"
+    },
+    {
+        "item": "Q15394",
+        "itemLabel": "Visakhapatnam district"
+    },
+    {
+        "item": "Q15448",
+        "itemLabel": "Tirap district"
+    },
+    {
+        "item": "Q42558",
+        "itemLabel": "Karbi Anglong district"
+    },
+    {
+        "item": "Q42611",
+        "itemLabel": "Jorhat district"
+    },
+    {
+        "item": "Q42768",
+        "itemLabel": "Sivasagar district"
+    },
+    {
+        "item": "Q43097",
+        "itemLabel": "Banka district"
+    },
+    {
+        "item": "Q15116",
+        "itemLabel": "Chennai district"
+    },
+    {
+        "item": "Q15211",
+        "itemLabel": "Adilabad district"
+    },
+    {
+        "item": "Q15158",
+        "itemLabel": "Kanyakumari district"
+    },
+    {
+        "item": "Q15183",
+        "itemLabel": "Krishnagiri district"
+    },
+    {
+        "item": "Q15187",
+        "itemLabel": "Namakkal district"
+    },
+    {
+        "item": "Q15191",
+        "itemLabel": "Ramanathapuram district"
+    },
+    {
+        "item": "Q15202",
+        "itemLabel": "Tirupur district"
+    },
+    {
+        "item": "Q15341",
+        "itemLabel": "Guntur district"
+    },
+    {
+        "item": "Q15413",
+        "itemLabel": "Anjaw district"
+    },
+    {
+        "item": "Q15427",
+        "itemLabel": "Changlang district"
+    },
+    {
+        "item": "Q15380",
+        "itemLabel": "Mahbubnagar district"
+    },
+    {
+        "item": "Q15446",
+        "itemLabel": "Dibang Valley district"
+    },
+    {
+        "item": "Q15391",
+        "itemLabel": "Nizamabad district"
+    },
+    {
+        "item": "Q15390",
+        "itemLabel": "Prakasam district"
+    },
+    {
+        "item": "Q15436",
+        "itemLabel": "Lower Subansiri district"
+    },
+    {
+        "item": "Q42618",
+        "itemLabel": "Kokrajhar district"
+    },
+    {
+        "item": "Q42737",
+        "itemLabel": "Marigaon district"
+    },
+    {
+        "item": "Q42765",
+        "itemLabel": "Sonitpur district"
+    },
+    {
+        "item": "Q42901",
+        "itemLabel": "Araria district"
+    },
+    {
+        "item": "Q42917",
+        "itemLabel": "Arwal district"
+    },
+    {
+        "item": "Q15154",
+        "itemLabel": "Dindigul district"
+    },
+    {
+        "item": "Q15155",
+        "itemLabel": "Erode district"
+    },
+    {
+        "item": "Q15182",
+        "itemLabel": "Karur district"
+    },
+    {
+        "item": "Q15192",
+        "itemLabel": "Salem district"
+    },
+    {
+        "item": "Q15194",
+        "itemLabel": "Thanjavur district"
+    },
+    {
+        "item": "Q15200",
+        "itemLabel": "Tirunelveli district"
+    },
+    {
+        "item": "Q15206",
+        "itemLabel": "Vellore district"
+    },
+    {
+        "item": "Q15383",
+        "itemLabel": "Sri Potti Sri Ramulu Nellore district"
+    },
+    {
+        "item": "Q15392",
+        "itemLabel": "Vizianagaram district"
+    },
+    {
+        "item": "Q15449",
+        "itemLabel": "Tawang district"
+    },
+    {
+        "item": "Q41991",
+        "itemLabel": "Bhilwara district"
+    },
+    {
+        "item": "Q42016",
+        "itemLabel": "Barmer district"
+    },
+    {
+        "item": "Q42209",
+        "itemLabel": "Cachar district"
+    },
+    {
+        "item": "Q42473",
+        "itemLabel": "Dhemaji district"
+    },
+    {
+        "item": "Q42485",
+        "itemLabel": "Dhubri district"
+    },
+    {
+        "item": "Q42743",
+        "itemLabel": "Lakhimpur district"
+    },
+    {
+        "item": "Q47929",
+        "itemLabel": "Buldhana district"
+    },
+    {
+        "item": "Q49153",
+        "itemLabel": "Bhojpur district"
+    },
+    {
+        "item": "Q15342",
+        "itemLabel": "Kadapa District"
+    },
+    {
+        "item": "Q15384",
+        "itemLabel": "Nalgonda District"
+    },
+    {
+        "item": "Q15399",
+        "itemLabel": "Warangal District"
+    },
+    {
+        "item": "Q15195",
+        "itemLabel": "Sivaganga District"
+    },
+    {
+        "item": "Q15205",
+        "itemLabel": "Viluppuram District"
+    },
+    {
+        "item": "Q42756",
+        "itemLabel": "Tinsukia District"
+    },
+    {
+        "item": "Q77367",
+        "itemLabel": "Kaimur district"
+    },
+    {
+        "item": "Q77474",
+        "itemLabel": "Madhubani district"
+    },
+    {
+        "item": "Q77505",
+        "itemLabel": "Lakhisarai district"
+    },
+    {
+        "item": "Q77568",
+        "itemLabel": "Katihar district"
+    },
+    {
+        "item": "Q77633",
+        "itemLabel": "Nalanda district"
+    },
+    {
+        "item": "Q100157",
+        "itemLabel": "Bilaspur district"
+    },
+    {
+        "item": "Q100077",
+        "itemLabel": "Patna"
+    },
+    {
+        "item": "Q100095",
+        "itemLabel": "Sheohar district"
+    },
+    {
+        "item": "Q100146",
+        "itemLabel": "Saran district"
+    },
+    {
+        "item": "Q172482",
+        "itemLabel": "Ludhiana district"
+    },
+    {
+        "item": "Q186518",
+        "itemLabel": "Dahod district"
+    },
+    {
+        "item": "Q288278",
+        "itemLabel": "Champawat district"
+    },
+    {
+        "item": "Q321998",
+        "itemLabel": "Udalguri district"
+    },
+    {
+        "item": "Q427679",
+        "itemLabel": "Ramanagara district"
+    },
+    {
+        "item": "Q429329",
+        "itemLabel": "North East Delhi"
+    },
+    {
+        "item": "Q485683",
+        "itemLabel": "Anand district"
+    },
+    {
+        "item": "Q516294",
+        "itemLabel": "Peren district"
+    },
+    {
+        "item": "Q569181",
+        "itemLabel": "Jharsuguda district"
+    },
+    {
+        "item": "Q591781",
+        "itemLabel": "Mysore district"
+    },
+    {
+        "item": "Q77452",
+        "itemLabel": "Munger district"
+    },
+    {
+        "item": "Q100085",
+        "itemLabel": "Rohtas district"
+    },
+    {
+        "item": "Q100211",
+        "itemLabel": "Dantewada district"
+    },
+    {
+        "item": "Q100093",
+        "itemLabel": "Sheikhpura district"
+    },
+    {
+        "item": "Q146708",
+        "itemLabel": "Gurdaspur district"
+    },
+    {
+        "item": "Q172488",
+        "itemLabel": "Bathinda district"
+    },
+    {
+        "item": "Q247248",
+        "itemLabel": "Sambhal"
+    },
+    {
+        "item": "Q307474",
+        "itemLabel": "Purulia district"
+    },
+    {
+        "item": "Q520510",
+        "itemLabel": "Akola district"
+    },
+    {
+        "item": "Q578285",
+        "itemLabel": "Vadodara district"
+    },
+    {
+        "item": "Q592942",
+        "itemLabel": "Aurangabad District"
+    },
+    {
+        "item": "Q83108",
+        "itemLabel": "Bijapur"
+    },
+    {
+        "item": "Q77746",
+        "itemLabel": "Madhepura district"
+    },
+    {
+        "item": "Q100130",
+        "itemLabel": "Vaishali district"
+    },
+    {
+        "item": "Q100124",
+        "itemLabel": "West Champaran district"
+    },
+    {
+        "item": "Q100144",
+        "itemLabel": "Sitamarhi district"
+    },
+    {
+        "item": "Q172363",
+        "itemLabel": "Kapurthala district"
+    },
+    {
+        "item": "Q172494",
+        "itemLabel": "Faridkot district"
+    },
+    {
+        "item": "Q188702",
+        "itemLabel": "Fazilka district"
+    },
+    {
+        "item": "Q196508",
+        "itemLabel": "Rupnagar district"
+    },
+    {
+        "item": "Q257946",
+        "itemLabel": "Amreli district"
+    },
+    {
+        "item": "Q268605",
+        "itemLabel": "Jind district"
+    },
+    {
+        "item": "Q301821",
+        "itemLabel": "Idukki district"
+    },
+    {
+        "item": "Q338425",
+        "itemLabel": "North 24 Parganas district"
+    },
+    {
+        "item": "Q449690",
+        "itemLabel": "Alwar district"
+    },
+    {
+        "item": "Q456764",
+        "itemLabel": "Ambedkar Nagar district"
+    },
+    {
+        "item": "Q544279",
+        "itemLabel": "Rajouri district"
+    },
+    {
+        "item": "Q584644",
+        "itemLabel": "Ballia district"
+    },
+    {
+        "item": "Q77731",
+        "itemLabel": "Muzaffarpur district"
+    },
+    {
+        "item": "Q100152",
+        "itemLabel": "Bastar district"
+    },
+    {
+        "item": "Q100117",
+        "itemLabel": "Samastipur district"
+    },
+    {
+        "item": "Q100120",
+        "itemLabel": "Saharsa district"
+    },
+    {
+        "item": "Q127533",
+        "itemLabel": "Sant Ravidas Nagar district"
+    },
+    {
+        "item": "Q172269",
+        "itemLabel": "Pathankot district"
+    },
+    {
+        "item": "Q205719",
+        "itemLabel": "Sirohi district"
+    },
+    {
+        "item": "Q367344",
+        "itemLabel": "Khunti district"
+    },
+    {
+        "item": "Q401686",
+        "itemLabel": "Ahmedabad district"
+    },
+    {
+        "item": "Q401744",
+        "itemLabel": "Ahmednagar district"
+    },
+    {
+        "item": "Q526862",
+        "itemLabel": "Rewa District"
+    },
+    {
+        "item": "Q548518",
+        "itemLabel": "Hooghly district"
+    },
+    {
+        "item": "Q590882",
+        "itemLabel": "Phek district"
+    },
+    {
+        "item": "Q596693",
+        "itemLabel": "Rajsamand district"
+    },
+    {
+        "item": "Q100067",
+        "itemLabel": "Nawada district"
+    },
+    {
+        "item": "Q100082",
+        "itemLabel": "Purnia district"
+    },
+    {
+        "item": "Q100182",
+        "itemLabel": "Durg district"
+    },
+    {
+        "item": "Q100190",
+        "itemLabel": "Dhamtari district"
+    },
+    {
+        "item": "Q100131",
+        "itemLabel": "Siwan district"
+    },
+    {
+        "item": "Q100139",
+        "itemLabel": "Supaul district"
+    },
+    {
+        "item": "Q162612",
+        "itemLabel": "Thiruvananthapuram district"
+    },
+    {
+        "item": "Q165264",
+        "itemLabel": "Chitradurga district"
+    },
+    {
+        "item": "Q172387",
+        "itemLabel": "Mansa district"
+    },
+    {
+        "item": "Q172391",
+        "itemLabel": "Patiala district"
+    },
+    {
+        "item": "Q202822",
+        "itemLabel": "Amritsar district"
+    },
+    {
+        "item": "Q237535",
+        "itemLabel": "Surendranagar district"
+    },
+    {
+        "item": "Q277480",
+        "itemLabel": "Mahé, India"
+    },
+    {
+        "item": "Q413037",
+        "itemLabel": "Ajmer district"
+    },
+    {
+        "item": "Q533839",
+        "itemLabel": "Dakshin Dinajpur district"
+    },
+    {
+        "item": "Q606343",
+        "itemLabel": "Agra district"
+    },
+    {
+        "item": "Q100164",
+        "itemLabel": "Bijapur District"
+    },
+    {
+        "item": "Q77375",
+        "itemLabel": "Kishanganj District"
+    },
+    {
+        "item": "Q107941",
+        "itemLabel": "Central Delhi District"
+    },
+    {
+        "item": "Q107960",
+        "itemLabel": "East Delhi District"
+    },
+    {
+        "item": "Q108234",
+        "itemLabel": "North Goa District"
+    },
+    {
+        "item": "Q108244",
+        "itemLabel": "South Goa District"
+    },
+    {
+        "item": "Q172385",
+        "itemLabel": "Firozpur District"
+    },
+    {
+        "item": "Q172485",
+        "itemLabel": "Fatehgarh Sahib District"
+    },
+    {
+        "item": "Q202710",
+        "itemLabel": "Shahid Bhagat Singh Nagar District"
+    },
+    {
+        "item": "Q304800",
+        "itemLabel": "Hoshiarpur District"
+    },
+    {
+        "item": "Q526101",
+        "itemLabel": "Sirsa District"
+    },
+    {
+        "item": "Q549807",
+        "itemLabel": "West Delhi District"
+    },
+    {
+        "item": "Q579205",
+        "itemLabel": "Uttara Kannada District"
+    },
+    {
+        "item": "Q49155",
+        "itemLabel": "Bhagalpur district"
+    },
+    {
+        "item": "Q49159",
+        "itemLabel": "East Champaran district"
+    },
+    {
+        "item": "Q49173",
+        "itemLabel": "Gaya district"
+    },
+    {
+        "item": "Q49157",
+        "itemLabel": "Begusarai district"
+    },
+    {
+        "item": "Q49161",
+        "itemLabel": "Buxar district"
+    },
+    {
+        "item": "Q49160",
+        "itemLabel": "Darbhanga district"
+    },
+    {
+        "item": "Q49171",
+        "itemLabel": "Gopalganj District"
+    },
+    {
+        "item": "Q49175",
+        "itemLabel": "Khagaria district"
+    },
+    {
+        "item": "Q49176",
+        "itemLabel": "Jehanabad district"
+    },
+    {
+        "item": "Q49168",
+        "itemLabel": "Jamui district"
+    },
+    {
+        "item": "Q610612",
+        "itemLabel": "Kanpur Dehat district"
+    },
+    {
+        "item": "Q670165",
+        "itemLabel": "Tapi District"
+    },
+    {
+        "item": "Q681821",
+        "itemLabel": "Wokha district"
+    },
+    {
+        "item": "Q731746",
+        "itemLabel": "Deoria district"
+    },
+    {
+        "item": "Q767878",
+        "itemLabel": "Sahebganj"
+    },
+    {
+        "item": "Q804642",
+        "itemLabel": "Balangir district"
+    },
+    {
+        "item": "Q806125",
+        "itemLabel": "Banaskantha district"
+    },
+    {
+        "item": "Q808023",
+        "itemLabel": "Bardhaman district"
+    },
+    {
+        "item": "Q815464",
+        "itemLabel": "Belgaum district"
+    },
+    {
+        "item": "Q854963",
+        "itemLabel": "Bhavnagar district"
+    },
+    {
+        "item": "Q930027",
+        "itemLabel": "Guna district"
+    },
+    {
+        "item": "Q943099",
+        "itemLabel": "Thane district"
+    },
+    {
+        "item": "Q984035",
+        "itemLabel": "Puducherry district"
+    },
+    {
+        "item": "Q1030918",
+        "itemLabel": "Malappuram district"
+    },
+    {
+        "item": "Q1144349",
+        "itemLabel": "Gorakhpur district"
+    },
+    {
+        "item": "Q627979",
+        "itemLabel": "Kannauj district"
+    },
+    {
+        "item": "Q641904",
+        "itemLabel": "Balaghat district"
+    },
+    {
+        "item": "Q654331",
+        "itemLabel": "Sirmaur district"
+    },
+    {
+        "item": "Q692389",
+        "itemLabel": "Nanded district"
+    },
+    {
+        "item": "Q743077",
+        "itemLabel": "Chikkamagaluru district"
+    },
+    {
+        "item": "Q751531",
+        "itemLabel": "Mamit district"
+    },
+    {
+        "item": "Q814037",
+        "itemLabel": "Beed district"
+    },
+    {
+        "item": "Q854900",
+        "itemLabel": "Bharuch district"
+    },
+    {
+        "item": "Q890800",
+        "itemLabel": "Kasganj district"
+    },
+    {
+        "item": "Q938190",
+        "itemLabel": "Bishnupur district"
+    },
+    {
+        "item": "Q950571",
+        "itemLabel": "Dakshina Kannada"
+    },
+    {
+        "item": "Q980608",
+        "itemLabel": "Wardha district"
+    },
+    {
+        "item": "Q999432",
+        "itemLabel": "Kota district"
+    },
+    {
+        "item": "Q1134781",
+        "itemLabel": "Jaipur district"
+    },
+    {
+        "item": "Q1143880",
+        "itemLabel": "Nadia district"
+    },
+    {
+        "item": "Q1143894",
+        "itemLabel": "Mirzapur district"
+    },
+    {
+        "item": "Q1267306",
+        "itemLabel": "Sambalpur district"
+    },
+    {
+        "item": "Q1287993",
+        "itemLabel": "Ghazipur district"
+    },
+    {
+        "item": "Q1321157",
+        "itemLabel": "Raebareli district"
+    },
+    {
+        "item": "Q766125",
+        "itemLabel": "North West Delhi"
+    },
+    {
+        "item": "Q1158197",
+        "itemLabel": "Daman District"
+    },
+    {
+        "item": "Q607798",
+        "itemLabel": "Sonebhadra district"
+    },
+    {
+        "item": "Q611357",
+        "itemLabel": "West Sikkim district"
+    },
+    {
+        "item": "Q632093",
+        "itemLabel": "Jabalpur district"
+    },
+    {
+        "item": "Q634262",
+        "itemLabel": "Dimapur district"
+    },
+    {
+        "item": "Q634935",
+        "itemLabel": "Pathanamthitta district"
+    },
+    {
+        "item": "Q639264",
+        "itemLabel": "Karaikal district"
+    },
+    {
+        "item": "Q639279",
+        "itemLabel": "Mahé district"
+    },
+    {
+        "item": "Q684019",
+        "itemLabel": "Mahendragarh district"
+    },
+    {
+        "item": "Q776213",
+        "itemLabel": "Ganjam district"
+    },
+    {
+        "item": "Q806969",
+        "itemLabel": "Banswara district"
+    },
+    {
+        "item": "Q808140",
+        "itemLabel": "Bargarh district"
+    },
+    {
+        "item": "Q837595",
+        "itemLabel": "Lahaul and Spiti district"
+    },
+    {
+        "item": "Q971581",
+        "itemLabel": "Jagatsinghpur district"
+    },
+    {
+        "item": "Q1075011",
+        "itemLabel": "Chittorgarh district"
+    },
+    {
+        "item": "Q1090006",
+        "itemLabel": "Churu district"
+    },
+    {
+        "item": "Q1134759",
+        "itemLabel": "Darjeeling District"
+    },
+    {
+        "item": "Q1207709",
+        "itemLabel": "Dholpur district"
+    },
+    {
+        "item": "Q607915",
+        "itemLabel": "Karnal district"
+    },
+    {
+        "item": "Q620105",
+        "itemLabel": "Sheopur district"
+    },
+    {
+        "item": "Q638980",
+        "itemLabel": "Godda district"
+    },
+    {
+        "item": "Q693367",
+        "itemLabel": "North Delhi"
+    },
+    {
+        "item": "Q727232",
+        "itemLabel": "Kangra district"
+    },
+    {
+        "item": "Q742938",
+        "itemLabel": "Indore district"
+    },
+    {
+        "item": "Q806464",
+        "itemLabel": "Bangalore Rural district"
+    },
+    {
+        "item": "Q892641",
+        "itemLabel": "Ujjain district"
+    },
+    {
+        "item": "Q953530",
+        "itemLabel": "Kohima district"
+    },
+    {
+        "item": "Q1063417",
+        "itemLabel": "Kutch District"
+    },
+    {
+        "item": "Q1071494",
+        "itemLabel": "Chhatrapati Shahuji Maharaj Nagar district"
+    },
+    {
+        "item": "Q1135616",
+        "itemLabel": "Dang District, India"
+    },
+    {
+        "item": "Q1142979",
+        "itemLabel": "Kozhikode district"
+    },
+    {
+        "item": "Q1265687",
+        "itemLabel": "Dungarpur district"
+    },
+    {
+        "item": "Q1301635",
+        "itemLabel": "Tumkur district"
+    },
+    {
+        "item": "Q614037",
+        "itemLabel": "Kaithal district"
+    },
+    {
+        "item": "Q620297",
+        "itemLabel": "Umaria district"
+    },
+    {
+        "item": "Q620801",
+        "itemLabel": "Hoshangabad district"
+    },
+    {
+        "item": "Q662818",
+        "itemLabel": "Khordha district"
+    },
+    {
+        "item": "Q670405",
+        "itemLabel": "Bundi district"
+    },
+    {
+        "item": "Q685638",
+        "itemLabel": "Bhadrak district"
+    },
+    {
+        "item": "Q715267",
+        "itemLabel": "Basti district"
+    },
+    {
+        "item": "Q735101",
+        "itemLabel": "Ukhrul district"
+    },
+    {
+        "item": "Q746441",
+        "itemLabel": "Katni district"
+    },
+    {
+        "item": "Q766918",
+        "itemLabel": "Aligarh district"
+    },
+    {
+        "item": "Q768332",
+        "itemLabel": "Sindhudurg district"
+    },
+    {
+        "item": "Q778996",
+        "itemLabel": "Bikaner district"
+    },
+    {
+        "item": "Q793553",
+        "itemLabel": "Azamgarh district"
+    },
+    {
+        "item": "Q796983",
+        "itemLabel": "North and Middle Andaman district"
+    },
+    {
+        "item": "Q797295",
+        "itemLabel": "Nicobar district"
+    },
+    {
+        "item": "Q806463",
+        "itemLabel": "Bengaluru Nagara district"
+    },
+    {
+        "item": "Q854861",
+        "itemLabel": "Bharatpur district"
+    },
+    {
+        "item": "Q862912",
+        "itemLabel": "Chamarajanagar district"
+    },
+    {
+        "item": "Q915880",
+        "itemLabel": "Tonk district"
+    },
+    {
+        "item": "Q928959",
+        "itemLabel": "Alappuzha district"
+    },
+    {
+        "item": "Q955977",
+        "itemLabel": "South Arcot"
+    },
+    {
+        "item": "Q956387",
+        "itemLabel": "Koppal district"
+    },
+    {
+        "item": "Q967388",
+        "itemLabel": "Rohtak district"
+    },
+    {
+        "item": "Q980118",
+        "itemLabel": "Kurukshetra district"
+    },
+    {
+        "item": "Q1060614",
+        "itemLabel": "Chamba district"
+    },
+    {
+        "item": "Q1135612",
+        "itemLabel": "Satara district"
+    },
+    {
+        "item": "Q1173042",
+        "itemLabel": "Dausa district"
+    },
+    {
+        "item": "Q1321140",
+        "itemLabel": "Varanasi district"
+    },
+    {
+        "item": "Q1321577",
+        "itemLabel": "Udaipur district"
+    },
+    {
+        "item": "Q1345006",
+        "itemLabel": "Moradabad district"
+    },
+    {
+        "item": "Q765481",
+        "itemLabel": "Haveri District"
+    },
+    {
+        "item": "Q956732",
+        "itemLabel": "Hassan District"
+    },
+    {
+        "item": "Q1478939",
+        "itemLabel": "Bilaspur district"
+    },
+    {
+        "item": "Q1353354",
+        "itemLabel": "Kottayam district"
+    },
+    {
+        "item": "Q1356097",
+        "itemLabel": "Ernakulam district"
+    },
+    {
+        "item": "Q1431920",
+        "itemLabel": "Purba Medinipur district"
+    },
+    {
+        "item": "Q1434965",
+        "itemLabel": "Jodhpur district"
+    },
+    {
+        "item": "Q1471427",
+        "itemLabel": "Jhunjhunu district"
+    },
+    {
+        "item": "Q1473957",
+        "itemLabel": "Subarnapur district"
+    },
+    {
+        "item": "Q1647186",
+        "itemLabel": "Osmanabad district"
+    },
+    {
+        "item": "Q1752328",
+        "itemLabel": "Bulandshahr district"
+    },
+    {
+        "item": "Q1755463",
+        "itemLabel": "Kheda district"
+    },
+    {
+        "item": "Q1772822",
+        "itemLabel": "Hardoi district"
+    },
+    {
+        "item": "Q1773426",
+        "itemLabel": "Allahabad district"
+    },
+    {
+        "item": "Q1773437",
+        "itemLabel": "Uttarkashi district"
+    },
+    {
+        "item": "Q1785950",
+        "itemLabel": "Gautam Buddh Nagar district"
+    },
+    {
+        "item": "Q1797245",
+        "itemLabel": "Bhopal district"
+    },
+    {
+        "item": "Q1797274",
+        "itemLabel": "Chandrapur district"
+    },
+    {
+        "item": "Q1797383",
+        "itemLabel": "Dhule district"
+    },
+    {
+        "item": "Q1797269",
+        "itemLabel": "Nashik district"
+    },
+    {
+        "item": "Q1804858",
+        "itemLabel": "Washim"
+    },
+    {
+        "item": "Q1805059",
+        "itemLabel": "Rudraprayag district"
+    },
+    {
+        "item": "Q1812548",
+        "itemLabel": "Bahraich district"
+    },
+    {
+        "item": "Q1351487",
+        "itemLabel": "Jalpaiguri district"
+    },
+    {
+        "item": "Q1356154",
+        "itemLabel": "Sultanpur district"
+    },
+    {
+        "item": "Q1357107",
+        "itemLabel": "Tehri Garhwal district"
+    },
+    {
+        "item": "Q1419668",
+        "itemLabel": "Karauli district"
+    },
+    {
+        "item": "Q1419708",
+        "itemLabel": "Jaisalmer district"
+    },
+    {
+        "item": "Q1771768",
+        "itemLabel": "Ratnagiri district"
+    },
+    {
+        "item": "Q1772807",
+        "itemLabel": "Angul district"
+    },
+    {
+        "item": "Q1772860",
+        "itemLabel": "Gandhinagar district"
+    },
+    {
+        "item": "Q1772815",
+        "itemLabel": "Porbandar district"
+    },
+    {
+        "item": "Q1773416",
+        "itemLabel": "Lucknow district"
+    },
+    {
+        "item": "Q1790904",
+        "itemLabel": "Dharwad district"
+    },
+    {
+        "item": "Q1797230",
+        "itemLabel": "Narmada district"
+    },
+    {
+        "item": "Q1797363",
+        "itemLabel": "Bagpat district"
+    },
+    {
+        "item": "Q1797349",
+        "itemLabel": "Navsari district"
+    },
+    {
+        "item": "Q1797367",
+        "itemLabel": "Nagpur district"
+    },
+    {
+        "item": "Q1797389",
+        "itemLabel": "Parbhani district"
+    },
+    {
+        "item": "Q1804852",
+        "itemLabel": "Yavatmal district"
+    },
+    {
+        "item": "Q1805066",
+        "itemLabel": "Almora district"
+    },
+    {
+        "item": "Q1812539",
+        "itemLabel": "Sitapur district"
+    },
+    {
+        "item": "Q1426783",
+        "itemLabel": "Longleng district"
+    },
+    {
+        "item": "Q1430830",
+        "itemLabel": "Raichur district"
+    },
+    {
+        "item": "Q1473962",
+        "itemLabel": "Pratapgarh district"
+    },
+    {
+        "item": "Q1535742",
+        "itemLabel": "Palakkad district"
+    },
+    {
+        "item": "Q1546240",
+        "itemLabel": "Murshidabad district"
+    },
+    {
+        "item": "Q1585433",
+        "itemLabel": "Pratapgarh district"
+    },
+    {
+        "item": "Q1650798",
+        "itemLabel": "Kargil district"
+    },
+    {
+        "item": "Q1773444",
+        "itemLabel": "Ghaziabad district"
+    },
+    {
+        "item": "Q1773422",
+        "itemLabel": "Mathura district"
+    },
+    {
+        "item": "Q1781463",
+        "itemLabel": "Panchmahal district"
+    },
+    {
+        "item": "Q1797291",
+        "itemLabel": "Jalgaon district"
+    },
+    {
+        "item": "Q1797372",
+        "itemLabel": "Chamoli district"
+    },
+    {
+        "item": "Q1797344",
+        "itemLabel": "Junagadh district"
+    },
+    {
+        "item": "Q1797254",
+        "itemLabel": "Palamu district"
+    },
+    {
+        "item": "Q1797317",
+        "itemLabel": "Surat district"
+    },
+    {
+        "item": "Q1804847",
+        "itemLabel": "Gadchiroli district"
+    },
+    {
+        "item": "Q1805075",
+        "itemLabel": "Surguja district"
+    },
+    {
+        "item": "Q1356060",
+        "itemLabel": "Jaunpur district"
+    },
+    {
+        "item": "Q1356124",
+        "itemLabel": "Kollam district"
+    },
+    {
+        "item": "Q1364427",
+        "itemLabel": "Wayanad district"
+    },
+    {
+        "item": "Q1419703",
+        "itemLabel": "Kasaragod district"
+    },
+    {
+        "item": "Q1425060",
+        "itemLabel": "Sangli district"
+    },
+    {
+        "item": "Q1478937",
+        "itemLabel": "Howrah district"
+    },
+    {
+        "item": "Q1483337",
+        "itemLabel": "Udupi district"
+    },
+    {
+        "item": "Q1507174",
+        "itemLabel": "Nagaur district"
+    },
+    {
+        "item": "Q1518847",
+        "itemLabel": "Mau district"
+    },
+    {
+        "item": "Q1755447",
+        "itemLabel": "Lakhimpur Kheri district"
+    },
+    {
+        "item": "Q1784149",
+        "itemLabel": "North Sikkim district"
+    },
+    {
+        "item": "Q1797378",
+        "itemLabel": "Bareilly district"
+    },
+    {
+        "item": "Q1797312",
+        "itemLabel": "Kolhapur district"
+    },
+    {
+        "item": "Q1797306",
+        "itemLabel": "Nainital district"
+    },
+    {
+        "item": "Q1810550",
+        "itemLabel": "Nuapada district"
+    },
+    {
+        "item": "Q1812533",
+        "itemLabel": "Auraiya district"
+    },
+    {
+        "item": "Q1356139",
+        "itemLabel": "Maharajganj district"
+    },
+    {
+        "item": "Q1419696",
+        "itemLabel": "Sri Ganganagar district"
+    },
+    {
+        "item": "Q1460832",
+        "itemLabel": "Jalore district"
+    },
+    {
+        "item": "Q1471417",
+        "itemLabel": "Jhalawar district"
+    },
+    {
+        "item": "Q1506029",
+        "itemLabel": "Srinagar district"
+    },
+    {
+        "item": "Q1553185",
+        "itemLabel": "Kodagu district"
+    },
+    {
+        "item": "Q1606061",
+        "itemLabel": "Andaman district"
+    },
+    {
+        "item": "Q1623525",
+        "itemLabel": "Nandurbar district"
+    },
+    {
+        "item": "Q1764627",
+        "itemLabel": "Meerut district"
+    },
+    {
+        "item": "Q1771774",
+        "itemLabel": "Amravati district"
+    },
+    {
+        "item": "Q1772832",
+        "itemLabel": "East Sikkim district"
+    },
+    {
+        "item": "Q1772856",
+        "itemLabel": "Sabarkantha district"
+    },
+    {
+        "item": "Q1773429",
+        "itemLabel": "Etah district"
+    },
+    {
+        "item": "Q1786949",
+        "itemLabel": "Yadgir district"
+    },
+    {
+        "item": "Q1790568",
+        "itemLabel": "Bidar district"
+    },
+    {
+        "item": "Q1797263",
+        "itemLabel": "Solapur district"
+    },
+    {
+        "item": "Q1797326",
+        "itemLabel": "Saharanpur district"
+    },
+    {
+        "item": "Q1797336",
+        "itemLabel": "Pune district"
+    },
+    {
+        "item": "Q1804863",
+        "itemLabel": "Jalna district"
+    },
+    {
+        "item": "Q1805051",
+        "itemLabel": "South Sikkim district"
+    },
+    {
+        "item": "Q1805082",
+        "itemLabel": "Udham Singh Nagar district"
+    },
+    {
+        "item": "Q1812557",
+        "itemLabel": "Shahjahanpur district"
+    },
+    {
+        "item": "Q1813857",
+        "itemLabel": "Bhandara district"
+    },
+    {
+        "item": "Q1727570",
+        "itemLabel": "Bijapur District"
+    },
+    {
+        "item": "Q1356112",
+        "itemLabel": "Hanumangarh District"
+    },
+    {
+        "item": "Q1507166",
+        "itemLabel": "Sawai Madhopur District"
+    },
+    {
+        "item": "Q1791926",
+        "itemLabel": "Ballari District"
+    },
+    {
+        "item": "Q1921210",
+        "itemLabel": "Leh"
+    },
+    {
+        "item": "Q1815245",
+        "itemLabel": "Rajkot district"
+    },
+    {
+        "item": "Q1815269",
+        "itemLabel": "Patan district"
+    },
+    {
+        "item": "Q1815253",
+        "itemLabel": "Vidisha"
+    },
+    {
+        "item": "Q1815331",
+        "itemLabel": "Rampur district"
+    },
+    {
+        "item": "Q1815339",
+        "itemLabel": "Siddharthnagar district"
+    },
+    {
+        "item": "Q1817425",
+        "itemLabel": "Jalandhar district"
+    },
+    {
+        "item": "Q1822188",
+        "itemLabel": "Imphal West district"
+    },
+    {
+        "item": "Q1822159",
+        "itemLabel": "South Tripura district"
+    },
+    {
+        "item": "Q1884672",
+        "itemLabel": "Ri-Bhoi district"
+    },
+    {
+        "item": "Q1947380",
+        "itemLabel": "Ranchi district"
+    },
+    {
+        "item": "Q1948380",
+        "itemLabel": "Balrampur district"
+    },
+    {
+        "item": "Q1948260",
+        "itemLabel": "Jhajjar district"
+    },
+    {
+        "item": "Q1965256",
+        "itemLabel": "Champhai district"
+    },
+    {
+        "item": "Q2064752",
+        "itemLabel": "West Khasi Hills district"
+    },
+    {
+        "item": "Q2073646",
+        "itemLabel": "Shopian district"
+    },
+    {
+        "item": "Q1863214",
+        "itemLabel": "Davanagere"
+    },
+    {
+        "item": "Q1814132",
+        "itemLabel": "Faizabad district"
+    },
+    {
+        "item": "Q1814892",
+        "itemLabel": "Hathras district"
+    },
+    {
+        "item": "Q1815223",
+        "itemLabel": "Raisen district"
+    },
+    {
+        "item": "Q1815322",
+        "itemLabel": "Mahoba district"
+    },
+    {
+        "item": "Q1910231",
+        "itemLabel": "Bagalkot district"
+    },
+    {
+        "item": "Q1914546",
+        "itemLabel": "Mayurbhanj district"
+    },
+    {
+        "item": "Q1920978",
+        "itemLabel": "North Tripura district"
+    },
+    {
+        "item": "Q1945304",
+        "itemLabel": "East Khasi Hills district"
+    },
+    {
+        "item": "Q1946950",
+        "itemLabel": "Firozabad district"
+    },
+    {
+        "item": "Q1946937",
+        "itemLabel": "Kaushambi district"
+    },
+    {
+        "item": "Q1947292",
+        "itemLabel": "Gajapati district"
+    },
+    {
+        "item": "Q1947300",
+        "itemLabel": "Koraput district"
+    },
+    {
+        "item": "Q2019757",
+        "itemLabel": "Hamirpur district"
+    },
+    {
+        "item": "Q2019766",
+        "itemLabel": "Uttar Dinajpur district"
+    },
+    {
+        "item": "Q2022279",
+        "itemLabel": "Balasore district"
+    },
+    {
+        "item": "Q2037672",
+        "itemLabel": "Mohali district"
+    },
+    {
+        "item": "Q2049820",
+        "itemLabel": "Maldah district"
+    },
+    {
+        "item": "Q2085336",
+        "itemLabel": "Jhabua district"
+    },
+    {
+        "item": "Q2085428",
+        "itemLabel": "Kendujhar district"
+    },
+    {
+        "item": "Q2085436",
+        "itemLabel": "Khandwa district"
+    },
+    {
+        "item": "Q2085364",
+        "itemLabel": "Pulwama district"
+    },
+    {
+        "item": "Q1815262",
+        "itemLabel": "Budaun district"
+    },
+    {
+        "item": "Q1815288",
+        "itemLabel": "Etawah district"
+    },
+    {
+        "item": "Q1816657",
+        "itemLabel": "Mainpuri district"
+    },
+    {
+        "item": "Q1817158",
+        "itemLabel": "Puri district"
+    },
+    {
+        "item": "Q1840355",
+        "itemLabel": "Kushinagar district"
+    },
+    {
+        "item": "Q1852857",
+        "itemLabel": "Bhiwani district"
+    },
+    {
+        "item": "Q1855537",
+        "itemLabel": "Paschim Medinipur district"
+    },
+    {
+        "item": "Q1870014",
+        "itemLabel": "Mandsaur district"
+    },
+    {
+        "item": "Q1892161",
+        "itemLabel": "Mandi district"
+    },
+    {
+        "item": "Q1912057",
+        "itemLabel": "Baramulla district"
+    },
+    {
+        "item": "Q1916666",
+        "itemLabel": "Imphal East district"
+    },
+    {
+        "item": "Q1920789",
+        "itemLabel": "Jaintia Hills district"
+    },
+    {
+        "item": "Q1937885",
+        "itemLabel": "Jhansi district"
+    },
+    {
+        "item": "Q1945515",
+        "itemLabel": "Sangrur district"
+    },
+    {
+        "item": "Q1946829",
+        "itemLabel": "Fatehpur district"
+    },
+    {
+        "item": "Q1946743",
+        "itemLabel": "Valsad district"
+    },
+    {
+        "item": "Q1946896",
+        "itemLabel": "Moga district"
+    },
+    {
+        "item": "Q1947371",
+        "itemLabel": "Jammu district"
+    },
+    {
+        "item": "Q1986096",
+        "itemLabel": "Chhindwara district"
+    },
+    {
+        "item": "Q2019694",
+        "itemLabel": "Mehsana district"
+    },
+    {
+        "item": "Q2019683",
+        "itemLabel": "Raigad district"
+    },
+    {
+        "item": "Q2025998",
+        "itemLabel": "Dewas district"
+    },
+    {
+        "item": "Q2030017",
+        "itemLabel": "Deoghar District"
+    },
+    {
+        "item": "Q2085310",
+        "itemLabel": "Gwalior district"
+    },
+    {
+        "item": "Q1815766",
+        "itemLabel": "Gurgaon district"
+    },
+    {
+        "item": "Q1833306",
+        "itemLabel": "Rajgarh district"
+    },
+    {
+        "item": "Q1891677",
+        "itemLabel": "Amroha district"
+    },
+    {
+        "item": "Q1898143",
+        "itemLabel": "Panchkula district"
+    },
+    {
+        "item": "Q1917227",
+        "itemLabel": "Gondia district"
+    },
+    {
+        "item": "Q1937875",
+        "itemLabel": "Unnao district"
+    },
+    {
+        "item": "Q1945425",
+        "itemLabel": "Pithoragarh district"
+    },
+    {
+        "item": "Q1947352",
+        "itemLabel": "Lunglei district"
+    },
+    {
+        "item": "Q1947311",
+        "itemLabel": "Udhampur district"
+    },
+    {
+        "item": "Q1947359",
+        "itemLabel": "Sri Muktsar Sahib district"
+    },
+    {
+        "item": "Q1947570",
+        "itemLabel": "West Tripura district"
+    },
+    {
+        "item": "Q1948389",
+        "itemLabel": "Dhenkanal district"
+    },
+    {
+        "item": "Q1948713",
+        "itemLabel": "Latur district"
+    },
+    {
+        "item": "Q1950527",
+        "itemLabel": "West Singhbhum district"
+    },
+    {
+        "item": "Q1979499",
+        "itemLabel": "Chatra district"
+    },
+    {
+        "item": "Q2085374",
+        "itemLabel": "Mumbai Suburban district"
+    },
+    {
+        "item": "Q1815279",
+        "itemLabel": "Betul district"
+    },
+    {
+        "item": "Q1815313",
+        "itemLabel": "Bageshwar district"
+    },
+    {
+        "item": "Q1815740",
+        "itemLabel": "Dehradun district"
+    },
+    {
+        "item": "Q1862950",
+        "itemLabel": "Kinnaur district"
+    },
+    {
+        "item": "Q1873644",
+        "itemLabel": "Yamuna Nagar district"
+    },
+    {
+        "item": "Q1876588",
+        "itemLabel": "Kalahandi district"
+    },
+    {
+        "item": "Q1897251",
+        "itemLabel": "Farrukhabad district"
+    },
+    {
+        "item": "Q1937865",
+        "itemLabel": "Bijnor district"
+    },
+    {
+        "item": "Q1937857",
+        "itemLabel": "Gonda district"
+    },
+    {
+        "item": "Q1945445",
+        "itemLabel": "Sant Kabir Nagar district"
+    },
+    {
+        "item": "Q1945458",
+        "itemLabel": "Shravasti district"
+    },
+    {
+        "item": "Q1947322",
+        "itemLabel": "Aizawl district"
+    },
+    {
+        "item": "Q1947336",
+        "itemLabel": "Lalitpur district"
+    },
+    {
+        "item": "Q1947343",
+        "itemLabel": "Kolasib district"
+    },
+    {
+        "item": "Q1948301",
+        "itemLabel": "Lohardaga district"
+    },
+    {
+        "item": "Q2061938",
+        "itemLabel": "South Delhi"
+    },
+    {
+        "item": "Q1815773",
+        "itemLabel": "Hisar District"
+    },
+    {
+        "item": "Q1821714",
+        "itemLabel": "Saiha District"
+    },
+    {
+        "item": "Q1921404",
+        "itemLabel": "Shimla District"
+    },
+    {
+        "item": "Q1945416",
+        "itemLabel": "Hazaribagh District"
+    },
+    {
+        "item": "Q2022256",
+        "itemLabel": "Cuttack District"
+    },
+    {
+        "item": "Q2085421",
+        "itemLabel": "Sagar District"
+    },
+    {
+        "item": "Q2131759",
+        "itemLabel": "Banda"
+    },
+    {
+        "item": "Q2086163",
+        "itemLabel": "Panipat district"
+    },
+    {
+        "item": "Q2086546",
+        "itemLabel": "Dhalai district"
+    },
+    {
+        "item": "Q2125592",
+        "itemLabel": "Burhanpur district"
+    },
+    {
+        "item": "Q2301753",
+        "itemLabel": "Fatehabad"
+    },
+    {
+        "item": "Q2173003",
+        "itemLabel": "Harda"
+    },
+    {
+        "item": "Q2270438",
+        "itemLabel": "Haridwar district"
+    },
+    {
+        "item": "Q2299172",
+        "itemLabel": "Kendrapara"
+    },
+    {
+        "item": "Q2295896",
+        "itemLabel": "Koriya district"
+    },
+    {
+        "item": "Q2298979",
+        "itemLabel": "Doda District"
+    },
+    {
+        "item": "Q2299093",
+        "itemLabel": "Anuppur district"
+    },
+    {
+        "item": "Q2299029",
+        "itemLabel": "Sehore district"
+    },
+    {
+        "item": "Q2299042",
+        "itemLabel": "Shivpuri district"
+    },
+    {
+        "item": "Q2302065",
+        "itemLabel": "Giridih district"
+    },
+    {
+        "item": "Q2308319",
+        "itemLabel": "South 24 Parganas district"
+    },
+    {
+        "item": "Q2321867",
+        "itemLabel": "Kulgam district"
+    },
+    {
+        "item": "Q2339648",
+        "itemLabel": "Mon district"
+    },
+    {
+        "item": "Q2341630",
+        "itemLabel": "Panna district"
+    },
+    {
+        "item": "Q2341670",
+        "itemLabel": "Mandla district"
+    },
+    {
+        "item": "Q2353931",
+        "itemLabel": "Gadag district"
+    },
+    {
+        "item": "Q2449506",
+        "itemLabel": "Kurung Kumey district"
+    },
+    {
+        "item": "Q2449803",
+        "itemLabel": "Shajapur district"
+    },
+    {
+        "item": "Q2085464",
+        "itemLabel": "Shahdol district"
+    },
+    {
+        "item": "Q2086209",
+        "itemLabel": "Lawngtlai district"
+    },
+    {
+        "item": "Q2086198",
+        "itemLabel": "Thoubal district"
+    },
+    {
+        "item": "Q2088440",
+        "itemLabel": "Birbhum district"
+    },
+    {
+        "item": "Q2089141",
+        "itemLabel": "Chitrakoot district"
+    },
+    {
+        "item": "Q2126598",
+        "itemLabel": "Yanam district"
+    },
+    {
+        "item": "Q2175311",
+        "itemLabel": "Mokokchung district"
+    },
+    {
+        "item": "Q2295925",
+        "itemLabel": "Bokaro district"
+    },
+    {
+        "item": "Q2295865",
+        "itemLabel": "Gumla district"
+    },
+    {
+        "item": "Q2296047",
+        "itemLabel": "Sundargarh district"
+    },
+    {
+        "item": "Q2299121",
+        "itemLabel": "Korba district"
+    },
+    {
+        "item": "Q2299164",
+        "itemLabel": "Ratlam district"
+    },
+    {
+        "item": "Q2301706",
+        "itemLabel": "Senapati district"
+    },
+    {
+        "item": "Q2301741",
+        "itemLabel": "Una district"
+    },
+    {
+        "item": "Q2310530",
+        "itemLabel": "Kanker district"
+    },
+    {
+        "item": "Q2321899",
+        "itemLabel": "Kishtwar district"
+    },
+    {
+        "item": "Q2321956",
+        "itemLabel": "Reasi district"
+    },
+    {
+        "item": "Q2322000",
+        "itemLabel": "Narayanpur district"
+    },
+    {
+        "item": "Q2341660",
+        "itemLabel": "Mumbai City district"
+    },
+    {
+        "item": "Q2362658",
+        "itemLabel": "Seraikela Kharsawan"
+    },
+    {
+        "item": "Q2373368",
+        "itemLabel": "Lower Dibang Valley district"
+    },
+    {
+        "item": "Q2396798",
+        "itemLabel": "Nabarangpur district"
+    },
+    {
+        "item": "Q2086180",
+        "itemLabel": "Hamirpur District"
+    },
+    {
+        "item": "Q2221184",
+        "itemLabel": "Seoni"
+    },
+    {
+        "item": "Q2086173",
+        "itemLabel": "Faridabad district"
+    },
+    {
+        "item": "Q2088458",
+        "itemLabel": "Bankura district"
+    },
+    {
+        "item": "Q2089152",
+        "itemLabel": "Kanpur district"
+    },
+    {
+        "item": "Q2091461",
+        "itemLabel": "Zunheboto district"
+    },
+    {
+        "item": "Q2240791",
+        "itemLabel": "Dhanbad district"
+    },
+    {
+        "item": "Q2244762",
+        "itemLabel": "Latehar district"
+    },
+    {
+        "item": "Q2247441",
+        "itemLabel": "Kamrup district"
+    },
+    {
+        "item": "Q2286310",
+        "itemLabel": "Raigarh district"
+    },
+    {
+        "item": "Q2295930",
+        "itemLabel": "Pakur district"
+    },
+    {
+        "item": "Q2297306",
+        "itemLabel": "Kupwara district"
+    },
+    {
+        "item": "Q2329181",
+        "itemLabel": "West Garo Hills district"
+    },
+    {
+        "item": "Q2341467",
+        "itemLabel": "Morena district"
+    },
+    {
+        "item": "Q2341700",
+        "itemLabel": "Bhind district"
+    },
+    {
+        "item": "Q2341713",
+        "itemLabel": "Neemuch district"
+    },
+    {
+        "item": "Q2341800",
+        "itemLabel": "Rajnandgaon district"
+    },
+    {
+        "item": "Q2363639",
+        "itemLabel": "Boudh district"
+    },
+    {
+        "item": "Q2365710",
+        "itemLabel": "Muzaffarnagar district"
+    },
+    {
+        "item": "Q2085480",
+        "itemLabel": "Koderma district"
+    },
+    {
+        "item": "Q2085500",
+        "itemLabel": "Kandhamal district"
+    },
+    {
+        "item": "Q2085474",
+        "itemLabel": "Pauri Garhwal district"
+    },
+    {
+        "item": "Q2087771",
+        "itemLabel": "Jajpur district"
+    },
+    {
+        "item": "Q2088496",
+        "itemLabel": "Kolkata district"
+    },
+    {
+        "item": "Q2206266",
+        "itemLabel": "Datia district"
+    },
+    {
+        "item": "Q2246416",
+        "itemLabel": "Ashoknagar district"
+    },
+    {
+        "item": "Q2269639",
+        "itemLabel": "Debagarh district"
+    },
+    {
+        "item": "Q2299069",
+        "itemLabel": "Dhar district"
+    },
+    {
+        "item": "Q2298993",
+        "itemLabel": "Tarn Taran district"
+    },
+    {
+        "item": "Q2301717",
+        "itemLabel": "Tamenglong district"
+    },
+    {
+        "item": "Q2367388",
+        "itemLabel": "Nayagarh district"
+    },
+    {
+        "item": "Q2398551",
+        "itemLabel": "Dindori district"
+    },
+    {
+        "item": "Q2449785",
+        "itemLabel": "Chhatarpur district"
+    },
+    {
+        "item": "Q2449793",
+        "itemLabel": "Sidhi district"
+    },
+    {
+        "item": "Q2085455",
+        "itemLabel": "East Garo Hills district"
+    },
+    {
+        "item": "Q2086226",
+        "itemLabel": "Ambala district"
+    },
+    {
+        "item": "Q2087615",
+        "itemLabel": "Hingoli district"
+    },
+    {
+        "item": "Q2089115",
+        "itemLabel": "Jalaun district"
+    },
+    {
+        "item": "Q2126754",
+        "itemLabel": "Barwani district"
+    },
+    {
+        "item": "Q2216696",
+        "itemLabel": "Nuh district"
+    },
+    {
+        "item": "Q2273900",
+        "itemLabel": "Khargone district"
+    },
+    {
+        "item": "Q2295914",
+        "itemLabel": "Raipur district"
+    },
+    {
+        "item": "Q2301769",
+        "itemLabel": "Chandel district"
+    },
+    {
+        "item": "Q2301759",
+        "itemLabel": "Rewari district"
+    },
+    {
+        "item": "Q2302076",
+        "itemLabel": "Garhwa district"
+    },
+    {
+        "item": "Q2321939",
+        "itemLabel": "Ramban district"
+    },
+    {
+        "item": "Q2329228",
+        "itemLabel": "South Garo Hills district"
+    },
+    {
+        "item": "Q2329717",
+        "itemLabel": "Baran district"
+    },
+    {
+        "item": "Q2341616",
+        "itemLabel": "Narsinghpur district"
+    },
+    {
+        "item": "Q2375700",
+        "itemLabel": "Kathua District"
+    },
+    {
+        "item": "Q2379189",
+        "itemLabel": "South West Delhi"
+    },
+    {
+        "item": "Q2429655",
+        "itemLabel": "Thrissur district"
+    },
+    {
+        "item": "Q2449760",
+        "itemLabel": "Tikamgarh district"
+    },
+    {
+        "item": "Q2086190",
+        "itemLabel": "Serchhip District"
+    },
+    {
+        "item": "Q2218824",
+        "itemLabel": "Midnapore District"
+    },
+    {
+        "item": "Q2241746",
+        "itemLabel": "Sonipat District"
+    },
+    {
+        "item": "Q2509866",
+        "itemLabel": "Kolar district"
+    },
+    {
+        "item": "Q2983553",
+        "itemLabel": "Bandipora"
+    },
+    {
+        "item": "Q2571393",
+        "itemLabel": "Tuensang district"
+    },
+    {
+        "item": "Q2577551",
+        "itemLabel": "Jashpur district"
+    },
+    {
+        "item": "Q2597908",
+        "itemLabel": "Kiphire district"
+    },
+    {
+        "item": "Q2641873",
+        "itemLabel": "Gulbarga district"
+    },
+    {
+        "item": "Q2668638",
+        "itemLabel": "Singrauli district"
+    },
+    {
+        "item": "Q2980705",
+        "itemLabel": "Pilibhit district"
+    },
+    {
+        "item": "Q2980880",
+        "itemLabel": "Kullu"
+    },
+    {
+        "item": "Q2980986",
+        "itemLabel": "Jamtara district"
+    },
+    {
+        "item": "Q2577281",
+        "itemLabel": "Churachandpur district"
+    },
+    {
+        "item": "Q2577657",
+        "itemLabel": "Dumka district"
+    },
+    {
+        "item": "Q2577924",
+        "itemLabel": "Satna District"
+    },
+    {
+        "item": "Q2724926",
+        "itemLabel": "Palwal district"
+    },
+    {
+        "item": "Q2728658",
+        "itemLabel": "Cooch Behar district"
+    },
+    {
+        "item": "Q2733369",
+        "itemLabel": "Chandauli district"
+    },
+    {
+        "item": "Q5627568",
+        "itemLabel": "Longding district"
+    },
+    {
+        "item": "Q2982349",
+        "itemLabel": "Anantnag district"
+    },
+    {
+        "item": "Q2999938",
+        "itemLabel": "Shamli district"
+    },
+    {
+        "item": "Q3000436",
+        "itemLabel": "Sambhal district"
+    },
+    {
+        "item": "Q2450240",
+        "itemLabel": "Mahasamund district"
+    },
+    {
+        "item": "Q2479331",
+        "itemLabel": "Damoh district"
+    },
+    {
+        "item": "Q5122619",
+        "itemLabel": "Malkangiri district"
+    },
+    {
+        "item": "Q2556028",
+        "itemLabel": "Ganderbal district"
+    },
+    {
+        "item": "Q2663612",
+        "itemLabel": "Ramgarh district"
+    },
+    {
+        "item": "Q2667586",
+        "itemLabel": "Alirajpur district"
+    },
+    {
+        "item": "Q2982118",
+        "itemLabel": "Jamnagar district"
+    },
+    {
+        "item": "Q2983134",
+        "itemLabel": "Poonch district"
+    },
+    {
+        "item": "Q2450255",
+        "itemLabel": "Kabirdham district"
+    },
+    {
+        "item": "Q2452921",
+        "itemLabel": "East Singhbhum district"
+    },
+    {
+        "item": "Q2575633",
+        "itemLabel": "Janjgir–Champa district"
+    },
+    {
+        "item": "Q2768290",
+        "itemLabel": "Mandya district"
+    },
+    {
+        "item": "Q2980652",
+        "itemLabel": "Kannur district"
+    },
+    {
+        "item": "Q2552347",
+        "itemLabel": "Diu district"
+    },
+    {
+        "item": "Q2577997",
+        "itemLabel": "Rayagada district"
+    },
+    {
+        "item": "Q2594218",
+        "itemLabel": "Budgam district"
+    },
+    {
+        "item": "Q14505072",
+        "itemLabel": "Botad district"
+    },
+    {
+        "item": "Q4726845",
+        "itemLabel": "Alipurduar district"
+    },
+    {
+        "item": "Q5653340",
+        "itemLabel": "Hapur district"
+    },
+    {
+        "item": "Q2597889",
+        "itemLabel": "Simdega District"
+    },
+    {
+        "item": "Q2980937",
+        "itemLabel": "Solan District"
+    },
+    {
+        "item": "Q2981389",
+        "itemLabel": "Shimoga District"
+    },
+    {
+        "item": "Q15244465",
+        "itemLabel": "Gir Somnath district"
+    },
+    {
+        "item": "Q16086076",
+        "itemLabel": "Sipahijala district"
+    },
+    {
+        "item": "Q12945777",
+        "itemLabel": "Sikar district"
+    },
+    {
+        "item": "Q13476249",
+        "itemLabel": "Mungeli district"
+    },
+    {
+        "item": "Q16086497",
+        "itemLabel": "Gomati district"
+    },
+    {
+        "item": "Q16086680",
+        "itemLabel": "Khowai district"
+    },
+    {
+        "item": "Q16087996",
+        "itemLabel": "Unakoti district"
+    },
+    {
+        "item": "Q34965177",
+        "itemLabel": "Ladakh District"
+    }
+]

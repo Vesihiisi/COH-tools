@@ -1,0 +1,147 @@
+[
+    {
+        "iso": "IN-GA",
+        "item": "Q1171",
+        "itemLabel": "Goa"
+    },
+    {
+        "iso": "IN-BR",
+        "item": "Q1165",
+        "itemLabel": "Bihar"
+    },
+    {
+        "iso": "IN-AS",
+        "item": "Q1164",
+        "itemLabel": "Assam"
+    },
+    {
+        "iso": "IN-AP",
+        "item": "Q1159",
+        "itemLabel": "Andhra Pradesh"
+    },
+    {
+        "iso": "IN-JK",
+        "item": "Q1180",
+        "itemLabel": "Jammu and Kashmir"
+    },
+    {
+        "iso": "IN-MP",
+        "item": "Q1188",
+        "itemLabel": "Madhya Pradesh"
+    },
+    {
+        "iso": "IN-WB",
+        "item": "Q1356",
+        "itemLabel": "West Bengal"
+    },
+    {
+        "iso": "IN-RJ",
+        "item": "Q1437",
+        "itemLabel": "Rajasthan"
+    },
+    {
+        "iso": "IN-NL",
+        "item": "Q1599",
+        "itemLabel": "Nagaland"
+    },
+    {
+        "iso": "IN-TN",
+        "item": "Q1445",
+        "itemLabel": "Tamil Nadu"
+    },
+    {
+        "iso": "IN-UP",
+        "item": "Q1498",
+        "itemLabel": "Uttar Pradesh"
+    },
+    {
+        "iso": "IN-UT",
+        "item": "Q1499",
+        "itemLabel": "Uttarakhand"
+    },
+    {
+        "iso": "IN-AR",
+        "item": "Q1162",
+        "itemLabel": "Arunachal Pradesh"
+    },
+    {
+        "iso": "IN-CT",
+        "item": "Q1168",
+        "itemLabel": "Chhattisgarh"
+    },
+    {
+        "iso": "IN-JH",
+        "item": "Q1184",
+        "itemLabel": "Jharkhand"
+    },
+    {
+        "iso": "IN-KA",
+        "item": "Q1185",
+        "itemLabel": "Karnataka"
+    },
+    {
+        "iso": "IN-MZ",
+        "item": "Q1502",
+        "itemLabel": "Mizoram"
+    },
+    {
+        "iso": "IN-HR",
+        "item": "Q1174",
+        "itemLabel": "Haryana"
+    },
+    {
+        "iso": "IN-KL",
+        "item": "Q1186",
+        "itemLabel": "Kerala"
+    },
+    {
+        "iso": "IN-GJ",
+        "item": "Q1061",
+        "itemLabel": "Gujarat"
+    },
+    {
+        "iso": "IN-MH",
+        "item": "Q1191",
+        "itemLabel": "Maharashtra"
+    },
+    {
+        "iso": "IN-ML",
+        "item": "Q1195",
+        "itemLabel": "Meghalaya"
+    },
+    {
+        "iso": "IN-PB",
+        "item": "Q22424",
+        "itemLabel": "Punjab State"
+    },
+    {
+        "iso": "IN-TG",
+        "item": "Q677037",
+        "itemLabel": "Telangana"
+    },
+    {
+        "iso": "IN-SK",
+        "item": "Q1505",
+        "itemLabel": "Sikkim"
+    },
+    {
+        "iso": "IN-TR",
+        "item": "Q1363",
+        "itemLabel": "Tripura"
+    },
+    {
+        "iso": "IN-HP",
+        "item": "Q1177",
+        "itemLabel": "Himachal Pradesh"
+    },
+    {
+        "iso": "IN-MN",
+        "item": "Q1193",
+        "itemLabel": "Manipur"
+    },
+    {
+        "iso": "IN-OR",
+        "item": "Q22048",
+        "itemLabel": "Odisha"
+    }
+]
