@@ -303,6 +303,16 @@ class TestDatetimeMethods(unittest.TestCase):
 
 class TestWikitext(unittest.TestCase):
 
+    def test_get_urls_none(self):
+        text = "[[Tegera Arena]], huvudentrén"
+        output = []
+        self.assertEqual(utils.get_external_links(text), output)
+
+    def test_get_urls_one(self):
+        text = "[http://www.docartis.com/Tunisia_Decreti/DECRETS/Pagine/1922_25janvier.html 25 janvier 1922]"
+        output = ["http://www.docartis.com/Tunisia_Decreti/DECRETS/Pagine/1922_25janvier.html"]
+        self.assertEqual(utils.get_external_links(text), output)
+
     def test_remove_markup_simple(self):
         text = "[[Tegera Arena]], huvudentrén"
         output = "Tegera Arena, huvudentrén"
