@@ -68,9 +68,7 @@ class PhEn(Monument):
 
     def set_heritage_id(self):
         """Set the WLM ID property."""
-        wlm_code = self.mapping["table_name"].upper()
-        wlm_id = "{}-{}".format(wlm_code, self.cp_wmph_id)
-        self.add_statement("wlm_id", wlm_id)
+        self.add_statement("wlm_id", self.cp_wmph_id)
 
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
