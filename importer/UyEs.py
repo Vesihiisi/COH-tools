@@ -33,7 +33,7 @@ class UyEs(Monument):
             search_in="iso",
             search_term=iso)
         if len(dep_match) == 1:
-            adm_q = dep_match
+            adm_q = dep_match[0]
 
         if adm_q:
             self.add_statement("located_adm", adm_q)
