@@ -43,7 +43,8 @@ class UyEs(Monument):
     def set_wd_item_via_name(self):
         if utils.count_wikilinks(self.monumento) == 1:
             monum_q = utils.q_from_first_wikilink("es", self.monumento)
-            self.set_wd_item(monum_q)
+            if monum_q:
+                self.set_wd_item(monum_q)
 
     def update_labels(self):
         es_name = utils.remove_markup(self.monumento)
