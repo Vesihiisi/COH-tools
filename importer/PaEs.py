@@ -24,10 +24,27 @@ class PaEs(Monument):
     def update_labels(self):
         self.add_label("es", utils.remove_markup(self.nombre))
 
+    def update_descriptions(self):
+        english = "cultural monument of Panama"
+        self.add_description("en", english)
+
     def set_heritage_id(self):
         wlm_code = self.mapping["table_name"].upper()
         heritage = "{}-{}".format(wlm_code, self.id)
         self.add_statement("wlm_id", heritage)
+
+    def set_commonscat(self):
+        """
+        Set the Commons cat property.
+
+        There's a number of 'weird' values
+        like 'Cultural heritage monuments in $province'
+        so detect those and don't add them!
+        """
+        if self.commonscat.startswith("Cultural heritage monuments"):
+            return
+        else:
+            super().set_commonscat()
 
     def exists_with_monument_article(self, language):
         return super().exists_with_monument_article("es", "articulo")
