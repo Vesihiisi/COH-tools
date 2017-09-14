@@ -65,6 +65,7 @@ class PaEs(Monument):
         self.set_coords()
         self.set_image("imagen")
         self.update_labels()
+        self.update_descriptions()
         self.set_wd_item(self.find_matching_wikidata(mapping))
 
 
