@@ -72,6 +72,8 @@ class UyEs(Monument):
         self.set_location()
         self.set_is()
         self.set_heritage()
+        self.set_coords()
+        self.set_image()
         self.set_heritage_id()
         self.update_labels()
         self.update_descriptions()
