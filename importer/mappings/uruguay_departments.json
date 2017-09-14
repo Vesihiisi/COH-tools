@@ -1,0 +1,97 @@
+[
+    {
+        "iso": "UY-FS",
+        "item": "Q16578",
+        "itemLabel": "Departamento de Flores"
+    },
+    {
+        "iso": "UY-DU",
+        "item": "Q16591",
+        "itemLabel": "Departamento de Durazno"
+    },
+    {
+        "iso": "UY-LA",
+        "item": "Q460435",
+        "itemLabel": "Departamento de Lavalleja"
+    },
+    {
+        "iso": "UY-MA",
+        "item": "Q331196",
+        "itemLabel": "Departamento de Maldonado"
+    },
+    {
+        "iso": "UY-SJ",
+        "item": "Q16579",
+        "itemLabel": "Departamento de San José"
+    },
+    {
+        "iso": "UY-PA",
+        "item": "Q16576",
+        "itemLabel": "Departamento de Paysandú"
+    },
+    {
+        "iso": "UY-RO",
+        "item": "Q16582",
+        "itemLabel": "Departamento de Rocha"
+    },
+    {
+        "iso": "UY-TT",
+        "item": "Q16610",
+        "itemLabel": "Departamento de Treinta y Tres"
+    },
+    {
+        "iso": "UY-FD",
+        "item": "Q16593",
+        "itemLabel": "Departamento de Florida"
+    },
+    {
+        "iso": "UY-AR",
+        "item": "Q16603",
+        "itemLabel": "Departamento de Artigas"
+    },
+    {
+        "iso": "UY-CA",
+        "item": "Q16577",
+        "itemLabel": "Departamento de Canelones"
+    },
+    {
+        "iso": "UY-CO",
+        "item": "Q16580",
+        "itemLabel": "Departamento de Colonia"
+    },
+    {
+        "iso": "UY-TA",
+        "item": "Q16587",
+        "itemLabel": "Departamento de Tacuarembó"
+    },
+    {
+        "iso": "UY-SO",
+        "item": "Q16584",
+        "itemLabel": "Departamento de Soriano"
+    },
+    {
+        "iso": "UY-MO",
+        "item": "Q16594",
+        "itemLabel": "Departamento de Montevideo"
+    },
+    {
+        "iso": "UY-SA",
+        "item": "Q16595",
+        "itemLabel": "Departamento de Salto"
+    },
+    {
+        "iso": "UY-RN",
+        "item": "Q16596",
+        "itemLabel": "Departamento de Río Negro"
+    },
+    {
+        "iso": "UY-RV",
+        "item": "Q16609",
+        "itemLabel": "Departamento de Rivera"
+    },
+    {
+        "iso": "UY-CL",
+        "item": "Q16575",
+        "itemLabel": "Departamento de Cerro Largo"
+    }
+]
