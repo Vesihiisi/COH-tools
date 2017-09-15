@@ -9,6 +9,10 @@ class AmHy(Monument):
         name = utils.remove_markup(self.description)
         self.add_label("hy", name)
 
+    def update_descriptions(self):
+        english = "cultural heritage monument of Armenia"
+        self.add_description("en", english)
+
     def set_adm_location(self):
         com_dic = self.data_files["communities"]
         prov_dic = self.data_files["provinces"]
@@ -31,6 +35,9 @@ class AmHy(Monument):
 
         if adm_q is not None:
             self.add_statement("located_adm", adm_q)
+        else:
+            self.add_to_report(
+                "municipality", self.municipality, "located_adm")
 
     def set_commonscat(self):
         """Exclude stuff like 'monuments in...'."""
@@ -61,6 +68,7 @@ class AmHy(Monument):
         self.set_is()
         self.set_heritage()
         self.update_labels()
+        self.update_descriptions()
         self.set_wd_item(self.find_matching_wikidata(mapping))
 
 
