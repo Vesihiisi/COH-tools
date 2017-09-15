@@ -1,0 +1,60 @@
+from Monument import Monument, Dataset
+import importer_utils as utils
+import importer as importer
+
+
+class AlSq(Monument):
+
+    def set_location(self):
+        if self.has_non_empty_attribute("place"):
+            loc_raw = self.place
+            loc_match = utils.get_item_from_dict_by_key(dict_name = self.data_files["settlements"], search_term=loc_raw, search_in="itemLabel")
+            if len(loc_match) == 1:
+                self.add_statement("location", loc_match[0])
+
+    def set_adm_location(self):
+        if self.has_non_empty_attribute("municipality"):
+            adm_raw = self.municipality
+            adm_match = utils.get_item_from_dict_by_key(dict_name = self.data_files["municipalities"], search_term=adm_raw, search_in="itemLabel")
+            if len(adm_match) ==1:
+                self.add_statement("located_adm", adm_match[0])
+
+
+    def update_labels(self):
+        albanian = utils.remove_markup(self.name)
+        self.add_label("sq", albanian)
+
+    def set_heritage_id(self):
+        wlm = "{}-{}".format(self.mapping["table_name"].upper(), self.idno)
+        self.add_statement("wlm_id", wlm)
+
+    def exists_with_monument_article(self, language):
+        return super().exists_with_monument_article("sq", "artikel")
+
+    def __init__(self, db_row_dict, mapping, data_files, existing, repository):
+        Monument.__init__(self, db_row_dict, mapping,
+                          data_files, existing, repository)
+        self.set_monuments_all_id("idno")
+        self.set_registrant_url()
+        self.set_changed()
+        self.set_wlm_source()
+        self.set_country()
+        self.set_heritage_id()
+        self.set_heritage()
+        self.set_is()
+        self.set_adm_location()
+        self.set_location()
+        self.set_coords()
+        self.set_image()
+        self.update_labels()
+        # there's no commonscat in dataset
+        # self.set_wd_item(self.find_matching_wikidata(mapping))
+
+
+if __name__ == "__main__":
+    """Point of entrance for importer."""
+    args = importer.handle_args()
+    dataset = Dataset("al", "sq", AlSq)
+    dataset.data_files = {"settlements": "albania_settlements.json",
+                          "municipalities": "albania_municipalities.json"}
+    importer.main(args, dataset)
