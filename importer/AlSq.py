@@ -8,21 +8,35 @@ class AlSq(Monument):
     def set_location(self):
         if self.has_non_empty_attribute("place"):
             loc_raw = self.place
-            loc_match = utils.get_item_from_dict_by_key(dict_name = self.data_files["settlements"], search_term=loc_raw, search_in="itemLabel")
+            loc_match = utils.get_item_from_dict_by_key(
+                dict_name=self.data_files["settlements"],
+                search_term=loc_raw,
+                search_in="itemLabel")
             if len(loc_match) == 1:
                 self.add_statement("location", loc_match[0])
+            else:
+                self.add_to_report("place", self.place, "location")
 
     def set_adm_location(self):
         if self.has_non_empty_attribute("municipality"):
             adm_raw = self.municipality
-            adm_match = utils.get_item_from_dict_by_key(dict_name = self.data_files["municipalities"], search_term=adm_raw, search_in="itemLabel")
-            if len(adm_match) ==1:
+            adm_match = utils.get_item_from_dict_by_key(
+                dict_name=self.data_files["municipalities"],
+                search_term=adm_raw,
+                search_in="itemLabel")
+            if len(adm_match) == 1:
                 self.add_statement("located_adm", adm_match[0])
-
+            else:
+                self.add_to_report(
+                    "municipality", self.municipality, "located_adm")
 
     def update_labels(self):
         albanian = utils.remove_markup(self.name)
         self.add_label("sq", albanian)
+
+    def update_descriptions(self):
+        english = "cultural heritage monument of Albania"
+        self.add_description("en", english)
 
     def set_heritage_id(self):
         wlm = "{}-{}".format(self.mapping["table_name"].upper(), self.idno)
@@ -46,9 +60,10 @@ class AlSq(Monument):
         self.set_location()
         self.set_coords()
         self.set_image()
+        self.update_descriptions()
         self.update_labels()
         # there's no commonscat in dataset
-        # self.set_wd_item(self.find_matching_wikidata(mapping))
+        self.set_wd_item(self.find_matching_wikidata(mapping))
 
 
 if __name__ == "__main__":
