@@ -201,7 +201,7 @@
     },
     {
         "item": "Q909791",
-        "itemLabel": "Bashkia Tropojë"
+        "itemLabel": "Tropojë"
     },
     {
         "item": "Q2219864",
@@ -325,7 +325,7 @@
     },
     {
         "item": "Q593557",
-        "itemLabel": "Bashkia Sukth"
+        "itemLabel": "Sukth"
     },
     {
         "item": "Q650258",
@@ -677,11 +677,11 @@
     },
     {
         "item": "Q13037408",
-        "itemLabel": "Bashkia Cërrik"
+        "itemLabel": "Cërrik"
     },
     {
         "item": "Q13037413",
-        "itemLabel": "Bashkia Klos"
+        "itemLabel": "Klos"
     },
     {
         "item": "Q6447561",
@@ -689,7 +689,7 @@
     },
     {
         "item": "Q10786387",
-        "itemLabel": "Bashkia Liqenas"
+        "itemLabel": "Liqenas"
     },
     {
         "item": "Q2633942",
@@ -769,87 +769,87 @@
     },
     {
         "item": "Q13037405",
-        "itemLabel": "Bashkia Belsh"
+        "itemLabel": "Belsh"
     },
     {
         "item": "Q13037410",
-        "itemLabel": "Bashkia Kamëz"
+        "itemLabel": "Kamëz"
     },
     {
         "item": "Q13037412",
-        "itemLabel": "Bashkia Konispol"
+        "itemLabel": "Konispol"
     },
     {
         "item": "Q6744046",
-        "itemLabel": "Bashkia Mallakastër"
+        "itemLabel": "Mallakastër"
     },
     {
         "item": "Q13037406",
-        "itemLabel": "Bashkia Devoll"
+        "itemLabel": "Devoll"
     },
     {
         "item": "Q13037407",
-        "itemLabel": "Bashkia Bulqizë"
+        "itemLabel": "Bulqizë"
     },
     {
         "item": "Q13037411",
-        "itemLabel": "Bashkia Gramsh"
+        "itemLabel": "Gramsh"
     },
     {
         "item": "Q13037409",
-        "itemLabel": "Bashkia Himarë"
+        "itemLabel": "Himarë"
     },
     {
         "item": "Q13037414",
-        "itemLabel": "Bashkia Korçë"
+        "itemLabel": "Korçë"
     },
     {
         "item": "Q13037423",
-        "itemLabel": "Bashkia Maliq"
+        "itemLabel": "Maliq"
     },
     {
         "item": "Q13037420",
-        "itemLabel": "Bashkia Lushnjë"
+        "itemLabel": "Lushnjë"
     },
     {
         "item": "Q13037421",
-        "itemLabel": "Bashkia Libohovë"
+        "itemLabel": "Libohovë"
     },
     {
         "item": "Q13037434",
-        "itemLabel": "Bashkia Shijak"
+        "itemLabel": "Shijak"
     },
     {
         "item": "Q13037438",
-        "itemLabel": "Bashkia Vau i Dejës"
+        "itemLabel": "Vau i Dejës"
     },
     {
         "item": "Q16350067",
-        "itemLabel": "Bashkia Durrës"
+        "itemLabel": "Durrës"
     },
     {
         "item": "Q16350126",
-        "itemLabel": "Bashkia Pogradec"
+        "itemLabel": "Pogradec"
     },
     {
         "item": "Q13037422",
-        "itemLabel": "Bashkia Librazhd"
+        "itemLabel": "Librazhd"
     },
     {
         "item": "Q13037429",
-        "itemLabel": "Bashkia Prrenjas"
+        "itemLabel": "Prrenjas"
     },
     {
         "item": "Q13037435",
-        "itemLabel": "Bashkia Tepelenë"
+        "itemLabel": "Tepelenë"
     },
     {
         "item": "Q13037432",
-        "itemLabel": "Bashkia Roskovec"
+        "itemLabel": "Roskovec"
     },
     {
         "item": "Q13037436",
-        "itemLabel": "Bashkia Tiranë"
+        "itemLabel": "Tiranë"
     },
     {
         "item": "Q20821805",
@@ -857,19 +857,19 @@
     },
     {
         "item": "Q13037433",
-        "itemLabel": "Bashkia Mirditë"
+        "itemLabel": "Mirditë"
     },
     {
         "item": "Q16350074",
-        "itemLabel": "Bashkia Ersekë"
+        "itemLabel": "Ersekë"
     },
     {
         "item": "Q16350079",
-        "itemLabel": "Bashkia Fier"
+        "itemLabel": "Fier"
     },
     {
         "item": "Q16350151",
-        "itemLabel": "Bashkia Vlorë"
+        "itemLabel": "Vlorë"
     },
     {
         "item": "Q22005139",
@@ -877,95 +877,95 @@
     },
     {
         "item": "Q20850533",
-        "itemLabel": "Bashkia Mat"
+        "itemLabel": "Mat"
     },
     {
         "item": "Q13037419",
-        "itemLabel": "Bashkia Kurbin"
+        "itemLabel": "Kurbin"
     },
     {
         "item": "Q13037417",
-        "itemLabel": "Bashkia Kukës"
+        "itemLabel": "Kukës"
     },
     {
         "item": "Q13037426",
-        "itemLabel": "Bashkia Peqin"
+        "itemLabel": "Peqin"
     },
     {
         "item": "Q13037427",
-        "itemLabel": "Bashkia Peshkopi"
+        "itemLabel": "Peshkopi"
     },
     {
         "item": "Q13037430",
-        "itemLabel": "Bashkia Poliçan"
+        "itemLabel": "Poliçan"
     },
     {
         "item": "Q13037428",
-        "itemLabel": "Bashkia Pukë"
+        "itemLabel": "Pukë"
     },
     {
         "item": "Q16350058",
-        "itemLabel": "Bashkia Burrel"
+        "itemLabel": "Burrel"
     },
     {
         "item": "Q16350087",
-        "itemLabel": "Bashkia Gjirokastër"
+        "itemLabel": "Gjirokastër"
     },
     {
         "item": "Q16350095",
-        "itemLabel": "Bashkia Krumë"
+        "itemLabel": "Krumë"
     },
     {
         "item": "Q16350123",
-        "itemLabel": "Bashkia Patos"
+        "itemLabel": "Patos"
     },
     {
         "item": "Q16350141",
-        "itemLabel": "Bashkia Selenicë"
+        "itemLabel": "Selenicë"
     },
     {
         "item": "Q20850560",
-        "itemLabel": "Bashkia Skrapar"
+        "itemLabel": "Skrapar"
     },
     {
         "item": "Q13037415",
-        "itemLabel": "Bashkia Kavajë"
+        "itemLabel": "Kavajë"
     },
     {
         "item": "Q13037431",
-        "itemLabel": "Bashkia Përmet"
+        "itemLabel": "Përmet"
     },
     {
         "item": "Q13037437",
-        "itemLabel": "Bashkia Ura Vajgurore"
+        "itemLabel": "Ura Vajgurore"
     },
     {
         "item": "Q13037440",
-        "itemLabel": "Bashkia Vorë"
+        "itemLabel": "Vorë"
     },
     {
         "item": "Q16350054",
-        "itemLabel": "Bashkia Berat"
+        "itemLabel": "Berat"
     },
     {
         "item": "Q16350072",
-        "itemLabel": "Bashkia Elbasan"
+        "itemLabel": "Elbasan"
     },
     {
         "item": "Q16350090",
-        "itemLabel": "Bashkia Krujë"
+        "itemLabel": "Krujë"
     },
     {
         "item": "Q16350107",
-        "itemLabel": "Bashkia Lezhë"
+        "itemLabel": "Lezhë"
     },
     {
         "item": "Q16350118",
-        "itemLabel": "Bashkia Memaliaj"
+        "itemLabel": "Memaliaj"
     },
     {
         "item": "Q16350128",
-        "itemLabel": "Bashkia Rrogozhinë"
+        "itemLabel": "Rrogozhinë"
     },
     {
         "item": "Q16361584",
@@ -973,39 +973,39 @@
     },
     {
         "item": "Q16350062",
-        "itemLabel": "Bashkia Delvinë"
+        "itemLabel": "Delvinë"
     },
     {
         "item": "Q16350064",
-        "itemLabel": "Bashkia Divjakë"
+        "itemLabel": "Divjakë"
     },
     {
         "item": "Q16350136",
-        "itemLabel": "Bashkia Sarandë"
+        "itemLabel": "Sarandë"
     },
     {
         "item": "Q16350146",
-        "itemLabel": "Bashkia Shkodër"
+        "itemLabel": "Shkodër"
     },
     {
         "item": "Q19931532",
-        "itemLabel": "Bashkia Kuçovë"
+        "itemLabel": "Kuçovë"
     },
     {
         "item": "Q19931576",
-        "itemLabel": "Bashkia Fushë-Arrëz"
+        "itemLabel": "Fushë-Arrëz"
     },
     {
         "item": "Q19931533",
-        "itemLabel": "Bashkia Këlcyrë"
+        "itemLabel": "Këlcyrë"
     },
     {
         "item": "Q28036071",
-        "itemLabel": "Bashkia Finiq"
+        "itemLabel": "Finiq"
     },
     {
         "item": "Q25378726",
-        "itemLabel": "Bashkia Dropull"
+        "itemLabel": "Dropull"
     },
     {
         "item": "Q2617957",
