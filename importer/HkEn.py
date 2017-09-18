@@ -21,7 +21,6 @@ class HkEn(Monument):
         qualifier = None
         if self.has_non_empty_attribute("declaration_date"):
             parsed_d = dateparser.parse(self.declaration_date)
-            print(parsed_d)
             # will give None when failure
             if parsed_d:
                 date_dict = utils.datetime_object_to_dict(parsed_d)
