@@ -1,0 +1,806 @@
+[
+    {
+        "item": "Q601118",
+        "itemLabel": "Arequipa"
+    },
+    {
+        "item": "Q514494",
+        "itemLabel": "La Mar"
+    },
+    {
+        "item": "Q588491",
+        "itemLabel": "Provincia de San Martín"
+    },
+    {
+        "item": "Q615891",
+        "itemLabel": "Aija"
+    },
+    {
+        "item": "Q683949",
+        "itemLabel": "Provincia de Jaén"
+    },
+    {
+        "item": "Q783136",
+        "itemLabel": "Provincia de Palpa"
+    },
+    {
+        "item": "Q1166116",
+        "itemLabel": "Asunción"
+    },
+    {
+        "item": "Q951816",
+        "itemLabel": "Provincia de Bolívar"
+    },
+    {
+        "item": "Q980098",
+        "itemLabel": "Provincia de Ambo"
+    },
+    {
+        "item": "Q1166113",
+        "itemLabel": "Bolognesi"
+    },
+    {
+        "item": "Q614628",
+        "itemLabel": "Castilla"
+    },
+    {
+        "item": "Q1366050",
+        "itemLabel": "Pisco"
+    },
+    {
+        "item": "Q1366038",
+        "itemLabel": "Rodríguez de Mendoza"
+    },
+    {
+        "item": "Q1342814",
+        "itemLabel": "Bongará"
+    },
+    {
+        "item": "Q1355960",
+        "itemLabel": "Provincia de Tacna"
+    },
+    {
+        "item": "Q1367991",
+        "itemLabel": "Provincia de Huarochirí"
+    },
+    {
+        "item": "Q1132101",
+        "itemLabel": "Cuzco"
+    },
+    {
+        "item": "Q1410654",
+        "itemLabel": "Provincia de Tarata"
+    },
+    {
+        "item": "Q1779698",
+        "itemLabel": "La Unión"
+    },
+    {
+        "item": "Q1779670",
+        "itemLabel": "Huaylas"
+    },
+    {
+        "item": "Q1779705",
+        "itemLabel": "Huari"
+    },
+    {
+        "item": "Q1779635",
+        "itemLabel": "Provincia de Ocros"
+    },
+    {
+        "item": "Q1779643",
+        "itemLabel": "Pomabamba"
+    },
+    {
+        "item": "Q166706",
+        "itemLabel": "Provincia de San Pablo"
+    },
+    {
+        "item": "Q632826",
+        "itemLabel": "Provincia de Lambayeque"
+    },
+    {
+        "item": "Q644721",
+        "itemLabel": "Provincia de Junín"
+    },
+    {
+        "item": "Q747503",
+        "itemLabel": "Casma"
+    },
+    {
+        "item": "Q639598",
+        "itemLabel": "Churcampa"
+    },
+    {
+        "item": "Q951287",
+        "itemLabel": "Provincia de Canchis"
+    },
+    {
+        "item": "Q997406",
+        "itemLabel": "Chachapoyas"
+    },
+    {
+        "item": "Q1140995",
+        "itemLabel": "Huaraz"
+    },
+    {
+        "item": "Q676572",
+        "itemLabel": "Piura"
+    },
+    {
+        "item": "Q1166121",
+        "itemLabel": "Antonio Raymondi"
+    },
+    {
+        "item": "Q1366082",
+        "itemLabel": "Bagua"
+    },
+    {
+        "item": "Q1779688",
+        "itemLabel": "Islay"
+    },
+    {
+        "item": "Q1325771",
+        "itemLabel": "Provincia de Chincha"
+    },
+    {
+        "item": "Q268277",
+        "itemLabel": "Luya"
+    },
+    {
+        "item": "Q1422606",
+        "itemLabel": "Provincia de Huaral"
+    },
+    {
+        "item": "Q1431140",
+        "itemLabel": "Provincia de Chota"
+    },
+    {
+        "item": "Q1431156",
+        "itemLabel": "Provincia de Cañete"
+    },
+    {
+        "item": "Q1779654",
+        "itemLabel": "Pallasca"
+    },
+    {
+        "item": "Q1779714",
+        "itemLabel": "Sihuas"
+    },
+    {
+        "item": "Q188098",
+        "itemLabel": "Provincia de Lauricocha"
+    },
+    {
+        "item": "Q384980",
+        "itemLabel": "Provincia de Morropón"
+    },
+    {
+        "item": "Q590394",
+        "itemLabel": "Provincia de Picota"
+    },
+    {
+        "item": "Q612923",
+        "itemLabel": "Provincia de Sullana"
+    },
+    {
+        "item": "Q629736",
+        "itemLabel": "Provincia de Huaytará"
+    },
+    {
+        "item": "Q578912",
+        "itemLabel": "Chincheros"
+    },
+    {
+        "item": "Q751373",
+        "itemLabel": "Provincia de Cajabamba"
+    },
+    {
+        "item": "Q765311",
+        "itemLabel": "Provincia de Chanchamayo"
+    },
+    {
+        "item": "Q946269",
+        "itemLabel": "Provincia de Tarma"
+    },
+    {
+        "item": "Q633478",
+        "itemLabel": "Carlos Fermín Fitzcarrald"
+    },
+    {
+        "item": "Q960169",
+        "itemLabel": "Provincia de Oxapampa"
+    },
+    {
+        "item": "Q1367672",
+        "itemLabel": "Provincia de Ayabaca"
+    },
+    {
+        "item": "Q1422601",
+        "itemLabel": "Provincia de Yauyos"
+    },
+    {
+        "item": "Q1422611",
+        "itemLabel": "Provincia de Canta"
+    },
+    {
+        "item": "Q1422619",
+        "itemLabel": "Provincia de Huancabamba"
+    },
+    {
+        "item": "Q1422624",
+        "itemLabel": "Provincia de Oyón"
+    },
+    {
+        "item": "Q1771870",
+        "itemLabel": "Abancay"
+    },
+    {
+        "item": "Q1479348",
+        "itemLabel": "Provincia de Tumbes"
+    },
+    {
+        "item": "Q1771879",
+        "itemLabel": "Provincia de Urubamba"
+    },
+    {
+        "item": "Q1779677",
+        "itemLabel": "Provincia de Maynas"
+    },
+    {
+        "item": "Q537708",
+        "itemLabel": "Vilcashuamán"
+    },
+    {
+        "item": "Q548556",
+        "itemLabel": "Provincia de Padre Abad"
+    },
+    {
+        "item": "Q584864",
+        "itemLabel": "Provincia de Chumbivilcas"
+    },
+    {
+        "item": "Q589047",
+        "itemLabel": "Provincia de Jorge Basadre"
+    },
+    {
+        "item": "Q731515",
+        "itemLabel": "Provincia del Huallaga"
+    },
+    {
+        "item": "Q746434",
+        "itemLabel": "Provincia de Paucartambo"
+    },
+    {
+        "item": "Q930214",
+        "itemLabel": "Huanta"
+    },
+    {
+        "item": "Q938322",
+        "itemLabel": "Provincia de Nasca"
+    },
+    {
+        "item": "Q945636",
+        "itemLabel": "Provincia de Tahuamanu"
+    },
+    {
+        "item": "Q1166126",
+        "itemLabel": "Carhuaz"
+    },
+    {
+        "item": "Q1166124",
+        "itemLabel": "Corongo"
+    },
+    {
+        "item": "Q1288434",
+        "itemLabel": "Condorcanqui"
+    },
+    {
+        "item": "Q1335384",
+        "itemLabel": "Provincia de Satipo"
+    },
+    {
+        "item": "Q1422587",
+        "itemLabel": "Provincia de Cajatambo"
+    },
+    {
+        "item": "Q1422590",
+        "itemLabel": "Provincia de Contralmirante Villar"
+    },
+    {
+        "item": "Q1468138",
+        "itemLabel": "Provincia de Leoncio Prado"
+    },
+    {
+        "item": "Q1477797",
+        "itemLabel": "Provincia de Zarumilla"
+    },
+    {
+        "item": "Q1779624",
+        "itemLabel": "Provincia de Huarmey"
+    },
+    {
+        "item": "Q1779663",
+        "itemLabel": "Mariscal Luzuriaga"
+    },
+    {
+        "item": "Q546559",
+        "itemLabel": "Provincia de Chiclayo"
+    },
+    {
+        "item": "Q549969",
+        "itemLabel": "Parinacochas"
+    },
+    {
+        "item": "Q579240",
+        "itemLabel": "Provincia de Lima"
+    },
+    {
+        "item": "Q579906",
+        "itemLabel": "Provincia de Coronel Portillo"
+    },
+    {
+        "item": "Q583300",
+        "itemLabel": "Provincia de Otuzco"
+    },
+    {
+        "item": "Q629428",
+        "itemLabel": "Provincia de San Marcos"
+    },
+    {
+        "item": "Q672921",
+        "itemLabel": "Provincia de Purús"
+    },
+    {
+        "item": "Q764487",
+        "itemLabel": "Provincia de Marañón"
+    },
+    {
+        "item": "Q922867",
+        "itemLabel": "Provincia de Jauja"
+    },
+    {
+        "item": "Q927324",
+        "itemLabel": "Provincia de Ascope"
+    },
+    {
+        "item": "Q941183",
+        "itemLabel": "Utcubamba"
+    },
+    {
+        "item": "Q1342828",
+        "itemLabel": "Provincia de Yauli"
+    },
+    {
+        "item": "Q1343276",
+        "itemLabel": "Provincia de La Convención"
+    },
+    {
+        "item": "Q1422596",
+        "itemLabel": "Provincia de Barranca"
+    },
+    {
+        "item": "Q1431135",
+        "itemLabel": "Provincia de Cajamarca"
+    },
+    {
+        "item": "Q1431153",
+        "itemLabel": "Provincia de Celendín"
+    },
+    {
+        "item": "Q1433001",
+        "itemLabel": "Provincia de Huaura"
+    },
+    {
+        "item": "Q1777621",
+        "itemLabel": "Provincia de Huancayo"
+    },
+    {
+        "item": "Q1777631",
+        "itemLabel": "Provincia de Chupaca"
+    },
+    {
+        "item": "Q16942171",
+        "itemLabel": "Provincia de Putumayo"
+    },
+    {
+        "item": "Q1814172",
+        "itemLabel": "Grau"
+    },
+    {
+        "item": "Q1814180",
+        "itemLabel": "Sucre"
+    },
+    {
+        "item": "Q1944325",
+        "itemLabel": "Requena"
+    },
+    {
+        "item": "Q1798739",
+        "itemLabel": "Yungay"
+    },
+    {
+        "item": "Q2013427",
+        "itemLabel": "Trujillo"
+    },
+    {
+        "item": "Q1779720",
+        "itemLabel": "Recuay"
+    },
+    {
+        "item": "Q1779734",
+        "itemLabel": "Santa"
+    },
+    {
+        "item": "Q1814203",
+        "itemLabel": "Lucanas"
+    },
+    {
+        "item": "Q1920491",
+        "itemLabel": "Provincia de Julcán"
+    },
+    {
+        "item": "Q1920509",
+        "itemLabel": "Provincia de Atalaya"
+    },
+    {
+        "item": "Q1920520",
+        "itemLabel": "Provincia de Quispicanchi"
+    },
+    {
+        "item": "Q1920613",
+        "itemLabel": "Provincia de Paruro"
+    },
+    {
+        "item": "Q1944216",
+        "itemLabel": "Provincia de Carabaya"
+    },
+    {
+        "item": "Q1944227",
+        "itemLabel": "Provincia de Huancané"
+    },
+    {
+        "item": "Q1944299",
+        "itemLabel": "Provincia de Candarave"
+    },
+    {
+        "item": "Q1944431",
+        "itemLabel": "Provincia de Mariscal Nieto"
+    },
+    {
+        "item": "Q1947926",
+        "itemLabel": "Provincia de Hualgayoc"
+    },
+    {
+        "item": "Q1947944",
+        "itemLabel": "Provincia de Mariscal Cáceres"
+    },
+    {
+        "item": "Q1948003",
+        "itemLabel": "Provincia de Contumazá"
+    },
+    {
+        "item": "Q1948067",
+        "itemLabel": "Provincia de Ferreñafe"
+    },
+    {
+        "item": "Q1948180",
+        "itemLabel": "Provincia de Pataz"
+    },
+    {
+        "item": "Q1999122",
+        "itemLabel": "Provincia de Tambopata"
+    },
+    {
+        "item": "Q2013418",
+        "itemLabel": "Provincia de Ucayali"
+    },
+    {
+        "item": "Q1814190",
+        "itemLabel": "Cangallo"
+    },
+    {
+        "item": "Q2634400",
+        "itemLabel": "Provincia Constitucional del Callao"
+    },
+    {
+        "item": "Q2084668",
+        "itemLabel": "Provincia de Huacaybamba"
+    },
+    {
+        "item": "Q2281473",
+        "itemLabel": "Provincia de Lamas"
+    },
+    {
+        "item": "Q1947116",
+        "itemLabel": "Víctor Fajardo"
+    },
+    {
+        "item": "Q1806435",
+        "itemLabel": "Caylloma"
+    },
+    {
+        "item": "Q1798747",
+        "itemLabel": "Andahuaylas"
+    },
+    {
+        "item": "Q1808513",
+        "itemLabel": "Huancasancos"
+    },
+    {
+        "item": "Q1814228",
+        "itemLabel": "Antabamba"
+    },
+    {
+        "item": "Q1814234",
+        "itemLabel": "Aymaraes"
+    },
+    {
+        "item": "Q1920482",
+        "itemLabel": "Provincia de Anta"
+    },
+    {
+        "item": "Q1920564",
+        "itemLabel": "Provincia de Gran Chimú"
+    },
+    {
+        "item": "Q1920572",
+        "itemLabel": "Provincia de Alto Amazonas"
+    },
+    {
+        "item": "Q1944238",
+        "itemLabel": "Provincia de Santiago de Chuco"
+    },
+    {
+        "item": "Q1944266",
+        "itemLabel": "Provincia de Pacasmayo"
+    },
+    {
+        "item": "Q1944288",
+        "itemLabel": "Provincia de Daniel Alcides Carrión"
+    },
+    {
+        "item": "Q1944312",
+        "itemLabel": "Provincia de Castrovirreyna"
+    },
+    {
+        "item": "Q1944347",
+        "itemLabel": "Provincia de Lampa"
+    },
+    {
+        "item": "Q1947893",
+        "itemLabel": "Provincia de General Sánchez Cerro"
+    },
+    {
+        "item": "Q1947960",
+        "itemLabel": "Provincia de San Miguel"
+    },
+    {
+        "item": "Q1948039",
+        "itemLabel": "Provincia de Acobamba"
+    },
+    {
+        "item": "Q1948051",
+        "itemLabel": "Provincia de Virú"
+    },
+    {
+        "item": "Q1948150",
+        "itemLabel": "Provincia de Moyobamba"
+    },
+    {
+        "item": "Q1995145",
+        "itemLabel": "Provincia de Loreto"
+    },
+    {
+        "item": "Q2084696",
+        "itemLabel": "Provincia de Ica"
+    },
+    {
+        "item": "Q2088824",
+        "itemLabel": "Provincia de Azángaro"
+    },
+    {
+        "item": "Q2088849",
+        "itemLabel": "Provincia de Yarowilca"
+    },
+    {
+        "item": "Q2100624",
+        "itemLabel": "Provincia de Huánuco"
+    },
+    {
+        "item": "Q2320717",
+        "itemLabel": "Provincia de Manu"
+    },
+    {
+        "item": "Q7685484",
+        "itemLabel": "provincia de Tarapacá"
+    },
+    {
+        "item": "Q1991124",
+        "itemLabel": "Provincia de Concepción"
+    },
+    {
+        "item": "Q1784851",
+        "itemLabel": "Camaná"
+    },
+    {
+        "item": "Q1806437",
+        "itemLabel": "Páucar del Sarasara"
+    },
+    {
+        "item": "Q1814253",
+        "itemLabel": "Provincia de Condesuyos"
+    },
+    {
+        "item": "Q1819840",
+        "itemLabel": "Provincia de Huamalíes"
+    },
+    {
+        "item": "Q1920602",
+        "itemLabel": "Provincia de Acomayo"
+    },
+    {
+        "item": "Q1920922",
+        "itemLabel": "Provincia de Mariscal Ramón Castilla"
+    },
+    {
+        "item": "Q1947910",
+        "itemLabel": "Provincia de Cutervo"
+    },
+    {
+        "item": "Q1947973",
+        "itemLabel": "Provincia de Espinar"
+    },
+    {
+        "item": "Q1948019",
+        "itemLabel": "Provincia de Calca"
+    },
+    {
+        "item": "Q1948195",
+        "itemLabel": "Provincia de Tayacaja"
+    },
+    {
+        "item": "Q2084618",
+        "itemLabel": "Provincia de Paita"
+    },
+    {
+        "item": "Q2084641",
+        "itemLabel": "Provincia de Pachitea"
+    },
+    {
+        "item": "Q2084681",
+        "itemLabel": "Provincia de Puno"
+    },
+    {
+        "item": "Q2088859",
+        "itemLabel": "Provincia de Huancavelica"
+    },
+    {
+        "item": "Q2088871",
+        "itemLabel": "Provincia de Chucuito"
+    },
+    {
+        "item": "Q2287233",
+        "itemLabel": "Provincia de Sechura"
+    },
+    {
+        "item": "Q1784857",
+        "itemLabel": "Huamanga"
+    },
+    {
+        "item": "Q1779727",
+        "itemLabel": "Caravelí"
+    },
+    {
+        "item": "Q1814197",
+        "itemLabel": "Provincia de San Ignacio"
+    },
+    {
+        "item": "Q1814244",
+        "itemLabel": "Provincia de Cotabambas"
+    },
+    {
+        "item": "Q1920500",
+        "itemLabel": "Provincia de Canas"
+    },
+    {
+        "item": "Q1920599",
+        "itemLabel": "Provincia de Chepén"
+    },
+    {
+        "item": "Q1944356",
+        "itemLabel": "Provincia de Melgar"
+    },
+    {
+        "item": "Q1948135",
+        "itemLabel": "Provincia de Sandia"
+    },
+    {
+        "item": "Q2084630",
+        "itemLabel": "Provincia de Santa Cruz"
+    },
+    {
+        "item": "Q2084648",
+        "itemLabel": "Provincia de Rioja"
+    },
+    {
+        "item": "Q2084659",
+        "itemLabel": "Provincia de Tocache"
+    },
+    {
+        "item": "Q2084675",
+        "itemLabel": "Provincia de El Dorado"
+    },
+    {
+        "item": "Q2084689",
+        "itemLabel": "Provincia de Bellavista"
+    },
+    {
+        "item": "Q2084862",
+        "itemLabel": "Provincia de Angaraes"
+    },
+    {
+        "item": "Q2088810",
+        "itemLabel": "Provincia de Dos de Mayo"
+    },
+    {
+        "item": "Q2088833",
+        "itemLabel": "Provincia de El Collao"
+    },
+    {
+        "item": "Q2088882",
+        "itemLabel": "Provincia de Yunguyo"
+    },
+    {
+        "item": "Q6088752",
+        "itemLabel": "provincia de Arica"
+    },
+    {
+        "item": "Q1935565",
+        "itemLabel": "Provincia de San Antonio de Putina"
+    },
+    {
+        "item": "Q1944245",
+        "itemLabel": "Provincia de Sánchez Carrión"
+    },
+    {
+        "item": "Q1944257",
+        "itemLabel": "Provincia de Ilo"
+    },
+    {
+        "item": "Q1944276",
+        "itemLabel": "Provincia de Puerto Inca"
+    },
+    {
+        "item": "Q1944337",
+        "itemLabel": "Provincia de San Román"
+    },
+    {
+        "item": "Q2017690",
+        "itemLabel": "Provincia del Datem del Marañón"
+    },
+    {
+        "item": "Q2089123",
+        "itemLabel": "Provincia de Moho"
+    },
+    {
+        "item": "Q2287241",
+        "itemLabel": "Provincia de Talara"
+    },
+    {
+        "item": "Q9063356",
+        "itemLabel": "provincia de Conchucos"
+    },
+    {
+        "item": "Q6088838",
+        "itemLabel": "provincia de Moquegua"
+    },
+    {
+        "item": "Q16622605",
+        "itemLabel": "provincia de Chancay"
+    },
+    {
+        "item": "Q9063361",
+        "itemLabel": "provincia de Iquique"
+    }
+]
