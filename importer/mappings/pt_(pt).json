@@ -3,11 +3,11 @@
         "item": "Q45",
         "name": "Portugal"
     },
+    "table_name": "pt",
     "country_code": "pt",
     "default_is": {
-        "comment": "",
-        "item": "",
-        "name": ""
+        "comment": "cultural property",
+        "item": "Q2065736",
     },
     "heritage": {
         "comment": "",
