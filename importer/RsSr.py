@@ -56,7 +56,11 @@ class RsSr(Monument):
         self.add_label("sr", name)
 
     def set_heritage_id(self):
-        """Waiting for https://www.wikidata.org/wiki/Wikidata:Property_proposal/cultural_heritage_monument_in_Serbia_ID"""
+        """
+        Wait.
+
+        https://www.wikidata.org/wiki/Wikidata:Property_proposal/cultural_heritage_monument_in_Serbia_ID.
+        """
         print("")
 
     def exists_with_monument_article(self, language):
