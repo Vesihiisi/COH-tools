@@ -5,6 +5,17 @@ import importer as importer
 
 class SvEs(Monument):
 
+    def set_heritage(self):
+        her_dic = self.data_files["heritage_type"]["mappings"]
+        her_raw = self.tipo
+
+        her_match = utils.get_matching_items_from_dict(her_raw, her_dic)
+        if len(her_match) == 1:
+            heritage = her_match[0]
+            self.add_statement("heritage_status", heritage)
+        else:
+            super().set_heritage()
+
     def set_adm_location(self):
         adm_q = None
         municip_dic = self.data_files["municipalities"]
@@ -36,6 +47,10 @@ class SvEs(Monument):
         name = utils.remove_markup(self.monumento)
         self.add_label("es", name)
 
+    def update_descriptions(self):
+        eng = "cultural heritage site in El Salvador"
+        self.add_description("en", eng)
+
     def set_heritage_id(self):
         wlm = self.mapping["table_name"].upper()
         self.add_statement("wlm_id", "{}-{}".format(wlm, self.id))
@@ -59,9 +74,8 @@ class SvEs(Monument):
         self.set_adm_location()
         self.set_image()
         self.set_commonscat()
-
+        self.update_descriptions()
         self.update_labels()
-        # self.update_descriptions()
         self.set_wd_item(self.find_matching_wikidata(mapping))
 
 
@@ -69,6 +83,7 @@ if __name__ == "__main__":
     """Point of entrance for importer."""
     args = importer.handle_args()
     dataset = Dataset("sv", "es", SvEs)
+    dataset.lookup_downloads = {"heritage_type": "sv_(es)/tipo"}
     dataset.data_files = {"departments": "salvador_departments.json",
                           "municipalities": "salvador_municipalities.json"}
     importer.main(args, dataset)
