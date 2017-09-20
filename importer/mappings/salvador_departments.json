@@ -1,0 +1,72 @@
+[
+    {
+        "iso": "SV-AH",
+        "item": "Q572993",
+        "itemLabel": "Departamento de Ahuachapán"
+    },
+    {
+        "iso": "SV-SO",
+        "item": "Q212540",
+        "itemLabel": "Sonsonate"
+    },
+    {
+        "iso": "SV-SA",
+        "item": "Q671158",
+        "itemLabel": "Departamento de Santa Ana"
+    },
+    {
+        "iso": "SV-US",
+        "item": "Q1122748",
+        "itemLabel": "Usulután"
+    },
+    {
+        "iso": "SV-MO",
+        "item": "Q1122836",
+        "itemLabel": "Morazán"
+    },
+    {
+        "iso": "SV-CA",
+        "item": "Q914058",
+        "itemLabel": "Cabañas"
+    },
+    {
+        "iso": "SV-SV",
+        "item": "Q1130180",
+        "itemLabel": "San Vicente"
+    },
+    {
+        "iso": "SV-SM",
+        "item": "Q930804",
+        "itemLabel": "San Miguel"
+    },
+    {
+        "iso": "SV-CU",
+        "item": "Q1130677",
+        "itemLabel": "Cuscatlán"
+    },
+    {
+        "iso": "SV-UN",
+        "item": "Q1130688",
+        "itemLabel": "La Unión"
+    },
+    {
+        "iso": "SV-PA",
+        "item": "Q1129788",
+        "itemLabel": "La Paz"
+    },
+    {
+        "iso": "SV-SS",
+        "item": "Q1543219",
+        "itemLabel": "San Salvador"
+    },
+    {
+        "iso": "SV-CH",
+        "item": "Q522221",
+        "itemLabel": "Departamento de Chalatenango"
+    },
+    {
+        "iso": "SV-LI",
+        "item": "Q930820",
+        "itemLabel": "Departamento de La Libertad"
+    }
+]
