@@ -1,0 +1,21 @@
+{
+    "country": {
+        "item": "Q17",
+        "name": "Japan"
+    },
+    "country_code": "jp",
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "Q30834580",
+        "name": "historic site of Japan"
+    },
+    "language": "en",
+    "table_name": "jp-nhs",
+    "unique": {
+        "comment": "https://www.wikidata.org/wiki/Wikidata:Property_proposal/Japanese_Database_of_National_important_cultural_properties",
+        "property": ""
+    }
+}
