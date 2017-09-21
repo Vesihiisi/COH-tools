@@ -1,0 +1,382 @@
+[
+    {
+        "iso": "TH-82",
+        "item": "Q273306",
+        "itemLabel": "Phang Nga"
+    },
+    {
+        "iso": "TH-81",
+        "item": "Q236769",
+        "itemLabel": "Krabi"
+    },
+    {
+        "iso": "TH-71",
+        "item": "Q275740",
+        "itemLabel": "Kanchanaburi"
+    },
+    {
+        "iso": "TH-33",
+        "item": "Q380761",
+        "itemLabel": "Si Sa Ket"
+    },
+    {
+        "iso": "TH-46",
+        "item": "Q382144",
+        "itemLabel": "Kalasin"
+    },
+    {
+        "iso": "TH-19",
+        "item": "Q337627",
+        "itemLabel": "Saraburi"
+    },
+    {
+        "iso": "TH-50",
+        "item": "Q233588",
+        "itemLabel": "Chiang Mai"
+    },
+    {
+        "iso": "TH-83",
+        "item": "Q182565",
+        "itemLabel": "Phuket"
+    },
+    {
+        "iso": "TH-67",
+        "item": "Q240520",
+        "itemLabel": "Phetchabun"
+    },
+    {
+        "iso": "TH-12",
+        "item": "Q242932",
+        "itemLabel": "Nonthaburi"
+    },
+    {
+        "iso": "TH-15",
+        "item": "Q243795",
+        "itemLabel": "Ang Thong"
+    },
+    {
+        "iso": "TH-55",
+        "item": "Q244698",
+        "itemLabel": "Nan"
+    },
+    {
+        "iso": "TH-61",
+        "item": "Q244649",
+        "itemLabel": "Uthai Thani"
+    },
+    {
+        "iso": "TH-39",
+        "item": "Q261241",
+        "itemLabel": "Nong Bua Lam Phu"
+    },
+    {
+        "iso": "TH-11",
+        "item": "Q271529",
+        "itemLabel": "Samut Prakan"
+    },
+    {
+        "iso": "TH-62",
+        "item": "Q273807",
+        "itemLabel": "Kamphaeng Phet"
+    },
+    {
+        "iso": "TH-25",
+        "item": "Q321324",
+        "itemLabel": "Prachin Buri"
+    },
+    {
+        "iso": "TH-43",
+        "item": "Q327737",
+        "itemLabel": "Nong Khai"
+    },
+    {
+        "iso": "TH-49",
+        "item": "Q335119",
+        "itemLabel": "Mukdahan"
+    },
+    {
+        "iso": "TH-21",
+        "item": "Q335221",
+        "itemLabel": "Rayong"
+    },
+    {
+        "iso": "TH-75",
+        "item": "Q459742",
+        "itemLabel": "Samut Songkhram"
+    },
+    {
+        "iso": "TH-63",
+        "item": "Q275758",
+        "itemLabel": "Tak"
+    },
+    {
+        "iso": "TH-27",
+        "item": "Q381889",
+        "itemLabel": "Sa Kaeo"
+    },
+    {
+        "iso": "TH-48",
+        "item": "Q468547",
+        "itemLabel": "Nakhon Phanom"
+    },
+    {
+        "iso": "TH-77",
+        "item": "Q244628",
+        "itemLabel": "Prachuap Khiri Khan"
+    },
+    {
+        "iso": "TH-13",
+        "item": "Q459748",
+        "itemLabel": "Pathum Thani"
+    },
+    {
+        "iso": "TH-58",
+        "item": "Q269270",
+        "itemLabel": "Mae Hong Son"
+    },
+    {
+        "iso": "TH-38",
+        "item": "Q1001862",
+        "itemLabel": "Bueng Kan"
+    },
+    {
+        "iso": "TH-60",
+        "item": "Q239844",
+        "itemLabel": "Nakhon Sawan"
+    },
+    {
+        "iso": "TH-56",
+        "item": "Q244618",
+        "itemLabel": "Phayao"
+    },
+    {
+        "iso": "TH-57",
+        "item": "Q236419",
+        "itemLabel": "Chiang Rai"
+    },
+    {
+        "iso": "TH-41",
+        "item": "Q380752",
+        "itemLabel": "Udon Thani"
+    },
+    {
+        "iso": "TH-80",
+        "item": "Q244691",
+        "itemLabel": "Nakhon Si Thammarat"
+    },
+    {
+        "iso": "TH-36",
+        "item": "Q275377",
+        "itemLabel": "Chaiyaphum"
+    },
+    {
+        "iso": "TH-23",
+        "item": "Q241884",
+        "itemLabel": "Trat"
+    },
+    {
+        "iso": "TH-40",
+        "item": "Q327533",
+        "itemLabel": "Khon Kaen"
+    },
+    {
+        "iso": "TH-22",
+        "item": "Q327730",
+        "itemLabel": "Chanthaburi"
+    },
+    {
+        "iso": "TH-52",
+        "item": "Q240495",
+        "itemLabel": "Lampang"
+    },
+    {
+        "iso": "TH-53",
+        "item": "Q273794",
+        "itemLabel": "Uttaradit"
+    },
+    {
+        "iso": "TH-26",
+        "item": "Q466212",
+        "itemLabel": "Nakhon Nayok"
+    },
+    {
+        "iso": "TH-51",
+        "item": "Q240540",
+        "itemLabel": "Lamphun"
+    },
+    {
+        "iso": "TH-73",
+        "item": "Q334841",
+        "itemLabel": "Nakhon Pathom"
+    },
+    {
+        "iso": "TH-93",
+        "item": "Q243808",
+        "itemLabel": "Phatthalung"
+    },
+    {
+        "iso": "TH-64",
+        "item": "Q380764",
+        "itemLabel": "Sukhothai"
+    },
+    {
+        "iso": "TH-14",
+        "item": "Q476222",
+        "itemLabel": "Phra Nakhon Si Ayutthaya"
+    },
+    {
+        "iso": "TH-34",
+        "item": "Q629024",
+        "itemLabel": "Ubon Ratchathani"
+    },
+    {
+        "iso": "TH-85",
+        "item": "Q236802",
+        "itemLabel": "Ranong"
+    },
+    {
+        "iso": "TH-66",
+        "item": "Q237874",
+        "itemLabel": "Phichit"
+    },
+    {
+        "iso": "TH-74",
+        "item": "Q334686",
+        "itemLabel": "Samut Sakhon"
+    },
+    {
+        "iso": "TH-45",
+        "item": "Q625463",
+        "itemLabel": "Roi Et"
+    },
+    {
+        "iso": "TH-95",
+        "item": "Q242977",
+        "itemLabel": "Yala"
+    },
+    {
+        "iso": "TH-20",
+        "item": "Q207068",
+        "itemLabel": "Chon Buri"
+    },
+    {
+        "iso": "TH-86",
+        "item": "Q244695",
+        "itemLabel": "Chumphon"
+    },
+    {
+        "iso": "TH-92",
+        "item": "Q243805",
+        "itemLabel": "Trang"
+    },
+    {
+        "iso": "TH-96",
+        "item": "Q271442",
+        "itemLabel": "Narathiwat"
+    },
+    {
+        "iso": "TH-24",
+        "item": "Q334906",
+        "itemLabel": "Chachoengsao"
+    },
+    {
+        "iso": "TH-42",
+        "item": "Q275388",
+        "itemLabel": "Loei"
+    },
+    {
+        "iso": "TH-35",
+        "item": "Q506598",
+        "itemLabel": "Yasothon"
+    },
+    {
+        "iso": "TH-18",
+        "item": "Q459759",
+        "itemLabel": "Chai Nat"
+    },
+    {
+        "iso": "TH-54",
+        "item": "Q244652",
+        "itemLabel": "Phrae"
+    },
+    {
+        "iso": "TH-76",
+        "item": "Q244699",
+        "itemLabel": "Phetchaburi"
+    },
+    {
+        "iso": "TH-30",
+        "item": "Q271737",
+        "itemLabel": "Nakhon Ratchasima"
+    },
+    {
+        "iso": "TH-72",
+        "item": "Q272247",
+        "itemLabel": "Suphanburi"
+    },
+    {
+        "iso": "TH-44",
+        "item": "Q468554",
+        "itemLabel": "Maha Sarakham"
+    },
+    {
+        "iso": "TH-94",
+        "item": "Q236781",
+        "itemLabel": "Pattani"
+    },
+    {
+        "iso": "TH-17",
+        "item": "Q334836",
+        "itemLabel": "Sing Buri"
+    },
+    {
+        "iso": "TH-90",
+        "item": "Q235574",
+        "itemLabel": "Songkhla"
+    },
+    {
+        "iso": "TH-91",
+        "item": "Q236263",
+        "itemLabel": "Satun"
+    },
+    {
+        "iso": "TH-84",
+        "item": "Q240463",
+        "itemLabel": "Surat Thani"
+    },
+    {
+        "iso": "TH-37",
+        "item": "Q243791",
+        "itemLabel": "Amnat Charoen"
+    },
+    {
+        "iso": "TH-65",
+        "item": "Q275781",
+        "itemLabel": "Phitsanulok"
+    },
+    {
+        "iso": "TH-31",
+        "item": "Q327510",
+        "itemLabel": "Buri Ram"
+    },
+    {
+        "iso": "TH-70",
+        "item": "Q335492",
+        "itemLabel": "Ratchaburi"
+    },
+    {
+        "iso": "TH-16",
+        "item": "Q336122",
+        "itemLabel": "Lopburi"
+    },
+    {
+        "iso": "TH-32",
+        "item": "Q380757",
+        "itemLabel": "Surin"
+    },
+    {
+        "iso": "TH-47",
+        "item": "Q382125",
+        "itemLabel": "Sakon Nakhon"
+    }
+]
