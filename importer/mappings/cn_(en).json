@@ -1,0 +1,21 @@
+{
+    "country": {
+        "item": "Q148",
+        "name": "China"
+    },
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "Q1188574",
+        "name": "Major Historical and Cultural Site Protected at the National Level"
+    },
+    "unique": {
+        "comment": "WLm id",
+        "property": "P2186"
+    },
+    "language": "en",
+    "table_name": "cn",
+    "country_code": "cn"
+}
