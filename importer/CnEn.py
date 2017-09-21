@@ -5,6 +5,18 @@ import importer as importer
 
 class CnEn(Monument):
 
+    def set_location(self):
+        loc_q = None
+
+        if self.has_non_empty_attribute("location"):
+            if utils.count_wikilinks(self.location) == 1:
+                loc_q = utils.q_from_first_wikilink("en", self.location)
+
+            if loc_q is not None:
+                self.add_statement("location", loc_q)
+            else:
+                self.add_to_report("location", self.location, "location")
+
     def set_adm_location(self):
         adm_q = None
         if self.has_non_empty_attribute("prov_iso"):
@@ -15,14 +27,26 @@ class CnEn(Monument):
             if len(adm_match) == 1:
                 adm_q = adm_match[0]
 
-        if adm_q is not None:
-            self.add_statement("located_adm", adm_q)
+            if adm_q is not None:
+                self.add_statement("located_adm", adm_q)
+            else:
+                self.add_to_report("prov_iso", self.prov_iso, "located_adm")
 
     def update_labels(self):
-        site = utils.remove_markup(self.site)
-        self.add_label("en", site)
+        labels = {
+            "en": utils.remove_markup(self.site),
+            "zh": utils.get_chinese_chars(self.chinese_name)
+        }
+        for lang in labels:
+            self.add_label(lang, labels[lang])
 
-        print(self.chinese_name)
+    def update_descriptions(self):
+        e = "Major Historical and Cultural Site Protected at the National Level"
+        self.add_description("en", e)
+
+    def set_heritage_id(self):
+        wlm = self.mapping["table_name"].upper()
+        self.add_statement("wlm_id", "{}-{}".format(wlm, self.designation))
 
     def exists_with_monument_article(self, language):
         return super().exists_with_monument_article("en", "monument_article")
@@ -33,12 +57,18 @@ class CnEn(Monument):
         self.set_monuments_all_id("designation")
         self.set_changed()
         self.set_wlm_source()
+        self.set_heritage_id()
         self.set_country()
+        self.set_coords()
         self.set_adm_location()
+        self.set_location()
         self.set_is()
         self.set_heritage()
+        self.set_image()
+        self.set_commonscat()
         self.update_labels()
-        #self.set_wd_item(self.find_matching_wikidata(mapping))
+        self.update_descriptions()
+        self.set_wd_item(self.find_matching_wikidata(mapping))
 
 
 if __name__ == "__main__":
