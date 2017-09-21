@@ -243,6 +243,20 @@ class TestStringMethods(unittest.TestCase):
         raw_data = "skogskapellet"
         self.assertIsNone(utils.get_longest_match(raw_data, options))
 
+    def test_get_chinese_chars_none(self):
+        text = "tgfyhj7iugl adsf98"
+        self.assertIsNone(utils.get_chinese_chars(text))
+
+    def test_get_chinese_chars_all(self):
+        text = "三坊七巷和朱紫坊建筑群"
+        output = "三坊七巷和朱紫坊建筑群"
+        self.assertEqual(utils.get_chinese_chars(text), output)
+
+    def test_get_chinese_chars_mixed(self):
+        text = "Liang Cheng guli 两程故里ffff"
+        output = "两程故里"
+        self.assertEqual(utils.get_chinese_chars(text), output)
+
 
 class TestDatetimeMethods(unittest.TestCase):
 

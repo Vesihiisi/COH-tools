@@ -315,6 +315,18 @@ def get_longest_match(word, keywords):
     return get_longest_string(matches)
 
 
+def get_chinese_chars(text):
+    """Extract all Chinese characters from given string."""
+    result = ""
+    for i in range(len(text)):
+        if text[i] > u'\u4e000' and text[i] < u'\u9fff':
+            result = result + text[i]
+    if len(result) == 0:
+        return None
+    else:
+        return result
+
+
 def remove_characters(text, string_of_chars_to_remove):
     translator = str.maketrans(
         {key: None for key in string_of_chars_to_remove})
