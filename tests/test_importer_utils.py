@@ -323,6 +323,11 @@ class TestWikitext(unittest.TestCase):
         output = "Arenan, huvudentrén"
         self.assertEqual(utils.remove_markup(text), output)
 
+    def test_remove_markup_jp(self):
+        text = "[[:ja:新宮城 (陸奥国)|会津新宮城]]"
+        output = "会津新宮城"
+        self.assertEqual(utils.remove_markup(text), output)
+
     def test_count_wikilinks_none(self):
         text = "just text"
         self.assertEqual(utils.count_wikilinks(text), 0)
