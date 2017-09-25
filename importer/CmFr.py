@@ -14,6 +14,7 @@ class CmFr(Monument):
         self.add_label("fr", french)
 
     def set_location(self):
+        """Set location, using wikilinked value."""
         if self.has_non_empty_attribute("ville"):
             if utils.count_wikilinks(self.ville) == 1:
                 loc_q = utils.q_from_first_wikilink("fr", self.ville)
@@ -22,6 +23,7 @@ class CmFr(Monument):
                 self.add_to_report("ville", self.ville, "location")
 
     def set_adm_location(self):
+        """Set Adm Location, using the iso of the region."""
         reg_dic = self.data_files["regions"]
         iso = self.region_iso
         adm_match = utils.get_item_from_dict_by_key(dict_name=reg_dic,
