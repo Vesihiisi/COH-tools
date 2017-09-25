@@ -30,6 +30,7 @@ class HkEn(Monument):
         self.add_statement("heritage_status", heritage, qualifier)
 
     def set_admin_location(self):
+        """Admin location same for all, no subdivisions."""
         hkong = "Q8646"
         self.add_statement("located_adm", hkong)
 
@@ -66,6 +67,7 @@ class HkEn(Monument):
         self.set_admin_location()
         self.set_location()
         self.set_image()
+        self.set_is()
         self.update_labels()
         self.update_descriptions()
         self.set_wd_item(self.find_matching_wikidata(mapping))
