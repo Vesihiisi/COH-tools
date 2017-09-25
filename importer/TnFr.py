@@ -7,6 +7,13 @@ import importer as importer
 class TnFr(Monument):
 
     def set_street_address(self):
+        """
+        Set the street address.
+
+        Works if the source data contains a digit.
+        Since the place is not included, transpose
+        it from the place name.
+        """
         if self.has_non_empty_attribute("adresse"):
             addr_raw = utils.remove_markup(self.adresse)
             if utils.contains_digit(addr_raw):
@@ -17,6 +24,12 @@ class TnFr(Monument):
                 self.add_to_report("adresse", self.adresse, "located_street")
 
     def set_location(self):
+        """
+        Set the location.
+
+        If present, use the wikilink, otherwise
+        match value against list of settlements.
+        """
         loc_q = None
         loc_raw = self.site
         if utils.count_wikilinks(loc_raw) == 1:
@@ -35,6 +48,12 @@ class TnFr(Monument):
             self.add_to_report("site", self.site, "location")
 
     def set_admin_location(self):
+        """
+        Set the admin location.
+
+        Use the iso code of the gouvernorat for exact
+        matching against list.
+        """
         adm_q = None
         iso = self.gouvernorat_iso
         admin_dic = self.data_files["admin"]
@@ -49,6 +68,12 @@ class TnFr(Monument):
                                self.gouvernorat_iso, "located_adm")
 
     def set_heritage(self):
+        """
+        Set heritage status with optional qualifiers.
+
+        Use 'decret' as 'described at url'.
+        Extract date from 'date' as 'start time'.
+        """
         quals = {}
         heritage_item = self.mapping["heritage"]["item"]
 
@@ -93,11 +118,11 @@ class TnFr(Monument):
         self.set_image()
         self.set_coords()
         self.set_country()
+        self.set_heritage()
+        self.set_heritage_id()
         self.set_admin_location()
         self.set_location()
         self.set_street_address()
-        self.set_heritage()
-        self.set_heritage_id()
         self.set_is()
         self.update_descriptions()
         self.update_labels()
