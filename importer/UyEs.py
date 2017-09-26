@@ -5,6 +5,15 @@ import importer as importer
 
 class UyEs(Monument):
 
+    def set_inception(self):
+        """Set building year if parseable."""
+        if self.has_non_empty_attribute("construido"):
+            if utils.legit_year(self.construido):
+                inc_year = {"time_value": {"year": self.construido}}
+                self.add_statement("inception", inc_year)
+            else:
+                self.add_to_report("construido", self.construido, "inception")
+
     def set_location(self):
         """
         Set the Location.
@@ -85,6 +94,7 @@ class UyEs(Monument):
         self.set_adm_location()
         self.set_location()
         self.set_is()
+        self.set_inception()
         self.set_heritage()
         self.set_coords()
         self.set_image()
