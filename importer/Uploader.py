@@ -79,8 +79,8 @@ class Uploader(object):
 
         if (disambiguation_page in instances or
            (self.wd_item_q and self.wd_item_q == q_item)):
-            mes = "{} cannot be added as target of claim. Exiting."
-            sys.exit(mes.format(q_item))
+            mes = "{} cannot be added to {} as target of claim. Exiting."
+            sys.exit(mes.format(q_item, self.wd_item_q))
         else:
             return q_item
 
