@@ -6,6 +6,15 @@ import importer as importer
 class InEn(Monument):
 
     def set_adm_location(self):
+        """
+        Set the Admin Location.
+
+        Try using District first, from linked article or match
+        the unlinked text via an external list.
+
+        If that doesn't work, try the higher state level.
+        This one is matched via ISO code.
+        """
         adm_q = None
 
         if utils.count_wikilinks(self.district) == 1:
@@ -34,6 +43,13 @@ class InEn(Monument):
             self.add_to_report("district", self.district, "located_adm")
 
     def set_location(self):
+        """
+        Set the Location.
+
+        The Address field is not good for addresses, but often
+        consists of a linked location.
+        Otherwise, use a linked Location field.
+        """
         loc_q = None
 
         if self.has_non_empty_attribute("address"):
@@ -50,6 +66,7 @@ class InEn(Monument):
             self.add_to_report("address", self.address, "location")
 
     def set_heritage(self):
+        """Set correct heritage status."""
         ranks = {
             "N": "Q17047615",  # Monument of National Importance
             "S": "Q17047640"  # State Protected Monument
@@ -105,5 +122,6 @@ if __name__ == "__main__":
     args = importer.handle_args()
     dataset = Dataset("in", "en", InEn)
     dataset.data_files = {
-        "districts": "india_districts.json", "states": "india_states.json"}
+        "districts": "india_districts.json",
+        "states": "india_states.json"}
     importer.main(args, dataset)
