@@ -14,6 +14,7 @@ class PhEn(Monument):
         self.add_description("en", english)
 
     def set_location(self):
+        """Set location based on linked article."""
         loc_q = None
         if self.has_non_empty_attribute("location"):
             if utils.count_wikilinks(self.location) == 1:
