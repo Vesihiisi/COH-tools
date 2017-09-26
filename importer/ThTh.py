@@ -6,20 +6,37 @@ import importer as importer
 class ThTh(Monument):
 
     def set_adm_location(self):
+        """
+        Set the Admin Location.
+
+        First, try the District (amphoe). These are never linked,
+        so match against external list.
+        If failed, use the Province ISO code matched against external
+        list.
+        """
         adm_q = None
         prov_dic = self.data_files["provinces"]
+        distr_dic = self.data_files["districts"]
         iso = self.prov_iso
+        district = self.district
 
-        adm_match = utils.get_item_from_dict_by_key(dict_name=prov_dic,
-                                                    search_term=iso,
-                                                    search_in="iso")
-        if len(adm_match) == 1:
-            adm_q = adm_match[0]
+        dist_match = utils.get_item_from_dict_by_key(dict_name=distr_dic,
+                                                     search_term=district,
+                                                     search_in="itemLabel")
+        if len(dist_match) == 1:
+            adm_q = dist_match[0]
+
+        if adm_q is None:
+            prov_match = utils.get_item_from_dict_by_key(dict_name=prov_dic,
+                                                         search_term=iso,
+                                                         search_in="iso")
+            if len(prov_match) == 1:
+                adm_q = prov_match[0]
 
         if adm_q is not None:
             self.add_statement("located_adm", adm_q)
         else:
-            self.add_to_report("prov_iso", self.prov_iso, "located_adm")
+            self.add_to_report("district", self.district, "located_adm")
 
     def set_heritage_id(self):
         wlm = self.mapping["table_name"].upper()
@@ -60,5 +77,7 @@ if __name__ == "__main__":
     """Point of entrance for importer."""
     args = importer.handle_args()
     dataset = Dataset("th", "th", ThTh)
-    dataset.data_files = {"provinces": "thailand_provinces.json"}
+    dataset.data_files = {
+        "provinces": "thailand_provinces.json",
+        "districts": "thailand_amphoe.json"}
     importer.main(args, dataset)
