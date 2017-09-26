@@ -54,7 +54,6 @@ class UsEn(Monument):
         https://www.wikidata.org/wiki/Wikidata:WikiProject_WLM/Mapping_tables/us_(en)/type
         If possible, add date of protection as quantifier.
         """
-
         qualifier = None
 
         if self.has_non_empty_attribute("date"):
