@@ -6,6 +6,7 @@ import importer as importer
 class CnEn(Monument):
 
     def set_location(self):
+        """Set the Location, using linked article."""
         loc_q = None
 
         if self.has_non_empty_attribute("location"):
@@ -18,6 +19,7 @@ class CnEn(Monument):
                 self.add_to_report("location", self.location, "location")
 
     def set_adm_location(self):
+        """Set the Admin Location, using the iso of the Province."""
         adm_q = None
         if self.has_non_empty_attribute("prov_iso"):
             adm_dic = self.data_files["provinces"]
@@ -33,6 +35,7 @@ class CnEn(Monument):
                 self.add_to_report("prov_iso", self.prov_iso, "located_adm")
 
     def update_labels(self):
+        """Add labels in English and Chinese."""
         labels = {
             "en": utils.remove_markup(self.site),
             "zh": utils.get_chinese_chars(self.chinese_name)
