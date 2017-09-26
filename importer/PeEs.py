@@ -6,6 +6,7 @@ import importer as importer
 class PeEs(Monument):
 
     def set_location(self):
+        """Set the Location, using linked article."""
         if self.has_non_empty_attribute("localidad"):
             if utils.count_wikilinks(self.localidad) == 1:
                 loc_q = utils.q_from_first_wikilink("es", self.localidad)
@@ -22,6 +23,14 @@ class PeEs(Monument):
         self.add_description("en", eng)
 
     def set_adm_location(self):
+        """
+        Set the Admin Location.
+
+        Use the linked Municipality first, checking
+        against external list.
+        If failed, use the Region iso code, which is a
+        bigger unit.
+        """
         adm_q = None
         municip_dic = self.data_files["municipalities"]
         reg_dic = self.data_files["regions"]
@@ -76,5 +85,6 @@ if __name__ == "__main__":
     args = importer.handle_args()
     dataset = Dataset("pe", "es", PeEs)
     dataset.data_files = {
-        "municipalities": "peru_provinces.json", "regions": "peru_regions.json"}
+        "municipalities": "peru_provinces.json",
+        "regions": "peru_regions.json"}
     importer.main(args, dataset)
