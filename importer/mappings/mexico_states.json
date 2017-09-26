@@ -1,0 +1,157 @@
+[
+    {
+        "iso": "MX-AGU",
+        "item": "Q79952",
+        "itemLabel": "Aguascalientes"
+    },
+    {
+        "iso": "MX-BCN",
+        "item": "Q58731",
+        "itemLabel": "Baja California"
+    },
+    {
+        "iso": "MX-BCS",
+        "item": "Q46508",
+        "itemLabel": "Baja California Sur"
+    },
+    {
+        "iso": "MX-CAM",
+        "item": "Q80908",
+        "itemLabel": "Campeche"
+    },
+    {
+        "iso": "MX-CHH",
+        "item": "Q655",
+        "itemLabel": "Chihuahua"
+    },
+    {
+        "iso": "MX-CHP",
+        "item": "Q60123",
+        "itemLabel": "Chiapas"
+    },
+    {
+        "iso": "MX-COA",
+        "item": "Q53079",
+        "itemLabel": "Coahuila de Zaragoza"
+    },
+    {
+        "iso": "MX-COL",
+        "item": "Q61309",
+        "itemLabel": "Colima"
+    },
+    {
+        "iso": "MX-DUR",
+        "item": "Q79918",
+        "itemLabel": "Durango"
+    },
+    {
+        "iso": "MX-GRO",
+        "item": "Q60158",
+        "itemLabel": "Estado de Guerrero"
+    },
+    {
+        "iso": "MX-GUA",
+        "item": "Q46475",
+        "itemLabel": "Guanajuato"
+    },
+    {
+        "iso": "MX-HID",
+        "item": "Q80903",
+        "itemLabel": "Estado de Hidalgo"
+    },
+    {
+        "iso": "MX-JAL",
+        "item": "Q13160",
+        "itemLabel": "Jalisco"
+    },
+    {
+        "iso": "MX-MEX",
+        "item": "Q82112",
+        "itemLabel": "Estado de México"
+    },
+    {
+        "iso": "MX-MIC",
+        "item": "Q79861",
+        "itemLabel": "Michoacán"
+    },
+    {
+        "iso": "MX-MOR",
+        "item": "Q66117",
+        "itemLabel": "Morelos"
+    },
+    {
+        "iso": "MX-NAY",
+        "item": "Q79920",
+        "itemLabel": "Nayarit"
+    },
+    {
+        "iso": "MX-NLE",
+        "item": "Q15282",
+        "itemLabel": "Nuevo León"
+    },
+    {
+        "iso": "MX-OAX",
+        "item": "Q34110",
+        "itemLabel": "Oaxaca"
+    },
+    {
+        "iso": "MX-PUE",
+        "item": "Q79923",
+        "itemLabel": "Puebla"
+    },
+    {
+        "iso": "MX-QUE",
+        "item": "Q79754",
+        "itemLabel": "Querétaro"
+    },
+    {
+        "iso": "MX-ROO",
+        "item": "Q80245",
+        "itemLabel": "Quintana Roo"
+    },
+    {
+        "iso": "MX-SIN",
+        "item": "Q80252",
+        "itemLabel": "Sinaloa"
+    },
+    {
+        "iso": "MX-SLP",
+        "item": "Q78980",
+        "itemLabel": "San Luis Potosí"
+    },
+    {
+        "iso": "MX-SON",
+        "item": "Q46422",
+        "itemLabel": "Sonora"
+    },
+    {
+        "iso": "MX-TAB",
+        "item": "Q80914",
+        "itemLabel": "Tabasco"
+    },
+    {
+        "iso": "MX-TAM",
+        "item": "Q80007",
+        "itemLabel": "Tamaulipas"
+    },
+    {
+        "iso": "MX-TLA",
+        "item": "Q82681",
+        "itemLabel": "Tlaxcala"
+    },
+    {
+        "iso": "MX-VER",
+        "item": "Q60130",
+        "itemLabel": "Veracruz"
+    },
+    {
+        "iso": "MX-YUC",
+        "item": "Q60176",
+        "itemLabel": "Yucatán"
+    },
+    {
+        "iso": "MX-ZAC",
+        "item": "Q80269",
+        "itemLabel": "Zacatecas"
+    }
+]
