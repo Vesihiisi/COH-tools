@@ -7,6 +7,7 @@ import importer as importer
 class UsEn(Monument):
 
     def set_location(self):
+        """Set Location based on linked article."""
         if self.has_non_empty_attribute("city"):
             if utils.count_wikilinks(self.city) == 1:
                 loc_q = utils.q_from_first_wikilink("en", self.city)
@@ -15,6 +16,14 @@ class UsEn(Monument):
                 self.add_to_report("city", self.city, "location")
 
     def set_adm_location(self):
+        """
+        Set administrative location.
+
+        First, try using linked County matched against
+        external list.
+        If that doesn't yield, use ISO code of State
+        against external list.
+        """
         adm_q = None
         county_dic = self.data_files["counties"]
         state_dic = self.data_files["states"]
@@ -38,6 +47,13 @@ class UsEn(Monument):
             self.add_to_report("county", self.county, "located_adm")
 
     def set_heritage(self):
+        """
+        Set heritage status.
+
+        Based on
+        https://www.wikidata.org/wiki/Wikidata:WikiProject_WLM/Mapping_tables/us_(en)/type
+        If possible, add date of protection as quantifier.
+        """
 
         qualifier = None
 
