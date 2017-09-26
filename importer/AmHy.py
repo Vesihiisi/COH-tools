@@ -14,6 +14,13 @@ class AmHy(Monument):
         self.add_description("en", english)
 
     def set_adm_location(self):
+        """
+        Set the Admin Location.
+
+        Use external lists, as they are not linked.
+        Try to match the Municipality first (actually a hamaynk),
+        and if that doesn't work, the Province via its ISO code.
+        """
         com_dic = self.data_files["communities"]
         prov_dic = self.data_files["provinces"]
         adm_q = None
@@ -40,7 +47,12 @@ class AmHy(Monument):
                 "municipality", self.municipality, "located_adm")
 
     def set_commonscat(self):
-        """Exclude stuff like 'monuments in...'."""
+        """
+        Set the commons cat.
+
+        Dataset includes many general 'cats' like 'monuments in...'
+        instead of monument-specific cat, so exclude those.
+        """
         if "monuments" in self.commonscat.lower():
             return
         else:
