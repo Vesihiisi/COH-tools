@@ -6,6 +6,14 @@ import importer as importer
 class UyEs(Monument):
 
     def set_location(self):
+        """
+        Set the Location.
+
+        Use the linked Localidad if available,
+        and if it's not linked, try and see if there's
+        an article anyway. Compare against external
+        list of settlements.
+        """
         loc_dic = self.data_files["settlements"]
         loc_q = None
 
@@ -26,6 +34,7 @@ class UyEs(Monument):
                 self.add_to_report("localidad", self.localidad, "location")
 
     def set_adm_location(self):
+        """Set the Admin Location using department ISO code."""
         dep_dic = self.data_files["departments"]
         iso = self.dep_iso
         dep_match = utils.get_item_from_dict_by_key(
@@ -41,6 +50,13 @@ class UyEs(Monument):
             self.add_to_report("dep_iso", self.dep_iso, "located_adm")
 
     def set_wd_item_via_name(self):
+        """
+        Attemt to set wd item via name.
+
+        There's no monument_article field in this dataset,
+        so try to get the Q of an article with the
+        same name, if available.
+        """
         if utils.count_wikilinks(self.monumento) == 1:
             monum_q = utils.q_from_first_wikilink("es", self.monumento)
             if monum_q:
@@ -57,9 +73,6 @@ class UyEs(Monument):
     def set_heritage_id(self):
         wlm_code = self.mapping["table_name"].upper()
         self.add_statement("wlm_id", "{}-{}".format(wlm_code, self.id))
-
-    def exists_with_monument_article(self, language):
-        return super().exists_with_monument_article("es", "monumento_enlace")
 
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
