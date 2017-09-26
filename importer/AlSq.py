@@ -6,6 +6,7 @@ import importer as importer
 class AlSq(Monument):
 
     def set_location(self):
+        """Set Location based on mapping file."""
         if self.has_non_empty_attribute("place"):
             loc_raw = self.place
             loc_match = utils.get_item_from_dict_by_key(
@@ -18,6 +19,7 @@ class AlSq(Monument):
                 self.add_to_report("place", self.place, "location")
 
     def set_adm_location(self):
+        """Set Admin Location based on mapping file."""
         if self.has_non_empty_attribute("municipality"):
             adm_raw = self.municipality
             adm_match = utils.get_item_from_dict_by_key(
