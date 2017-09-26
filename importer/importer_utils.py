@@ -155,6 +155,15 @@ def get_wikilinks(text):
     return parsed.filter_wikilinks()
 
 
+def get_unique_wikilinks(text):
+    results = []
+    wikilinks = get_wikilinks(text)
+    for wikilink in wikilinks:
+        if wikilink not in results:
+            results.append(wikilink)
+    return results
+
+
 def count_wikilinks(text):
     return len(get_wikilinks(text))
 
@@ -174,6 +183,8 @@ def q_from_wikipedia(language, page_title):
     if page.exists():
         if page.isRedirectPage():
             page = page.getRedirectTarget()
+        if page.isDisambig():
+            return
         try:
             item = pywikibot.ItemPage.fromPage(page)
         except pywikibot.NoPage:
@@ -189,6 +200,48 @@ def q_from_first_wikilink(language, text):
         return q_from_wikipedia(language, wikilink.title)
     except IndexError:
         return
+
+
+def get_matching_items_from_dict(value, dict_name):
+    """
+    Return all items in a dict for which the label matches the provided value.
+
+    @param value: the value to match
+    @param dict_name: the dict to look in
+    """
+    matches = [dict_name[x]["items"]
+               for x in dict_name if x.lower() == value]
+    if len(matches) == 0:
+        return []
+    else:
+        return matches[0]
+
+
+def get_item_from_dict_by_key(dict_name,
+                              search_term,
+                              search_in,
+                              return_content_of="item"):
+    """
+    Return all items in a dict with a certain field match.
+
+    It will normally return the content of the field
+    'item' which is expected to contain a Q-item.
+    It is, however, possible to overwrite the name
+    of the field whose contents should be returned.
+
+    @param dict_name: the dictionary to look in
+    @pram search_term: the value to match
+    @param search_in: the field in which to look for matching value
+    @param return_content_of: the field whose content to return
+    """
+    results = []
+    matches = [x for x in dict_name if x[search_in] == search_term]
+    if len(matches) == 0:
+        return []
+    else:
+        for match in matches:
+            results.append(match[return_content_of])
+        return results
 
 
 def legit_year(text):
