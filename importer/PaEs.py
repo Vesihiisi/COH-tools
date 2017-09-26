@@ -6,6 +6,7 @@ import importer as importer
 class PaEs(Monument):
 
     def set_adm_location(self):
+        """Set the Admin Location, using iso code of Province."""
         adm_q = None
         prov_dic = self.data_files["provinces"]
         iso = self.prov_iso
@@ -53,7 +54,6 @@ class PaEs(Monument):
         Monument.__init__(self, db_row_dict, mapping,
                           data_files, existing, repository)
         self.set_monuments_all_id("id")
-        self.set_registrant_url()
         self.set_changed()
         self.set_wlm_source()
         self.set_heritage()
