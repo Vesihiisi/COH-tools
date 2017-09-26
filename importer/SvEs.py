@@ -6,6 +6,13 @@ import importer as importer
 class SvEs(Monument):
 
     def set_heritage(self):
+        """
+        Set the Heritage Status.
+
+        Based on:
+        https://www.wikidata.org/wiki/Wikidata:WikiProject_WLM/Mapping_tables/sv_(es)/tipo
+        If no special status found, resort to defaults from mapping.
+        """
         her_dic = self.data_files["heritage_type"]["mappings"]
         her_raw = self.tipo
 
@@ -17,6 +24,13 @@ class SvEs(Monument):
             super().set_heritage()
 
     def set_adm_location(self):
+        """
+        Set the Admin Location.
+
+        Try a linked Municipality first,
+        then unlinked Municipality.
+        If failed, use the Department iso code.
+        """
         adm_q = None
         municip_dic = self.data_files["municipalities"]
         dep_dic = self.data_files["departments"]
@@ -62,7 +76,6 @@ class SvEs(Monument):
         Monument.__init__(self, db_row_dict, mapping,
                           data_files, existing, repository)
         self.set_monuments_all_id("id")
-        self.set_registrant_url()
         self.set_changed()
         self.set_wlm_source()
         self.set_coords()
