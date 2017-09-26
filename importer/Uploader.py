@@ -2,9 +2,11 @@ from wikidataStuff.WikidataStuff import WikidataStuff as WDS
 import pywikibot
 import importer_utils as utils
 from os import path
+import sys
 
 MAPPING_DIR = "mappings"
 PROPS = utils.load_json(path.join(MAPPING_DIR, "props_general.json"))
+P31_BLACKLIST = utils.load_json(path.join(MAPPING_DIR, "P31_blacklist.json"))
 
 
 class Uploader(object):
@@ -68,9 +70,19 @@ class Uploader(object):
         value = quantity['time_value']
         return pywikibot.WbTime(**value)
 
-    def make_q_item(self, qnumber):
-        """Create a regular Item."""
-        return self.wdstuff.QtoItemPage(qnumber)
+    def make_q_item(self, q_number):
+        """Create a regular Item, if target is not a disambiguation."""
+        q_item = None
+        disambiguation_page = "Q4167410"
+        instances = utils.get_P31(q_number, self.repo)
+        q_item = self.wdstuff.QtoItemPage(q_number)
+
+        if (disambiguation_page in instances or
+           (self.wd_item_q and self.wd_item_q == q_item)):
+            mes = "{} cannot be added to {} as target of claim. Exiting."
+            sys.exit(mes.format(q_item, self.wd_item_q))
+        else:
+            return q_item
 
     def item_has_prop(self, property_name, wd_item):
         """
@@ -207,7 +219,8 @@ class Uploader(object):
         Determine WD item to manipulate.
 
         In live mode, if data object has associated WD item,
-        edit it. Otherwise, create a new WD item.
+        check whether it doesn't have a disallowed P31,
+        and if it doesn't edit it. Otherwise, create a new WD item.
         In sandbox mode, all edits are done on the WD Sandbox item.
         """
         if self.live:
@@ -215,9 +228,21 @@ class Uploader(object):
                 self.wd_item = self.create_new_item(self.log)
                 self.wd_item_q = self.wd_item.getID()
             else:
+                disallowed = [x["item"] for x in P31_BLACKLIST]
                 item_q = self.data["wd-item"]
-                self.wd_item = self.wdstuff.QtoItemPage(item_q)
-                self.wd_item_q = item_q
+                itemP31 = utils.get_P31(item_q, self.repo)
+                if len(set(disallowed).intersection(set(itemP31))) > 0:
+                    # this means one of this item's P31's is in the
+                    # disallowed list so we do
+                    # the same as when self.data["wd-item"] is None
+                    if self.log:
+                        message = "{} -- SET AS WD-ITEM BUT POSSIBLY WRONG AND THUS REMOVED".format(item_q)
+                        self.log.logit(message)
+                    self.wd_item = self.create_new_item(self.log)
+                    self.wd_item_q = self.wd_item.getID()
+                else:
+                    self.wd_item = self.wdstuff.QtoItemPage(item_q)
+                    self.wd_item_q = item_q
         else:
             self.wd_item = self.wdstuff.QtoItemPage(self.TEST_ITEM)
             self.wd_item_q = self.TEST_ITEM
