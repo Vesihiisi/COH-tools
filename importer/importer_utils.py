@@ -636,7 +636,7 @@ def package_quantity(value, unit=None):
     return quantity
 
 
-def package_time(text, date_dict):
+def package_time(date_dict):
     """Package a time/date statement in a standardised form."""
     return {"time_value": date_dict}
 

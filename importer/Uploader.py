@@ -63,7 +63,7 @@ class Uploader(object):
         """
         Create claim for a monolingual text.
 
-        quantity: {'text': 'Q11573', 'lang': 6.85}
+        quantity: {'monolingual_value': 'The bestest text', 'lang': 'en'}
         """
         return pywikibot.WbMonolingualText(
             text=quantity['monolingual_value'], language=quantity['lang'])
@@ -72,9 +72,11 @@ class Uploader(object):
         """
         Create a WbTime item.
 
-        This only works for full years.
-        TODO
-        Make it work for year range!
+        quantity: {'time_value': <dict>}
+        with <dict> per utils.datetime_object_to_dict
+
+        This only works for full years and dates.
+        @TODO: Make it work for year range!
         """
         value = quantity['time_value']
         return pywikibot.WbTime(**value)
