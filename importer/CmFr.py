@@ -38,9 +38,6 @@ class CmFr(Monument):
         wml_code = self.mapping["table_name"].upper()
         self.add_statement("wlm_id", "{}-{}".format(wml_code, str(self.id)))
 
-    def exists_with_monument_article(self, language):
-        return super().exists_with_monument_article("fr", "monument_article")
-
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
                           data_files, existing, repository)
