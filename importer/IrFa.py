@@ -41,12 +41,11 @@ class IrFa(Monument):
                 heritage = self.mapping["heritage"]["item"]
                 self.add_statement("heritage_status", heritage, qualifier)
         else:
-            super.set_heritage()
+            super().set_heritage()
 
-    # check that these are always ok
-    def set_address(self):
+    def set_directions(self):
         if self.has_non_empty_attribute("address"):
-            self.add_statement("located_street", self.address)
+            self.add_statement("directions", self.address)
 
     def set_heritage_id(self):
         self.add_statement("heritage_iran", self.id)
@@ -63,7 +62,7 @@ class IrFa(Monument):
         self.set_coords()
         self.set_adm_location()
         self.set_location()
-        self.set_address()
+        self.set_directions()
         self.set_is()
         self.set_image()
         self.set_commonscat()
@@ -79,7 +78,5 @@ if __name__ == "__main__":
     dataset.data_files = {
         "provinces": "iran_provinces.json",  # http://tinyurl.com/yd9xed2s
         "cities": "iran_cities.json"  # http://tinyurl.com/ybslxkm9
-    }
-    dataset.lookup_downloads = {
     }
     importer.main(args, dataset)
