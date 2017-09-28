@@ -626,4 +626,21 @@ def create_site_instance(language, family):
         site = pywikibot.Site(language, family)
         site_cache[site_key] = site
     return site
-    
+
+
+def package_quantity(value, unit=None):
+    """Package a quantity value in a standardised form."""
+    quantity = {"quantity_value": value}
+    if unit:
+        quantity["unit"] = unit
+    return quantity
+
+
+def package_time(date_dict):
+    """Package a time/date statement in a standardised form."""
+    return {"time_value": date_dict}
+
+
+def package_monolingual(text, lang):
+    """Package a monolingual statement in a standardised form."""
+    return {"monolingual_value": text, "lang": lang}

@@ -26,7 +26,7 @@ class GeKa(Monument):
         types = [typ.strip() for typ in raw_type.split(',')]
         if self.NATIONAL_IMPORTANCE_STR in types:
             types.remove(self.NATIONAL_IMPORTANCE_STR)
-        types = list(filter(None, types)) # remove empty entries
+        types = list(filter(None, types))  # remove empty entries
         return ', '.join(types)
 
     def set_special_is(self):
@@ -92,7 +92,7 @@ class GeKa(Monument):
     def set_inception(self):
         if self.has_non_empty_attribute("date"):
             if utils.legit_year(self.date):
-                inc_year = {"time_value": {"year": self.date}}
+                inc_year = utils.package_time({"year": self.date})
                 self.add_statement("inception", inc_year)
             else:
                 self.add_to_report("date", self.date, "inception")

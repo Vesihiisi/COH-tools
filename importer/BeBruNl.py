@@ -33,7 +33,7 @@ class BeBruNl(Monument):
             prot_date = self.beschermd
             try:
                 date_dict = utils.date_to_dict(prot_date, "%d/%m/%Y")
-                qualifier = {"start_time": {"time_value": date_dict}}
+                qualifier = {"start_time": utils.package_time(date_dict)}
                 heritage = self.mapping["heritage"]["item"]
                 self.add_statement("heritage_status", heritage, qualifier)
             except ValueError:
@@ -91,7 +91,7 @@ class BeBruNl(Monument):
         if self.has_non_empty_attribute("bouwjaar"):
             if utils.legit_year(self.bouwjaar):
                 self.add_statement(
-                    "inception", {"time_value": {"year": self.bouwjaar}})
+                    "inception", utils.package_time({"year": self.bouwjaar}))
             else:
                 self.add_to_report("bouwjaar", self.bouwjaar, "inception")
 

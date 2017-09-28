@@ -100,6 +100,10 @@ class Monument(object):
                 elif "time_value" in value:
                     value_to_print += utils.dict_to_iso_date(
                         value["time_value"])
+                elif "monolingual_value" in value:
+                    value_to_print += "({lang}) {text}".format(
+                        text=value["monolingual_value"],
+                        lang=value["lang"])
                 else:
                     value_to_print += str(value)
                 quals = claim["quals"]
