@@ -3,6 +3,7 @@ import json
 import importer_utils as utils
 
 MAPPING_DIR = "mappings"
+P31_BLACKLIST = utils.load_json(path.join(MAPPING_DIR, "P31_blacklist.json"))
 
 
 class Monument(object):
@@ -487,12 +488,17 @@ class Monument(object):
         """
         item = self.exists_with_prop(mapping)
         if not item:
+            disallowed = [x["item"] for x in P31_BLACKLIST]
             item = self.exists_with_wd_item()
             if not item:
-                item = self.exists_with_monument_article(self.mapping["language"])
+                item = self.exists_with_monument_article(
+                    self.mapping["language"])
             if item and self.in_known_items(item):
                 self.upload = False
                 self.add_to_report("item_conflict", item)
+            elif utils.is_blacklisted_P31(item, self.repo, disallowed):
+                # the matched item is blacklisted remove match
+                item = None
             else:
                 self.add_to_known_items(item, mapping)
         return item

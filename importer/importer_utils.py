@@ -612,6 +612,15 @@ def is_whitelisted_P31(q_number, site, allowed_values):
     return result
 
 
+def is_blacklisted_P31(q_number, site, dissalowed_values):
+    item_P31 = get_P31(q_number, site)
+    if len(set(dissalowed_values).intersection(set(item_P31))) > 0:
+        # this means one of this item's P31's is in the
+        # disallowed list
+        return True
+    return False
+
+
 def create_wlm_url(country, language, id):
     url_base = "https://tools.wmflabs.org/heritage/api/api.php?action=search&format=json&srcountry={}&srlanguage={}&srid={}"
     return url_base.format(
