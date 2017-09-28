@@ -217,7 +217,7 @@ def get_items(connection,
         if list_matches:
             match_info = monument.print_matched_item_info_row()
             if match_info:
-                utils.append_line_to_file(raw_data, matches_filename)
+                utils.append_line_to_file(match_info, matches_filename)
         if problem_report:  # dictionary is not empty
             problem_reports.append(problem_report)
             save_reports(problem_reports, dataset.table_name, started_at)
