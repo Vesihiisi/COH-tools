@@ -59,6 +59,15 @@ class Uploader(object):
             unit = None
         return pywikibot.WbQuantity(amount=value, unit=unit, site=repo)
 
+    def make_monolingual_item(self, quantity, repo):
+        """
+        Create claim for a monolingual text.
+
+        quantity: {'text': 'Q11573', 'lang': 6.85}
+        """
+        return pywikibot.WbMonolingualText(
+            text=quantity['monolingual_value'], language=quantity['lang'])
+
     def make_time_item(self, quantity, repo):
         """
         Create a WbTime item.
@@ -118,6 +127,8 @@ class Uploader(object):
             val_item = self.make_quantity_item(value, self.repo)
         elif isinstance(value, dict) and 'time_value' in value:
             val_item = self.make_time_item(value, self.repo)
+        elif isinstance(value, dict) and 'monolingual_value' in value:
+            val_item = self.make_monolingual_item(value)
         elif prop == PROPS["commonscat"] and utils.commonscat_exists(value):
             val_item = value
         else:
