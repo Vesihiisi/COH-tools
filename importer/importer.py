@@ -147,7 +147,8 @@ def get_items(connection,
               upload,
               short=False,
               offset=None,
-              table=False):
+              table=False,
+              list_matches=False):
     """
     Retrieve data from database and process it.
 
@@ -157,6 +158,8 @@ def get_items(connection,
     :param short: Optional number of randomly selected rows to process.
     :param offset: Optional offset to retrieve rows.
     :param table: Whether to save the results as a wikitable.
+    :param list_matches: Whether to save a list of matched items and their
+        P31 values for copy/pasting to Wikidata.
     """
     started_at = utils.get_current_timestamp()
     if upload:
@@ -177,7 +180,9 @@ def get_items(connection,
     if short:
         database_rows = utils.get_random_list_sample(database_rows, short)
         print("USING RANDOM SAMPLE OF " + str(short))
-    filename = "{0} {1}".format(
+    table_filename = "{0} {1}".format(
+        dataset.table_name, utils.get_current_timestamp())
+    matches_filename = "{0} - matches - {1}".format(
         dataset.table_name, utils.get_current_timestamp())
     problem_reports = []
     wikidata_site = utils.create_site_instance("wikidata", "wikidata")
@@ -189,8 +194,8 @@ def get_items(connection,
         if table:
             raw_data = "<pre>" + str(row) + "</pre>\n"
             monument_table = monument.print_wd_to_table()
-            utils.append_line_to_file(raw_data, filename)
-            utils.append_line_to_file(monument_table, filename)
+            utils.append_line_to_file(raw_data, table_filename)
+            utils.append_line_to_file(monument_table, table_filename)
         if upload:
             live = True if upload == "live" else False
             uploader = Uploader(
@@ -209,11 +214,17 @@ def get_items(connection,
 
             uploader.upload()
             print("--------------------------------------------------")
+        if list_matches:
+            match_info = monument.print_matched_item_info_row()
+            if match_info:
+                utils.append_line_to_file(match_info, matches_filename)
         if problem_report:  # dictionary is not empty
             problem_reports.append(problem_report)
             save_reports(problem_reports, dataset.table_name, started_at)
     if table:
-        print("SAVED TEST RESULTS TO " + filename)
+        print("SAVED TEST RESULTS TO " + table_filename)
+    if list_matches:
+        print("SAVED MATCH PREVIEW RESULTS TO " + matches_filename)
 
 
 def main(arguments, dataset=None):
@@ -230,10 +241,11 @@ def main(arguments, dataset=None):
     offset = arguments["offset"]
     upload = arguments["upload"]
     table = arguments["table"]
+    list_matches = arguments["list_matches"]
 
     dataset = dataset or make_dataset(
         arguments["country"], arguments["language"])
-    get_items(connection, dataset, upload, short, offset, table)
+    get_items(connection, dataset, upload, short, offset, table, list_matches)
 
 
 def make_dataset(country, language):
@@ -358,6 +370,7 @@ def handle_args():
             --upload live Live upload to real Wikidata items.
         --short <int> Only fetch a random sample of <int> items.
         --table Save results of the processing to file as a wikitable.
+        --list_matches Save a list of all matching items to a file as wikitext.
     """
     parser = argparse.ArgumentParser()
     if not on_labs():
@@ -378,6 +391,7 @@ def handle_args():
                         type=int,
                         action='store',)
     parser.add_argument("--table", action='store_true')
+    parser.add_argument("--list_matches", action='store_true')
     return parser.parse_args()
 
 

@@ -45,6 +45,18 @@ class Monument(object):
                        default=utils.datetime_convert)
         )
 
+    def print_matched_item_info_row(self):
+        """Generate a wikitext preview row for any matched item."""
+        if not self.wd_item["wd-item"]:
+            return None
+        qid = self.wd_item["wd-item"]
+        qid_template = utils.wd_template("Q", qid)
+        data_template = "{{{{Data|item={qid}|property=p31}}}}".format(qid=qid)
+        row = "* [{wlm_url} {id}] > {qid}: {data}".format(
+            wlm_url=self.wlm_url, id=self.monuments_all_id,
+            qid=qid_template, data=data_template)
+        return row
+
     def print_wd_to_table(self):
         """Generate a wikitext preview table of the data item."""
         table = ""
