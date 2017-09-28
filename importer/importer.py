@@ -243,7 +243,6 @@ def make_dataset(country, language):
     Only kept for backwards-compatibility with older monument classes.
     """
     from Monument import Dataset
-    from CmFr import CmFr
     from CzCs import CzCs
     from AtDe import AtDe
     from DkBygningDa import DkBygningDa
@@ -274,7 +273,6 @@ def make_dataset(country, language):
             "class": IeEn,
             "data_files": {"counties": "ireland_counties.json"}},
         "monuments_za_(en)": {"class": ZaEn, "data_files": {}},
-        "monuments_cm_(fr)": {"class": CmFr, "data_files": {}},
         "monuments_at_(de)": {
             "class": AtDe,
             "data_files": {
