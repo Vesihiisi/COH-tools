@@ -37,7 +37,7 @@ class IrFa(Monument):
             if iso_date:
                 date_dict = utils.datetime_to_dict(
                     iso_date.get('date_obj'), "%Y%m%d")
-                qualifier = {"start_time": {"time_value": date_dict}}
+                qualifier = {"start_time": utils.package_time(date_dict)}
                 heritage = self.mapping["heritage"]["item"]
                 self.add_statement("heritage_status", heritage, qualifier)
         else:
@@ -45,7 +45,8 @@ class IrFa(Monument):
 
     def set_directions(self):
         if self.has_non_empty_attribute("address"):
-            self.add_statement("directions", self.address)
+            monolingual = utils.package_monolingual(self.address, 'fa')
+            self.add_statement("directions", monolingual)
 
     def set_heritage_id(self):
         self.add_statement("heritage_iran", self.id)
