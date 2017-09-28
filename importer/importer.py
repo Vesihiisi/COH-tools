@@ -241,10 +241,11 @@ def main(arguments, dataset=None):
     offset = arguments["offset"]
     upload = arguments["upload"]
     table = arguments["table"]
+    list_matches = arguments["list_matches"]
 
     dataset = dataset or make_dataset(
         arguments["country"], arguments["language"])
-    get_items(connection, dataset, upload, short, offset, table)
+    get_items(connection, dataset, upload, short, offset, table, list_matches)
 
 
 def make_dataset(country, language):
