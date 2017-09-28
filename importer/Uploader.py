@@ -172,6 +172,10 @@ class Uploader(object):
             for claim in claims:
                 prop = claim
                 for x in claims[claim]:
+                    if (x.get("if_empty") and
+                            self.item_has_prop(x["prop_name"], wd_item)):
+                        continue
+
                     value = x['value']
                     if value != "":
                         ref = None

@@ -26,6 +26,8 @@ class Monument(object):
         self.adm0 = utils.load_json(path.join(MAPPING_DIR, "adm0.json"))
         self.sources = utils.load_json(
             path.join(MAPPING_DIR, "data_sources.json"))
+        self.common_items = utils.load_json(
+            path.join(MAPPING_DIR, "common_items.json"))
         for k, v in db_row_dict.items():
             if not k.startswith("m_spec."):
                 setattr(self, k.replace("-", "_"), v)
@@ -130,7 +132,8 @@ class Monument(object):
         table = table + "----------\n"
         return table
 
-    def add_statement(self, prop_name, value, quals=None, refs=None):
+    def add_statement(self, prop_name, value, quals=None, refs=None,
+                      if_empty=False):
         """
         Add a statement to the data object.
 
@@ -155,6 +158,8 @@ class Monument(object):
         :param refs: a list of references or a single reference.
             Set None/True for the default reference,
             set False to not add a reference.
+        :param if_empty: If statement should only be added if this property
+            doesn't already have a value. Defaults to False.
         """
         base = self.wd_item["statements"]
         prop = self.props[prop_name]
@@ -172,7 +177,8 @@ class Monument(object):
 
         if refs and not isinstance(refs, list):
             refs = [refs]
-        statement = {"value": value, "quals": qualifiers, "refs": refs}
+        statement = {"value": value, "quals": qualifiers, "refs": refs,
+                     "if_empty": if_empty}
         base[prop].append(statement)
 
     def remove_statement(self, prop_name):
@@ -251,8 +257,12 @@ class Monument(object):
 
     def set_is(self):
         """Set the P31 property using the mapping file."""
-        default_is = self.mapping["default_is"]
-        self.add_statement("is", default_is["item"])
+        if_empty = False
+        default_is = self.mapping.get("default_is")
+        if not default_is:
+            default_is = self.common_items["cultural_property"]
+            if_empty = True
+        self.add_statement("is", default_is["item"], if_empty=if_empty)
 
     def set_labels(self, language, content):
         """
