@@ -118,7 +118,8 @@ class GeKa(Monument):
                 street_address = "{}, {}".format(address, placename)
                 self.add_statement("located_street", street_address)
             else:
-                self.add_statement("directions", address)
+                directions = utils.package_monolingual(address, 'ka')
+                self.add_statement("directions", directions)
 
     def set_heritage_id(self):
         self.add_statement("heritage_georgia", self.id)
