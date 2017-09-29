@@ -13,6 +13,7 @@ class PeEs(Monument):
 
     def set_location(self):
         """Set the Location, using linked article."""
+        loc_q = None
         if self.has_non_empty_attribute("localidad"):
             if utils.count_wikilinks(self.localidad) == 1:
                 loc_q = utils.q_from_first_wikilink("es", self.localidad)
