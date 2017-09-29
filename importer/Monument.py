@@ -256,13 +256,14 @@ class Monument(object):
         self.add_statement("country", country)
 
     def set_is(self):
-        """Set the P31 property using the mapping file."""
-        if_empty = False
-        default_is = self.mapping.get("default_is")
-        if not default_is:
-            default_is = self.common_items["cultural_property"]
-            if_empty = True
-        self.add_statement("is", default_is["item"], if_empty=if_empty)
+        """
+        Set the P31 property using the mapping file or global default.
+
+        This only gets used if there isn't already a P31 value.
+        """
+        default_is = (self.mapping.get("default_is") or
+                      self.common_items["cultural_property"])
+        self.add_statement("is", default_is["item"], if_empty=True)
 
     def set_labels(self, language, content):
         """
