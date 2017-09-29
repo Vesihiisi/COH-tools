@@ -369,6 +369,31 @@ class Monument(object):
             else:
                 self.add_to_report(address_keyword, possible_address)
 
+    def get_multi_param_monument_article(self, raw, linked, language,
+                                         blocks=None):
+        """
+        Multi-tiered approach to setting exists_with_monument_article().
+
+        Get the monument_article value in a more complex case where it can
+        either be given by a special parameter or be implicitly linked from
+        another.
+
+        Common for South American datasets.
+
+        :param raw: the parameter name containing the raw article name
+        :param linked: the parameter containing the implicitly linked article
+            name (if raw is not provided).
+        :param language: language version of wikipedia
+        :param blocks: a parameter which blocks both raw and linked. E.g.
+            because it allows multiple links to be specified. (optional)
+        """
+        if blocks and getattr(self, blocks):
+            return None
+        elif getattr(self, raw):
+            return super().exists_with_monument_article(language, raw)
+        else:
+            return super().exists_with_monument_article(language, linked)
+
     def has_non_empty_attribute(self, attr_name):
         """
         Check whether the data object has a non-empty attribute.
