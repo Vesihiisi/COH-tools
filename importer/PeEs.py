@@ -16,8 +16,10 @@ class PeEs(Monument):
             if utils.count_wikilinks(self.localidad) == 1:
                 loc_q = utils.q_from_first_wikilink("es", self.localidad)
 
-            if loc_q is not None:
+            if loc_q:
                 self.add_statement("location", loc_q)
+            else:
+                self.add_to_report("localidad", self.localidad, "location")
 
     def update_labels(self):
         spanish = utils.remove_markup(self.monumento)
