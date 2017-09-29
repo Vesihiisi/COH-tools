@@ -466,6 +466,18 @@ def string_is_q_item(text):
         return False
 
 
+def string_is_p_item(text):
+    pattern = re.compile("^P[0-9]+$", re.I)
+    try:
+        m = pattern.match(text)
+    except TypeError:
+        return False
+    if m:
+        return True
+    else:
+        return False
+
+
 def tuple_is_coords(sometuple):
     result = False
     if isinstance(sometuple, tuple) and len(sometuple) == 2:

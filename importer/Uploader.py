@@ -105,7 +105,11 @@ class Uploader(object):
         If the target item already uses the property,
         a new claim will not be added even if it's different.
         """
-        if PROPS[property_name] in wd_item.claims:
+        pid = PROPS.get(property_name)
+        if utils.string_is_p_item(property_name):
+            pid = property_name
+
+        if pid and pid in wd_item.claims:
             return True
         else:
             return False
@@ -172,6 +176,10 @@ class Uploader(object):
             for claim in claims:
                 prop = claim
                 for x in claims[claim]:
+                    if (x.get("if_empty") and
+                            self.item_has_prop(prop, wd_item)):
+                        continue
+
                     value = x['value']
                     if value != "":
                         ref = None
