@@ -8,7 +8,8 @@ class PeEs(Monument):
     def set_directions(self):
         if self.has_non_empty_attribute("direccion"):
             directions = utils.remove_markup(self.direccion)
-            self.add_statement("directions", directions)
+            self.add_statement(
+                "directions", utils.package_monolingual(directions, "es"))
 
     def set_location(self):
         """Set the Location, using linked article."""
