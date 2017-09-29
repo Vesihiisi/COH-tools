@@ -361,6 +361,8 @@ class Monument(object):
     def get_multi_param_monument_article(self, raw, linked, language,
                                          blocks=None):
         """
+        Multi-tiered approach to setting exists_with_monument_article().
+
         Get the monument_article value in a more complex case where it can
         either be given by a special parameter or be implicitly linked from
         another.
