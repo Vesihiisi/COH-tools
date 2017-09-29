@@ -5,6 +5,11 @@ import importer as importer
 
 class PeEs(Monument):
 
+    def set_directions(self):
+        if self.has_non_empty_attribute("direccion"):
+            directions = utils.remove_markup(self.direccion)
+            self.add_statement("directions", directions)
+
     def set_location(self):
         """Set the Location, using linked article."""
         if self.has_non_empty_attribute("localidad"):
@@ -36,8 +41,12 @@ class PeEs(Monument):
         reg_dic = self.data_files["regions"]
 
         municip_q = utils.q_from_first_wikilink("es", self.municipio)
-        if municip_q in [x["item"] for x in municip_dic]:
+        if utils.get_item_from_dict_by_key(dict_name=municip_dic,
+                                           search_term=municip_q,
+                                           search_in="item"):
             adm_q = municip_q
+        else:
+            self.add_to_report("municipio", self.municipio, "located_adm")
 
         if adm_q is None:
             iso = self.iso
@@ -47,17 +56,17 @@ class PeEs(Monument):
             if len(iso_match) == 1:
                 adm_q = iso_match[0]
 
-        if adm_q is not None:
+        if adm_q:
             self.add_statement("located_adm", adm_q)
-        else:
-            self.add_to_report("municipio", self.municipio, "located_adm")
 
     def set_heritage_id(self):
         wlm_prefix = self.mapping["table_name"].upper()
         self.add_statement("wlm_id", "{}-{}".format(wlm_prefix, self.id))
 
     def exists_with_monument_article(self, language):
-        return super().exists_with_monument_article("es", "monumento_enlace")
+        return self.get_multi_param_monument_article(
+            raw="monumento_enlace",
+            linked="monumento", language=language, blocks="enlace")
 
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
@@ -74,6 +83,7 @@ class PeEs(Monument):
         self.set_coords()
         self.set_is()
         self.set_commonscat()
+        self.set_directions()
         self.set_image()
         self.update_descriptions()
         self.update_labels()
