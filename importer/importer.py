@@ -186,7 +186,11 @@ def get_items(connection,
     problem_reports = []
     wikidata_site = utils.create_site_instance("wikidata", "wikidata")
     data_files = load_data(dataset)
+    counter = 0
     for row in database_rows:
+        counter += 1
+        if counter % 100 == 0:
+            print(".", end="")
         monument = dataset.monument_class(
             row, mapping, data_files, existing, wikidata_site)
         problem_report = monument.get_report()
