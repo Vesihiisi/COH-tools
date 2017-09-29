@@ -227,9 +227,9 @@ def get_items(connection,
             dataset.table_name, utils.get_current_timestamp())
         matched_items_output = (
             '{| class="wikitable sortable"\n'
-            "! wlm-id !! matched item !! matched item {{P|P31}}")
+            "! wlm-id !! matched item !! matched item {{P|P31}}\n")
         matched_items_output += "\n".join(matched_item_rows)
-        matched_item_rows += "|}"
+        matched_items_output += "\n|}"
         utils.save_to_file(matches_filename, matched_items_output)
 
 
