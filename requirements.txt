@@ -1,4 +1,5 @@
 setuptools<36.0.0
+dateparser
 mwparserfromhell
 requests
 PyMySQL

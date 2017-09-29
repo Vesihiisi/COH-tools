@@ -1,3 +1,4 @@
+import dateparser
 from Monument import Monument, Dataset
 import importer_utils as utils
 import importer as importer
@@ -37,6 +38,33 @@ class ThTh(Monument):
             self.add_statement("located_adm", adm_q)
         else:
             self.add_to_report("district", self.district, "located_adm")
+
+    def set_heritage(self):
+        """
+        Set heritage status with or without start date.
+
+        If possible to parse the date of when the heritage status was assigned,
+        add it as qualifier to the heritage status property.
+
+        Otherwise, add default heritage status without start date.
+
+        `announced` consists of two lines. The date and a reference to the
+        issue/volume where it was published.
+        """
+        if self.has_non_empty_attribute("announced"):
+            prot_date = self.announced.split('\n')[0]  # get first row
+            d_parsed = dateparser.parse(prot_date)
+            if d_parsed:
+                date_dict = utils.datetime_object_to_dict(d_parsed)
+                date_dict["year"] -= 543  # convert from Thai solar calendar
+                qualifier = {"start_time": {"time_value": date_dict}}
+                heritage = self.mapping["heritage"]["item"]
+                self.add_statement("heritage_status", heritage, qualifier)
+            else:
+                self.add_to_report("announced", prot_date, "start_time")
+                return super().set_heritage()
+        else:
+            return super().set_heritage()
 
     def set_heritage_id(self):
         wlm = self.mapping["table_name"].upper()
