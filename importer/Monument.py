@@ -314,7 +314,6 @@ class Monument(object):
         """
         self.monuments_all_id = str(getattr(self, id_keyword))
 
-
     def set_wlm_source(self):
         """
         Create default reference and embed in object.
@@ -328,13 +327,13 @@ class Monument(object):
 
     def set_image(self, image_keyword="image"):
         """
-        Add image.
+        Add image (unless there is already one).
 
         :param image_keyword: the name of the column with image path
         """
         if self.has_non_empty_attribute(image_keyword):
             image = getattr(self, image_keyword)
-            self.add_statement("image", image, refs=False)
+            self.add_statement("image", image, refs=False, if_empty=True)
 
     def set_commonscat(self, keyword="commonscat"):
         """
