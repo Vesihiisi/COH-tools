@@ -243,11 +243,7 @@ class Uploader(object):
             else:
                 disallowed = [x["item"] for x in P31_BLACKLIST]
                 item_q = self.data["wd-item"]
-                itemP31 = utils.get_P31(item_q, self.repo)
-                if len(set(disallowed).intersection(set(itemP31))) > 0:
-                    # this means one of this item's P31's is in the
-                    # disallowed list so we do
-                    # the same as when self.data["wd-item"] is None
+                if utils.is_blacklisted_P31(item_q, self.repo, disallowed):
                     if self.log:
                         message = "{} -- SET AS WD-ITEM BUT POSSIBLY WRONG AND THUS REMOVED".format(item_q)
                         self.log.logit(message)

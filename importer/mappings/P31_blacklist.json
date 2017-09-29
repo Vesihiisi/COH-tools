@@ -22,5 +22,17 @@
     {
         "item": "Q146149",
         "comment": "taxon"
+    },
+    {
+        "item": "Q8436",
+        "comment": "family"
+    },
+    {
+        "item": "Q1110684",
+        "comment": "professional association"
+    },
+    {
+        "item": "Q43229",
+        "comment": "association"
     }
 ]

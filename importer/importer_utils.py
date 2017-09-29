@@ -612,8 +612,23 @@ def is_whitelisted_P31(q_number, site, allowed_values):
     return result
 
 
+def is_blacklisted_P31(q_number, site, dissalowed_values):
+    # Also blacklist any items which contains a P279 (sub-class) statement
+    # as these by definition cannot be unique instances
+    if len(get_value_of_property(q_number, "P279", site)) > 0:
+        return True
+
+    item_P31 = get_P31(q_number, site)
+    if len(set(dissalowed_values).intersection(set(item_P31))) > 0:
+        # this means one of this item's P31's is in the
+        # disallowed list
+        return True
+    return False
+
+
 def create_wlm_url(country, language, id):
-    url_base = "https://tools.wmflabs.org/heritage/api/api.php?action=search&format=json&srcountry={}&srlanguage={}&srid={}"
+    url_base = ("https://tools.wmflabs.org/heritage/api/api.php?"
+                "action=search&format=json&srcountry={}&srlanguage={}&srid={}")
     return url_base.format(
         country, language, quote(id))
 
