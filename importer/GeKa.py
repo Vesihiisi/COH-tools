@@ -121,6 +121,16 @@ class GeKa(Monument):
                 directions = utils.package_monolingual(address, 'ka')
                 self.add_statement("directions", directions)
 
+    def set_wd_item_via_name(self):
+        """
+        Attempt to set wd item via name.
+
+        Populates self.monument_article, the value then gets used in
+        find_matching_wikidata() with extra precautionary logic.
+        """
+        if utils.count_wikilinks(self.name) == 1:
+            self.monuments_article = utils.get_wikilinks(self.name)[0]
+
     def set_heritage_id(self):
         self.add_statement("heritage_georgia", self.id)
 
@@ -144,6 +154,7 @@ class GeKa(Monument):
         self.set_inception()
         self.update_labels()
         self.update_descriptions()
+        self.set_wd_item_via_name()
         self.set_wd_item(self.find_matching_wikidata(mapping))
 
 
