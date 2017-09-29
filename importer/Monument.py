@@ -53,7 +53,7 @@ class Monument(object):
         qid = self.wd_item["wd-item"]
         qid_template = utils.wd_template("Q", qid)
         data_template = "{{{{Data|item={qid}|property=p31}}}}".format(qid=qid)
-        row = "* [{wlm_url} {id}] > {qid}: {data}".format(
+        row = "|-\n| [{wlm_url} {id}] || {qid} || {data}".format(
             wlm_url=self.wlm_url, id=self.monuments_all_id,
             qid=qid_template, data=data_template)
         return row

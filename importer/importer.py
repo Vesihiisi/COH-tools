@@ -182,8 +182,7 @@ def get_items(connection,
         print("USING RANDOM SAMPLE OF " + str(short))
     table_filename = "{0} {1}".format(
         dataset.table_name, utils.get_current_timestamp())
-    matches_filename = "{0} - matches - {1}".format(
-        dataset.table_name, utils.get_current_timestamp())
+    matched_item_rows = []
     problem_reports = []
     wikidata_site = utils.create_site_instance("wikidata", "wikidata")
     data_files = load_data(dataset)
@@ -217,14 +216,21 @@ def get_items(connection,
         if list_matches:
             match_info = monument.print_matched_item_info_row()
             if match_info:
-                utils.append_line_to_file(match_info, matches_filename)
+                matched_item_rows.append(match_info)
         if problem_report:  # dictionary is not empty
             problem_reports.append(problem_report)
             save_reports(problem_reports, dataset.table_name, started_at)
     if table:
         print("SAVED TEST RESULTS TO " + table_filename)
     if list_matches:
-        print("SAVED MATCH PREVIEW RESULTS TO " + matches_filename)
+        matches_filename = "{0} - matches - {1}".format(
+            dataset.table_name, utils.get_current_timestamp())
+        matched_items_output = (
+            '{| class="wikitable sortable"\n'
+            "! wlm-id !! matched item !! matched item {{P|P31}}\n")
+        matched_items_output += "\n".join(matched_item_rows)
+        matched_items_output += "\n|}"
+        utils.save_to_file(matches_filename, matched_items_output)
 
 
 def main(arguments, dataset=None):
