@@ -3,4 +3,4 @@ mwparserfromhell
 requests
 PyMySQL
 git+https://github.com/wikimedia/pywikibot-core.git
-git+https://github.com/lokal-profil/wikidata-stuff@0.3.3
+git+https://github.com/lokal-profil/wikidata-stuff@0.3.8

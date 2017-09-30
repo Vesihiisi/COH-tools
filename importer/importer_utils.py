@@ -179,7 +179,7 @@ def q_from_wikipedia(language, page_title):
     summary = "Creating item for {} on {}wp."
     summary = summary.format(page_title, language)
     wd_repo = create_site_instance("wikidata", "wikidata")
-    wdstuff = wds(wd_repo, edit_summary=summary)
+    wdstuff = wds(wd_repo, edit_summary=summary, no_wdss=True)
     if page.exists():
         if page.isRedirectPage():
             page = page.getRedirectTarget()
