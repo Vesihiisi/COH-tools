@@ -198,7 +198,7 @@ def get_items(connection,
     counter = 0
     for row in database_rows:
         if counter % 100 == 0:
-            print(".", end="")
+            print(".", end="", flush=True)
         counter += 1
         monument = dataset.monument_class(
             row, mapping, data_files, existing, wikidata_site)
