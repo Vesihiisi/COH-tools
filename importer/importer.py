@@ -236,9 +236,9 @@ def get_items(connection,
                 filenames['reports'], problem_reports, silent=True)
 
     if problem_reports:
-        print("SAVED PROBLEM REPORTS TO " + reports_filename)
+        print("SAVED PROBLEM REPORTS TO {}".format(filenames['reports']))
     if table:
-        print("SAVED TEST RESULTS TO " + table_filename)
+        print("SAVED TEST RESULTS TO {}".format(filenames['examples']))
     if list_matches:
         matched_items_output = (
             '{| class="wikitable sortable"\n'
