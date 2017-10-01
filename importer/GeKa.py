@@ -129,7 +129,7 @@ class GeKa(Monument):
         find_matching_wikidata() with extra precautionary logic.
         """
         if utils.count_wikilinks(self.name) == 1:
-            self.monuments_article = utils.get_wikilinks(self.name)[0]
+            self.monument_article = utils.get_wikilinks(self.name)[0].title
 
     def set_heritage_id(self):
         self.add_statement("heritage_georgia", self.id)
