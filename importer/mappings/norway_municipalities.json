@@ -1,0 +1,2187 @@
+[
+    {
+        "item": "Q493988",
+        "itemLabel": "Malvik",
+        "municipNumber": "1663"
+    },
+    {
+        "item": "Q500194",
+        "itemLabel": "Salangen",
+        "municipNumber": "1923"
+    },
+    {
+        "item": "Q483885",
+        "itemLabel": "Porsanger",
+        "municipNumber": "2020"
+    },
+    {
+        "item": "Q488747",
+        "itemLabel": "Kvinesdal",
+        "municipNumber": "1037"
+    },
+    {
+        "item": "Q487711",
+        "itemLabel": "Ulvik",
+        "municipNumber": "1233"
+    },
+    {
+        "item": "Q493846",
+        "itemLabel": "Snåsa",
+        "municipNumber": "1736"
+    },
+    {
+        "item": "Q484064",
+        "itemLabel": "Folldal",
+        "municipNumber": "0439"
+    },
+    {
+        "item": "Q486713",
+        "itemLabel": "Gausdal",
+        "municipNumber": "0522"
+    },
+    {
+        "item": "Q492209",
+        "itemLabel": "Selbu",
+        "municipNumber": "1664"
+    },
+    {
+        "item": "Q494005",
+        "itemLabel": "Steigen",
+        "municipNumber": "1848"
+    },
+    {
+        "item": "Q113697",
+        "itemLabel": "Måsøy",
+        "municipNumber": "2018"
+    },
+    {
+        "item": "Q316779",
+        "itemLabel": "Øyer",
+        "municipNumber": "0521"
+    },
+    {
+        "item": "Q486726",
+        "itemLabel": "Sigdal",
+        "municipNumber": "0621"
+    },
+    {
+        "item": "Q2372",
+        "itemLabel": "Kragerø",
+        "municipNumber": "0815"
+    },
+    {
+        "item": "Q490038",
+        "itemLabel": "Skånland",
+        "municipNumber": "1913"
+    },
+    {
+        "item": "Q488258",
+        "itemLabel": "Ibestad",
+        "municipNumber": "1917"
+    },
+    {
+        "item": "Q488955",
+        "itemLabel": "Målselv",
+        "municipNumber": "1924"
+    },
+    {
+        "item": "Q107351",
+        "itemLabel": "Hammerfest",
+        "municipNumber": "2004"
+    },
+    {
+        "item": "Q1825",
+        "itemLabel": "Karasjok",
+        "municipNumber": "2021"
+    },
+    {
+        "item": "Q507562",
+        "itemLabel": "Os",
+        "municipNumber": "0441"
+    },
+    {
+        "item": "Q488049",
+        "itemLabel": "Etnedal",
+        "municipNumber": "0541"
+    },
+    {
+        "item": "Q93633",
+        "itemLabel": "Flesberg",
+        "municipNumber": "0631"
+    },
+    {
+        "item": "Q483911",
+        "itemLabel": "Rollag",
+        "municipNumber": "0632"
+    },
+    {
+        "item": "Q499842",
+        "itemLabel": "Audnedal",
+        "municipNumber": "1027"
+    },
+    {
+        "item": "Q484309",
+        "itemLabel": "Forsand",
+        "municipNumber": "1129"
+    },
+    {
+        "item": "Q48591",
+        "itemLabel": "Strand",
+        "municipNumber": "1130"
+    },
+    {
+        "item": "Q483902",
+        "itemLabel": "Karmøy",
+        "municipNumber": "1149"
+    },
+    {
+        "item": "Q26793",
+        "itemLabel": "Bergen",
+        "municipNumber": "1201"
+    },
+    {
+        "item": "Q113552",
+        "itemLabel": "Bømlo",
+        "municipNumber": "1219"
+    },
+    {
+        "item": "Q113638",
+        "itemLabel": "Jondal",
+        "municipNumber": "1227"
+    },
+    {
+        "item": "Q215374",
+        "itemLabel": "Askøy",
+        "municipNumber": "1247"
+    },
+    {
+        "item": "Q48560",
+        "itemLabel": "Stordal",
+        "municipNumber": "1526"
+    },
+    {
+        "item": "Q500205",
+        "itemLabel": "Rauma",
+        "municipNumber": "1539"
+    },
+    {
+        "item": "Q48521",
+        "itemLabel": "Sunndal",
+        "municipNumber": "1563"
+    },
+    {
+        "item": "Q488124",
+        "itemLabel": "Rennebu",
+        "municipNumber": "1635"
+    },
+    {
+        "item": "Q488046",
+        "itemLabel": "Rødøy",
+        "municipNumber": "1836"
+    },
+    {
+        "item": "Q494680",
+        "itemLabel": "Flakstad",
+        "municipNumber": "1859"
+    },
+    {
+        "item": "Q487636",
+        "itemLabel": "Moskenes",
+        "municipNumber": "1874"
+    },
+    {
+        "item": "Q113622",
+        "itemLabel": "Rømskog",
+        "municipNumber": "0121"
+    },
+    {
+        "item": "Q48678",
+        "itemLabel": "Trøgstad",
+        "municipNumber": "0122"
+    },
+    {
+        "item": "Q48668",
+        "itemLabel": "Spydeberg",
+        "municipNumber": "0123"
+    },
+    {
+        "item": "Q109469",
+        "itemLabel": "Askim",
+        "municipNumber": "0124"
+    },
+    {
+        "item": "Q113740",
+        "itemLabel": "Eidsberg",
+        "municipNumber": "0125"
+    },
+    {
+        "item": "Q48769",
+        "itemLabel": "Åsnes",
+        "municipNumber": "0425"
+    },
+    {
+        "item": "Q488779",
+        "itemLabel": "Tynset",
+        "municipNumber": "0437"
+    },
+    {
+        "item": "Q48717",
+        "itemLabel": "Vestre Toten",
+        "municipNumber": "0529"
+    },
+    {
+        "item": "Q48701",
+        "itemLabel": "Svelvik",
+        "municipNumber": "0711"
+    },
+    {
+        "item": "Q489038",
+        "itemLabel": "Lindesnes",
+        "municipNumber": "1029"
+    },
+    {
+        "item": "Q493308",
+        "itemLabel": "Bjerkreim",
+        "municipNumber": "1114"
+    },
+    {
+        "item": "Q488948",
+        "itemLabel": "Sola",
+        "municipNumber": "1124"
+    },
+    {
+        "item": "Q492115",
+        "itemLabel": "Randaberg",
+        "municipNumber": "1127"
+    },
+    {
+        "item": "Q493977",
+        "itemLabel": "Tysvær",
+        "municipNumber": "1146"
+    },
+    {
+        "item": "Q484186",
+        "itemLabel": "Granvin",
+        "municipNumber": "1234"
+    },
+    {
+        "item": "Q484008",
+        "itemLabel": "Austevoll",
+        "municipNumber": "1244"
+    },
+    {
+        "item": "Q48928",
+        "itemLabel": "Vaksdal",
+        "municipNumber": "1251"
+    },
+    {
+        "item": "Q503612",
+        "itemLabel": "Luster",
+        "municipNumber": "1426"
+    },
+    {
+        "item": "Q499397",
+        "itemLabel": "Fjaler",
+        "municipNumber": "1429"
+    },
+    {
+        "item": "Q484101",
+        "itemLabel": "Jølster",
+        "municipNumber": "1431"
+    },
+    {
+        "item": "Q113571",
+        "itemLabel": "Førde",
+        "municipNumber": "1432"
+    },
+    {
+        "item": "Q484313",
+        "itemLabel": "Selje",
+        "municipNumber": "1441"
+    },
+    {
+        "item": "Q383492",
+        "itemLabel": "Gloppen",
+        "municipNumber": "1445"
+    },
+    {
+        "item": "Q48508",
+        "itemLabel": "Sykkylven",
+        "municipNumber": "1528"
+    },
+    {
+        "item": "Q494670",
+        "itemLabel": "Giske",
+        "municipNumber": "1532"
+    },
+    {
+        "item": "Q488380",
+        "itemLabel": "Midsund",
+        "municipNumber": "1545"
+    },
+    {
+        "item": "Q48794",
+        "itemLabel": "Sandøy",
+        "municipNumber": "1546"
+    },
+    {
+        "item": "Q484128",
+        "itemLabel": "Fræna",
+        "municipNumber": "1548"
+    },
+    {
+        "item": "Q392093",
+        "itemLabel": "Agdenes",
+        "municipNumber": "1622"
+    },
+    {
+        "item": "Q270835",
+        "itemLabel": "Åfjord",
+        "municipNumber": "1630"
+    },
+    {
+        "item": "Q484191",
+        "itemLabel": "Meldal",
+        "municipNumber": "1636"
+    },
+    {
+        "item": "Q488762",
+        "itemLabel": "Melhus",
+        "municipNumber": "1653"
+    },
+    {
+        "item": "Q48732",
+        "itemLabel": "Meråker",
+        "municipNumber": "1711"
+    },
+    {
+        "item": "Q216430",
+        "itemLabel": "Levanger",
+        "municipNumber": "1719"
+    },
+    {
+        "item": "Q499779",
+        "itemLabel": "Verran",
+        "municipNumber": "1724"
+    },
+    {
+        "item": "Q258084",
+        "itemLabel": "Grong",
+        "municipNumber": "1742"
+    },
+    {
+        "item": "Q494688",
+        "itemLabel": "Fosnes",
+        "municipNumber": "1748"
+    },
+    {
+        "item": "Q488970",
+        "itemLabel": "Inderøy",
+        "municipNumber": "1756"
+    },
+    {
+        "item": "Q493932",
+        "itemLabel": "Herøy",
+        "municipNumber": "1818"
+    },
+    {
+        "item": "Q48880",
+        "itemLabel": "Saltdal",
+        "municipNumber": "1840"
+    },
+    {
+        "item": "Q493851",
+        "itemLabel": "Tysfjord",
+        "municipNumber": "1850"
+    },
+    {
+        "item": "Q48897",
+        "itemLabel": "Evenes",
+        "municipNumber": "1853"
+    },
+    {
+        "item": "Q48844",
+        "itemLabel": "Sortland",
+        "municipNumber": "1870"
+    },
+    {
+        "item": "Q493942",
+        "itemLabel": "Gáivuotna–Kåfjord",
+        "municipNumber": "1940"
+    },
+    {
+        "item": "Q845873",
+        "itemLabel": "Hopen",
+        "municipNumber": "2131"
+    },
+    {
+        "item": "Q484093",
+        "itemLabel": "Søndre Land",
+        "municipNumber": "0536"
+    },
+    {
+        "item": "Q488439",
+        "itemLabel": "Vestre Slidre",
+        "municipNumber": "0543"
+    },
+    {
+        "item": "Q113538",
+        "itemLabel": "Ål",
+        "municipNumber": "0619"
+    },
+    {
+        "item": "Q1881",
+        "itemLabel": "Fyresdal",
+        "municipNumber": "0831"
+    },
+    {
+        "item": "Q90592",
+        "itemLabel": "Iveland",
+        "municipNumber": "0935"
+    },
+    {
+        "item": "Q2415",
+        "itemLabel": "Kristiansand",
+        "municipNumber": "1001"
+    },
+    {
+        "item": "Q501401",
+        "itemLabel": "Søgne",
+        "municipNumber": "1018"
+    },
+    {
+        "item": "Q500223",
+        "itemLabel": "Klepp",
+        "municipNumber": "1120"
+    },
+    {
+        "item": "Q48577",
+        "itemLabel": "Suldal",
+        "municipNumber": "1134"
+    },
+    {
+        "item": "Q48750",
+        "itemLabel": "Finnøy",
+        "municipNumber": "1141"
+    },
+    {
+        "item": "Q494024",
+        "itemLabel": "Kvitsøy",
+        "municipNumber": "1144"
+    },
+    {
+        "item": "Q499485",
+        "itemLabel": "Utsira",
+        "municipNumber": "1151"
+    },
+    {
+        "item": "Q484070",
+        "itemLabel": "Kvinnherad",
+        "municipNumber": "1224"
+    },
+    {
+        "item": "Q493936",
+        "itemLabel": "Os",
+        "municipNumber": "1243"
+    },
+    {
+        "item": "Q507509",
+        "itemLabel": "Sund",
+        "municipNumber": "1245"
+    },
+    {
+        "item": "Q489342",
+        "itemLabel": "Aukra",
+        "municipNumber": "1547"
+    },
+    {
+        "item": "Q484119",
+        "itemLabel": "Frøya",
+        "municipNumber": "1620"
+    },
+    {
+        "item": "Q111039",
+        "itemLabel": "Namsos",
+        "municipNumber": "1703"
+    },
+    {
+        "item": "Q217808",
+        "itemLabel": "Alstahaug",
+        "municipNumber": "1820"
+    },
+    {
+        "item": "Q489347",
+        "itemLabel": "Dønna",
+        "municipNumber": "1827"
+    },
+    {
+        "item": "Q130048",
+        "itemLabel": "Røst",
+        "municipNumber": "1856"
+    },
+    {
+        "item": "Q649541",
+        "itemLabel": "Kvæfjord",
+        "municipNumber": "1911"
+    },
+    {
+        "item": "Q48728",
+        "itemLabel": "Karlsøy",
+        "municipNumber": "1936"
+    },
+    {
+        "item": "Q488959",
+        "itemLabel": "Kvænangen",
+        "municipNumber": "1943"
+    },
+    {
+        "item": "Q104379",
+        "itemLabel": "Vadsø",
+        "municipNumber": "2003"
+    },
+    {
+        "item": "Q48827",
+        "itemLabel": "Sør-Varanger",
+        "municipNumber": "2030"
+    },
+    {
+        "item": "Q194364",
+        "itemLabel": "Bear Island",
+        "municipNumber": "2121"
+    },
+    {
+        "item": "Q109475",
+        "itemLabel": "Hobøl",
+        "municipNumber": "0138"
+    },
+    {
+        "item": "Q57870",
+        "itemLabel": "Rælingen",
+        "municipNumber": "0228"
+    },
+    {
+        "item": "Q488783",
+        "itemLabel": "Grue",
+        "municipNumber": "0423"
+    },
+    {
+        "item": "Q501413",
+        "itemLabel": "Våler",
+        "municipNumber": "0426"
+    },
+    {
+        "item": "Q271063",
+        "itemLabel": "Åmot",
+        "municipNumber": "0429"
+    },
+    {
+        "item": "Q108966",
+        "itemLabel": "Mandal",
+        "municipNumber": "1002"
+    },
+    {
+        "item": "Q490462",
+        "itemLabel": "Farsund",
+        "municipNumber": "1003"
+    },
+    {
+        "item": "Q493481",
+        "itemLabel": "Flekkefjord",
+        "municipNumber": "1004"
+    },
+    {
+        "item": "Q488962",
+        "itemLabel": "Hægebostad",
+        "municipNumber": "1034"
+    },
+    {
+        "item": "Q27587",
+        "itemLabel": "Sandnes",
+        "municipNumber": "1102"
+    },
+    {
+        "item": "Q493981",
+        "itemLabel": "Time",
+        "municipNumber": "1121"
+    },
+    {
+        "item": "Q473529",
+        "itemLabel": "Fjell",
+        "municipNumber": "1246"
+    },
+    {
+        "item": "Q488392",
+        "itemLabel": "Meland",
+        "municipNumber": "1256"
+    },
+    {
+        "item": "Q493292",
+        "itemLabel": "Balestrand",
+        "municipNumber": "1418"
+    },
+    {
+        "item": "Q488975",
+        "itemLabel": "Lærdal",
+        "municipNumber": "1422"
+    },
+    {
+        "item": "Q504817",
+        "itemLabel": "Askvoll",
+        "municipNumber": "1428"
+    },
+    {
+        "item": "Q488060",
+        "itemLabel": "Vestnes",
+        "municipNumber": "1535"
+    },
+    {
+        "item": "Q488242",
+        "itemLabel": "Rindal",
+        "municipNumber": "1567"
+    },
+    {
+        "item": "Q484243",
+        "itemLabel": "Bjugn",
+        "municipNumber": "1627"
+    },
+    {
+        "item": "Q110431",
+        "itemLabel": "Steinkjer",
+        "municipNumber": "1702"
+    },
+    {
+        "item": "Q493996",
+        "itemLabel": "Namsskogan",
+        "municipNumber": "1740"
+    },
+    {
+        "item": "Q162144",
+        "itemLabel": "Høylandet",
+        "municipNumber": "1743"
+    },
+    {
+        "item": "Q493758",
+        "itemLabel": "Grane",
+        "municipNumber": "1825"
+    },
+    {
+        "item": "Q48620",
+        "itemLabel": "Træna",
+        "municipNumber": "1835"
+    },
+    {
+        "item": "Q484208",
+        "itemLabel": "Gildeskål",
+        "municipNumber": "1838"
+    },
+    {
+        "item": "Q113710",
+        "itemLabel": "Andøy",
+        "municipNumber": "1871"
+    },
+    {
+        "item": "Q26087",
+        "itemLabel": "Tromsø",
+        "municipNumber": "1902"
+    },
+    {
+        "item": "Q48597",
+        "itemLabel": "Tranøy",
+        "municipNumber": "1927"
+    },
+    {
+        "item": "Q493007",
+        "itemLabel": "Kvalsund",
+        "municipNumber": "2017"
+    },
+    {
+        "item": "Q48393",
+        "itemLabel": "Aremark",
+        "municipNumber": "0118"
+    },
+    {
+        "item": "Q56915",
+        "itemLabel": "Aurskog-Høland",
+        "municipNumber": "0221"
+    },
+    {
+        "item": "Q57871",
+        "itemLabel": "Skedsmo",
+        "municipNumber": "0231"
+    },
+    {
+        "item": "Q507549",
+        "itemLabel": "Tolga",
+        "municipNumber": "0436"
+    },
+    {
+        "item": "Q48723",
+        "itemLabel": "Alvdal",
+        "municipNumber": "0438"
+    },
+    {
+        "item": "Q488405",
+        "itemLabel": "Lesja",
+        "municipNumber": "0512"
+    },
+    {
+        "item": "Q484074",
+        "itemLabel": "Nord-Aurdal",
+        "municipNumber": "0542"
+    },
+    {
+        "item": "Q505952",
+        "itemLabel": "Lyngdal",
+        "municipNumber": "1032"
+    },
+    {
+        "item": "Q494045",
+        "itemLabel": "Rennesøy",
+        "municipNumber": "1142"
+    },
+    {
+        "item": "Q502197",
+        "itemLabel": "Vindafjord",
+        "municipNumber": "1160"
+    },
+    {
+        "item": "Q48782",
+        "itemLabel": "Etne",
+        "municipNumber": "1211"
+    },
+    {
+        "item": "Q48647",
+        "itemLabel": "Solund",
+        "municipNumber": "1412"
+    },
+    {
+        "item": "Q113720",
+        "itemLabel": "Høyanger",
+        "municipNumber": "1416"
+    },
+    {
+        "item": "Q303521",
+        "itemLabel": "Vik",
+        "municipNumber": "1417"
+    },
+    {
+        "item": "Q48545",
+        "itemLabel": "Surnadal",
+        "municipNumber": "1566"
+    },
+    {
+        "item": "Q503600",
+        "itemLabel": "Roan",
+        "municipNumber": "1632"
+    },
+    {
+        "item": "Q484257",
+        "itemLabel": "Osen",
+        "municipNumber": "1633"
+    },
+    {
+        "item": "Q48833",
+        "itemLabel": "Vikna",
+        "municipNumber": "1750"
+    },
+    {
+        "item": "Q48610",
+        "itemLabel": "Sømna",
+        "municipNumber": "1812"
+    },
+    {
+        "item": "Q488776",
+        "itemLabel": "Hemnes",
+        "municipNumber": "1832"
+    },
+    {
+        "item": "Q487538",
+        "itemLabel": "Hamarøy",
+        "municipNumber": "1849"
+    },
+    {
+        "item": "Q507201",
+        "itemLabel": "Vestvågøy",
+        "municipNumber": "1860"
+    },
+    {
+        "item": "Q62140",
+        "itemLabel": "Harstad",
+        "municipNumber": "1903"
+    },
+    {
+        "item": "Q48325",
+        "itemLabel": "Sørreisa",
+        "municipNumber": "1925"
+    },
+    {
+        "item": "Q252381",
+        "itemLabel": "Dyrøy",
+        "municipNumber": "1926"
+    },
+    {
+        "item": "Q494059",
+        "itemLabel": "Nordreisa",
+        "municipNumber": "1942"
+    },
+    {
+        "item": "Q108983",
+        "itemLabel": "Vardø",
+        "municipNumber": "2002"
+    },
+    {
+        "item": "Q6459",
+        "itemLabel": "Kautokeino",
+        "municipNumber": "2011"
+    },
+    {
+        "item": "Q488435",
+        "itemLabel": "Hvaler",
+        "municipNumber": "0111"
+    },
+    {
+        "item": "Q499446",
+        "itemLabel": "Våler",
+        "municipNumber": "0137"
+    },
+    {
+        "item": "Q57918",
+        "itemLabel": "Vestby",
+        "municipNumber": "0211"
+    },
+    {
+        "item": "Q57912",
+        "itemLabel": "Ski",
+        "municipNumber": "0213"
+    },
+    {
+        "item": "Q54062",
+        "itemLabel": "Ås",
+        "municipNumber": "0214"
+    },
+    {
+        "item": "Q56869",
+        "itemLabel": "Asker",
+        "municipNumber": "0220"
+    },
+    {
+        "item": "Q57914",
+        "itemLabel": "Sørum",
+        "municipNumber": "0226"
+    },
+    {
+        "item": "Q57082",
+        "itemLabel": "Fet",
+        "municipNumber": "0227"
+    },
+    {
+        "item": "Q57858",
+        "itemLabel": "Hurdal",
+        "municipNumber": "0239"
+    },
+    {
+        "item": "Q113466",
+        "itemLabel": "Ringsaker",
+        "municipNumber": "0412"
+    },
+    {
+        "item": "Q109140",
+        "itemLabel": "Elverum",
+        "municipNumber": "0427"
+    },
+    {
+        "item": "Q488229",
+        "itemLabel": "Rendalen",
+        "municipNumber": "0432"
+    },
+    {
+        "item": "Q48909",
+        "itemLabel": "Engerdal",
+        "municipNumber": "0434"
+    },
+    {
+        "item": "Q484116",
+        "itemLabel": "Skjåk",
+        "municipNumber": "0513"
+    },
+    {
+        "item": "Q507499",
+        "itemLabel": "Sel",
+        "municipNumber": "0517"
+    },
+    {
+        "item": "Q503637",
+        "itemLabel": "Vang",
+        "municipNumber": "0545"
+    },
+    {
+        "item": "Q109048",
+        "itemLabel": "Horten",
+        "municipNumber": "0701"
+    },
+    {
+        "item": "Q2354",
+        "itemLabel": "Hjartdal",
+        "municipNumber": "0827"
+    },
+    {
+        "item": "Q2241",
+        "itemLabel": "Tokke",
+        "municipNumber": "0833"
+    },
+    {
+        "item": "Q88802",
+        "itemLabel": "Birkenes",
+        "municipNumber": "0928"
+    },
+    {
+        "item": "Q88804",
+        "itemLabel": "Bygland",
+        "municipNumber": "0938"
+    },
+    {
+        "item": "Q90598",
+        "itemLabel": "Valle",
+        "municipNumber": "0940"
+    },
+    {
+        "item": "Q505956",
+        "itemLabel": "Songdalen",
+        "municipNumber": "1017"
+    },
+    {
+        "item": "Q48858",
+        "itemLabel": "Sokndal",
+        "municipNumber": "1111"
+    },
+    {
+        "item": "Q488067",
+        "itemLabel": "Osterøy",
+        "municipNumber": "1253"
+    },
+    {
+        "item": "Q488966",
+        "itemLabel": "Radøy",
+        "municipNumber": "1260"
+    },
+    {
+        "item": "Q271140",
+        "itemLabel": "Årdal",
+        "municipNumber": "1424"
+    },
+    {
+        "item": "Q493273",
+        "itemLabel": "Gaular",
+        "municipNumber": "1430"
+    },
+    {
+        "item": "Q494049",
+        "itemLabel": "Hornindal",
+        "municipNumber": "1444"
+    },
+    {
+        "item": "Q62266",
+        "itemLabel": "Ålesund",
+        "municipNumber": "1504"
+    },
+    {
+        "item": "Q109483",
+        "itemLabel": "Kristiansund",
+        "municipNumber": "1505"
+    },
+    {
+        "item": "Q493992",
+        "itemLabel": "Vanylven",
+        "municipNumber": "1511"
+    },
+    {
+        "item": "Q493961",
+        "itemLabel": "Ulstein",
+        "municipNumber": "1516"
+    },
+    {
+        "item": "Q156453",
+        "itemLabel": "Ørsta",
+        "municipNumber": "1520"
+    },
+    {
+        "item": "Q48265",
+        "itemLabel": "Skodje",
+        "municipNumber": "1529"
+    },
+    {
+        "item": "Q493283",
+        "itemLabel": "Gjemnes",
+        "municipNumber": "1557"
+    },
+    {
+        "item": "Q488247",
+        "itemLabel": "Halsa",
+        "municipNumber": "1571"
+    },
+    {
+        "item": "Q113595",
+        "itemLabel": "Oppdal",
+        "municipNumber": "1634"
+    },
+    {
+        "item": "Q500284",
+        "itemLabel": "Orkdal",
+        "municipNumber": "1638"
+    },
+    {
+        "item": "Q217802",
+        "itemLabel": "Stjørdal",
+        "municipNumber": "1714"
+    },
+    {
+        "item": "Q389371",
+        "itemLabel": "Leksvik",
+        "municipNumber": "1718"
+    },
+    {
+        "item": "Q503660",
+        "itemLabel": "Verdal",
+        "municipNumber": "1721"
+    },
+    {
+        "item": "Q499704",
+        "itemLabel": "Mosvik",
+        "municipNumber": "1723"
+    },
+    {
+        "item": "Q502193",
+        "itemLabel": "Namdalseid",
+        "municipNumber": "1725"
+    },
+    {
+        "item": "Q484088",
+        "itemLabel": "Røyrvik",
+        "municipNumber": "1739"
+    },
+    {
+        "item": "Q499761",
+        "itemLabel": "Overhalla",
+        "municipNumber": "1744"
+    },
+    {
+        "item": "Q39383",
+        "itemLabel": "Bodø",
+        "municipNumber": "1804"
+    },
+    {
+        "item": "Q488375",
+        "itemLabel": "Vega",
+        "municipNumber": "1815"
+    },
+    {
+        "item": "Q494068",
+        "itemLabel": "Vevelstad",
+        "municipNumber": "1816"
+    },
+    {
+        "item": "Q48870",
+        "itemLabel": "Leirfjord",
+        "municipNumber": "1822"
+    },
+    {
+        "item": "Q494062",
+        "itemLabel": "Nesna",
+        "municipNumber": "1828"
+    },
+    {
+        "item": "Q487524",
+        "itemLabel": "Beiarn",
+        "municipNumber": "1839"
+    },
+    {
+        "item": "Q484252",
+        "itemLabel": "Lødingen",
+        "municipNumber": "1851"
+    },
+    {
+        "item": "Q48629",
+        "itemLabel": "Værøy",
+        "municipNumber": "1857"
+    },
+    {
+        "item": "Q6535",
+        "itemLabel": "Alta",
+        "municipNumber": "2012"
+    },
+    {
+        "item": "Q62641",
+        "itemLabel": "Nordkapp",
+        "municipNumber": "2019"
+    },
+    {
+        "item": "Q48760",
+        "itemLabel": "Lebesby",
+        "municipNumber": "2022"
+    },
+    {
+        "item": "Q21162",
+        "itemLabel": "Spitsbergen",
+        "municipNumber": "2111"
+    },
+    {
+        "item": "Q14056",
+        "itemLabel": "Jan Mayen",
+        "municipNumber": "2211"
+    },
+    {
+        "item": "Q57083",
+        "itemLabel": "Frogn",
+        "municipNumber": "0215"
+    },
+    {
+        "item": "Q48886",
+        "itemLabel": "Krødsherad",
+        "municipNumber": "0622"
+    },
+    {
+        "item": "Q484001",
+        "itemLabel": "Modum",
+        "municipNumber": "0623"
+    },
+    {
+        "item": "Q110268",
+        "itemLabel": "Nedre Eiker",
+        "municipNumber": "0625"
+    },
+    {
+        "item": "Q488663",
+        "itemLabel": "Røyken",
+        "municipNumber": "0627"
+    },
+    {
+        "item": "Q109005",
+        "itemLabel": "Sandefjord",
+        "municipNumber": "0710"
+    },
+    {
+        "item": "Q2236",
+        "itemLabel": "Seljord",
+        "municipNumber": "0828"
+    },
+    {
+        "item": "Q88813",
+        "itemLabel": "Gjerstad",
+        "municipNumber": "0911"
+    },
+    {
+        "item": "Q281835",
+        "itemLabel": "Sirdal",
+        "municipNumber": "1046"
+    },
+    {
+        "item": "Q48518",
+        "itemLabel": "Sveio",
+        "municipNumber": "1216"
+    },
+    {
+        "item": "Q485253",
+        "itemLabel": "Stord",
+        "municipNumber": "1221"
+    },
+    {
+        "item": "Q483977",
+        "itemLabel": "Eidfjord",
+        "municipNumber": "1232"
+    },
+    {
+        "item": "Q109031",
+        "itemLabel": "Voss",
+        "municipNumber": "1235"
+    },
+    {
+        "item": "Q317321",
+        "itemLabel": "Øygarden",
+        "municipNumber": "1259"
+    },
+    {
+        "item": "Q484080",
+        "itemLabel": "Austrheim",
+        "municipNumber": "1264"
+    },
+    {
+        "item": "Q217793",
+        "itemLabel": "Gulen",
+        "municipNumber": "1411"
+    },
+    {
+        "item": "Q107396",
+        "itemLabel": "Leikanger",
+        "municipNumber": "1419"
+    },
+    {
+        "item": "Q490923",
+        "itemLabel": "Sogndal",
+        "municipNumber": "1420"
+    },
+    {
+        "item": "Q503622",
+        "itemLabel": "Naustdal",
+        "municipNumber": "1433"
+    },
+    {
+        "item": "Q500198",
+        "itemLabel": "Eid",
+        "municipNumber": "1443"
+    },
+    {
+        "item": "Q501510",
+        "itemLabel": "Sande",
+        "municipNumber": "1514"
+    },
+    {
+        "item": "Q48501",
+        "itemLabel": "Stranda",
+        "municipNumber": "1525"
+    },
+    {
+        "item": "Q507524",
+        "itemLabel": "Sula",
+        "municipNumber": "1531"
+    },
+    {
+        "item": "Q483899",
+        "itemLabel": "Smøla",
+        "municipNumber": "1573"
+    },
+    {
+        "item": "Q25804",
+        "itemLabel": "Trondheim",
+        "municipNumber": "1601"
+    },
+    {
+        "item": "Q488157",
+        "itemLabel": "Rissa",
+        "municipNumber": "1624"
+    },
+    {
+        "item": "Q113514",
+        "itemLabel": "Ballangen",
+        "municipNumber": "1854"
+    },
+    {
+        "item": "Q308134",
+        "itemLabel": "Øksnes",
+        "municipNumber": "1868"
+    },
+    {
+        "item": "Q48581",
+        "itemLabel": "Torsken",
+        "municipNumber": "1928"
+    },
+    {
+        "item": "Q499770",
+        "itemLabel": "Lenvik",
+        "municipNumber": "1931"
+    },
+    {
+        "item": "Q109042",
+        "itemLabel": "Halden",
+        "municipNumber": "0101"
+    },
+    {
+        "item": "Q101341",
+        "itemLabel": "Lillehammer",
+        "municipNumber": "0501"
+    },
+    {
+        "item": "Q3745117",
+        "itemLabel": "Lillehammer",
+        "municipNumber": "0501"
+    },
+    {
+        "item": "Q486704",
+        "itemLabel": "Jevnaker",
+        "municipNumber": "0532"
+    },
+    {
+        "item": "Q488398",
+        "itemLabel": "Lunner",
+        "municipNumber": "0533"
+    },
+    {
+        "item": "Q501518",
+        "itemLabel": "Gran",
+        "municipNumber": "0534"
+    },
+    {
+        "item": "Q108988",
+        "itemLabel": "Kongsberg",
+        "municipNumber": "0604"
+    },
+    {
+        "item": "Q497248",
+        "itemLabel": "Hemsedal",
+        "municipNumber": "0618"
+    },
+    {
+        "item": "Q110311",
+        "itemLabel": "Øvre Eiker",
+        "municipNumber": "0624"
+    },
+    {
+        "item": "Q90595",
+        "itemLabel": "Risør",
+        "municipNumber": "0901"
+    },
+    {
+        "item": "Q90590",
+        "itemLabel": "Grimstad",
+        "municipNumber": "0904"
+    },
+    {
+        "item": "Q90601",
+        "itemLabel": "Åmli",
+        "municipNumber": "0929"
+    },
+    {
+        "item": "Q485608",
+        "itemLabel": "Hå",
+        "municipNumber": "1119"
+    },
+    {
+        "item": "Q48316",
+        "itemLabel": "Tysnes",
+        "municipNumber": "1223"
+    },
+    {
+        "item": "Q109494",
+        "itemLabel": "Odda",
+        "municipNumber": "1228"
+    },
+    {
+        "item": "Q493279",
+        "itemLabel": "Fusa",
+        "municipNumber": "1241"
+    },
+    {
+        "item": "Q493296",
+        "itemLabel": "Eide",
+        "municipNumber": "1551"
+    },
+    {
+        "item": "Q489374",
+        "itemLabel": "Frosta",
+        "municipNumber": "1717"
+    },
+    {
+        "item": "Q488384",
+        "itemLabel": "Hattfjelldal",
+        "municipNumber": "1826"
+    },
+    {
+        "item": "Q109841",
+        "itemLabel": "Hasvik",
+        "municipNumber": "2015"
+    },
+    {
+        "item": "Q109489",
+        "itemLabel": "Berlevåg",
+        "municipNumber": "2024"
+    },
+    {
+        "item": "Q271275",
+        "itemLabel": "Åseral",
+        "municipNumber": "1026"
+    },
+    {
+        "item": "Q515536",
+        "itemLabel": "Lund",
+        "municipNumber": "1112"
+    },
+    {
+        "item": "Q255148",
+        "itemLabel": "Gjesdal",
+        "municipNumber": "1122"
+    },
+    {
+        "item": "Q489351",
+        "itemLabel": "Bokn",
+        "municipNumber": "1145"
+    },
+    {
+        "item": "Q202605",
+        "itemLabel": "Modalen",
+        "municipNumber": "1252"
+    },
+    {
+        "item": "Q488252",
+        "itemLabel": "Tingvoll",
+        "municipNumber": "1560"
+    },
+    {
+        "item": "Q499429",
+        "itemLabel": "Aure",
+        "municipNumber": "1569"
+    },
+    {
+        "item": "Q308245",
+        "itemLabel": "Ørland",
+        "municipNumber": "1621"
+    },
+    {
+        "item": "Q112855",
+        "itemLabel": "Brønnøy",
+        "municipNumber": "1813"
+    },
+    {
+        "item": "Q484097",
+        "itemLabel": "Sørfold",
+        "municipNumber": "1845"
+    },
+    {
+        "item": "Q490246",
+        "itemLabel": "Vågan",
+        "municipNumber": "1865"
+    },
+    {
+        "item": "Q493315",
+        "itemLabel": "Bardu",
+        "municipNumber": "1922"
+    },
+    {
+        "item": "Q57862",
+        "itemLabel": "Nannestad",
+        "municipNumber": "0238"
+    },
+    {
+        "item": "Q156125",
+        "itemLabel": "Larvik",
+        "municipNumber": "0709"
+    },
+    {
+        "item": "Q25416",
+        "itemLabel": "Stavanger",
+        "municipNumber": "1103"
+    },
+    {
+        "item": "Q250055",
+        "itemLabel": "Hjelmeland",
+        "municipNumber": "1133"
+    },
+    {
+        "item": "Q484077",
+        "itemLabel": "Ullensvang",
+        "municipNumber": "1231"
+    },
+    {
+        "item": "Q487529",
+        "itemLabel": "Kvam",
+        "municipNumber": "1238"
+    },
+    {
+        "item": "Q484213",
+        "itemLabel": "Fedje",
+        "municipNumber": "1265"
+    },
+    {
+        "item": "Q484046",
+        "itemLabel": "Nesset",
+        "municipNumber": "1543"
+    },
+    {
+        "item": "Q499429",
+        "itemLabel": "Aure",
+        "municipNumber": "1576"
+    },
+    {
+        "item": "Q1641842",
+        "itemLabel": "Tustna",
+        "municipNumber": "1576"
+    },
+    {
+        "item": "Q493999",
+        "itemLabel": "Lierne",
+        "municipNumber": "1738"
+    },
+    {
+        "item": "Q488622",
+        "itemLabel": "Hole",
+        "municipNumber": "0612"
+    },
+    {
+        "item": "Q484057",
+        "itemLabel": "Hol",
+        "municipNumber": "0620"
+    },
+    {
+        "item": "Q57864",
+        "itemLabel": "Nesodden",
+        "municipNumber": "0216"
+    },
+    {
+        "item": "Q57076",
+        "itemLabel": "Bærum",
+        "municipNumber": "0219"
+    },
+    {
+        "item": "Q90593",
+        "itemLabel": "Lillesand",
+        "municipNumber": "0926"
+    },
+    {
+        "item": "Q107392",
+        "itemLabel": "Tønsberg",
+        "municipNumber": "0704"
+    },
+    {
+        "item": "Q488951",
+        "itemLabel": "Løten",
+        "municipNumber": "0415"
+    },
+    {
+        "item": "Q48542",
+        "itemLabel": "Stange",
+        "municipNumber": "0417"
+    },
+    {
+        "item": "Q110848",
+        "itemLabel": "Ringerike",
+        "municipNumber": "0605"
+    },
+    {
+        "item": "Q483986",
+        "itemLabel": "Nes",
+        "municipNumber": "0616"
+    },
+    {
+        "item": "Q2290",
+        "itemLabel": "Porsgrunn",
+        "municipNumber": "0805"
+    },
+    {
+        "item": "Q2229",
+        "itemLabel": "Nissedal",
+        "municipNumber": "0830"
+    },
+    {
+        "item": "Q48637",
+        "itemLabel": "Ringebu",
+        "municipNumber": "0520"
+    },
+    {
+        "item": "Q499570",
+        "itemLabel": "Re",
+        "municipNumber": "0716"
+    },
+    {
+        "item": "Q57865",
+        "itemLabel": "Nittedal",
+        "municipNumber": "0233"
+    },
+    {
+        "item": "Q48414",
+        "itemLabel": "Sør-Aurdal",
+        "municipNumber": "0540"
+    },
+    {
+        "item": "Q57917",
+        "itemLabel": "Ullensaker",
+        "municipNumber": "0235"
+    },
+    {
+        "item": "Q488026",
+        "itemLabel": "Nes",
+        "municipNumber": "0236"
+    },
+    {
+        "item": "Q48924",
+        "itemLabel": "Nore og Uvdal",
+        "municipNumber": "0633"
+    },
+    {
+        "item": "Q2272",
+        "itemLabel": "Skien",
+        "municipNumber": "0806"
+    },
+    {
+        "item": "Q484052",
+        "itemLabel": "Bamble",
+        "municipNumber": "0814"
+    },
+    {
+        "item": "Q2232",
+        "itemLabel": "Kviteseid",
+        "municipNumber": "0829"
+    },
+    {
+        "item": "Q486736",
+        "itemLabel": "Marker",
+        "municipNumber": "0119"
+    },
+    {
+        "item": "Q483906",
+        "itemLabel": "Råde",
+        "municipNumber": "0135"
+    },
+    {
+        "item": "Q57868",
+        "itemLabel": "Oppegård",
+        "municipNumber": "0217"
+    },
+    {
+        "item": "Q57860",
+        "itemLabel": "Lørenskog",
+        "municipNumber": "0230"
+    },
+    {
+        "item": "Q585",
+        "itemLabel": "Oslo",
+        "municipNumber": "0301"
+    },
+    {
+        "item": "Q2365",
+        "itemLabel": "Tinn",
+        "municipNumber": "0826"
+    },
+    {
+        "item": "Q48687",
+        "itemLabel": "Tjøme",
+        "municipNumber": "0723"
+    },
+    {
+        "item": "Q500290",
+        "itemLabel": "Lardal",
+        "municipNumber": "0728"
+    },
+    {
+        "item": "Q88808",
+        "itemLabel": "Evje og Hornnes",
+        "municipNumber": "0937"
+    },
+    {
+        "item": "Q488611",
+        "itemLabel": "Hurum",
+        "municipNumber": "0628"
+    },
+    {
+        "item": "Q2245",
+        "itemLabel": "Vinje",
+        "municipNumber": "0834"
+    },
+    {
+        "item": "Q5499099",
+        "itemLabel": "Stokke",
+        "municipNumber": "0720"
+    },
+    {
+        "item": "Q93703",
+        "itemLabel": "Flå",
+        "municipNumber": "0615"
+    },
+    {
+        "item": "Q90597",
+        "itemLabel": "Tvedestrand",
+        "municipNumber": "0914"
+    },
+    {
+        "item": "Q2326",
+        "itemLabel": "Notodden",
+        "municipNumber": "0807"
+    },
+    {
+        "item": "Q484322",
+        "itemLabel": "Rana",
+        "municipNumber": "1833"
+    },
+    {
+        "item": "Q48696",
+        "itemLabel": "Fauske",
+        "municipNumber": "1841"
+    },
+    {
+        "item": "Q175704",
+        "itemLabel": "Gratangen",
+        "municipNumber": "1919"
+    },
+    {
+        "item": "Q502217",
+        "itemLabel": "Lavangen",
+        "municipNumber": "1920"
+    },
+    {
+        "item": "Q378704",
+        "itemLabel": "Marnardal",
+        "municipNumber": "1021"
+    },
+    {
+        "item": "Q486700",
+        "itemLabel": "Aurland",
+        "municipNumber": "1421"
+    },
+    {
+        "item": "Q499719",
+        "itemLabel": "Vågsøy",
+        "municipNumber": "1439"
+    },
+    {
+        "item": "Q104095",
+        "itemLabel": "Molde",
+        "municipNumber": "1502"
+    },
+    {
+        "item": "Q494029",
+        "itemLabel": "Hareid",
+        "municipNumber": "1517"
+    },
+    {
+        "item": "Q308260",
+        "itemLabel": "Ørskog",
+        "municipNumber": "1523"
+    },
+    {
+        "item": "Q484111",
+        "itemLabel": "Averøy",
+        "municipNumber": "1554"
+    },
+    {
+        "item": "Q488388",
+        "itemLabel": "Hemne",
+        "municipNumber": "1612"
+    },
+    {
+        "item": "Q48568",
+        "itemLabel": "Snillfjord",
+        "municipNumber": "1613"
+    },
+    {
+        "item": "Q108999",
+        "itemLabel": "Røros",
+        "municipNumber": "1640"
+    },
+    {
+        "item": "Q484084",
+        "itemLabel": "Holtålen",
+        "municipNumber": "1644"
+    },
+    {
+        "item": "Q503591",
+        "itemLabel": "Leka",
+        "municipNumber": "1755"
+    },
+    {
+        "item": "Q59101",
+        "itemLabel": "Narvik",
+        "municipNumber": "1805"
+    },
+    {
+        "item": "Q1215658",
+        "itemLabel": "Narvik municipality",
+        "municipNumber": "1805"
+    },
+    {
+        "item": "Q48801",
+        "itemLabel": "Tjeldsund",
+        "municipNumber": "1852"
+    },
+    {
+        "item": "Q113729",
+        "itemLabel": "Gamvik",
+        "municipNumber": "2023"
+    },
+    {
+        "item": "Q57084",
+        "itemLabel": "Gjerdrum",
+        "municipNumber": "0234"
+    },
+    {
+        "item": "Q493301",
+        "itemLabel": "Gol",
+        "municipNumber": "0617"
+    },
+    {
+        "item": "Q183029",
+        "itemLabel": "Sande",
+        "municipNumber": "0713"
+    },
+    {
+        "item": "Q206469",
+        "itemLabel": "Nøtterøy",
+        "municipNumber": "0722"
+    },
+    {
+        "item": "Q109036",
+        "itemLabel": "Haugesund",
+        "municipNumber": "1106"
+    },
+    {
+        "item": "Q48276",
+        "itemLabel": "Flatanger",
+        "municipNumber": "1749"
+    },
+    {
+        "item": "Q488979",
+        "itemLabel": "Nærøy",
+        "municipNumber": "1751"
+    },
+    {
+        "item": "Q484012",
+        "itemLabel": "Bø",
+        "municipNumber": "1867"
+    },
+    {
+        "item": "Q308420",
+        "itemLabel": "Østre Toten",
+        "municipNumber": "0528"
+    },
+    {
+        "item": "Q88810",
+        "itemLabel": "Froland",
+        "municipNumber": "0919"
+    },
+    {
+        "item": "Q113682",
+        "itemLabel": "Lindås",
+        "municipNumber": "1263"
+    },
+    {
+        "item": "Q494037",
+        "itemLabel": "Hyllestad",
+        "municipNumber": "1413"
+    },
+    {
+        "item": "Q5223",
+        "itemLabel": "Stryn",
+        "municipNumber": "1449"
+    },
+    {
+        "item": "Q500186",
+        "itemLabel": "Skaun",
+        "municipNumber": "1657"
+    },
+    {
+        "item": "Q48848",
+        "itemLabel": "Loppa",
+        "municipNumber": "2014"
+    },
+    {
+        "item": "Q486696",
+        "itemLabel": "Rygge",
+        "municipNumber": "0136"
+    },
+    {
+        "item": "Q484106",
+        "itemLabel": "Klæbu",
+        "municipNumber": "1662"
+    },
+    {
+        "item": "Q48323",
+        "itemLabel": "Meløy",
+        "municipNumber": "1837"
+    },
+    {
+        "item": "Q109021",
+        "itemLabel": "Moss",
+        "municipNumber": "0104"
+    },
+    {
+        "item": "Q486741",
+        "itemLabel": "Nordre Land",
+        "municipNumber": "0538"
+    },
+    {
+        "item": "Q493762",
+        "itemLabel": "Herøy",
+        "municipNumber": "1515"
+    },
+    {
+        "item": "Q486717",
+        "itemLabel": "Balsfjord",
+        "municipNumber": "1933"
+    },
+    {
+        "item": "Q113662",
+        "itemLabel": "Nesseby",
+        "municipNumber": "2027"
+    },
+    {
+        "item": "Q156420",
+        "itemLabel": "Skiptvet",
+        "municipNumber": "0127"
+    },
+    {
+        "item": "Q2308",
+        "itemLabel": "Siljan",
+        "municipNumber": "0811"
+    },
+    {
+        "item": "Q494053",
+        "itemLabel": "Tydal",
+        "municipNumber": "1665"
+    },
+    {
+        "item": "Q503912",
+        "itemLabel": "Berg",
+        "municipNumber": "1929"
+    },
+    {
+        "item": "Q113491",
+        "itemLabel": "Fitjar",
+        "municipNumber": "1222"
+    },
+    {
+        "item": "Q48299",
+        "itemLabel": "Masfjorden",
+        "municipNumber": "1266"
+    },
+    {
+        "item": "Q109025",
+        "itemLabel": "Hitra",
+        "municipNumber": "1617"
+    },
+    {
+        "item": "Q500227",
+        "itemLabel": "Vennesla",
+        "municipNumber": "1014"
+    },
+    {
+        "item": "Q483877",
+        "itemLabel": "Eigersund",
+        "municipNumber": "1101"
+    },
+    {
+        "item": "Q48813",
+        "itemLabel": "Båtsfjord",
+        "municipNumber": "2028"
+    },
+    {
+        "item": "Q48529",
+        "itemLabel": "Trysil",
+        "municipNumber": "0428"
+    },
+    {
+        "item": "Q488234",
+        "itemLabel": "Samnanger",
+        "municipNumber": "1242"
+    },
+    {
+        "item": "Q494011",
+        "itemLabel": "Norddal",
+        "municipNumber": "1524"
+    },
+    {
+        "item": "Q489362",
+        "itemLabel": "Bindal",
+        "municipNumber": "1811"
+    },
+    {
+        "item": "Q48615",
+        "itemLabel": "Sør-Odal",
+        "municipNumber": "0419"
+    },
+    {
+        "item": "Q499575",
+        "itemLabel": "Haram",
+        "municipNumber": "1534"
+    },
+    {
+        "item": "Q493811",
+        "itemLabel": "Flora",
+        "municipNumber": "1401"
+    },
+    {
+        "item": "Q499455",
+        "itemLabel": "Bremanger",
+        "municipNumber": "1438"
+    },
+    {
+        "item": "Q484043",
+        "itemLabel": "Hadsel",
+        "municipNumber": "1866"
+    },
+    {
+        "item": "Q483969",
+        "itemLabel": "Rakkestad",
+        "municipNumber": "0128"
+    },
+    {
+        "item": "Q108031",
+        "itemLabel": "Gjøvik",
+        "municipNumber": "0502"
+    },
+    {
+        "item": "Q488054",
+        "itemLabel": "Sør-Fron",
+        "municipNumber": "0519"
+    },
+    {
+        "item": "Q483871",
+        "itemLabel": "Holmestrand",
+        "municipNumber": "0702"
+    },
+    {
+        "item": "Q88806",
+        "itemLabel": "Bykle",
+        "municipNumber": "0941"
+    },
+    {
+        "item": "Q492244",
+        "itemLabel": "Midtre Gauldal",
+        "municipNumber": "1648"
+    },
+    {
+        "item": "Q48657",
+        "itemLabel": "Storfjord",
+        "municipNumber": "1939"
+    },
+    {
+        "item": "Q329894",
+        "itemLabel": "Øystre Slidre",
+        "municipNumber": "0544"
+    },
+    {
+        "item": "Q499450",
+        "itemLabel": "Bø",
+        "municipNumber": "0821"
+    },
+    {
+        "item": "Q485297",
+        "itemLabel": "Sauda",
+        "municipNumber": "1135"
+    },
+    {
+        "item": "Q128762",
+        "itemLabel": "Skjervøy",
+        "municipNumber": "1941"
+    },
+    {
+        "item": "Q57080",
+        "itemLabel": "Eidsvoll",
+        "municipNumber": "0237"
+    },
+    {
+        "item": "Q48913",
+        "itemLabel": "Eidskog",
+        "municipNumber": "0420"
+    },
+    {
+        "item": "Q488445",
+        "itemLabel": "Volda",
+        "municipNumber": "1519"
+    },
+    {
+        "item": "Q104400",
+        "itemLabel": "Hamar",
+        "municipNumber": "0403"
+    },
+    {
+        "item": "Q48341",
+        "itemLabel": "Lurøy",
+        "municipNumber": "1834"
+    },
+    {
+        "item": "Q483964",
+        "itemLabel": "Tana",
+        "municipNumber": "2025"
+    },
+    {
+        "item": "Q107135",
+        "itemLabel": "Fredrikstad",
+        "municipNumber": "0106"
+    },
+    {
+        "item": "Q113438",
+        "itemLabel": "Vågå",
+        "municipNumber": "0515"
+    },
+    {
+        "item": "Q90600",
+        "itemLabel": "Vegårshei",
+        "municipNumber": "0912"
+    },
+    {
+        "item": "Q503654",
+        "itemLabel": "Vefsn",
+        "municipNumber": "1824"
+    },
+    {
+        "item": "Q494018",
+        "itemLabel": "Lyngen",
+        "municipNumber": "1938"
+    },
+    {
+        "item": "Q26525",
+        "itemLabel": "Drammen",
+        "municipNumber": "0602"
+    },
+    {
+        "item": "Q488401",
+        "itemLabel": "Nord-Fron",
+        "municipNumber": "0516"
+    },
+    {
+        "item": "Q488607",
+        "itemLabel": "Lier",
+        "municipNumber": "0626"
+    },
+    {
+        "item": "Q486687",
+        "itemLabel": "Andebu",
+        "municipNumber": "0719"
+    },
+    {
+        "item": "Q488395",
+        "itemLabel": "Lom",
+        "municipNumber": "0514"
+    },
+    {
+        "item": "Q486677",
+        "itemLabel": "Dovre",
+        "municipNumber": "0511"
+    },
+    {
+        "item": "Q109499",
+        "itemLabel": "Kongsvinger",
+        "municipNumber": "0402"
+    },
+    {
+        "item": "Q499786",
+        "itemLabel": "Hof",
+        "municipNumber": "0714"
+    },
+    {
+        "item": "Q2375",
+        "itemLabel": "Nome",
+        "municipNumber": "0819"
+    },
+    {
+        "item": "Q2367",
+        "itemLabel": "Drangedal",
+        "municipNumber": "0817"
+    },
+    {
+        "item": "Q2381",
+        "itemLabel": "Sauherad",
+        "municipNumber": "0822"
+    },
+    {
+        "item": "Q57919",
+        "itemLabel": "Arendal",
+        "municipNumber": "0906"
+    },
+    {
+        "item": "Q108025",
+        "itemLabel": "Sarpsborg",
+        "municipNumber": "0105"
+    },
+    {
+        "item": "Q484218",
+        "itemLabel": "Nord-Odal",
+        "municipNumber": "0418"
+    },
+    {
+        "item": "Q57081",
+        "itemLabel": "Enebakk",
+        "municipNumber": "0229"
+    },
+    {
+        "item": "Q48526",
+        "itemLabel": "Stor-Elvdal",
+        "municipNumber": "0430"
+    }
+]
