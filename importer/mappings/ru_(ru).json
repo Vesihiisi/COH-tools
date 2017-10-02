@@ -1,0 +1,21 @@
+{
+    "country": {
+        "item": "Q159",
+        "name": "Russia"
+    },
+    "country_code": "ru",
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "Q8346700",
+        "name": "cultural heritage site in Russia"
+    },
+    "language": "ru",
+    "table_name": "ru",
+    "unique": {
+        "comment": "kulturnoe-nasledie.ru ID",
+        "property": "P1483"
+    }
+}
