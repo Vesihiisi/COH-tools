@@ -33,7 +33,13 @@ class IrFa(Monument):
     def set_heritage(self):
         """Set the heritage status, using mapping file."""
         if self.has_non_empty_attribute("registration_date"):
-            iso_date = JalaliCalendar(self.registration_date).get_date()
+            try:
+                iso_date = JalaliCalendar(self.registration_date).get_date()
+            except TypeError:
+                print("dateparser.JalaliCalendar could not handle: {}".format(
+                    self.registration_date))
+                return
+
             if iso_date:
                 date_dict = utils.datetime_to_dict(
                     iso_date.get('date_obj'), "%Y%m%d")
