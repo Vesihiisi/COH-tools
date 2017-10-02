@@ -293,5 +293,5 @@ class Uploader(object):
         if log is not None:
             self.log = log
         self.data = monument_object.wd_item
-        self.wdstuff = WDS(self.repo, edit_summary=self.summary)
+        self.wdstuff = WDS(self.repo, edit_summary=self.summary, no_wdss=True)
         self.set_wd_item()
