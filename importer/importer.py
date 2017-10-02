@@ -10,6 +10,7 @@ import importer_utils as utils
 DEFAULT_SHORT = 10
 MAPPING_DIR = "mappings"
 REPORTING_DIR = "reports"
+PREVIEW_DIR = "previews"
 MONUMENTS_ALL = "monuments_all"
 
 
@@ -104,12 +105,19 @@ def get_subclasses(q_item):
     return results
 
 
-def save_reports(problem_reports, tablename, timestamp):
-    """Save the problem reports of the batch to a file."""
+def make_filenames(tablename, timestamp):
+    """Construct the problem and preview filenames."""
+    filenames = {}
     utils.create_dir(REPORTING_DIR)
-    filename = path.join(
-        REPORTING_DIR, "report_{}_{}.json".format(tablename, timestamp))
-    utils.json_to_file(filename, problem_reports)
+    filenames['reports'] = path.join(
+        REPORTING_DIR, "report_{0}_{1}.json".format(tablename, timestamp))
+
+    utils.create_dir(PREVIEW_DIR)
+    filenames['examples'] = path.join(
+        PREVIEW_DIR, "examples_{0}_{1}.wiki".format(tablename, timestamp))
+    filenames['matches'] = path.join(
+        PREVIEW_DIR, "matches_{0}_{1}.wiki".format(tablename, timestamp))
+    return filenames
 
 
 def load_data_files(dataset):
@@ -161,7 +169,8 @@ def get_items(connection,
     :param list_matches: Whether to save a list of matched items and their
         P31 values for copy/pasting to Wikidata.
     """
-    started_at = utils.get_current_timestamp()
+    filenames = make_filenames(
+        dataset.table_name, utils.get_current_timestamp())
     if upload:
         logger = Logger()
     if not utils.table_exists(connection, dataset.table_name):
@@ -180,25 +189,25 @@ def get_items(connection,
     if short:
         database_rows = utils.get_random_list_sample(database_rows, short)
         print("USING RANDOM SAMPLE OF " + str(short))
-    table_filename = "{0} {1}".format(
-        dataset.table_name, utils.get_current_timestamp())
+
     matched_item_rows = []
     problem_reports = []
+
     wikidata_site = utils.create_site_instance("wikidata", "wikidata")
     data_files = load_data(dataset)
     counter = 0
     for row in database_rows:
-        counter += 1
         if counter % 100 == 0:
-            print(".", end="")
+            print(".", end="", flush=True)
+        counter += 1
         monument = dataset.monument_class(
             row, mapping, data_files, existing, wikidata_site)
         problem_report = monument.get_report()
         if table:
             raw_data = "<pre>" + str(row) + "</pre>\n"
             monument_table = monument.print_wd_to_table()
-            utils.append_line_to_file(raw_data, table_filename)
-            utils.append_line_to_file(monument_table, table_filename)
+            utils.append_line_to_file(raw_data, filenames['examples'])
+            utils.append_line_to_file(monument_table, filenames['examples'])
         if upload:
             live = True if upload == "live" else False
             uploader = Uploader(
@@ -223,18 +232,20 @@ def get_items(connection,
                 matched_item_rows.append(match_info)
         if problem_report:  # dictionary is not empty
             problem_reports.append(problem_report)
-            save_reports(problem_reports, dataset.table_name, started_at)
+            utils.json_to_file(
+                filenames['reports'], problem_reports, silent=True)
+
+    if problem_reports:
+        print("SAVED PROBLEM REPORTS TO {}".format(filenames['reports']))
     if table:
-        print("SAVED TEST RESULTS TO " + table_filename)
+        print("SAVED TEST RESULTS TO {}".format(filenames['examples']))
     if list_matches:
-        matches_filename = "{0} - matches - {1}".format(
-            dataset.table_name, utils.get_current_timestamp())
         matched_items_output = (
             '{| class="wikitable sortable"\n'
             "! wlm-id !! matched item !! matched item {{P|P31}}\n")
         matched_items_output += "\n".join(matched_item_rows)
         matched_items_output += "\n|}"
-        utils.save_to_file(matches_filename, matched_items_output)
+        utils.save_to_file(filenames['matches'], matched_items_output)
 
 
 def main(arguments, dataset=None):

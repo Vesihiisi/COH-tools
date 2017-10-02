@@ -26,13 +26,14 @@ def save_to_file(filename, content):
         print("SAVED FILE " + filename)
 
 
-def json_to_file(filename, json_content):
+def json_to_file(filename, json_content, silent=False):
     with open(filename, 'w') as f:
         json.dump(json_content, f, sort_keys=True,
                   indent=4,
                   ensure_ascii=False,
                   default=datetime_convert)
-        print("SAVED FILE " + filename)
+        if not silent:
+            print("SAVED FILE " + filename)
 
 
 def create_dir(out_path):
