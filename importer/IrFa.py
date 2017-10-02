@@ -38,7 +38,7 @@ class IrFa(Monument):
             except TypeError:
                 print("dateparser.JalaliCalendar could not handle: {}".format(
                     self.registration_date))
-                return
+                iso_date = None
 
             if iso_date:
                 date_dict = utils.datetime_to_dict(
@@ -46,6 +46,9 @@ class IrFa(Monument):
                 qualifier = {"start_time": utils.package_time(date_dict)}
                 heritage = self.mapping["heritage"]["item"]
                 self.add_statement("heritage_status", heritage, qualifier)
+            else:
+                self.add_to_report(
+                    "registration_date", self.registration_date, "start_time")
         else:
             super().set_heritage()
 
