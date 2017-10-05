@@ -190,7 +190,7 @@ def get_items(connection,
         database_rows = utils.get_random_list_sample(database_rows, short)
         print("USING RANDOM SAMPLE OF " + str(short))
 
-    matched_item_rows = []
+    matched_item_p31s = {}
     problem_reports = []
 
     wikidata_site = utils.create_site_instance("wikidata", "wikidata")
@@ -227,9 +227,13 @@ def get_items(connection,
             uploader.upload()
             print("--------------------------------------------------")
         if list_matches:
-            match_info = monument.print_matched_item_info_row()
+            match_info = monument.get_matched_item_p31s()
             if match_info:
-                matched_item_rows.append(match_info)
+                for p31 in match_info[0]:
+                    if p31 not in matched_item_p31s:
+                        matched_item_p31s[p31] = []
+                    matched_item_p31s[p31].append(
+                        (match_info[1], match_info[2]))
         if problem_report:  # dictionary is not empty
             problem_reports.append(problem_report)
             utils.json_to_file(
@@ -242,10 +246,25 @@ def get_items(connection,
     if list_matches:
         matched_items_output = (
             '{| class="wikitable sortable"\n'
-            "! wlm-id !! matched item !! matched item {{P|P31}}\n")
-        matched_items_output += "\n".join(matched_item_rows)
+            "! matched item {{P|P31}} !! wlm-id(s) \n")
+        matched_items_output += "\n".join(
+            format_matched_p31s_rows(matched_item_p31s))
         matched_items_output += "\n|}"
         utils.save_to_file(filenames['matches'], matched_items_output)
+
+
+def format_matched_p31s_rows(matched_item_p31s):
+    row = "|-\n| {p31} || {hits} "
+    rows = []
+    for p31, hits in matched_item_p31s.items():
+        hits = ["[{wlm_url} {id}]".format(wlm_url=url, id=id) for url, id in hits]
+        if len(hits) > 10:
+            hits_text = "{hits} and {num} more entries".format(
+                hits=", ".join(hits[:10]), num=len(hits[10:]))
+        else:
+            hits_text = "{hits} and {last_hit}".format(
+                hits=", ".join(hits[:-1]), last_hit=hits[-1])
+        rows.append(row.format(p31="{{Q'|%s}}" % p31, hits=hits_text))
 
 
 def main(arguments, dataset=None):
