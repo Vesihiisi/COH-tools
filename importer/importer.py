@@ -265,6 +265,7 @@ def format_matched_p31s_rows(matched_item_p31s):
             hits_text = "{hits} and {last_hit}".format(
                 hits=", ".join(hits[:-1]), last_hit=hits[-1])
         rows.append(row.format(p31="{{Q'|%s}}" % p31, hits=hits_text))
+    return rows
 
 
 def main(arguments, dataset=None):
