@@ -197,7 +197,8 @@ def get_items(connection,
     data_files = load_data(dataset)
     counter = 0
     for row in database_rows:
-        if counter % 100 == 0:
+        if not upload and counter % 100 == 0:
+            # visual feedback needed for preview runs
             print(".", end="", flush=True)
         counter += 1
         monument = dataset.monument_class(
@@ -239,6 +240,8 @@ def get_items(connection,
             utils.json_to_file(
                 filenames['reports'], problem_reports, silent=True)
 
+    if not upload:
+        print("\n")  # linebreak needed in case of visual feedback dots
     if problem_reports:
         print("SAVED PROBLEM REPORTS TO {}".format(filenames['reports']))
     if table:
@@ -257,7 +260,8 @@ def format_matched_p31s_rows(matched_item_p31s):
     row = "|-\n| {p31} || {hits} "
     rows = []
     for p31, hits in matched_item_p31s.items():
-        hits = ["[{wlm_url} {id}]".format(wlm_url=url, id=id) for url, id in hits]
+        hits = ["[{wlm_url} {id}]".format(wlm_url=url, id=id)
+                for url, id in hits]
         if len(hits) > 10:
             hits_text = "{hits} and {num} more entries".format(
                 hits=", ".join(hits[:10]), num=len(hits[10:]))
