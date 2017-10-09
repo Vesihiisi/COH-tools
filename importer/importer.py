@@ -249,7 +249,7 @@ def get_items(connection,
     if list_matches:
         matched_items_output = (
             '{| class="wikitable sortable"\n'
-            "! matched item {{P|P31}} !! wlm-id(s) \n")
+            "! matched item {{P|P31}} !! frequency !! wlm-id(s) [max 10] \n")
         matched_items_output += "\n".join(
             format_matched_p31s_rows(matched_item_p31s))
         matched_items_output += "\n|}"
@@ -257,18 +257,16 @@ def get_items(connection,
 
 
 def format_matched_p31s_rows(matched_item_p31s):
-    row = "|-\n| {p31} || {hits} "
+    row = "|-\n| {p31} || {freq} || {hits} "
     rows = []
     for p31, hits in matched_item_p31s.items():
         hits = ["[{wlm_url} {id}]".format(wlm_url=url, id=id)
                 for url, id in hits]
+        hits_text = ", ".join(hits[:10])
         if len(hits) > 10:
-            hits_text = "{hits} and {num} more entries".format(
-                hits=", ".join(hits[:10]), num=len(hits[10:]))
-        else:
-            hits_text = "{hits} and {last_hit}".format(
-                hits=", ".join(hits[:-1]), last_hit=hits[-1])
-        rows.append(row.format(p31="{{Q'|%s}}" % p31, hits=hits_text))
+            hits_text += ", ..."
+        rows.append(row.format(
+            p31="{{Q'|%s}}" % p31, freq=len(hits), hits=hits_text))
     return rows
 
 
