@@ -27,7 +27,7 @@ def save_to_file(filename, content):
 
 
 def json_to_file(filename, json_content, silent=False):
-    with open(filename, 'w') as f:
+    with open(filename, 'w', encoding="utf-8") as f:
         json.dump(json_content, f, sort_keys=True,
                   indent=4,
                   ensure_ascii=False,
@@ -74,7 +74,7 @@ def table_exists(connection, tablename):
 
 def load_json(filename):
     try:
-        with open(filename) as f:
+        with open(filename, encoding="utf-8") as f:
             try:
                 return json.load(f)
             except ValueError:
