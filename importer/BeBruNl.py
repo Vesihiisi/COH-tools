@@ -45,7 +45,8 @@ class BeBruNl(Monument):
     def set_address(self):
         street_with_no = utils.remove_markup(self.adres.title()).rstrip(',')
         whole_address = "{}, {}".format(street_with_no, self.plaats)
-        self.add_statement("located_street", whole_address)
+        qualifier = {"language of name": "Q7411"}
+        self.add_statement("located_street", whole_address, qualifier)
 
     def set_special_is(self):
         objtype = self.objtype.lower()
@@ -83,9 +84,6 @@ class BeBruNl(Monument):
     def update_descriptions(self):
         dutch = "{} in {}, België".format(self.objtype.lower(), self.plaats)
         self.add_description("nl", dutch)
-
-        english = "heritage site in {}, Belgium".format(self.plaats)
-        self.add_description("en", english)
 
     def set_building_year(self):
         if self.has_non_empty_attribute("bouwjaar"):
