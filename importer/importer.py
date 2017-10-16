@@ -190,14 +190,15 @@ def get_items(connection,
         database_rows = utils.get_random_list_sample(database_rows, short)
         print("USING RANDOM SAMPLE OF " + str(short))
 
-    matched_item_rows = []
+    matched_item_p31s = {}
     problem_reports = []
 
     wikidata_site = utils.create_site_instance("wikidata", "wikidata")
     data_files = load_data(dataset)
     counter = 0
     for row in database_rows:
-        if counter % 100 == 0:
+        if not upload and counter % 100 == 0:
+            # visual feedback needed for preview runs
             print(".", end="", flush=True)
         counter += 1
         monument = dataset.monument_class(
@@ -227,14 +228,20 @@ def get_items(connection,
             uploader.upload()
             print("--------------------------------------------------")
         if list_matches:
-            match_info = monument.print_matched_item_info_row()
+            match_info = monument.get_matched_item_p31s()
             if match_info:
-                matched_item_rows.append(match_info)
+                for p31 in match_info[0]:
+                    if p31 not in matched_item_p31s:
+                        matched_item_p31s[p31] = []
+                    matched_item_p31s[p31].append(
+                        (match_info[1], match_info[2]))
         if problem_report:  # dictionary is not empty
             problem_reports.append(problem_report)
             utils.json_to_file(
                 filenames['reports'], problem_reports, silent=True)
 
+    if not upload:
+        print("\n")  # linebreak needed in case of visual feedback dots
     if problem_reports:
         print("SAVED PROBLEM REPORTS TO {}".format(filenames['reports']))
     if table:
@@ -242,10 +249,25 @@ def get_items(connection,
     if list_matches:
         matched_items_output = (
             '{| class="wikitable sortable"\n'
-            "! wlm-id !! matched item !! matched item {{P|P31}}\n")
-        matched_items_output += "\n".join(matched_item_rows)
+            "! matched item {{P|P31}} !! frequency !! wlm-id(s) [max 10] \n")
+        matched_items_output += "\n".join(
+            format_matched_p31s_rows(matched_item_p31s))
         matched_items_output += "\n|}"
         utils.save_to_file(filenames['matches'], matched_items_output)
+
+
+def format_matched_p31s_rows(matched_item_p31s):
+    row = "|-\n| {p31} || {freq} || {hits} "
+    rows = []
+    for p31, hits in matched_item_p31s.items():
+        hits = ["[{wlm_url} {id}]".format(wlm_url=url, id=id)
+                for url, id in hits]
+        hits_text = ", ".join(hits[:10])
+        if len(hits) > 10:
+            hits_text += ", ..."
+        rows.append(row.format(
+            p31="{{Q'|%s}}" % p31, freq=len(hits), hits=hits_text))
+    return rows
 
 
 def main(arguments, dataset=None):
