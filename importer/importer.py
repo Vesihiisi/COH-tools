@@ -382,7 +382,7 @@ def get_db_credentials():
     """Get credentials to access the SQL db on Tolllabs."""
     credentials = {}
     credentials_path = path.expanduser("~") + "/replica.my.cnf"
-    with open(credentials_path) as f:
+    with open(credentials_path, encoding="utf-8") as f:
         lines = f.readlines()
     for line in lines:
         if line.startswith("user"):

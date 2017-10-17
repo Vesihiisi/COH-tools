@@ -21,7 +21,7 @@ def remove_empty_dicts_from_list(list_of_dicts):
 
 
 def save_to_file(filename, content):
-    with open(filename, 'w') as f:
+    with open(filename, 'w', encoding="utf-8") as f:
         f.write(content)
         print("SAVED FILE " + filename)
 
@@ -572,12 +572,12 @@ def dict_to_iso_date(date_dict):
 
 
 def append_line_to_file(text, filename):
-    with open(filename, 'a') as f:
+    with open(filename, 'a', encoding="utf-8") as f:
         f.write(text + "\n")
 
 
 def dump_list_to_file(some_list, filename):
-    f = open(filename, 'w')
+    f = open(filename, 'w', encoding="utf-8")
     for item in some_list:
         f.write(item + "\n")
 
