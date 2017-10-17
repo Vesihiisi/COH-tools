@@ -15,7 +15,9 @@ class BeBruNl(Monument):
                 search_term=location,
                 search_in="itemLabel")
             if len(location_match) == 1:
-                self.add_statement("located_adm", location_match)
+                self.add_statement("located_adm", location_match[0])
+            else:
+                self.add_to_report("plaats", self.plaats)
         else:
             self.add_statement("located_adm", brussel_region)
 
