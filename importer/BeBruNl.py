@@ -17,7 +17,7 @@ class BeBruNl(Monument):
             if len(location_match) == 1:
                 self.add_statement("located_adm", location_match[0])
             else:
-                self.add_to_report("plaats", self.plaats)
+                self.add_to_report("plaats", self.plaats, "located_adm")
         else:
             self.add_statement("located_adm", brussel_region)
 
@@ -39,7 +39,8 @@ class BeBruNl(Monument):
                 heritage = self.mapping["heritage"]["item"]
                 self.add_statement("heritage_status", heritage, qualifier)
             except ValueError:
-                self.add_to_report("beschermd", self.beschermd)
+                self.add_to_report(
+                    "beschermd", self.beschermd, "heritage_status")
                 return super().set_heritage()
         else:
             return super().set_heritage()
