@@ -61,13 +61,13 @@ def shortenTablename(tablename):
 
 
 def saveToFile(filename, content):
-    with open(filename, "w") as out:
+    with open(filename, "w", encoding="utf-8") as out:
         out.write(content)
         print("Saved file: {}".format(filename))
 
 
 def saveToJson(filename, content):
-    with open(filename, 'w') as fp:
+    with open(filename, 'w', encoding="utf-8") as fp:
         json.dump(content, fp, indent=4, ensure_ascii=False)
         print("Saved file: {}".format(filename))
 
@@ -78,7 +78,7 @@ def getLanguage(tablename):
 
 def load_json(filename):
     try:
-        with open(filename) as f:
+        with open(filename, encoding="utf-8") as f:
             try:
                 return json.load(f)
             except ValueError:

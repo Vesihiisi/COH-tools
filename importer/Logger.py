@@ -8,7 +8,7 @@ class Logger(object):
         return datetime.date.today().strftime("%Y-%m-%d" + ".log")
 
     def save_line_to_file(self, filename, text):
-        with open(filename, 'a') as f:
+        with open(filename, 'a', encoding="utf-8") as f:
             f.write(text + "\n")
 
     def get_current_timestamp(self):
@@ -30,4 +30,4 @@ class Logger(object):
             makedirs(directory_path)
         filename = self.create_filename()
         if not path.exists(self.file_path):
-            open(self.file_path, 'w').close()
+            open(self.file_path, 'w', encoding="utf-8").close()

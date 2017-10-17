@@ -24,12 +24,12 @@ def tableHeadersToWikitable(headersWithContentTuple):
 
 
 def addToFile(filename, content):
-    with open(filename, "a") as out:
+    with open(filename, "a", encoding="utf-8") as out:
         out.write(content + "\n")
 
 
 def fileToString(filename):
-    return open(filename, 'r').read()
+    return open(filename, 'r', encoding="utf-8").read()
 
 
 def addTablenameToList(tablename, filename):
@@ -62,7 +62,7 @@ def insertWikitableIntoTemplate(tabletitle, wikitable, templateFile):
 
 
 def createTables(connection):
-    open(TABLE_NAMES, 'w').close()
+    open(TABLE_NAMES, 'w', encoding="utf-8").close()
     countryTables = wlmhelpers.getNonEmptyCountryTables(connection)
     for tablename in countryTables:
         tablename = tablename[0]
