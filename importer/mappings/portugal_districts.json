@@ -1,0 +1,92 @@
+[
+    {
+        "iso": "PT-10",
+        "item": "Q244512",
+        "itemLabel": "Distrito de Leiria"
+    },
+    {
+        "iso": "PT-18",
+        "item": "Q273525",
+        "itemLabel": "Viseu"
+    },
+    {
+        "iso": "PT-01",
+        "item": "Q210527",
+        "itemLabel": "Aveiro"
+    },
+    {
+        "iso": "PT-13",
+        "item": "Q322792",
+        "itemLabel": "Porto"
+    },
+    {
+        "iso": "PT-04",
+        "item": "Q373528",
+        "itemLabel": "Bragança"
+    },
+    {
+        "iso": "PT-17",
+        "item": "Q379372",
+        "itemLabel": "Vila Real"
+    },
+    {
+        "iso": "PT-14",
+        "item": "Q244510",
+        "itemLabel": "Distrito de Santarém"
+    },
+    {
+        "iso": "PT-06",
+        "item": "Q244517",
+        "itemLabel": "Distrito de Coimbra"
+    },
+    {
+        "iso": "PT-15",
+        "item": "Q274109",
+        "itemLabel": "Distrito de Setúbal"
+    },
+    {
+        "iso": "PT-12",
+        "item": "Q225189",
+        "itemLabel": "Distrito de Portalegre"
+    },
+    {
+        "iso": "PT-08",
+        "item": "Q244521",
+        "itemLabel": "Distrito de Faro"
+    },
+    {
+        "iso": "PT-09",
+        "item": "Q273533",
+        "itemLabel": "Distrito da Guarda"
+    },
+    {
+        "iso": "PT-03",
+        "item": "Q326203",
+        "itemLabel": "Distrito de Braga"
+    },
+    {
+        "iso": "PT-11",
+        "item": "Q207199",
+        "itemLabel": "Distrito de Lisboa"
+    },
+    {
+        "iso": "PT-07",
+        "item": "Q274118",
+        "itemLabel": "Distrito de Évora"
+    },
+    {
+        "iso": "PT-05",
+        "item": "Q273529",
+        "itemLabel": "Distrito de Castelo Branco"
+    },
+    {
+        "iso": "PT-02",
+        "item": "Q321455",
+        "itemLabel": "Distrito de Beja"
+    },
+    {
+        "iso": "PT-16",
+        "item": "Q326214",
+        "itemLabel": "Distrito de Viana do Castelo"
+    }
+]
