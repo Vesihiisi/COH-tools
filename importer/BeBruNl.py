@@ -15,7 +15,9 @@ class BeBruNl(Monument):
                 search_term=location,
                 search_in="itemLabel")
             if len(location_match) == 1:
-                self.add_statement("located_adm", location_match)
+                self.add_statement("located_adm", location_match[0])
+            else:
+                self.add_to_report("plaats", self.plaats, "located_adm")
         else:
             self.add_statement("located_adm", brussel_region)
 
@@ -37,7 +39,8 @@ class BeBruNl(Monument):
                 heritage = self.mapping["heritage"]["item"]
                 self.add_statement("heritage_status", heritage, qualifier)
             except ValueError:
-                self.add_to_report("beschermd", self.beschermd)
+                self.add_to_report(
+                    "beschermd", self.beschermd, "heritage_status")
                 return super().set_heritage()
         else:
             return super().set_heritage()
@@ -45,7 +48,8 @@ class BeBruNl(Monument):
     def set_address(self):
         street_with_no = utils.remove_markup(self.adres.title()).rstrip(',')
         whole_address = "{}, {}".format(street_with_no, self.plaats)
-        self.add_statement("located_street", whole_address)
+        qualifier = {"language of name": "Q7411"}
+        self.add_statement("located_street", whole_address, qualifier)
 
     def set_special_is(self):
         objtype = self.objtype.lower()
@@ -83,9 +87,6 @@ class BeBruNl(Monument):
     def update_descriptions(self):
         dutch = "{} in {}, België".format(self.objtype.lower(), self.plaats)
         self.add_description("nl", dutch)
-
-        english = "heritage site in {}, Belgium".format(self.plaats)
-        self.add_description("en", english)
 
     def set_building_year(self):
         if self.has_non_empty_attribute("bouwjaar"):
