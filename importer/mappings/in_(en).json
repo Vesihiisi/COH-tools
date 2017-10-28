@@ -1,0 +1,21 @@
+{
+"country": {
+"item": "Q668",
+"name": "India"
+},
+"country_code": "in",
+"default_is": {
+"item": "Q2065736",
+"name": "cultural property"
+},
+"heritage": {
+"item": "",
+"name": ""
+},
+"language": "en",
+"table_name": "in",
+"unique": {
+"comment": "ASI monument id",
+"property": "P1371"
+}
+}
