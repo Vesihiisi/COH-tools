@@ -105,7 +105,11 @@ class Uploader(object):
         If the target item already uses the property,
         a new claim will not be added even if it's different.
         """
-        if PROPS[property_name] in wd_item.claims:
+        pid = PROPS.get(property_name)
+        if utils.string_is_p_item(property_name):
+            pid = property_name
+
+        if pid and pid in wd_item.claims:
             return True
         else:
             return False
@@ -172,6 +176,10 @@ class Uploader(object):
             for claim in claims:
                 prop = claim
                 for x in claims[claim]:
+                    if (x.get("if_empty") and
+                            self.item_has_prop(prop, wd_item)):
+                        continue
+
                     value = x['value']
                     if value != "":
                         ref = None
@@ -243,11 +251,7 @@ class Uploader(object):
             else:
                 disallowed = [x["item"] for x in P31_BLACKLIST]
                 item_q = self.data["wd-item"]
-                itemP31 = utils.get_P31(item_q, self.repo)
-                if len(set(disallowed).intersection(set(itemP31))) > 0:
-                    # this means one of this item's P31's is in the
-                    # disallowed list so we do
-                    # the same as when self.data["wd-item"] is None
+                if utils.is_blacklisted_P31(item_q, self.repo, disallowed):
                     if self.log:
                         message = "{} -- SET AS WD-ITEM BUT POSSIBLY WRONG AND THUS REMOVED".format(item_q)
                         self.log.logit(message)
@@ -289,5 +293,5 @@ class Uploader(object):
         if log is not None:
             self.log = log
         self.data = monument_object.wd_item
-        self.wdstuff = WDS(self.repo, edit_summary=self.summary)
+        self.wdstuff = WDS(self.repo, edit_summary=self.summary, no_wdss=True)
         self.set_wd_item()

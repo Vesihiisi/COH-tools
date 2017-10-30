@@ -3,6 +3,7 @@ import json
 import importer_utils as utils
 
 MAPPING_DIR = "mappings"
+P31_BLACKLIST = utils.load_json(path.join(MAPPING_DIR, "P31_blacklist.json"))
 
 
 class Monument(object):
@@ -25,6 +26,8 @@ class Monument(object):
         self.adm0 = utils.load_json(path.join(MAPPING_DIR, "adm0.json"))
         self.sources = utils.load_json(
             path.join(MAPPING_DIR, "data_sources.json"))
+        self.common_items = utils.load_json(
+            path.join(MAPPING_DIR, "common_items.json"))
         for k, v in db_row_dict.items():
             if not k.startswith("m_spec."):
                 setattr(self, k.replace("-", "_"), v)
@@ -45,17 +48,15 @@ class Monument(object):
                        default=utils.datetime_convert)
         )
 
-    def print_matched_item_info_row(self):
-        """Generate a wikitext preview row for any matched item."""
+    def get_matched_item_p31s(self):
+        """Return the p31 value(s) for any matched item."""
         if not self.wd_item["wd-item"]:
             return None
         qid = self.wd_item["wd-item"]
-        qid_template = utils.wd_template("Q", qid)
-        data_template = "{{{{Data|item={qid}|property=p31}}}}".format(qid=qid)
-        row = "* [{wlm_url} {id}] > {qid}: {data}".format(
-            wlm_url=self.wlm_url, id=self.monuments_all_id,
-            qid=qid_template, data=data_template)
-        return row
+        p31s = utils.get_P31(qid, self.repo)
+        if not p31s:
+            p31s = ['no value', ]
+        return (p31s, self.wlm_url, self.monuments_all_id)
 
     def print_wd_to_table(self):
         """Generate a wikitext preview table of the data item."""
@@ -129,7 +130,8 @@ class Monument(object):
         table = table + "----------\n"
         return table
 
-    def add_statement(self, prop_name, value, quals=None, refs=None):
+    def add_statement(self, prop_name, value, quals=None, refs=None,
+                      if_empty=False):
         """
         Add a statement to the data object.
 
@@ -154,6 +156,8 @@ class Monument(object):
         :param refs: a list of references or a single reference.
             Set None/True for the default reference,
             set False to not add a reference.
+        :param if_empty: If statement should only be added if this property
+            doesn't already have a value. Defaults to False.
         """
         base = self.wd_item["statements"]
         prop = self.props[prop_name]
@@ -171,7 +175,8 @@ class Monument(object):
 
         if refs and not isinstance(refs, list):
             refs = [refs]
-        statement = {"value": value, "quals": qualifiers, "refs": refs}
+        statement = {"value": value, "quals": qualifiers, "refs": refs,
+                     "if_empty": if_empty}
         base[prop].append(statement)
 
     def remove_statement(self, prop_name):
@@ -249,9 +254,14 @@ class Monument(object):
         self.add_statement("country", country)
 
     def set_is(self):
-        """Set the P31 property using the mapping file."""
-        default_is = self.mapping["default_is"]
-        self.add_statement("is", default_is["item"])
+        """
+        Set the P31 property using the mapping file or global default.
+
+        This only gets used if there isn't already a P31 value.
+        """
+        default_is = (self.mapping.get("default_is") or
+                      self.common_items["cultural_property"])
+        self.add_statement("is", default_is["item"], if_empty=True)
 
     def set_labels(self, language, content):
         """
@@ -355,6 +365,31 @@ class Monument(object):
                 self.add_statement("located_street", processed_address)
             else:
                 self.add_to_report(address_keyword, possible_address)
+
+    def get_multi_param_monument_article(self, raw, linked, language,
+                                         blocks=None):
+        """
+        Multi-tiered approach to setting exists_with_monument_article().
+
+        Get the monument_article value in a more complex case where it can
+        either be given by a special parameter or be implicitly linked from
+        another.
+
+        Common for South American datasets.
+
+        :param raw: the parameter name containing the raw article name
+        :param linked: the parameter containing the implicitly linked article
+            name (if raw is not provided).
+        :param language: language version of wikipedia
+        :param blocks: a parameter which blocks both raw and linked. E.g.
+            because it allows multiple links to be specified. (optional)
+        """
+        if blocks and getattr(self, blocks):
+            return None
+        elif getattr(self, raw):
+            return super().exists_with_monument_article(language, raw)
+        else:
+            return super().exists_with_monument_article(language, linked)
 
     def has_non_empty_attribute(self, attr_name):
         """
@@ -514,12 +549,17 @@ class Monument(object):
         """
         item = self.exists_with_prop(mapping)
         if not item:
+            disallowed = [x["item"] for x in P31_BLACKLIST]
             item = self.exists_with_wd_item()
             if not item:
-                item = self.exists_with_monument_article(self.mapping["language"])
+                item = self.exists_with_monument_article(
+                    self.mapping["language"])
             if item and self.in_known_items(item):
                 self.upload = False
                 self.add_to_report("item_conflict", item)
+            elif utils.is_blacklisted_P31(item, self.repo, disallowed):
+                # the matched item is blacklisted remove match
+                item = None
             else:
                 self.add_to_known_items(item, mapping)
         return item

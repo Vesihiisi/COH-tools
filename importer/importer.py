@@ -10,6 +10,7 @@ import importer_utils as utils
 DEFAULT_SHORT = 10
 MAPPING_DIR = "mappings"
 REPORTING_DIR = "reports"
+PREVIEW_DIR = "previews"
 MONUMENTS_ALL = "monuments_all"
 
 
@@ -104,12 +105,19 @@ def get_subclasses(q_item):
     return results
 
 
-def save_reports(problem_reports, tablename, timestamp):
-    """Save the problem reports of the batch to a file."""
+def make_filenames(tablename, timestamp):
+    """Construct the problem and preview filenames."""
+    filenames = {}
     utils.create_dir(REPORTING_DIR)
-    filename = path.join(
-        REPORTING_DIR, "report_{}_{}.json".format(tablename, timestamp))
-    utils.json_to_file(filename, problem_reports)
+    filenames['reports'] = path.join(
+        REPORTING_DIR, "report_{0}_{1}.json".format(tablename, timestamp))
+
+    utils.create_dir(PREVIEW_DIR)
+    filenames['examples'] = path.join(
+        PREVIEW_DIR, "examples_{0}_{1}.wiki".format(tablename, timestamp))
+    filenames['matches'] = path.join(
+        PREVIEW_DIR, "matches_{0}_{1}.wiki".format(tablename, timestamp))
+    return filenames
 
 
 def load_data_files(dataset):
@@ -161,7 +169,8 @@ def get_items(connection,
     :param list_matches: Whether to save a list of matched items and their
         P31 values for copy/pasting to Wikidata.
     """
-    started_at = utils.get_current_timestamp()
+    filenames = make_filenames(
+        dataset.table_name, utils.get_current_timestamp())
     if upload:
         logger = Logger()
     if not utils.table_exists(connection, dataset.table_name):
@@ -180,22 +189,26 @@ def get_items(connection,
     if short:
         database_rows = utils.get_random_list_sample(database_rows, short)
         print("USING RANDOM SAMPLE OF " + str(short))
-    table_filename = "{0} {1}".format(
-        dataset.table_name, utils.get_current_timestamp())
-    matches_filename = "{0} - matches - {1}".format(
-        dataset.table_name, utils.get_current_timestamp())
+
+    matched_item_p31s = {}
     problem_reports = []
+
     wikidata_site = utils.create_site_instance("wikidata", "wikidata")
     data_files = load_data(dataset)
+    counter = 0
     for row in database_rows:
+        if not upload and counter % 100 == 0:
+            # visual feedback needed for preview runs
+            print(".", end="", flush=True)
+        counter += 1
         monument = dataset.monument_class(
             row, mapping, data_files, existing, wikidata_site)
         problem_report = monument.get_report()
         if table:
             raw_data = "<pre>" + str(row) + "</pre>\n"
             monument_table = monument.print_wd_to_table()
-            utils.append_line_to_file(raw_data, table_filename)
-            utils.append_line_to_file(monument_table, table_filename)
+            utils.append_line_to_file(raw_data, filenames['examples'])
+            utils.append_line_to_file(monument_table, filenames['examples'])
         if upload:
             live = True if upload == "live" else False
             uploader = Uploader(
@@ -215,16 +228,46 @@ def get_items(connection,
             uploader.upload()
             print("--------------------------------------------------")
         if list_matches:
-            match_info = monument.print_matched_item_info_row()
+            match_info = monument.get_matched_item_p31s()
             if match_info:
-                utils.append_line_to_file(match_info, matches_filename)
+                for p31 in match_info[0]:
+                    if p31 not in matched_item_p31s:
+                        matched_item_p31s[p31] = []
+                    matched_item_p31s[p31].append(
+                        (match_info[1], match_info[2]))
         if problem_report:  # dictionary is not empty
             problem_reports.append(problem_report)
-            save_reports(problem_reports, dataset.table_name, started_at)
+            utils.json_to_file(
+                filenames['reports'], problem_reports, silent=True)
+
+    if not upload:
+        print("\n")  # linebreak needed in case of visual feedback dots
+    if problem_reports:
+        print("SAVED PROBLEM REPORTS TO {}".format(filenames['reports']))
     if table:
-        print("SAVED TEST RESULTS TO " + table_filename)
+        print("SAVED TEST RESULTS TO {}".format(filenames['examples']))
     if list_matches:
-        print("SAVED MATCH PREVIEW RESULTS TO " + matches_filename)
+        matched_items_output = (
+            '{| class="wikitable sortable"\n'
+            "! matched item {{P|P31}} !! frequency !! wlm-id(s) [max 10] \n")
+        matched_items_output += "\n".join(
+            format_matched_p31s_rows(matched_item_p31s))
+        matched_items_output += "\n|}"
+        utils.save_to_file(filenames['matches'], matched_items_output)
+
+
+def format_matched_p31s_rows(matched_item_p31s):
+    row = "|-\n| {p31} || {freq} || {hits} "
+    rows = []
+    for p31, hits in matched_item_p31s.items():
+        hits = ["[{wlm_url} {id}]".format(wlm_url=url, id=id)
+                for url, id in hits]
+        hits_text = ", ".join(hits[:10])
+        if len(hits) > 10:
+            hits_text += ", ..."
+        rows.append(row.format(
+            p31="{{Q'|%s}}" % p31, freq=len(hits), hits=hits_text))
+    return rows
 
 
 def main(arguments, dataset=None):
@@ -339,7 +382,7 @@ def get_db_credentials():
     """Get credentials to access the SQL db on Tolllabs."""
     credentials = {}
     credentials_path = path.expanduser("~") + "/replica.my.cnf"
-    with open(credentials_path) as f:
+    with open(credentials_path, encoding="utf-8") as f:
         lines = f.readlines()
     for line in lines:
         if line.startswith("user"):
