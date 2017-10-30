@@ -1,6 +1,5 @@
 from wikidataStuff.WikidataStuff import WikidataStuff as WDS
 import pywikibot
-from pywikibot.data.api import APIError
 import importer_utils as utils
 from os import path
 import sys
@@ -28,7 +27,7 @@ class Uploader(object):
         disambiguated = disambiguated or []
         try:
             self.wdstuff.add_multiple_descriptions(descriptions, target_item)
-        except APIError as e:
+        except pywikibot.exceptions.OtherPageSaveError as e:
             new_desc = self.add_disambiguators_to_descriptions(
                 descriptions, e, disambiguated)
             if new_desc:
@@ -53,12 +52,12 @@ class Uploader(object):
         :return: a new description dict or None if disambiguators could not be
             added.
         """
-        if (api_error.other.get('messages')[0].get('name') !=
+        if (api_error.reason.other.get('messages')[0].get('name') !=
                 'wikibase-validator-label-with-description-conflict'):
             # this is not a disambiguator error
             return None
 
-        lang = api_error.other.get('messages')[0].get('parameters')[1]
+        lang = api_error.reason.other.get('messages')[0].get('parameters')[1]
         if lang in disambiguated:
             # this language was already disambiguated
             return None
