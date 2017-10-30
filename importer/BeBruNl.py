@@ -45,7 +45,7 @@ class BeBruNl(Monument):
         else:
             return super().set_heritage()
 
-    def set_address(self):
+    def set_address_and_disambig(self):
         street_with_no = utils.remove_markup(self.adres.title()).rstrip(',')
 
         # strip "0" as the number
@@ -54,8 +54,10 @@ class BeBruNl(Monument):
         street_with_non_zero_no = ', '.join(streets)
 
         whole_address = "{}, {}".format(street_with_non_zero_no, self.plaats)
-        qualifier = {"language of name": "Q7411"}
+        qualifier = {"language of name": "Q7411"}  # in dutch
         self.add_statement("located_street", whole_address, qualifier)
+
+        self.add_disambiguator(street_with_non_zero_no, 'nl')
 
     def set_special_is(self):
         objtype = self.objtype.lower()
@@ -124,7 +126,7 @@ class BeBruNl(Monument):
         self.set_special_is()
         self.set_coords()
         self.set_building_year()
-        self.set_address()
+        self.set_address_and_disambig()
         self.update_labels()
         self.update_descriptions()
         self.set_wd_item(self.find_matching_wikidata(mapping))
