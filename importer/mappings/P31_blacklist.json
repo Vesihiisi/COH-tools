@@ -46,5 +46,21 @@
     {
         "item": "Q15125752",
         "comment": "rural district of Iran"
+    },
+    {
+        "item": "Q333109",
+        "comment": "Überrest"
+    },
+    {
+        "item": "Q80071",
+        "comment": "symbol"
+    },
+    {
+        "item": "Q515",
+        "comment": "city"
+    },
+    {
+        "item": "Q190771",
+        "comment": "bathroom, these should probably be changed to Q28077"
     }
 ]
