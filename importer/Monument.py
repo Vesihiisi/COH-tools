@@ -64,16 +64,21 @@ class Monument(object):
         labels = self.wd_item["labels"]
         descriptions = self.wd_item["descriptions"]
         aliases = self.wd_item["aliases"]
+        disambiguators = self.wd_item["disambiguators"]
         table = table + "'''Labels'''\n\n"
-        for l in labels:
-            table = table + "* '''" + l + "''': " + labels[l] + "\n\n"
+        for k, v in labels.items():
+            table += "* '''{key}''': {val}\n\n".format(key=k, val=v)
         table = table + "'''Descriptions'''\n\n"
-        for d in descriptions:
-            table = table + "* '''" + d + "''': " + descriptions[d] + "\n\n"
+        for k, v in descriptions.items():
+            table += "* '''{key}''': {val}\n\n".format(key=k, val=v)
         table = table + "'''Aliases'''\n\n"
-        for a in aliases:
-            for single_alias in aliases[a]:
-                table = table + "* '''" + a + "''': " + single_alias + "\n\n"
+        for k, v in aliases.items():
+            for single_alias in v:
+                table += "* '''{key}''': {val}\n\n".format(
+                    key=k, val=single_alias)
+        table += "'''Disambiguators'''\n\n"
+        for k, v in disambiguators.items():
+            table += "* '''{key}''': {val}\n\n".format(key=k, val=v)
         if self.wd_item["wd-item"] is not None:
             table = table + "'''Possible item''': " + \
                 utils.wd_template("Q", self.wd_item["wd-item"]) + "\n\n"
@@ -246,6 +251,21 @@ class Monument(object):
         base = self.wd_item["descriptions"]
         base[language] = text
 
+    def add_disambiguator(self, text, language=None):
+        """
+        Add a disambiguator, optionally for a specific language.
+
+        The disambiguator is added to the description in case of there being
+        identical label/description pairs, otherwise it is not used.
+
+        :param text: content of the disambiguator
+        :param language: language, in the event the disambiguator cannot be
+            used for all languages.
+        """
+        language = language or '_default'
+        base = self.wd_item["disambiguators"]
+        base[language] = text
+
     def set_country(self):
         """Set the country using the mapping file."""
         code = self.mapping["country_code"].lower()
@@ -311,7 +331,6 @@ class Monument(object):
         :param id_keyword: the name of the column to be used
         """
         self.monuments_all_id = str(getattr(self, id_keyword))
-
 
     def set_wlm_source(self):
         """
@@ -553,6 +572,7 @@ class Monument(object):
         self.wd_item["labels"] = {}
         self.wd_item["aliases"] = {}
         self.wd_item["descriptions"] = {}
+        self.wd_item["disambiguators"] = {}
         self.wd_item["wd-item"] = None
         self.mapping = mapping.file_content
 

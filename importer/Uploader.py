@@ -21,13 +21,58 @@ class Uploader(object):
             message = "{} ADDED LABELS {}".format(t_id, labels)
             log.logit(message)
 
-    def add_descriptions(self, target_item, descriptions, log):
+    def add_descriptions(self, target_item, descriptions, log,
+                         disambiguated=None):
         """Add descriptions."""
-        self.wdstuff.add_multiple_descriptions(descriptions, target_item)
-        if log:
-            t_id = target_item.getID()
-            message = "{} ADDED DESCRIPTIONS {}".format(t_id, descriptions)
-            log.logit(message)
+        disambiguated = disambiguated or []
+        try:
+            self.wdstuff.add_multiple_descriptions(descriptions, target_item)
+        except pywikibot.exceptions.OtherPageSaveError as e:
+            new_desc = self.add_disambiguators_to_descriptions(
+                descriptions, e, disambiguated)
+            if new_desc:
+                self.add_descriptions(
+                    target_item, new_desc, log, disambiguated)
+            else:
+                raise
+        else:
+            if log:
+                t_id = target_item.getID()
+                message = "{} ADDED DESCRIPTIONS {}".format(t_id, descriptions)
+                log.logit(message)
+
+    def add_disambiguators_to_descriptions(self, descriptions, pwb_error,
+                                           disambiguated):
+        """
+        Add needed disambiguators to descriptions.
+
+        :param descriptions: pre-existing descriptions
+        :param pwb_error: the raised pywikibot.exceptions.OtherPageSaveError.
+            This error in turn contains a pywikibot.data.api.APIError as the
+            underlying reason.
+        :param disambiguated: list of previously disambiguated languages
+        :return: a new description dict or None if disambiguators could not be
+            added.
+        """
+        if (pwb_error.reason.other.get('messages')[0].get('name') !=
+                'wikibase-validator-label-with-description-conflict'):
+            # this is not a disambiguator error
+            return None
+
+        lang = pwb_error.reason.other.get('messages')[0].get('parameters')[1]
+        if lang in disambiguated:
+            # this language was already disambiguated
+            return None
+        else:
+            disambiguated.append(lang)
+
+        disambiguators = self.data["disambiguators"]
+        if lang not in disambiguators and '_default' not in disambiguators:
+            # no matching or default disambiguator found
+            return None
+        disambig_text = disambiguators.get(lang) or disambiguators['_default']
+        descriptions[lang] += ' ({0})'.format(disambig_text)
+        return descriptions
 
     def make_image_item(self, filename):
         commonssite = utils.create_site_instance("commons", "commons")
@@ -164,11 +209,13 @@ class Uploader(object):
                 ref_url_prop, ref_url)
             ref = self.wdstuff.Reference(
                 source_test=[source_claim, ref_url_claim],
-                source_notest=self.wdstuff.make_simple_claim(prop_date, date_item))
+                source_notest=self.wdstuff.make_simple_claim(
+                    prop_date, date_item))
         else:
             ref = self.wdstuff.Reference(
                 source_test=[source_claim],
-                source_notest=self.wdstuff.make_simple_claim(prop_date, date_item))
+                source_notest=self.wdstuff.make_simple_claim(
+                    prop_date, date_item))
         return ref
 
     def add_claims(self, wd_item, claims, log):
