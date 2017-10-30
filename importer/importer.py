@@ -418,7 +418,6 @@ def handle_args(*args):
         --table Save results of the processing to file as a wikitable.
         --list_matches Save a list of all matching items to a file as wikitext.
     """
-    pywikibot.handle_args(args)
     parser = argparse.ArgumentParser()
     if not on_labs():
         parser.add_argument("--host", default="localhost")
@@ -439,7 +438,9 @@ def handle_args(*args):
                         action='store',)
     parser.add_argument("--table", action='store_true')
     parser.add_argument("--list_matches", action='store_true')
-    return parser.parse_args()
+
+    # first parse args with pywikibot, send remaining args to local handler
+    return parser.parse_args(pywikibot.handle_args(args))
 
 
 if __name__ == "__main__":
