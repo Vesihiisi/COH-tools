@@ -22,5 +22,17 @@
     {
         "item": "Q146149",
         "comment": "taxon"
+    },
+    {
+        "item": "Q9174",
+        "comment": "religion"
+    },
+    {
+        "item": "Q3055118",
+        "comment": "single entity of population"
+    },
+    {
+        "item": "Q15125752",
+        "comment": "rural district of Iran"
     }
 ]
