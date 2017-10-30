@@ -44,7 +44,8 @@ class Uploader(object):
 
     def add_disambiguators_to_descriptions(self, descriptions, api_error,
                                            disambiguated):
-        """Add needed disambiguators to descriptions.
+        """
+        Add needed disambiguators to descriptions.
 
         :param descriptions: pre-existing descriptions
         :param api_error: the raised pywikibot.data.api.APIError
