@@ -427,6 +427,34 @@ class Monument(object):
         else:
             return False
 
+    def set_from_dict_match(self, lookup_dict, dict_label, value_label, prop):
+        """
+        Look up value in dict and add statement on unique match, else report.
+
+        If the value is empty then no statement is added nor is anything
+        reported.
+
+        :param lookup_dict: list of dicts to do lookup in
+        :param dict_label: value in dict to do matching on
+        :param value_label: the label of the value we wish to match
+        :prop: the label of the property for which a statement is added
+        """
+        match_q = None
+        if self.has_non_empty_attribute(value_label):
+            value = getattr(self, value_label)
+            matches = utils.get_item_from_dict_by_key(
+                dict_name=lookup_dict,
+                search_term=value,
+                search_in=dict_label)
+            if len(matches) == 1:
+                match_q = matches[0]
+
+            if match_q:
+                self.add_statement(prop, match_q)
+            else:
+                self.add_to_report(
+                    value_label, value, prop)
+
     def set_changed(self):
         """Set the 'changed' field."""
         if self.changed:

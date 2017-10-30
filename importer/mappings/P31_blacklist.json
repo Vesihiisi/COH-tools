@@ -34,5 +34,29 @@
     {
         "item": "Q43229",
         "comment": "association"
+    },
+    {
+        "item": "Q9174",
+        "comment": "religion"
+    },
+    {
+        "item": "Q3055118",
+        "comment": "single entity of population"
+    },
+    {
+        "item": "Q15125752",
+        "comment": "rural district of Iran"
+    },
+    {
+        "item": "Q333109",
+        "comment": "Überrest"
+    },
+    {
+        "item": "Q80071",
+        "comment": "symbol"
+    },
+    {
+        "item": "Q515",
+        "comment": "city"
     }
 ]

@@ -1,0 +1,21 @@
+{
+    "country": {
+        "item": "Q794",
+        "name": "Iran"
+    },
+    "country_code": "ir",
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "Q5958900",
+        "name": "Iranian National Heritage"
+    },
+    "language": "fa",
+    "table_name": "ir",
+    "unique": {
+        "comment": "Iranian National Heritage registration number",
+        "property": "P1369"
+    }
+}

@@ -1,0 +1,5086 @@
+[
+  {
+    "item": "Q613306",
+    "itemLabel": "محلات"
+  },
+  {
+    "item": "Q613501",
+    "itemLabel": "فرادنبه"
+  },
+  {
+    "item": "Q614236",
+    "itemLabel": "تفرش"
+  },
+  {
+    "item": "Q615773",
+    "itemLabel": "رزن"
+  },
+  {
+    "item": "Q631517",
+    "itemLabel": "مریوان"
+  },
+  {
+    "item": "Q636188",
+    "itemLabel": "شهر ری"
+  },
+  {
+    "item": "Q639119",
+    "itemLabel": "اردستان"
+  },
+  {
+    "item": "Q640743",
+    "itemLabel": "جورقان"
+  },
+  {
+    "item": "Q642330",
+    "itemLabel": "بندر چارک"
+  },
+  {
+    "item": "Q643166",
+    "itemLabel": "الیگودرز"
+  },
+  {
+    "item": "Q643172",
+    "itemLabel": "مسجدسلیمان"
+  },
+  {
+    "item": "Q643176",
+    "itemLabel": "آستانه اشرفیه"
+  },
+  {
+    "item": "Q643187",
+    "itemLabel": "بابلسر"
+  },
+  {
+    "item": "Q643207",
+    "itemLabel": "بهبهان"
+  },
+  {
+    "item": "Q643359",
+    "itemLabel": "ابهر"
+  },
+  {
+    "item": "Q643386",
+    "itemLabel": "شوشتر"
+  },
+  {
+    "item": "Q643394",
+    "itemLabel": "بندر ترکمن"
+  },
+  {
+    "item": "Q643430",
+    "itemLabel": "بانه"
+  },
+  {
+    "item": "Q643687",
+    "itemLabel": "ایران‌شهر"
+  },
+  {
+    "item": "Q643711",
+    "itemLabel": "بمپور"
+  },
+  {
+    "item": "Q643718",
+    "itemLabel": "آستانه"
+  },
+  {
+    "item": "Q643730",
+    "itemLabel": "اشکذر"
+  },
+  {
+    "item": "Q643743",
+    "itemLabel": "آشتیان"
+  },
+  {
+    "item": "Q643944",
+    "itemLabel": "عسلویه"
+  },
+  {
+    "item": "Q644686",
+    "itemLabel": "نراق"
+  },
+  {
+    "item": "Q645855",
+    "itemLabel": "آستارا"
+  },
+  {
+    "item": "Q655078",
+    "itemLabel": "تاکستان"
+  },
+  {
+    "item": "Q657669",
+    "itemLabel": "وراوی"
+  },
+  {
+    "item": "Q664115",
+    "itemLabel": "میبد"
+  },
+  {
+    "item": "Q671360",
+    "itemLabel": "گزنک"
+  },
+  {
+    "item": "Q681427",
+    "itemLabel": "طوس"
+  },
+  {
+    "item": "Q691052",
+    "itemLabel": "میناب"
+  },
+  {
+    "item": "Q719071",
+    "itemLabel": "خان‌ببین"
+  },
+  {
+    "item": "Q719081",
+    "itemLabel": "سرخنکلاته"
+  },
+  {
+    "item": "Q719085",
+    "itemLabel": "سامن"
+  },
+  {
+    "item": "Q719090",
+    "itemLabel": "فاضل‌آباد"
+  },
+  {
+    "item": "Q719094",
+    "itemLabel": "گالیکش"
+  },
+  {
+    "item": "Q719097",
+    "itemLabel": "سرکان"
+  },
+  {
+    "item": "Q719102",
+    "itemLabel": "زنگنه"
+  },
+  {
+    "item": "Q719107",
+    "itemLabel": "نوکنده"
+  },
+  {
+    "item": "Q719111",
+    "itemLabel": "فرسفج"
+  },
+  {
+    "item": "Q719253",
+    "itemLabel": "گیان"
+  },
+  {
+    "item": "Q719257",
+    "itemLabel": "ازندریان"
+  },
+  {
+    "item": "Q719386",
+    "itemLabel": "دلند"
+  },
+  {
+    "item": "Q719390",
+    "itemLabel": "جوکار"
+  },
+  {
+    "item": "Q719394",
+    "itemLabel": "برزول"
+  },
+  {
+    "item": "Q719397",
+    "itemLabel": "نوده خاندوز"
+  },
+  {
+    "item": "Q719401",
+    "itemLabel": "دمق"
+  },
+  {
+    "item": "Q719405",
+    "itemLabel": "فیروزان"
+  },
+  {
+    "item": "Q719511",
+    "itemLabel": "زرنق"
+  },
+  {
+    "item": "Q719560",
+    "itemLabel": "اینچه‌برون"
+  },
+  {
+    "item": "Q719564",
+    "itemLabel": "سیمین‌شهر"
+  },
+  {
+    "item": "Q719569",
+    "itemLabel": "نگین‌شهر"
+  },
+  {
+    "item": "Q719573",
+    "itemLabel": "انبارآلوم"
+  },
+  {
+    "item": "Q719764",
+    "itemLabel": "نورآباد"
+  },
+  {
+    "item": "Q719770",
+    "itemLabel": "اسکو"
+  },
+  {
+    "item": "Q719776",
+    "itemLabel": "امیدیه"
+  },
+  {
+    "item": "Q719781",
+    "itemLabel": "جاسک"
+  },
+  {
+    "item": "Q719977",
+    "itemLabel": "داراب"
+  },
+  {
+    "item": "Q719982",
+    "itemLabel": "دوگنبدان"
+  },
+  {
+    "item": "Q719986",
+    "itemLabel": "درگز"
+  },
+  {
+    "item": "Q720001",
+    "itemLabel": "خمینی‌شهر"
+  },
+  {
+    "item": "Q720007",
+    "itemLabel": "جیرفت"
+  },
+  {
+    "item": "Q720028",
+    "itemLabel": "قائن"
+  },
+  {
+    "item": "Q720034",
+    "itemLabel": "جاجرم"
+  },
+  {
+    "item": "Q720039",
+    "itemLabel": "خورموج"
+  },
+  {
+    "item": "Q720045",
+    "itemLabel": "نهاوند"
+  },
+  {
+    "item": "Q720048",
+    "itemLabel": "مشگین‌شهر"
+  },
+  {
+    "item": "Q720053",
+    "itemLabel": "دامغان"
+  },
+  {
+    "item": "Q720059",
+    "itemLabel": "کوهدشت"
+  },
+  {
+    "item": "Q720064",
+    "itemLabel": "پارس‌آباد"
+  },
+  {
+    "item": "Q720079",
+    "itemLabel": "جلفا"
+  },
+  {
+    "item": "Q720283",
+    "itemLabel": "کیلان"
+  },
+  {
+    "item": "Q720292",
+    "itemLabel": "بندر دیلم"
+  },
+  {
+    "item": "Q720298",
+    "itemLabel": "بندر گناوه"
+  },
+  {
+    "item": "Q720318",
+    "itemLabel": "شهرستان ماکو"
+  },
+  {
+    "item": "Q720381",
+    "itemLabel": "نوشهر"
+  },
+  {
+    "item": "Q720388",
+    "itemLabel": "نائین"
+  },
+  {
+    "item": "Q720392",
+    "itemLabel": "میانه"
+  },
+  {
+    "item": "Q720397",
+    "itemLabel": "فردوس"
+  },
+  {
+    "item": "Q720403",
+    "itemLabel": "کاشمر"
+  },
+  {
+    "item": "Q720410",
+    "itemLabel": "مهران"
+  },
+  {
+    "item": "Q720415",
+    "itemLabel": "اقلید"
+  },
+  {
+    "item": "Q720421",
+    "itemLabel": "گلپایگان"
+  },
+  {
+    "item": "Q720560",
+    "itemLabel": "پیشوا"
+  },
+  {
+    "item": "Q720586",
+    "itemLabel": "هشترود"
+  },
+  {
+    "item": "Q720596",
+    "itemLabel": "بیجار"
+  },
+  {
+    "item": "Q720604",
+    "itemLabel": "کنگاور"
+  },
+  {
+    "item": "Q720608",
+    "itemLabel": "پاوه"
+  },
+  {
+    "item": "Q720616",
+    "itemLabel": "کامیاران"
+  },
+  {
+    "item": "Q720633",
+    "itemLabel": "نیر"
+  },
+  {
+    "item": "Q720643",
+    "itemLabel": "کردکوی"
+  },
+  {
+    "item": "Q720647",
+    "itemLabel": "جالق"
+  },
+  {
+    "item": "Q720652",
+    "itemLabel": "اوز"
+  },
+  {
+    "item": "Q720657",
+    "itemLabel": "نورآباد"
+  },
+  {
+    "item": "Q720662",
+    "itemLabel": "ایزدخواست"
+  },
+  {
+    "item": "Q720668",
+    "itemLabel": "هشتگرد"
+  },
+  {
+    "item": "Q720672",
+    "itemLabel": "گراش"
+  },
+  {
+    "item": "Q720677",
+    "itemLabel": "بسطام"
+  },
+  {
+    "item": "Q720683",
+    "itemLabel": "برازجان"
+  },
+  {
+    "item": "Q3616",
+    "itemLabel": "تهران"
+  },
+  {
+    "item": "Q4531",
+    "itemLabel": "سلطانیه"
+  },
+  {
+    "item": "Q58128",
+    "itemLabel": "بازرگان"
+  },
+  {
+    "item": "Q63049",
+    "itemLabel": "آبادان"
+  },
+  {
+    "item": "Q75574",
+    "itemLabel": "سلفچگان"
+  },
+  {
+    "item": "Q76939",
+    "itemLabel": "باغ بهادران"
+  },
+  {
+    "item": "Q170366",
+    "itemLabel": "اهواز"
+  },
+  {
+    "item": "Q170573",
+    "itemLabel": "قم"
+  },
+  {
+    "item": "Q171714",
+    "itemLabel": "کرمان"
+  },
+  {
+    "item": "Q178373",
+    "itemLabel": "رشت"
+  },
+  {
+    "item": "Q179665",
+    "itemLabel": "ارومیه"
+  },
+  {
+    "item": "Q180078",
+    "itemLabel": "کرمانشاه"
+  },
+  {
+    "item": "Q180103",
+    "itemLabel": "اردبیل"
+  },
+  {
+    "item": "Q181578",
+    "itemLabel": "قزوین"
+  },
+  {
+    "item": "Q182394",
+    "itemLabel": "یزد"
+  },
+  {
+    "item": "Q28587",
+    "itemLabel": "همدان"
+  },
+  {
+    "item": "Q30833",
+    "itemLabel": "گیوی"
+  },
+  {
+    "item": "Q30901",
+    "itemLabel": "تفت"
+  },
+  {
+    "item": "Q30916",
+    "itemLabel": "هوراند"
+  },
+  {
+    "item": "Q36529",
+    "itemLabel": "کرج"
+  },
+  {
+    "item": "Q42053",
+    "itemLabel": "اصفهان"
+  },
+  {
+    "item": "Q42284",
+    "itemLabel": "اسفراین"
+  },
+  {
+    "item": "Q146699",
+    "itemLabel": "زنجان"
+  },
+  {
+    "item": "Q147736",
+    "itemLabel": "زرند"
+  },
+  {
+    "item": "Q154814",
+    "itemLabel": "بندرعباس"
+  },
+  {
+    "item": "Q158928",
+    "itemLabel": "بندر بوشهر"
+  },
+  {
+    "item": "Q168056",
+    "itemLabel": "بندر سیراف"
+  },
+  {
+    "item": "Q168843",
+    "itemLabel": "ساری"
+  },
+  {
+    "item": "Q477898",
+    "itemLabel": "بیشاپور"
+  },
+  {
+    "item": "Q497039",
+    "itemLabel": "نظام‌شهر"
+  },
+  {
+    "item": "Q497791",
+    "itemLabel": "محی‌آباد"
+  },
+  {
+    "item": "Q498106",
+    "itemLabel": "کیان‌شهر"
+  },
+  {
+    "item": "Q498111",
+    "itemLabel": "نودژ"
+  },
+  {
+    "item": "Q498118",
+    "itemLabel": "شهداد"
+  },
+  {
+    "item": "Q498124",
+    "itemLabel": "محمدآباد"
+  },
+  {
+    "item": "Q498130",
+    "itemLabel": "راین"
+  },
+  {
+    "item": "Q498142",
+    "itemLabel": "زنگی‌آباد"
+  },
+  {
+    "item": "Q498462",
+    "itemLabel": "قلعه‌گنج"
+  },
+  {
+    "item": "Q499470",
+    "itemLabel": "ایلام"
+  },
+  {
+    "item": "Q502212",
+    "itemLabel": "خرم‌آباد"
+  },
+  {
+    "item": "Q80053",
+    "itemLabel": "تبریز"
+  },
+  {
+    "item": "Q80810",
+    "itemLabel": "میمه"
+  },
+  {
+    "item": "Q80812",
+    "itemLabel": "ورنامخواست"
+  },
+  {
+    "item": "Q80814",
+    "itemLabel": "طالخونچه"
+  },
+  {
+    "item": "Q80815",
+    "itemLabel": "ونک"
+  },
+  {
+    "item": "Q80816",
+    "itemLabel": "فولادشهر"
+  },
+  {
+    "item": "Q80818",
+    "itemLabel": "بادرود"
+  },
+  {
+    "item": "Q80820",
+    "itemLabel": "وَزوان"
+  },
+  {
+    "item": "Q80821",
+    "itemLabel": "حنا"
+  },
+  {
+    "item": "Q80822",
+    "itemLabel": "منظریه"
+  },
+  {
+    "item": "Q80824",
+    "itemLabel": "گل‌دشت"
+  },
+  {
+    "item": "Q80825",
+    "itemLabel": "گز"
+  },
+  {
+    "item": "Q80828",
+    "itemLabel": "زاینده‌رود"
+  },
+  {
+    "item": "Q80830",
+    "itemLabel": "زیباشهر"
+  },
+  {
+    "item": "Q80983",
+    "itemLabel": "نقاب"
+  },
+  {
+    "item": "Q81015",
+    "itemLabel": "کمه"
+  },
+  {
+    "item": "Q81019",
+    "itemLabel": "چمگردان"
+  },
+  {
+    "item": "Q81020",
+    "itemLabel": "کهریزسنگ"
+  },
+  {
+    "item": "Q81021",
+    "itemLabel": "چرمهین"
+  },
+  {
+    "item": "Q81024",
+    "itemLabel": "رضوانشهر"
+  },
+  {
+    "item": "Q81027",
+    "itemLabel": "جوزدان"
+  },
+  {
+    "item": "Q81028",
+    "itemLabel": "سده لنجان"
+  },
+  {
+    "item": "Q81029",
+    "itemLabel": "دیزیچه"
+  },
+  {
+    "item": "Q81030",
+    "itemLabel": "خالدآباد"
+  },
+  {
+    "item": "Q81234",
+    "itemLabel": "کرکوند"
+  },
+  {
+    "item": "Q81440",
+    "itemLabel": "مبارکه"
+  },
+  {
+    "item": "Q81444",
+    "itemLabel": "بشرویه"
+  },
+  {
+    "item": "Q81448",
+    "itemLabel": "آرین‌شهر"
+  },
+  {
+    "item": "Q83686",
+    "itemLabel": "زهان"
+  },
+  {
+    "item": "Q83699",
+    "itemLabel": "مود"
+  },
+  {
+    "item": "Q83700",
+    "itemLabel": "نیمبلوک"
+  },
+  {
+    "item": "Q83735",
+    "itemLabel": "حاجی‌آباد"
+  },
+  {
+    "item": "Q83736",
+    "itemLabel": "خضری دشت‌بیاض"
+  },
+  {
+    "item": "Q83762",
+    "itemLabel": "آیسک"
+  },
+  {
+    "item": "Q83876",
+    "itemLabel": "اسفدن"
+  },
+  {
+    "item": "Q106636",
+    "itemLabel": "بم"
+  },
+  {
+    "item": "Q114107",
+    "itemLabel": "دیزج دیز"
+  },
+  {
+    "item": "Q116115",
+    "itemLabel": "شهرستان آران و بیدگل"
+  },
+  {
+    "item": "Q121157",
+    "itemLabel": "مشهد"
+  },
+  {
+    "item": "Q124669",
+    "itemLabel": "نطنز"
+  },
+  {
+    "item": "Q131350",
+    "itemLabel": "نیشابور"
+  },
+  {
+    "item": "Q139024",
+    "itemLabel": "زابل"
+  },
+  {
+    "item": "Q140561",
+    "itemLabel": "زاهدان"
+  },
+  {
+    "item": "Q141101",
+    "itemLabel": "حسینیه"
+  },
+  {
+    "item": "Q317946",
+    "itemLabel": "بجنورد"
+  },
+  {
+    "item": "Q331078",
+    "itemLabel": "آمل"
+  },
+  {
+    "item": "Q335518",
+    "itemLabel": "مهاباد"
+  },
+  {
+    "item": "Q336079",
+    "itemLabel": "آلاشت"
+  },
+  {
+    "item": "Q337867",
+    "itemLabel": "خداجو"
+  },
+  {
+    "item": "Q339178",
+    "itemLabel": "قوشچی"
+  },
+  {
+    "item": "Q348726",
+    "itemLabel": "شویشه"
+  },
+  {
+    "item": "Q348732",
+    "itemLabel": "چناره"
+  },
+  {
+    "item": "Q348737",
+    "itemLabel": "کانی‌دینار"
+  },
+  {
+    "item": "Q348972",
+    "itemLabel": "سقز"
+  },
+  {
+    "item": "Q348985",
+    "itemLabel": "صاحب"
+  },
+  {
+    "item": "Q348992",
+    "itemLabel": "سریش‌آباد"
+  },
+  {
+    "item": "Q368625",
+    "itemLabel": "سگزی"
+  },
+  {
+    "item": "Q368958",
+    "itemLabel": "ایوان"
+  },
+  {
+    "item": "Q369488",
+    "itemLabel": "قروه درجزین"
+  },
+  {
+    "item": "Q369932",
+    "itemLabel": "نیر"
+  },
+  {
+    "item": "Q371112",
+    "itemLabel": "اندیمشک"
+  },
+  {
+    "item": "Q377431",
+    "itemLabel": "زاویه"
+  },
+  {
+    "item": "Q383129",
+    "itemLabel": "یاسوج"
+  },
+  {
+    "item": "Q384538",
+    "itemLabel": "نرجه"
+  },
+  {
+    "item": "Q384585",
+    "itemLabel": "ارد"
+  },
+  {
+    "item": "Q385569",
+    "itemLabel": "منوجان"
+  },
+  {
+    "item": "Q386649",
+    "itemLabel": "شهرکرد"
+  },
+  {
+    "item": "Q388620",
+    "itemLabel": "بندر لنگه"
+  },
+  {
+    "item": "Q430308",
+    "itemLabel": "ایذه"
+  },
+  {
+    "item": "Q430494",
+    "itemLabel": "فریمان"
+  },
+  {
+    "item": "Q430773",
+    "itemLabel": "بهارستان"
+  },
+  {
+    "item": "Q458396",
+    "itemLabel": "خرمشهر"
+  },
+  {
+    "item": "Q508995",
+    "itemLabel": "باسمنج"
+  },
+  {
+    "item": "Q514633",
+    "itemLabel": "هرند"
+  },
+  {
+    "item": "Q518985",
+    "itemLabel": "ورامین"
+  },
+  {
+    "item": "Q531943",
+    "itemLabel": "نکا"
+  },
+  {
+    "item": "Q533476",
+    "itemLabel": "سی‌سخت"
+  },
+  {
+    "item": "Q565396",
+    "itemLabel": "شهباز"
+  },
+  {
+    "item": "Q569040",
+    "itemLabel": "لاهیجان"
+  },
+  {
+    "item": "Q575804",
+    "itemLabel": "رفسنجان"
+  },
+  {
+    "item": "Q580084",
+    "itemLabel": "اردکان"
+  },
+  {
+    "item": "Q581373",
+    "itemLabel": "رشتخوار"
+  },
+  {
+    "item": "Q585002",
+    "itemLabel": "لالی"
+  },
+  {
+    "item": "Q587738",
+    "itemLabel": "مهرستان"
+  },
+  {
+    "item": "Q588171",
+    "itemLabel": "فاریاب"
+  },
+  {
+    "item": "Q599054",
+    "itemLabel": "رویدر"
+  },
+  {
+    "item": "Q602606",
+    "itemLabel": "مشکان"
+  },
+  {
+    "item": "Q604576",
+    "itemLabel": "ازنا"
+  },
+  {
+    "item": "Q604990",
+    "itemLabel": "مرودشت"
+  },
+  {
+    "item": "Q605002",
+    "itemLabel": "شاهرود"
+  },
+  {
+    "item": "Q605021",
+    "itemLabel": "مراغه"
+  },
+  {
+    "item": "Q605033",
+    "itemLabel": "میاندوآب"
+  },
+  {
+    "item": "Q605105",
+    "itemLabel": "خوی"
+  },
+  {
+    "item": "Q605142",
+    "itemLabel": "دزفول"
+  },
+  {
+    "item": "Q605157",
+    "itemLabel": "بابل"
+  },
+  {
+    "item": "Q605209",
+    "itemLabel": "ملایر"
+  },
+  {
+    "item": "Q605224",
+    "itemLabel": "سیرجان"
+  },
+  {
+    "item": "Q605244",
+    "itemLabel": "بندر ماهشهر"
+  },
+  {
+    "item": "Q605454",
+    "itemLabel": "بروجرد"
+  },
+  {
+    "item": "Q606564",
+    "itemLabel": "شهرستان بوکان"
+  },
+  {
+    "item": "Q609422",
+    "itemLabel": "طالقان (شهرک)"
+  },
+  {
+    "item": "Q744176",
+    "itemLabel": "اروندکنار"
+  },
+  {
+    "item": "Q745055",
+    "itemLabel": "دماوند"
+  },
+  {
+    "item": "Q765487",
+    "itemLabel": "سروستان"
+  },
+  {
+    "item": "Q765501",
+    "itemLabel": "شبستر"
+  },
+  {
+    "item": "Q765512",
+    "itemLabel": "قمصر"
+  },
+  {
+    "item": "Q765518",
+    "itemLabel": "ساوه"
+  },
+  {
+    "item": "Q765528",
+    "itemLabel": "تربت حیدریه"
+  },
+  {
+    "item": "Q765536",
+    "itemLabel": "سرخس"
+  },
+  {
+    "item": "Q765553",
+    "itemLabel": "سبزوار"
+  },
+  {
+    "item": "Q765561",
+    "itemLabel": "تنکابن"
+  },
+  {
+    "item": "Q765571",
+    "itemLabel": "شهرضا"
+  },
+  {
+    "item": "Q765582",
+    "itemLabel": "سرپل ذهاب"
+  },
+  {
+    "item": "Q765594",
+    "itemLabel": "قروه"
+  },
+  {
+    "item": "Q765659",
+    "itemLabel": "رونیز"
+  },
+  {
+    "item": "Q765671",
+    "itemLabel": "سراوان"
+  },
+  {
+    "item": "Q765715",
+    "itemLabel": "تربت جام"
+  },
+  {
+    "item": "Q765726",
+    "itemLabel": "رودسر"
+  },
+  {
+    "item": "Q765739",
+    "itemLabel": "تویسرکان"
+  },
+  {
+    "item": "Q765759",
+    "itemLabel": "زرین‌شهر"
+  },
+  {
+    "item": "Q765771",
+    "itemLabel": "صومعه‌سرا"
+  },
+  {
+    "item": "Q765793",
+    "itemLabel": "قوچان"
+  },
+  {
+    "item": "Q765806",
+    "itemLabel": "سلماس"
+  },
+  {
+    "item": "Q766617",
+    "itemLabel": "تکاب"
+  },
+  {
+    "item": "Q766927",
+    "itemLabel": "رودبار"
+  },
+  {
+    "item": "Q766974",
+    "itemLabel": "قدس"
+  },
+  {
+    "item": "Q767820",
+    "itemLabel": "طبس"
+  },
+  {
+    "item": "Q772940",
+    "itemLabel": "بندر امام خمینی"
+  },
+  {
+    "item": "Q778162",
+    "itemLabel": "شادگان"
+  },
+  {
+    "item": "Q783176",
+    "itemLabel": "آبیک"
+  },
+  {
+    "item": "Q793611",
+    "itemLabel": "آذرشهر"
+  },
+  {
+    "item": "Q795092",
+    "itemLabel": "گرمسار"
+  },
+  {
+    "item": "Q799795",
+    "itemLabel": "بافق"
+  },
+  {
+    "item": "Q814594",
+    "itemLabel": "بهشهر"
+  },
+  {
+    "item": "Q861898",
+    "itemLabel": "قیدار"
+  },
+  {
+    "item": "Q861903",
+    "itemLabel": "صایین‌قلعه"
+  },
+  {
+    "item": "Q861916",
+    "itemLabel": "آب‌بر"
+  },
+  {
+    "item": "Q861922",
+    "itemLabel": "بندر ریگ"
+  },
+  {
+    "item": "Q861964",
+    "itemLabel": "چوار"
+  },
+  {
+    "item": "Q862095",
+    "itemLabel": "دالکی"
+  },
+  {
+    "item": "Q862105",
+    "itemLabel": "شاهین‌شهر"
+  },
+  {
+    "item": "Q862310",
+    "itemLabel": "ماسوله"
+  },
+  {
+    "item": "Q862332",
+    "itemLabel": "بندر کنگان"
+  },
+  {
+    "item": "Q862336",
+    "itemLabel": "جم"
+  },
+  {
+    "item": "Q862341",
+    "itemLabel": "رامشیر"
+  },
+  {
+    "item": "Q862345",
+    "itemLabel": "محمودآباد"
+  },
+  {
+    "item": "Q862350",
+    "itemLabel": "میانرود"
+  },
+  {
+    "item": "Q862356",
+    "itemLabel": "چغادک"
+  },
+  {
+    "item": "Q862363",
+    "itemLabel": "آبدان"
+  },
+  {
+    "item": "Q862369",
+    "itemLabel": "زرین‌آباد"
+  },
+  {
+    "item": "Q862390",
+    "itemLabel": "مورموری"
+  },
+  {
+    "item": "Q862457",
+    "itemLabel": "دهلران"
+  },
+  {
+    "item": "Q862466",
+    "itemLabel": "چابهار"
+  },
+  {
+    "item": "Q862479",
+    "itemLabel": "بندر دیر"
+  },
+  {
+    "item": "Q862503",
+    "itemLabel": "خرمدره"
+  },
+  {
+    "item": "Q862511",
+    "itemLabel": "محمودآباد"
+  },
+  {
+    "item": "Q862516",
+    "itemLabel": "سردشت"
+  },
+  {
+    "item": "Q862519",
+    "itemLabel": "اسلام‌شهر"
+  },
+  {
+    "item": "Q862547",
+    "itemLabel": "چالوس"
+  },
+  {
+    "item": "Q862549",
+    "itemLabel": "قره‌ضیاءالدین"
+  },
+  {
+    "item": "Q862551",
+    "itemLabel": "شاهین‌دژ"
+  },
+  {
+    "item": "Q862554",
+    "itemLabel": "آبدانان"
+  },
+  {
+    "item": "Q862556",
+    "itemLabel": "کلیبر"
+  },
+  {
+    "item": "Q862604",
+    "itemLabel": "دره‌شهر"
+  },
+  {
+    "item": "Q862767",
+    "itemLabel": "کاکی"
+  },
+  {
+    "item": "Q863204",
+    "itemLabel": "شبان‌کاره"
+  },
+  {
+    "item": "Q863240",
+    "itemLabel": "سراب"
+  },
+  {
+    "item": "Q869357",
+    "itemLabel": "دشتی"
+  },
+  {
+    "item": "Q887858",
+    "itemLabel": "Q887858"
+  },
+  {
+    "item": "Q888074",
+    "itemLabel": "مصیری"
+  },
+  {
+    "item": "Q888080",
+    "itemLabel": "صفاشهر"
+  },
+  {
+    "item": "Q888096",
+    "itemLabel": "سده"
+  },
+  {
+    "item": "Q888104",
+    "itemLabel": "حاجی‌آباد"
+  },
+  {
+    "item": "Q888109",
+    "itemLabel": "خشت"
+  },
+  {
+    "item": "Q888142",
+    "itemLabel": "منصوریه (بهبهان)"
+  },
+  {
+    "item": "Q888188",
+    "itemLabel": "تازه‌آباد"
+  },
+  {
+    "item": "Q888197",
+    "itemLabel": "بیرم"
+  },
+  {
+    "item": "Q888201",
+    "itemLabel": "بهار"
+  },
+  {
+    "item": "Q888206",
+    "itemLabel": "مأمونیه"
+  },
+  {
+    "item": "Q888210",
+    "itemLabel": "پرندک"
+  },
+  {
+    "item": "Q888217",
+    "itemLabel": "کنارتخته"
+  },
+  {
+    "item": "Q888223",
+    "itemLabel": "فتح آباد"
+  },
+  {
+    "item": "Q888259",
+    "itemLabel": "بهمن"
+  },
+  {
+    "item": "Q888291",
+    "itemLabel": "آباده طشک"
+  },
+  {
+    "item": "Q888309",
+    "itemLabel": "سوسنگرد"
+  },
+  {
+    "item": "Q888344",
+    "itemLabel": "قشم"
+  },
+  {
+    "item": "Q888347",
+    "itemLabel": "Q888347"
+  },
+  {
+    "item": "Q888356",
+    "itemLabel": "Q888356"
+  },
+  {
+    "item": "Q888365",
+    "itemLabel": "دهدشت"
+  },
+  {
+    "item": "Q888371",
+    "itemLabel": "باشت"
+  },
+  {
+    "item": "Q888376",
+    "itemLabel": "لنده"
+  },
+  {
+    "item": "Q888383",
+    "itemLabel": "جویم"
+  },
+  {
+    "item": "Q888388",
+    "itemLabel": "گندمان"
+  },
+  {
+    "item": "Q888404",
+    "itemLabel": "خور"
+  },
+  {
+    "item": "Q888408",
+    "itemLabel": "حمیدیه"
+  },
+  {
+    "item": "Q888412",
+    "itemLabel": "قطب‌آباد"
+  },
+  {
+    "item": "Q888418",
+    "itemLabel": "کوار"
+  },
+  {
+    "item": "Q888424",
+    "itemLabel": "سامان"
+  },
+  {
+    "item": "Q888428",
+    "itemLabel": "چمران"
+  },
+  {
+    "item": "Q888433",
+    "itemLabel": "سردشت"
+  },
+  {
+    "item": "Q888437",
+    "itemLabel": "قادرآباد"
+  },
+  {
+    "item": "Q720689",
+    "itemLabel": "اسلام‌آباد غرب"
+  },
+  {
+    "item": "Q720695",
+    "itemLabel": "خنج"
+  },
+  {
+    "item": "Q720699",
+    "itemLabel": "اشنویه"
+  },
+  {
+    "item": "Q720705",
+    "itemLabel": "مهاجران"
+  },
+  {
+    "item": "Q720710",
+    "itemLabel": "بناب"
+  },
+  {
+    "item": "Q720714",
+    "itemLabel": "پاکدشت"
+  },
+  {
+    "item": "Q720750",
+    "itemLabel": "خمین"
+  },
+  {
+    "item": "Q720937",
+    "itemLabel": "قائم‌شهر"
+  },
+  {
+    "item": "Q720942",
+    "itemLabel": "منجیل"
+  },
+  {
+    "item": "Q720952",
+    "itemLabel": "فیروزآباد"
+  },
+  {
+    "item": "Q721024",
+    "itemLabel": "مرند"
+  },
+  {
+    "item": "Q721029",
+    "itemLabel": "لار"
+  },
+  {
+    "item": "Q721034",
+    "itemLabel": "فسا"
+  },
+  {
+    "item": "Q721046",
+    "itemLabel": "گناباد"
+  },
+  {
+    "item": "Q721060",
+    "itemLabel": "کازرون"
+  },
+  {
+    "item": "Q721125",
+    "itemLabel": "لنگرود"
+  },
+  {
+    "item": "Q721198",
+    "itemLabel": "نجف‌آباد"
+  },
+  {
+    "item": "Q740141",
+    "itemLabel": "بیستون"
+  },
+  {
+    "item": "Q740660",
+    "itemLabel": "لامرد"
+  },
+  {
+    "item": "Q888814",
+    "itemLabel": "Q888814"
+  },
+  {
+    "item": "Q888856",
+    "itemLabel": "ویس (شهر)"
+  },
+  {
+    "item": "Q888926",
+    "itemLabel": "اسدآباد"
+  },
+  {
+    "item": "Q888930",
+    "itemLabel": "جنت‌شهر"
+  },
+  {
+    "item": "Q888936",
+    "itemLabel": "شلمزار"
+  },
+  {
+    "item": "Q888941",
+    "itemLabel": "چرام"
+  },
+  {
+    "item": "Q888947",
+    "itemLabel": "هفتکل"
+  },
+  {
+    "item": "Q888951",
+    "itemLabel": "صالح‌آباد"
+  },
+  {
+    "item": "Q888955",
+    "itemLabel": "قیر"
+  },
+  {
+    "item": "Q888959",
+    "itemLabel": "خنداب"
+  },
+  {
+    "item": "Q888964",
+    "itemLabel": "مهریز"
+  },
+  {
+    "item": "Q888966",
+    "itemLabel": "سفیددشت"
+  },
+  {
+    "item": "Q889008",
+    "itemLabel": "دهگلان"
+  },
+  {
+    "item": "Q889013",
+    "itemLabel": "گیلانغرب"
+  },
+  {
+    "item": "Q889017",
+    "itemLabel": "سروآباد"
+  },
+  {
+    "item": "Q889022",
+    "itemLabel": "دیواندره"
+  },
+  {
+    "item": "Q889039",
+    "itemLabel": "روانسر"
+  },
+  {
+    "item": "Q889045",
+    "itemLabel": "آغاجاری"
+  },
+  {
+    "item": "Q889116",
+    "itemLabel": "هرسین"
+  },
+  {
+    "item": "Q889142",
+    "itemLabel": "اردل"
+  },
+  {
+    "item": "Q889731",
+    "itemLabel": "صحنه"
+  },
+  {
+    "item": "Q911727",
+    "itemLabel": "اهر"
+  },
+  {
+    "item": "Q915521",
+    "itemLabel": "شمشک"
+  },
+  {
+    "item": "Q919547",
+    "itemLabel": "ابرکوه"
+  },
+  {
+    "item": "Q919853",
+    "itemLabel": "شفت"
+  },
+  {
+    "item": "Q932150",
+    "itemLabel": "تسوج"
+  },
+  {
+    "item": "Q936543",
+    "itemLabel": "راسک"
+  },
+  {
+    "item": "Q942587",
+    "itemLabel": "کلاله"
+  },
+  {
+    "item": "Q945447",
+    "itemLabel": "جویبار"
+  },
+  {
+    "item": "Q951051",
+    "itemLabel": "رامسر"
+  },
+  {
+    "item": "Q888633",
+    "itemLabel": "درگهان"
+  },
+  {
+    "item": "Q888643",
+    "itemLabel": "هرمز"
+  },
+  {
+    "item": "Q888646",
+    "itemLabel": "زرقان"
+  },
+  {
+    "item": "Q888678",
+    "itemLabel": "شازند"
+  },
+  {
+    "item": "Q888682",
+    "itemLabel": "دهبارز"
+  },
+  {
+    "item": "Q888688",
+    "itemLabel": "مهدی‌شهر"
+  },
+  {
+    "item": "Q888694",
+    "itemLabel": "لردگان"
+  },
+  {
+    "item": "Q888697",
+    "itemLabel": "رامهرمز"
+  },
+  {
+    "item": "Q888701",
+    "itemLabel": "بروجن"
+  },
+  {
+    "item": "Q888705",
+    "itemLabel": "هندیجان"
+  },
+  {
+    "item": "Q888711",
+    "itemLabel": "استهبان"
+  },
+  {
+    "item": "Q888715",
+    "itemLabel": "نی‌ریز"
+  },
+  {
+    "item": "Q888725",
+    "itemLabel": "هویزه"
+  },
+  {
+    "item": "Q888740",
+    "itemLabel": "دلیجان"
+  },
+  {
+    "item": "Q888754",
+    "itemLabel": "سوریان"
+  },
+  {
+    "item": "Q888756",
+    "itemLabel": "اشکنان"
+  },
+  {
+    "item": "Q888761",
+    "itemLabel": "الوان"
+  },
+  {
+    "item": "Q888767",
+    "itemLabel": "صفی‌آباد"
+  },
+  {
+    "item": "Q888770",
+    "itemLabel": "بلداجی"
+  },
+  {
+    "item": "Q888783",
+    "itemLabel": "لطیفی"
+  },
+  {
+    "item": "Q888790",
+    "itemLabel": "ملاثانی"
+  },
+  {
+    "item": "Q888794",
+    "itemLabel": "خرامه"
+  },
+  {
+    "item": "Q888801",
+    "itemLabel": "گهواره"
+  },
+  {
+    "item": "Q888803",
+    "itemLabel": "Q888803"
+  },
+  {
+    "item": "Q888808",
+    "itemLabel": "Q888808"
+  },
+  {
+    "item": "Q188155",
+    "itemLabel": "گرگان"
+  },
+  {
+    "item": "Q192928",
+    "itemLabel": "آباده"
+  },
+  {
+    "item": "Q193806",
+    "itemLabel": "بیرجند"
+  },
+  {
+    "item": "Q203045",
+    "itemLabel": "سمنان"
+  },
+  {
+    "item": "Q210885",
+    "itemLabel": "بندر انزلی"
+  },
+  {
+    "item": "Q212628",
+    "itemLabel": "اراک"
+  },
+  {
+    "item": "Q217042",
+    "itemLabel": "جنگل"
+  },
+  {
+    "item": "Q217067",
+    "itemLabel": "تایباد"
+  },
+  {
+    "item": "Q219963",
+    "itemLabel": "زنوز"
+  },
+  {
+    "item": "Q221883",
+    "itemLabel": "جزیره کیش"
+  },
+  {
+    "item": "Q236348",
+    "itemLabel": "جغتای"
+  },
+  {
+    "item": "Q238375",
+    "itemLabel": "دورود"
+  },
+  {
+    "item": "Q240475",
+    "itemLabel": "کاشان"
+  },
+  {
+    "item": "Q240719",
+    "itemLabel": "جزیره قشم"
+  },
+  {
+    "item": "Q261029",
+    "itemLabel": "شریف‌آباد"
+  },
+  {
+    "item": "Q272093",
+    "itemLabel": "سنندج"
+  },
+  {
+    "item": "Q281726",
+    "itemLabel": "نوبندگان"
+  },
+  {
+    "item": "Q1716776",
+    "itemLabel": "میرجاوه"
+  },
+  {
+    "item": "Q1738431",
+    "itemLabel": "کلاردشت"
+  },
+  {
+    "item": "Q1753359",
+    "itemLabel": "رودبنه"
+  },
+  {
+    "item": "Q1753374",
+    "itemLabel": "لوندویل"
+  },
+  {
+    "item": "Q1753380",
+    "itemLabel": "کوچصفهان"
+  },
+  {
+    "item": "Q1753385",
+    "itemLabel": "سنگر"
+  },
+  {
+    "item": "Q1753407",
+    "itemLabel": "بندر کیاشهر"
+  },
+  {
+    "item": "Q1753968",
+    "itemLabel": "خشکبیجار"
+  },
+  {
+    "item": "Q1753975",
+    "itemLabel": "خمام"
+  },
+  {
+    "item": "Q1753980",
+    "itemLabel": "پره‌سر"
+  },
+  {
+    "item": "Q1753986",
+    "itemLabel": "بازارجمعه"
+  },
+  {
+    "item": "Q1753994",
+    "itemLabel": "لشت نشا"
+  },
+  {
+    "item": "Q1754005",
+    "itemLabel": "رستم‌آباد"
+  },
+  {
+    "item": "Q1754176",
+    "itemLabel": "چابکسر"
+  },
+  {
+    "item": "Q1754184",
+    "itemLabel": "کلاچای"
+  },
+  {
+    "item": "Q1754190",
+    "itemLabel": "لوشان"
+  },
+  {
+    "item": "Q957582",
+    "itemLabel": "هیدوچ"
+  },
+  {
+    "item": "Q957826",
+    "itemLabel": "فامنین"
+  },
+  {
+    "item": "Q966989",
+    "itemLabel": "صوفیان"
+  },
+  {
+    "item": "Q967001",
+    "itemLabel": "قصرقند"
+  },
+  {
+    "item": "Q967688",
+    "itemLabel": "رباط‌کریم"
+  },
+  {
+    "item": "Q967701",
+    "itemLabel": "الشتر"
+  },
+  {
+    "item": "Q968057",
+    "itemLabel": "اهرم"
+  },
+  {
+    "item": "Q972102",
+    "itemLabel": "نودشه"
+  },
+  {
+    "item": "Q979176",
+    "itemLabel": "ابوحمیظه"
+  },
+  {
+    "item": "Q1019120",
+    "itemLabel": "تجریش"
+  },
+  {
+    "item": "Q1020637",
+    "itemLabel": "جهرم"
+  },
+  {
+    "item": "Q1020830",
+    "itemLabel": "پل سفید"
+  },
+  {
+    "item": "Q1026047",
+    "itemLabel": "خامنه"
+  },
+  {
+    "item": "Q1026053",
+    "itemLabel": "شهر جدید هشتگرد"
+  },
+  {
+    "item": "Q1026064",
+    "itemLabel": "شهمیرزاد"
+  },
+  {
+    "item": "Q1026069",
+    "itemLabel": "فیروزکوه"
+  },
+  {
+    "item": "Q1026071",
+    "itemLabel": "سراب‌دوره"
+  },
+  {
+    "item": "Q2112778",
+    "itemLabel": "خاش"
+  },
+  {
+    "item": "Q2112791",
+    "itemLabel": "کنارک"
+  },
+  {
+    "item": "Q2112814",
+    "itemLabel": "پیشین"
+  },
+  {
+    "item": "Q2151629",
+    "itemLabel": "فومن"
+  },
+  {
+    "item": "Q2159819",
+    "itemLabel": "علی‌آباد کتول"
+  },
+  {
+    "item": "Q2159855",
+    "itemLabel": "کهنوج"
+  },
+  {
+    "item": "Q2159862",
+    "itemLabel": "شهربابک"
+  },
+  {
+    "item": "Q2159871",
+    "itemLabel": "بردسیر"
+  },
+  {
+    "item": "Q2159878",
+    "itemLabel": "گمیشان"
+  },
+  {
+    "item": "Q2159887",
+    "itemLabel": "عنبرآباد"
+  },
+  {
+    "item": "Q2160114",
+    "itemLabel": "حاجی‌آباد"
+  },
+  {
+    "item": "Q2161178",
+    "itemLabel": "بندر گز"
+  },
+  {
+    "item": "Q1115416",
+    "itemLabel": "نوبران"
+  },
+  {
+    "item": "Q1118922",
+    "itemLabel": "کدکن"
+  },
+  {
+    "item": "Q1121150",
+    "itemLabel": "مشهد ریزه"
+  },
+  {
+    "item": "Q1157591",
+    "itemLabel": "دیلمان"
+  },
+  {
+    "item": "Q1283166",
+    "itemLabel": "شهرستان نیر"
+  },
+  {
+    "item": "Q1295841",
+    "itemLabel": "ملکان"
+  },
+  {
+    "item": "Q1518300",
+    "itemLabel": "صددروازه"
+  },
+  {
+    "item": "Q1531107",
+    "itemLabel": "نوشین‌شهر"
+  },
+  {
+    "item": "Q1553458",
+    "itemLabel": "نور"
+  },
+  {
+    "item": "Q1610007",
+    "itemLabel": "هریس"
+  },
+  {
+    "item": "Q1709560",
+    "itemLabel": "سیدان"
+  },
+  {
+    "item": "Q1763105",
+    "itemLabel": "پارسیان"
+  },
+  {
+    "item": "Q1764089",
+    "itemLabel": "طبس مسینا"
+  },
+  {
+    "item": "Q1764096",
+    "itemLabel": "سفیدشهر"
+  },
+  {
+    "item": "Q1764159",
+    "itemLabel": "ابوزیدآباد"
+  },
+  {
+    "item": "Q1764166",
+    "itemLabel": "نوش‌آباد"
+  },
+  {
+    "item": "Q1764389",
+    "itemLabel": "خوسف"
+  },
+  {
+    "item": "Q1765805",
+    "itemLabel": "درق"
+  },
+  {
+    "item": "Q1768817",
+    "itemLabel": "سوق"
+  },
+  {
+    "item": "Q1770030",
+    "itemLabel": "گراب سفلی"
+  },
+  {
+    "item": "Q1770049",
+    "itemLabel": "مارگون"
+  },
+  {
+    "item": "Q1770060",
+    "itemLabel": "قلعه رئیسی"
+  },
+  {
+    "item": "Q1770065",
+    "itemLabel": "پاتاوه"
+  },
+  {
+    "item": "Q1770084",
+    "itemLabel": "فرهادگرد"
+  },
+  {
+    "item": "Q1770097",
+    "itemLabel": "نوخندان"
+  },
+  {
+    "item": "Q1770104",
+    "itemLabel": "نیل‌شهر"
+  },
+  {
+    "item": "Q1770115",
+    "itemLabel": "صالح‌آباد"
+  },
+  {
+    "item": "Q1770119",
+    "itemLabel": "یونسی"
+  },
+  {
+    "item": "Q1770123",
+    "itemLabel": "چاپشلو"
+  },
+  {
+    "item": "Q1770139",
+    "itemLabel": "قلندرآباد"
+  },
+  {
+    "item": "Q1770147",
+    "itemLabel": "عشق‌آباد"
+  },
+  {
+    "item": "Q1770170",
+    "itemLabel": "سفیدسنگ"
+  },
+  {
+    "item": "Q1770176",
+    "itemLabel": "بیدخت"
+  },
+  {
+    "item": "Q1770186",
+    "itemLabel": "رضویه"
+  },
+  {
+    "item": "Q1770194",
+    "itemLabel": "دررود"
+  },
+  {
+    "item": "Q1770199",
+    "itemLabel": "ریوش"
+  },
+  {
+    "item": "Q1771034",
+    "itemLabel": "همت‌آباد"
+  },
+  {
+    "item": "Q1771044",
+    "itemLabel": "نصرآباد"
+  },
+  {
+    "item": "Q1771049",
+    "itemLabel": "فیض‌آباد"
+  },
+  {
+    "item": "Q1771053",
+    "itemLabel": "سنگان"
+  },
+  {
+    "item": "Q1771058",
+    "itemLabel": "خلیل‌آباد"
+  },
+  {
+    "item": "Q1771064",
+    "itemLabel": "ملک‌آباد"
+  },
+  {
+    "item": "Q1771069",
+    "itemLabel": "ششتمد"
+  },
+  {
+    "item": "Q1771073",
+    "itemLabel": "نشتیفان"
+  },
+  {
+    "item": "Q1771074",
+    "itemLabel": "سلطان‌آباد"
+  },
+  {
+    "item": "Q1771076",
+    "itemLabel": "قاسم‌آباد"
+  },
+  {
+    "item": "Q1771078",
+    "itemLabel": "کندر"
+  },
+  {
+    "item": "Q1771082",
+    "itemLabel": "فیروزه"
+  },
+  {
+    "item": "Q1771085",
+    "itemLabel": "دولت‌آباد"
+  },
+  {
+    "item": "Q1771089",
+    "itemLabel": "داورزن"
+  },
+  {
+    "item": "Q1771093",
+    "itemLabel": "چکنه"
+  },
+  {
+    "item": "Q1771096",
+    "itemLabel": "خرو"
+  },
+  {
+    "item": "Q1771099",
+    "itemLabel": "کاریز"
+  },
+  {
+    "item": "Q1771101",
+    "itemLabel": "شادمهر"
+  },
+  {
+    "item": "Q1771102",
+    "itemLabel": "سلامی"
+  },
+  {
+    "item": "Q1771945",
+    "itemLabel": "رودهن"
+  },
+  {
+    "item": "Q1771952",
+    "itemLabel": "آبسرد"
+  },
+  {
+    "item": "Q1772344",
+    "itemLabel": "چهاردانگه"
+  },
+  {
+    "item": "Q1773452",
+    "itemLabel": "مینوشهر"
+  },
+  {
+    "item": "Q1773455",
+    "itemLabel": "الوند"
+  },
+  {
+    "item": "Q1773458",
+    "itemLabel": "محمدیه"
+  },
+  {
+    "item": "Q1773463",
+    "itemLabel": "دهدز"
+  },
+  {
+    "item": "Q1773467",
+    "itemLabel": "جایزان"
+  },
+  {
+    "item": "Q1776167",
+    "itemLabel": "سرخه"
+  },
+  {
+    "item": "Q1776179",
+    "itemLabel": "باقرشهر"
+  },
+  {
+    "item": "Q1776213",
+    "itemLabel": "حسن‌آباد"
+  },
+  {
+    "item": "Q1776633",
+    "itemLabel": "صالحیه"
+  },
+  {
+    "item": "Q1790789",
+    "itemLabel": "سیراف"
+  },
+  {
+    "item": "Q1799624",
+    "itemLabel": "بافت"
+  },
+  {
+    "item": "Q1816961",
+    "itemLabel": "ماهان"
+  },
+  {
+    "item": "Q1820789",
+    "itemLabel": "نقده"
+  },
+  {
+    "item": "Q4359629",
+    "itemLabel": "نیاسر"
+  },
+  {
+    "item": "Q4359635",
+    "itemLabel": "بیران‌شهر"
+  },
+  {
+    "item": "Q4359664",
+    "itemLabel": "کلور"
+  },
+  {
+    "item": "Q4359837",
+    "itemLabel": "عنبران"
+  },
+  {
+    "item": "Q4359859",
+    "itemLabel": "کوراییم"
+  },
+  {
+    "item": "Q4359867",
+    "itemLabel": "سورمق"
+  },
+  {
+    "item": "Q4359872",
+    "itemLabel": "سیلوانه"
+  },
+  {
+    "item": "Q4360356",
+    "itemLabel": "شوسف"
+  },
+  {
+    "item": "Q4360365",
+    "itemLabel": "سومار"
+  },
+  {
+    "item": "Q4360390",
+    "itemLabel": "مومن‌آباد"
+  },
+  {
+    "item": "Q4360398",
+    "itemLabel": "ارسک"
+  },
+  {
+    "item": "Q4360532",
+    "itemLabel": "کارچان"
+  },
+  {
+    "item": "Q4360547",
+    "itemLabel": "چیتاب"
+  },
+  {
+    "item": "Q4361202",
+    "itemLabel": "رودآب"
+  },
+  {
+    "item": "Q4361419",
+    "itemLabel": "سالند"
+  },
+  {
+    "item": "Q4361548",
+    "itemLabel": "تیکمه‌داش"
+  },
+  {
+    "item": "Q4361894",
+    "itemLabel": "لوجلی"
+  },
+  {
+    "item": "Q4361915",
+    "itemLabel": "دلوار"
+  },
+  {
+    "item": "Q4361932",
+    "itemLabel": "اختیارآباد"
+  },
+  {
+    "item": "Q4362312",
+    "itemLabel": "لیسار"
+  },
+  {
+    "item": "Q4362517",
+    "itemLabel": "تودشک"
+  },
+  {
+    "item": "Q4362599",
+    "itemLabel": "رفیع"
+  },
+  {
+    "item": "Q4362902",
+    "itemLabel": "خاروانا"
+  },
+  {
+    "item": "Q4362930",
+    "itemLabel": "اندوهجرد"
+  },
+  {
+    "item": "Q4362947",
+    "itemLabel": "بیضا"
+  },
+  {
+    "item": "Q4362960",
+    "itemLabel": "کره‌ای"
+  },
+  {
+    "item": "Q4362972",
+    "itemLabel": "کشاورز"
+  },
+  {
+    "item": "Q4363045",
+    "itemLabel": "باغین"
+  },
+  {
+    "item": "Q4363066",
+    "itemLabel": "گلزار"
+  },
+  {
+    "item": "Q4363865",
+    "itemLabel": "رازقان"
+  },
+  {
+    "item": "Q4363869",
+    "itemLabel": "صباشهر"
+  },
+  {
+    "item": "Q4363874",
+    "itemLabel": "شربیان"
+  },
+  {
+    "item": "Q4364033",
+    "itemLabel": "رباط سنگ"
+  },
+  {
+    "item": "Q4364044",
+    "itemLabel": "کانی‌سور"
+  },
+  {
+    "item": "Q4364149",
+    "itemLabel": "کومله"
+  },
+  {
+    "item": "Q4364180",
+    "itemLabel": "دامنه"
+  },
+  {
+    "item": "Q4364206",
+    "itemLabel": "قطرویه"
+  },
+  {
+    "item": "Q4364301",
+    "itemLabel": "کوهین"
+  },
+  {
+    "item": "Q4364304",
+    "itemLabel": "امین‌شهر"
+  },
+  {
+    "item": "Q4364505",
+    "itemLabel": "مرزیکلا"
+  },
+  {
+    "item": "Q4364664",
+    "itemLabel": "شرفخانه"
+  },
+  {
+    "item": "Q4364706",
+    "itemLabel": "ترک"
+  },
+  {
+    "item": "Q4364998",
+    "itemLabel": "تازه‌کند انگوت"
+  },
+  {
+    "item": "Q4365004",
+    "itemLabel": "جعفرآباد"
+  },
+  {
+    "item": "Q4365016",
+    "itemLabel": "رضی"
+  },
+  {
+    "item": "Q4365059",
+    "itemLabel": "شیرین‌سو"
+  },
+  {
+    "item": "Q4365071",
+    "itemLabel": "کوزه‌کنان"
+  },
+  {
+    "item": "Q4365097",
+    "itemLabel": "محمدآباد"
+  },
+  {
+    "item": "Q4365240",
+    "itemLabel": "خواجه"
+  },
+  {
+    "item": "Q4365359",
+    "itemLabel": "ایواوغلی"
+  },
+  {
+    "item": "Q4365366",
+    "itemLabel": "افوس"
+  },
+  {
+    "item": "Q4365374",
+    "itemLabel": "چوبر"
+  },
+  {
+    "item": "Q4365381",
+    "itemLabel": "حویق"
+  },
+  {
+    "item": "Q4365440",
+    "itemLabel": "موسیان"
+  },
+  {
+    "item": "Q4365932",
+    "itemLabel": "هشجین"
+  },
+  {
+    "item": "Q4370533",
+    "itemLabel": "علامرودشت"
+  },
+  {
+    "item": "Q4370752",
+    "itemLabel": "گتاب"
+  },
+  {
+    "item": "Q4370819",
+    "itemLabel": "شنبه (شهر)"
+  },
+  {
+    "item": "Q4370822",
+    "itemLabel": "سیس"
+  },
+  {
+    "item": "Q4370903",
+    "itemLabel": "توحید"
+  },
+  {
+    "item": "Q4370969",
+    "itemLabel": "سراب‌باغ"
+  },
+  {
+    "item": "Q4371130",
+    "itemLabel": "حسن‌آباد"
+  },
+  {
+    "item": "Q4371135",
+    "itemLabel": "چهاربرج"
+  },
+  {
+    "item": "Q4371143",
+    "itemLabel": "محمدیار"
+  },
+  {
+    "item": "Q4371162",
+    "itemLabel": "آواجیق"
+  },
+  {
+    "item": "Q4371167",
+    "itemLabel": "آبش‌احمد"
+  },
+  {
+    "item": "Q4371173",
+    "itemLabel": "نظرکهریزی"
+  },
+  {
+    "item": "Q4371178",
+    "itemLabel": "آرمرده"
+  },
+  {
+    "item": "Q4371192",
+    "itemLabel": "پیش‌قلعه"
+  },
+  {
+    "item": "Q4371198",
+    "itemLabel": "نالوس"
+  },
+  {
+    "item": "Q4371205",
+    "itemLabel": "ملک‌کیان"
+  },
+  {
+    "item": "Q4371207",
+    "itemLabel": "نافچ"
+  },
+  {
+    "item": "Q4371214",
+    "itemLabel": "خضرآباد"
+  },
+  {
+    "item": "Q4371417",
+    "itemLabel": "شاهدشهر"
+  },
+  {
+    "item": "Q4371496",
+    "itemLabel": "آبعلی"
+  },
+  {
+    "item": "Q4371506",
+    "itemLabel": "هلشی"
+  },
+  {
+    "item": "Q4371518",
+    "itemLabel": "نیک‌آباد"
+  },
+  {
+    "item": "Q4371553",
+    "itemLabel": "لومار"
+  },
+  {
+    "item": "Q4371604",
+    "itemLabel": "بخشایش"
+  },
+  {
+    "item": "Q4371671",
+    "itemLabel": "اطاقور"
+  },
+  {
+    "item": "Q4372805",
+    "itemLabel": "بره‌سر"
+  },
+  {
+    "item": "Q4372882",
+    "itemLabel": "بناب مرند"
+  },
+  {
+    "item": "Q4372887",
+    "itemLabel": "جندق"
+  },
+  {
+    "item": "Q4372937",
+    "itemLabel": "میمه"
+  },
+  {
+    "item": "Q4373564",
+    "itemLabel": "باروق"
+  },
+  {
+    "item": "Q4418177",
+    "itemLabel": "سیاه‌منصور"
+  },
+  {
+    "item": "Q2280675",
+    "itemLabel": "سیاهکل"
+  },
+  {
+    "item": "Q2320730",
+    "itemLabel": "آرادان"
+  },
+  {
+    "item": "Q2321858",
+    "itemLabel": "فریدون‌شهر"
+  },
+  {
+    "item": "Q2325495",
+    "itemLabel": "فارسان"
+  },
+  {
+    "item": "Q2351813",
+    "itemLabel": "زازران"
+  },
+  {
+    "item": "Q2352917",
+    "itemLabel": "شاپورآباد"
+  },
+  {
+    "item": "Q2403040",
+    "itemLabel": "سوران"
+  },
+  {
+    "item": "Q2407286",
+    "itemLabel": "سردرود"
+  },
+  {
+    "item": "Q2407773",
+    "itemLabel": "گوگان"
+  },
+  {
+    "item": "Q2407786",
+    "itemLabel": "شندآباد"
+  },
+  {
+    "item": "Q2407798",
+    "itemLabel": "داران"
+  },
+  {
+    "item": "Q2407813",
+    "itemLabel": "رزوه"
+  },
+  {
+    "item": "Q2407825",
+    "itemLabel": "لیلان"
+  },
+  {
+    "item": "Q2407837",
+    "itemLabel": "ماماقان"
+  },
+  {
+    "item": "Q2407865",
+    "itemLabel": "برف‌انبار"
+  },
+  {
+    "item": "Q2407877",
+    "itemLabel": "هادی‌شهر"
+  },
+  {
+    "item": "Q2407891",
+    "itemLabel": "مهربان"
+  },
+  {
+    "item": "Q2407909",
+    "itemLabel": "یامچی"
+  },
+  {
+    "item": "Q2407921",
+    "itemLabel": "بوئین و میاندشت"
+  },
+  {
+    "item": "Q2407931",
+    "itemLabel": "خسروشاه"
+  },
+  {
+    "item": "Q2407947",
+    "itemLabel": "کشکسرای"
+  },
+  {
+    "item": "Q2409254",
+    "itemLabel": "خور"
+  },
+  {
+    "item": "Q2409279",
+    "itemLabel": "خاوران"
+  },
+  {
+    "item": "Q2410163",
+    "itemLabel": "افزر"
+  },
+  {
+    "item": "Q2415228",
+    "itemLabel": "مریانج"
+  },
+  {
+    "item": "Q2415324",
+    "itemLabel": "بندر خمیر"
+  },
+  {
+    "item": "Q2415341",
+    "itemLabel": "آریاشهر"
+  },
+  {
+    "item": "Q2415433",
+    "itemLabel": "سرابله"
+  },
+  {
+    "item": "Q2416536",
+    "itemLabel": "دلگشا"
+  },
+  {
+    "item": "Q2416549",
+    "itemLabel": "پهله"
+  },
+  {
+    "item": "Q2416555",
+    "itemLabel": "رابر"
+  },
+  {
+    "item": "Q2416566",
+    "itemLabel": "گلباف"
+  },
+  {
+    "item": "Q2416578",
+    "itemLabel": "ارکواز"
+  },
+  {
+    "item": "Q2416584",
+    "itemLabel": "بدره"
+  },
+  {
+    "item": "Q2416601",
+    "itemLabel": "کوهبنان"
+  },
+  {
+    "item": "Q2416622",
+    "itemLabel": "درب بهشت"
+  },
+  {
+    "item": "Q2416632",
+    "itemLabel": "ارزوئیه"
+  },
+  {
+    "item": "Q2418929",
+    "itemLabel": "کوزران"
+  },
+  {
+    "item": "Q2420214",
+    "itemLabel": "زیدآباد"
+  },
+  {
+    "item": "Q2420234",
+    "itemLabel": "رودبار"
+  },
+  {
+    "item": "Q2420257",
+    "itemLabel": "پاریز"
+  },
+  {
+    "item": "Q2420283",
+    "itemLabel": "صفی‌آباد"
+  },
+  {
+    "item": "Q2420303",
+    "itemLabel": "چترود"
+  },
+  {
+    "item": "Q2420673",
+    "itemLabel": "طرقبه"
+  },
+  {
+    "item": "Q2420744",
+    "itemLabel": "مس سرچشمه"
+  },
+  {
+    "item": "Q2420754",
+    "itemLabel": "کشکوئیه"
+  },
+  {
+    "item": "Q2420788",
+    "itemLabel": "بهرمان"
+  },
+  {
+    "item": "Q2420800",
+    "itemLabel": "جوزم"
+  },
+  {
+    "item": "Q2420818",
+    "itemLabel": "حصار گرم‌خان"
+  },
+  {
+    "item": "Q2420833",
+    "itemLabel": "خرسند"
+  },
+  {
+    "item": "Q2420846",
+    "itemLabel": "اسدیه"
+  },
+  {
+    "item": "Q2420862",
+    "itemLabel": "یزدان‌شهر"
+  },
+  {
+    "item": "Q2420882",
+    "itemLabel": "اسلامیه"
+  },
+  {
+    "item": "Q2420896",
+    "itemLabel": "نجف‌شهر"
+  },
+  {
+    "item": "Q2420909",
+    "itemLabel": "بروات"
+  },
+  {
+    "item": "Q2420922",
+    "itemLabel": "دهج"
+  },
+  {
+    "item": "Q2420932",
+    "itemLabel": "نرماشیر"
+  },
+  {
+    "item": "Q2420935",
+    "itemLabel": "فهرج"
+  },
+  {
+    "item": "Q2420957",
+    "itemLabel": "ریحان‌شهر"
+  },
+  {
+    "item": "Q2421098",
+    "itemLabel": "اقبالیه"
+  },
+  {
+    "item": "Q2421115",
+    "itemLabel": "شال"
+  },
+  {
+    "item": "Q2421130",
+    "itemLabel": "توره"
+  },
+  {
+    "item": "Q2421146",
+    "itemLabel": "سگزآباد"
+  },
+  {
+    "item": "Q2421161",
+    "itemLabel": "قدمگاه"
+  },
+  {
+    "item": "Q2421180",
+    "itemLabel": "دزآب"
+  },
+  {
+    "item": "Q2421210",
+    "itemLabel": "خواف"
+  },
+  {
+    "item": "Q2421225",
+    "itemLabel": "فرمهین"
+  },
+  {
+    "item": "Q2421238",
+    "itemLabel": "خاکعلی"
+  },
+  {
+    "item": "Q2421271",
+    "itemLabel": "شیبان"
+  },
+  {
+    "item": "Q2421286",
+    "itemLabel": "ارداق"
+  },
+  {
+    "item": "Q2421298",
+    "itemLabel": "بزمان"
+  },
+  {
+    "item": "Q2421310",
+    "itemLabel": "نگور"
+  },
+  {
+    "item": "Q2421324",
+    "itemLabel": "گراب"
+  },
+  {
+    "item": "Q2421547",
+    "itemLabel": "دیشموک"
+  },
+  {
+    "item": "Q2421737",
+    "itemLabel": "فلاورجان"
+  },
+  {
+    "item": "Q2422655",
+    "itemLabel": "نیک‌شهر"
+  },
+  {
+    "item": "Q2422675",
+    "itemLabel": "زاغه"
+  },
+  {
+    "item": "Q2422702",
+    "itemLabel": "حسن‌آباد یاسوکند"
+  },
+  {
+    "item": "Q2422726",
+    "itemLabel": "ادیمی"
+  },
+  {
+    "item": "Q2422753",
+    "itemLabel": "بایگ"
+  },
+  {
+    "item": "Q2422775",
+    "itemLabel": "اسپکه"
+  },
+  {
+    "item": "Q2422793",
+    "itemLabel": "ضیاءآباد"
+  },
+  {
+    "item": "Q2422906",
+    "itemLabel": "بنجار"
+  },
+  {
+    "item": "Q2422931",
+    "itemLabel": "دزج"
+  },
+  {
+    "item": "Q2422943",
+    "itemLabel": "بیارجمند"
+  },
+  {
+    "item": "Q2422959",
+    "itemLabel": "معلم‌کلایه"
+  },
+  {
+    "item": "Q2423358",
+    "itemLabel": "آب‌گرم"
+  },
+  {
+    "item": "Q2423373",
+    "itemLabel": "کلاته خیج"
+  },
+  {
+    "item": "Q2423386",
+    "itemLabel": "دستجرد"
+  },
+  {
+    "item": "Q2423398",
+    "itemLabel": "ایوانکی"
+  },
+  {
+    "item": "Q2423410",
+    "itemLabel": "موچش"
+  },
+  {
+    "item": "Q2423427",
+    "itemLabel": "زهک"
+  },
+  {
+    "item": "Q2423440",
+    "itemLabel": "درجزین"
+  },
+  {
+    "item": "Q2423455",
+    "itemLabel": "فنوج"
+  },
+  {
+    "item": "Q2423471",
+    "itemLabel": "سیرکان"
+  },
+  {
+    "item": "Q2423487",
+    "itemLabel": "بنت"
+  },
+  {
+    "item": "Q2423501",
+    "itemLabel": "بلبان‌آباد"
+  },
+  {
+    "item": "Q2423518",
+    "itemLabel": "نوک‌آباد"
+  },
+  {
+    "item": "Q2423532",
+    "itemLabel": "میامی"
+  },
+  {
+    "item": "Q2423545",
+    "itemLabel": "اسفرورین"
+  },
+  {
+    "item": "Q4517123",
+    "itemLabel": "چلیچه (فارسان)"
+  },
+  {
+    "item": "Q4521363",
+    "itemLabel": "شهر جدید صدرا"
+  },
+  {
+    "item": "Q4576750",
+    "itemLabel": "بردسکن"
+  },
+  {
+    "item": "Q4663189",
+    "itemLabel": "آباد (تنگستان)"
+  },
+  {
+    "item": "Q4667264",
+    "itemLabel": "آبژدان (مسجدسلیمان)"
+  },
+  {
+    "item": "Q4695617",
+    "itemLabel": "احمدآباد (تربت جام)"
+  },
+  {
+    "item": "Q4699744",
+    "itemLabel": "آجین"
+  },
+  {
+    "item": "Q4751697",
+    "itemLabel": "انارستان (جم)"
+  },
+  {
+    "item": "Q4808403",
+    "itemLabel": "هماشهر"
+  },
+  {
+    "item": "Q4810120",
+    "itemLabel": "میرآباد"
+  },
+  {
+    "item": "Q4811029",
+    "itemLabel": "دهرم"
+  },
+  {
+    "item": "Q4811058",
+    "itemLabel": "رامجرد"
+  },
+  {
+    "item": "Q4811070",
+    "itemLabel": "باب انار"
+  },
+  {
+    "item": "Q4811077",
+    "itemLabel": "صفائیه"
+  },
+  {
+    "item": "Q4811086",
+    "itemLabel": "محمدآباد گنبکی"
+  },
+  {
+    "item": "Q4811093",
+    "itemLabel": "خاتون‌آباد"
+  },
+  {
+    "item": "Q4811309",
+    "itemLabel": "کتالم و سادات‌شهر"
+  },
+  {
+    "item": "Q4811373",
+    "itemLabel": "چاف و چمخاله"
+  },
+  {
+    "item": "Q4811590",
+    "itemLabel": "فرخی"
+  },
+  {
+    "item": "Q4841169",
+    "itemLabel": "بادوله"
+  },
+  {
+    "item": "Q4854724",
+    "itemLabel": "بندو (دشتی)"
+  },
+  {
+    "item": "Q4904229",
+    "itemLabel": "بیدروبه‌مرکزی"
+  },
+  {
+    "item": "Q4907297",
+    "itemLabel": "بیکا"
+  },
+  {
+    "item": "Q4984810",
+    "itemLabel": "دشتک"
+  },
+  {
+    "item": "Q4984828",
+    "itemLabel": "سرخون"
+  },
+  {
+    "item": "Q5001519",
+    "itemLabel": "بوشکان"
+  },
+  {
+    "item": "Q5067538",
+    "itemLabel": "دهستان لواسان بزرگ"
+  },
+  {
+    "item": "Q5069202",
+    "itemLabel": "چم‌گلک"
+  },
+  {
+    "item": "Q5088507",
+    "itemLabel": "چویبده"
+  },
+  {
+    "item": "Q5103164",
+    "itemLabel": "گوجان"
+  },
+  {
+    "item": "Q5103207",
+    "itemLabel": "پردنجان"
+  },
+  {
+    "item": "Q5103848",
+    "itemLabel": "چغامیش (دزفول)"
+  },
+  {
+    "item": "Q5223655",
+    "itemLabel": "دارخوین"
+  },
+  {
+    "item": "Q5226871",
+    "itemLabel": "دستنا (شهرکرد)"
+  },
+  {
+    "item": "Q5303637",
+    "itemLabel": "دوراهک"
+  },
+  {
+    "item": "Q5360139",
+    "itemLabel": "الهایی"
+  },
+  {
+    "item": "Q5368784",
+    "itemLabel": "عمادده"
+  },
+  {
+    "item": "Q5445603",
+    "itemLabel": "فرون‌آباد"
+  },
+  {
+    "item": "Q5524477",
+    "itemLabel": "گروک (میناب)"
+  },
+  {
+    "item": "Q5529144",
+    "itemLabel": "گزیک (درمیان)"
+  },
+  {
+    "item": "Q5580873",
+    "itemLabel": "گلمکان (چناران)"
+  },
+  {
+    "item": "Q5590068",
+    "itemLabel": "گوهران"
+  },
+  {
+    "item": "Q5620098",
+    "itemLabel": "گوریه"
+  },
+  {
+    "item": "Q5638441",
+    "itemLabel": "هفت‌چشمه"
+  },
+  {
+    "item": "Q5654967",
+    "itemLabel": "هرچگان"
+  },
+  {
+    "item": "Q5666673",
+    "itemLabel": "احمدآباد مستوفی"
+  },
+  {
+    "item": "Q5678160",
+    "itemLabel": "امامزاده عبدالله"
+  },
+  {
+    "item": "Q5679403",
+    "itemLabel": "دهستان بزنجان"
+  },
+  {
+    "item": "Q5684098",
+    "itemLabel": "مبارک آباد (ملکان)"
+  },
+  {
+    "item": "Q5700869",
+    "itemLabel": "مرگنلر"
+  },
+  {
+    "item": "Q5702085",
+    "itemLabel": "جاورسیان"
+  },
+  {
+    "item": "Q5704623",
+    "itemLabel": "یزدانشهر نجف آباد"
+  },
+  {
+    "item": "Q5709771",
+    "itemLabel": "محمدآباد (ایرانشهر)"
+  },
+  {
+    "item": "Q5712809",
+    "itemLabel": "زیار (اصفهان)"
+  },
+  {
+    "item": "Q5715482",
+    "itemLabel": "شهر فتح‌المبین"
+  },
+  {
+    "item": "Q5722929",
+    "itemLabel": "زرآباد (خوی)"
+  },
+  {
+    "item": "Q5723355",
+    "itemLabel": "جوان‌قلعه"
+  },
+  {
+    "item": "Q5731263",
+    "itemLabel": "قطور (شهر)"
+  },
+  {
+    "item": "Q5750489",
+    "itemLabel": "پایین هولار"
+  },
+  {
+    "item": "Q5778231",
+    "itemLabel": "فدامی"
+  },
+  {
+    "item": "Q5778864",
+    "itemLabel": "خوزی (مهر)"
+  },
+  {
+    "item": "Q5785400",
+    "itemLabel": "حسامی"
+  },
+  {
+    "item": "Q5787905",
+    "itemLabel": "خانه زنیان"
+  },
+  {
+    "item": "Q5787906",
+    "itemLabel": "میانده (فسا)"
+  },
+  {
+    "item": "Q5790729",
+    "itemLabel": "بانه‌وره"
+  },
+  {
+    "item": "Q5790756",
+    "itemLabel": "سماله"
+  },
+  {
+    "item": "Q5791193",
+    "itemLabel": "دوبرجی (داراب)"
+  },
+  {
+    "item": "Q5793218",
+    "itemLabel": "تروجن (شهیدآباد)"
+  },
+  {
+    "item": "Q5799618",
+    "itemLabel": "بابامنیر"
+  },
+  {
+    "item": "Q5801573",
+    "itemLabel": "بلوک"
+  },
+  {
+    "item": "Q5805062",
+    "itemLabel": "خانیمن"
+  },
+  {
+    "item": "Q5807198",
+    "itemLabel": "کوهنجان (سروستان)"
+  },
+  {
+    "item": "Q5808988",
+    "itemLabel": "مشراگه (رامشیر)"
+  },
+  {
+    "item": "Q5812633",
+    "itemLabel": "لای بید"
+  },
+  {
+    "item": "Q5816011",
+    "itemLabel": "شهرک حمزه (دزفول)"
+  },
+  {
+    "item": "Q5816874",
+    "itemLabel": "نیک‌پی"
+  },
+  {
+    "item": "Q5817058",
+    "itemLabel": "حسن‌آباد"
+  },
+  {
+    "item": "Q5820818",
+    "itemLabel": "لاله زار (بردسیر)"
+  },
+  {
+    "item": "Q5820831",
+    "itemLabel": "زهکلوت"
+  },
+  {
+    "item": "Q5820938",
+    "itemLabel": "هارونی (شهرکرد)"
+  },
+  {
+    "item": "Q5821614",
+    "itemLabel": "شهرک علی‌اکبر"
+  },
+  {
+    "item": "Q5823014",
+    "itemLabel": "زرآباد (کنارک)"
+  },
+  {
+    "item": "Q5825486",
+    "itemLabel": "بفروییه"
+  },
+  {
+    "item": "Q5830658",
+    "itemLabel": "تیمورلو (آذرشهر)"
+  },
+  {
+    "item": "Q5833367",
+    "itemLabel": "کرسف"
+  },
+  {
+    "item": "Q5834174",
+    "itemLabel": "مادرسلیمان (پاسارگاد)"
+  },
+  {
+    "item": "Q5839883",
+    "itemLabel": "قلعه قاضی (بندرعباس)"
+  },
+  {
+    "item": "Q5846529",
+    "itemLabel": "بلورد (سیرجان)"
+  },
+  {
+    "item": "Q5847120",
+    "itemLabel": "دشتکار (بردسیر)"
+  },
+  {
+    "item": "Q5849008",
+    "itemLabel": "دوساری"
+  },
+  {
+    "item": "Q5855070",
+    "itemLabel": "شمس‌آباد"
+  },
+  {
+    "item": "Q5855952",
+    "itemLabel": "محمدی (سراوان)"
+  },
+  {
+    "item": "Q5866036",
+    "itemLabel": "اصغرآباد"
+  },
+  {
+    "item": "Q5866348",
+    "itemLabel": "کوهستک"
+  },
+  {
+    "item": "Q5867341",
+    "itemLabel": "سین (برخوار و میمه)"
+  },
+  {
+    "item": "Q5867796",
+    "itemLabel": "گرگاب (برخوار و میمه)"
+  },
+  {
+    "item": "Q5867965",
+    "itemLabel": "شباب (شیروان و چرداول)"
+  },
+  {
+    "item": "Q5868397",
+    "itemLabel": "ماژین"
+  },
+  {
+    "item": "Q5868441",
+    "itemLabel": "پیرتاج"
+  },
+  {
+    "item": "Q5869923",
+    "itemLabel": "سیمره (شهر)"
+  },
+  {
+    "item": "Q2430889",
+    "itemLabel": "ماهدشت"
+  },
+  {
+    "item": "Q2430900",
+    "itemLabel": "محمدشهر"
+  },
+  {
+    "item": "Q2430914",
+    "itemLabel": "کمال‌شهر"
+  },
+  {
+    "item": "Q2430924",
+    "itemLabel": "گرمدره"
+  },
+  {
+    "item": "Q2430932",
+    "itemLabel": "مشکین‌دشت"
+  },
+  {
+    "item": "Q2431335",
+    "itemLabel": "آران و بیدگل"
+  },
+  {
+    "item": "Q2431952",
+    "itemLabel": "حر ریاحی"
+  },
+  {
+    "item": "Q2437207",
+    "itemLabel": "کوهسار"
+  },
+  {
+    "item": "Q2437702",
+    "itemLabel": "چهارباغ"
+  },
+  {
+    "item": "Q2438142",
+    "itemLabel": "هرات"
+  },
+  {
+    "item": "Q2438546",
+    "itemLabel": "گرماب"
+  },
+  {
+    "item": "Q2438570",
+    "itemLabel": "حلب"
+  },
+  {
+    "item": "Q2438575",
+    "itemLabel": "حمیدیا"
+  },
+  {
+    "item": "Q2438584",
+    "itemLabel": "مهردشت"
+  },
+  {
+    "item": "Q2438594",
+    "itemLabel": "ارمغان‌خانه"
+  },
+  {
+    "item": "Q2438602",
+    "itemLabel": "جوادآباد"
+  },
+  {
+    "item": "Q2438612",
+    "itemLabel": "دیهوک"
+  },
+  {
+    "item": "Q2438632",
+    "itemLabel": "بومهن"
+  },
+  {
+    "item": "Q2438644",
+    "itemLabel": "شاهدیه"
+  },
+  {
+    "item": "Q2450195",
+    "itemLabel": "زارچ"
+  },
+  {
+    "item": "Q2450216",
+    "itemLabel": "بهاباد"
+  },
+  {
+    "item": "Q2450248",
+    "itemLabel": "نصیرشهر"
+  },
+  {
+    "item": "Q2450795",
+    "itemLabel": "ندوشن"
+  },
+  {
+    "item": "Q2450807",
+    "itemLabel": "مروست"
+  },
+  {
+    "item": "Q2450816",
+    "itemLabel": "دندی"
+  },
+  {
+    "item": "Q2450840",
+    "itemLabel": "عشق‌آباد"
+  },
+  {
+    "item": "Q2450850",
+    "itemLabel": "کهریزک"
+  },
+  {
+    "item": "Q2452832",
+    "itemLabel": "سیه‌رود"
+  },
+  {
+    "item": "Q2484917",
+    "itemLabel": "جنت‌مکان"
+  },
+  {
+    "item": "Q2537446",
+    "itemLabel": "قرچک"
+  },
+  {
+    "item": "Q2538472",
+    "itemLabel": "ملارد"
+  },
+  {
+    "item": "Q2549164",
+    "itemLabel": "املش"
+  },
+  {
+    "item": "Q2549731",
+    "itemLabel": "نمین"
+  },
+  {
+    "item": "Q2556849",
+    "itemLabel": "پلدشت"
+  },
+  {
+    "item": "Q2566415",
+    "itemLabel": "لواسان"
+  },
+  {
+    "item": "Q2570924",
+    "itemLabel": "نظرآباد"
+  },
+  {
+    "item": "Q2570951",
+    "itemLabel": "گرمی"
+  },
+  {
+    "item": "Q2570968",
+    "itemLabel": "چناران"
+  },
+  {
+    "item": "Q2572706",
+    "itemLabel": "آق‌قلا"
+  },
+  {
+    "item": "Q2572771",
+    "itemLabel": "جیرنده"
+  },
+  {
+    "item": "Q2575075",
+    "itemLabel": "شوط"
+  },
+  {
+    "item": "Q2607247",
+    "itemLabel": "گهرو"
+  },
+  {
+    "item": "Q2607258",
+    "itemLabel": "سودجان"
+  },
+  {
+    "item": "Q2607265",
+    "itemLabel": "طاقانک"
+  },
+  {
+    "item": "Q2607273",
+    "itemLabel": "ناغان"
+  },
+  {
+    "item": "Q2609581",
+    "itemLabel": "سرباز"
+  },
+  {
+    "item": "Q2610782",
+    "itemLabel": "وحدتیه"
+  },
+  {
+    "item": "Q2610892",
+    "itemLabel": "سعدآباد"
+  },
+  {
+    "item": "Q2610943",
+    "itemLabel": "کیان"
+  },
+  {
+    "item": "Q2610947",
+    "itemLabel": "جونقان"
+  },
+  {
+    "item": "Q2613509",
+    "itemLabel": "خومه‌زار"
+  },
+  {
+    "item": "Q2613865",
+    "itemLabel": "مشکات"
+  },
+  {
+    "item": "Q2613871",
+    "itemLabel": "دستگرد"
+  },
+  {
+    "item": "Q2613878",
+    "itemLabel": "سورشجان"
+  },
+  {
+    "item": "Q2613888",
+    "itemLabel": "ایمان‌شهر"
+  },
+  {
+    "item": "Q2613894",
+    "itemLabel": "باباحیدر"
+  },
+  {
+    "item": "Q2613901",
+    "itemLabel": "جوشقان و کامو"
+  },
+  {
+    "item": "Q2613914",
+    "itemLabel": "ورزنه"
+  },
+  {
+    "item": "Q2613921",
+    "itemLabel": "علویجه"
+  },
+  {
+    "item": "Q2613953",
+    "itemLabel": "میمند"
+  },
+  {
+    "item": "Q2614183",
+    "itemLabel": "زواره"
+  },
+  {
+    "item": "Q2614187",
+    "itemLabel": "پیربکران"
+  },
+  {
+    "item": "Q2614193",
+    "itemLabel": "حبیب آباد برخوار"
+  },
+  {
+    "item": "Q2614200",
+    "itemLabel": "خوراسگان"
+  },
+  {
+    "item": "Q2614204",
+    "itemLabel": "بن"
+  },
+  {
+    "item": "Q2614211",
+    "itemLabel": "کوشک"
+  },
+  {
+    "item": "Q2614216",
+    "itemLabel": "ابریشم"
+  },
+  {
+    "item": "Q2614223",
+    "itemLabel": "کلیشاد و سودرجان"
+  },
+  {
+    "item": "Q2614231",
+    "itemLabel": "هفشجان"
+  },
+  {
+    "item": "Q2614238",
+    "itemLabel": "بهاران‌شهر"
+  },
+  {
+    "item": "Q2614242",
+    "itemLabel": "درچه‌پیاز"
+  },
+  {
+    "item": "Q2614246",
+    "itemLabel": "قهدریجان"
+  },
+  {
+    "item": "Q2614253",
+    "itemLabel": "فرخ‌شهر"
+  },
+  {
+    "item": "Q2614259",
+    "itemLabel": "ششده"
+  },
+  {
+    "item": "Q2614267",
+    "itemLabel": "دهق"
+  },
+  {
+    "item": "Q2614276",
+    "itemLabel": "داریان"
+  },
+  {
+    "item": "Q2614282",
+    "itemLabel": "ایج"
+  },
+  {
+    "item": "Q2614683",
+    "itemLabel": "نصرآباد"
+  },
+  {
+    "item": "Q2616762",
+    "itemLabel": "زاهدشهر"
+  },
+  {
+    "item": "Q2616779",
+    "itemLabel": "دولت‌آباد"
+  },
+  {
+    "item": "Q2617052",
+    "itemLabel": "شهرپیر"
+  },
+  {
+    "item": "Q2617059",
+    "itemLabel": "قائمیه"
+  },
+  {
+    "item": "Q2617065",
+    "itemLabel": "سعادت‌شهر"
+  },
+  {
+    "item": "Q2617075",
+    "itemLabel": "گله‌دار"
+  },
+  {
+    "item": "Q2617085",
+    "itemLabel": "مهر"
+  },
+  {
+    "item": "Q2617093",
+    "itemLabel": "دبیران"
+  },
+  {
+    "item": "Q2617100",
+    "itemLabel": "اردکان"
+  },
+  {
+    "item": "Q2617195",
+    "itemLabel": "لپوئی"
+  },
+  {
+    "item": "Q2617493",
+    "itemLabel": "سرعین"
+  },
+  {
+    "item": "Q2620409",
+    "itemLabel": "فارغان"
+  },
+  {
+    "item": "Q2620419",
+    "itemLabel": "بنارویه"
+  },
+  {
+    "item": "Q2620427",
+    "itemLabel": "سوزا"
+  },
+  {
+    "item": "Q2620437",
+    "itemLabel": "هشت‌بندی"
+  },
+  {
+    "item": "Q2620521",
+    "itemLabel": "خورزوق"
+  },
+  {
+    "item": "Q2620725",
+    "itemLabel": "باغ‌ملک"
+  },
+  {
+    "item": "Q2620740",
+    "itemLabel": "سندرک"
+  },
+  {
+    "item": "Q2620745",
+    "itemLabel": "فین"
+  },
+  {
+    "item": "Q2620749",
+    "itemLabel": "زیارت‌علی"
+  },
+  {
+    "item": "Q2620754",
+    "itemLabel": "نگار"
+  },
+  {
+    "item": "Q2620760",
+    "itemLabel": "صیدون"
+  },
+  {
+    "item": "Q2986542",
+    "itemLabel": "کنگ"
+  },
+  {
+    "item": "Q3015863",
+    "itemLabel": "پیرانشهر"
+  },
+  {
+    "item": "Q3076024",
+    "itemLabel": "رباط"
+  },
+  {
+    "item": "Q3441110",
+    "itemLabel": "عالی‌شهر"
+  },
+  {
+    "item": "Q3446117",
+    "itemLabel": "رویان (شهر)"
+  },
+  {
+    "item": "Q3606974",
+    "itemLabel": "احمدآباد"
+  },
+  {
+    "item": "Q3666859",
+    "itemLabel": "چورزق"
+  },
+  {
+    "item": "Q3667163",
+    "itemLabel": "نوسود"
+  },
+  {
+    "item": "Q3675850",
+    "itemLabel": "زرینه"
+  },
+  {
+    "item": "Q3702463",
+    "itemLabel": "داق‌داق‌آباد"
+  },
+  {
+    "item": "Q3779843",
+    "itemLabel": "گوراب زرمیخ"
+  },
+  {
+    "item": "Q3783625",
+    "itemLabel": "Q3783625"
+  },
+  {
+    "item": "Q3815011",
+    "itemLabel": "خشکرود (زرندیه)"
+  },
+  {
+    "item": "Q3817305",
+    "itemLabel": "کوهی‌خیل"
+  },
+  {
+    "item": "Q3817548",
+    "itemLabel": "کوت سیدنعیم"
+  },
+  {
+    "item": "Q3842266",
+    "itemLabel": "مادوان علیا"
+  },
+  {
+    "item": "Q3849407",
+    "itemLabel": "مرجغل"
+  },
+  {
+    "item": "Q3870377",
+    "itemLabel": "نقنه"
+  },
+  {
+    "item": "Q3873472",
+    "itemLabel": "Q3873472"
+  },
+  {
+    "item": "Q3918192",
+    "itemLabel": "سردشت (هرمزگان)"
+  },
+  {
+    "item": "Q3926338",
+    "itemLabel": "قهجاورستان"
+  },
+  {
+    "item": "Q3945410",
+    "itemLabel": "صالح‌آباد"
+  },
+  {
+    "item": "Q3954577",
+    "itemLabel": "سه‌قلعه"
+  },
+  {
+    "item": "Q3959007",
+    "itemLabel": "شهرزو"
+  },
+  {
+    "item": "Q3959015",
+    "itemLabel": "Q3959015"
+  },
+  {
+    "item": "Q3964916",
+    "itemLabel": "سنقر"
+  },
+  {
+    "item": "Q3993831",
+    "itemLabel": "ترکالکی"
+  },
+  {
+    "item": "Q4023890",
+    "itemLabel": "زرنه"
+  },
+  {
+    "item": "Q4077187",
+    "itemLabel": "بنک"
+  },
+  {
+    "item": "Q4103699",
+    "itemLabel": "وردنجان"
+  },
+  {
+    "item": "Q4115081",
+    "itemLabel": "امام حسن‌"
+  },
+  {
+    "item": "Q4115088",
+    "itemLabel": "اهل"
+  },
+  {
+    "item": "Q4115196",
+    "itemLabel": "آبی‌بیگلو"
+  },
+  {
+    "item": "Q4115380",
+    "itemLabel": "اسالم"
+  },
+  {
+    "item": "Q4121917",
+    "itemLabel": "باجگیران"
+  },
+  {
+    "item": "Q4121918",
+    "itemLabel": "ربط"
+  },
+  {
+    "item": "Q4122247",
+    "itemLabel": "ایزدشهر"
+  },
+  {
+    "item": "Q4168823",
+    "itemLabel": "شوش"
+  },
+  {
+    "item": "Q4305009",
+    "itemLabel": "مهاجران (مرکزی)"
+  },
+  {
+    "item": "Q4357568",
+    "itemLabel": "سطر"
+  },
+  {
+    "item": "Q4357571",
+    "itemLabel": "وایقان"
+  },
+  {
+    "item": "Q4357574",
+    "itemLabel": "سرمست"
+  },
+  {
+    "item": "Q4357588",
+    "itemLabel": "شوقان"
+  },
+  {
+    "item": "Q4357594",
+    "itemLabel": "زهره"
+  },
+  {
+    "item": "Q4357618",
+    "itemLabel": "صفادشت"
+  },
+  {
+    "item": "Q4357644",
+    "itemLabel": "کلاته رودبار"
+  },
+  {
+    "item": "Q4357648",
+    "itemLabel": "کوه‌پایه"
+  },
+  {
+    "item": "Q4357667",
+    "itemLabel": "باینگان"
+  },
+  {
+    "item": "Q4357674",
+    "itemLabel": "جوپار"
+  },
+  {
+    "item": "Q4357676",
+    "itemLabel": "بویین سفلی"
+  },
+  {
+    "item": "Q4357678",
+    "itemLabel": "نوجین"
+  },
+  {
+    "item": "Q4357680",
+    "itemLabel": "درب گنبد"
+  },
+  {
+    "item": "Q4357694",
+    "itemLabel": "اژیه"
+  },
+  {
+    "item": "Q4357699",
+    "itemLabel": "مهاباد"
+  },
+  {
+    "item": "Q4357701",
+    "itemLabel": "سپیددشت"
+  },
+  {
+    "item": "Q4358207",
+    "itemLabel": "هیر"
+  },
+  {
+    "item": "Q4358220",
+    "itemLabel": "اصلاندوز"
+  },
+  {
+    "item": "Q4358518",
+    "itemLabel": "گردکشانه"
+  },
+  {
+    "item": "Q4358533",
+    "itemLabel": "قهاوند"
+  },
+  {
+    "item": "Q4358553",
+    "itemLabel": "سنخواست"
+  },
+  {
+    "item": "Q4358556",
+    "itemLabel": "تازه‌شهر"
+  },
+  {
+    "item": "Q4358559",
+    "itemLabel": "وحیدیه"
+  },
+  {
+    "item": "Q4358601",
+    "itemLabel": "کامفیروز"
+  },
+  {
+    "item": "Q4358618",
+    "itemLabel": "ارجمند"
+  },
+  {
+    "item": "Q4358620",
+    "itemLabel": "خمارلو"
+  },
+  {
+    "item": "Q4358628",
+    "itemLabel": "مال‌خلیفه"
+  },
+  {
+    "item": "Q4358630",
+    "itemLabel": "حمیل"
+  },
+  {
+    "item": "Q4358631",
+    "itemLabel": "واجارگاه"
+  },
+  {
+    "item": "Q4358639",
+    "itemLabel": "گلسار"
+  },
+  {
+    "item": "Q4358642",
+    "itemLabel": "کمشجه"
+  },
+  {
+    "item": "Q4358643",
+    "itemLabel": "هجدک"
+  },
+  {
+    "item": "Q4358647",
+    "itemLabel": "کلمه"
+  },
+  {
+    "item": "Q4358679",
+    "itemLabel": "احمدسرگوراب"
+  },
+  {
+    "item": "Q4358680",
+    "itemLabel": "باغستان"
+  },
+  {
+    "item": "Q4358681",
+    "itemLabel": "سیمینه"
+  },
+  {
+    "item": "Q4358682",
+    "itemLabel": "سهند"
+  },
+  {
+    "item": "Q4358684",
+    "itemLabel": "لطف‌آباد"
+  },
+  {
+    "item": "Q4358688",
+    "itemLabel": "مزداوند"
+  },
+  {
+    "item": "Q4358689",
+    "itemLabel": "رانکوه"
+  },
+  {
+    "item": "Q4358737",
+    "itemLabel": "ویسیان"
+  },
+  {
+    "item": "Q4358738",
+    "itemLabel": "سیردان"
+  },
+  {
+    "item": "Q4358740",
+    "itemLabel": "قورچی‌باشی"
+  },
+  {
+    "item": "Q4358742",
+    "itemLabel": "برزک"
+  },
+  {
+    "item": "Q4358743",
+    "itemLabel": "قاضی"
+  },
+  {
+    "item": "Q4358744",
+    "itemLabel": "دوزه"
+  },
+  {
+    "item": "Q4358747",
+    "itemLabel": "مردهک"
+  },
+  {
+    "item": "Q4358748",
+    "itemLabel": "دوزدوزان"
+  },
+  {
+    "item": "Q4358750",
+    "itemLabel": "ازگله"
+  },
+  {
+    "item": "Q4358839",
+    "itemLabel": "شهرآباد"
+  },
+  {
+    "item": "Q4358842",
+    "itemLabel": "شلمان"
+  },
+  {
+    "item": "Q4358963",
+    "itemLabel": "توتکابن"
+  },
+  {
+    "item": "Q4359024",
+    "itemLabel": "فردوسیه"
+  },
+  {
+    "item": "Q4359029",
+    "itemLabel": "اسیر"
+  },
+  {
+    "item": "Q4359042",
+    "itemLabel": "آقکند"
+  },
+  {
+    "item": "Q4359046",
+    "itemLabel": "میان‌راهان"
+  },
+  {
+    "item": "Q4359056",
+    "itemLabel": "سرو"
+  },
+  {
+    "item": "Q4359081",
+    "itemLabel": "جبالبارز"
+  },
+  {
+    "item": "Q4359107",
+    "itemLabel": "رازمیان"
+  },
+  {
+    "item": "Q4359109",
+    "itemLabel": "ریز"
+  },
+  {
+    "item": "Q4359113",
+    "itemLabel": "ابوموسی"
+  },
+  {
+    "item": "Q2620766",
+    "itemLabel": "سیریک"
+  },
+  {
+    "item": "Q2620788",
+    "itemLabel": "بستان، خوزستان"
+  },
+  {
+    "item": "Q2620832",
+    "itemLabel": "فیرورق"
+  },
+  {
+    "item": "Q2620893",
+    "itemLabel": "کونانی"
+  },
+  {
+    "item": "Q2620898",
+    "itemLabel": "میلاجرد"
+  },
+  {
+    "item": "Q2620904",
+    "itemLabel": "کمیجان"
+  },
+  {
+    "item": "Q2621304",
+    "itemLabel": "معمولان"
+  },
+  {
+    "item": "Q2621665",
+    "itemLabel": "نیم‌ور"
+  },
+  {
+    "item": "Q2624765",
+    "itemLabel": "دلبران"
+  },
+  {
+    "item": "Q2624772",
+    "itemLabel": "داوودآباد"
+  },
+  {
+    "item": "Q2624781",
+    "itemLabel": "کرهرود"
+  },
+  {
+    "item": "Q2624792",
+    "itemLabel": "سنجان"
+  },
+  {
+    "item": "Q2624797",
+    "itemLabel": "چقابل"
+  },
+  {
+    "item": "Q2624804",
+    "itemLabel": "اشترینان"
+  },
+  {
+    "item": "Q2624956",
+    "itemLabel": "نصرت‌آباد"
+  },
+  {
+    "item": "Q2625048",
+    "itemLabel": "آوج"
+  },
+  {
+    "item": "Q2625218",
+    "itemLabel": "قلعه‌تل"
+  },
+  {
+    "item": "Q2625230",
+    "itemLabel": "آسارا"
+  },
+  {
+    "item": "Q2625453",
+    "itemLabel": "اشتهارد"
+  },
+  {
+    "item": "Q2626271",
+    "itemLabel": "دیباج"
+  },
+  {
+    "item": "Q2626774",
+    "itemLabel": "جناح"
+  },
+  {
+    "item": "Q2626972",
+    "itemLabel": "کلات"
+  },
+  {
+    "item": "Q2627731",
+    "itemLabel": "سهرورد"
+  },
+  {
+    "item": "Q2627738",
+    "itemLabel": "ارسنجان"
+  },
+  {
+    "item": "Q2627749",
+    "itemLabel": "فراشبند"
+  },
+  {
+    "item": "Q2628801",
+    "itemLabel": "راور"
+  },
+  {
+    "item": "Q2629142",
+    "itemLabel": "هیدج"
+  },
+  {
+    "item": "Q2629400",
+    "itemLabel": "پردیس"
+  },
+  {
+    "item": "Q2629412",
+    "itemLabel": "زرین‌رود"
+  },
+  {
+    "item": "Q2629429",
+    "itemLabel": "ماه‌نشان"
+  },
+  {
+    "item": "Q2629440",
+    "itemLabel": "سجاس"
+  },
+  {
+    "item": "Q2629444",
+    "itemLabel": "نسیم‌شهر"
+  },
+  {
+    "item": "Q2629477",
+    "itemLabel": "گلستان"
+  },
+  {
+    "item": "Q2630350",
+    "itemLabel": "آزادشهر"
+  },
+  {
+    "item": "Q2630596",
+    "itemLabel": "رامیان"
+  },
+  {
+    "item": "Q2630607",
+    "itemLabel": "بجستان"
+  },
+  {
+    "item": "Q2630618",
+    "itemLabel": "دهاقان"
+  },
+  {
+    "item": "Q2630625",
+    "itemLabel": "لیکک"
+  },
+  {
+    "item": "Q2630643",
+    "itemLabel": "فاروج"
+  },
+  {
+    "item": "Q2630650",
+    "itemLabel": "گرمه"
+  },
+  {
+    "item": "Q2630658",
+    "itemLabel": "آشخانه"
+  },
+  {
+    "item": "Q2630688",
+    "itemLabel": "شهرستان رضوانشهر"
+  },
+  {
+    "item": "Q2630693",
+    "itemLabel": "بوئین‌زهرا"
+  },
+  {
+    "item": "Q2631265",
+    "itemLabel": "صغاد"
+  },
+  {
+    "item": "Q2631330",
+    "itemLabel": "فیشور"
+  },
+  {
+    "item": "Q2632219",
+    "itemLabel": "بردخون"
+  },
+  {
+    "item": "Q2632275",
+    "itemLabel": "بردستان"
+  },
+  {
+    "item": "Q2632774",
+    "itemLabel": "لالجین"
+  },
+  {
+    "item": "Q2632780",
+    "itemLabel": "نخل تقی"
+  },
+  {
+    "item": "Q2633198",
+    "itemLabel": "عباس‌آباد"
+  },
+  {
+    "item": "Q2633218",
+    "itemLabel": "کیاکلا"
+  },
+  {
+    "item": "Q2633224",
+    "itemLabel": "سلمان‌شهر"
+  },
+  {
+    "item": "Q2633230",
+    "itemLabel": "گلوگاه"
+  },
+  {
+    "item": "Q2633238",
+    "itemLabel": "رستم‌کلا"
+  },
+  {
+    "item": "Q2633245",
+    "itemLabel": "خرم‌آباد"
+  },
+  {
+    "item": "Q2633251",
+    "itemLabel": "چمستان"
+  },
+  {
+    "item": "Q2633258",
+    "itemLabel": "بلده"
+  },
+  {
+    "item": "Q2633273",
+    "itemLabel": "بهنمیر"
+  },
+  {
+    "item": "Q2633279",
+    "itemLabel": "کله‌بست"
+  },
+  {
+    "item": "Q2633285",
+    "itemLabel": "خلیل‌شهر"
+  },
+  {
+    "item": "Q2633297",
+    "itemLabel": "سرخ‌رود"
+  },
+  {
+    "item": "Q2633306",
+    "itemLabel": "جعفریه"
+  },
+  {
+    "item": "Q2633317",
+    "itemLabel": "فریم"
+  },
+  {
+    "item": "Q2633326",
+    "itemLabel": "گلوگاه"
+  },
+  {
+    "item": "Q2633334",
+    "itemLabel": "کلارآباد"
+  },
+  {
+    "item": "Q2633343",
+    "itemLabel": "فشم"
+  },
+  {
+    "item": "Q2633350",
+    "itemLabel": "تیران"
+  },
+  {
+    "item": "Q2633364",
+    "itemLabel": "کیاسر"
+  },
+  {
+    "item": "Q2633372",
+    "itemLabel": "نشتارود"
+  },
+  {
+    "item": "Q2633377",
+    "itemLabel": "انابد"
+  },
+  {
+    "item": "Q2633385",
+    "itemLabel": "قنوات"
+  },
+  {
+    "item": "Q2633396",
+    "itemLabel": "خوش‌رودپی"
+  },
+  {
+    "item": "Q2633401",
+    "itemLabel": "مرزن‌آباد"
+  },
+  {
+    "item": "Q2633407",
+    "itemLabel": "امیرکلا"
+  },
+  {
+    "item": "Q2633584",
+    "itemLabel": "قره‌آغاج (چاراویماق)"
+  },
+  {
+    "item": "Q2633601",
+    "itemLabel": "ایلخچی"
+  },
+  {
+    "item": "Q2633975",
+    "itemLabel": "کرند غرب"
+  },
+  {
+    "item": "Q2634509",
+    "itemLabel": "آب‌پخش"
+  },
+  {
+    "item": "Q2634871",
+    "itemLabel": "چلگرد"
+  },
+  {
+    "item": "Q2637676",
+    "itemLabel": "شاندیز"
+  },
+  {
+    "item": "Q2639110",
+    "itemLabel": "گتوند"
+  },
+  {
+    "item": "Q2639152",
+    "itemLabel": "کبود-راهنگ"
+  },
+  {
+    "item": "Q2663243",
+    "itemLabel": "شهریار"
+  },
+  {
+    "item": "Q2664768",
+    "itemLabel": "انارک"
+  },
+  {
+    "item": "Q2672649",
+    "itemLabel": "اندیشه کناین"
+  },
+  {
+    "item": "Q2687381",
+    "itemLabel": "گل‌شهر"
+  },
+  {
+    "item": "Q2687385",
+    "itemLabel": "گوگد"
+  },
+  {
+    "item": "Q2714258",
+    "itemLabel": "قلعه خواجه"
+  },
+  {
+    "item": "Q2714615",
+    "itemLabel": "فریدون‌کنار"
+  },
+  {
+    "item": "Q2715420",
+    "itemLabel": "ماسال"
+  },
+  {
+    "item": "Q2715670",
+    "itemLabel": "کهک"
+  },
+  {
+    "item": "Q2717301",
+    "itemLabel": "ترکمانچای"
+  },
+  {
+    "item": "Q2717308",
+    "itemLabel": "ورزقان"
+  },
+  {
+    "item": "Q2717320",
+    "itemLabel": "بستان‌آباد"
+  },
+  {
+    "item": "Q2717325",
+    "itemLabel": "چادگان"
+  },
+  {
+    "item": "Q2718227",
+    "itemLabel": "خوانسار"
+  },
+  {
+    "item": "Q2718234",
+    "itemLabel": "سمیرم"
+  },
+  {
+    "item": "Q2718241",
+    "itemLabel": "مینودشت"
+  },
+  {
+    "item": "Q5870567",
+    "itemLabel": "آچاچی"
+  },
+  {
+    "item": "Q5876534",
+    "itemLabel": "تازیان پایین"
+  },
+  {
+    "item": "Q5878679",
+    "itemLabel": "ریجاب"
+  },
+  {
+    "item": "Q5899029",
+    "itemLabel": "شول‌آباد"
+  },
+  {
+    "item": "Q5902852",
+    "itemLabel": "فراغی (کلاله)"
+  },
+  {
+    "item": "Q5933344",
+    "itemLabel": "خلیفان"
+  },
+  {
+    "item": "Q5945372",
+    "itemLabel": "بایگان"
+  },
+  {
+    "item": "Q5945996",
+    "itemLabel": "گشت (سراوان)"
+  },
+  {
+    "item": "Q5948920",
+    "itemLabel": "فردیس"
+  },
+  {
+    "item": "Q5949443",
+    "itemLabel": "صالح شهر"
+  },
+  {
+    "item": "Q5949983",
+    "itemLabel": "فیروزه (خراسان شمالی)"
+  },
+  {
+    "item": "Q5950599",
+    "itemLabel": "طرق (نطنز)"
+  },
+  {
+    "item": "Q5953022",
+    "itemLabel": "کنف‌گوراب"
+  },
+  {
+    "item": "Q5954281",
+    "itemLabel": "کوپن (رستم)"
+  },
+  {
+    "item": "Q5954416",
+    "itemLabel": "مزایجان (بوانات)"
+  },
+  {
+    "item": "Q5957064",
+    "itemLabel": "اورامان (سروآباد)"
+  },
+  {
+    "item": "Q5957591",
+    "itemLabel": "پول (نوشهر)"
+  },
+  {
+    "item": "Q5959348",
+    "itemLabel": "ارطه"
+  },
+  {
+    "item": "Q5963338",
+    "itemLabel": "شهر گور"
+  },
+  {
+    "item": "Q5964563",
+    "itemLabel": "گودین"
+  },
+  {
+    "item": "Q6030114",
+    "itemLabel": "قصابه"
+  },
+  {
+    "item": "Q6348768",
+    "itemLabel": "کاج (اردل)"
+  },
+  {
+    "item": "Q6397066",
+    "itemLabel": "شیراز"
+  },
+  {
+    "item": "Q6398743",
+    "itemLabel": "هنزا (شهر)"
+  },
+  {
+    "item": "Q6401285",
+    "itemLabel": "خنجین"
+  },
+  {
+    "item": "Q6401719",
+    "itemLabel": "مرادلو"
+  },
+  {
+    "item": "Q6405392",
+    "itemLabel": "فخرآباد (اردبیل)"
+  },
+  {
+    "item": "Q6407394",
+    "itemLabel": "شیرود"
+  },
+  {
+    "item": "Q6407811",
+    "itemLabel": "شهر جدید امیرکبیر"
+  },
+  {
+    "item": "Q6416695",
+    "itemLabel": "برده رشه (مریوان)"
+  },
+  {
+    "item": "Q6416954",
+    "itemLabel": "بافران"
+  },
+  {
+    "item": "Q6417114",
+    "itemLabel": "بار (نیشابور)"
+  },
+  {
+    "item": "Q6418454",
+    "itemLabel": "اسلام‌آباد قدیم"
+  },
+  {
+    "item": "Q6425913",
+    "itemLabel": "کهن‌آباد"
+  },
+  {
+    "item": "Q6448016",
+    "itemLabel": "کوشکنار"
+  },
+  {
+    "item": "Q6480991",
+    "itemLabel": "لمزان"
+  },
+  {
+    "item": "Q6553554",
+    "itemLabel": "قهستان (شهر)"
+  },
+  {
+    "item": "Q6562859",
+    "itemLabel": "کرج ابودلف"
+  },
+  {
+    "item": "Q6587039",
+    "itemLabel": "تیرور"
+  },
+  {
+    "item": "Q6672406",
+    "itemLabel": "زرگرمحله"
+  },
+  {
+    "item": "Q6732942",
+    "itemLabel": "محله چینی‌ها (گچساران)"
+  },
+  {
+    "item": "Q6750319",
+    "itemLabel": "منج نسا"
+  },
+  {
+    "item": "Q6798679",
+    "itemLabel": "مزرعه (علی‌آباد)"
+  },
+  {
+    "item": "Q6908833",
+    "itemLabel": "مقاومت (شهر)"
+  },
+  {
+    "item": "Q7135454",
+    "itemLabel": "پرند (شهر)"
+  },
+  {
+    "item": "Q7410311",
+    "itemLabel": "صمصامی (کوهرنگ)"
+  },
+  {
+    "item": "Q7417898",
+    "itemLabel": "سنگدوین"
+  },
+  {
+    "item": "Q7474425",
+    "itemLabel": "لاهرود"
+  },
+  {
+    "item": "Q7532391",
+    "itemLabel": "سیوند"
+  },
+  {
+    "item": "Q7678205",
+    "itemLabel": "تخت (بندرعباس)"
+  },
+  {
+    "item": "Q7687874",
+    "itemLabel": "تاتار علیا (رامیان)"
+  },
+  {
+    "item": "Q7697918",
+    "itemLabel": "تلورد"
+  },
+  {
+    "item": "Q8139321",
+    "itemLabel": "قصر شیرین"
+  },
+  {
+    "item": "Q10296798",
+    "itemLabel": "سیه‌چشمه"
+  },
+  {
+    "item": "Q10321288",
+    "itemLabel": "کیش (شهر)"
+  },
+  {
+    "item": "Q10843549",
+    "itemLabel": "شهر جدید مجلسی"
+  },
+  {
+    "item": "Q10853970",
+    "itemLabel": "ماکلوان"
+  },
+  {
+    "item": "Q10881114",
+    "itemLabel": "شیروان"
+  },
+  {
+    "item": "Q10967863",
+    "itemLabel": "خلخال"
+  },
+  {
+    "item": "Q11256451",
+    "itemLabel": "کوت عبدالله"
+  },
+  {
+    "item": "Q1975291",
+    "itemLabel": "گنبد کاووس"
+  },
+  {
+    "item": "Q1992741",
+    "itemLabel": "جوانرود"
+  },
+  {
+    "item": "Q2004387",
+    "itemLabel": "پل دختر"
+  },
+  {
+    "item": "Q2007469",
+    "itemLabel": "شیرگاه"
+  },
+  {
+    "item": "Q2007480",
+    "itemLabel": "زیرآب"
+  },
+  {
+    "item": "Q2016077",
+    "itemLabel": "آسمان‌آباد"
+  },
+  {
+    "item": "Q2718461",
+    "itemLabel": "عجب‌شیر"
+  },
+  {
+    "item": "Q2724633",
+    "itemLabel": "مراوه‌تپه"
+  },
+  {
+    "item": "Q2724644",
+    "itemLabel": "راز"
+  },
+  {
+    "item": "Q2725024",
+    "itemLabel": "بیله‌سوار"
+  },
+  {
+    "item": "Q2726700",
+    "itemLabel": "رینه"
+  },
+  {
+    "item": "Q2737766",
+    "itemLabel": "دابودشت"
+  },
+  {
+    "item": "Q2778889",
+    "itemLabel": "انار"
+  },
+  {
+    "item": "Q2778894",
+    "itemLabel": "کلوانق"
+  },
+  {
+    "item": "Q2791851",
+    "itemLabel": "آوه"
+  },
+  {
+    "item": "Q2887669",
+    "itemLabel": "بستک"
+  },
+  {
+    "item": "Q2423557",
+    "itemLabel": "هندودر"
+  },
+  {
+    "item": "Q2423572",
+    "itemLabel": "مجن"
+  },
+  {
+    "item": "Q2423589",
+    "itemLabel": "گلمورتی"
+  },
+  {
+    "item": "Q2423607",
+    "itemLabel": "دوست‌محمد(شهر)"
+  },
+  {
+    "item": "Q2423620",
+    "itemLabel": "غرق‌آباد"
+  },
+  {
+    "item": "Q2423640",
+    "itemLabel": "محمودآباد نمونه"
+  },
+  {
+    "item": "Q2423658",
+    "itemLabel": "محمدآباد (سیستان و بلوچستان)"
+  },
+  {
+    "item": "Q2426495",
+    "itemLabel": "کاخک"
+  },
+  {
+    "item": "Q2427424",
+    "itemLabel": "سورک"
+  },
+  {
+    "item": "Q2427450",
+    "itemLabel": "هشتپر"
+  },
+  {
+    "item": "Q2427575",
+    "itemLabel": "رحیم‌آباد"
+  },
+  {
+    "item": "Q2428473",
+    "itemLabel": "امیریه"
+  },
+  {
+    "item": "Q2428507",
+    "itemLabel": "باخرز"
+  },
+  {
+    "item": "Q2428545",
+    "itemLabel": "خرمدشت"
+  },
+  {
+    "item": "Q2428560",
+    "itemLabel": "فیروزآباد"
+  },
+  {
+    "item": "Q2428574",
+    "itemLabel": "بیدستان"
+  },
+  {
+    "item": "Q2428588",
+    "itemLabel": "دانسفهان"
+  },
+  {
+    "item": "Q2429147",
+    "itemLabel": "سرایان"
+  },
+  {
+    "item": "Q2429190",
+    "itemLabel": "سربیشه"
+  },
+  {
+    "item": "Q2429202",
+    "itemLabel": "نهبندان"
+  },
+  {
+    "item": "Q4359136",
+    "itemLabel": "چالانچولان"
+  },
+  {
+    "item": "Q4359138",
+    "itemLabel": "آلونی"
+  },
+  {
+    "item": "Q4359141",
+    "itemLabel": "عقدا"
+  },
+  {
+    "item": "Q4359142",
+    "itemLabel": "تنگ ارم"
+  },
+  {
+    "item": "Q4359166",
+    "itemLabel": "گل‌تپه"
+  },
+  {
+    "item": "Q4359180",
+    "itemLabel": "ساروق (اراک)"
+  },
+  {
+    "item": "Q4359512",
+    "itemLabel": "خانوک"
+  },
+  {
+    "item": "Q4359590",
+    "itemLabel": "بابارشانی"
+  },
+  {
+    "item": "Q4359599",
+    "itemLabel": "نودان"
+  },
+  {
+    "item": "Q4359607",
+    "itemLabel": "بزنجان"
+  },
+  {
+    "item": "Q4359613",
+    "itemLabel": "کاظم‌آباد"
+  },
+  {
+    "item": "Q4359620",
+    "itemLabel": "عسگران"
+  },
+  {
+    "item": "Q13224626",
+    "itemLabel": "محمدشهر (خوسف)"
+  },
+  {
+    "item": "Q15215523",
+    "itemLabel": "دهستان لولمان"
+  },
+  {
+    "item": "Q15261272",
+    "itemLabel": "نازک علیا"
+  },
+  {
+    "item": "Q16046467",
+    "itemLabel": "گلشن"
+  },
+  {
+    "item": "Q16046952",
+    "itemLabel": "توپ‌آغاج"
+  },
+  {
+    "item": "Q16047245",
+    "itemLabel": "تیتکانلو"
+  },
+  {
+    "item": "Q16047973",
+    "itemLabel": "ایور"
+  },
+  {
+    "item": "Q16049276",
+    "itemLabel": "مهر"
+  },
+  {
+    "item": "Q16050884",
+    "itemLabel": "سلطان‌شهر"
+  },
+  {
+    "item": "Q16735598",
+    "itemLabel": "شهر سلگی"
+  },
+  {
+    "item": "Q16891972",
+    "itemLabel": "هچی‌رود"
+  },
+  {
+    "item": "Q16893556",
+    "itemLabel": "کجور"
+  },
+  {
+    "item": "Q17173916",
+    "itemLabel": "جوشقان قالی"
+  },
+  {
+    "item": "Q17174189",
+    "itemLabel": "دژکرد"
+  },
+  {
+    "item": "Q17174473",
+    "itemLabel": "سرگز"
+  },
+  {
+    "item": "Q17991156",
+    "itemLabel": "آوا"
+  },
+  {
+    "item": "Q17992023",
+    "itemLabel": "چناران‌شهر"
+  },
+  {
+    "item": "Q18630047",
+    "itemLabel": "تشان (خوزستان)"
+  },
+  {
+    "item": "Q20704343",
+    "itemLabel": "سردشت"
+  },
+  {
+    "item": "Q25247440",
+    "itemLabel": "دیلمان"
+  },
+  {
+    "item": "Q25423532",
+    "itemLabel": "امام‌شهر"
+  },
+  {
+    "item": "Q25424331",
+    "itemLabel": "رودیان"
+  },
+  {
+    "item": "Q25432815",
+    "itemLabel": "قره‌بلاغ"
+  },
+  {
+    "item": "Q28040556",
+    "itemLabel": "Q28040556"
+  },
+  {
+    "item": "Q28465333",
+    "itemLabel": "خارگ"
+  },
+  {
+    "item": "Q29381016",
+    "itemLabel": "لولمان"
+  },
+  {
+    "item": "Q29396461",
+    "itemLabel": "گل‌بهار"
+  },
+  {
+    "item": "Q29401522",
+    "itemLabel": "تنکمان"
+  },
+  {
+    "item": "Q29401539",
+    "itemLabel": "میداود"
+  },
+  {
+    "item": "Q29417899",
+    "itemLabel": "باغشاد"
+  },
+  {
+    "item": "Q38482481",
+    "itemLabel": "گرگان قدیم"
+  }
+]
