@@ -47,7 +47,13 @@ class BeBruNl(Monument):
 
     def set_address(self):
         street_with_no = utils.remove_markup(self.adres.title()).rstrip(',')
-        whole_address = "{}, {}".format(street_with_no, self.plaats)
+
+        # strip "0" as the number
+        streets = [street.partition(' 0')[0]
+                   for street in street_with_no.split(', ')]
+        street_with_non_zero_no = ', '.join(streets)
+
+        whole_address = "{}, {}".format(street_with_non_zero_no, self.plaats)
         qualifier = {"language of name": "Q7411"}
         self.add_statement("located_street", whole_address, qualifier)
 
@@ -56,7 +62,6 @@ class BeBruNl(Monument):
         types = self.data_files["type"]["mappings"]
         special_types = utils.get_matching_items_from_dict(objtype, types)
         if len(special_types) > 0:
-            self.remove_statement("is")
             for q in special_types:
                 self.add_statement("is", q)
 
@@ -115,7 +120,7 @@ class BeBruNl(Monument):
         self.set_commonscat()
         self.set_architect()
         self.set_style()
-        self.set_is()
+        # self.set_is()
         self.set_special_is()
         self.set_coords()
         self.set_building_year()
