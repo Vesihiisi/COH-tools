@@ -41,23 +41,25 @@ class Uploader(object):
                 message = "{} ADDED DESCRIPTIONS {}".format(t_id, descriptions)
                 log.logit(message)
 
-    def add_disambiguators_to_descriptions(self, descriptions, api_error,
+    def add_disambiguators_to_descriptions(self, descriptions, pwb_error,
                                            disambiguated):
         """
         Add needed disambiguators to descriptions.
 
         :param descriptions: pre-existing descriptions
-        :param api_error: the raised pywikibot.data.api.APIError
+        :param pwb_error: the raised pywikibot.exceptions.OtherPageSaveError.
+            This error in turn contains a pywikibot.data.api.APIError as the
+            underlying reason.
         :param disambiguated: list of previously disambiguated languages
         :return: a new description dict or None if disambiguators could not be
             added.
         """
-        if (api_error.reason.other.get('messages')[0].get('name') !=
+        if (pwb_error.reason.other.get('messages')[0].get('name') !=
                 'wikibase-validator-label-with-description-conflict'):
             # this is not a disambiguator error
             return None
 
-        lang = api_error.reason.other.get('messages')[0].get('parameters')[1]
+        lang = pwb_error.reason.other.get('messages')[0].get('parameters')[1]
         if lang in disambiguated:
             # this language was already disambiguated
             return None
