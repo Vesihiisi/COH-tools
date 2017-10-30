@@ -112,13 +112,14 @@ class GeKa(Monument):
         Form the address as "$address, $municipality".
         """
         if self.has_non_empty_attribute("address"):
-            if utils.contains_digit(self.address):
-                address = utils.remove_markup(self.address)
+            address = utils.remove_markup(self.address)
+            if utils.contains_digit(address):
                 placename = utils.remove_markup(self.municipality)
                 street_address = "{}, {}".format(address, placename)
                 self.add_statement("located_street", street_address)
             else:
-                self.add_to_report("address", self.address, "located_street")
+                directions = utils.package_monolingual(address, 'ka')
+                self.add_statement("directions", directions)
 
     def set_heritage_id(self):
         self.add_statement("heritage_georgia", self.id)
