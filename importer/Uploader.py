@@ -59,7 +59,7 @@ class Uploader(object):
             unit = None
         return pywikibot.WbQuantity(amount=value, unit=unit, site=repo)
 
-    def make_monolingual_item(self, quantity, repo):
+    def make_monolingual_item(self, quantity):
         """
         Create claim for a monolingual text.
 
