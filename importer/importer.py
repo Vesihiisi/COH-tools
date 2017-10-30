@@ -397,9 +397,12 @@ def on_labs():
     return path.isfile(path.expanduser("~") + "/replica.my.cnf")
 
 
-def handle_args():
+def handle_args(*args):
     """
     Parse and handle command line arguments to get data from the database.
+
+    Also supports any pywikibot arguments, these are prefixed by a single "-"
+    and the full list can be gotten through "-help".
 
     Options:
         --host Name of the database host.
@@ -435,7 +438,9 @@ def handle_args():
                         action='store',)
     parser.add_argument("--table", action='store_true')
     parser.add_argument("--list_matches", action='store_true')
-    return parser.parse_args()
+
+    # first parse args with pywikibot, send remaining args to local handler
+    return parser.parse_args(pywikibot.handle_args(args))
 
 
 if __name__ == "__main__":
