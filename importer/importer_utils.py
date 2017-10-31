@@ -537,15 +537,21 @@ def datetime_object_to_dict(datetime_object):
     return date_dict
 
 
-def date_to_dict(datestring, dateformat):
+def datetime_to_dict(date_obj, dateformat):
+    """Convert a datetime object to a dict."""
     date_dict = {}
-    date_obj = datetime.datetime.strptime(datestring, dateformat)
     date_dict["year"] = date_obj.year
     if "%m" in dateformat:
         date_dict["month"] = date_obj.month
     if "%d" in dateformat:
         date_dict["day"] = date_obj.day
     return date_dict
+
+
+def date_to_dict(datestring, dateformat):
+    """Convert a datet string to a dict."""
+    date_obj = datetime.datetime.strptime(datestring, dateformat)
+    return datetime_to_dict(date_obj, dateformat)
 
 
 def today_dict():
