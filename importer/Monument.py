@@ -116,11 +116,12 @@ class Monument(object):
                     value_to_print += str(value).strip()
                 quals = claim["quals"]
                 refs = claim["refs"]
+                quals_to_print = ""
                 if len(quals) == 0:
-                    qual_to_print = ""
+                    quals_to_print = quals_to_print
                 else:
                     for q in quals:
-                        qual_to_print = utils.wd_template(
+                        quals_to_print = quals_to_print + "<br>" + utils.wd_template(
                             "P", q) + " : " + json.dumps(quals[q])
                 if len(refs) == 0:
                     ref_to_print = ""
@@ -131,7 +132,7 @@ class Monument(object):
                 table = table + "|-\n"
                 table = table + "| " + utils.wd_template("P", statement) + "\n"
                 table = table + "| " + value_to_print + "\n"
-                table = table + "| " + qual_to_print + "\n"
+                table = table + "| " + quals_to_print + "\n"
                 table = table + "| " + ref_to_print + "\n"
         table = table + "|}\n"
         table = table + "----------\n"

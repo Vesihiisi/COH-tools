@@ -106,6 +106,16 @@ def contains_digit(text):
     return any(x.isdigit() for x in text)
 
 
+def get_external_links(wikitext):
+    """Retrieve external url's from wikitext."""
+    urls = []
+    links = wparser.parse(wikitext).filter_external_links()
+    if len(links) > 0:
+        for link in links:
+            urls.append(link.url)
+    return urls
+
+
 def is_legit_house_number(text):
     number_regex = re.compile(
         '\d{1,3}\s?([A-Z]{1})?((-|–)\d{1,3})?\s?([A-Z]{1})?')

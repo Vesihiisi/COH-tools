@@ -303,6 +303,21 @@ class TestDatetimeMethods(unittest.TestCase):
 
 class TestWikitext(unittest.TestCase):
 
+    def test_get_urls_none(self):
+        text = "[[Tegera Arena]], huvudentrén"
+        output = []
+        self.assertEqual(utils.get_external_links(text), output)
+
+    def test_get_urls_one(self):
+        text = "prefix [http://www.wiki.com/Foobar.html some label] postfix"
+        output = ["http://www.wiki.com/Foobar.html"]
+        self.assertEqual(utils.get_external_links(text), output)
+
+    def test_get_urls_one_no_label(self):
+        text = "prefix [http://www.wiki.com/Foobar.html] postfix"
+        output = ["http://www.wiki.com/Foobar.html"]
+        self.assertEqual(utils.get_external_links(text), output)
+
     def test_remove_markup_simple(self):
         text = "[[Tegera Arena]], huvudentrén"
         output = "Tegera Arena, huvudentrén"
