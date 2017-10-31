@@ -91,6 +91,8 @@ class Monument(object):
             claims = statements[statement]
             for claim in claims:
                 value = claim["value"]
+                if value is None:
+                    continue
                 value_to_print = ""
                 if utils.string_is_q_item(value):
                     value = utils.wd_template("Q", value)

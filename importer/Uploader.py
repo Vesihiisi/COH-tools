@@ -183,7 +183,7 @@ class Uploader(object):
         elif prop == PROPS["commonscat"] and utils.commonscat_exists(value):
             val_item = value
         else:
-            val_item = value.strip()
+            val_item = value.strip() if value else None
         return val_item
 
     def make_statement(self, value):
