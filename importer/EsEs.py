@@ -1,38 +1,30 @@
 from Monument import Monument, Dataset
 import importer_utils as utils
 import importer as importer
+import dateparser
 
 
 class EsEs(Monument):
 
     def set_heritage_with_date(self):
+        """
+        Set heritage status (bien interes cultural).
+
+        Optionally, with start date qualifier.
+        """
         heritage = self.mapping["heritage"]["item"]
         if self.has_non_empty_attribute("fecha"):
             # 20 de febrero de 1985
-            months = ["enero", "febrero", "marzo",
-                      "abril", "mayo", "junio",
-                      "julio", "agosto",
-                      "septiembre", "octubre",
-                      "noviembre", "diciembre", ]
-            date_parts = self.fecha.split(" ")
-            if len(date_parts) != 5:
+            es_date = dateparser.parse(self.fecha, languages=['es'])
+            try:
+                date_dict = utils.datetime_object_to_dict(es_date)
+                print(date_dict)
+            except ValueError:
                 self.add_to_report("fecha", self.fecha)
                 self.add_statement("heritage_status", heritage)
                 return
-            else:
-                day = str(date_parts[0])
-                month = str(months.index(date_parts[2]) + 1)
-                year = str(date_parts[4])
-                date_string = "{}-{}-{}".format(year,
-                                                month.zfill(2), day.zfill(2))
-                try:
-                    date_dict = utils.date_to_dict(date_string, "%Y-%m-%d")
-                except ValueError:
-                    self.add_to_report("fecha", self.fecha)
-                    self.add_statement("heritage_status", heritage)
-                    return
-                qualifier = {"start_time": {"time_value": date_dict}}
-                self.add_statement("heritage_status", heritage, qualifier)
+            qualifier = {"start_time": {"time_value": date_dict}}
+            self.add_statement("heritage_status", heritage, qualifier)
         else:
             self.add_statement("heritage_status", heritage)
 
