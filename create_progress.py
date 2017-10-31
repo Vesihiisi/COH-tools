@@ -43,7 +43,7 @@ def handle_args(*args):
     and the full list can be gotten through "-help".
     """
     parser = argparse.ArgumentParser()
-    if not wlmhelpers.on_labs():
+    if not wlmhelpers.on_forge():
         parser.add_argument("--host", default="localhost")
         parser.add_argument("--db", default="wlm")
         parser.add_argument("--user", default="root")

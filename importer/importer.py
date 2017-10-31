@@ -276,7 +276,7 @@ def format_matched_p31s_rows(matched_item_p31s):
 def main(arguments, dataset=None):
     """Process the arguments and fetch data according to them"""
     arguments = vars(arguments)
-    if on_labs():
+    if on_forge():
         arguments["host"] = "tools-db"
         arguments["db"] = "s51138__heritage_p"
         credentials = get_db_credentials()
@@ -382,7 +382,7 @@ def make_dataset(country, language):
 
 
 def get_db_credentials():
-    """Get credentials to access the SQL db on Tolllabs."""
+    """Get credentials to access the SQL db on Toolforge."""
     credentials = {}
     credentials_path = path.expanduser("~") + "/replica.my.cnf"
     with open(credentials_path, encoding="utf-8") as f:
@@ -395,8 +395,8 @@ def get_db_credentials():
     return credentials
 
 
-def on_labs():
-    """Check if running in the Toollabs environment."""
+def on_forge():
+    """Check if running in the Toolforge environment."""
     return path.isfile(path.expanduser("~") + "/replica.my.cnf")
 
 
@@ -422,7 +422,7 @@ def handle_args(*args):
         --list_matches Save a list of all matching items to a file as wikitext.
     """
     parser = argparse.ArgumentParser()
-    if not on_labs():
+    if not on_forge():
         parser.add_argument("--host", default="localhost")
         parser.add_argument("--db", default="wlm")
         parser.add_argument("--user", default="root")

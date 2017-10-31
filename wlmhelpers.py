@@ -88,13 +88,13 @@ def load_json(filename):
         print("File {} does not exist.".format(filename))
 
 
-def on_labs():
-    """Check if running in the Toollabs environment."""
+def on_forge():
+    """Check if running in the Toolforge environment."""
     return path.isfile(path.expanduser("~") + "/replica.my.cnf")
 
 
 def get_db_credentials():
-    """Get credentials to access the SQL db on Tolllabs."""
+    """Get credentials to access the SQL db on Toolforge."""
     credentials = {}
     credentials_path = path.expanduser("~") + "/replica.my.cnf"
     with open(credentials_path, encoding="utf-8") as f:
@@ -109,7 +109,7 @@ def get_db_credentials():
 
 def create_connection(arguments):
     """Create a connection to the SQL database using arguments."""
-    if on_labs():
+    if on_forge():
         arguments["host"] = "tools-db"
         arguments["db"] = "s51138__heritage_p"
         credentials = get_db_credentials()
