@@ -1,0 +1,21 @@
+{
+    "country": {
+        "item": "Q40",
+        "name": "Austria"
+    },
+    "country_code": "at",
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "Q1188447",
+        "name": "Denkmalgeschutztes Objekt"
+    },
+    "language": "de",
+    "table_name": "at",
+    "unique": {
+        "comment": "Cultural heritage database in Austria ObjektID ",
+        "property": "P2951"
+    }
+}

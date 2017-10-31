@@ -64,6 +64,12 @@ class TestStringMethods(unittest.TestCase):
     def test_last_char_is_vowel_fail(self):
         self.assertFalse(utils.last_char_is_vowel("bar"))
 
+    def test_first_char_is_number_true(self):
+        self.assertTrue(utils.first_char_is_number("2 foo"))
+
+    def test_first_char_is_number_false(self):
+        self.assertFalse(utils.first_char_is_number("f2oo"))
+
     def test_get_rid_of_brackets_succeed(self):
         text = "Kulla Gunnarstorps mölla (Kulla Gunnarstorp 1:21)"
         output = "Kulla Gunnarstorps mölla"
@@ -145,6 +151,33 @@ class TestStringMethods(unittest.TestCase):
 
     def test_string_to_float_3(self):
         self.assertEqual(utils.string_to_float("32,11."), 32.11)
+
+    def test_get_longest_string_one(self):
+        in_list = ["aaa", "aaaa"]
+        output = "aaaa"
+        self.assertEqual(utils.get_longest_string(in_list), output)
+
+    def test_get_longest_string_multiple(self):
+        in_list = ["aaa", "aaaa", "aaaaa", "bbbbb"]
+        output = ["aaaaa", "bbbbb"]
+        self.assertEqual(utils.get_longest_string(in_list), output)
+
+    def test_get_longest_match_short(self):
+        options = ["bro", "järnvägsbro", "kyrka"]
+        raw_data = "götaälvsbron"
+        output = "bro"
+        self.assertEqual(utils.get_longest_match(raw_data, options), output)
+
+    def test_get_longest_match_long(self):
+        options = ["bro", "järnvägsbro", "kyrka"]
+        raw_data = "stora järnvägsbron"
+        output = "järnvägsbro"
+        self.assertEqual(utils.get_longest_match(raw_data, options), output)
+
+    def test_get_longest_match_none(self):
+        options = ["bro", "järnvägsbro", "kyrka"]
+        raw_data = "skogskapellet"
+        self.assertIsNone(utils.get_longest_match(raw_data, options))
 
 
 class TestDatetimeMethods(unittest.TestCase):

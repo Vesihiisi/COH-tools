@@ -1,12 +1,31 @@
-from Monument import Monument
+from Monument import Monument, Dataset
 import importer_utils as utils
-from os import path
-
-
-MAPPING_DIR = "mappings"
+import importer as importer
 
 
 class SeFornminSv(Monument):
+
+    def __init__(self, db_row_dict, mapping, data_files, existing, repository):
+        super(SeFornminSv, self).__init__(
+            db_row_dict, mapping, data_files, existing, repository)
+        self.set_monuments_all_id()
+        self.set_changed()
+        self.wlm_source = self.create_wlm_source(self.monuments_all_id)
+        self.set_country()
+        self.set_is()
+        self.set_heritage()
+        self.set_source()
+        self.set_registrant_url()
+        self.set_image("bild")
+        self.update_labels()
+        self.set_descriptions()
+        self.set_raa()
+        self.set_adm_location()
+        self.set_type()
+        self.set_location()
+        self.set_coords(("lat", "lon"))
+        self.set_commonscat()
+        self.set_wd_item(self.find_matching_wikidata(mapping))
 
     def update_labels(self):
         """
@@ -78,8 +97,7 @@ class SeFornminSv(Monument):
         Just the name of the municipality
         without the word kommun or genitive.
         """
-        municip_dict = utils.load_json(path.join(
-            MAPPING_DIR, "sweden_municipalities.json"))
+        municip_dict = self.data_files["municipalities"]
         if self.kommun == "Göteborg":
             municip_name = "Gothenburg"
         else:
@@ -167,23 +185,16 @@ class SeFornminSv(Monument):
     def exists_with_monument_article(self, language):
         return super().exists_with_monument_article("sv", "artikel")
 
-    def __init__(self, db_row_dict, mapping, data_files, existing, repository):
-        Monument.__init__(self, db_row_dict, mapping, data_files, existing, repository)
-        self.set_monuments_all_id()
-        self.set_changed()
-        self.wlm_source = self.create_wlm_source(self.monuments_all_id)
-        self.set_country()
-        self.set_is()
-        self.set_heritage()
-        self.set_source()
-        self.set_registrant_url()
-        self.set_image("bild")
-        self.update_labels()
-        self.set_descriptions()
-        self.set_raa()
-        self.set_adm_location()
-        self.set_type()
-        self.set_location()
-        self.set_coords(("lat", "lon"))
-        self.set_commonscat()
-        self.set_wd_item(self.find_matching_wikidata(mapping))
+
+if __name__ == "__main__":
+    """Command line entry point for importer."""
+    args = importer.handle_args()
+    dataset = Dataset("se-fornmin", "sv", SeFornminSv)
+    dataset.data_files = {
+        "municipalities": "sweden_municipalities.json",
+        "socken": "sweden_socken.json"
+    }
+    dataset.lookup_downloads = {
+        "types": "se-fornmin_(sv)/types"
+    }
+    importer.main(args, dataset)
