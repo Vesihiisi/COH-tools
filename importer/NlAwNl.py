@@ -40,7 +40,6 @@ class NlAwNl(Monument):
                                                             return_content_of="item")
                 if len(loc_match) == 1:
                     loc_q = loc_match[0]
-                    print(loc_q)
             if loc_q:
                 self.add_statement("location", loc_q)
             else:
