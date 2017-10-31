@@ -5,18 +5,19 @@
     },
     "country_code": "ee",
     "default_is": {
-        "item": "",
-        "name": "",
+        "item": "Q2065736",
+        "name": "cultural property",
         "comment" : ""
     },
     "heritage": {
-        "item": "",
-        "name": "",
+        "item": "Q12370674",
+        "name": "cultural monument of Estonia",
         "comment": ""
     },
     "language": "et",
-        "unique": {
+    "unique": {
         "comment": "Estonian cultural monument ID",
         "property": "P2948"
-    }
+    },
+    "table_name": "ee"
 }
