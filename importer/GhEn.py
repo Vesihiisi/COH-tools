@@ -5,16 +5,13 @@ import importer as importer
 
 class GhEn(Monument):
 
-    #update lookup after rebase
     def set_special_is(self):
         if self.has_non_empty_attribute("original_function"):
             spec_is_raw = self.original_function.lower()
-            table = self.data_files["is"]["mappings"]
-            lookup = [table[x]["items"]
-                      for x in table if x.lower() == spec_is_raw]
-            special_is_q = lookup[0][0]
-            if len(lookup) == 1:
-                self.substitute_statement("is", special_is_q)
+            is_dict = self.data_files["is"]["mappings"]
+            matches = utils.get_matching_items_from_dict(spec_is_raw, is_dict)
+            if len(matches) == 1:
+                self.substitute_statement("is", matches[0])
             else:
                 self.add_to_report(
                     "original_function", self.original_function, "is")
