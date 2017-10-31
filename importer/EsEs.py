@@ -93,7 +93,7 @@ class EsEs(Monument):
 
     def set_location(self):
         """
-        Add location statement (P276)
+        Add location statement (P276).
 
         Extract possible location from wikilinked value.
         Run after set_adm_location and compared with
