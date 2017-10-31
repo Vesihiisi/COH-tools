@@ -32,8 +32,8 @@ class RoRo(Monument):
             loc_item = None
             if utils.count_wikilinks(self.localitate) > 0:
                 loc_link = utils.get_wikilinks(self.localitate)[0]
-                loc_item = utils.q_from_wikipedia(loc_link.title, "ro")
-                adm_item = self.get_statement_values("adm_location")
+                loc_item = utils.q_from_wikipedia("ro", loc_link.title)
+                adm_item = self.get_statement_values("located_adm")
                 if loc_item and loc_item != adm_item[0]:
                     self.add_statement("location", loc_item)
 
@@ -67,6 +67,20 @@ class RoRo(Monument):
         self.add_description("en", desc)
         self.add_disambiguator(utils.remove_markup(str(self.cod)))
 
+    def set_address(self):
+        if self.has_non_empty_attribute("adresa"):
+            adr_lower = self.adresa.lower()
+            adr_nice = utils.remove_markup(self.adresa)
+            if "piața" in adr_lower or "str." in adr_lower:
+                if self.has_non_empty_attribute("localitate"):
+                    town = utils.remove_markup(self.localitate)
+                    adr_nice = "{}, {}".format(adr_nice,
+                                               town)
+                self.add_statement("located_street", adr_nice)
+            else:
+                directions = utils.package_monolingual(adr_nice, 'ro')
+                self.add_statement("directions", directions)
+
     def update_labels(self):
         romanian = utils.remove_markup(self.denumire)
         self.add_label("ro", romanian)
@@ -85,6 +99,7 @@ class RoRo(Monument):
         self.set_wlm_id()
         self.set_country()
         self.set_adm_location()
+        self.set_address()
         self.set_location()
         self.set_coords()
         self.set_commonscat()
