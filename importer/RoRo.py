@@ -8,20 +8,19 @@ class RoRo(Monument):
     def set_adm_location(self):
         counties = self.data_files["counties"]
         adm_code = self.judetul_iso
-        county_item = [x["item"]
-                       for x in counties if x["iso_code"] == adm_code]
-        try:
+        county_item = utils.get_item_from_dict_by_key(dict_name=counties,
+                                                      search_term=adm_code,
+                                                      search_in="iso_code")
+        if len(county_item) == 1:
             self.add_statement("located_adm", county_item[0])
-        except IndexError:
-            self.add_to_report("judetul_iso", self.judetul_iso,
-                               prop_name="located_adm")
+        else:
+            self.add_to_report("judetul_iso",
+                               self.judetul_iso,
+                               "located_adm")
 
     def set_monuments_all_id(self):
         """Map which column name in specific table to  ID in monuments_all."""
         self.monuments_all_id = str(self.cod)
-
-    def exists_with_monument_article(self, language):
-        return super().exists_with_monument_article("ro", "monument_article")
 
     def set_wlm_id(self):
         """
@@ -55,15 +54,14 @@ class RoRo(Monument):
                           data_files, existing, repository)
         self.set_monuments_all_id()
         self.set_changed()
-        self.wlm_source = self.create_wlm_source(self.monuments_all_id)
+        self.set_wlm_source()
         self.set_heritage()
-        self.set_country()
-        self.set_source()
         self.set_wlm_id()
-        self.set_coords(("lat", "lon"))
+        self.set_country()
+        self.set_adm_location()
+        self.set_coords()
         self.set_commonscat()
         self.set_image("imagine")
-        self.set_adm_location()
         self.update_labels()
         self.update_descriptions()
         self.set_wd_item(self.find_matching_wikidata(mapping))
@@ -74,5 +72,4 @@ if __name__ == "__main__":
     args = importer.handle_args()
     dataset = Dataset("ro", "ro", RoRo)
     dataset.data_files = {"counties": "romania_counties.json"}
-    dataset.lookup_downloads = {}
     importer.main(args, dataset)
