@@ -2,9 +2,11 @@ from wikidataStuff.WikidataStuff import WikidataStuff as WDS
 import pywikibot
 import importer_utils as utils
 from os import path
+import sys
 
 MAPPING_DIR = "mappings"
 PROPS = utils.load_json(path.join(MAPPING_DIR, "props_general.json"))
+P31_BLACKLIST = utils.load_json(path.join(MAPPING_DIR, "P31_blacklist.json"))
 
 
 class Uploader(object):
@@ -19,13 +21,58 @@ class Uploader(object):
             message = "{} ADDED LABELS {}".format(t_id, labels)
             log.logit(message)
 
-    def add_descriptions(self, target_item, descriptions, log):
+    def add_descriptions(self, target_item, descriptions, log,
+                         disambiguated=None):
         """Add descriptions."""
-        self.wdstuff.add_multiple_descriptions(descriptions, target_item)
-        if log:
-            t_id = target_item.getID()
-            message = "{} ADDED DESCRIPTIONS {}".format(t_id, descriptions)
-            log.logit(message)
+        disambiguated = disambiguated or []
+        try:
+            self.wdstuff.add_multiple_descriptions(descriptions, target_item)
+        except pywikibot.exceptions.OtherPageSaveError as e:
+            new_desc = self.add_disambiguators_to_descriptions(
+                descriptions, e, disambiguated)
+            if new_desc:
+                self.add_descriptions(
+                    target_item, new_desc, log, disambiguated)
+            else:
+                raise
+        else:
+            if log:
+                t_id = target_item.getID()
+                message = "{} ADDED DESCRIPTIONS {}".format(t_id, descriptions)
+                log.logit(message)
+
+    def add_disambiguators_to_descriptions(self, descriptions, pwb_error,
+                                           disambiguated):
+        """
+        Add needed disambiguators to descriptions.
+
+        :param descriptions: pre-existing descriptions
+        :param pwb_error: the raised pywikibot.exceptions.OtherPageSaveError.
+            This error in turn contains a pywikibot.data.api.APIError as the
+            underlying reason.
+        :param disambiguated: list of previously disambiguated languages
+        :return: a new description dict or None if disambiguators could not be
+            added.
+        """
+        if (pwb_error.reason.other.get('messages')[0].get('name') !=
+                'wikibase-validator-label-with-description-conflict'):
+            # this is not a disambiguator error
+            return None
+
+        lang = pwb_error.reason.other.get('messages')[0].get('parameters')[1]
+        if lang in disambiguated:
+            # this language was already disambiguated
+            return None
+        else:
+            disambiguated.append(lang)
+
+        disambiguators = self.data["disambiguators"]
+        if lang not in disambiguators and '_default' not in disambiguators:
+            # no matching or default disambiguator found
+            return None
+        disambig_text = disambiguators.get(lang) or disambiguators['_default']
+        descriptions[lang] += ' ({0})'.format(disambig_text)
+        return descriptions
 
     def make_image_item(self, filename):
         commonssite = utils.create_site_instance("commons", "commons")
@@ -57,20 +104,41 @@ class Uploader(object):
             unit = None
         return pywikibot.WbQuantity(amount=value, unit=unit, site=repo)
 
+    def make_monolingual_item(self, quantity):
+        """
+        Create claim for a monolingual text.
+
+        quantity: {'monolingual_value': 'The bestest text', 'lang': 'en'}
+        """
+        return pywikibot.WbMonolingualText(
+            text=quantity['monolingual_value'], language=quantity['lang'])
+
     def make_time_item(self, quantity, repo):
         """
         Create a WbTime item.
 
-        This only works for full years.
-        TODO
-        Make it work for year range!
+        quantity: {'time_value': <dict>}
+        with <dict> per utils.datetime_object_to_dict
+
+        This only works for full years and dates.
+        @TODO: Make it work for year range!
         """
         value = quantity['time_value']
         return pywikibot.WbTime(**value)
 
-    def make_q_item(self, qnumber):
-        """Create a regular Item."""
-        return self.wdstuff.QtoItemPage(qnumber)
+    def make_q_item(self, q_number):
+        """Create a regular Item, if target is not a disambiguation."""
+        q_item = None
+        disambiguation_page = "Q4167410"
+        instances = utils.get_P31(q_number, self.repo)
+        q_item = self.wdstuff.QtoItemPage(q_number)
+
+        if (disambiguation_page in instances or
+           (self.wd_item_q and self.wd_item_q == q_item)):
+            mes = "{} cannot be added to {} as target of claim. Exiting."
+            sys.exit(mes.format(q_item, self.wd_item_q))
+        else:
+            return q_item
 
     def item_has_prop(self, property_name, wd_item):
         """
@@ -82,7 +150,11 @@ class Uploader(object):
         If the target item already uses the property,
         a new claim will not be added even if it's different.
         """
-        if PROPS[property_name] in wd_item.claims:
+        pid = PROPS.get(property_name)
+        if utils.string_is_p_item(property_name):
+            pid = property_name
+
+        if pid and pid in wd_item.claims:
             return True
         else:
             return False
@@ -106,6 +178,8 @@ class Uploader(object):
             val_item = self.make_quantity_item(value, self.repo)
         elif isinstance(value, dict) and 'time_value' in value:
             val_item = self.make_time_item(value, self.repo)
+        elif isinstance(value, dict) and 'monolingual_value' in value:
+            val_item = self.make_monolingual_item(value)
         elif prop == PROPS["commonscat"] and utils.commonscat_exists(value):
             val_item = value
         else:
@@ -135,11 +209,13 @@ class Uploader(object):
                 ref_url_prop, ref_url)
             ref = self.wdstuff.Reference(
                 source_test=[source_claim, ref_url_claim],
-                source_notest=self.wdstuff.make_simple_claim(prop_date, date_item))
+                source_notest=self.wdstuff.make_simple_claim(
+                    prop_date, date_item))
         else:
             ref = self.wdstuff.Reference(
                 source_test=[source_claim],
-                source_notest=self.wdstuff.make_simple_claim(prop_date, date_item))
+                source_notest=self.wdstuff.make_simple_claim(
+                    prop_date, date_item))
         return ref
 
     def add_claims(self, wd_item, claims, log):
@@ -147,6 +223,10 @@ class Uploader(object):
             for claim in claims:
                 prop = claim
                 for x in claims[claim]:
+                    if (x.get("if_empty") and
+                            self.item_has_prop(prop, wd_item)):
+                        continue
+
                     value = x['value']
                     if value != "":
                         ref = None
@@ -207,7 +287,8 @@ class Uploader(object):
         Determine WD item to manipulate.
 
         In live mode, if data object has associated WD item,
-        edit it. Otherwise, create a new WD item.
+        check whether it doesn't have a disallowed P31,
+        and if it doesn't edit it. Otherwise, create a new WD item.
         In sandbox mode, all edits are done on the WD Sandbox item.
         """
         if self.live:
@@ -215,9 +296,17 @@ class Uploader(object):
                 self.wd_item = self.create_new_item(self.log)
                 self.wd_item_q = self.wd_item.getID()
             else:
+                disallowed = [x["item"] for x in P31_BLACKLIST]
                 item_q = self.data["wd-item"]
-                self.wd_item = self.wdstuff.QtoItemPage(item_q)
-                self.wd_item_q = item_q
+                if utils.is_blacklisted_P31(item_q, self.repo, disallowed):
+                    if self.log:
+                        message = "{} -- SET AS WD-ITEM BUT POSSIBLY WRONG AND THUS REMOVED".format(item_q)
+                        self.log.logit(message)
+                    self.wd_item = self.create_new_item(self.log)
+                    self.wd_item_q = self.wd_item.getID()
+                else:
+                    self.wd_item = self.wdstuff.QtoItemPage(item_q)
+                    self.wd_item_q = item_q
         else:
             self.wd_item = self.wdstuff.QtoItemPage(self.TEST_ITEM)
             self.wd_item_q = self.TEST_ITEM
@@ -251,5 +340,5 @@ class Uploader(object):
         if log is not None:
             self.log = log
         self.data = monument_object.wd_item
-        self.wdstuff = WDS(self.repo, edit_summary=self.summary)
+        self.wdstuff = WDS(self.repo, edit_summary=self.summary, no_wdss=True)
         self.set_wd_item()

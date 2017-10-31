@@ -1,0 +1,962 @@
+[
+  {
+    "item": "Q45100",
+    "itemLabel": "Põlva"
+  },
+  {
+    "item": "Q80193",
+    "itemLabel": "Tabivere vald"
+  },
+  {
+    "item": "Q124799",
+    "itemLabel": "Paikuse vald"
+  },
+  {
+    "item": "Q144438",
+    "itemLabel": "Laheda vald"
+  },
+  {
+    "item": "Q1770",
+    "itemLabel": "Tallinn"
+  },
+  {
+    "item": "Q155066",
+    "itemLabel": "Kärdla"
+  },
+  {
+    "item": "Q172263",
+    "itemLabel": "Püssi"
+  },
+  {
+    "item": "Q186383",
+    "itemLabel": "Pala vald"
+  },
+  {
+    "item": "Q211059",
+    "itemLabel": "Jõhvi"
+  },
+  {
+    "item": "Q217682",
+    "itemLabel": "Tamsalu"
+  },
+  {
+    "item": "Q241101",
+    "itemLabel": "Alajõe vald"
+  },
+  {
+    "item": "Q269016",
+    "itemLabel": "Nõva vald"
+  },
+  {
+    "item": "Q290165",
+    "itemLabel": "Misso vald"
+  },
+  {
+    "item": "Q301179",
+    "itemLabel": "Vinni vald"
+  },
+  {
+    "item": "Q303053",
+    "itemLabel": "Kolga-Jaani vald"
+  },
+  {
+    "item": "Q304243",
+    "itemLabel": "Rannu vald"
+  },
+  {
+    "item": "Q305226",
+    "itemLabel": "Antsla vald"
+  },
+  {
+    "item": "Q321774",
+    "itemLabel": "Abja vald"
+  },
+  {
+    "item": "Q334757",
+    "itemLabel": "Ülenurme vald"
+  },
+  {
+    "item": "Q339347",
+    "itemLabel": "Otepää"
+  },
+  {
+    "item": "Q378613",
+    "itemLabel": "Vändra vald (alev)"
+  },
+  {
+    "item": "Q380727",
+    "itemLabel": "Aegviidu vald"
+  },
+  {
+    "item": "Q400302",
+    "itemLabel": "Ahja vald"
+  },
+  {
+    "item": "Q425757",
+    "itemLabel": "Vigala vald"
+  },
+  {
+    "item": "Q426207",
+    "itemLabel": "Vormsi vald"
+  },
+  {
+    "item": "Q429031",
+    "itemLabel": "Kõpu vald"
+  },
+  {
+    "item": "Q457723",
+    "itemLabel": "Ambla vald"
+  },
+  {
+    "item": "Q519001",
+    "itemLabel": "Kaarma vald"
+  },
+  {
+    "item": "Q525207",
+    "itemLabel": "Helme vald"
+  },
+  {
+    "item": "Q527057",
+    "itemLabel": "Rakke vald"
+  },
+  {
+    "item": "Q527669",
+    "itemLabel": "Saku vald"
+  },
+  {
+    "item": "Q546693",
+    "itemLabel": "Anija vald"
+  },
+  {
+    "item": "Q570013",
+    "itemLabel": "Sangaste vald"
+  },
+  {
+    "item": "Q587572",
+    "itemLabel": "Kihelkonna vald"
+  },
+  {
+    "item": "Q588141",
+    "itemLabel": "Lohusuu vald"
+  },
+  {
+    "item": "Q588258",
+    "itemLabel": "Palamuse vald"
+  },
+  {
+    "item": "Q589979",
+    "itemLabel": "Tõstamaa vald"
+  },
+  {
+    "item": "Q595935",
+    "itemLabel": "Räpina vald"
+  },
+  {
+    "item": "Q602909",
+    "itemLabel": "Vasalemma vald"
+  },
+  {
+    "item": "Q610250",
+    "itemLabel": "Valjala vald"
+  },
+  {
+    "item": "Q624873",
+    "itemLabel": "Torgu vald"
+  },
+  {
+    "item": "Q627343",
+    "itemLabel": "Salme vald"
+  },
+  {
+    "item": "Q627630",
+    "itemLabel": "Viiratsi vald"
+  },
+  {
+    "item": "Q628283",
+    "itemLabel": "Värska vald"
+  },
+  {
+    "item": "Q630156",
+    "itemLabel": "Vormsi"
+  },
+  {
+    "item": "Q630302",
+    "itemLabel": "Orissaare vald"
+  },
+  {
+    "item": "Q631209",
+    "itemLabel": "Lasva vald"
+  },
+  {
+    "item": "Q632864",
+    "itemLabel": "Leisi vald"
+  },
+  {
+    "item": "Q632906",
+    "itemLabel": "Otepää vald"
+  },
+  {
+    "item": "Q633001",
+    "itemLabel": "Kärla vald"
+  },
+  {
+    "item": "Q633632",
+    "itemLabel": "Laimjala vald"
+  },
+  {
+    "item": "Q633642",
+    "itemLabel": "Hummuli vald"
+  },
+  {
+    "item": "Q633651",
+    "itemLabel": "Lümanda vald"
+  },
+  {
+    "item": "Q633663",
+    "itemLabel": "Palupera vald"
+  },
+  {
+    "item": "Q633678",
+    "itemLabel": "Põdrala vald"
+  },
+  {
+    "item": "Q633687",
+    "itemLabel": "Puka vald"
+  },
+  {
+    "item": "Q633698",
+    "itemLabel": "Pöide vald"
+  },
+  {
+    "item": "Q633706",
+    "itemLabel": "Mustjala vald"
+  },
+  {
+    "item": "Q633727",
+    "itemLabel": "Tõlliste vald"
+  },
+  {
+    "item": "Q634667",
+    "itemLabel": "Karula vald"
+  },
+  {
+    "item": "Q634700",
+    "itemLabel": "Taheva vald"
+  },
+  {
+    "item": "Q635100",
+    "itemLabel": "Pihtla vald"
+  },
+  {
+    "item": "Q636588",
+    "itemLabel": "Õru vald"
+  },
+  {
+    "item": "Q637593",
+    "itemLabel": "Kõo vald"
+  },
+  {
+    "item": "Q640293",
+    "itemLabel": "Are vald"
+  },
+  {
+    "item": "Q645296",
+    "itemLabel": "Kohtla-Nõmme"
+  },
+  {
+    "item": "Q646989",
+    "itemLabel": "Meremäe vald"
+  },
+  {
+    "item": "Q647560",
+    "itemLabel": "Pühalepa vald"
+  },
+  {
+    "item": "Q647903",
+    "itemLabel": "Kõrgessaare vald"
+  },
+  {
+    "item": "Q648862",
+    "itemLabel": "Emmaste vald"
+  },
+  {
+    "item": "Q648876",
+    "itemLabel": "Käina vald"
+  },
+  {
+    "item": "Q650577",
+    "itemLabel": "Tapa"
+  },
+  {
+    "item": "Q650623",
+    "itemLabel": "Mõniste vald"
+  },
+  {
+    "item": "Q650637",
+    "itemLabel": "Haanja vald"
+  },
+  {
+    "item": "Q650647",
+    "itemLabel": "Varstu vald"
+  },
+  {
+    "item": "Q650659",
+    "itemLabel": "Urvaste vald"
+  },
+  {
+    "item": "Q650672",
+    "itemLabel": "Võru vald"
+  },
+  {
+    "item": "Q650686",
+    "itemLabel": "Vastseliina vald"
+  },
+  {
+    "item": "Q650698",
+    "itemLabel": "Rõuge vald"
+  },
+  {
+    "item": "Q653231",
+    "itemLabel": "Sõmerpalu vald"
+  },
+  {
+    "item": "Q664514",
+    "itemLabel": "Torma vald"
+  },
+  {
+    "item": "Q719969",
+    "itemLabel": "Türi vald"
+  },
+  {
+    "item": "Q720092",
+    "itemLabel": "Järva-Jaani vald"
+  },
+  {
+    "item": "Q720096",
+    "itemLabel": "Imavere vald"
+  },
+  {
+    "item": "Q720107",
+    "itemLabel": "Koeru vald"
+  },
+  {
+    "item": "Q720114",
+    "itemLabel": "Paide vald"
+  },
+  {
+    "item": "Q720130",
+    "itemLabel": "Roosna-Alliku vald"
+  },
+  {
+    "item": "Q720142",
+    "itemLabel": "Kareda vald"
+  },
+  {
+    "item": "Q720149",
+    "itemLabel": "Väätsa vald"
+  },
+  {
+    "item": "Q720155",
+    "itemLabel": "Albu vald"
+  },
+  {
+    "item": "Q724304",
+    "itemLabel": "Aseri vald"
+  },
+  {
+    "item": "Q749124",
+    "itemLabel": "Meeksi vald"
+  },
+  {
+    "item": "Q759045",
+    "itemLabel": "Audru vald"
+  },
+  {
+    "item": "Q775860",
+    "itemLabel": "Kehtna vald"
+  },
+  {
+    "item": "Q791056",
+    "itemLabel": "Avinurme vald"
+  },
+  {
+    "item": "Q925921",
+    "itemLabel": "Kõue vald"
+  },
+  {
+    "item": "Q952504",
+    "itemLabel": "Sonda vald"
+  },
+  {
+    "item": "Q968812",
+    "itemLabel": "Mäksa vald"
+  },
+  {
+    "item": "Q970845",
+    "itemLabel": "Kullamaa vald"
+  },
+  {
+    "item": "Q976796",
+    "itemLabel": "Häädemeeste vald"
+  },
+  {
+    "item": "Q990067",
+    "itemLabel": "Harku vald"
+  },
+  {
+    "item": "Q13972",
+    "itemLabel": "Tartu"
+  },
+  {
+    "item": "Q44840",
+    "itemLabel": "Viljandi"
+  },
+  {
+    "item": "Q45114",
+    "itemLabel": "Paide"
+  },
+  {
+    "item": "Q86206",
+    "itemLabel": "Saue"
+  },
+  {
+    "item": "Q102158",
+    "itemLabel": "Narva"
+  },
+  {
+    "item": "Q102365",
+    "itemLabel": "Pärnu"
+  },
+  {
+    "item": "Q117513",
+    "itemLabel": "Jõgeva"
+  },
+  {
+    "item": "Q171333",
+    "itemLabel": "Võhma"
+  },
+  {
+    "item": "Q188179",
+    "itemLabel": "Kuressaare"
+  },
+  {
+    "item": "Q191106",
+    "itemLabel": "Haapsalu"
+  },
+  {
+    "item": "Q191889",
+    "itemLabel": "Rakvere"
+  },
+  {
+    "item": "Q193905",
+    "itemLabel": "Valga"
+  },
+  {
+    "item": "Q201391",
+    "itemLabel": "Kohtla-Järve"
+  },
+  {
+    "item": "Q204091",
+    "itemLabel": "Paldiski"
+  },
+  {
+    "item": "Q205271",
+    "itemLabel": "Võru"
+  },
+  {
+    "item": "Q206555",
+    "itemLabel": "Maardu"
+  },
+  {
+    "item": "Q207275",
+    "itemLabel": "Keila"
+  },
+  {
+    "item": "Q207748",
+    "itemLabel": "Sillamäe"
+  },
+  {
+    "item": "Q213071",
+    "itemLabel": "Elva"
+  },
+  {
+    "item": "Q213178",
+    "itemLabel": "Kunda"
+  },
+  {
+    "item": "Q213740",
+    "itemLabel": "Loksa"
+  },
+  {
+    "item": "Q216119",
+    "itemLabel": "Kiviõli"
+  },
+  {
+    "item": "Q613714",
+    "itemLabel": "Kallaste"
+  },
+  {
+    "item": "Q642660",
+    "itemLabel": "Põltsamaa"
+  },
+  {
+    "item": "Q723372",
+    "itemLabel": "Narva-Jõesuu"
+  },
+  {
+    "item": "Q730707",
+    "itemLabel": "Sindi"
+  },
+  {
+    "item": "Q819395",
+    "itemLabel": "Mõisaküla"
+  },
+  {
+    "item": "Q819514",
+    "itemLabel": "Tõrva"
+  },
+  {
+    "item": "Q842021",
+    "itemLabel": "Mustvee"
+  },
+  {
+    "item": "Q12364053",
+    "itemLabel": "Holstre vald (Paistu kihelkond)"
+  },
+  {
+    "item": "Q12368040",
+    "itemLabel": "Kõnnu vald (Torma kihelkond)"
+  },
+  {
+    "item": "Q12371448",
+    "itemLabel": "Olustvere vald (Suure-Jaani kihelkond)"
+  },
+  {
+    "item": "Q12377185",
+    "itemLabel": "Torma vald (Torma kihelkond)"
+  },
+  {
+    "item": "Q14227003",
+    "itemLabel": "Noarootsi vald"
+  },
+  {
+    "item": "Q15092085",
+    "itemLabel": "Lääne-Nigula vald"
+  },
+  {
+    "item": "Q15092901",
+    "itemLabel": "Hiiu vald"
+  },
+  {
+    "item": "Q15100022",
+    "itemLabel": "Viljandi vald"
+  },
+  {
+    "item": "Q16412887",
+    "itemLabel": "Karuse vald"
+  },
+  {
+    "item": "Q18625066",
+    "itemLabel": "Lääne-Saare vald"
+  },
+  {
+    "item": "Q990542",
+    "itemLabel": "Kuusalu vald"
+  },
+  {
+    "item": "Q992974",
+    "itemLabel": "Kiili vald"
+  },
+  {
+    "item": "Q992983",
+    "itemLabel": "Kose vald"
+  },
+  {
+    "item": "Q993014",
+    "itemLabel": "Viimsi vald"
+  },
+  {
+    "item": "Q993025",
+    "itemLabel": "Padise vald"
+  },
+  {
+    "item": "Q993036",
+    "itemLabel": "Jõelähtme vald"
+  },
+  {
+    "item": "Q993046",
+    "itemLabel": "Kernu vald"
+  },
+  {
+    "item": "Q1001607",
+    "itemLabel": "Tootsi"
+  },
+  {
+    "item": "Q1009353",
+    "itemLabel": "Rae vald"
+  },
+  {
+    "item": "Q1010496",
+    "itemLabel": "Lihula vald"
+  },
+  {
+    "item": "Q1010572",
+    "itemLabel": "Märjamaa vald"
+  },
+  {
+    "item": "Q1010576",
+    "itemLabel": "Saarde vald"
+  },
+  {
+    "item": "Q1010581",
+    "itemLabel": "Lüganuse vald"
+  },
+  {
+    "item": "Q1010589",
+    "itemLabel": "Tarvastu vald"
+  },
+  {
+    "item": "Q1010593",
+    "itemLabel": "Illuka vald"
+  },
+  {
+    "item": "Q1010597",
+    "itemLabel": "Kohtla vald"
+  },
+  {
+    "item": "Q1010600",
+    "itemLabel": "Vaivara vald"
+  },
+  {
+    "item": "Q1010606",
+    "itemLabel": "Järvakandi"
+  },
+  {
+    "item": "Q1010610",
+    "itemLabel": "Oru vald"
+  },
+  {
+    "item": "Q1013773",
+    "itemLabel": "Kadrina vald"
+  },
+  {
+    "item": "Q1017539",
+    "itemLabel": "Koigi vald"
+  },
+  {
+    "item": "Q1018382",
+    "itemLabel": "Pajusi vald"
+  },
+  {
+    "item": "Q1018386",
+    "itemLabel": "Halliste vald"
+  },
+  {
+    "item": "Q1018396",
+    "itemLabel": "Haljala vald"
+  },
+  {
+    "item": "Q1018398",
+    "itemLabel": "Paistu vald"
+  },
+  {
+    "item": "Q1018401",
+    "itemLabel": "Mikitamäe vald"
+  },
+  {
+    "item": "Q1018405",
+    "itemLabel": "Vihula vald"
+  },
+  {
+    "item": "Q1018406",
+    "itemLabel": "Saarepeedi vald"
+  },
+  {
+    "item": "Q1018469",
+    "itemLabel": "Toila vald"
+  },
+  {
+    "item": "Q1018478",
+    "itemLabel": "Puhja vald"
+  },
+  {
+    "item": "Q1018547",
+    "itemLabel": "Võnnu vald"
+  },
+  {
+    "item": "Q1018594",
+    "itemLabel": "Sõmeru vald"
+  },
+  {
+    "item": "Q1018598",
+    "itemLabel": "Viru-Nigula vald"
+  },
+  {
+    "item": "Q1018604",
+    "itemLabel": "Tahkuranna vald"
+  },
+  {
+    "item": "Q1018607",
+    "itemLabel": "Laekvere vald"
+  },
+  {
+    "item": "Q1019948",
+    "itemLabel": "Raikküla vald"
+  },
+  {
+    "item": "Q1019989",
+    "itemLabel": "Käru vald"
+  },
+  {
+    "item": "Q1019999",
+    "itemLabel": "Tori vald"
+  },
+  {
+    "item": "Q1020007",
+    "itemLabel": "Hanila vald"
+  },
+  {
+    "item": "Q1020142",
+    "itemLabel": "Nõo vald"
+  },
+  {
+    "item": "Q1020154",
+    "itemLabel": "Juuru vald"
+  },
+  {
+    "item": "Q1020162",
+    "itemLabel": "Surju vald"
+  },
+  {
+    "item": "Q1020171",
+    "itemLabel": "Laeva vald"
+  },
+  {
+    "item": "Q1020174",
+    "itemLabel": "Rõngu vald"
+  },
+  {
+    "item": "Q1020178",
+    "itemLabel": "Martna vald"
+  },
+  {
+    "item": "Q1020183",
+    "itemLabel": "Väike-Maarja vald"
+  },
+  {
+    "item": "Q1020194",
+    "itemLabel": "Iisaku vald"
+  },
+  {
+    "item": "Q1020199",
+    "itemLabel": "Kaiu vald"
+  },
+  {
+    "item": "Q1020202",
+    "itemLabel": "Halinga vald"
+  },
+  {
+    "item": "Q1020208",
+    "itemLabel": "Risti vald"
+  },
+  {
+    "item": "Q1024708",
+    "itemLabel": "Kohila vald"
+  },
+  {
+    "item": "Q1024713",
+    "itemLabel": "Orava vald"
+  },
+  {
+    "item": "Q1024718",
+    "itemLabel": "Valgjärve vald"
+  },
+  {
+    "item": "Q1025174",
+    "itemLabel": "Veriora vald"
+  },
+  {
+    "item": "Q1146736",
+    "itemLabel": "Kilingi-Nõmme"
+  },
+  {
+    "item": "Q1240598",
+    "itemLabel": "Ruhnu vald"
+  },
+  {
+    "item": "Q1241493",
+    "itemLabel": "Kasepää vald"
+  },
+  {
+    "item": "Q1266078",
+    "itemLabel": "Tartu vald"
+  },
+  {
+    "item": "Q1361170",
+    "itemLabel": "Piirissaare vald"
+  },
+  {
+    "item": "Q1384556",
+    "itemLabel": "Taebla vald"
+  },
+  {
+    "item": "Q1425062",
+    "itemLabel": "Mäetaguse vald"
+  },
+  {
+    "item": "Q1432542",
+    "itemLabel": "Raasiku vald"
+  },
+  {
+    "item": "Q1432550",
+    "itemLabel": "Nissi vald"
+  },
+  {
+    "item": "Q1445105",
+    "itemLabel": "Põlva vald"
+  },
+  {
+    "item": "Q1446420",
+    "itemLabel": "Alatskivi vald"
+  },
+  {
+    "item": "Q1473945",
+    "itemLabel": "Tähtvere vald"
+  },
+  {
+    "item": "Q1474739",
+    "itemLabel": "Ridala vald"
+  },
+  {
+    "item": "Q1479719",
+    "itemLabel": "Keila vald"
+  },
+  {
+    "item": "Q1481314",
+    "itemLabel": "Mooste vald"
+  },
+  {
+    "item": "Q1503436",
+    "itemLabel": "Jõgeva vald"
+  },
+  {
+    "item": "Q1542997",
+    "itemLabel": "Kõlleste vald"
+  },
+  {
+    "item": "Q1566662",
+    "itemLabel": "Haaslava vald"
+  },
+  {
+    "item": "Q1639142",
+    "itemLabel": "Luunja vald"
+  },
+  {
+    "item": "Q1639155",
+    "itemLabel": "Puurmani vald"
+  },
+  {
+    "item": "Q1639203",
+    "itemLabel": "Tamsalu vald"
+  },
+  {
+    "item": "Q1640282",
+    "itemLabel": "Jõhvi vald"
+  },
+  {
+    "item": "Q1640303",
+    "itemLabel": "Rägavere vald"
+  },
+  {
+    "item": "Q1640556",
+    "itemLabel": "Kambja vald"
+  },
+  {
+    "item": "Q1695213",
+    "itemLabel": "Rakvere vald"
+  },
+  {
+    "item": "Q1729692",
+    "itemLabel": "Karksi vald"
+  },
+  {
+    "item": "Q1741199",
+    "itemLabel": "Kihnu"
+  },
+  {
+    "item": "Q1752118",
+    "itemLabel": "Vara vald"
+  },
+  {
+    "item": "Q1752506",
+    "itemLabel": "Pärsti vald"
+  },
+  {
+    "item": "Q1752630",
+    "itemLabel": "Tudulinna vald"
+  },
+  {
+    "item": "Q1753117",
+    "itemLabel": "Koonga vald"
+  },
+  {
+    "item": "Q1753127",
+    "itemLabel": "Sauga vald"
+  },
+  {
+    "item": "Q1753141",
+    "itemLabel": "Peipsiääre vald"
+  },
+  {
+    "item": "Q1753145",
+    "itemLabel": "Varbla vald"
+  },
+  {
+    "item": "Q1753157",
+    "itemLabel": "Maidla vald"
+  },
+  {
+    "item": "Q1755634",
+    "itemLabel": "Saue vald"
+  },
+  {
+    "item": "Q1776924",
+    "itemLabel": "Konguta vald"
+  },
+  {
+    "item": "Q1778301",
+    "itemLabel": "Muhu vald"
+  },
+  {
+    "item": "Q1805635",
+    "itemLabel": "Vändra"
+  },
+  {
+    "item": "Q1854967",
+    "itemLabel": "Saare vald"
+  },
+  {
+    "item": "Q1854978",
+    "itemLabel": "Põltsamaa vald"
+  },
+  {
+    "item": "Q1854990",
+    "itemLabel": "Tapa vald"
+  },
+  {
+    "item": "Q2068203",
+    "itemLabel": "Rapla vald"
+  },
+  {
+    "item": "Q2092418",
+    "itemLabel": "Suure-Jaani vald"
+  },
+  {
+    "item": "Q2094510",
+    "itemLabel": "Vastse-Kuuste vald"
+  },
+  {
+    "item": "Q2307788",
+    "itemLabel": "Kanepi vald"
+  }
+]
