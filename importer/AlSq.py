@@ -5,6 +5,17 @@ import importer as importer
 
 class AlSq(Monument):
 
+    def set_special_is(self):
+        if self.has_non_empty_attribute("type"):
+            spec_is_raw = self.type.lower()
+            is_dict = self.data_files["is"]["mappings"]
+            matches = utils.get_matching_items_from_dict(spec_is_raw, is_dict)
+            if len(matches) == 1:
+                self.substitute_statement("is", matches[0])
+            else:
+                self.add_to_report(
+                    "type", self.type, "is")
+
     def set_location(self):
         """Set Location based on mapping file."""
         if self.has_non_empty_attribute("place"):
@@ -71,4 +82,5 @@ if __name__ == "__main__":
     dataset = Dataset("al", "sq", AlSq)
     dataset.data_files = {"settlements": "albania_settlements.json",
                           "municipalities": "albania_municipalities.json"}
+    dataset.lookup_downloads = {"is": "al_(sq)/type"}
     importer.main(args, dataset)
