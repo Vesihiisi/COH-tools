@@ -19,7 +19,7 @@ class EsEs(Monument):
             try:
                 date_dict = utils.datetime_object_to_dict(es_date)
             except ValueError:
-                self.add_to_report("fecha", self.fecha)
+                self.add_to_report("fecha", self.fecha, "start_time")
                 self.add_statement("heritage_status", heritage)
                 return
             qualifier = {"start_time": {"time_value": date_dict}}
@@ -88,7 +88,6 @@ class EsEs(Monument):
         desc_dic = {"es": "Bien de Interés Cultural",
                     "en": "cultural property in {}".format(place)}
         for lg in desc_dic:
-            print(desc_dic[lg])
             self.add_description(lg, desc_dic[lg])
 
     def set_location(self):
