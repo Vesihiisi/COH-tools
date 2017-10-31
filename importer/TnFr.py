@@ -6,7 +6,6 @@ import importer as importer
 
 class TnFr(Monument):
 
-    #add P2795 backup after rebase
     def set_street_address(self):
         """
         Set the street address.
@@ -22,7 +21,8 @@ class TnFr(Monument):
                 address = "{}, {}".format(addr_raw, settlement)
                 self.add_statement("located_street", address)
             else:
-                self.add_to_report("adresse", self.adresse, "located_street")
+                monolingual = utils.package_monolingual(addr_raw, 'fr')
+                self.add_statement("directions", monolingual)
 
     def set_location(self):
         """
@@ -107,7 +107,7 @@ class TnFr(Monument):
         wlm_id = "{}-{}".format(wlm_code, str(self.id))
         self.add_statement("wlm_id", wlm_id)
 
-        #self.add_disambiguator(str(self.id), 'fr')
+        self.add_disambiguator(str(self.id), 'fr')
 
     def update_descriptions(self):
         english = "listed monument of Tunisia"
