@@ -24,7 +24,7 @@ class RoRo(Monument):
 
         Run this after set_adm_location. localitate can
         contain several links (we take the 1st which seems to
-        be the most granular one) and various administrative
+        be the most granular one) and a mix of administrative
         types. Compare with admin location so that they're not
         the same.
         """
@@ -65,7 +65,7 @@ class RoRo(Monument):
             place_name = "Romania"
         desc = "heritage site in {}".format(place_name)
         self.add_description("en", desc)
-        self.add_disambiguator(utils.remove_markup(self.denumire))
+        self.add_disambiguator(utils.remove_markup(str(self.cod)))
 
     def update_labels(self):
         romanian = utils.remove_markup(self.denumire)
@@ -85,6 +85,7 @@ class RoRo(Monument):
         self.set_wlm_id()
         self.set_country()
         self.set_adm_location()
+        self.set_location()
         self.set_coords()
         self.set_commonscat()
         self.set_image("imagine")
