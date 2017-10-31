@@ -259,7 +259,7 @@ def get_items(connection,
 def format_matched_p31s_rows(matched_item_p31s):
     row = "|-\n| {p31} || {freq} || {hits} "
     rows = []
-    sorted_items = sorted(matched_item_p31s.items(), key=lambda x: x[1],
+    sorted_items = sorted(matched_item_p31s.items(), key=lambda x: len(x[1]),
                           reverse=True)
     for p31, hits in sorted_items:
         # loop over matches sorted by frequency
