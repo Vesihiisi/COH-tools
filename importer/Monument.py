@@ -111,7 +111,7 @@ class Monument(object):
                         text=value["monolingual_value"],
                         lang=value["lang"])
                 else:
-                    value_to_print += str(value)
+                    value_to_print += str(value).strip()
                 quals = claim["quals"]
                 refs = claim["refs"]
                 if len(quals) == 0:
