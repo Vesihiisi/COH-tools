@@ -58,5 +58,25 @@
     {
         "item": "Q515",
         "comment": "city"
+    },
+    {
+        "item": "Q176799",
+        "comment": "military unit"
+    },
+    {
+        "item": "Q571",
+        "comment": "book"
+    },
+    {
+        "item": "Q486972",
+        "comment": "human settlement"
+    },
+    {
+        "item": "Q10648343",
+        "comment": "duo"
+    },
+    {
+        "item": "Q41067667",
+        "comment": "municipality of Tunisia"
     }
 ]
