@@ -318,6 +318,15 @@ class TestWikitext(unittest.TestCase):
         output = "Tegera Arena, huvudentrén"
         self.assertEqual(utils.remove_markup(text), output)
 
+    def test_remove_markup_two_apostrophes(self):
+        text = "Poblado de Son Marc ''(Sa Talaieta)''"
+        output = "Poblado de Son Marc (Sa Talaieta)"
+        self.assertEqual(utils.remove_markup(text), output)
+
+    def test_remove_markup_three_apostrophes(self):
+        text = "'''A''' b."
+        output = "A b."
+
     def test_remove_markup_pipe(self):
         text = "[[Tegera Arena|Arenan]], huvudentrén"
         output = "Arenan, huvudentrén"
