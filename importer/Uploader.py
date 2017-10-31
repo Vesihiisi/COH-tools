@@ -80,7 +80,7 @@ class Uploader(object):
             filename, source=commonssite, defaultNamespace=6)
         return pywikibot.FilePage(imagelink)
 
-    def make_coords_item(self, coordstuple):
+    def make_coords_item(self, coordstuple, repo):
         """
         Create a Coordinate item.
 
@@ -89,7 +89,7 @@ class Uploader(object):
         """
         DEFAULT_PREC = 0.0001
         return pywikibot.Coordinate(
-            coordstuple[0], coordstuple[1], precision=DEFAULT_PREC)
+            coordstuple[0], coordstuple[1], precision=DEFAULT_PREC, site=repo)
 
     def make_quantity_item(self, quantity, repo):
         """
@@ -173,7 +173,7 @@ class Uploader(object):
             # Don't upload coords if item already has one.
             # Temp. until https://phabricator.wikimedia.org/T160282 is solved.
             if not self.item_has_prop("coordinates", self.wd_item):
-                val_item = self.make_coords_item(value)
+                val_item = self.make_coords_item(value, self.repo)
         elif isinstance(value, dict) and 'quantity_value' in value:
             val_item = self.make_quantity_item(value, self.repo)
         elif isinstance(value, dict) and 'time_value' in value:
