@@ -6,6 +6,7 @@ import importer as importer
 
 class TnFr(Monument):
 
+    #add P2795 backup after rebase
     def set_street_address(self):
         """
         Set the street address.
@@ -80,15 +81,20 @@ class TnFr(Monument):
         urls = utils.get_external_links(self.decret)
         if len(urls) == 1:
             quals["described_at_url"] = urls[0].strip_code()
+        elif len(urls) > 1:
+            self.add_to_report("decret", self.decret, "described_at_url")
 
         date_templates = utils.wparser.parse(self.date).filter_templates()
-        if len(date_templates) == 1:
+        if (len(date_templates) == 1 and
+                date_templates[0].name.lower() == 'date'):
             templ = date_templates[0].params
             date_words = "{} {} {}".format(templ[0], templ[1], templ[2])
-            date_parsed = dateparser.parse(date_words)
+            date_parsed = dateparser.parse(date_words, languages=['fr'])
             if date_parsed:
                 date_dict = utils.datetime_object_to_dict(date_parsed)
                 quals["start_time"] = {"time_value": date_dict}
+        elif len(date_templates) > 0:
+            self.add_to_report("date", self.date, "start_time")
 
         self.add_statement("heritage_status", heritage_item, quals)
 
@@ -101,12 +107,11 @@ class TnFr(Monument):
         wlm_id = "{}-{}".format(wlm_code, str(self.id))
         self.add_statement("wlm_id", wlm_id)
 
+        #self.add_disambiguator(str(self.id), 'fr')
+
     def update_descriptions(self):
         english = "listed monument of Tunisia"
         self.add_description("en", english)
-
-    def exists_with_monument_article(self, language):
-        return super().exists_with_monument_article("fr", "monument_article")
 
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,

@@ -309,8 +309,13 @@ class TestWikitext(unittest.TestCase):
         self.assertEqual(utils.get_external_links(text), output)
 
     def test_get_urls_one(self):
-        text = "[http://www.docartis.com/Tunisia_Decreti/DECRETS/Pagine/1922_25janvier.html 25 janvier 1922]"
-        output = ["http://www.docartis.com/Tunisia_Decreti/DECRETS/Pagine/1922_25janvier.html"]
+        text = "prefix [http://www.wiki.com/Foobar.html some label] postfix"
+        output = ["http://www.wiki.com/Foobar.html"]
+        self.assertEqual(utils.get_external_links(text), output)
+
+    def test_get_urls_one_no_label(self):
+        text = "prefix [http://www.wiki.com/Foobar.html] postfix"
+        output = ["http://www.wiki.com/Foobar"]
         self.assertEqual(utils.get_external_links(text), output)
 
     def test_remove_markup_simple(self):
