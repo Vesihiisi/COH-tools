@@ -101,9 +101,9 @@ class EsEs(Monument):
         """
         if self.has_non_empty_attribute("lugar"):
             if utils.count_wikilinks(self.lugar) == 1:
-                adm_loc = self.wd_item["statements"]["P131"][0]["value"]
+                adm_loc = self.get_statement_values("located_adm")
                 loc_q = utils.q_from_first_wikilink("es", self.lugar)
-                if loc_q != adm_loc:
+                if adm_loc and loc_q != adm_loc[0]:
                     self.add_statement("location", loc_q)
             else:
                 self.add_to_report("lugar", self.lugar, "location")
