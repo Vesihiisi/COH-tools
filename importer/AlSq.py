@@ -18,30 +18,21 @@ class AlSq(Monument):
 
     def set_location(self):
         """Set Location based on mapping file."""
-        if self.has_non_empty_attribute("place"):
-            loc_raw = self.place
-            loc_match = utils.get_item_from_dict_by_key(
-                dict_name=self.data_files["settlements"],
-                search_term=loc_raw,
-                search_in="itemLabel")
-            if len(loc_match) == 1:
-                self.add_statement("location", loc_match[0])
-            else:
-                self.add_to_report("place", self.place, "location")
+        self.set_from_dict_match(
+            lookup_dict=self.data_files["settlements"],
+            dict_label="itemLabel",
+            value_label="place",
+            prop="location"
+        )
 
     def set_adm_location(self):
         """Set Admin Location based on mapping file."""
-        if self.has_non_empty_attribute("municipality"):
-            adm_raw = self.municipality
-            adm_match = utils.get_item_from_dict_by_key(
-                dict_name=self.data_files["municipalities"],
-                search_term=adm_raw,
-                search_in="itemLabel")
-            if len(adm_match) == 1:
-                self.add_statement("located_adm", adm_match[0])
-            else:
-                self.add_to_report(
-                    "municipality", self.municipality, "located_adm")
+        self.set_from_dict_match(
+            lookup_dict=self.data_files["municipalities"],
+            dict_label="itemLabel",
+            value_label="municipality",
+            prop="located_adm"
+        )
 
     def update_labels(self):
         albanian = utils.remove_markup(self.name)
