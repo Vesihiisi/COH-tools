@@ -71,7 +71,7 @@ class EsEs(Monument):
                                                          dict_name=is_dic)
             if len(s_match) == 1:
                 self.remove_statement("is")
-                self.add_statement("is", s_match)
+                self.add_statement("is", s_match[0])
             else:
                 self.add_to_report("tipobic", self.tipobic, "is")
 
