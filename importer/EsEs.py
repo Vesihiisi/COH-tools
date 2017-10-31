@@ -92,9 +92,6 @@ class EsEs(Monument):
         """Map which column name in specific table to  ID in monuments_all."""
         self.monuments_all_id = self.bic
 
-    def exists_with_monument_article(self, language):
-        return super().exists_with_monument_article("es", "monument_article")
-
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
                           data_files, existing, repository)
