@@ -53,7 +53,13 @@ class BeBruNl(Monument):
                    for street in street_with_no.split(', ')]
         street_with_non_zero_no = ', '.join(streets)
 
-        whole_address = "{}, {}".format(street_with_non_zero_no, self.plaats)
+        if self.has_non_empty_attribute("plaats"):
+            # w/o plaats happen
+            whole_address = "{}, {}".format(
+                street_with_non_zero_no, self.plaats)
+        else:
+            whole_address = street_with_non_zero_no
+
         qualifier = {"language of name": "Q7411"}  # in dutch
         self.add_statement("located_street", whole_address, qualifier)
 
