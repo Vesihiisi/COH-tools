@@ -109,6 +109,7 @@ def get_db_credentials():
 
 def create_connection(arguments):
     """Create a connection to the SQL database using arguments."""
+    arguments = vars(arguments)
     if on_forge():
         arguments["host"] = "tools-db"
         arguments["db"] = "s51138__heritage_p"
