@@ -325,7 +325,8 @@ class Monument(object):
         coord_keywords_tuple = coord_keywords_tuple or ("lat", "lon")
         lat = coord_keywords_tuple[0]
         lon = coord_keywords_tuple[1]
-        if self.has_non_empty_attribute(lat):
+        if (self.has_non_empty_attribute(lat) and
+                self.has_non_empty_attribute(lon)):
             if self.lat == 0 and self.lon == 0:
                 return
             else:
