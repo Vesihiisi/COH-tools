@@ -213,6 +213,20 @@ class Monument(object):
             self.remove_statement(prop_name)
             self.add_statement(prop_name, value, quals, refs)
 
+    def get_statement_values(self, prop_name):
+        """
+        Retrieve list of all statements with given property from data object.
+
+        e.g. get_statement_values("country") → ['Q29']
+
+        :param prop_name: name of the property,
+            as stated in the props library file
+        """
+        base = self.wd_item["statements"]
+        prop = self.props[prop_name]
+        if prop in base:
+            return [x['value'] for x in base[prop]]
+
     def set_wd_item(self, wd_item):
         """Associate the data object with a Wikidata item."""
         if wd_item is not None:

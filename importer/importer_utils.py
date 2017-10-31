@@ -96,7 +96,7 @@ def remove_markup(text):
     remove_br = re.compile('<br.*?>\W*', re.I)
     text = remove_br.sub(' ', text)
     text = " ".join(text.split())
-    if "[" in text:
+    if "[" in text or "''" in text:
         text = wparser.parse(text)
         text = text.strip_code()
     return remove_multiple_spaces(text.strip())
