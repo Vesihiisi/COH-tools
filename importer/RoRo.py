@@ -18,9 +18,27 @@ class RoRo(Monument):
                                self.judetul_iso,
                                "located_adm")
 
-    def set_monuments_all_id(self):
-        """Map which column name in specific table to  ID in monuments_all."""
-        self.monuments_all_id = str(self.cod)
+    def set_location(self):
+        """
+        Set Location property from art wlinked in localitate.
+
+        Run this after set_adm_location. localitate can
+        contain several links (we take the 1st which seems to
+        be the most granular one) and various administrative
+        types. Compare with admin location so that they're not
+        the same.
+        """
+        if self.has_non_empty_attribute("localitate"):
+            loc_item = None
+            if utils.count_wikilinks(self.localitate) > 0:
+                loc_link = utils.get_wikilinks(self.localitate)[0]
+                loc_item = utils.q_from_wikipedia(loc_link.title, "ro")
+                adm_item = self.get_statement_values("adm_location")
+                if loc_item and loc_item != adm_item[0]:
+                    self.add_statement("location", loc_item)
+
+            if not loc_item:
+                self.add_to_report("localitate", self.localitate, "location")
 
     def set_wlm_id(self):
         """
@@ -37,17 +55,25 @@ class RoRo(Monument):
     def update_descriptions(self):
         adm_code = self.judetul_iso
         counties = self.data_files["counties"]
-        county_item = [x for x in counties if x["iso_code"] == adm_code]
+        county_item = utils.get_item_from_dict_by_key(dict_name=counties,
+                                                      search_term=adm_code,
+                                                      return_content_of="itemLabel",
+                                                      search_in="iso_code")
         if len(county_item) == 1:
-            place_name = "{}, Romania".format(county_item[0]["itemLabel"])
+            place_name = "{}, Romania".format(county_item[0])
         else:
             place_name = "Romania"
         desc = "heritage site in {}".format(place_name)
         self.add_description("en", desc)
+        self.add_disambiguator(utils.remove_markup(self.denumire))
 
     def update_labels(self):
         romanian = utils.remove_markup(self.denumire)
         self.add_label("ro", romanian)
+
+    def set_monuments_all_id(self):
+        """Map which column name in specific table to  ID in monuments_all."""
+        self.monuments_all_id = str(self.cod)
 
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
