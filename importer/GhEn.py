@@ -85,7 +85,7 @@ if __name__ == "__main__":
     args = importer.handle_args()
     dataset = Dataset("gh", "en", GhEn)
     dataset.data_files = {
-        "regions": "ghana_provinces.json",  # http://tinyurl.com/ybzgsqgs
+        "regions": "ghana_regions.json"  # http://tinyurl.com/y9ye4kfg
     }
     dataset.lookup_downloads = {"is": "gh_(en)/original function"}
     importer.main(args, dataset)
