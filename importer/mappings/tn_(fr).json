@@ -1,0 +1,21 @@
+{
+    "country": {
+        "item": "Q948",
+        "name": "Tunisia"
+    },
+    "country_code": "tn",
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "Q26696419",
+        "name": "monument classé de Tunisie"
+    },
+    "language": "fr",
+    "table_name": "tn",
+    "unique": {
+        "comment": "WLM ID",
+        "property": "P2186"
+    }
+}

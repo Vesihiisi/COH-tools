@@ -46,6 +46,11 @@ class KeEn(Monument):
         else:
             self.add_to_report("location", self.location, "location")
 
+    def set_directions(self):
+        if self.has_non_empty_attribute("address"):
+            dirs = utils.package_monolingual(self.address, "en")
+            self.add_statement("directions", dirs)
+
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
                           data_files, existing, repository)
@@ -61,6 +66,7 @@ class KeEn(Monument):
         self.set_heritage_id()
         self.set_heritage()
         self.set_heritage_start()
+        self.set_directions()
         self.update_labels()
         self.update_descriptions()
         self.set_wd_item(self.find_matching_wikidata(mapping))
