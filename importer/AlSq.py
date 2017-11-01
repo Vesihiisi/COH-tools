@@ -13,8 +13,7 @@ class AlSq(Monument):
             if len(matches) == 1:
                 self.substitute_statement("is", matches[0])
             else:
-                self.add_to_report(
-                    "type", self.type, "is")
+                self.add_to_report("type", self.type, "is")
 
     def set_location(self):
         """Set Location based on mapping file."""
@@ -57,6 +56,7 @@ class AlSq(Monument):
         self.set_heritage_id()
         self.set_heritage()
         self.set_is()
+        self.set_special_is()
         self.set_adm_location()
         self.set_location()
         self.set_coords()
