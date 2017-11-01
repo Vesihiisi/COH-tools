@@ -15,7 +15,9 @@ class KeEn(Monument):
         self.add_label("en", english)
 
     def set_heritage_id(self):
-        self.add_statement("wlm_id", str(self.id))
+        prefix = self.mapping["table_name"].upper()
+        wlm_id = "{}-{}".format(prefix, str(self.id))
+        self.add_statement("wlm_id", wlm_id)
 
     def set_heritage_start(self):
         if self.has_non_empty_attribute("gazette"):
