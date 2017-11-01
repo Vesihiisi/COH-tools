@@ -60,7 +60,7 @@ class CoEs(Monument):
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
                           data_files, existing, repository)
-        self.set_monuments_all_id(self.id)
+        self.set_monuments_all_id("id")
         self.set_changed()
         self.set_wlm_source()
         self.set_heritage()
