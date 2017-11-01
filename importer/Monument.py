@@ -422,9 +422,11 @@ class Monument(object):
         if blocks and getattr(self, blocks):
             return None
         elif getattr(self, raw):
-            return super().exists_with_monument_article(language, raw)
+            return super(self.__class__, self).exists_with_monument_article(
+                language, raw)
         else:
-            return super().exists_with_monument_article(language, linked)
+            return super(self.__class__, self).exists_with_monument_article(
+                language, linked)
 
     def has_non_empty_attribute(self, attr_name):
         """
