@@ -3,7 +3,6 @@ Example usage
 python3 create_distinct_lookup_table.py --column liik --table "monuments_ee_(et)" --user foo
 """
 
-import pymysql
 import argparse
 import wlmhelpers
 import pywikibot as pwb
@@ -52,12 +51,7 @@ def createFileName(column, tablename):
 
 
 def main(arguments):
-    connection = pymysql.connect(
-        host=arguments.host,
-        user=arguments.user,
-        password=arguments.password,
-        db=arguments.db,
-        charset="utf8")
+    connection = wlmhelpers.create_connection(arguments)
     language = wlmhelpers.getLanguage(arguments.table)
     query = makeQuery(arguments.column, arguments.table)
     distincts = wlmhelpers.selectQuery(query, connection)
@@ -65,13 +59,27 @@ def main(arguments):
     wikitable = createWikitable(language, distincts, arguments.column)
     wlmhelpers.saveToFile(filename, wikitable)
 
-if __name__ == "__main__":
+
+def handle_args(*args):
+    """
+    Parse and handle command line arguments to get data from the database.
+
+    Also supports any pywikibot arguments, these are prefixed by a single "-"
+    and the full list can be gotten through "-help".
+    """
     parser = argparse.ArgumentParser()
-    parser.add_argument("--host", default="localhost")
-    parser.add_argument("--user", default="root")
-    parser.add_argument("--password", default="")
-    parser.add_argument("--db", default="wlm")
+    if not wlmhelpers.on_forge():
+        parser.add_argument("--host", default="localhost")
+        parser.add_argument("--db", default="wlm")
+        parser.add_argument("--user", default="root")
+        parser.add_argument("--password", default="")
     parser.add_argument("--column", required=True)
     parser.add_argument("--table", required=True)
-    args = parser.parse_args()
-    main(args)
+
+    # first parse args with pywikibot, send remaining args to local handler
+    return parser.parse_args(pwb.handle_args(args))
+
+
+if __name__ == "__main__":
+    parsed_args = handle_args()
+    main(parsed_args)
