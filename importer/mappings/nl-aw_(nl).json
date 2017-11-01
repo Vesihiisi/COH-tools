@@ -1,0 +1,21 @@
+{
+    "country": {
+        "item": "Q55",
+        "name": "the netherlands"
+    },
+    "country_code": "nl",
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "Q38221663",
+        "name": "cultural heritage monument in Aruba"
+    },
+    "language": "nl",
+    "table_name": "nl-aw",
+    "unique": {
+        "comment": "WLM ID",
+        "property": "P2186"
+    }
+}
