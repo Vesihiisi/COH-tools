@@ -78,5 +78,17 @@
     {
         "item": "Q41067667",
         "comment": "municipality of Tunisia"
+    },
+    {
+        "item": "Q2074737",
+        "comment": "municipality of Spain"
+    },
+    {
+        "item": "Q3257686",
+        "comment": "locality"
+    },
+    {
+        "item": "Q3154693",
+        "comment": "city council"
     }
 ]
