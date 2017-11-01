@@ -17,7 +17,7 @@
     },
     "language": "ro",
     "unique": {
-        "comment": "WLM ID",
-        "property": "P2186"
+        "comment": "Romania LMI code",
+        "property": "P1770"
     }
 }

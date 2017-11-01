@@ -32,17 +32,8 @@ class RoRo(Monument):
             if not loc_item:
                 self.add_to_report("localitate", self.localitate, "location")
 
-    def set_wlm_id(self):
-        """
-        Set the WLM ID.
-
-        Do _not_ use the Romania LMI code (P1770)
-        as it's made up and has no relevance to the
-        real world.
-        """
-        ccode = self.mapping["country_code"].upper()
-        wlm_id = "{}-{}".format(ccode, self.cod)
-        self.add_statement("wlm_id", wlm_id)
+    def set_heritage_id(self):
+        self.add_statement("romanian_monument_id", self.cod)
 
     def update_descriptions(self):
         adm_code = self.judetul_iso
@@ -82,8 +73,8 @@ class RoRo(Monument):
         self.set_monuments_all_id("cod")
         self.set_changed()
         self.set_wlm_source()
+        self.set_heritage_id()
         self.set_heritage()
-        self.set_wlm_id()
         self.set_country()
         self.set_adm_location()
         self.set_address()
