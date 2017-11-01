@@ -65,6 +65,20 @@ class AmHy(Monument):
             qual_url = {"described_at_url": self.registrant_url}
         self.add_statement("armenia_heritage", str(self.id), qual_url)
 
+    def set_directions(self):
+        """
+        Set directions / address.
+
+        Use street address if 'address' contains digits,
+        otherwise add as directions.
+        """
+        if self.has_non_empty_attribute("address"):
+            if utils.contains_digit(self.address):
+                self.add_statement("located_street", self.address)
+            else:
+                monolingual = utils.package_monolingual(self.address, 'hy')
+                self.add_statement("directions", monolingual)
+
     def update_labels(self):
         name = utils.remove_markup(self.description)
         self.add_label("hy", name)
@@ -80,14 +94,15 @@ class AmHy(Monument):
         self.set_registrant_url()
         self.set_changed()
         self.set_wlm_source()
+        self.set_heritage_id()
+        self.set_heritage()
         self.set_country()
         self.set_adm_location()
         self.set_image()
         self.set_coords()
         self.set_commonscat()
-        self.set_heritage_id()
         self.set_is()
-        self.set_heritage()
+        self.set_directions()
         self.update_labels()
         self.update_descriptions()
         self.set_wd_item(self.find_matching_wikidata(mapping))
