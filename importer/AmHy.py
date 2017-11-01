@@ -5,6 +5,15 @@ import importer as importer
 
 class AmHy(Monument):
 
+    def set_country(self):
+        """If necessary (NK), overwrite default country with Azerbaijan."""
+        azerbaijan = "Q227"
+        if self.has_non_empty_attribute("prov_iso"):
+            if self.prov_iso.startswith("NK-"):
+                self.add_statement("country", azerbaijan)
+                return
+        super().set_country()
+
     def set_adm_location(self):
         """
         Set the Admin Location.
@@ -51,7 +60,9 @@ class AmHy(Monument):
             super().set_commonscat()
 
     def set_heritage_id(self):
-        qual_url = {"described_at_url": self.registrant_url}
+        qual_url = None
+        if self.has_non_empty_attribute("registrant_url"):
+            qual_url = {"described_at_url": self.registrant_url}
         self.add_statement("armenia_heritage", str(self.id), qual_url)
 
     def update_labels(self):
