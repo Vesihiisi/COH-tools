@@ -51,10 +51,11 @@ class RoRo(Monument):
         self.add_disambiguator(str(self.cod))
 
     def set_address(self):
+        street_patterns = ("piața", "str.", "bd.")
         if self.has_non_empty_attribute("adresa"):
             adr_lower = self.adresa.lower()
             adr_nice = utils.remove_markup(self.adresa)
-            if "piața" in adr_lower or "str." in adr_lower:
+            if any(pattern in adr_lower for pattern in street_patterns):
                 if self.has_non_empty_attribute("localitate"):
                     town = utils.remove_markup(self.localitate)
                     adr_nice = "{}, {}".format(adr_nice, town)
