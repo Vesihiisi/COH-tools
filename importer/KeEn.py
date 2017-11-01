@@ -27,15 +27,24 @@ class KeEn(Monument):
             self.substitute_statement("heritage_status", heritage, qualifier)
 
     def set_adm_location(self):
-        location_match = None
-        if self.has_non_empty_attribute("location"):
-            location_match = utils.q_from_first_wikilink("en", self.location)
-        if not location_match and self.has_non_empty_attribute("county"):
-            location_match = utils.q_from_first_wikilink("en", self.county)
-        if location_match:
-            self.add_statement("located_adm", location_match)
+        adm_match = None
+        if self.has_non_empty_attribute("county"):
+            adm_match = utils.q_from_first_wikilink("en", self.county)
+
+        if adm_match:
+            self.add_statement("located_adm", adm_match)
         else:
             self.add_to_report("county", self.county, "located_adm")
+
+    def set_location(self):
+        loc_match = None
+        if self.has_non_empty_attribute("location"):
+            loc_match = utils.q_from_first_wikilink("en", self.location)
+
+        if loc_match:
+            self.add_statement("location", loc_match)
+        else:
+            self.add_to_report("location", self.location, "location")
 
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
@@ -46,6 +55,7 @@ class KeEn(Monument):
         self.set_country()
         self.set_coords(("lat", "lon"))
         self.set_adm_location()
+        self.set_location()
         self.set_commonscat()
         self.set_is()
         self.set_heritage_id()
