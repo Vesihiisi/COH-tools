@@ -1,0 +1,237 @@
+[
+    {
+        "item": "Q5727",
+        "itemLabel": "La Rioja",
+        "iso": "ES-LO"
+    },
+    {
+        "item": "Q5727",
+        "itemLabel": "La Rioja",
+        "iso": "ES-RI"
+    },
+    {
+        "item": "Q7194",
+        "itemLabel": "Provincia de Gerona",
+        "iso": "ES-GI"
+    },
+    {
+        "item": "Q13904",
+        "itemLabel": "Provincia de Lérida",
+        "iso": "ES-L"
+    },
+    {
+        "item": "Q54888",
+        "itemLabel": "Provincia de Cuenca",
+        "iso": "ES-CU"
+    },
+    {
+        "item": "Q54889",
+        "itemLabel": "Provincia de Albacete",
+        "iso": "ES-AB"
+    },
+    {
+        "item": "Q54925",
+        "itemLabel": "Provincia de Guadalajara",
+        "iso": "ES-GU"
+    },
+    {
+        "item": "Q54929",
+        "itemLabel": "Provincia de Toledo",
+        "iso": "ES-TO"
+    },
+    {
+        "item": "Q54932",
+        "itemLabel": "Provincia de Ciudad Real",
+        "iso": "ES-CR"
+    },
+    {
+        "item": "Q54936",
+        "itemLabel": "Provincia de Alicante",
+        "iso": "ES-A"
+    },
+    {
+        "item": "Q54939",
+        "itemLabel": "Provincia de Valencia",
+        "iso": "ES-V"
+    },
+    {
+        "item": "Q54942",
+        "itemLabel": "Provincia de Castellón",
+        "iso": "ES-CS"
+    },
+    {
+        "item": "Q54955",
+        "itemLabel": "Provincia de Teruel",
+        "iso": "ES-TE"
+    },
+    {
+        "item": "Q55180",
+        "itemLabel": "Provincia de Zaragoza",
+        "iso": "ES-Z"
+    },
+    {
+        "item": "Q55182",
+        "itemLabel": "Provincia de Huesca",
+        "iso": "ES-HU"
+    },
+    {
+        "item": "Q55269",
+        "itemLabel": "Provincia de Palencia",
+        "iso": "ES-P"
+    },
+    {
+        "item": "Q55271",
+        "itemLabel": "Provincia de Burgos",
+        "iso": "ES-BU"
+    },
+    {
+        "item": "Q55276",
+        "itemLabel": "Provincia de Soria",
+        "iso": "ES-SO"
+    },
+    {
+        "item": "Q55283",
+        "itemLabel": "Provincia de Segovia",
+        "iso": "ES-SG"
+    },
+    {
+        "item": "Q55288",
+        "itemLabel": "Provincia de Ávila",
+        "iso": "ES-AV"
+    },
+    {
+        "item": "Q71080",
+        "itemLabel": "Provincia de Salamanca",
+        "iso": "ES-SA"
+    },
+    {
+        "item": "Q71097",
+        "itemLabel": "Provincia de Valladolid",
+        "iso": "ES-VA"
+    },
+    {
+        "item": "Q71113",
+        "itemLabel": "Provincia de Zamora",
+        "iso": "ES-ZA"
+    },
+    {
+        "item": "Q71140",
+        "itemLabel": "Provincia de León",
+        "iso": "ES-LE"
+    },
+    {
+        "item": "Q81801",
+        "itemLabel": "Álava",
+        "iso": "ES-VI"
+    },
+    {
+        "item": "Q81802",
+        "itemLabel": "Provincia de Almería",
+        "iso": "ES-AL"
+    },
+    {
+        "item": "Q81803",
+        "itemLabel": "Provincia de Badajoz",
+        "iso": "ES-BA"
+    },
+    {
+        "item": "Q81949",
+        "itemLabel": "Provincia de Barcelona",
+        "iso": "ES-B"
+    },
+    {
+        "item": "Q81972",
+        "itemLabel": "Provincia de Córdoba",
+        "iso": "ES-CO"
+    },
+    {
+        "item": "Q81977",
+        "itemLabel": "Provincia de Cáceres",
+        "iso": "ES-CC"
+    },
+    {
+        "item": "Q81978",
+        "itemLabel": "Provincia de Cádiz",
+        "iso": "ES-CA"
+    },
+    {
+        "item": "Q82119",
+        "itemLabel": "Provincia de La Coruña",
+        "iso": "ES-C"
+    },
+    {
+        "item": "Q82142",
+        "itemLabel": "Provincia de Granada",
+        "iso": "ES-GR"
+    },
+    {
+        "item": "Q93366",
+        "itemLabel": "Vizcaya",
+        "iso": "ES-BI"
+    },
+    {
+        "item": "Q95010",
+        "itemLabel": "Guipúzcoa",
+        "iso": "ES-SS"
+    },
+    {
+        "item": "Q95015",
+        "itemLabel": "Provincia de Huelva",
+        "iso": "ES-H"
+    },
+    {
+        "item": "Q95025",
+        "itemLabel": "Provincia de Jaén",
+        "iso": "ES-J"
+    },
+    {
+        "item": "Q95027",
+        "itemLabel": "Provincia de Lugo",
+        "iso": "ES-LU"
+    },
+    {
+        "item": "Q95028",
+        "itemLabel": "provincia de Málaga",
+        "iso": "ES-MA"
+    },
+    {
+        "item": "Q95038",
+        "itemLabel": "Provincia de Orense",
+        "iso": "ES-OR"
+    },
+    {
+        "item": "Q95080",
+        "itemLabel": "Provincia de Las Palmas",
+        "iso": "ES-GC"
+    },
+    {
+        "item": "Q95086",
+        "itemLabel": "Provincia de Pontevedra",
+        "iso": "ES-PO"
+    },
+    {
+        "item": "Q95088",
+        "itemLabel": "Provincia de Sevilla",
+        "iso": "ES-SE"
+    },
+    {
+        "item": "Q98392",
+        "itemLabel": "provincia de Tarragona",
+        "iso": "ES-T"
+    },
+    {
+        "item": "Q99976",
+        "itemLabel": "Provincia de Santa Cruz de Tenerife",
+        "iso": "ES-TF"
+    },
+    {
+        "item": "Q24004405",
+        "itemLabel": "provincia de Madrid",
+        "iso": "ES-M"
+    },
+    {
+        "item": "Q24271891",
+        "itemLabel": "Q24271891",
+        "iso": "ES-MU"
+    }
+]
