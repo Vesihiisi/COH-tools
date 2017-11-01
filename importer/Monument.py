@@ -21,13 +21,10 @@ class Monument(object):
         :param repository: data repository (Wikidata site)
         """
         self.raw_data = db_row_dict
-        self.props = utils.load_json(
-            path.join(MAPPING_DIR, "props_general.json"))
-        self.adm0 = utils.load_json(path.join(MAPPING_DIR, "adm0.json"))
-        self.sources = utils.load_json(
-            path.join(MAPPING_DIR, "data_sources.json"))
-        self.common_items = utils.load_json(
-            path.join(MAPPING_DIR, "common_items.json"))
+        self.props = data_files["_static"]["props"]
+        self.adm0 = data_files["_static"]["adm0"]
+        self.sources = data_files["_static"]["sources"]
+        self.common_items = data_files["_static"]["common_items"]
         for k, v in db_row_dict.items():
             if not k.startswith("m_spec."):
                 setattr(self, k.replace("-", "_"), v)

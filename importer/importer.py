@@ -137,6 +137,7 @@ def load_data(dataset):
     Loads both offline files and online ones specified in the dataset.
     """
     data_files = load_data_files(dataset)
+    data_files["_static"] = load_static_data()
     if dataset.subclass_downloads:
         for sub_title, sub_item in dataset.subclass_downloads.items():
             data_files[sub_title] = get_subclasses(sub_item)
@@ -148,6 +149,19 @@ def load_data(dataset):
             data_files[l_title] = lookup_json
             print("Loaded online data: {}".format(l_path))
     return data_files
+
+
+def load_static_data():
+    """Get static data files shared by all countries."""
+    return {
+        "props": utils.load_json(
+            path.join(MAPPING_DIR, "props_general.json")),
+        "adm0": utils.load_json(path.join(MAPPING_DIR, "adm0.json")),
+        "sources": utils.load_json(
+            path.join(MAPPING_DIR, "data_sources.json")),
+        "common_items": utils.load_json(
+            path.join(MAPPING_DIR, "common_items.json"))
+    }
 
 
 def get_items(connection,
