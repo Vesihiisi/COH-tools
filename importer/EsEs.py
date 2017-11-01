@@ -15,14 +15,13 @@ class EsEs(Monument):
         heritage = self.mapping["heritage"]["item"]
         if self.has_non_empty_attribute("fecha"):
             # 20 de febrero de 1985
+            qualifier = {}
             es_date = dateparser.parse(self.fecha, languages=['es'])
-            try:
+            if es_date:
                 date_dict = utils.datetime_object_to_dict(es_date)
-            except ValueError:
+                qualifier = {"start_time": utils.package_time(date_dict)}
+            else:
                 self.add_to_report("fecha", self.fecha, "start_time")
-                self.add_statement("heritage_status", heritage)
-                return
-            qualifier = {"start_time": {"time_value": date_dict}}
             self.add_statement("heritage_status", heritage, qualifier)
         else:
             self.add_statement("heritage_status", heritage)
