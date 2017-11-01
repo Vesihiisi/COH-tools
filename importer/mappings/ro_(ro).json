@@ -3,16 +3,17 @@
         "item": "Q218",
         "name": "Romania"
     },
-    "country_code": "za",
+    "country_code": "ro",
+    "table_name": "ro",
     "default_is": {
         "comment": "",
-        "item": "",
-        "name": ""
+        "item": "Q2065736",
+        "name": "Cultural property"
     },
     "heritage": {
         "comment": "",
-        "item": "",
-        "name": ""
+        "item": "Q916620",
+        "name": "Monument istoric"
     },
     "language": "ro",
     "unique": {
