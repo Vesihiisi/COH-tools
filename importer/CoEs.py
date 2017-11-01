@@ -46,6 +46,7 @@ class CoEs(Monument):
                 match = dep_match[0]
             else:
                 self.add_to_report("iso", self.iso, "located_adm")
+
         if match:
             self.add_statement("located_adm", match)
 
