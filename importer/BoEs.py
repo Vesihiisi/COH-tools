@@ -9,55 +9,65 @@ class BoEs(Monument):
         """
         Set the administrative location.
 
-        Try to use the more specific municipality first,
-        then the department if that didn't work.
+        First try to resolve the municipality,
+        and if that doesn't work use the department
+        which is a higher unit.
         """
-        adm_match = None
+        match = None
         if self.has_non_empty_attribute("municipio"):
-            adm_match = utils.q_from_first_wikilink("es", self.municipio)
-        if not adm_match:
-            adm_match = utils.q_from_first_wikilink("es", self.departamento)
-        if adm_match:
-            self.add_statement("located_adm", adm_match)
-        else:
-            self.add_to_report(
-                "departamento", self.departamento, "located_adm")
+            match = utils.q_from_first_wikilink("es", self.municipio)
+            if not match:
+                self.add_to_report("municipio", self.municipio, "located_adm")
+        if not match:
+            dep_match = utils.get_item_from_dict_by_key(
+                dict_name=self.data_files["departments"],
+                search_term=self.iso,
+                search_in="iso")
+            if len(dep_match) == 1:
+                match = dep_match[0]
+            else:
+                self.add_to_report("iso", self.iso, "located_adm")
+
+        if match:
+            self.add_statement("located_adm", match)
 
     def update_labels(self):
         spanish = utils.remove_markup(self.monumento)
         self.add_label("es", spanish)
 
-    def set_monuments_all_id(self):
-        self.monuments_all_id = str(self.id)
-
     def set_heritage_id(self):
-        """
-        Set the WLM ID.
+        """Set the WLM ID as heritage ID with a CO-prefix."""
+        wlm = "{}-{}".format(self.mapping["table_name"].upper(), self.id)
+        self.add_statement("wlm_id", wlm)
+        self.add_disambiguator(str(self.id))
 
-        The ID numbers here are not real.
-        Note that since the WLM identifiers are not
-        globally unique, this might need to be
-        prefixed by country if convention is laid down.
-        """
-        self.add_statement("wlm_id", str(self.id))
+    def set_directions(self):
+        if self.has_non_empty_attribute("direccion"):
+            monolingual = utils.package_monolingual(self.direccion, 'es')
+            self.add_statement("directions", monolingual)
 
     def exists_with_monument_article(self, language):
-        return super().exists_with_monument_article("en", "monumento_enlace")
+        return self.get_multi_param_monument_article(
+            raw="monumento_enlace",
+            linked="monumento",
+            blocks="enlace",
+            language=language)
 
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
                           data_files, existing, repository)
-        self.set_monuments_all_id()
+        self.set_monuments_all_id("id")
         self.set_changed()
-        self.wlm_source = self.create_wlm_source(self.monuments_all_id)
+        self.set_wlm_source()
         self.set_country()
         self.set_adm_location()
+        self.set_directions()
         self.set_is()
         self.set_heritage()
         self.set_commonscat()
         self.set_image()
         self.set_heritage_id()
-        self.set_coords(("lat", "lon"))
+        self.set_coords()
         self.update_labels()
         self.set_wd_item(self.find_matching_wikidata(mapping))
 
@@ -66,6 +76,7 @@ if __name__ == "__main__":
     """Command line entry point for importer."""
     args = importer.handle_args()
     dataset = Dataset("bo", "es", BoEs)
-    dataset.data_files = {}
-    dataset.lookup_downloads = {}
+    dataset.data_files = {
+        "departments": "bolivia_department.json"  # http://tinyurl.com/y9oenz78
+    }
     importer.main(args, dataset)
