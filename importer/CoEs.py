@@ -49,6 +49,11 @@ class CoEs(Monument):
         if match:
             self.add_statement("located_adm", match)
 
+    def set_directions(self):
+        if self.has_non_empty_attribute("direccion"):
+            monolingual = utils.package_monolingual(self.direccion, 'es')
+            self.add_statement("directions", monolingual)
+
     def exists_with_monument_article(self, language):
         return self.get_multi_param_monument_article(
             raw="monumento_enlace",
@@ -68,6 +73,7 @@ class CoEs(Monument):
         self.set_registrant_url()
         self.set_is()
         self.set_adm_location()
+        self.set_directions()
         self.set_image("imagen")
         self.set_commonscat("monumento_categoria")
         self.update_labels()
