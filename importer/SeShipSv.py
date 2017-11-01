@@ -66,7 +66,8 @@ class SeShipSv(Monument):
             if isinstance(byggar, int):
                 ref = self.wlm_source
                 self.add_statement(
-                    "inception", {"time_value": {"year": byggar}}, refs=[ref])
+                    "inception", utils.package_time({"year": byggar}),
+                    refs=[ref])
             else:
                 self.add_to_report("byggår", self.byggar)
 
@@ -91,8 +92,8 @@ class SeShipSv(Monument):
                         ref = self.wlm_source
                         self.add_statement(
                             dimension,
-                            {"quantity_value": value,
-                             "unit": self.common_items["metre"]},
+                            utils.package_quantity(
+                                value, self.common_items["metre"]),
                             refs=[ref])
 
     def set_homeport(self):

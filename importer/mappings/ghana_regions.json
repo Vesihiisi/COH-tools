@@ -1,0 +1,52 @@
+[
+  {
+    "iso": "GH-BA",
+    "item": "Q397737",
+    "itemLabel": "Brong-Ahafo Region"
+  },
+  {
+    "iso": "GH-AH",
+    "item": "Q398417",
+    "itemLabel": "Ashanti Region"
+  },
+  {
+    "iso": "GH-EP",
+    "item": "Q405670",
+    "itemLabel": "Eastern Region"
+  },
+  {
+    "iso": "GH-AA",
+    "item": "Q431729",
+    "itemLabel": "Greater Accra Region"
+  },
+  {
+    "iso": "GH-NP",
+    "item": "Q502215",
+    "itemLabel": "Northern Region"
+  },
+  {
+    "iso": "GH-UE",
+    "item": "Q712828",
+    "itemLabel": "Upper East Region"
+  },
+  {
+    "iso": "GH-TV",
+    "item": "Q712832",
+    "itemLabel": "Volta Region"
+  },
+  {
+    "iso": "GH-UW",
+    "item": "Q715805",
+    "itemLabel": "Upper West Region"
+  },
+  {
+    "iso": "GH-CP",
+    "item": "Q846323",
+    "itemLabel": "Central Region"
+  },
+  {
+    "iso": "GH-WP",
+    "item": "Q870155",
+    "itemLabel": "Western Region"
+  }
+]

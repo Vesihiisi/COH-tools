@@ -1,0 +1,342 @@
+[
+    {
+        "item": "Q23800",
+        "itemLabel": "Valletta",
+        "iso": "MT-60"
+    },
+    {
+        "item": "Q39507",
+        "itemLabel": "San Ġwann",
+        "iso": "MT-49"
+    },
+    {
+        "item": "Q39518",
+        "itemLabel": "Żabbar",
+        "iso": "MT-64"
+    },
+    {
+        "item": "Q39520",
+        "itemLabel": "Mosta",
+        "iso": "MT-32"
+    },
+    {
+        "item": "Q39521",
+        "itemLabel": "St. Paul's Bay",
+        "iso": "MT-51"
+    },
+    {
+        "item": "Q39526",
+        "itemLabel": "Sliema",
+        "iso": "MT-56"
+    },
+    {
+        "item": "Q39578",
+        "itemLabel": "Qormi",
+        "iso": "MT-43"
+    },
+    {
+        "item": "Q39583",
+        "itemLabel": "Birkirkara",
+        "iso": "MT-04"
+    },
+    {
+        "item": "Q44381",
+        "itemLabel": "Rabat",
+        "iso": "MT-46"
+    },
+    {
+        "item": "Q44388",
+        "itemLabel": "Fgura",
+        "iso": "MT-08"
+    },
+    {
+        "item": "Q44392",
+        "itemLabel": "Żejtun",
+        "iso": "MT-67"
+    },
+    {
+        "item": "Q44397",
+        "itemLabel": "Naxxar",
+        "iso": "MT-38"
+    },
+    {
+        "item": "Q44417",
+        "itemLabel": "Żurrieq",
+        "iso": "MT-68"
+    },
+    {
+        "item": "Q44557",
+        "itemLabel": "Attard",
+        "iso": "MT-01"
+    },
+    {
+        "item": "Q44573",
+        "itemLabel": "Żebbuġ",
+        "iso": "MT-66"
+    },
+    {
+        "item": "Q179243",
+        "itemLabel": "Żebbuġ",
+        "iso": "MT-65"
+    },
+    {
+        "item": "Q207277",
+        "itemLabel": "Mdina",
+        "iso": "MT-29"
+    },
+    {
+        "item": "Q220667",
+        "itemLabel": "Swieqi",
+        "iso": "MT-57"
+    },
+    {
+        "item": "Q258028",
+        "itemLabel": "Birżebbuġa",
+        "iso": "MT-05"
+    },
+    {
+        "item": "Q267431",
+        "itemLabel": "Il-Marsa",
+        "iso": "MT-26"
+    },
+    {
+        "item": "Q282203",
+        "itemLabel": "Qrendi",
+        "iso": "MT-44"
+    },
+    {
+        "item": "Q304589",
+        "itemLabel": "Iklin",
+        "iso": "MT-19"
+    },
+    {
+        "item": "Q343001",
+        "itemLabel": "Ħamrun",
+        "iso": "MT-18"
+    },
+    {
+        "item": "Q426385",
+        "itemLabel": "Għaxaq",
+        "iso": "MT-17"
+    },
+    {
+        "item": "Q475585",
+        "itemLabel": "Luqa",
+        "iso": "MT-25"
+    },
+    {
+        "item": "Q520962",
+        "itemLabel": "Xgħajra",
+        "iso": "MT-63"
+    },
+    {
+        "item": "Q533257",
+        "itemLabel": "Kalkara",
+        "iso": "MT-21"
+    },
+    {
+        "item": "Q534571",
+        "itemLabel": "Marsaskala",
+        "iso": "MT-27"
+    },
+    {
+        "item": "Q537308",
+        "itemLabel": "Saint Lawrence",
+        "iso": "MT-50"
+    },
+    {
+        "item": "Q585187",
+        "itemLabel": "Msida",
+        "iso": "MT-34"
+    },
+    {
+        "item": "Q585420",
+        "itemLabel": "Santa Venera",
+        "iso": "MT-54"
+    },
+    {
+        "item": "Q587462",
+        "itemLabel": "Munxar",
+        "iso": "MT-36"
+    },
+    {
+        "item": "Q597464",
+        "itemLabel": "Kirkop",
+        "iso": "MT-23"
+    },
+    {
+        "item": "Q602037",
+        "itemLabel": "Sannat",
+        "iso": "MT-52"
+    },
+    {
+        "item": "Q605343",
+        "itemLabel": "Xagħra",
+        "iso": "MT-61"
+    },
+    {
+        "item": "Q632097",
+        "itemLabel": "Gżira",
+        "iso": "MT-12"
+    },
+    {
+        "item": "Q656837",
+        "itemLabel": "Mtarfa",
+        "iso": "MT-35"
+    },
+    {
+        "item": "Q658903",
+        "itemLabel": "Safi",
+        "iso": "MT-47"
+    },
+    {
+        "item": "Q669979",
+        "itemLabel": "St. Julian's",
+        "iso": "MT-48"
+    },
+    {
+        "item": "Q674679",
+        "itemLabel": "Kerċem",
+        "iso": "MT-22"
+    },
+    {
+        "item": "Q691220",
+        "itemLabel": "Mġarr",
+        "iso": "MT-31"
+    },
+    {
+        "item": "Q744001",
+        "itemLabel": "Tarxien",
+        "iso": "MT-59"
+    },
+    {
+        "item": "Q744070",
+        "itemLabel": "Pietà",
+        "iso": "MT-41"
+    },
+    {
+        "item": "Q752346",
+        "itemLabel": "Birgu",
+        "iso": "MT-03"
+    },
+    {
+        "item": "Q752348",
+        "itemLabel": "Victoria",
+        "iso": "MT-45"
+    },
+    {
+        "item": "Q755979",
+        "itemLabel": "Mellieħa",
+        "iso": "MT-30"
+    },
+    {
+        "item": "Q757225",
+        "itemLabel": "Cospicua",
+        "iso": "MT-06"
+    },
+    {
+        "item": "Q761675",
+        "itemLabel": "Għajnsielem",
+        "iso": "MT-13"
+    },
+    {
+        "item": "Q775756",
+        "itemLabel": "Pembroke",
+        "iso": "MT-40"
+    },
+    {
+        "item": "Q781921",
+        "itemLabel": "Marsaxlokk",
+        "iso": "MT-28"
+    },
+    {
+        "item": "Q782049",
+        "itemLabel": "Lija",
+        "iso": "MT-24"
+    },
+    {
+        "item": "Q789794",
+        "itemLabel": "Balzan",
+        "iso": "MT-02"
+    },
+    {
+        "item": "Q832807",
+        "itemLabel": "Floriana",
+        "iso": "MT-09"
+    },
+    {
+        "item": "Q846589",
+        "itemLabel": "Paola",
+        "iso": "MT-39"
+    },
+    {
+        "item": "Q846593",
+        "itemLabel": "Senglea",
+        "iso": "MT-20"
+    },
+    {
+        "item": "Q905641",
+        "itemLabel": "Dingli",
+        "iso": "MT-07"
+    },
+    {
+        "item": "Q919908",
+        "itemLabel": "Siġġiewi",
+        "iso": "MT-55"
+    },
+    {
+        "item": "Q919921",
+        "itemLabel": "Xewkija",
+        "iso": "MT-62"
+    },
+    {
+        "item": "Q929969",
+        "itemLabel": "Nadur",
+        "iso": "MT-37"
+    },
+    {
+        "item": "Q1002742",
+        "itemLabel": "Fontana",
+        "iso": "MT-10"
+    },
+    {
+        "item": "Q1017339",
+        "itemLabel": "Għasri",
+        "iso": "MT-16"
+    },
+    {
+        "item": "Q1017348",
+        "itemLabel": "Ta' Xbiex",
+        "iso": "MT-58"
+    },
+    {
+        "item": "Q1017953",
+        "itemLabel": "Mqabba",
+        "iso": "MT-33"
+    },
+    {
+        "item": "Q1018111",
+        "itemLabel": "Għargħur",
+        "iso": "MT-15"
+    },
+    {
+        "item": "Q1018153",
+        "itemLabel": "Gudja",
+        "iso": "MT-11"
+    },
+    {
+        "item": "Q1026487",
+        "itemLabel": "Għarb",
+        "iso": "MT-14"
+    },
+    {
+        "item": "Q1087776",
+        "itemLabel": "Santa Luċija",
+        "iso": "MT-53"
+    },
+    {
+        "item": "Q1088033",
+        "itemLabel": "Qala",
+        "iso": "MT-42"
+    }
+]

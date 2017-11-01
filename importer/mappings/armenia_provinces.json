@@ -1,0 +1,77 @@
+[
+    {
+        "iso": "AM-AG",
+        "item": "Q17915",
+        "itemLabel": "Արագածոտնի մարզ"
+    },
+    {
+        "iso": "AM-GR",
+        "item": "Q199905",
+        "itemLabel": "Գեղարքունիքի մարզ"
+    },
+    {
+        "iso": "AM-AR",
+        "item": "Q199880",
+        "itemLabel": "Արարատի մարզ"
+    },
+    {
+        "iso": "AM-SU",
+        "item": "Q2523428",
+        "itemLabel": "Սյունիքի մարզ"
+    },
+    {
+        "iso": "AM-VD",
+        "item": "Q200124",
+        "itemLabel": "Վայոց ձորի մարզ"
+    },
+    {
+        "iso": "AM-AV",
+        "item": "Q201147",
+        "itemLabel": "Արմավիրի մարզ"
+    },
+    {
+        "iso": "AM-TV",
+        "item": "Q201140",
+        "itemLabel": "Տավուշի մարզ"
+    },
+    {
+        "iso": "AM-LO",
+        "item": "Q200350",
+        "itemLabel": "Լոռու մարզ"
+    },
+    {
+        "iso": "AM-SH",
+        "item": "Q201063",
+        "itemLabel": "Շիրակի մարզ"
+    },
+    {
+        "iso": "AM-KT",
+        "item": "Q4511",
+        "itemLabel": "Կոտայքի մարզ"
+    },
+    {
+        "iso": "NK-MK",
+        "item": "Q132348",
+        "itemLabel": "Martakert Region"
+    },
+    {
+        "iso": "NK-AS",
+        "item": "Q4807202",
+        "itemLabel": "Askeran region"
+    },
+    {
+        "iso": "NK-SH",
+        "item": "Q2252161",
+        "itemLabel": "Shushi region"
+    },
+    {
+        "iso": "NK-HT",
+        "item": "Q165511",
+        "itemLabel": "Hadrut region"
+    },
+    {
+        "iso": "NK-MI",
+        "item": "Q157902",
+        "itemLabel": "Martuni region"
+    }
+]
