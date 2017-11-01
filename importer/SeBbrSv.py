@@ -122,8 +122,7 @@ class SeBbrSv(Monument):
             # 1969-01-31
             try:
                 date_dict = utils.date_to_dict(protection_date, "%Y-%m-%d")
-                qualifier = {"start_time":
-                             {"time_value": date_dict}}
+                qualifier = {"start_time": utils.package_time(date_dict)}
             except ValueError:
                 self.add_to_report("protection_type", bbr_type)
         url = "http://kulturarvsdata.se/{}".format(self.kulturarv_id)
@@ -274,7 +273,7 @@ class SeBbrSv(Monument):
         if buildings:
             self.add_statement(
                 "has_parts_of_class", "Q41176",
-                {"quantity": {"quantity_value": buildings}})
+                utils.package_quantity(buildings))
 
     def set_adm_location(self):
         """
@@ -318,8 +317,8 @@ class SeBbrSv(Monument):
         if self.has_non_empty_attribute("byggar"):
             year_parsed = utils.parse_year(self.byggar)
             if isinstance(year_parsed, int):
-                value_dict = {"time_value": {"year": year_parsed}}
-                self.add_statement("inception", value_dict)
+                date_dict = {"year": year_parsed}
+                self.add_statement("inception", utils.package_time(date_dict))
 
     def set_monuments_all_id(self):
         """Map which column name in specific table to  ID in monuments_all."""

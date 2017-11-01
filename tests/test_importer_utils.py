@@ -20,8 +20,72 @@ class TestWLMStuff(unittest.TestCase):
         id_no = "SFC 9698"
         output = ("https://tools.wmflabs.org/heritage/api/api.php"
                   "?action=search&format=json&srcountry=se-ship"
-                  "&srlanguage=sv&srid=SFC%209698")
+                  "&srlang=sv&srid=SFC%209698")
         self.assertEqual(utils.create_wlm_url(dataset, lang, id_no), output)
+
+
+class TestDictionaryMethods(unittest.TestCase):
+
+    def setUp(self):
+        self.lookup_table = {
+            'Foo': {'items': ['Q7777'], 'count': '222'},
+            'Foo and cat': {'items': ['Q8888', 'Q1234'], 'count': '111'}
+        }
+        self.query_results_table_with_default_key = [
+            {"item": "Foo", "iso_code": "222"},
+            {"item": "cat", "iso_code": "mjau"}
+        ]
+        self.query_results_table_with_non_default_key = [
+            {"name": "Aaa", "iso_code": "55"},
+            {"name": "Ggg", "iso_code": "00"}
+        ]
+
+    def test_get_item_from_dict_by_key_one_default(self):
+        dic = self.query_results_table_with_default_key
+        search_term = "mjau"
+        key_field = "iso_code"
+        output = ["cat"]
+        matches = utils.get_item_from_dict_by_key(
+            dict_name=dic, search_term=search_term, search_in=key_field)
+        self.assertEqual(matches, output)
+
+    def test_get_item_from_dict_by_key_one_non_default(self):
+        dic = self.query_results_table_with_non_default_key
+        search_term = "55"
+        key_field = "iso_code"
+        value_field = "name"
+        output = ["Aaa"]
+        matches = utils.get_item_from_dict_by_key(
+            dict_name=dic, search_term=search_term, search_in=key_field,
+            return_content_of=value_field)
+        self.assertEqual(matches, output)
+
+    def test_get_item_from_dict_by_key_none(self):
+        search_term = "999",
+        key_field = "iso_code"
+        output = []
+        dic = self.query_results_table_with_default_key
+        matches = utils.get_item_from_dict_by_key(
+            dict_name=dic, search_term=search_term, search_in=key_field)
+        self.assertEqual(matches, output)
+
+    def test_get_matching_items_from_dict_one(self):
+        search_term = "foo"
+        output = ['Q7777']
+        self.assertEqual(utils.get_matching_items_from_dict(
+            search_term, self.lookup_table), output)
+
+    def test_get_matching_items_from_dict_two(self):
+        search_term = "foo and cat"
+        output = ['Q8888', 'Q1234']
+        self.assertEqual(utils.get_matching_items_from_dict(
+            search_term, self.lookup_table), output)
+
+    def test_get_matching_items_from_dict_none(self):
+        search_term = "bbb"
+        output = []
+        self.assertEqual(utils.get_matching_items_from_dict(
+            search_term, self.lookup_table), output)
 
 
 class TestStringMethods(unittest.TestCase):
@@ -239,6 +303,21 @@ class TestDatetimeMethods(unittest.TestCase):
 
 class TestWikitext(unittest.TestCase):
 
+    def test_get_urls_none(self):
+        text = "[[Tegera Arena]], huvudentrén"
+        output = []
+        self.assertEqual(utils.get_external_links(text), output)
+
+    def test_get_urls_one(self):
+        text = "prefix [http://www.wiki.com/Foobar.html some label] postfix"
+        output = ["http://www.wiki.com/Foobar.html"]
+        self.assertEqual(utils.get_external_links(text), output)
+
+    def test_get_urls_one_no_label(self):
+        text = "prefix [http://www.wiki.com/Foobar.html] postfix"
+        output = ["http://www.wiki.com/Foobar.html"]
+        self.assertEqual(utils.get_external_links(text), output)
+
     def test_remove_markup_simple(self):
         text = "[[Tegera Arena]], huvudentrén"
         output = "Tegera Arena, huvudentrén"
@@ -252,6 +331,20 @@ class TestWikitext(unittest.TestCase):
     def test_remove_markup_linebreak_2(self):
         text = "[[Tegera Arena]],<br/> huvudentrén"
         output = "Tegera Arena, huvudentrén"
+        self.assertEqual(utils.remove_markup(text), output)
+
+    def test_remove_markup_two_apostrophes(self):
+        text = "Poblado de Son Marc ''(Sa Talaieta)''"
+        output = "Poblado de Son Marc (Sa Talaieta)"
+        self.assertEqual(utils.remove_markup(text), output)
+
+    def test_remove_markup_three_apostrophes(self):
+        text = "'''A''' b."
+        output = "A b."
+
+    def test_remove_markup_pipe(self):
+        text = "[[Tegera Arena|Arenan]], huvudentrén"
+        output = "Arenan, huvudentrén"
         self.assertEqual(utils.remove_markup(text), output)
 
     def test_count_wikilinks_none(self):
@@ -494,6 +587,10 @@ class TestWikipedia(unittest.TestCase):
         self.assertIsNone(utils.q_from_wikipedia("sv", "Användare:Vesihiisi"))
         self.assertIsNone(
             utils.q_from_wikipedia("sv", "This page does not exist"))
+
+    def test_q_from_wikipedia_disambig(self):
+        wiki_page = utils.q_from_wikipedia("fi", "1 (täsmennyssivu)")
+        self.assertIsNone(wiki_page)
 
     def test_q_from_first_wikilink(self):
         text = ("'''Norrala socken'''"

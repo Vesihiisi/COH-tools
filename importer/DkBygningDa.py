@@ -61,7 +61,7 @@ class DkBygningDa(Monument):
             inception = utils.parse_year(self.opforelsesar)
             if isinstance(inception, int):
                 self.add_statement(
-                    "inception", {"time_value": {"year": inception}})
+                    "inception", utils.package_time({"year": inception}))
 
     def set_monuments_all_id(self):
         """Map monuments_all ID to fields in this table."""

@@ -1,0 +1,2410 @@
+[
+    {
+        "item": "Q239",
+        "itemLabel": "Brussel"
+    },
+    {
+        "item": "Q1296",
+        "itemLabel": "Gent"
+    },
+    {
+        "item": "Q3992",
+        "itemLabel": "Luik"
+    },
+    {
+        "item": "Q12437",
+        "itemLabel": "Kaprijke"
+    },
+    {
+        "item": "Q12440",
+        "itemLabel": "Eeklo"
+    },
+    {
+        "item": "Q12460",
+        "itemLabel": "Lier"
+    },
+    {
+        "item": "Q12886",
+        "itemLabel": "Anderlecht"
+    },
+    {
+        "item": "Q12887",
+        "itemLabel": "Schaarbeek"
+    },
+    {
+        "item": "Q12892",
+        "itemLabel": "Antwerpen"
+    },
+    {
+        "item": "Q12896",
+        "itemLabel": "Maldegem"
+    },
+    {
+        "item": "Q12901",
+        "itemLabel": "Assenede"
+    },
+    {
+        "item": "Q12910",
+        "itemLabel": "Lokeren"
+    },
+    {
+        "item": "Q12988",
+        "itemLabel": "Knokke-Heist"
+    },
+    {
+        "item": "Q12992",
+        "itemLabel": "Oudenaarde"
+    },
+    {
+        "item": "Q12994",
+        "itemLabel": "Brugge"
+    },
+    {
+        "item": "Q12995",
+        "itemLabel": "Kortrijk"
+    },
+    {
+        "item": "Q12996",
+        "itemLabel": "Oostende"
+    },
+    {
+        "item": "Q12997",
+        "itemLabel": "Evergem"
+    },
+    {
+        "item": "Q13121",
+        "itemLabel": "Aalst"
+    },
+    {
+        "item": "Q13122",
+        "itemLabel": "Dendermonde"
+    },
+    {
+        "item": "Q13126",
+        "itemLabel": "Sint-Laureins"
+    },
+    {
+        "item": "Q13127",
+        "itemLabel": "Sint-Niklaas"
+    },
+    {
+        "item": "Q14062",
+        "itemLabel": "Zelzate"
+    },
+    {
+        "item": "Q28898",
+        "itemLabel": "Zaventem"
+    },
+    {
+        "item": "Q34021",
+        "itemLabel": "Bastenaken"
+    },
+    {
+        "item": "Q37792",
+        "itemLabel": "Sint-Truiden"
+    },
+    {
+        "item": "Q39865",
+        "itemLabel": "Spa"
+    },
+    {
+        "item": "Q49743",
+        "itemLabel": "Visé"
+    },
+    {
+        "item": "Q58780",
+        "itemLabel": "Hasselt"
+    },
+    {
+        "item": "Q65062",
+        "itemLabel": "Saint-Nicolas"
+    },
+    {
+        "item": "Q72946",
+        "itemLabel": "Vorst"
+    },
+    {
+        "item": "Q81046",
+        "itemLabel": "Charleroi"
+    },
+    {
+        "item": "Q83407",
+        "itemLabel": "Bergen"
+    },
+    {
+        "item": "Q95004",
+        "itemLabel": "Aiseau-Presles"
+    },
+    {
+        "item": "Q95005",
+        "itemLabel": "Anderlues"
+    },
+    {
+        "item": "Q95011",
+        "itemLabel": "Antoing"
+    },
+    {
+        "item": "Q95096",
+        "itemLabel": "Aat"
+    },
+    {
+        "item": "Q95100",
+        "itemLabel": "Beaumont"
+    },
+    {
+        "item": "Q95105",
+        "itemLabel": "Belœil"
+    },
+    {
+        "item": "Q95112",
+        "itemLabel": "Bernissart"
+    },
+    {
+        "item": "Q95121",
+        "itemLabel": "Binche"
+    },
+    {
+        "item": "Q95123",
+        "itemLabel": "Les Bons Villers"
+    },
+    {
+        "item": "Q95126",
+        "itemLabel": "Boussu"
+    },
+    {
+        "item": "Q95129",
+        "itemLabel": "'s-Gravenbrakel"
+    },
+    {
+        "item": "Q95130",
+        "itemLabel": "Brugelette"
+    },
+    {
+        "item": "Q95132",
+        "itemLabel": "Brunehaut"
+    },
+    {
+        "item": "Q95136",
+        "itemLabel": "Celles"
+    },
+    {
+        "item": "Q95140",
+        "itemLabel": "Chapelle-lez-Herlaimont"
+    },
+    {
+        "item": "Q95144",
+        "itemLabel": "Châtelet"
+    },
+    {
+        "item": "Q95318",
+        "itemLabel": "Chièvres"
+    },
+    {
+        "item": "Q95380",
+        "itemLabel": "Chimay"
+    },
+    {
+        "item": "Q102728",
+        "itemLabel": "Ieper"
+    },
+    {
+        "item": "Q108247",
+        "itemLabel": "Dinant"
+    },
+    {
+        "item": "Q110989",
+        "itemLabel": "Maaseik"
+    },
+    {
+        "item": "Q118769",
+        "itemLabel": "Mettet"
+    },
+    {
+        "item": "Q118958",
+        "itemLabel": "Leuven"
+    },
+    {
+        "item": "Q119331",
+        "itemLabel": "Wellen"
+    },
+    {
+        "item": "Q125979",
+        "itemLabel": "Meeuwen-Gruitrode"
+    },
+    {
+        "item": "Q133769",
+        "itemLabel": "Zonhoven"
+    },
+    {
+        "item": "Q134121",
+        "itemLabel": "Namen"
+    },
+    {
+        "item": "Q146656",
+        "itemLabel": "Zandhoven"
+    },
+    {
+        "item": "Q151831",
+        "itemLabel": "Eupen"
+    },
+    {
+        "item": "Q152734",
+        "itemLabel": "Raeren"
+    },
+    {
+        "item": "Q152737",
+        "itemLabel": "Büllingen"
+    },
+    {
+        "item": "Q152743",
+        "itemLabel": "Welkenraedt"
+    },
+    {
+        "item": "Q152748",
+        "itemLabel": "Sankt Vith"
+    },
+    {
+        "item": "Q159838",
+        "itemLabel": "Malmedy"
+    },
+    {
+        "item": "Q159864",
+        "itemLabel": "Kelmis"
+    },
+    {
+        "item": "Q159868",
+        "itemLabel": "Amel"
+    },
+    {
+        "item": "Q159958",
+        "itemLabel": "Lontzen"
+    },
+    {
+        "item": "Q159961",
+        "itemLabel": "Weismes"
+    },
+    {
+        "item": "Q159974",
+        "itemLabel": "La Roche-en-Ardenne"
+    },
+    {
+        "item": "Q159981",
+        "itemLabel": "Burg-Reuland"
+    },
+    {
+        "item": "Q160005",
+        "itemLabel": "Bütgenbach"
+    },
+    {
+        "item": "Q160709",
+        "itemLabel": "Hotton"
+    },
+    {
+        "item": "Q162022",
+        "itemLabel": "Mechelen"
+    },
+    {
+        "item": "Q173219",
+        "itemLabel": "Doornik"
+    },
+    {
+        "item": "Q175322",
+        "itemLabel": "Flémalle"
+    },
+    {
+        "item": "Q177133",
+        "itemLabel": "Avelgem"
+    },
+    {
+        "item": "Q179034",
+        "itemLabel": "Waterloo"
+    },
+    {
+        "item": "Q179249",
+        "itemLabel": "Zemst"
+    },
+    {
+        "item": "Q180775",
+        "itemLabel": "Sint-Jans-Molenbeek"
+    },
+    {
+        "item": "Q181314",
+        "itemLabel": "Waver"
+    },
+    {
+        "item": "Q184287",
+        "itemLabel": "Zedelgem"
+    },
+    {
+        "item": "Q187755",
+        "itemLabel": "Merelbeke"
+    },
+    {
+        "item": "Q189692",
+        "itemLabel": "Genk"
+    },
+    {
+        "item": "Q190113",
+        "itemLabel": "Tongeren"
+    },
+    {
+        "item": "Q192859",
+        "itemLabel": "Etterbeek"
+    },
+    {
+        "item": "Q194037",
+        "itemLabel": "Seraing"
+    },
+    {
+        "item": "Q194366",
+        "itemLabel": "Lommel"
+    },
+    {
+        "item": "Q202309",
+        "itemLabel": "Buggenhout"
+    },
+    {
+        "item": "Q202954",
+        "itemLabel": "Verviers"
+    },
+    {
+        "item": "Q203312",
+        "itemLabel": "Ukkel"
+    },
+    {
+        "item": "Q204477",
+        "itemLabel": "Zingem"
+    },
+    {
+        "item": "Q204547",
+        "itemLabel": "Waregem"
+    },
+    {
+        "item": "Q207095",
+        "itemLabel": "Hoei"
+    },
+    {
+        "item": "Q208713",
+        "itemLabel": "Elsene"
+    },
+    {
+        "item": "Q210003",
+        "itemLabel": "Halle"
+    },
+    {
+        "item": "Q211033",
+        "itemLabel": "Herstal"
+    },
+    {
+        "item": "Q211037",
+        "itemLabel": "Roeselare"
+    },
+    {
+        "item": "Q211572",
+        "itemLabel": "La Louvière"
+    },
+    {
+        "item": "Q211764",
+        "itemLabel": "Sint-Lambrechts-Woluwe"
+    },
+    {
+        "item": "Q213224",
+        "itemLabel": "Menen"
+    },
+    {
+        "item": "Q214154",
+        "itemLabel": "Zonnebeke"
+    },
+    {
+        "item": "Q215244",
+        "itemLabel": "Diksmuide"
+    },
+    {
+        "item": "Q217216",
+        "itemLabel": "Bouillon"
+    },
+    {
+        "item": "Q218253",
+        "itemLabel": "Zoersel"
+    },
+    {
+        "item": "Q219244",
+        "itemLabel": "Koekelberg"
+    },
+    {
+        "item": "Q219827",
+        "itemLabel": "Zomergem"
+    },
+    {
+        "item": "Q220145",
+        "itemLabel": "Moeskroen"
+    },
+    {
+        "item": "Q222233",
+        "itemLabel": "Ouffet"
+    },
+    {
+        "item": "Q223927",
+        "itemLabel": "Gembloers"
+    },
+    {
+        "item": "Q226941",
+        "itemLabel": "Zottegem"
+    },
+    {
+        "item": "Q227070",
+        "itemLabel": "Zoutleeuw"
+    },
+    {
+        "item": "Q228685",
+        "itemLabel": "Zuienkerke"
+    },
+    {
+        "item": "Q228863",
+        "itemLabel": "Zulte"
+    },
+    {
+        "item": "Q231090",
+        "itemLabel": "Zutendaal"
+    },
+    {
+        "item": "Q231568",
+        "itemLabel": "Zwalm"
+    },
+    {
+        "item": "Q237674",
+        "itemLabel": "Sint-Gillis"
+    },
+    {
+        "item": "Q241069",
+        "itemLabel": "Gedinne"
+    },
+    {
+        "item": "Q241898",
+        "itemLabel": "Bilzen"
+    },
+    {
+        "item": "Q241918",
+        "itemLabel": "Jette"
+    },
+    {
+        "item": "Q242393",
+        "itemLabel": "Sint-Pieters-Woluwe"
+    },
+    {
+        "item": "Q242407",
+        "itemLabel": "Beringen"
+    },
+    {
+        "item": "Q244513",
+        "itemLabel": "Zwevegem"
+    },
+    {
+        "item": "Q244690",
+        "itemLabel": "Zwijndrecht"
+    },
+    {
+        "item": "Q244959",
+        "itemLabel": "Baarle-Hertog"
+    },
+    {
+        "item": "Q257979",
+        "itemLabel": "Heist-op-den-Berg"
+    },
+    {
+        "item": "Q263177",
+        "itemLabel": "Schilde"
+    },
+    {
+        "item": "Q268219",
+        "itemLabel": "Ronse"
+    },
+    {
+        "item": "Q269908",
+        "itemLabel": "Marche-en-Famenne"
+    },
+    {
+        "item": "Q270633",
+        "itemLabel": "Torhout"
+    },
+    {
+        "item": "Q270644",
+        "itemLabel": "Beveren"
+    },
+    {
+        "item": "Q271783",
+        "itemLabel": "Turnhout"
+    },
+    {
+        "item": "Q272228",
+        "itemLabel": "Oudergem"
+    },
+    {
+        "item": "Q272243",
+        "itemLabel": "Sint-Joost-ten-Node"
+    },
+    {
+        "item": "Q272262",
+        "itemLabel": "Watermaal-Bosvoorde"
+    },
+    {
+        "item": "Q272272",
+        "itemLabel": "Sint-Agatha-Berchem"
+    },
+    {
+        "item": "Q273316",
+        "itemLabel": "Écaussinnes"
+    },
+    {
+        "item": "Q273442",
+        "itemLabel": "Aarschot"
+    },
+    {
+        "item": "Q274522",
+        "itemLabel": "Éghezée"
+    },
+    {
+        "item": "Q275863",
+        "itemLabel": "Bree"
+    },
+    {
+        "item": "Q276266",
+        "itemLabel": "Bevekom"
+    },
+    {
+        "item": "Q280182",
+        "itemLabel": "Herselt"
+    },
+    {
+        "item": "Q281080",
+        "itemLabel": "Itter"
+    },
+    {
+        "item": "Q281181",
+        "itemLabel": "Ichtegem"
+    },
+    {
+        "item": "Q286215",
+        "itemLabel": "Oupeye"
+    },
+    {
+        "item": "Q287813",
+        "itemLabel": "Érezée"
+    },
+    {
+        "item": "Q288872",
+        "itemLabel": "Etalle"
+    },
+    {
+        "item": "Q300970",
+        "itemLabel": "Aalter"
+    },
+    {
+        "item": "Q303246",
+        "itemLabel": "Aartselaar"
+    },
+    {
+        "item": "Q314922",
+        "itemLabel": "Fleurus"
+    },
+    {
+        "item": "Q318418",
+        "itemLabel": "Vilvoorde"
+    },
+    {
+        "item": "Q318532",
+        "itemLabel": "Wervik"
+    },
+    {
+        "item": "Q319463",
+        "itemLabel": "Nijvel"
+    },
+    {
+        "item": "Q319792",
+        "itemLabel": "Heusden-Zolder"
+    },
+    {
+        "item": "Q321718",
+        "itemLabel": "Evere"
+    },
+    {
+        "item": "Q323408",
+        "itemLabel": "Damme"
+    },
+    {
+        "item": "Q326771",
+        "itemLabel": "Couvin"
+    },
+    {
+        "item": "Q328104",
+        "itemLabel": "Blankenberge"
+    },
+    {
+        "item": "Q329621",
+        "itemLabel": "Beauraing"
+    },
+    {
+        "item": "Q329628",
+        "itemLabel": "Lummen"
+    },
+    {
+        "item": "Q329633",
+        "itemLabel": "Maasmechelen"
+    },
+    {
+        "item": "Q329642",
+        "itemLabel": "Ottignies-Louvain-la-Neuve"
+    },
+    {
+        "item": "Q333466",
+        "itemLabel": "Andenne"
+    },
+    {
+        "item": "Q339395",
+        "itemLabel": "Wielsbeke"
+    },
+    {
+        "item": "Q366552",
+        "itemLabel": "Ganshoren"
+    },
+    {
+        "item": "Q374861",
+        "itemLabel": "Rebecq"
+    },
+    {
+        "item": "Q377152",
+        "itemLabel": "Jurbeke"
+    },
+    {
+        "item": "Q379113",
+        "itemLabel": "Fexhe-le-Haut-Clocher"
+    },
+    {
+        "item": "Q382860",
+        "itemLabel": "Affligem"
+    },
+    {
+        "item": "Q383723",
+        "itemLabel": "Herentals"
+    },
+    {
+        "item": "Q385026",
+        "itemLabel": "Ninove"
+    },
+    {
+        "item": "Q386732",
+        "itemLabel": "Dessel"
+    },
+    {
+        "item": "Q388115",
+        "itemLabel": "Zele"
+    },
+    {
+        "item": "Q388879",
+        "itemLabel": "Gesves"
+    },
+    {
+        "item": "Q391294",
+        "itemLabel": "Hamme"
+    },
+    {
+        "item": "Q392337",
+        "itemLabel": "Izegem"
+    },
+    {
+        "item": "Q392343",
+        "itemLabel": "Wevelgem"
+    },
+    {
+        "item": "Q397705",
+        "itemLabel": "Moerbeke"
+    },
+    {
+        "item": "Q429794",
+        "itemLabel": "Nassogne"
+    },
+    {
+        "item": "Q430510",
+        "itemLabel": "Sint-Gillis-Waas"
+    },
+    {
+        "item": "Q432610",
+        "itemLabel": "Begijnendijk"
+    },
+    {
+        "item": "Q448840",
+        "itemLabel": "Alveringem"
+    },
+    {
+        "item": "Q455969",
+        "itemLabel": "Amay"
+    },
+    {
+        "item": "Q456490",
+        "itemLabel": "Ciney"
+    },
+    {
+        "item": "Q456495",
+        "itemLabel": "Virton"
+    },
+    {
+        "item": "Q456544",
+        "itemLabel": "Tervuren"
+    },
+    {
+        "item": "Q456550",
+        "itemLabel": "Tienen"
+    },
+    {
+        "item": "Q460479",
+        "itemLabel": "Voeren"
+    },
+    {
+        "item": "Q461436",
+        "itemLabel": "Halen"
+    },
+    {
+        "item": "Q462985",
+        "itemLabel": "Zinnik"
+    },
+    {
+        "item": "Q464454",
+        "itemLabel": "Geel"
+    },
+    {
+        "item": "Q465545",
+        "itemLabel": "Koksijde"
+    },
+    {
+        "item": "Q465710",
+        "itemLabel": "Mol"
+    },
+    {
+        "item": "Q465973",
+        "itemLabel": "Jabbeke"
+    },
+    {
+        "item": "Q468920",
+        "itemLabel": "Stavelot"
+    },
+    {
+        "item": "Q475931",
+        "itemLabel": "Westerlo"
+    },
+    {
+        "item": "Q478795",
+        "itemLabel": "Houthalen-Helchteren"
+    },
+    {
+        "item": "Q478797",
+        "itemLabel": "Harelbeke"
+    },
+    {
+        "item": "Q492351",
+        "itemLabel": "De Haan"
+    },
+    {
+        "item": "Q492369",
+        "itemLabel": "Middelkerke"
+    },
+    {
+        "item": "Q492453",
+        "itemLabel": "Kampenhout"
+    },
+    {
+        "item": "Q497549",
+        "itemLabel": "Tubeke"
+    },
+    {
+        "item": "Q497558",
+        "itemLabel": "Kasteelbrakel"
+    },
+    {
+        "item": "Q497565",
+        "itemLabel": "Walcourt"
+    },
+    {
+        "item": "Q497572",
+        "itemLabel": "Eigenbrakel"
+    },
+    {
+        "item": "Q497697",
+        "itemLabel": "Durbuy"
+    },
+    {
+        "item": "Q497764",
+        "itemLabel": "Rochefort"
+    },
+    {
+        "item": "Q499313",
+        "itemLabel": "Deinze"
+    },
+    {
+        "item": "Q499532",
+        "itemLabel": "Geraardsbergen"
+    },
+    {
+        "item": "Q499584",
+        "itemLabel": "Herstappe"
+    },
+    {
+        "item": "Q499588",
+        "itemLabel": "Poperinge"
+    },
+    {
+        "item": "Q499594",
+        "itemLabel": "Ans"
+    },
+    {
+        "item": "Q499599",
+        "itemLabel": "Hamont-Achel"
+    },
+    {
+        "item": "Q499604",
+        "itemLabel": "Alken"
+    },
+    {
+        "item": "Q499609",
+        "itemLabel": "Borgloon"
+    },
+    {
+        "item": "Q501748",
+        "itemLabel": "Ranst"
+    },
+    {
+        "item": "Q503363",
+        "itemLabel": "Chaudfontaine"
+    },
+    {
+        "item": "Q504653",
+        "itemLabel": "Lebbeke"
+    },
+    {
+        "item": "Q506707",
+        "itemLabel": "Veurne"
+    },
+    {
+        "item": "Q506739",
+        "itemLabel": "Limburg"
+    },
+    {
+        "item": "Q509457",
+        "itemLabel": "Lijsem"
+    },
+    {
+        "item": "Q511239",
+        "itemLabel": "Tenneville"
+    },
+    {
+        "item": "Q514641",
+        "itemLabel": "Hastière"
+    },
+    {
+        "item": "Q515710",
+        "itemLabel": "Asse"
+    },
+    {
+        "item": "Q517899",
+        "itemLabel": "Genepiën"
+    },
+    {
+        "item": "Q518758",
+        "itemLabel": "Hulshout"
+    },
+    {
+        "item": "Q527808",
+        "itemLabel": "Wijnegem"
+    },
+    {
+        "item": "Q528222",
+        "itemLabel": "Bonheiden"
+    },
+    {
+        "item": "Q531456",
+        "itemLabel": "Ramillies"
+    },
+    {
+        "item": "Q532277",
+        "itemLabel": "Merksplas"
+    },
+    {
+        "item": "Q538735",
+        "itemLabel": "Quaregnon"
+    },
+    {
+        "item": "Q545889",
+        "itemLabel": "Anhée"
+    },
+    {
+        "item": "Q567808",
+        "itemLabel": "Herne"
+    },
+    {
+        "item": "Q572472",
+        "itemLabel": "Anthisnes"
+    },
+    {
+        "item": "Q578583",
+        "itemLabel": "Floreffe"
+    },
+    {
+        "item": "Q580315",
+        "itemLabel": "Nazareth"
+    },
+    {
+        "item": "Q581246",
+        "itemLabel": "Dilsen-Stokkem"
+    },
+    {
+        "item": "Q587819",
+        "itemLabel": "Londerzeel"
+    },
+    {
+        "item": "Q587906",
+        "itemLabel": "Waasmunster"
+    },
+    {
+        "item": "Q587979",
+        "itemLabel": "Herzele"
+    },
+    {
+        "item": "Q595654",
+        "itemLabel": "Stabroek"
+    },
+    {
+        "item": "Q599127",
+        "itemLabel": "Overijse"
+    },
+    {
+        "item": "Q607182",
+        "itemLabel": "Pont-à-Celles"
+    },
+    {
+        "item": "Q612267",
+        "itemLabel": "Libramont-Chevigny"
+    },
+    {
+        "item": "Q614274",
+        "itemLabel": "Anzegem"
+    },
+    {
+        "item": "Q615109",
+        "itemLabel": "Duffel"
+    },
+    {
+        "item": "Q618054",
+        "itemLabel": "Chastre"
+    },
+    {
+        "item": "Q623310",
+        "itemLabel": "Nieuwpoort"
+    },
+    {
+        "item": "Q628733",
+        "itemLabel": "Moorslede"
+    },
+    {
+        "item": "Q630478",
+        "itemLabel": "Rixensart"
+    },
+    {
+        "item": "Q631639",
+        "itemLabel": "Linkebeek"
+    },
+    {
+        "item": "Q633063",
+        "itemLabel": "Grimbergen"
+    },
+    {
+        "item": "Q639974",
+        "itemLabel": "Ardooie"
+    },
+    {
+        "item": "Q641134",
+        "itemLabel": "Dilbeek"
+    },
+    {
+        "item": "Q641278",
+        "itemLabel": "Hoeilaart"
+    },
+    {
+        "item": "Q641905",
+        "itemLabel": "Arendonk"
+    },
+    {
+        "item": "Q643980",
+        "itemLabel": "Wetteren"
+    },
+    {
+        "item": "Q646037",
+        "itemLabel": "Pepingen"
+    },
+    {
+        "item": "Q648509",
+        "itemLabel": "Lierde"
+    },
+    {
+        "item": "Q649982",
+        "itemLabel": "Hove"
+    },
+    {
+        "item": "Q650135",
+        "itemLabel": "Neufchâteau"
+    },
+    {
+        "item": "Q650152",
+        "itemLabel": "Mont-Saint-Guibert"
+    },
+    {
+        "item": "Q650163",
+        "itemLabel": "Yvoir"
+    },
+    {
+        "item": "Q650172",
+        "itemLabel": "Vielsalm"
+    },
+    {
+        "item": "Q650185",
+        "itemLabel": "Sambreville"
+    },
+    {
+        "item": "Q650206",
+        "itemLabel": "Vresse-sur-Semois"
+    },
+    {
+        "item": "Q650216",
+        "itemLabel": "Walhain"
+    },
+    {
+        "item": "Q650226",
+        "itemLabel": "Sombreffe"
+    },
+    {
+        "item": "Q650239",
+        "itemLabel": "Philippeville"
+    },
+    {
+        "item": "Q650261",
+        "itemLabel": "Viroinval"
+    },
+    {
+        "item": "Q650274",
+        "itemLabel": "Houffalize"
+    },
+    {
+        "item": "Q651724",
+        "itemLabel": "Pittem"
+    },
+    {
+        "item": "Q651736",
+        "itemLabel": "Overpelt"
+    },
+    {
+        "item": "Q651751",
+        "itemLabel": "Neerpelt"
+    },
+    {
+        "item": "Q651801",
+        "itemLabel": "Opglabbeek"
+    },
+    {
+        "item": "Q651811",
+        "itemLabel": "Tielt"
+    },
+    {
+        "item": "Q651826",
+        "itemLabel": "Diepenbeek"
+    },
+    {
+        "item": "Q651837",
+        "itemLabel": "Gingelom"
+    },
+    {
+        "item": "Q655203",
+        "itemLabel": "Schoten"
+    },
+    {
+        "item": "Q665573",
+        "itemLabel": "Colfontaine"
+    },
+    {
+        "item": "Q665761",
+        "itemLabel": "Komen-Waasten"
+    },
+    {
+        "item": "Q665860",
+        "itemLabel": "Courcelles"
+    },
+    {
+        "item": "Q665938",
+        "itemLabel": "Dour"
+    },
+    {
+        "item": "Q665992",
+        "itemLabel": "Elzele"
+    },
+    {
+        "item": "Q666238",
+        "itemLabel": "Edingen"
+    },
+    {
+        "item": "Q666335",
+        "itemLabel": "Erquelinnes"
+    },
+    {
+        "item": "Q666393",
+        "itemLabel": "Steenput"
+    },
+    {
+        "item": "Q666446",
+        "itemLabel": "Estinnes"
+    },
+    {
+        "item": "Q666503",
+        "itemLabel": "Farciennes"
+    },
+    {
+        "item": "Q666559",
+        "itemLabel": "Vloesberg"
+    },
+    {
+        "item": "Q666696",
+        "itemLabel": "Fontaine-l'Évêque"
+    },
+    {
+        "item": "Q666751",
+        "itemLabel": "Frameries"
+    },
+    {
+        "item": "Q666813",
+        "itemLabel": "Frasnes-lez-Anvaing"
+    },
+    {
+        "item": "Q666853",
+        "itemLabel": "Froidchapelle"
+    },
+    {
+        "item": "Q666902",
+        "itemLabel": "Gerpinnes"
+    },
+    {
+        "item": "Q666952",
+        "itemLabel": "Ham-sur-Heure-Nalinnes"
+    },
+    {
+        "item": "Q666983",
+        "itemLabel": "Hensies"
+    },
+    {
+        "item": "Q667091",
+        "itemLabel": "Honnelles"
+    },
+    {
+        "item": "Q667158",
+        "itemLabel": "Lens"
+    },
+    {
+        "item": "Q667790",
+        "itemLabel": "Lessen"
+    },
+    {
+        "item": "Q667862",
+        "itemLabel": "Leuze-en-Hainaut"
+    },
+    {
+        "item": "Q667936",
+        "itemLabel": "Lobbes"
+    },
+    {
+        "item": "Q667987",
+        "itemLabel": "Manage"
+    },
+    {
+        "item": "Q668139",
+        "itemLabel": "Merbes-le-Château"
+    },
+    {
+        "item": "Q668187",
+        "itemLabel": "Momignies"
+    },
+    {
+        "item": "Q668295",
+        "itemLabel": "Mont-de-l'Enclus"
+    },
+    {
+        "item": "Q668437",
+        "itemLabel": "Montigny-le-Tilleul"
+    },
+    {
+        "item": "Q668493",
+        "itemLabel": "Morlanwelz"
+    },
+    {
+        "item": "Q668540",
+        "itemLabel": "Pecq"
+    },
+    {
+        "item": "Q668630",
+        "itemLabel": "Péruwelz"
+    },
+    {
+        "item": "Q668702",
+        "itemLabel": "Quévy"
+    },
+    {
+        "item": "Q668815",
+        "itemLabel": "Quiévrain"
+    },
+    {
+        "item": "Q668861",
+        "itemLabel": "Le Rœulx"
+    },
+    {
+        "item": "Q668903",
+        "itemLabel": "Rumes"
+    },
+    {
+        "item": "Q668950",
+        "itemLabel": "Saint-Ghislain"
+    },
+    {
+        "item": "Q669051",
+        "itemLabel": "Seneffe"
+    },
+    {
+        "item": "Q669088",
+        "itemLabel": "Opzullik"
+    },
+    {
+        "item": "Q669134",
+        "itemLabel": "Meix-devant-Virton"
+    },
+    {
+        "item": "Q669136",
+        "itemLabel": "Sivry-Rance"
+    },
+    {
+        "item": "Q670141",
+        "itemLabel": "Chaumont-Gistoux"
+    },
+    {
+        "item": "Q670210",
+        "itemLabel": "Court-Saint-Étienne"
+    },
+    {
+        "item": "Q670310",
+        "itemLabel": "Graven"
+    },
+    {
+        "item": "Q670355",
+        "itemLabel": "Hélécine"
+    },
+    {
+        "item": "Q670407",
+        "itemLabel": "Terhulpen"
+    },
+    {
+        "item": "Q670455",
+        "itemLabel": "Incourt"
+    },
+    {
+        "item": "Q670500",
+        "itemLabel": "Geldenaken"
+    },
+    {
+        "item": "Q674954",
+        "itemLabel": "De Panne"
+    },
+    {
+        "item": "Q675960",
+        "itemLabel": "Aarlen"
+    },
+    {
+        "item": "Q676893",
+        "itemLabel": "Holsbeek"
+    },
+    {
+        "item": "Q678158",
+        "itemLabel": "Lasne"
+    },
+    {
+        "item": "Q678218",
+        "itemLabel": "Orp-Jauche"
+    },
+    {
+        "item": "Q678458",
+        "itemLabel": "Perwijs"
+    },
+    {
+        "item": "Q678612",
+        "itemLabel": "Villers-la-Ville"
+    },
+    {
+        "item": "Q678920",
+        "itemLabel": "Aubel"
+    },
+    {
+        "item": "Q680564",
+        "itemLabel": "Awans"
+    },
+    {
+        "item": "Q680845",
+        "itemLabel": "Baelen"
+    },
+    {
+        "item": "Q680918",
+        "itemLabel": "Bitsingen"
+    },
+    {
+        "item": "Q680978",
+        "itemLabel": "Berloz"
+    },
+    {
+        "item": "Q681039",
+        "itemLabel": "Beyne-Heusay"
+    },
+    {
+        "item": "Q681109",
+        "itemLabel": "Blégny"
+    },
+    {
+        "item": "Q681153",
+        "itemLabel": "Braives"
+    },
+    {
+        "item": "Q681368",
+        "itemLabel": "Burdinne"
+    },
+    {
+        "item": "Q681854",
+        "itemLabel": "Clavier"
+    },
+    {
+        "item": "Q681909",
+        "itemLabel": "Comblain-au-Pont"
+    },
+    {
+        "item": "Q682105",
+        "itemLabel": "Dison"
+    },
+    {
+        "item": "Q682163",
+        "itemLabel": "Donceel"
+    },
+    {
+        "item": "Q682223",
+        "itemLabel": "Engis"
+    },
+    {
+        "item": "Q682271",
+        "itemLabel": "Esneux"
+    },
+    {
+        "item": "Q682441",
+        "itemLabel": "Faimes"
+    },
+    {
+        "item": "Q682570",
+        "itemLabel": "Ferrières"
+    },
+    {
+        "item": "Q682811",
+        "itemLabel": "Fléron"
+    },
+    {
+        "item": "Q682982",
+        "itemLabel": "Geer"
+    },
+    {
+        "item": "Q683034",
+        "itemLabel": "Grâce-Hollogne"
+    },
+    {
+        "item": "Q683083",
+        "itemLabel": "Hamoir"
+    },
+    {
+        "item": "Q683141",
+        "itemLabel": "Hannuit"
+    },
+    {
+        "item": "Q683321",
+        "itemLabel": "Héron"
+    },
+    {
+        "item": "Q683465",
+        "itemLabel": "Herve"
+    },
+    {
+        "item": "Q683634",
+        "itemLabel": "Jalhay"
+    },
+    {
+        "item": "Q687921",
+        "itemLabel": "Beernem"
+    },
+    {
+        "item": "Q688377",
+        "itemLabel": "Drogenbos"
+    },
+    {
+        "item": "Q688781",
+        "itemLabel": "Mortsel"
+    },
+    {
+        "item": "Q688790",
+        "itemLabel": "Sint-Pieters-Leeuw"
+    },
+    {
+        "item": "Q690611",
+        "itemLabel": "Gavere"
+    },
+    {
+        "item": "Q690926",
+        "itemLabel": "Attert"
+    },
+    {
+        "item": "Q692168",
+        "itemLabel": "Beersel"
+    },
+    {
+        "item": "Q692243",
+        "itemLabel": "Messancy"
+    },
+    {
+        "item": "Q693513",
+        "itemLabel": "Brasschaat"
+    },
+    {
+        "item": "Q695278",
+        "itemLabel": "Willebroek"
+    },
+    {
+        "item": "Q695315",
+        "itemLabel": "Lanaken"
+    },
+    {
+        "item": "Q695349",
+        "itemLabel": "Onhaye"
+    },
+    {
+        "item": "Q695354",
+        "itemLabel": "Ham"
+    },
+    {
+        "item": "Q695390",
+        "itemLabel": "Houyet"
+    },
+    {
+        "item": "Q696099",
+        "itemLabel": "Soumagne"
+    },
+    {
+        "item": "Q696104",
+        "itemLabel": "Fernelmont"
+    },
+    {
+        "item": "Q696110",
+        "itemLabel": "Sprimont"
+    },
+    {
+        "item": "Q696127",
+        "itemLabel": "Paliseul"
+    },
+    {
+        "item": "Q696133",
+        "itemLabel": "Hamois"
+    },
+    {
+        "item": "Q696349",
+        "itemLabel": "Wachtebeke"
+    },
+    {
+        "item": "Q696355",
+        "itemLabel": "Melle"
+    },
+    {
+        "item": "Q696578",
+        "itemLabel": "Sint-Katelijne-Waver"
+    },
+    {
+        "item": "Q696585",
+        "itemLabel": "Herk-de-Stad"
+    },
+    {
+        "item": "Q696591",
+        "itemLabel": "As"
+    },
+    {
+        "item": "Q696740",
+        "itemLabel": "Nieuwerkerken"
+    },
+    {
+        "item": "Q696825",
+        "itemLabel": "Denderleeuw"
+    },
+    {
+        "item": "Q696871",
+        "itemLabel": "Lichtervelde"
+    },
+    {
+        "item": "Q696887",
+        "itemLabel": "Lendelede"
+    },
+    {
+        "item": "Q696907",
+        "itemLabel": "Hooglede"
+    },
+    {
+        "item": "Q696940",
+        "itemLabel": "Profondeville"
+    },
+    {
+        "item": "Q696942",
+        "itemLabel": "Houthulst"
+    },
+    {
+        "item": "Q696982",
+        "itemLabel": "Ruiselede"
+    },
+    {
+        "item": "Q710022",
+        "itemLabel": "Lierneux"
+    },
+    {
+        "item": "Q710190",
+        "itemLabel": "Marchin"
+    },
+    {
+        "item": "Q710237",
+        "itemLabel": "Modave"
+    },
+    {
+        "item": "Q710280",
+        "itemLabel": "Nandrin"
+    },
+    {
+        "item": "Q710316",
+        "itemLabel": "Neupré"
+    },
+    {
+        "item": "Q710358",
+        "itemLabel": "Olne"
+    },
+    {
+        "item": "Q710409",
+        "itemLabel": "Oerle"
+    },
+    {
+        "item": "Q710522",
+        "itemLabel": "Pepinster"
+    },
+    {
+        "item": "Q710606",
+        "itemLabel": "Blieberg"
+    },
+    {
+        "item": "Q710690",
+        "itemLabel": "Remicourt"
+    },
+    {
+        "item": "Q710718",
+        "itemLabel": "Saint-Georges-sur-Meuse"
+    },
+    {
+        "item": "Q711046",
+        "itemLabel": "Stoumont"
+    },
+    {
+        "item": "Q711079",
+        "itemLabel": "Theux"
+    },
+    {
+        "item": "Q711115",
+        "itemLabel": "Thimister-Clermont"
+    },
+    {
+        "item": "Q711152",
+        "itemLabel": "Tinlot"
+    },
+    {
+        "item": "Q711183",
+        "itemLabel": "Trois-Ponts"
+    },
+    {
+        "item": "Q711205",
+        "itemLabel": "Trooz"
+    },
+    {
+        "item": "Q711292",
+        "itemLabel": "Verlaine"
+    },
+    {
+        "item": "Q711373",
+        "itemLabel": "Villers-le-Bouillet"
+    },
+    {
+        "item": "Q711443",
+        "itemLabel": "Wanze"
+    },
+    {
+        "item": "Q711474",
+        "itemLabel": "Borgworm"
+    },
+    {
+        "item": "Q711502",
+        "itemLabel": "Wasseiges"
+    },
+    {
+        "item": "Q713088",
+        "itemLabel": "Aubange"
+    },
+    {
+        "item": "Q713118",
+        "itemLabel": "Bertogne"
+    },
+    {
+        "item": "Q713135",
+        "itemLabel": "Bertrix"
+    },
+    {
+        "item": "Q713170",
+        "itemLabel": "Chiny"
+    },
+    {
+        "item": "Q713189",
+        "itemLabel": "Daverdisse"
+    },
+    {
+        "item": "Q713282",
+        "itemLabel": "Fauvillers"
+    },
+    {
+        "item": "Q713300",
+        "itemLabel": "Florenville"
+    },
+    {
+        "item": "Q713319",
+        "itemLabel": "Gouvy"
+    },
+    {
+        "item": "Q713334",
+        "itemLabel": "Habay"
+    },
+    {
+        "item": "Q713353",
+        "itemLabel": "Herbeumont"
+    },
+    {
+        "item": "Q713404",
+        "itemLabel": "Léglise"
+    },
+    {
+        "item": "Q713433",
+        "itemLabel": "Libin"
+    },
+    {
+        "item": "Q713458",
+        "itemLabel": "Manhay"
+    },
+    {
+        "item": "Q713498",
+        "itemLabel": "Martelange"
+    },
+    {
+        "item": "Q713538",
+        "itemLabel": "Musson"
+    },
+    {
+        "item": "Q713615",
+        "itemLabel": "Rendeux"
+    },
+    {
+        "item": "Q713677",
+        "itemLabel": "Rouvroy"
+    },
+    {
+        "item": "Q713708",
+        "itemLabel": "Sainte-Ode"
+    },
+    {
+        "item": "Q713740",
+        "itemLabel": "Saint-Hubert"
+    },
+    {
+        "item": "Q713786",
+        "itemLabel": "Saint-Léger"
+    },
+    {
+        "item": "Q713812",
+        "itemLabel": "Tellin"
+    },
+    {
+        "item": "Q713845",
+        "itemLabel": "Tintigny"
+    },
+    {
+        "item": "Q713864",
+        "itemLabel": "Vaux-sur-Sûre"
+    },
+    {
+        "item": "Q713911",
+        "itemLabel": "Wellin"
+    },
+    {
+        "item": "Q715246",
+        "itemLabel": "Assesse"
+    },
+    {
+        "item": "Q715371",
+        "itemLabel": "Bièvre"
+    },
+    {
+        "item": "Q715422",
+        "itemLabel": "La Bruyère"
+    },
+    {
+        "item": "Q715474",
+        "itemLabel": "Cerfontaine"
+    },
+    {
+        "item": "Q720275",
+        "itemLabel": "Doische"
+    },
+    {
+        "item": "Q720429",
+        "itemLabel": "Florennes"
+    },
+    {
+        "item": "Q720478",
+        "itemLabel": "Fosses-la-Ville"
+    },
+    {
+        "item": "Q720709",
+        "itemLabel": "Havelange"
+    },
+    {
+        "item": "Q720791",
+        "itemLabel": "Jemeppe-sur-Sambre"
+    },
+    {
+        "item": "Q721090",
+        "itemLabel": "Ohey"
+    },
+    {
+        "item": "Q721342",
+        "itemLabel": "Somme-Leuze"
+    },
+    {
+        "item": "Q723651",
+        "itemLabel": "Balen"
+    },
+    {
+        "item": "Q723728",
+        "itemLabel": "Beerse"
+    },
+    {
+        "item": "Q723774",
+        "itemLabel": "Berlaar"
+    },
+    {
+        "item": "Q723822",
+        "itemLabel": "Boechout"
+    },
+    {
+        "item": "Q723972",
+        "itemLabel": "Boom"
+    },
+    {
+        "item": "Q724025",
+        "itemLabel": "Bornem"
+    },
+    {
+        "item": "Q724055",
+        "itemLabel": "Borsbeek"
+    },
+    {
+        "item": "Q724131",
+        "itemLabel": "Brecht"
+    },
+    {
+        "item": "Q724238",
+        "itemLabel": "Edegem"
+    },
+    {
+        "item": "Q724283",
+        "itemLabel": "Essen"
+    },
+    {
+        "item": "Q724389",
+        "itemLabel": "Grobbendonk"
+    },
+    {
+        "item": "Q724448",
+        "itemLabel": "Hemiksem"
+    },
+    {
+        "item": "Q724534",
+        "itemLabel": "Herenthout"
+    },
+    {
+        "item": "Q724638",
+        "itemLabel": "Hoogstraten"
+    },
+    {
+        "item": "Q724777",
+        "itemLabel": "Kalmthout"
+    },
+    {
+        "item": "Q724942",
+        "itemLabel": "Kapellen"
+    },
+    {
+        "item": "Q725029",
+        "itemLabel": "Kasterlee"
+    },
+    {
+        "item": "Q725074",
+        "itemLabel": "Kontich"
+    },
+    {
+        "item": "Q725122",
+        "itemLabel": "Laakdal"
+    },
+    {
+        "item": "Q725235",
+        "itemLabel": "Lille"
+    },
+    {
+        "item": "Q725268",
+        "itemLabel": "Lint"
+    },
+    {
+        "item": "Q725628",
+        "itemLabel": "Goutroux"
+    },
+    {
+        "item": "Q729929",
+        "itemLabel": "Bierbeek"
+    },
+    {
+        "item": "Q730696",
+        "itemLabel": "Laarne"
+    },
+    {
+        "item": "Q730801",
+        "itemLabel": "Wichelen"
+    },
+    {
+        "item": "Q731501",
+        "itemLabel": "Kuurne"
+    },
+    {
+        "item": "Q735797",
+        "itemLabel": "Wingene"
+    },
+    {
+        "item": "Q735813",
+        "itemLabel": "Vleteren"
+    },
+    {
+        "item": "Q735827",
+        "itemLabel": "Lochristi"
+    },
+    {
+        "item": "Q735842",
+        "itemLabel": "Ledegem"
+    },
+    {
+        "item": "Q735851",
+        "itemLabel": "Stekene"
+    },
+    {
+        "item": "Q735865",
+        "itemLabel": "Langemark-Poelkapelle"
+    },
+    {
+        "item": "Q736085",
+        "itemLabel": "Peer"
+    },
+    {
+        "item": "Q736097",
+        "itemLabel": "Riemst"
+    },
+    {
+        "item": "Q736120",
+        "itemLabel": "Leopoldsburg"
+    },
+    {
+        "item": "Q737077",
+        "itemLabel": "Mesen"
+    },
+    {
+        "item": "Q737538",
+        "itemLabel": "Sint-Martens-Latem"
+    },
+    {
+        "item": "Q740852",
+        "itemLabel": "Tessenderlo"
+    },
+    {
+        "item": "Q742876",
+        "itemLabel": "Staden"
+    },
+    {
+        "item": "Q742892",
+        "itemLabel": "Oostkamp"
+    },
+    {
+        "item": "Q742906",
+        "itemLabel": "Dentergem"
+    },
+    {
+        "item": "Q742920",
+        "itemLabel": "Bredene"
+    },
+    {
+        "item": "Q743236",
+        "itemLabel": "Diest"
+    },
+    {
+        "item": "Q746078",
+        "itemLabel": "Boortmeerbeek"
+    },
+    {
+        "item": "Q746641",
+        "itemLabel": "Oud-Heverlee"
+    },
+    {
+        "item": "Q752115",
+        "itemLabel": "Machelen"
+    },
+    {
+        "item": "Q793396",
+        "itemLabel": "Aywaille"
+    },
+    {
+        "item": "Q793584",
+        "itemLabel": "Berlare"
+    },
+    {
+        "item": "Q815054",
+        "itemLabel": "Bekkevoort"
+    },
+    {
+        "item": "Q815948",
+        "itemLabel": "Gistel"
+    },
+    {
+        "item": "Q817372",
+        "itemLabel": "Sint-Lievens-Houtem"
+    },
+    {
+        "item": "Q21763461",
+        "itemLabel": "Thuin"
+    },
+    {
+        "item": "Q31502281",
+        "itemLabel": "Binche"
+    },
+    {
+        "item": "Q817375",
+        "itemLabel": "Kruishoutem"
+    },
+    {
+        "item": "Q817458",
+        "itemLabel": "Erpe-Mere"
+    },
+    {
+        "item": "Q818621",
+        "itemLabel": "Liedekerke"
+    },
+    {
+        "item": "Q818787",
+        "itemLabel": "Hoegaarden"
+    },
+    {
+        "item": "Q819133",
+        "itemLabel": "Kinrooi"
+    },
+    {
+        "item": "Q819139",
+        "itemLabel": "Kortessem"
+    },
+    {
+        "item": "Q819152",
+        "itemLabel": "Hoeselt"
+    },
+    {
+        "item": "Q819162",
+        "itemLabel": "Heers"
+    },
+    {
+        "item": "Q819164",
+        "itemLabel": "Hechtel-Eksel"
+    },
+    {
+        "item": "Q822651",
+        "itemLabel": "Nevele"
+    },
+    {
+        "item": "Q822748",
+        "itemLabel": "Ingelmunster"
+    },
+    {
+        "item": "Q822755",
+        "itemLabel": "Heuvelland"
+    },
+    {
+        "item": "Q822763",
+        "itemLabel": "Kortemark"
+    },
+    {
+        "item": "Q822771",
+        "itemLabel": "Deerlijk"
+    },
+    {
+        "item": "Q822777",
+        "itemLabel": "Oostrozebeke"
+    },
+    {
+        "item": "Q822783",
+        "itemLabel": "Meulebeke"
+    },
+    {
+        "item": "Q822790",
+        "itemLabel": "Lo-Reninge"
+    },
+    {
+        "item": "Q822795",
+        "itemLabel": "Koekelare"
+    },
+    {
+        "item": "Q823623",
+        "itemLabel": "Temse"
+    },
+    {
+        "item": "Q827665",
+        "itemLabel": "Bertem"
+    },
+    {
+        "item": "Q835128",
+        "itemLabel": "Oudenburg"
+    },
+    {
+        "item": "Q839017",
+        "itemLabel": "Bever"
+    },
+    {
+        "item": "Q839023",
+        "itemLabel": "Kraainem"
+    },
+    {
+        "item": "Q839037",
+        "itemLabel": "Wommelgem"
+    },
+    {
+        "item": "Q839044",
+        "itemLabel": "Olen"
+    },
+    {
+        "item": "Q839119",
+        "itemLabel": "Ravels"
+    },
+    {
+        "item": "Q840517",
+        "itemLabel": "Kluisbergen"
+    },
+    {
+        "item": "Q840935",
+        "itemLabel": "Wortegem-Petegem"
+    },
+    {
+        "item": "Q840968",
+        "itemLabel": "Lovendegem"
+    },
+    {
+        "item": "Q841597",
+        "itemLabel": "Sint-Genesius-Rode"
+    },
+    {
+        "item": "Q842454",
+        "itemLabel": "De Pinte"
+    },
+    {
+        "item": "Q842477",
+        "itemLabel": "Oosterzele"
+    },
+    {
+        "item": "Q843319",
+        "itemLabel": "Dampremy"
+    },
+    {
+        "item": "Q845980",
+        "itemLabel": "Brakel"
+    },
+    {
+        "item": "Q846182",
+        "itemLabel": "Dalhem"
+    },
+    {
+        "item": "Q846207",
+        "itemLabel": "Meerhout"
+    },
+    {
+        "item": "Q846212",
+        "itemLabel": "Spiere-Helkijn"
+    },
+    {
+        "item": "Q889044",
+        "itemLabel": "Bocholt"
+    },
+    {
+        "item": "Q895293",
+        "itemLabel": "Boutersem"
+    },
+    {
+        "item": "Q900429",
+        "itemLabel": "Roux"
+    },
+    {
+        "item": "Q908546",
+        "itemLabel": "Puurs"
+    },
+    {
+        "item": "Q908554",
+        "itemLabel": "Galmaarden"
+    },
+    {
+        "item": "Q909914",
+        "itemLabel": "Vorselaar"
+    },
+    {
+        "item": "Q911968",
+        "itemLabel": "Schelle"
+    },
+    {
+        "item": "Q911974",
+        "itemLabel": "Haaltert"
+    },
+    {
+        "item": "Q911983",
+        "itemLabel": "Waarschoot"
+    },
+    {
+        "item": "Q911995",
+        "itemLabel": "Kapelle-op-den-Bos"
+    },
+    {
+        "item": "Q912014",
+        "itemLabel": "Gooik"
+    },
+    {
+        "item": "Q912022",
+        "itemLabel": "Lennik"
+    },
+    {
+        "item": "Q912030",
+        "itemLabel": "Sint-Amands"
+    },
+    {
+        "item": "Q912045",
+        "itemLabel": "Wuustwezel"
+    },
+    {
+        "item": "Q912054",
+        "itemLabel": "Niel"
+    },
+    {
+        "item": "Q912062",
+        "itemLabel": "Retie"
+    },
+    {
+        "item": "Q912069",
+        "itemLabel": "Knesselare"
+    },
+    {
+        "item": "Q912076",
+        "itemLabel": "Horebeke"
+    },
+    {
+        "item": "Q912084",
+        "itemLabel": "Nijlen"
+    },
+    {
+        "item": "Q912091",
+        "itemLabel": "Wezembeek-Oppem"
+    },
+    {
+        "item": "Q912099",
+        "itemLabel": "Maarkedal"
+    },
+    {
+        "item": "Q912106",
+        "itemLabel": "Merchtem"
+    },
+    {
+        "item": "Q912113",
+        "itemLabel": "Lede"
+    },
+    {
+        "item": "Q913195",
+        "itemLabel": "Wemmel"
+    },
+    {
+        "item": "Q914102",
+        "itemLabel": "Juprelle"
+    },
+    {
+        "item": "Q916980",
+        "itemLabel": "Kruibeke"
+    },
+    {
+        "item": "Q917591",
+        "itemLabel": "Malle"
+    },
+    {
+        "item": "Q922260",
+        "itemLabel": "Meise"
+    },
+    {
+        "item": "Q926110",
+        "itemLabel": "Tremelo"
+    },
+    {
+        "item": "Q926139",
+        "itemLabel": "Rotselaar"
+    },
+    {
+        "item": "Q929397",
+        "itemLabel": "Putte"
+    },
+    {
+        "item": "Q929415",
+        "itemLabel": "Crisnée"
+    },
+    {
+        "item": "Q929447",
+        "itemLabel": "Lubbeek"
+    },
+    {
+        "item": "Q929459",
+        "itemLabel": "Rijkevorsel"
+    },
+    {
+        "item": "Q929474",
+        "itemLabel": "Kortenberg"
+    },
+    {
+        "item": "Q929485",
+        "itemLabel": "Vosselaar"
+    },
+    {
+        "item": "Q930249",
+        "itemLabel": "Ternat"
+    },
+    {
+        "item": "Q930269",
+        "itemLabel": "Herent"
+    },
+    {
+        "item": "Q930292",
+        "itemLabel": "Opwijk"
+    },
+    {
+        "item": "Q932020",
+        "itemLabel": "Scherpenheuvel-Zichem"
+    },
+    {
+        "item": "Q936660",
+        "itemLabel": "Roosdaal"
+    },
+    {
+        "item": "Q943446",
+        "itemLabel": "Rumst"
+    },
+    {
+        "item": "Q943472",
+        "itemLabel": "Huldenberg"
+    },
+    {
+        "item": "Q943502",
+        "itemLabel": "Landen"
+    },
+    {
+        "item": "Q943555",
+        "itemLabel": "Oud-Turnhout"
+    },
+    {
+        "item": "Q950129",
+        "itemLabel": "Haacht"
+    },
+    {
+        "item": "Q984868",
+        "itemLabel": "Glabbeek"
+    },
+    {
+        "item": "Q984874",
+        "itemLabel": "Geetbets"
+    },
+    {
+        "item": "Q984877",
+        "itemLabel": "Kortenaken"
+    },
+    {
+        "item": "Q984881",
+        "itemLabel": "Linter"
+    },
+    {
+        "item": "Q984888",
+        "itemLabel": "Steenokkerzeel"
+    },
+    {
+        "item": "Q984892",
+        "itemLabel": "Tielt-Winge"
+    },
+    {
+        "item": "Q984894",
+        "itemLabel": "Keerbergen"
+    },
+    {
+        "item": "Q2199533",
+        "itemLabel": "Bleid"
+    },
+    {
+        "item": "Q2492229",
+        "itemLabel": "Bande"
+    },
+    {
+        "item": "Q2503639",
+        "itemLabel": "Sint-Katharinakapelle"
+    },
+    {
+        "item": "Q2673009",
+        "itemLabel": "Rochehaut"
+    },
+    {
+        "item": "Q2687417",
+        "itemLabel": "Wilrijk"
+    },
+    {
+        "item": "Q2779990",
+        "itemLabel": "Suarlée"
+    },
+    {
+        "item": "Q3113555",
+        "itemLabel": "Q3113555"
+    },
+    {
+        "item": "Q3143139",
+        "itemLabel": "Marche-les-Dames"
+    },
+    {
+        "item": "Q3177595",
+        "itemLabel": "Destelbergen"
+    },
+    {
+        "item": "Q18290864",
+        "itemLabel": "Charleroi"
+    }
+]

@@ -1,0 +1,21 @@
+{
+    "country": {
+        "item": "Q230",
+        "name": "Georgia"
+    },
+    "country_code": "ge",
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "Q34480001",
+        "name": "cultural heritage monuments in Georgia"
+    },
+    "language": "ka",
+    "table_name": "ge",
+    "unique": {
+        "comment": "Georgian National Register of Monuments ID",
+        "property": "P4166"
+    }
+}
