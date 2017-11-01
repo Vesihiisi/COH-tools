@@ -32,14 +32,13 @@ class CoEs(Monument):
         which is a higher unit.
         """
         match = None
-        dep_dic = self.data_files["departments"]
         if self.has_non_empty_attribute("municipio"):
             match = utils.q_from_first_wikilink("es", self.municipio)
             if not match:
                 self.add_to_report("municipio", self.municipio, "located_adm")
         if not match:
             dep_match = utils.get_item_from_dict_by_key(
-                dict_name=dep_dic,
+                dict_name=self.data_files["departments"],
                 search_term=self.iso,
                 search_in="iso")
             if len(dep_match) == 1:
