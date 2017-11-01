@@ -27,11 +27,12 @@ class GhEn(Monument):
                     "built", self.built, "inception")
 
     def set_adm_location(self):
-        region_q = utils.q_from_first_wikilink("en", self.region)
-        if region_q:
-            self.add_statement("located_adm", region_q)
-        else:
-            self.add_to_report("region", self.region, "located_adm")
+        self.set_from_dict_match(
+            lookup_dict=self.data_files["regions"],
+            dict_label="iso",
+            value_label="region_iso",
+            prop="located_adm"
+        )
 
     def set_location(self):
         location_q = utils.q_from_first_wikilink("en", self.location)
@@ -83,6 +84,8 @@ if __name__ == "__main__":
     """Command line entry point for importer."""
     args = importer.handle_args()
     dataset = Dataset("gh", "en", GhEn)
-    dataset.data_files = {}
+    dataset.data_files = {
+        "regions": "ghana_regions.json"  # http://tinyurl.com/y9ye4kfg
+    }
     dataset.lookup_downloads = {"is": "gh_(en)/original function"}
     importer.main(args, dataset)
