@@ -5,8 +5,6 @@ import importer as importer
 
 class AmHy(Monument):
 
-
-
     def set_adm_location(self):
         """
         Set the Admin Location.
@@ -53,7 +51,8 @@ class AmHy(Monument):
             super().set_commonscat()
 
     def set_heritage_id(self):
-        self.add_statement("armenia_heritage", str(self.id))
+        qual_url = {"described_at_url": self.registrant_url}
+        self.add_statement("armenia_heritage", str(self.id), qual_url)
 
     def update_labels(self):
         name = utils.remove_markup(self.description)
