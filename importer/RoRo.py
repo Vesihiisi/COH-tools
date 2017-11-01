@@ -7,20 +7,12 @@ class RoRo(Monument):
 
     def set_adm_location(self):
         counties = self.data_files["counties"]
-        adm_code = self.judetul_iso
-        county_item = utils.get_item_from_dict_by_key(dict_name=counties,
-                                                      search_term=adm_code,
-                                                      search_in="iso_code")
-        if len(county_item) == 1:
-            self.add_statement("located_adm", county_item[0])
-        else:
-            self.add_to_report("judetul_iso",
-                               self.judetul_iso,
-                               "located_adm")
+        self.set_from_dict_match(counties, "iso_code",
+                                 "judetul_iso", "located_adm")
 
     def set_location(self):
         """
-        Set Location property from art wlinked in localitate.
+        Set Location property from article linked in localitate.
 
         Run this after set_adm_location. localitate can
         contain several links (we take the 1st which seems to
@@ -65,7 +57,7 @@ class RoRo(Monument):
             place_name = "Romania"
         desc = "heritage site in {}".format(place_name)
         self.add_description("en", desc)
-        self.add_disambiguator(utils.remove_markup(str(self.cod)))
+        self.add_disambiguator(str(self.cod))
 
     def set_address(self):
         if self.has_non_empty_attribute("adresa"):
@@ -74,8 +66,7 @@ class RoRo(Monument):
             if "piața" in adr_lower or "str." in adr_lower:
                 if self.has_non_empty_attribute("localitate"):
                     town = utils.remove_markup(self.localitate)
-                    adr_nice = "{}, {}".format(adr_nice,
-                                               town)
+                    adr_nice = "{}, {}".format(adr_nice, town)
                 self.add_statement("located_street", adr_nice)
             else:
                 directions = utils.package_monolingual(adr_nice, 'ro')
@@ -85,14 +76,10 @@ class RoRo(Monument):
         romanian = utils.remove_markup(self.denumire)
         self.add_label("ro", romanian)
 
-    def set_monuments_all_id(self):
-        """Map which column name in specific table to  ID in monuments_all."""
-        self.monuments_all_id = str(self.cod)
-
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
                           data_files, existing, repository)
-        self.set_monuments_all_id()
+        self.set_monuments_all_id("cod")
         self.set_changed()
         self.set_wlm_source()
         self.set_heritage()
