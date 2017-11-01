@@ -5,13 +5,7 @@ import importer as importer
 
 class AmHy(Monument):
 
-    def update_labels(self):
-        name = utils.remove_markup(self.description)
-        self.add_label("hy", name)
 
-    def update_descriptions(self):
-        english = "cultural heritage monument of Armenia"
-        self.add_description("en", english)
 
     def set_adm_location(self):
         """
@@ -61,8 +55,13 @@ class AmHy(Monument):
     def set_heritage_id(self):
         self.add_statement("armenia_heritage", str(self.id))
 
-    def exists_with_monument_article(self, language):
-        return super().exists_with_monument_article("hy", "monument_article")
+    def update_labels(self):
+        name = utils.remove_markup(self.description)
+        self.add_label("hy", name)
+
+    def update_descriptions(self):
+        english = "cultural heritage monument of Armenia"
+        self.add_description("en", english)
 
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
