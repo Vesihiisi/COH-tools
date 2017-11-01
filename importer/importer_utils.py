@@ -657,7 +657,7 @@ def is_blacklisted_P31(q_number, site, dissalowed_values):
 
 def create_wlm_url(country, language, id):
     url_base = ("https://tools.wmflabs.org/heritage/api/api.php?"
-                "action=search&format=json&srcountry={}&srlanguage={}&srid={}")
+                "action=search&format=json&srcountry={}&srlang={}&srid={}")
     return url_base.format(
         country, language, quote(id))
 
