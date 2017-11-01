@@ -20,7 +20,7 @@ class TestWLMStuff(unittest.TestCase):
         id_no = "SFC 9698"
         output = ("https://tools.wmflabs.org/heritage/api/api.php"
                   "?action=search&format=json&srcountry=se-ship"
-                  "&srlanguage=sv&srid=SFC%209698")
+                  "&srlang=sv&srid=SFC%209698")
         self.assertEqual(utils.create_wlm_url(dataset, lang, id_no), output)
 
 
