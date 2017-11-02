@@ -1,4 +1,5 @@
 from Monument import Monument, Dataset
+import dateparser
 import importer_utils as utils
 import importer as importer
 
@@ -8,9 +9,17 @@ class UyEs(Monument):
     def set_inception(self):
         """Set building year if parseable."""
         if self.has_non_empty_attribute("construido"):
+            date_dict = None
             if utils.legit_year(self.construido):
-                inc_year = {"time_value": {"year": self.construido}}
-                self.add_statement("inception", inc_year)
+                # plain years cannot be sent to dateparser
+                date_dict = {"year": self.construido}
+            else:
+                date_p = dateparser.parse(self.construido)
+                if date_p:
+                    date_dict = utils.datetime_object_to_dict(date_p)
+
+            if date_dict:
+                self.add_statement("inception", utils.package_time(date_dict))
             else:
                 self.add_to_report("construido", self.construido, "inception")
 
@@ -30,11 +39,19 @@ class UyEs(Monument):
             loc_raw = self.localidad
             if utils.count_wikilinks(loc_raw) == 1:
                 loc_try = utils.q_from_first_wikilink("es", loc_raw)
-                if loc_try in [x["item"] for x in loc_dic]:
+                loc_match = utils.get_item_from_dict_by_key(
+                    dict_name=loc_dic,
+                    search_term=loc_try,
+                    search_in="item")
+                if len(loc_match) == 1:
                     loc_q = loc_try
             else:
                 loc_try = utils.q_from_wikipedia("es", loc_raw)
-                if loc_try in [x["item"] for x in loc_dic]:
+                loc_match = utils.get_item_from_dict_by_key(
+                    dict_name=loc_dic,
+                    search_term=loc_try,
+                    search_in="item")
+                if len(loc_match) == 1:
                     loc_q = loc_try
 
             if loc_q:
@@ -44,32 +61,28 @@ class UyEs(Monument):
 
     def set_adm_location(self):
         """Set the Admin Location using department ISO code."""
-        dep_dic = self.data_files["departments"]
-        iso = self.dep_iso
-        dep_match = utils.get_item_from_dict_by_key(
-            dict_name=dep_dic,
-            search_in="iso",
-            search_term=iso)
-        if len(dep_match) == 1:
-            adm_q = dep_match[0]
+        self.set_from_dict_match(
+            lookup_dict=self.data_files["departments"],
+            dict_label="iso",
+            value_label="dep_iso",
+            prop="located_adm"
+        )
 
-        if adm_q:
-            self.add_statement("located_adm", adm_q)
-        else:
-            self.add_to_report("dep_iso", self.dep_iso, "located_adm")
+    def set_directions(self):
+        if self.has_non_empty_attribute("direccion"):
+            monolingual = utils.package_monolingual(
+                utils.remove_markup(self.direccion), 'es')
+            self.add_statement("directions", monolingual)
 
     def set_wd_item_via_name(self):
         """
-        Attemt to set wd item via name.
+        Attempt to set wd item via name.
 
-        There's no monument_article field in this dataset,
-        so try to get the Q of an article with the
-        same name, if available.
+        Populates self.monument_article, the value then gets used in
+        find_matching_wikidata() with extra precautionary logic.
         """
-        if utils.count_wikilinks(self.monumento) == 1:
-            monum_q = utils.q_from_first_wikilink("es", self.monumento)
-            if monum_q:
-                self.set_wd_item(monum_q)
+        if utils.count_wikilinks(self.name) == 1:
+            self.monument_article = utils.get_wikilinks(self.name)[0].title
 
     def update_labels(self):
         es_name = utils.remove_markup(self.monumento)
@@ -82,6 +95,7 @@ class UyEs(Monument):
     def set_heritage_id(self):
         wlm_code = self.mapping["table_name"].upper()
         self.add_statement("wlm_id", "{}-{}".format(wlm_code, self.id))
+        self.add_disambiguator(str(self.id))
 
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
@@ -92,6 +106,7 @@ class UyEs(Monument):
         self.set_wlm_source()
         self.set_country()
         self.set_adm_location()
+        self.set_directions()
         self.set_location()
         self.set_is()
         self.set_inception()
@@ -109,6 +124,7 @@ if __name__ == "__main__":
     """Point of entrance for importer."""
     args = importer.handle_args()
     dataset = Dataset("uy", "es", UyEs)
-    dataset.data_files = {"departments": "uruguay_departments.json",
-                          "settlements": "uruguay_settlements.json"}
+    dataset.data_files = {
+        "departments": "uruguay_departments.json",
+        "settlements": "uruguay_settlements.json"}
     importer.main(args, dataset)
