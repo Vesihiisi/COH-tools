@@ -191,6 +191,8 @@ def q_from_wikipedia(language, page_title):
     summary = summary.format(page_title, language)
     wd_repo = create_site_instance("wikidata", "wikidata")
     wdstuff = wds(wd_repo, edit_summary=summary, no_wdss=True)
+    if "[[" in page_title:
+        page_title = remove_markup(page_title)
     if page.exists():
         if page.isRedirectPage():
             page = page.getRedirectTarget()
