@@ -1,0 +1,47 @@
+[
+  {
+    "iso": "BO-H",
+    "item": "Q235110",
+    "itemLabel": "Chuquisaca Department"
+  },
+  {
+    "iso": "BO-N",
+    "item": "Q235362",
+    "itemLabel": "Pando Department"
+  },
+  {
+    "iso": "BO-L",
+    "item": "Q272784",
+    "itemLabel": "La Paz Department"
+  },
+  {
+    "iso": "BO-O",
+    "item": "Q1061368",
+    "itemLabel": "Oruro Department"
+  },
+  {
+    "iso": "BO-B",
+    "item": "Q233169",
+    "itemLabel": "Beni Department"
+  },
+  {
+    "iso": "BO-S",
+    "item": "Q235106",
+    "itemLabel": "Santa Cruz Department"
+  },
+  {
+    "iso": "BO-C",
+    "item": "Q233917",
+    "itemLabel": "Cochabamba Department"
+  },
+  {
+    "iso": "BO-T",
+    "item": "Q233933",
+    "itemLabel": "Tarija Department"
+  },
+  {
+    "iso": "BO-P",
+    "item": "Q238079",
+    "itemLabel": "Potosí Department"
+  }
+]
