@@ -25,7 +25,7 @@ class VeEs(Monument):
         if adm_q is None:
             self.add_to_report("municipio", self.municipio, "located_adm")
             iso_match = utils.get_item_from_dict_by_key(
-                dict_name=self.data_files["regions"],
+                dict_name=self.data_files["states"],
                 search_term=self.estado_iso,
                 search_in="iso")
             if len(iso_match) == 1:
