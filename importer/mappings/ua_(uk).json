@@ -1,0 +1,21 @@
+{
+    "country": {
+        "item": "Q212",
+        "name": "Ukraine"
+    },
+    "country_code": "ua",
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "Q10296658",
+        "name": "cultural heritage site in Ukraine"
+    },
+    "language": "uk",
+    "table_name": "ua",
+    "unique": {
+        "comment": "WLM ID",
+        "property": "P2186"
+    }
+}
