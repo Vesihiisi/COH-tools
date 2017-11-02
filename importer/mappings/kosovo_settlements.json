@@ -1,0 +1,6562 @@
+[
+    {
+        "item": "Q3304014",
+        "itemLabel": "Studençani"
+    },
+    {
+        "item": "Q3338706",
+        "itemLabel": "Radeshë"
+    },
+    {
+        "item": "Q3391086",
+        "itemLabel": "Pllakanicë"
+    },
+    {
+        "item": "Q3453714",
+        "itemLabel": "Rëvatskë"
+    },
+    {
+        "item": "Q1016862",
+        "itemLabel": "Buroja"
+    },
+    {
+        "item": "Q3643500",
+        "itemLabel": "Bradashi"
+    },
+    {
+        "item": "Q3658881",
+        "itemLabel": "Lubinja e Poshtme"
+    },
+    {
+        "item": "Q4845471",
+        "itemLabel": "Vranidolli"
+    },
+    {
+        "item": "Q2884396",
+        "itemLabel": "Bare (Leposaviq)"
+    },
+    {
+        "item": "Q3038894",
+        "itemLabel": "Drajçiqi"
+    },
+    {
+        "item": "Q3039325",
+        "itemLabel": "Dreni (Albanik)"
+    },
+    {
+        "item": "Q3116859",
+        "itemLabel": "Grkajë"
+    },
+    {
+        "item": "Q3264473",
+        "itemLabel": "Lloznë"
+    },
+    {
+        "item": "Q3278975",
+        "itemLabel": "Zallçi"
+    },
+    {
+        "item": "Q3299635",
+        "itemLabel": "Likoshani"
+    },
+    {
+        "item": "Q3300387",
+        "itemLabel": "Carrabreg i Ulët"
+    },
+    {
+        "item": "Q3300879",
+        "itemLabel": "Dikancë"
+    },
+    {
+        "item": "Q3301825",
+        "itemLabel": "Bajgora"
+    },
+    {
+        "item": "Q3301836",
+        "itemLabel": "Koliçi"
+    },
+    {
+        "item": "Q3301882",
+        "itemLabel": "Përlepnica"
+    },
+    {
+        "item": "Q3303950",
+        "itemLabel": "Cerrca"
+    },
+    {
+        "item": "Q3303990",
+        "itemLabel": "Bistricë e Shalës"
+    },
+    {
+        "item": "Q3304010",
+        "itemLabel": "Gurrakoci"
+    },
+    {
+        "item": "Q3304065",
+        "itemLabel": "Lupçi i Poshtëm"
+    },
+    {
+        "item": "Q3304768",
+        "itemLabel": "Çikatova e Re"
+    },
+    {
+        "item": "Q3304962",
+        "itemLabel": "Babushi i Serbëve"
+    },
+    {
+        "item": "Q3338471",
+        "itemLabel": "Pakashtica"
+    },
+    {
+        "item": "Q3338808",
+        "itemLabel": "Restelicë"
+    },
+    {
+        "item": "Q3339011",
+        "itemLabel": "Goranca"
+    },
+    {
+        "item": "Q3357421",
+        "itemLabel": "Ostraqë"
+    },
+    {
+        "item": "Q3402870",
+        "itemLabel": "Pridvoricë"
+    },
+    {
+        "item": "Q3713867",
+        "itemLabel": "Strellc i Ulët"
+    },
+    {
+        "item": "Q15411354",
+        "itemLabel": "Kaliçani"
+    },
+    {
+        "item": "Q3574926",
+        "itemLabel": "Zavrata"
+    },
+    {
+        "item": "Q3196518",
+        "itemLabel": "Kijeva"
+    },
+    {
+        "item": "Q3304813",
+        "itemLabel": "Bellopoja, Burim"
+    },
+    {
+        "item": "Q59089",
+        "itemLabel": "Malisheva"
+    },
+    {
+        "item": "Q59086",
+        "itemLabel": "Theranda"
+    },
+    {
+        "item": "Q178168",
+        "itemLabel": "Mitrovica"
+    },
+    {
+        "item": "Q230263",
+        "itemLabel": "Zupçi"
+    },
+    {
+        "item": "Q391168",
+        "itemLabel": "Sharbani"
+    },
+    {
+        "item": "Q1016703",
+        "itemLabel": "Hoça e Madhe"
+    },
+    {
+        "item": "Q2371448",
+        "itemLabel": "Q2371448"
+    },
+    {
+        "item": "Q2123750",
+        "itemLabel": "Qyshku"
+    },
+    {
+        "item": "Q2463836",
+        "itemLabel": "Tërllobuçi"
+    },
+    {
+        "item": "Q200061",
+        "itemLabel": "Prizreni"
+    },
+    {
+        "item": "Q3547784",
+        "itemLabel": "Q3547784"
+    },
+    {
+        "item": "Q372786",
+        "itemLabel": "Svinjara"
+    },
+    {
+        "item": "Q2904806",
+        "itemLabel": "Bistricë"
+    },
+    {
+        "item": "Q2946350",
+        "itemLabel": "Cerajë"
+    },
+    {
+        "item": "Q3005665",
+        "itemLabel": "Crveni"
+    },
+    {
+        "item": "Q3040585",
+        "itemLabel": "Dubova e Vogël"
+    },
+    {
+        "item": "Q3065980",
+        "itemLabel": "Korisha"
+    },
+    {
+        "item": "Q3191644",
+        "itemLabel": "Kabashi"
+    },
+    {
+        "item": "Q3658870",
+        "itemLabel": "Jabllanica"
+    },
+    {
+        "item": "Q3300400",
+        "itemLabel": "Komoran"
+    },
+    {
+        "item": "Q3300821",
+        "itemLabel": "Babaj Boks"
+    },
+    {
+        "item": "Q3301894",
+        "itemLabel": "Raçaku"
+    },
+    {
+        "item": "Q3303998",
+        "itemLabel": "Çabiqi"
+    },
+    {
+        "item": "Q738901",
+        "itemLabel": "Ferizaj"
+    },
+    {
+        "item": "Q3315696",
+        "itemLabel": "Miokoviq"
+    },
+    {
+        "item": "Q3317439",
+        "itemLabel": "Mleçani"
+    },
+    {
+        "item": "Q3486546",
+        "itemLabel": "Sllatina"
+    },
+    {
+        "item": "Q3593834",
+        "itemLabel": "Qeskova"
+    },
+    {
+        "item": "Q1009813",
+        "itemLabel": "Jarinja"
+    },
+    {
+        "item": "Q3115096",
+        "itemLabel": "Srecka"
+    },
+    {
+        "item": "Q1568705",
+        "itemLabel": "Breznica (Kastriot)"
+    },
+    {
+        "item": "Q1678461",
+        "itemLabel": "Jagnjenica"
+    },
+    {
+        "item": "Q1568720",
+        "itemLabel": "Vojniku"
+    },
+    {
+        "item": "Q4855806",
+        "itemLabel": "Baja"
+    },
+    {
+        "item": "Q991305",
+        "itemLabel": "Kokaj"
+    },
+    {
+        "item": "Q2371843",
+        "itemLabel": "Sfeçla"
+    },
+    {
+        "item": "Q1233651",
+        "itemLabel": "Dobërdoli"
+    },
+    {
+        "item": "Q207245",
+        "itemLabel": "Prroni i Keq"
+    },
+    {
+        "item": "Q2882583",
+        "itemLabel": "Banjska"
+    },
+    {
+        "item": "Q2895033",
+        "itemLabel": "Bellobrd"
+    },
+    {
+        "item": "Q2911417",
+        "itemLabel": "Borçan"
+    },
+    {
+        "item": "Q3304038",
+        "itemLabel": "Bllaca"
+    },
+    {
+        "item": "Q3033294",
+        "itemLabel": "Ujmira"
+    },
+    {
+        "item": "Q3121444",
+        "itemLabel": "Guvnishtë"
+    },
+    {
+        "item": "Q646891",
+        "itemLabel": "Kopariqi"
+    },
+    {
+        "item": "Q3199529",
+        "itemLabel": "Kçiqi i Madh"
+    },
+    {
+        "item": "Q733155",
+        "itemLabel": "Rahoveci"
+    },
+    {
+        "item": "Q3236920",
+        "itemLabel": "Letnica"
+    },
+    {
+        "item": "Q3300517",
+        "itemLabel": "Korrotica e Epërme"
+    },
+    {
+        "item": "Q3301807",
+        "itemLabel": "Drinas"
+    },
+    {
+        "item": "Q3301854",
+        "itemLabel": "Pllajnik"
+    },
+    {
+        "item": "Q3304057",
+        "itemLabel": "Lipovica (Gjilan)"
+    },
+    {
+        "item": "Q3304948",
+        "itemLabel": "Batusa"
+    },
+    {
+        "item": "Q3304973",
+        "itemLabel": "Harilaqi"
+    },
+    {
+        "item": "Q3327114",
+        "itemLabel": "Moshnicë"
+    },
+    {
+        "item": "Q3331085",
+        "itemLabel": "Mushnikova"
+    },
+    {
+        "item": "Q3338801",
+        "itemLabel": "Stagova"
+    },
+    {
+        "item": "Q845752",
+        "itemLabel": "Stanofci i Epërm"
+    },
+    {
+        "item": "Q3397979",
+        "itemLabel": "Popovce"
+    },
+    {
+        "item": "Q3478819",
+        "itemLabel": "Seocë"
+    },
+    {
+        "item": "Q3594267",
+        "itemLabel": "Shipoli"
+    },
+    {
+        "item": "Q4849541",
+        "itemLabel": "Baksi"
+    },
+    {
+        "item": "Q112657",
+        "itemLabel": "Peja"
+    },
+    {
+        "item": "Q387574",
+        "itemLabel": "Mushtishti"
+    },
+    {
+        "item": "Q474651",
+        "itemLabel": "Gjakova"
+    },
+    {
+        "item": "Q2904786",
+        "itemLabel": "Bishtazhin"
+    },
+    {
+        "item": "Q2911278",
+        "itemLabel": "Borovë"
+    },
+    {
+        "item": "Q2927567",
+        "itemLabel": "Budisallci"
+    },
+    {
+        "item": "Q593013",
+        "itemLabel": "Guacka"
+    },
+    {
+        "item": "Q3040080",
+        "itemLabel": "Dërsniku"
+    },
+    {
+        "item": "Q3110834",
+        "itemLabel": "Gorazhdeci"
+    },
+    {
+        "item": "Q3115362",
+        "itemLabel": "Graniçan"
+    },
+    {
+        "item": "Q3133619",
+        "itemLabel": "Rapçë"
+    },
+    {
+        "item": "Q3192028",
+        "itemLabel": "Kajkovë"
+    },
+    {
+        "item": "Q3219734",
+        "itemLabel": "Llaushë"
+    },
+    {
+        "item": "Q3298899",
+        "itemLabel": "Brod"
+    },
+    {
+        "item": "Q3299232",
+        "itemLabel": "Binça"
+    },
+    {
+        "item": "Q3301794",
+        "itemLabel": "Baqkë"
+    },
+    {
+        "item": "Q3301870",
+        "itemLabel": "Pozhar"
+    },
+    {
+        "item": "Q3304936",
+        "itemLabel": "Pomozotini"
+    },
+    {
+        "item": "Q3327103",
+        "itemLabel": "Moçari"
+    },
+    {
+        "item": "Q891333",
+        "itemLabel": "Boletini"
+    },
+    {
+        "item": "Q939112",
+        "itemLabel": "Deçani"
+    },
+    {
+        "item": "Q942917",
+        "itemLabel": "Janjeva"
+    },
+    {
+        "item": "Q962827",
+        "itemLabel": "Leshaku"
+    },
+    {
+        "item": "Q991325",
+        "itemLabel": "Strellc i Epërm"
+    },
+    {
+        "item": "Q991334",
+        "itemLabel": "Desivojca"
+    },
+    {
+        "item": "Q3492535",
+        "itemLabel": "Soçanica"
+    },
+    {
+        "item": "Q2106650",
+        "itemLabel": "Pjetërqi i Epërm"
+    },
+    {
+        "item": "Q4833267",
+        "itemLabel": "Mireshi"
+    },
+    {
+        "item": "Q4892212",
+        "itemLabel": "Bërkova"
+    },
+    {
+        "item": "Q4927041",
+        "itemLabel": "Blaç"
+    },
+    {
+        "item": "Q2895164",
+        "itemLabel": "Beluqe"
+    },
+    {
+        "item": "Q3003035",
+        "itemLabel": "Cerkolezi"
+    },
+    {
+        "item": "Q3033302",
+        "itemLabel": "Dobravë"
+    },
+    {
+        "item": "Q3036452",
+        "itemLabel": "Isevci i Ultë"
+    },
+    {
+        "item": "Q3036585",
+        "itemLabel": "Kërnjini i Ultë"
+    },
+    {
+        "item": "Q3066247",
+        "itemLabel": "Vraqevë"
+    },
+    {
+        "item": "Q3176832",
+        "itemLabel": "Jelakcë"
+    },
+    {
+        "item": "Q3191645",
+        "itemLabel": "Kabashi (Viti)"
+    },
+    {
+        "item": "Q3300472",
+        "itemLabel": "Duhla"
+    },
+    {
+        "item": "Q3303002",
+        "itemLabel": "Orqushë"
+    },
+    {
+        "item": "Q3304819",
+        "itemLabel": "Q3304819"
+    },
+    {
+        "item": "Q3315698",
+        "itemLabel": "Q3315698"
+    },
+    {
+        "item": "Q3391453",
+        "itemLabel": "Q3391453"
+    },
+    {
+        "item": "Q3400054",
+        "itemLabel": "Q3400054"
+    },
+    {
+        "item": "Q3438146",
+        "itemLabel": "Q3438146"
+    },
+    {
+        "item": "Q3446621",
+        "itemLabel": "Q3446621"
+    },
+    {
+        "item": "Q3538293",
+        "itemLabel": "Q3538293"
+    },
+    {
+        "item": "Q3542512",
+        "itemLabel": "Q3542512"
+    },
+    {
+        "item": "Q3547930",
+        "itemLabel": "Q3547930"
+    },
+    {
+        "item": "Q3561198",
+        "itemLabel": "Q3561198"
+    },
+    {
+        "item": "Q3563866",
+        "itemLabel": "Q3563866"
+    },
+    {
+        "item": "Q3574470",
+        "itemLabel": "Q3574470"
+    },
+    {
+        "item": "Q3575167",
+        "itemLabel": "Q3575167"
+    },
+    {
+        "item": "Q3576222",
+        "itemLabel": "Q3576222"
+    },
+    {
+        "item": "Q3593795",
+        "itemLabel": "Q3593795"
+    },
+    {
+        "item": "Q3656408",
+        "itemLabel": "Q3656408"
+    },
+    {
+        "item": "Q3658877",
+        "itemLabel": "Q3658877"
+    },
+    {
+        "item": "Q6927188",
+        "itemLabel": "Q6927188"
+    },
+    {
+        "item": "Q7229469",
+        "itemLabel": "Q7229469"
+    },
+    {
+        "item": "Q6590044",
+        "itemLabel": "Velekinca"
+    },
+    {
+        "item": "Q7877773",
+        "itemLabel": "Q7877773"
+    },
+    {
+        "item": "Q3338821",
+        "itemLabel": "Kërstec"
+    },
+    {
+        "item": "Q8067150",
+        "itemLabel": "Q8067150"
+    },
+    {
+        "item": "Q6556803",
+        "itemLabel": "Lipovica"
+    },
+    {
+        "item": "Q7229470",
+        "itemLabel": "Popova, Podujevë"
+    },
+    {
+        "item": "Q7824925",
+        "itemLabel": "Topliçani"
+    },
+    {
+        "item": "Q5586718",
+        "itemLabel": "Lupçi i Epërm"
+    },
+    {
+        "item": "Q9014227",
+        "itemLabel": "Vrella"
+    },
+    {
+        "item": "Q6435881",
+        "itemLabel": "Krojkova"
+    },
+    {
+        "item": "Q6488292",
+        "itemLabel": "Llapllasella"
+    },
+    {
+        "item": "Q6527271",
+        "itemLabel": "Leçina"
+    },
+    {
+        "item": "Q6594702",
+        "itemLabel": "Gazivoda"
+    },
+    {
+        "item": "Q6654224",
+        "itemLabel": "Livadica"
+    },
+    {
+        "item": "Q10957855",
+        "itemLabel": "Q10957855"
+    },
+    {
+        "item": "Q8079664",
+        "itemLabel": "Çagllavica"
+    },
+    {
+        "item": "Q7538529",
+        "itemLabel": "Sllakofci"
+    },
+    {
+        "item": "Q7857297",
+        "itemLabel": "Tuçepi"
+    },
+    {
+        "item": "Q10951960",
+        "itemLabel": "Reshtani"
+    },
+    {
+        "item": "Q10961991",
+        "itemLabel": "Shupkoci"
+    },
+    {
+        "item": "Q11026558",
+        "itemLabel": "Zhivinjani"
+    },
+    {
+        "item": "Q6590808",
+        "itemLabel": "Sllatina e Madhe"
+    },
+    {
+        "item": "Q6594545",
+        "itemLabel": "Pantina"
+    },
+    {
+        "item": "Q7225440",
+        "itemLabel": "Polaci i Ri"
+    },
+    {
+        "item": "Q7237167",
+        "itemLabel": "Pozherani"
+    },
+    {
+        "item": "Q7862257",
+        "itemLabel": "Tërrnavë, Podujevë"
+    },
+    {
+        "item": "Q10951178",
+        "itemLabel": "Smira"
+    },
+    {
+        "item": "Q10951647",
+        "itemLabel": "Sadovina e Jerlive"
+    },
+    {
+        "item": "Q10965731",
+        "itemLabel": "Radisheva"
+    },
+    {
+        "item": "Q10977841",
+        "itemLabel": "Zabel i Epërm"
+    },
+    {
+        "item": "Q8083734",
+        "itemLabel": "Zhuri"
+    },
+    {
+        "item": "Q10959335",
+        "itemLabel": "Reka"
+    },
+    {
+        "item": "Q10638512",
+        "itemLabel": "Preoci"
+    },
+    {
+        "item": "Q10963359",
+        "itemLabel": "Shtrubullova"
+    },
+    {
+        "item": "Q5601532",
+        "itemLabel": "Gremja"
+    },
+    {
+        "item": "Q6594862",
+        "itemLabel": "Nerodimja e Poshtme"
+    },
+    {
+        "item": "Q7225441",
+        "itemLabel": "Polana"
+    },
+    {
+        "item": "Q7238407",
+        "itemLabel": "Prapashtica"
+    },
+    {
+        "item": "Q7943733",
+        "itemLabel": "Vuçak"
+    },
+    {
+        "item": "Q11023400",
+        "itemLabel": "Pidiqi"
+    },
+    {
+        "item": "Q11024263",
+        "itemLabel": "Pleshina"
+    },
+    {
+        "item": "Q11024371",
+        "itemLabel": "Semetishti"
+    },
+    {
+        "item": "Q10963291",
+        "itemLabel": "Shtutica"
+    },
+    {
+        "item": "Q10969196",
+        "itemLabel": "Suhadolli i Epërm"
+    },
+    {
+        "item": "Q10973446",
+        "itemLabel": "Ujmiri (Viti)"
+    },
+    {
+        "item": "Q10977650",
+        "itemLabel": "Zhegra"
+    },
+    {
+        "item": "Q12755682",
+        "itemLabel": "Q12755682"
+    },
+    {
+        "item": "Q12757349",
+        "itemLabel": "Q12757349"
+    },
+    {
+        "item": "Q12757762",
+        "itemLabel": "Q12757762"
+    },
+    {
+        "item": "Q12757849",
+        "itemLabel": "Q12757849"
+    },
+    {
+        "item": "Q12758310",
+        "itemLabel": "Reçani"
+    },
+    {
+        "item": "Q12758309",
+        "itemLabel": "Reçani"
+    },
+    {
+        "item": "Q12754274",
+        "itemLabel": "Krysheci"
+    },
+    {
+        "item": "Q12754288",
+        "itemLabel": "Kërnica"
+    },
+    {
+        "item": "Q12754584",
+        "itemLabel": "Lipovica"
+    },
+    {
+        "item": "Q12754589",
+        "itemLabel": "Lisica"
+    },
+    {
+        "item": "Q12754633",
+        "itemLabel": "Lozhishti"
+    },
+    {
+        "item": "Q12754743",
+        "itemLabel": "Mazgiti"
+    },
+    {
+        "item": "Q12754782",
+        "itemLabel": "Zveçan i Vogël"
+    },
+    {
+        "item": "Q12755038",
+        "itemLabel": "Matica"
+    },
+    {
+        "item": "Q12755652",
+        "itemLabel": "Milaj"
+    },
+    {
+        "item": "Q12755962",
+        "itemLabel": "Naklla"
+    },
+    {
+        "item": "Q12755963",
+        "itemLabel": "Nakarada"
+    },
+    {
+        "item": "Q12756065",
+        "itemLabel": "Nushpala"
+    },
+    {
+        "item": "Q12756330",
+        "itemLabel": "Novosella"
+    },
+    {
+        "item": "Q12756721",
+        "itemLabel": "Rahova"
+    },
+    {
+        "item": "Q12756960",
+        "itemLabel": "Padina"
+    },
+    {
+        "item": "Q12757741",
+        "itemLabel": "Tuneli i Parë"
+    },
+    {
+        "item": "Q12757803",
+        "itemLabel": "Prellovci"
+    },
+    {
+        "item": "Q12758319",
+        "itemLabel": "Rrëzhana"
+    },
+    {
+        "item": "Q12758416",
+        "itemLabel": "Miniera e Kosovës"
+    },
+    {
+        "item": "Q12754168",
+        "itemLabel": "Krasmiroci"
+    },
+    {
+        "item": "Q12754173",
+        "itemLabel": "Krasaliqi"
+    },
+    {
+        "item": "Q12754237",
+        "itemLabel": "Kërligata"
+    },
+    {
+        "item": "Q12754252",
+        "itemLabel": "Kërstec"
+    },
+    {
+        "item": "Q12754567",
+        "itemLabel": "Likoci"
+    },
+    {
+        "item": "Q12754786",
+        "itemLabel": "Vranoc i Vogël"
+    },
+    {
+        "item": "Q12754799",
+        "itemLabel": "Rudari i Vogël"
+    },
+    {
+        "item": "Q12755194",
+        "itemLabel": "Metohia"
+    },
+    {
+        "item": "Q12756093",
+        "itemLabel": "Negroci"
+    },
+    {
+        "item": "Q12756438",
+        "itemLabel": "Hogoshti"
+    },
+    {
+        "item": "Q12756450",
+        "itemLabel": "Hodonoci"
+    },
+    {
+        "item": "Q12756475",
+        "itemLabel": "Akrashtica"
+    },
+    {
+        "item": "Q12756470",
+        "itemLabel": "Okllaca"
+    },
+    {
+        "item": "Q12756573",
+        "itemLabel": "Opterusha"
+    },
+    {
+        "item": "Q12756751",
+        "itemLabel": "Orllani"
+    },
+    {
+        "item": "Q12757061",
+        "itemLabel": "Pasjaku"
+    },
+    {
+        "item": "Q12757354",
+        "itemLabel": "Plemetini"
+    },
+    {
+        "item": "Q12757485",
+        "itemLabel": "Polluzha"
+    },
+    {
+        "item": "Q12757802",
+        "itemLabel": "Prekolluk"
+    },
+    {
+        "item": "Q12758038",
+        "itemLabel": "Ramnishta"
+    },
+    {
+        "item": "Q12758217",
+        "itemLabel": "Raça"
+    },
+    {
+        "item": "Q12758222",
+        "itemLabel": "Rashinca"
+    },
+    {
+        "item": "Q12758580",
+        "itemLabel": "Saroshi"
+    },
+    {
+        "item": "Q12758271",
+        "itemLabel": "Reka"
+    },
+    {
+        "item": "Q12754312",
+        "itemLabel": "Kulla"
+    },
+    {
+        "item": "Q12754739",
+        "itemLabel": "Mazhiqi"
+    },
+    {
+        "item": "Q12754742",
+        "itemLabel": "Maznik"
+    },
+    {
+        "item": "Q12754753",
+        "itemLabel": "Makërmali"
+    },
+    {
+        "item": "Q12755069",
+        "itemLabel": "Magjera"
+    },
+    {
+        "item": "Q12755202",
+        "itemLabel": "Megjipotoku"
+    },
+    {
+        "item": "Q12755777",
+        "itemLabel": "Mrasori"
+    },
+    {
+        "item": "Q12756430",
+        "itemLabel": "Açareva"
+    },
+    {
+        "item": "Q12756426",
+        "itemLabel": "Ofçari"
+    },
+    {
+        "item": "Q12757498",
+        "itemLabel": "Ponosheci"
+    },
+    {
+        "item": "Q12757671",
+        "itemLabel": "Pouskë"
+    },
+    {
+        "item": "Q12758167",
+        "itemLabel": "Rakinica"
+    },
+    {
+        "item": "Q12758189",
+        "itemLabel": "Rastavicë"
+    },
+    {
+        "item": "Q12758714",
+        "itemLabel": "Svirca"
+    },
+    {
+        "item": "Q12758718",
+        "itemLabel": "Surqina"
+    },
+    {
+        "item": "Q12758814",
+        "itemLabel": "Siga"
+    },
+    {
+        "item": "Q12757433",
+        "itemLabel": "Pogragja"
+    },
+    {
+        "item": "Q12754464",
+        "itemLabel": "Llapushniku"
+    },
+    {
+        "item": "Q12754702",
+        "itemLabel": "Lluçkareka"
+    },
+    {
+        "item": "Q12755115",
+        "itemLabel": "Metërgoci"
+    },
+    {
+        "item": "Q12755247",
+        "itemLabel": "Melenica"
+    },
+    {
+        "item": "Q12755823",
+        "itemLabel": "Murgulla"
+    },
+    {
+        "item": "Q12756053",
+        "itemLabel": "Nasheci"
+    },
+    {
+        "item": "Q12756863",
+        "itemLabel": "Astrazupi"
+    },
+    {
+        "item": "Q12757001",
+        "itemLabel": "Papiq"
+    },
+    {
+        "item": "Q12757006",
+        "itemLabel": "Prapaqan"
+    },
+    {
+        "item": "Q12757240",
+        "itemLabel": "Petroviqi"
+    },
+    {
+        "item": "Q12757301",
+        "itemLabel": "Pirqa"
+    },
+    {
+        "item": "Q12757410",
+        "itemLabel": "Pobërgjë"
+    },
+    {
+        "item": "Q12758185",
+        "itemLabel": "Rançiqi"
+    },
+    {
+        "item": "Q12758269",
+        "itemLabel": "Rezalla"
+    },
+    {
+        "item": "Q12758326",
+        "itemLabel": "Remniku"
+    },
+    {
+        "item": "Q12758334",
+        "itemLabel": "Rimanishta"
+    },
+    {
+        "item": "Q12758455",
+        "itemLabel": "Rujishta"
+    },
+    {
+        "item": "Q12758804",
+        "itemLabel": "Selac"
+    },
+    {
+        "item": "Q12754373",
+        "itemLabel": "Kutlloci"
+    },
+    {
+        "item": "Q12754479",
+        "itemLabel": "Lloshkobarja"
+    },
+    {
+        "item": "Q12754620",
+        "itemLabel": "Llovaca"
+    },
+    {
+        "item": "Q12755648",
+        "itemLabel": "Mjaku"
+    },
+    {
+        "item": "Q12755819",
+        "itemLabel": "Murga"
+    },
+    {
+        "item": "Q12755838",
+        "itemLabel": "Talinoci i Muhaxhirëve"
+    },
+    {
+        "item": "Q12756087",
+        "itemLabel": "Nëpërgoshti"
+    },
+    {
+        "item": "Q12756109",
+        "itemLabel": "Nekoc"
+    },
+    {
+        "item": "Q12756157",
+        "itemLabel": "Nëpërbishti"
+    },
+    {
+        "item": "Q12756313",
+        "itemLabel": "Mirashi"
+    },
+    {
+        "item": "Q12756976",
+        "itemLabel": "Pollata"
+    },
+    {
+        "item": "Q12757046",
+        "itemLabel": "Paruca"
+    },
+    {
+        "item": "Q12757368",
+        "itemLabel": "Polluzha (Skënderaj)"
+    },
+    {
+        "item": "Q12758044",
+        "itemLabel": "Radaci"
+    },
+    {
+        "item": "Q12758172",
+        "itemLabel": "Rakoci"
+    },
+    {
+        "item": "Q12758190",
+        "itemLabel": "Raskova"
+    },
+    {
+        "item": "Q12748698",
+        "itemLabel": "Q12748698"
+    },
+    {
+        "item": "Q12748752",
+        "itemLabel": "Q12748752"
+    },
+    {
+        "item": "Q12749443",
+        "itemLabel": "Q12749443"
+    },
+    {
+        "item": "Q12750344",
+        "itemLabel": "Q12750344"
+    },
+    {
+        "item": "Q12745079",
+        "itemLabel": "Dojnica"
+    },
+    {
+        "item": "Q12748912",
+        "itemLabel": "Bivolaku"
+    },
+    {
+        "item": "Q12749253",
+        "itemLabel": "Bojnoviqi"
+    },
+    {
+        "item": "Q12749347",
+        "itemLabel": "Bratilloci"
+    },
+    {
+        "item": "Q12749501",
+        "itemLabel": "Burllata"
+    },
+    {
+        "item": "Q12749516",
+        "itemLabel": "Buçani"
+    },
+    {
+        "item": "Q12749628",
+        "itemLabel": "Dobraja e Madhe"
+    },
+    {
+        "item": "Q12749774",
+        "itemLabel": "Vilishti"
+    },
+    {
+        "item": "Q12749994",
+        "itemLabel": "Vërba"
+    },
+    {
+        "item": "Q12750193",
+        "itemLabel": "Gexha"
+    },
+    {
+        "item": "Q12750233",
+        "itemLabel": "Gllanasella"
+    },
+    {
+        "item": "Q12750262",
+        "itemLabel": "Gllogjan"
+    },
+    {
+        "item": "Q12750264",
+        "itemLabel": "Gmica"
+    },
+    {
+        "item": "Q12750330",
+        "itemLabel": "Budrika e Epërme"
+    },
+    {
+        "item": "Q12750341",
+        "itemLabel": "Zhabari i Epërm"
+    },
+    {
+        "item": "Q12750353",
+        "itemLabel": "Jasenoviku i Epërm"
+    },
+    {
+        "item": "Q12747903",
+        "itemLabel": "Lubizhda"
+    },
+    {
+        "item": "Q12749434",
+        "itemLabel": "Brusa"
+    },
+    {
+        "item": "Q12748822",
+        "itemLabel": "Bellopoja"
+    },
+    {
+        "item": "Q12749391",
+        "itemLabel": "Breznica"
+    },
+    {
+        "item": "Q12747507",
+        "itemLabel": "Gjocaj"
+    },
+    {
+        "item": "Q12747862",
+        "itemLabel": "Junaka"
+    },
+    {
+        "item": "Q12748614",
+        "itemLabel": "Hajnoci"
+    },
+    {
+        "item": "Q12748758",
+        "itemLabel": "Banjica"
+    },
+    {
+        "item": "Q12748769",
+        "itemLabel": "Banjska (Vushtri)"
+    },
+    {
+        "item": "Q12748764",
+        "itemLabel": "Reka e Banjskës"
+    },
+    {
+        "item": "Q12748864",
+        "itemLabel": "Berivojca"
+    },
+    {
+        "item": "Q12749504",
+        "itemLabel": "Burica"
+    },
+    {
+        "item": "Q12749630",
+        "itemLabel": "Krusha e Madhe"
+    },
+    {
+        "item": "Q12749665",
+        "itemLabel": "Rudari i Madhë"
+    },
+    {
+        "item": "Q12749744",
+        "itemLabel": "Vidishiqi"
+    },
+    {
+        "item": "Q12750251",
+        "itemLabel": "Gllobari"
+    },
+    {
+        "item": "Q12750254",
+        "itemLabel": "Gllogoci"
+    },
+    {
+        "item": "Q12750346",
+        "itemLabel": "Karaçeva e Eperme"
+    },
+    {
+        "item": "Q12750348",
+        "itemLabel": "Rashani"
+    },
+    {
+        "item": "Q12750358",
+        "itemLabel": "Livoçi i Epërm"
+    },
+    {
+        "item": "Q12750360",
+        "itemLabel": "Ratish i Epërm"
+    },
+    {
+        "item": "Q12748668",
+        "itemLabel": "Balinca"
+    },
+    {
+        "item": "Q12749995",
+        "itemLabel": "Vërbani"
+    },
+    {
+        "item": "Q12747467",
+        "itemLabel": "Gjylekari"
+    },
+    {
+        "item": "Q12747828",
+        "itemLabel": "Jasheviku"
+    },
+    {
+        "item": "Q12748632",
+        "itemLabel": "Babiqi"
+    },
+    {
+        "item": "Q12748636",
+        "itemLabel": "Bablaku"
+    },
+    {
+        "item": "Q12748695",
+        "itemLabel": "Banovdolli"
+    },
+    {
+        "item": "Q12748761",
+        "itemLabel": "Bajica"
+    },
+    {
+        "item": "Q12748858",
+        "itemLabel": "Berberistë"
+    },
+    {
+        "item": "Q12749393",
+        "itemLabel": "Brestoviku"
+    },
+    {
+        "item": "Q12749448",
+        "itemLabel": "Buba"
+    },
+    {
+        "item": "Q12749539",
+        "itemLabel": "Vaganesh"
+    },
+    {
+        "item": "Q12749574",
+        "itemLabel": "Varigoci"
+    },
+    {
+        "item": "Q12749667",
+        "itemLabel": "Ribari i Madh"
+    },
+    {
+        "item": "Q12749814",
+        "itemLabel": "Vitaku"
+    },
+    {
+        "item": "Q12749812",
+        "itemLabel": "Vitakova"
+    },
+    {
+        "item": "Q12749997",
+        "itemLabel": "Vërboci"
+    },
+    {
+        "item": "Q12750007",
+        "itemLabel": "Vërnakolla"
+    },
+    {
+        "item": "Q12750022",
+        "itemLabel": "Vërsheci"
+    },
+    {
+        "item": "Q12750067",
+        "itemLabel": "Gabrica"
+    },
+    {
+        "item": "Q12750349",
+        "itemLabel": "Abria e Epërme"
+    },
+    {
+        "item": "Q12750356",
+        "itemLabel": "Graboci i Epërm"
+    },
+    {
+        "item": "Q12747471",
+        "itemLabel": "Gjinoci"
+    },
+    {
+        "item": "Q12747691",
+        "itemLabel": "Talinoci i Jerlive"
+    },
+    {
+        "item": "Q12747950",
+        "itemLabel": "Lushta"
+    },
+    {
+        "item": "Q12748637",
+        "itemLabel": "Babudovica"
+    },
+    {
+        "item": "Q12748645",
+        "itemLabel": "Badofci"
+    },
+    {
+        "item": "Q12748723",
+        "itemLabel": "Batahiri"
+    },
+    {
+        "item": "Q12748809",
+        "itemLabel": "Beleg"
+    },
+    {
+        "item": "Q12748845",
+        "itemLabel": "Beçuku"
+    },
+    {
+        "item": "Q12748930",
+        "itemLabel": "Bilinica"
+    },
+    {
+        "item": "Q12749475",
+        "itemLabel": "Bukoviku (Gjilan)"
+    },
+    {
+        "item": "Q12749525",
+        "itemLabel": "Bujani"
+    },
+    {
+        "item": "Q12749538",
+        "itemLabel": "Vaganica"
+    },
+    {
+        "item": "Q12749597",
+        "itemLabel": "Vata"
+    },
+    {
+        "item": "Q12749627",
+        "itemLabel": "Kalludra e Madhe"
+    },
+    {
+        "item": "Q12749740",
+        "itemLabel": "Vidomiriqi"
+    },
+    {
+        "item": "Q12749827",
+        "itemLabel": "Vitomirica"
+    },
+    {
+        "item": "Q12749921",
+        "itemLabel": "Vokshi"
+    },
+    {
+        "item": "Q12749950",
+        "itemLabel": "Vojnofci"
+    },
+    {
+        "item": "Q12750340",
+        "itemLabel": "Vinarca e Epërme"
+    },
+    {
+        "item": "Q12744985",
+        "itemLabel": "Bregu i Zi"
+    },
+    {
+        "item": "Q12747915",
+        "itemLabel": "Lubishti"
+    },
+    {
+        "item": "Q12747946",
+        "itemLabel": "Lumbardh"
+    },
+    {
+        "item": "Q12748665",
+        "itemLabel": "Ballanca"
+    },
+    {
+        "item": "Q12748689",
+        "itemLabel": "Banulla"
+    },
+    {
+        "item": "Q12748891",
+        "itemLabel": "Beçiqi"
+    },
+    {
+        "item": "Q12749473",
+        "itemLabel": "Bukovica"
+    },
+    {
+        "item": "Q12749511",
+        "itemLabel": "Busavata"
+    },
+    {
+        "item": "Q12749549",
+        "itemLabel": "Vallaçi"
+    },
+    {
+        "item": "Q12749908",
+        "itemLabel": "Vllahia"
+    },
+    {
+        "item": "Q12749984",
+        "itemLabel": "Vrogolia"
+    },
+    {
+        "item": "Q12749991",
+        "itemLabel": "Vranjaku"
+    },
+    {
+        "item": "Q12750336",
+        "itemLabel": "Llukë e Epërme"
+    },
+    {
+        "item": "Q12750337",
+        "itemLabel": "Stublla e Epërme"
+    },
+    {
+        "item": "Q12750345",
+        "itemLabel": "Shipashnica e Epërme"
+    },
+    {
+        "item": "Q12750359",
+        "itemLabel": "Kopiliqi i Epërm"
+    },
+    {
+        "item": "Q12748369",
+        "itemLabel": "Hanroc"
+    },
+    {
+        "item": "Q12748825",
+        "itemLabel": "Bellopoja, Pejë"
+    },
+    {
+        "item": "Q12751196",
+        "itemLabel": "Q12751196"
+    },
+    {
+        "item": "Q12752228",
+        "itemLabel": "Izvori"
+    },
+    {
+        "item": "Q12751200",
+        "itemLabel": "Drenoci"
+    },
+    {
+        "item": "Q12750443",
+        "itemLabel": "Gramaçel"
+    },
+    {
+        "item": "Q12750987",
+        "itemLabel": "Dobroshevina"
+    },
+    {
+        "item": "Q12751076",
+        "itemLabel": "Abria e Poshtme"
+    },
+    {
+        "item": "Q12751074",
+        "itemLabel": "Godanci i Poshtëm"
+    },
+    {
+        "item": "Q12751075",
+        "itemLabel": "Zhabari i Poshtëm"
+    },
+    {
+        "item": "Q12751086",
+        "itemLabel": "Zabel i Ultë"
+    },
+    {
+        "item": "Q12751094",
+        "itemLabel": "Ratish i Ulët"
+    },
+    {
+        "item": "Q12751288",
+        "itemLabel": "Dubravë"
+    },
+    {
+        "item": "Q12751735",
+        "itemLabel": "Zherovinca"
+    },
+    {
+        "item": "Q12751841",
+        "itemLabel": "Zaguli"
+    },
+    {
+        "item": "Q12751996",
+        "itemLabel": "Zijaça"
+    },
+    {
+        "item": "Q12752084",
+        "itemLabel": "Zoçishti"
+    },
+    {
+        "item": "Q12752534",
+        "itemLabel": "Kamenica"
+    },
+    {
+        "item": "Q12754151",
+        "itemLabel": "Koshtova"
+    },
+    {
+        "item": "Q12751064",
+        "itemLabel": "Dumnica e Poshtme"
+    },
+    {
+        "item": "Q12750388",
+        "itemLabel": "Graboci"
+    },
+    {
+        "item": "Q12750361",
+        "itemLabel": "Stërnaca e Epërme"
+    },
+    {
+        "item": "Q12750546",
+        "itemLabel": "Grizhani"
+    },
+    {
+        "item": "Q12750745",
+        "itemLabel": "Dedia"
+    },
+    {
+        "item": "Q12751087",
+        "itemLabel": "Kopiliqi i Poshtëm"
+    },
+    {
+        "item": "Q12751081",
+        "itemLabel": "Prekazi i Poshtëm"
+    },
+    {
+        "item": "Q12751877",
+        "itemLabel": "Zasella"
+    },
+    {
+        "item": "Q12752770",
+        "itemLabel": "Kishnareka"
+    },
+    {
+        "item": "Q12753008",
+        "itemLabel": "Kopriva"
+    },
+    {
+        "item": "Q12754167",
+        "itemLabel": "Kramoviku"
+    },
+    {
+        "item": "Q12750527",
+        "itemLabel": "Grejkoci"
+    },
+    {
+        "item": "Q12750551",
+        "itemLabel": "Gërmova"
+    },
+    {
+        "item": "Q12750736",
+        "itemLabel": "Devaja"
+    },
+    {
+        "item": "Q12751070",
+        "itemLabel": "Sllatina e Poshtme"
+    },
+    {
+        "item": "Q12751085",
+        "itemLabel": "Graboci i Poshtëm"
+    },
+    {
+        "item": "Q12751084",
+        "itemLabel": "Jasenoviku i Poshtëm"
+    },
+    {
+        "item": "Q12751531",
+        "itemLabel": "Elezaj"
+    },
+    {
+        "item": "Q12751836",
+        "itemLabel": "Zagragja"
+    },
+    {
+        "item": "Q12751986",
+        "itemLabel": "Zeçeviqi"
+    },
+    {
+        "item": "Q12752831",
+        "itemLabel": "Kllobukar"
+    },
+    {
+        "item": "Q12754116",
+        "itemLabel": "Kotorr"
+    },
+    {
+        "item": "Q12751062",
+        "itemLabel": "Klina e Poshtme"
+    },
+    {
+        "item": "Q12751089",
+        "itemLabel": "Livoçi i Poshtëm"
+    },
+    {
+        "item": "Q12751091",
+        "itemLabel": "Suhodolli i Poshtëm"
+    },
+    {
+        "item": "Q12751286",
+        "itemLabel": "Dubovik"
+    },
+    {
+        "item": "Q12751587",
+        "itemLabel": "Henci"
+    },
+    {
+        "item": "Q12751804",
+        "itemLabel": "Zhitia"
+    },
+    {
+        "item": "Q12751832",
+        "itemLabel": "Zabërgja"
+    },
+    {
+        "item": "Q12752090",
+        "itemLabel": "Xërxa"
+    },
+    {
+        "item": "Q12752669",
+        "itemLabel": "Kaçandolli"
+    },
+    {
+        "item": "Q12752999",
+        "itemLabel": "Kopilloviqi"
+    },
+    {
+        "item": "Q12753025",
+        "itemLabel": "Koretini"
+    },
+    {
+        "item": "Q12754161",
+        "itemLabel": "Kravarica"
+    },
+    {
+        "item": "Q12750420",
+        "itemLabel": "Gradica"
+    },
+    {
+        "item": "Q12750594",
+        "itemLabel": "Gushafci"
+    },
+    {
+        "item": "Q12750593",
+        "itemLabel": "Goshica"
+    },
+    {
+        "item": "Q12750732",
+        "itemLabel": "Devetaku"
+    },
+    {
+        "item": "Q12750988",
+        "itemLabel": "Dobrushta"
+    },
+    {
+        "item": "Q12751065",
+        "itemLabel": "Korrotica e Poshtme"
+    },
+    {
+        "item": "Q12751068",
+        "itemLabel": "Stublla e Poshtme"
+    },
+    {
+        "item": "Q12751079",
+        "itemLabel": "Ramjan"
+    },
+    {
+        "item": "Q12751186",
+        "itemLabel": "Drainoviqi"
+    },
+    {
+        "item": "Q12751695",
+        "itemLabel": "Zhareva"
+    },
+    {
+        "item": "Q12751839",
+        "itemLabel": "Zagora"
+    },
+    {
+        "item": "Q12752775",
+        "itemLabel": "Kijeci"
+    },
+    {
+        "item": "Q12754120",
+        "itemLabel": "Koshi"
+    },
+    {
+        "item": "Q6744450",
+        "itemLabel": "Q6744450"
+    },
+    {
+        "item": "Q7652643",
+        "itemLabel": "Q7652643"
+    },
+    {
+        "item": "Q8075467",
+        "itemLabel": "Q8075467"
+    },
+    {
+        "item": "Q12285798",
+        "itemLabel": "Q12285798"
+    },
+    {
+        "item": "Q10983470",
+        "itemLabel": "Biça"
+    },
+    {
+        "item": "Q10984271",
+        "itemLabel": "Celina"
+    },
+    {
+        "item": "Q10987801",
+        "itemLabel": "Begunca"
+    },
+    {
+        "item": "Q10992472",
+        "itemLabel": "Bërnjaça"
+    },
+    {
+        "item": "Q10992940",
+        "itemLabel": "Dobroshec"
+    },
+    {
+        "item": "Q10993581",
+        "itemLabel": "Carrabreg i Epërm"
+    },
+    {
+        "item": "Q10994514",
+        "itemLabel": "Bërveniku"
+    },
+    {
+        "item": "Q11017733",
+        "itemLabel": "Lepia"
+    },
+    {
+        "item": "Q11040903",
+        "itemLabel": "Buzoviku"
+    },
+    {
+        "item": "Q11190261",
+        "itemLabel": "Majaci"
+    },
+    {
+        "item": "Q11003885",
+        "itemLabel": "Dubrava"
+    },
+    {
+        "item": "Q10989271",
+        "itemLabel": "Boscë"
+    },
+    {
+        "item": "Q10994891",
+        "itemLabel": "Drenoc"
+    },
+    {
+        "item": "Q11015770",
+        "itemLabel": "Muçivërci"
+    },
+    {
+        "item": "Q11041740",
+        "itemLabel": "Bolec"
+    },
+    {
+        "item": "Q11052178",
+        "itemLabel": "Dashinoc"
+    },
+    {
+        "item": "Q11315636",
+        "itemLabel": "Klladërnica"
+    },
+    {
+        "item": "Q11056918",
+        "itemLabel": "Doganaj"
+    },
+    {
+        "item": "Q11040637",
+        "itemLabel": "Braina"
+    },
+    {
+        "item": "Q10996067",
+        "itemLabel": "Arllati"
+    },
+    {
+        "item": "Q11016676",
+        "itemLabel": "Muzeqina"
+    },
+    {
+        "item": "Q11018661",
+        "itemLabel": "Myçybaba"
+    },
+    {
+        "item": "Q11034791",
+        "itemLabel": "Tërdec"
+    },
+    {
+        "item": "Q11038446",
+        "itemLabel": "Çikatova e Vjetër"
+    },
+    {
+        "item": "Q11046795",
+        "itemLabel": "Bresanë"
+    },
+    {
+        "item": "Q11056823",
+        "itemLabel": "Dajkoci"
+    },
+    {
+        "item": "Q11316458",
+        "itemLabel": "Kërrnina"
+    },
+    {
+        "item": "Q12277028",
+        "itemLabel": "Glloboqicë"
+    },
+    {
+        "item": "Q12284845",
+        "itemLabel": "Leshtan"
+    },
+    {
+        "item": "Q12285381",
+        "itemLabel": "Lybevisht"
+    },
+    {
+        "item": "Q12287255",
+        "itemLabel": "Mlikë"
+    },
+    {
+        "item": "Q10988083",
+        "itemLabel": "Brabaniqi"
+    },
+    {
+        "item": "Q10995843",
+        "itemLabel": "Dobrusha"
+    },
+    {
+        "item": "Q11002963",
+        "itemLabel": "Grazhdaniku"
+    },
+    {
+        "item": "Q11009801",
+        "itemLabel": "Klina e Epërme"
+    },
+    {
+        "item": "Q11040780",
+        "itemLabel": "Caralluka"
+    },
+    {
+        "item": "Q11040825",
+        "itemLabel": "Bardhi i Madh"
+    },
+    {
+        "item": "Q11054471",
+        "itemLabel": "Dabisheci"
+    },
+    {
+        "item": "Q11057991",
+        "itemLabel": "Domaneku"
+    },
+    {
+        "item": "Q11098531",
+        "itemLabel": "Irzniq"
+    },
+    {
+        "item": "Q11306195",
+        "itemLabel": "Këpuzi"
+    },
+    {
+        "item": "Q11315900",
+        "itemLabel": "Kmetoci"
+    },
+    {
+        "item": "Q10995180",
+        "itemLabel": "Drobeshi"
+    },
+    {
+        "item": "Q11000491",
+        "itemLabel": "Dunav (Gjlian)"
+    },
+    {
+        "item": "Q11038389",
+        "itemLabel": "Çirez"
+    },
+    {
+        "item": "Q11050084",
+        "itemLabel": "Brrut"
+    },
+    {
+        "item": "Q11051834",
+        "itemLabel": "Bresalci"
+    },
+    {
+        "item": "Q11057520",
+        "itemLabel": "Domaroc"
+    },
+    {
+        "item": "Q11064586",
+        "itemLabel": "Fushtica e Poshtme"
+    },
+    {
+        "item": "Q11168984",
+        "itemLabel": "Hatmaxha"
+    },
+    {
+        "item": "Q11248383",
+        "itemLabel": "Gojbula"
+    },
+    {
+        "item": "Q11325713",
+        "itemLabel": "Kodralia (Deçan)"
+    },
+    {
+        "item": "Q12284274",
+        "itemLabel": "Kukajan"
+    },
+    {
+        "item": "Q12749626",
+        "itemLabel": "Q12749626"
+    },
+    {
+        "item": "Q12749650",
+        "itemLabel": "Q12749650"
+    },
+    {
+        "item": "Q12749653",
+        "itemLabel": "Q12749653"
+    },
+    {
+        "item": "Q12749666",
+        "itemLabel": "Q12749666"
+    },
+    {
+        "item": "Q12749713",
+        "itemLabel": "Q12749713"
+    },
+    {
+        "item": "Q12750012",
+        "itemLabel": "Q12750012"
+    },
+    {
+        "item": "Q12750334",
+        "itemLabel": "Q12750334"
+    },
+    {
+        "item": "Q12747884",
+        "itemLabel": "Levoshë"
+    },
+    {
+        "item": "Q13040262",
+        "itemLabel": "Isniq"
+    },
+    {
+        "item": "Q13041011",
+        "itemLabel": "Kosavë"
+    },
+    {
+        "item": "Q13041289",
+        "itemLabel": "Kushnini"
+    },
+    {
+        "item": "Q13041643",
+        "itemLabel": "Lipoveci"
+    },
+    {
+        "item": "Q13042236",
+        "itemLabel": "Lubizhda"
+    },
+    {
+        "item": "Q13042330",
+        "itemLabel": "Lutogllava"
+    },
+    {
+        "item": "Q13043303",
+        "itemLabel": "Nasala"
+    },
+    {
+        "item": "Q13043391",
+        "itemLabel": "Nekudini"
+    },
+    {
+        "item": "Q13043931",
+        "itemLabel": "Papazi"
+    },
+    {
+        "item": "Q13044296",
+        "itemLabel": "Pllavë"
+    },
+    {
+        "item": "Q13044424",
+        "itemLabel": "Potomlë"
+    },
+    {
+        "item": "Q13044849",
+        "itemLabel": "Rajanoc"
+    },
+    {
+        "item": "Q13040306",
+        "itemLabel": "Jahoci"
+    },
+    {
+        "item": "Q13040324",
+        "itemLabel": "Jançishta"
+    },
+    {
+        "item": "Q13040658",
+        "itemLabel": "Karaqeva e Poshtme"
+    },
+    {
+        "item": "Q13040797",
+        "itemLabel": "Klina e Mesme"
+    },
+    {
+        "item": "Q13040998",
+        "itemLabel": "Korminjani i Epërm"
+    },
+    {
+        "item": "Q13041275",
+        "itemLabel": "Kusari"
+    },
+    {
+        "item": "Q13042142",
+        "itemLabel": "Lladroviqi"
+    },
+    {
+        "item": "Q13042153",
+        "itemLabel": "Llashtica"
+    },
+    {
+        "item": "Q13042923",
+        "itemLabel": "Mirosala"
+    },
+    {
+        "item": "Q13043590",
+        "itemLabel": "Novosella e Poshtme"
+    },
+    {
+        "item": "Q13043595",
+        "itemLabel": "Novosella e Epërme"
+    },
+    {
+        "item": "Q13043802",
+        "itemLabel": "Osek Pasha"
+    },
+    {
+        "item": "Q13044297",
+        "itemLabel": "Plloçica"
+    },
+    {
+        "item": "Q13044437",
+        "itemLabel": "Prelezi i Muhaxhirëve"
+    },
+    {
+        "item": "Q13042168",
+        "itemLabel": "Llugaxhia"
+    },
+    {
+        "item": "Q13043865",
+        "itemLabel": "Pagarusha"
+    },
+    {
+        "item": "Q13040323",
+        "itemLabel": "Janoshi"
+    },
+    {
+        "item": "Q13040347",
+        "itemLabel": "Javori"
+    },
+    {
+        "item": "Q13040465",
+        "itemLabel": "Kabashi i Hasit"
+    },
+    {
+        "item": "Q13040648",
+        "itemLabel": "Kapre"
+    },
+    {
+        "item": "Q13040740",
+        "itemLabel": "Kijevicë"
+    },
+    {
+        "item": "Q13040901",
+        "itemLabel": "Kollolleçi"
+    },
+    {
+        "item": "Q13041181",
+        "itemLabel": "Krysheva"
+    },
+    {
+        "item": "Q13041203",
+        "itemLabel": "Kuklibeg"
+    },
+    {
+        "item": "Q13041309",
+        "itemLabel": "Kuçica (Skënderaj)"
+    },
+    {
+        "item": "Q13042166",
+        "itemLabel": "Lloca"
+    },
+    {
+        "item": "Q13042165",
+        "itemLabel": "Llazareva"
+    },
+    {
+        "item": "Q13042311",
+        "itemLabel": "Lumi i Madh"
+    },
+    {
+        "item": "Q13042354",
+        "itemLabel": "Lëbushë"
+    },
+    {
+        "item": "Q13042425",
+        "itemLabel": "Majdevë"
+    },
+    {
+        "item": "Q13042459",
+        "itemLabel": "Malishta"
+    },
+    {
+        "item": "Q13042539",
+        "itemLabel": "Marocë"
+    },
+    {
+        "item": "Q13042857",
+        "itemLabel": "Mikushnica"
+    },
+    {
+        "item": "Q13042869",
+        "itemLabel": "Millanoviqi"
+    },
+    {
+        "item": "Q13042979",
+        "itemLabel": "Moglica"
+    },
+    {
+        "item": "Q13043078",
+        "itemLabel": "Morina"
+    },
+    {
+        "item": "Q13043779",
+        "itemLabel": "Orizë"
+    },
+    {
+        "item": "Q13043869",
+        "itemLabel": "Padalishta"
+    },
+    {
+        "item": "Q13043880",
+        "itemLabel": "Palabardhi"
+    },
+    {
+        "item": "Q13043914",
+        "itemLabel": "Panorci"
+    },
+    {
+        "item": "Q13044170",
+        "itemLabel": "Petroc"
+    },
+    {
+        "item": "Q13044271",
+        "itemLabel": "Plançori"
+    },
+    {
+        "item": "Q13044890",
+        "itemLabel": "Rashkoc"
+    },
+    {
+        "item": "Q13040118",
+        "itemLabel": "Ilaz ef. Mustafa"
+    },
+    {
+        "item": "Q13040585",
+        "itemLabel": "Kamenicë (Leposaviq)"
+    },
+    {
+        "item": "Q13040729",
+        "itemLabel": "Keqekolli"
+    },
+    {
+        "item": "Q13040912",
+        "itemLabel": "Komarani"
+    },
+    {
+        "item": "Q13040933",
+        "itemLabel": "Komogllava"
+    },
+    {
+        "item": "Q13041131",
+        "itemLabel": "Krivova"
+    },
+    {
+        "item": "Q13041469",
+        "itemLabel": "Laçi (Dardanë)"
+    },
+    {
+        "item": "Q13042176",
+        "itemLabel": "Llukë e Ulët"
+    },
+    {
+        "item": "Q13042246",
+        "itemLabel": "Luboveci"
+    },
+    {
+        "item": "Q13042433",
+        "itemLabel": "Makoci"
+    },
+    {
+        "item": "Q13042449",
+        "itemLabel": "Malet e Hereçit"
+    },
+    {
+        "item": "Q13042822",
+        "itemLabel": "Meça"
+    },
+    {
+        "item": "Q13043384",
+        "itemLabel": "Neci"
+    },
+    {
+        "item": "Q13043885",
+        "itemLabel": "Palaj"
+    },
+    {
+        "item": "Q13044439",
+        "itemLabel": "Prelezi i Jerlive"
+    },
+    {
+        "item": "Q13044567",
+        "itemLabel": "Prush"
+    },
+    {
+        "item": "Q13044828",
+        "itemLabel": "Radosta"
+    },
+    {
+        "item": "Q13044870",
+        "itemLabel": "Ramjani i Epërm"
+    },
+    {
+        "item": "Q13040031",
+        "itemLabel": "Hoça e Qytetit"
+    },
+    {
+        "item": "Q13040296",
+        "itemLabel": "Jagoda"
+    },
+    {
+        "item": "Q13040990",
+        "itemLabel": "Koporiqë"
+    },
+    {
+        "item": "Q13040991",
+        "itemLabel": "Kopërnica"
+    },
+    {
+        "item": "Q13041001",
+        "itemLabel": "Korminjani i Poshtëm"
+    },
+    {
+        "item": "Q13041082",
+        "itemLabel": "Kralani"
+    },
+    {
+        "item": "Q13041530",
+        "itemLabel": "Leshtar"
+    },
+    {
+        "item": "Q13041665",
+        "itemLabel": "Lisockë"
+    },
+    {
+        "item": "Q13042270",
+        "itemLabel": "Lugishta"
+    },
+    {
+        "item": "Q13043435",
+        "itemLabel": "Nevxhe"
+    },
+    {
+        "item": "Q13043803",
+        "itemLabel": "Osek Hyla"
+    },
+    {
+        "item": "Q13044332",
+        "itemLabel": "Pojatishta"
+    },
+    {
+        "item": "Q13044378",
+        "itemLabel": "Popoci"
+    },
+    {
+        "item": "Q13044412",
+        "itemLabel": "Postenja e Ibrit"
+    },
+    {
+        "item": "Q13044809",
+        "itemLabel": "Radeva"
+    },
+    {
+        "item": "Q13044831",
+        "itemLabel": "Radujeci"
+    },
+    {
+        "item": "Q13044851",
+        "itemLabel": "Raka"
+    },
+    {
+        "item": "Q13044910",
+        "itemLabel": "Ratishi"
+    },
+    {
+        "item": "Q12758537",
+        "itemLabel": "Q12758537"
+    },
+    {
+        "item": "Q12758557",
+        "itemLabel": "Q12758557"
+    },
+    {
+        "item": "Q12758569",
+        "itemLabel": "Q12758569"
+    },
+    {
+        "item": "Q12758731",
+        "itemLabel": "Q12758731"
+    },
+    {
+        "item": "Q12758763",
+        "itemLabel": "Q12758763"
+    },
+    {
+        "item": "Q12758765",
+        "itemLabel": "Q12758765"
+    },
+    {
+        "item": "Q12758935",
+        "itemLabel": "Q12758935"
+    },
+    {
+        "item": "Q12758936",
+        "itemLabel": "Q12758936"
+    },
+    {
+        "item": "Q12758993",
+        "itemLabel": "Q12758993"
+    },
+    {
+        "item": "Q12759048",
+        "itemLabel": "Q12759048"
+    },
+    {
+        "item": "Q12759049",
+        "itemLabel": "Q12759049"
+    },
+    {
+        "item": "Q12759640",
+        "itemLabel": "Q12759640"
+    },
+    {
+        "item": "Q12759649",
+        "itemLabel": "Q12759649"
+    },
+    {
+        "item": "Q12759743",
+        "itemLabel": "Q12759743"
+    },
+    {
+        "item": "Q12759744",
+        "itemLabel": "Q12759744"
+    },
+    {
+        "item": "Q12759751",
+        "itemLabel": "Q12759751"
+    },
+    {
+        "item": "Q12759789",
+        "itemLabel": "Q12759789"
+    },
+    {
+        "item": "Q12759831",
+        "itemLabel": "Q12759831"
+    },
+    {
+        "item": "Q12759833",
+        "itemLabel": "Q12759833"
+    },
+    {
+        "item": "Q12760075",
+        "itemLabel": "Q12760075"
+    },
+    {
+        "item": "Q12760125",
+        "itemLabel": "Q12760125"
+    },
+    {
+        "item": "Q12760146",
+        "itemLabel": "Q12760146"
+    },
+    {
+        "item": "Q12760237",
+        "itemLabel": "Q12760237"
+    },
+    {
+        "item": "Q12760262",
+        "itemLabel": "Q12760262"
+    },
+    {
+        "item": "Q12760295",
+        "itemLabel": "Q12760295"
+    },
+    {
+        "item": "Q12761222",
+        "itemLabel": "Q12761222"
+    },
+    {
+        "item": "Q12761231",
+        "itemLabel": "Q12761231"
+    },
+    {
+        "item": "Q12761366",
+        "itemLabel": "Q12761366"
+    },
+    {
+        "item": "Q12761431",
+        "itemLabel": "Q12761431"
+    },
+    {
+        "item": "Q12758939",
+        "itemLabel": "Sllatina"
+    },
+    {
+        "item": "Q12759000",
+        "itemLabel": "Sllubica"
+    },
+    {
+        "item": "Q12759056",
+        "itemLabel": "Sofalia"
+    },
+    {
+        "item": "Q12759639",
+        "itemLabel": "Stankoc"
+    },
+    {
+        "item": "Q12759653",
+        "itemLabel": "Kaçaniku i Vjetër"
+    },
+    {
+        "item": "Q12760260",
+        "itemLabel": "Tërstenik"
+    },
+    {
+        "item": "Q12760290",
+        "itemLabel": "Tushila"
+    },
+    {
+        "item": "Q12760293",
+        "itemLabel": "Tushiqi"
+    },
+    {
+        "item": "Q12760978",
+        "itemLabel": "Hulaj"
+    },
+    {
+        "item": "Q12761362",
+        "itemLabel": "Shillova"
+    },
+    {
+        "item": "Q12761232",
+        "itemLabel": "Çifllaku"
+    },
+    {
+        "item": "Q12760259",
+        "itemLabel": "Tërsteniku"
+    },
+    {
+        "item": "Q12759786",
+        "itemLabel": "Syrigana"
+    },
+    {
+        "item": "Q12759791",
+        "itemLabel": "Suhogërla"
+    },
+    {
+        "item": "Q12760097",
+        "itemLabel": "Tica"
+    },
+    {
+        "item": "Q12760156",
+        "itemLabel": "Topanica"
+    },
+    {
+        "item": "Q12760257",
+        "itemLabel": "Tërpeza"
+    },
+    {
+        "item": "Q12761044",
+        "itemLabel": "Crepula"
+    },
+    {
+        "item": "Q12761291",
+        "itemLabel": "Shaptej"
+    },
+    {
+        "item": "Q12759050",
+        "itemLabel": "Sopaniçi"
+    },
+    {
+        "item": "Q12760240",
+        "itemLabel": "Tërnafci"
+    },
+    {
+        "item": "Q12761134",
+        "itemLabel": "Çabra"
+    },
+    {
+        "item": "Q12761175",
+        "itemLabel": "Çeliku (Gjilan)"
+    },
+    {
+        "item": "Q12761367",
+        "itemLabel": "Shipova"
+    },
+    {
+        "item": "Q12759476",
+        "itemLabel": "Sërboci"
+    },
+    {
+        "item": "Q12761016",
+        "itemLabel": "Cërrnica"
+    },
+    {
+        "item": "Q12761219",
+        "itemLabel": "Çitaku"
+    },
+    {
+        "item": "Q12761441",
+        "itemLabel": "Shlivovica"
+    },
+    {
+        "item": "Q12759773",
+        "itemLabel": "Stublina"
+    },
+    {
+        "item": "Q12761147",
+        "itemLabel": "Çarakofci"
+    },
+    {
+        "item": "Q12761199",
+        "itemLabel": "Çeshanoviqi"
+    },
+    {
+        "item": "Q12761204",
+        "itemLabel": "Çeçeva"
+    },
+    {
+        "item": "Q12761439",
+        "itemLabel": "Shurdhani"
+    },
+    {
+        "item": "Q12751066",
+        "itemLabel": "Q12751066"
+    },
+    {
+        "item": "Q12751078",
+        "itemLabel": "Q12751078"
+    },
+    {
+        "item": "Q12751706",
+        "itemLabel": "Q12751706"
+    },
+    {
+        "item": "Q12751710",
+        "itemLabel": "Q12751710"
+    },
+    {
+        "item": "Q12751818",
+        "itemLabel": "Q12751818"
+    },
+    {
+        "item": "Q12751908",
+        "itemLabel": "Q12751908"
+    },
+    {
+        "item": "Q12751916",
+        "itemLabel": "Q12751916"
+    },
+    {
+        "item": "Q12753033",
+        "itemLabel": "Q12753033"
+    },
+    {
+        "item": "Q12754771",
+        "itemLabel": "Q12754771"
+    },
+    {
+        "item": "Q12754773",
+        "itemLabel": "Q12754773"
+    },
+    {
+        "item": "Q12754783",
+        "itemLabel": "Q12754783"
+    },
+    {
+        "item": "Q12754784",
+        "itemLabel": "Q12754784"
+    },
+    {
+        "item": "Q12754798",
+        "itemLabel": "Q12754798"
+    },
+    {
+        "item": "Q12754803",
+        "itemLabel": "Q12754803"
+    },
+    {
+        "item": "Q12754800",
+        "itemLabel": "Q12754800"
+    },
+    {
+        "item": "Q12754885",
+        "itemLabel": "Q12754885"
+    },
+    {
+        "item": "Q12755198",
+        "itemLabel": "Q12755198"
+    },
+    {
+        "item": "Q12755459",
+        "itemLabel": "Q12755459"
+    },
+    {
+        "item": "Q12756175",
+        "itemLabel": "Q12756175"
+    },
+    {
+        "item": "Q12756189",
+        "itemLabel": "Q12756189"
+    },
+    {
+        "item": "Q12756203",
+        "itemLabel": "Q12756203"
+    },
+    {
+        "item": "Q12756281",
+        "itemLabel": "Q12756281"
+    },
+    {
+        "item": "Q12756328",
+        "itemLabel": "Q12756328"
+    },
+    {
+        "item": "Q12756332",
+        "itemLabel": "Q12756332"
+    },
+    {
+        "item": "Q12756339",
+        "itemLabel": "Q12756339"
+    },
+    {
+        "item": "Q12756347",
+        "itemLabel": "Q12756347"
+    },
+    {
+        "item": "Q12756720",
+        "itemLabel": "Q12756720"
+    },
+    {
+        "item": "Q12756980",
+        "itemLabel": "Q12756980"
+    },
+    {
+        "item": "Q12756993",
+        "itemLabel": "Q12756993"
+    },
+    {
+        "item": "Q12756999",
+        "itemLabel": "Q12756999"
+    },
+    {
+        "item": "Q12757231",
+        "itemLabel": "Q12757231"
+    },
+    {
+        "item": "Q12757228",
+        "itemLabel": "Q12757228"
+    },
+    {
+        "item": "Q12757243",
+        "itemLabel": "Q12757243"
+    },
+    {
+        "item": "Q12757495",
+        "itemLabel": "Q12757495"
+    },
+    {
+        "item": "Q12757799",
+        "itemLabel": "Q12757799"
+    },
+    {
+        "item": "Q12757823",
+        "itemLabel": "Q12757823"
+    },
+    {
+        "item": "Q12758219",
+        "itemLabel": "Q12758219"
+    },
+    {
+        "item": "Q12758228",
+        "itemLabel": "Q12758228"
+    },
+    {
+        "item": "Q12758265",
+        "itemLabel": "Q12758265"
+    },
+    {
+        "item": "Q12757458",
+        "itemLabel": "Poklek i Ri"
+    },
+    {
+        "item": "Q12757486",
+        "itemLabel": "Polluzha"
+    },
+    {
+        "item": "Q12757060",
+        "itemLabel": "Pasjan"
+    },
+    {
+        "item": "Q12755253",
+        "itemLabel": "Miganofci"
+    },
+    {
+        "item": "Q13048237",
+        "itemLabel": "Çubrel"
+    },
+    {
+        "item": "Q12275655",
+        "itemLabel": "Q12275655"
+    },
+    {
+        "item": "Q12277187",
+        "itemLabel": "Q12277187"
+    },
+    {
+        "item": "Q12277194",
+        "itemLabel": "Q12277194"
+    },
+    {
+        "item": "Q12278047",
+        "itemLabel": "Q12278047"
+    },
+    {
+        "item": "Q12292275",
+        "itemLabel": "Q12292275"
+    },
+    {
+        "item": "Q12293666",
+        "itemLabel": "Q12293666"
+    },
+    {
+        "item": "Q12295643",
+        "itemLabel": "Q12295643"
+    },
+    {
+        "item": "Q12758366",
+        "itemLabel": "Q12758366"
+    },
+    {
+        "item": "Q12758367",
+        "itemLabel": "Q12758367"
+    },
+    {
+        "item": "Q13037455",
+        "itemLabel": "Bashkësia e Llukarit"
+    },
+    {
+        "item": "Q13037502",
+        "itemLabel": "Bellobrad"
+    },
+    {
+        "item": "Q13037506",
+        "itemLabel": "Belle"
+    },
+    {
+        "item": "Q13037927",
+        "itemLabel": "Carravrana"
+    },
+    {
+        "item": "Q13038048",
+        "itemLabel": "Cërmjani"
+    },
+    {
+        "item": "Q13039186",
+        "itemLabel": "Fshaj"
+    },
+    {
+        "item": "Q13039496",
+        "itemLabel": "Godeni (Gjakovë)"
+    },
+    {
+        "item": "Q13045124",
+        "itemLabel": "Ropotova e madhe"
+    },
+    {
+        "item": "Q13045142",
+        "itemLabel": "Rracaj"
+    },
+    {
+        "item": "Q13045641",
+        "itemLabel": "Shalci"
+    },
+    {
+        "item": "Q13045657",
+        "itemLabel": "Shasharja"
+    },
+    {
+        "item": "Q13045738",
+        "itemLabel": "Shkarashniku"
+    },
+    {
+        "item": "Q13046106",
+        "itemLabel": "Skivjani"
+    },
+    {
+        "item": "Q13046236",
+        "itemLabel": "Smaqi"
+    },
+    {
+        "item": "Q13047043",
+        "itemLabel": "Turjaka"
+    },
+    {
+        "item": "Q13047725",
+        "itemLabel": "Vërmica"
+    },
+    {
+        "item": "Q13461102",
+        "itemLabel": "Vrella"
+    },
+    {
+        "item": "Q13037353",
+        "itemLabel": "Banja e Pejës"
+    },
+    {
+        "item": "Q13037322",
+        "itemLabel": "Baica"
+    },
+    {
+        "item": "Q13037783",
+        "itemLabel": "Bubli"
+    },
+    {
+        "item": "Q13037786",
+        "itemLabel": "Bubaveci"
+    },
+    {
+        "item": "Q13037917",
+        "itemLabel": "Capari (Gjilan)"
+    },
+    {
+        "item": "Q13038118",
+        "itemLabel": "Deja"
+    },
+    {
+        "item": "Q13039466",
+        "itemLabel": "Gjyrishevci"
+    },
+    {
+        "item": "Q13039498",
+        "itemLabel": "Gogolloc"
+    },
+    {
+        "item": "Q13039541",
+        "itemLabel": "Gracka (Lipjan)"
+    },
+    {
+        "item": "Q13039681",
+        "itemLabel": "Gërçina"
+    },
+    {
+        "item": "Q13045103",
+        "itemLabel": "Rogana"
+    },
+    {
+        "item": "Q13045219",
+        "itemLabel": "Rrypaj"
+    },
+    {
+        "item": "Q13045584",
+        "itemLabel": "Seniku"
+    },
+    {
+        "item": "Q13045700",
+        "itemLabel": "Sheremeti"
+    },
+    {
+        "item": "Q13045725",
+        "itemLabel": "Shishmani"
+    },
+    {
+        "item": "Q13046923",
+        "itemLabel": "Trakaniqi"
+    },
+    {
+        "item": "Q13047145",
+        "itemLabel": "Uglari"
+    },
+    {
+        "item": "Q13037469",
+        "itemLabel": "Beci"
+    },
+    {
+        "item": "Q13037499",
+        "itemLabel": "Bellanica"
+    },
+    {
+        "item": "Q13037849",
+        "itemLabel": "Bushincë"
+    },
+    {
+        "item": "Q13038309",
+        "itemLabel": "Dobrixha"
+    },
+    {
+        "item": "Q13038376",
+        "itemLabel": "Drenoc (Kamenicë)"
+    },
+    {
+        "item": "Q13039225",
+        "itemLabel": "Fusha e Gjakovës"
+    },
+    {
+        "item": "Q13039546",
+        "itemLabel": "Gragjenik"
+    },
+    {
+        "item": "Q13045104",
+        "itemLabel": "Rogaqicë"
+    },
+    {
+        "item": "Q13045374",
+        "itemLabel": "Sallabaja"
+    },
+    {
+        "item": "Q13045634",
+        "itemLabel": "Shajne"
+    },
+    {
+        "item": "Q13046224",
+        "itemLabel": "Slivova"
+    },
+    {
+        "item": "Q13046274",
+        "itemLabel": "Sopija"
+    },
+    {
+        "item": "Q13046554",
+        "itemLabel": "Svërçaku i Epërm"
+    },
+    {
+        "item": "Q13046555",
+        "itemLabel": "Svërçaku i Poshtëm"
+    },
+    {
+        "item": "Q13046843",
+        "itemLabel": "Tirincë"
+    },
+    {
+        "item": "Q13047354",
+        "itemLabel": "Varoshi"
+    },
+    {
+        "item": "Q13048007",
+        "itemLabel": "Zajqeci"
+    },
+    {
+        "item": "Q13048015",
+        "itemLabel": "Zallkuçani"
+    },
+    {
+        "item": "Q13048105",
+        "itemLabel": "Zhdrella"
+    },
+    {
+        "item": "Q13045773",
+        "itemLabel": "Shkoza"
+    },
+    {
+        "item": "Q12957988",
+        "itemLabel": "Kovraga"
+    },
+    {
+        "item": "Q13036857",
+        "itemLabel": "Akllapi"
+    },
+    {
+        "item": "Q13037295",
+        "itemLabel": "Baballoq"
+    },
+    {
+        "item": "Q13037367",
+        "itemLabel": "Bardhaniqi"
+    },
+    {
+        "item": "Q13037500",
+        "itemLabel": "Bellacërka"
+    },
+    {
+        "item": "Q13037644",
+        "itemLabel": "Biteshi i Epërm"
+    },
+    {
+        "item": "Q13038064",
+        "itemLabel": "Damaneku"
+    },
+    {
+        "item": "Q13038138",
+        "itemLabel": "Demjan"
+    },
+    {
+        "item": "Q13038951",
+        "itemLabel": "Firza"
+    },
+    {
+        "item": "Q13039506",
+        "itemLabel": "Gollaki (Gallapi)"
+    },
+    {
+        "item": "Q13039971",
+        "itemLabel": "Hodec"
+    },
+    {
+        "item": "Q13045114",
+        "itemLabel": "Romaja"
+    },
+    {
+        "item": "Q13045169",
+        "itemLabel": "Rrenc"
+    },
+    {
+        "item": "Q13045431",
+        "itemLabel": "Sankoci"
+    },
+    {
+        "item": "Q13047346",
+        "itemLabel": "Vardishta"
+    },
+    {
+        "item": "Q13047401",
+        "itemLabel": "Velegllava e Epërme"
+    },
+    {
+        "item": "Q13047669",
+        "itemLabel": "Vogova"
+    },
+    {
+        "item": "Q13047728",
+        "itemLabel": "Vërboc"
+    },
+    {
+        "item": "Q13415313",
+        "itemLabel": "Hajvalia"
+    },
+    {
+        "item": "Q12758365",
+        "itemLabel": "Rubofci"
+    },
+    {
+        "item": "Q13037061",
+        "itemLabel": "Arat e Gjata"
+    },
+    {
+        "item": "Q13037299",
+        "itemLabel": "Babimoci"
+    },
+    {
+        "item": "Q13037532",
+        "itemLabel": "Berjahu"
+    },
+    {
+        "item": "Q13037776",
+        "itemLabel": "Brovina"
+    },
+    {
+        "item": "Q13037919",
+        "itemLabel": "Carec"
+    },
+    {
+        "item": "Q13038114",
+        "itemLabel": "Debëlldeu"
+    },
+    {
+        "item": "Q13038434",
+        "itemLabel": "Dushanova"
+    },
+    {
+        "item": "Q13039538",
+        "itemLabel": "Grabanica"
+    },
+    {
+        "item": "Q13039636",
+        "itemLabel": "Guncati"
+    },
+    {
+        "item": "Q13039849",
+        "itemLabel": "Hazir Haziri (Koka)"
+    },
+    {
+        "item": "Q13039895",
+        "itemLabel": "Hereçi"
+    },
+    {
+        "item": "Q13045459",
+        "itemLabel": "Savrova"
+    },
+    {
+        "item": "Q13046960",
+        "itemLabel": "Trebiqe"
+    },
+    {
+        "item": "Q13047357",
+        "itemLabel": "Varret e Cermjanit"
+    },
+    {
+        "item": "Q13047655",
+        "itemLabel": "Vllashnja"
+    },
+    {
+        "item": "Q13047682",
+        "itemLabel": "Vraniqi"
+    },
+    {
+        "item": "Q13048090",
+        "itemLabel": "Zhabeli"
+    },
+    {
+        "item": "Q15830918",
+        "itemLabel": "Varraga e Epërme"
+    },
+    {
+        "item": "Q15831050",
+        "itemLabel": "Varraga e Poshtme"
+    },
+    {
+        "item": "Q15831049",
+        "itemLabel": "Dragalica"
+    },
+    {
+        "item": "Q15836447",
+        "itemLabel": "Kobillogllava"
+    },
+    {
+        "item": "Q15885862",
+        "itemLabel": "Vojmislliqi"
+    },
+    {
+        "item": "Q15904368",
+        "itemLabel": "Zhitkoci"
+    },
+    {
+        "item": "Q16010206",
+        "itemLabel": "Halabaku"
+    },
+    {
+        "item": "Q16305752",
+        "itemLabel": "Bregu i Zi"
+    },
+    {
+        "item": "Q16083917",
+        "itemLabel": "Billusha"
+    },
+    {
+        "item": "Q16304023",
+        "itemLabel": "Bajçina"
+    },
+    {
+        "item": "Q16304283",
+        "itemLabel": "Besia"
+    },
+    {
+        "item": "Q16304725",
+        "itemLabel": "Busia"
+    },
+    {
+        "item": "Q16306173",
+        "itemLabel": "Divlaka"
+    },
+    {
+        "item": "Q12958149",
+        "itemLabel": "Q12958149"
+    },
+    {
+        "item": "Q13566341",
+        "itemLabel": "Malishti"
+    },
+    {
+        "item": "Q13566403",
+        "itemLabel": "Shipashnica e Poshtme"
+    },
+    {
+        "item": "Q13567023",
+        "itemLabel": "Babushi i Muhaxhirëve"
+    },
+    {
+        "item": "Q13567341",
+        "itemLabel": "Stançiqi"
+    },
+    {
+        "item": "Q15220438",
+        "itemLabel": "Q15220438"
+    },
+    {
+        "item": "Q15639229",
+        "itemLabel": "Q15639229"
+    },
+    {
+        "item": "Q15648053",
+        "itemLabel": "Q15648053"
+    },
+    {
+        "item": "Q15409331",
+        "itemLabel": "Belica"
+    },
+    {
+        "item": "Q15714147",
+        "itemLabel": "Q15714147"
+    },
+    {
+        "item": "Q15839214",
+        "itemLabel": "Q15839214"
+    },
+    {
+        "item": "Q14230097",
+        "itemLabel": "Prevalla"
+    },
+    {
+        "item": "Q16304696",
+        "itemLabel": "Brusniku"
+    },
+    {
+        "item": "Q15288561",
+        "itemLabel": "Dollca"
+    },
+    {
+        "item": "Q15299444",
+        "itemLabel": "Klinaca"
+    },
+    {
+        "item": "Q15623710",
+        "itemLabel": "Ranillug"
+    },
+    {
+        "item": "Q15645995",
+        "itemLabel": "Vërnezi"
+    },
+    {
+        "item": "Q15714137",
+        "itemLabel": "Mareci"
+    },
+    {
+        "item": "Q15714154",
+        "itemLabel": "Kukavica"
+    },
+    {
+        "item": "Q15890051",
+        "itemLabel": "Jankovpotok"
+    },
+    {
+        "item": "Q15920090",
+        "itemLabel": "Vërnica"
+    },
+    {
+        "item": "Q15923897",
+        "itemLabel": "Kovaçica"
+    },
+    {
+        "item": "Q15930342",
+        "itemLabel": "Tërstena"
+    },
+    {
+        "item": "Q16304130",
+        "itemLabel": "Barileva"
+    },
+    {
+        "item": "Q16304536",
+        "itemLabel": "Boshlani"
+    },
+    {
+        "item": "Q16305999",
+        "itemLabel": "Deiqi"
+    },
+    {
+        "item": "Q13566184",
+        "itemLabel": "Gjurkoci"
+    },
+    {
+        "item": "Q13566326",
+        "itemLabel": "Bllatë"
+    },
+    {
+        "item": "Q13566357",
+        "itemLabel": "Vërbica"
+    },
+    {
+        "item": "Q13566383",
+        "itemLabel": "Sllatina e Epërme"
+    },
+    {
+        "item": "Q13566385",
+        "itemLabel": "Miradia e Epërme"
+    },
+    {
+        "item": "Q16304712",
+        "itemLabel": "Bukoshi"
+    },
+    {
+        "item": "Q13567261",
+        "itemLabel": "Samadrexha"
+    },
+    {
+        "item": "Q15648438",
+        "itemLabel": "Podgorca"
+    },
+    {
+        "item": "Q15903987",
+        "itemLabel": "Rahovica"
+    },
+    {
+        "item": "Q15158921",
+        "itemLabel": "Buzez"
+    },
+    {
+        "item": "Q15166694",
+        "itemLabel": "Caparca"
+    },
+    {
+        "item": "Q15222274",
+        "itemLabel": "Krushevë"
+    },
+    {
+        "item": "Q15304913",
+        "itemLabel": "Vlashnja"
+    },
+    {
+        "item": "Q15409323",
+        "itemLabel": "Poslishti"
+    },
+    {
+        "item": "Q15427588",
+        "itemLabel": "Osojani"
+    },
+    {
+        "item": "Q15622982",
+        "itemLabel": "Drenogllava"
+    },
+    {
+        "item": "Q15693724",
+        "itemLabel": "Gllanica"
+    },
+    {
+        "item": "Q15714126",
+        "itemLabel": "Mramuri"
+    },
+    {
+        "item": "Q15728396",
+        "itemLabel": "Prelluzha"
+    },
+    {
+        "item": "Q15831776",
+        "itemLabel": "Jabuka"
+    },
+    {
+        "item": "Q15838201",
+        "itemLabel": "Kozareva"
+    },
+    {
+        "item": "Q15914710",
+        "itemLabel": "Runiku"
+    },
+    {
+        "item": "Q13566384",
+        "itemLabel": "Fushtica e Epërme"
+    },
+    {
+        "item": "Q13566970",
+        "itemLabel": "Lloqan"
+    },
+    {
+        "item": "Q13567109",
+        "itemLabel": "Poliçka"
+    },
+    {
+        "item": "Q13567260",
+        "itemLabel": "Sazlia"
+    },
+    {
+        "item": "Q16306197",
+        "itemLabel": "Dobërdoli"
+    },
+    {
+        "item": "Q16306206",
+        "itemLabel": "Doganaj"
+    },
+    {
+        "item": "Q15910748",
+        "itemLabel": "Marina"
+    },
+    {
+        "item": "Q14702699",
+        "itemLabel": "Turiçeci"
+    },
+    {
+        "item": "Q15904056",
+        "itemLabel": "Rudina"
+    },
+    {
+        "item": "Q15889870",
+        "itemLabel": "Dolani"
+    },
+    {
+        "item": "Q15157016",
+        "itemLabel": "Brezne"
+    },
+    {
+        "item": "Q15272248",
+        "itemLabel": "Pastasella"
+    },
+    {
+        "item": "Q15301925",
+        "itemLabel": "Pogragja"
+    },
+    {
+        "item": "Q15635306",
+        "itemLabel": "Kostadincë"
+    },
+    {
+        "item": "Q15660652",
+        "itemLabel": "Shashkoci"
+    },
+    {
+        "item": "Q15693420",
+        "itemLabel": "Vogaçica"
+    },
+    {
+        "item": "Q15693638",
+        "itemLabel": "Gllavica"
+    },
+    {
+        "item": "Q15714070",
+        "itemLabel": "Radasheci"
+    },
+    {
+        "item": "Q15714069",
+        "itemLabel": "Siqeva"
+    },
+    {
+        "item": "Q15714120",
+        "itemLabel": "Orlloviqi"
+    },
+    {
+        "item": "Q15839180",
+        "itemLabel": "Kalludra e Vogël"
+    },
+    {
+        "item": "Q15886041",
+        "itemLabel": "Vukojeviqi"
+    },
+    {
+        "item": "Q15890167",
+        "itemLabel": "Korila"
+    },
+    {
+        "item": "Q15904101",
+        "itemLabel": "Sendoja"
+    },
+    {
+        "item": "Q13566235",
+        "itemLabel": "Hajkobilla"
+    },
+    {
+        "item": "Q13566250",
+        "itemLabel": "Batusha"
+    },
+    {
+        "item": "Q13566376",
+        "itemLabel": "Godanca"
+    },
+    {
+        "item": "Q13566386",
+        "itemLabel": "Prekazi i Epërm"
+    },
+    {
+        "item": "Q13566404",
+        "itemLabel": "Vinarci i Poshtëm"
+    },
+    {
+        "item": "Q13567290",
+        "itemLabel": "Siboci"
+    },
+    {
+        "item": "Q16304052",
+        "itemLabel": "Balloci"
+    },
+    {
+        "item": "Q16304114",
+        "itemLabel": "Bardosan"
+    },
+    {
+        "item": "Q16304719",
+        "itemLabel": "Burrniku"
+    },
+    {
+        "item": "Q16306202",
+        "itemLabel": "Dobratini"
+    },
+    {
+        "item": "Q15642865",
+        "itemLabel": "Godeni"
+    },
+    {
+        "item": "Q15714062",
+        "itemLabel": "Truda"
+    },
+    {
+        "item": "Q15714064",
+        "itemLabel": "Teneshdolli"
+    },
+    {
+        "item": "Q15714071",
+        "itemLabel": "Prugoci"
+    },
+    {
+        "item": "Q15714134",
+        "itemLabel": "Matiçani"
+    },
+    {
+        "item": "Q15903928",
+        "itemLabel": "Mekidolli"
+    },
+    {
+        "item": "Q15904299",
+        "itemLabel": "Zhazha"
+    },
+    {
+        "item": "Q13566220",
+        "itemLabel": "Hadja"
+    },
+    {
+        "item": "Q13566349",
+        "itemLabel": "Videja"
+    },
+    {
+        "item": "Q13566432",
+        "itemLabel": "Zhilivoda"
+    },
+    {
+        "item": "Q13567599",
+        "itemLabel": "Sadovina e Çerkezëve"
+    },
+    {
+        "item": "Q16304209",
+        "itemLabel": "Llukaci i Begut"
+    },
+    {
+        "item": "Q15714123",
+        "itemLabel": "Nisheci"
+    },
+    {
+        "item": "Q15714145",
+        "itemLabel": "Llukari"
+    },
+    {
+        "item": "Q15729311",
+        "itemLabel": "Dasheci"
+    },
+    {
+        "item": "Q15729403",
+        "itemLabel": "Kozhica"
+    },
+    {
+        "item": "Q15729412",
+        "itemLabel": "Kostërca"
+    },
+    {
+        "item": "Q15801812",
+        "itemLabel": "Gornjasella"
+    },
+    {
+        "item": "Q16360329",
+        "itemLabel": "Tërstena"
+    },
+    {
+        "item": "Q16358429",
+        "itemLabel": "Softoviqi"
+    },
+    {
+        "item": "Q16358779",
+        "itemLabel": "Strelica"
+    },
+    {
+        "item": "Q16359752",
+        "itemLabel": "Kjeva"
+    },
+    {
+        "item": "Q16359786",
+        "itemLabel": "Klinafci"
+    },
+    {
+        "item": "Q16360029",
+        "itemLabel": "Kodra e Tomës"
+    },
+    {
+        "item": "Q16360503",
+        "itemLabel": "Kremenata I"
+    },
+    {
+        "item": "Q16360550",
+        "itemLabel": "Krilevë"
+    },
+    {
+        "item": "Q16360962",
+        "itemLabel": "Kutnje"
+    },
+    {
+        "item": "Q16360941",
+        "itemLabel": "Velegllava e Poshtme"
+    },
+    {
+        "item": "Q16361085",
+        "itemLabel": "Kërnini i Epërm"
+    },
+    {
+        "item": "Q16361802",
+        "itemLabel": "Vërbica e Zhegocit"
+    },
+    {
+        "item": "Q16356868",
+        "itemLabel": "Shishmani i Bokës"
+    },
+    {
+        "item": "Q16357306",
+        "itemLabel": "Guska"
+    },
+    {
+        "item": "Q16358784",
+        "itemLabel": "Strezoc"
+    },
+    {
+        "item": "Q16358889",
+        "itemLabel": "Suhadolli"
+    },
+    {
+        "item": "Q16359314",
+        "itemLabel": "Kallica"
+    },
+    {
+        "item": "Q16360183",
+        "itemLabel": "Tupeci"
+    },
+    {
+        "item": "Q16360364",
+        "itemLabel": "Koshutovë"
+    },
+    {
+        "item": "Q16360434",
+        "itemLabel": "Ujzi"
+    },
+    {
+        "item": "Q16360507",
+        "itemLabel": "Kremenata II"
+    },
+    {
+        "item": "Q16360801",
+        "itemLabel": "Kuk"
+    },
+    {
+        "item": "Q16361220",
+        "itemLabel": "Lajqiqi"
+    },
+    {
+        "item": "Q16361759",
+        "itemLabel": "Vruçec"
+    },
+    {
+        "item": "Q16362428",
+        "itemLabel": "Zgatar"
+    },
+    {
+        "item": "Q16362944",
+        "itemLabel": "Lista e vendeve në Dragash"
+    },
+    {
+        "item": "Q16363002",
+        "itemLabel": "Llazica"
+    },
+    {
+        "item": "Q16363749",
+        "itemLabel": "Marmulli"
+    },
+    {
+        "item": "Q16356357",
+        "itemLabel": "Selaci"
+    },
+    {
+        "item": "Q16357334",
+        "itemLabel": "Gërgoci"
+    },
+    {
+        "item": "Q16357533",
+        "itemLabel": "Hallaçi i Vogël"
+    },
+    {
+        "item": "Q16358405",
+        "itemLabel": "Smolica"
+    },
+    {
+        "item": "Q16360367",
+        "itemLabel": "Kosieri i Ri"
+    },
+    {
+        "item": "Q16360486",
+        "itemLabel": "Krajnidell"
+    },
+    {
+        "item": "Q16360947",
+        "itemLabel": "Kushaveci"
+    },
+    {
+        "item": "Q16361223",
+        "itemLabel": "Lajthishta"
+    },
+    {
+        "item": "Q16362625",
+        "itemLabel": "Zulfaj"
+    },
+    {
+        "item": "Q16363326",
+        "itemLabel": "Magurja"
+    },
+    {
+        "item": "Q16356319",
+        "itemLabel": "Sedllarë"
+    },
+    {
+        "item": "Q16357143",
+        "itemLabel": "Grizimë"
+    },
+    {
+        "item": "Q16357490",
+        "itemLabel": "Halil Halili"
+    },
+    {
+        "item": "Q16358444",
+        "itemLabel": "Sojeva"
+    },
+    {
+        "item": "Q16361792",
+        "itemLabel": "Vuçë"
+    },
+    {
+        "item": "Q16362362",
+        "itemLabel": "Zemanicë"
+    },
+    {
+        "item": "Q16362488",
+        "itemLabel": "Zhubi"
+    },
+    {
+        "item": "Q16356990",
+        "itemLabel": "Gradisha"
+    },
+    {
+        "item": "Q16359687",
+        "itemLabel": "Keçëkolla"
+    },
+    {
+        "item": "Q16359769",
+        "itemLabel": "Tomancë"
+    },
+    {
+        "item": "Q16360015",
+        "itemLabel": "Trepetnica"
+    },
+    {
+        "item": "Q16361272",
+        "itemLabel": "Landovica"
+    },
+    {
+        "item": "Q16361302",
+        "itemLabel": "Lashkadrenoci"
+    },
+    {
+        "item": "Q16362491",
+        "itemLabel": "Zhujë"
+    },
+    {
+        "item": "Q16362730",
+        "itemLabel": "Çarakoc"
+    },
+    {
+        "item": "Q16363133",
+        "itemLabel": "Lugbunari"
+    },
+    {
+        "item": "Q15197991",
+        "itemLabel": "Q15197991"
+    },
+    {
+        "item": "Q15197992",
+        "itemLabel": "Q15197992"
+    },
+    {
+        "item": "Q15211335",
+        "itemLabel": "Q15211335"
+    },
+    {
+        "item": "Q15220859",
+        "itemLabel": "Q15220859"
+    },
+    {
+        "item": "Q15272412",
+        "itemLabel": "Q15272412"
+    },
+    {
+        "item": "Q15577530",
+        "itemLabel": "Q15577530"
+    },
+    {
+        "item": "Q15623964",
+        "itemLabel": "Q15623964"
+    },
+    {
+        "item": "Q15623965",
+        "itemLabel": "Q15623965"
+    },
+    {
+        "item": "Q15626864",
+        "itemLabel": "Q15626864"
+    },
+    {
+        "item": "Q15628804",
+        "itemLabel": "Q15628804"
+    },
+    {
+        "item": "Q15628818",
+        "itemLabel": "Q15628818"
+    },
+    {
+        "item": "Q15630302",
+        "itemLabel": "Q15630302"
+    },
+    {
+        "item": "Q15632161",
+        "itemLabel": "Q15632161"
+    },
+    {
+        "item": "Q15634559",
+        "itemLabel": "Q15634559"
+    },
+    {
+        "item": "Q15634894",
+        "itemLabel": "Q15634894"
+    },
+    {
+        "item": "Q15635520",
+        "itemLabel": "Q15635520"
+    },
+    {
+        "item": "Q15710502",
+        "itemLabel": "Q15710502"
+    },
+    {
+        "item": "Q15801797",
+        "itemLabel": "Q15801797"
+    },
+    {
+        "item": "Q15885933",
+        "itemLabel": "Q15885933"
+    },
+    {
+        "item": "Q15914545",
+        "itemLabel": "Q15914545"
+    },
+    {
+        "item": "Q16084277",
+        "itemLabel": "Q16084277"
+    },
+    {
+        "item": "Q16348388",
+        "itemLabel": "Milena"
+    },
+    {
+        "item": "Q16349982",
+        "itemLabel": "Bardhoqi"
+    },
+    {
+        "item": "Q16351281",
+        "itemLabel": "Brestovc"
+    },
+    {
+        "item": "Q16351693",
+        "itemLabel": "Buçe"
+    },
+    {
+        "item": "Q16352083",
+        "itemLabel": "Crnatovë"
+    },
+    {
+        "item": "Q16352882",
+        "itemLabel": "Dobrosella"
+    },
+    {
+        "item": "Q16352896",
+        "itemLabel": "Prigoda"
+    },
+    {
+        "item": "Q16355357",
+        "itemLabel": "Firaja"
+    },
+    {
+        "item": "Q16355352",
+        "itemLabel": "Rogova"
+    },
+    {
+        "item": "Q16185831",
+        "itemLabel": "Zym"
+    },
+    {
+        "item": "Q16349666",
+        "itemLabel": "Nakaradë"
+    },
+    {
+        "item": "Q16350195",
+        "itemLabel": "Nezir Haliti- axha Nezë"
+    },
+    {
+        "item": "Q16351802",
+        "itemLabel": "Carralluka"
+    },
+    {
+        "item": "Q16352158",
+        "itemLabel": "Dallashaj"
+    },
+    {
+        "item": "Q16353059",
+        "itemLabel": "Dragalefci"
+    },
+    {
+        "item": "Q16354041",
+        "itemLabel": "Qirkoviq"
+    },
+    {
+        "item": "Q16354078",
+        "itemLabel": "Qyqylaga"
+    },
+    {
+        "item": "Q16354224",
+        "itemLabel": "Rahovicë"
+    },
+    {
+        "item": "Q16349828",
+        "itemLabel": "Ballabani"
+    },
+    {
+        "item": "Q16350010",
+        "itemLabel": "Bardosana"
+    },
+    {
+        "item": "Q16350012",
+        "itemLabel": "Bare"
+    },
+    {
+        "item": "Q16350049",
+        "itemLabel": "Nepolja"
+    },
+    {
+        "item": "Q16351146",
+        "itemLabel": "Bozhec"
+    },
+    {
+        "item": "Q16351275",
+        "itemLabel": "Brekoci"
+    },
+    {
+        "item": "Q16351433",
+        "itemLabel": "Panqellë"
+    },
+    {
+        "item": "Q16352336",
+        "itemLabel": "Pishtarët e parë të arsimit nga fshati Kokaj"
+    },
+    {
+        "item": "Q16352916",
+        "itemLabel": "Doli"
+    },
+    {
+        "item": "Q16353227",
+        "itemLabel": "Dujaka"
+    },
+    {
+        "item": "Q16353964",
+        "itemLabel": "Qerimi"
+    },
+    {
+        "item": "Q16356052",
+        "itemLabel": "Fshati i Ri"
+    },
+    {
+        "item": "Q16347831",
+        "itemLabel": "Medveci"
+    },
+    {
+        "item": "Q16348131",
+        "itemLabel": "Meshina"
+    },
+    {
+        "item": "Q16349241",
+        "itemLabel": "Mulliqi"
+    },
+    {
+        "item": "Q16351153",
+        "itemLabel": "Osdrimi"
+    },
+    {
+        "item": "Q16352181",
+        "itemLabel": "Petrovasella"
+    },
+    {
+        "item": "Q16352218",
+        "itemLabel": "Dardhishta"
+    },
+    {
+        "item": "Q16352327",
+        "itemLabel": "Dazhdincë"
+    },
+    {
+        "item": "Q16352890",
+        "itemLabel": "Dobroshi"
+    },
+    {
+        "item": "Q16355101",
+        "itemLabel": "Rezina"
+    },
+    {
+        "item": "Q16349225",
+        "itemLabel": "Mulla Rifat Haliti"
+    },
+    {
+        "item": "Q16352756",
+        "itemLabel": "Poturoci"
+    },
+    {
+        "item": "Q16353322",
+        "itemLabel": "Duzhnja"
+    },
+    {
+        "item": "Q16353732",
+        "itemLabel": "Qadraku"
+    },
+    {
+        "item": "Q16507779",
+        "itemLabel": "Q16507779"
+    },
+    {
+        "item": "Q16507781",
+        "itemLabel": "Q16507781"
+    },
+    {
+        "item": "Q16507040",
+        "itemLabel": "Bibaj"
+    },
+    {
+        "item": "Q16507063",
+        "itemLabel": "Bllata"
+    },
+    {
+        "item": "Q16507438",
+        "itemLabel": "Caraviku"
+    },
+    {
+        "item": "Q16507686",
+        "itemLabel": "Dedaj"
+    },
+    {
+        "item": "Q16507767",
+        "itemLabel": "Pjetërqi i Poshtëm"
+    },
+    {
+        "item": "Q16507765",
+        "itemLabel": "Dollova"
+    },
+    {
+        "item": "Q16507768",
+        "itemLabel": "Dranoshiqi"
+    },
+    {
+        "item": "Q16507787",
+        "itemLabel": "Siboci i Poshtëm"
+    },
+    {
+        "item": "Q16507790",
+        "itemLabel": "Dumnica e Poshtme"
+    },
+    {
+        "item": "Q16507788",
+        "itemLabel": "Dobërlluka"
+    },
+    {
+        "item": "Q16507838",
+        "itemLabel": "Dumoshi"
+    },
+    {
+        "item": "Q16508158",
+        "itemLabel": "Lubinja e Epërme"
+    },
+    {
+        "item": "Q16508241",
+        "itemLabel": "Gumnishti"
+    },
+    {
+        "item": "Q16508391",
+        "itemLabel": "Jashanica"
+    },
+    {
+        "item": "Q16508408",
+        "itemLabel": "Jezera"
+    },
+    {
+        "item": "Q16508429",
+        "itemLabel": "Kojusha"
+    },
+    {
+        "item": "Q16508509",
+        "itemLabel": "Kosharja"
+    },
+    {
+        "item": "Q16508658",
+        "itemLabel": "Lladoci"
+    },
+    {
+        "item": "Q16508683",
+        "itemLabel": "Lezi"
+    },
+    {
+        "item": "Q16508697",
+        "itemLabel": "Lubova"
+    },
+    {
+        "item": "Q16508221",
+        "itemLabel": "Gërnçari"
+    },
+    {
+        "item": "Q16507692",
+        "itemLabel": "Deva"
+    },
+    {
+        "item": "Q16507835",
+        "itemLabel": "Dvorishti"
+    },
+    {
+        "item": "Q16507035",
+        "itemLabel": "Bokshiqi"
+    },
+    {
+        "item": "Q16507274",
+        "itemLabel": "Cecelia"
+    },
+    {
+        "item": "Q16507773",
+        "itemLabel": "Dreja"
+    },
+    {
+        "item": "Q16507789",
+        "itemLabel": "Dalaku"
+    },
+    {
+        "item": "Q16507795",
+        "itemLabel": "Druari"
+    },
+    {
+        "item": "Q16507794",
+        "itemLabel": "Sfaraçaku i Poshtëm"
+    },
+    {
+        "item": "Q16507796",
+        "itemLabel": "Dubofci"
+    },
+    {
+        "item": "Q16507792",
+        "itemLabel": "Stanofci i Poshtëm"
+    },
+    {
+        "item": "Q16507826",
+        "itemLabel": "Dushi"
+    },
+    {
+        "item": "Q16507836",
+        "itemLabel": "Dyzi"
+    },
+    {
+        "item": "Q16508181",
+        "itemLabel": "Gadime e Epërme"
+    },
+    {
+        "item": "Q16508184",
+        "itemLabel": "Llapashtica e Epërme"
+    },
+    {
+        "item": "Q16508194",
+        "itemLabel": "Graca"
+    },
+    {
+        "item": "Q16508191",
+        "itemLabel": "Studimja e Epërme"
+    },
+    {
+        "item": "Q16508233",
+        "itemLabel": "Gërlica"
+    },
+    {
+        "item": "Q16508273",
+        "itemLabel": "Hercegova"
+    },
+    {
+        "item": "Q16508382",
+        "itemLabel": "Jeshkova"
+    },
+    {
+        "item": "Q16508439",
+        "itemLabel": "Komogllavë"
+    },
+    {
+        "item": "Q16508450",
+        "itemLabel": "Konusheci"
+    },
+    {
+        "item": "Q16508485",
+        "itemLabel": "Kushtendili"
+    },
+    {
+        "item": "Q16508649",
+        "itemLabel": "Leskoci"
+    },
+    {
+        "item": "Q16508660",
+        "itemLabel": "Llausha"
+    },
+    {
+        "item": "Q16508707",
+        "itemLabel": "Letanci"
+    },
+    {
+        "item": "Q16507266",
+        "itemLabel": "Breca"
+    },
+    {
+        "item": "Q16507260",
+        "itemLabel": "Qallapeku"
+    },
+    {
+        "item": "Q16507697",
+        "itemLabel": "Cërnilla"
+    },
+    {
+        "item": "Q16507771",
+        "itemLabel": "Dragoleci"
+    },
+    {
+        "item": "Q16507776",
+        "itemLabel": "Dremjaku"
+    },
+    {
+        "item": "Q16508136",
+        "itemLabel": "Gllamniku"
+    },
+    {
+        "item": "Q16508137",
+        "itemLabel": "Godishnjaku"
+    },
+    {
+        "item": "Q16508239",
+        "itemLabel": "Gërdoci"
+    },
+    {
+        "item": "Q16508442",
+        "itemLabel": "Kleçka"
+    },
+    {
+        "item": "Q16508447",
+        "itemLabel": "Kaçibegu"
+    },
+    {
+        "item": "Q16508507",
+        "itemLabel": "Kosina"
+    },
+    {
+        "item": "Q16508518",
+        "itemLabel": "Kurillova"
+    },
+    {
+        "item": "Q16508516",
+        "itemLabel": "Kushevica"
+    },
+    {
+        "item": "Q16508684",
+        "itemLabel": "Leskoveci"
+    },
+    {
+        "item": "Q16508695",
+        "itemLabel": "Lluga"
+    },
+    {
+        "item": "Q16508705",
+        "itemLabel": "Lluga"
+    },
+    {
+        "item": "Q16508710",
+        "itemLabel": "Lluga"
+    },
+    {
+        "item": "Q16508712",
+        "itemLabel": "Luzhani"
+    },
+    {
+        "item": "Q16508791",
+        "itemLabel": "Gjyrgjeviku i Vogël"
+    },
+    {
+        "item": "Q16507784",
+        "itemLabel": "Llapashtica e Poshtme"
+    },
+    {
+        "item": "Q16507690",
+        "itemLabel": "Qypeva"
+    },
+    {
+        "item": "Q16507769",
+        "itemLabel": "Istogu i Poshtëm"
+    },
+    {
+        "item": "Q16507778",
+        "itemLabel": "Bërnica e Poshtme"
+    },
+    {
+        "item": "Q16507783",
+        "itemLabel": "Gadime e Poshtme"
+    },
+    {
+        "item": "Q16507791",
+        "itemLabel": "Studimja e Poshtme"
+    },
+    {
+        "item": "Q16508132",
+        "itemLabel": "Gllogovica"
+    },
+    {
+        "item": "Q16508138",
+        "itemLabel": "Gllavatini"
+    },
+    {
+        "item": "Q16508166",
+        "itemLabel": "Grabca"
+    },
+    {
+        "item": "Q16508177",
+        "itemLabel": "Bërnica e Epërme"
+    },
+    {
+        "item": "Q16508344",
+        "itemLabel": "Gllareva"
+    },
+    {
+        "item": "Q16508350",
+        "itemLabel": "Herrtica"
+    },
+    {
+        "item": "Q16508389",
+        "itemLabel": "Jelloci"
+    },
+    {
+        "item": "Q16508428",
+        "itemLabel": "Kobaja"
+    },
+    {
+        "item": "Q16508452",
+        "itemLabel": "Kollo"
+    },
+    {
+        "item": "Q16508480",
+        "itemLabel": "Krajku"
+    },
+    {
+        "item": "Q16508515",
+        "itemLabel": "Kërpimehu"
+    },
+    {
+        "item": "Q16508517",
+        "itemLabel": "Kunoviku"
+    },
+    {
+        "item": "Q16508698",
+        "itemLabel": "Lubozhda"
+    },
+    {
+        "item": "Q16508713",
+        "itemLabel": "Dumnica e Llugave"
+    },
+    {
+        "item": "Q16508789",
+        "itemLabel": "Krusha e Vogël"
+    },
+    {
+        "item": "Q16507700",
+        "itemLabel": "Nëntë Jugoviqët"
+    },
+    {
+        "item": "Q16507785",
+        "itemLabel": "Pakashticë e Poshtme"
+    },
+    {
+        "item": "Q16507827",
+        "itemLabel": "Dushi i Vogël"
+    },
+    {
+        "item": "Q16507965",
+        "itemLabel": "Galica"
+    },
+    {
+        "item": "Q16508179",
+        "itemLabel": "Grashtica"
+    },
+    {
+        "item": "Q16508182",
+        "itemLabel": "Dumnica e Epërme"
+    },
+    {
+        "item": "Q16508189",
+        "itemLabel": "Dumnica e Epërme"
+    },
+    {
+        "item": "Q16508188",
+        "itemLabel": "Siboci i Epërm"
+    },
+    {
+        "item": "Q16508193",
+        "itemLabel": "Sfaraçaku i Epërm"
+    },
+    {
+        "item": "Q16508226",
+        "itemLabel": "Gremniku"
+    },
+    {
+        "item": "Q16508434",
+        "itemLabel": "Kashica"
+    },
+    {
+        "item": "Q16508446",
+        "itemLabel": "Kalatica"
+    },
+    {
+        "item": "Q16509907",
+        "itemLabel": "Begaj"
+    },
+    {
+        "item": "Q16511328",
+        "itemLabel": "Shala"
+    },
+    {
+        "item": "Q16508814",
+        "itemLabel": "Dobraja e Vogël"
+    },
+    {
+        "item": "Q16509089",
+        "itemLabel": "Mavriqi"
+    },
+    {
+        "item": "Q16509784",
+        "itemLabel": "Novolani"
+    },
+    {
+        "item": "Q16509849",
+        "itemLabel": "Orobërda"
+    },
+    {
+        "item": "Q16510091",
+        "itemLabel": "Pasoma"
+    },
+    {
+        "item": "Q16510092",
+        "itemLabel": "Pestova"
+    },
+    {
+        "item": "Q16510539",
+        "itemLabel": "Përpollci"
+    },
+    {
+        "item": "Q16510537",
+        "itemLabel": "Potoku"
+    },
+    {
+        "item": "Q16510631",
+        "itemLabel": "Reçica"
+    },
+    {
+        "item": "Q16510628",
+        "itemLabel": "Revuçi"
+    },
+    {
+        "item": "Q16510687",
+        "itemLabel": "Ropica"
+    },
+    {
+        "item": "Q16511416",
+        "itemLabel": "Sërbobrani"
+    },
+    {
+        "item": "Q16511433",
+        "itemLabel": "Smallusha"
+    },
+    {
+        "item": "Q16508792",
+        "itemLabel": "Krushevë e Vogël"
+    },
+    {
+        "item": "Q16509739",
+        "itemLabel": "Miraça"
+    },
+    {
+        "item": "Q16509737",
+        "itemLabel": "Miroci"
+    },
+    {
+        "item": "Q16510089",
+        "itemLabel": "Penuha"
+    },
+    {
+        "item": "Q16510523",
+        "itemLabel": "Prekalla"
+    },
+    {
+        "item": "Q16511329",
+        "itemLabel": "Shajkoci"
+    },
+    {
+        "item": "Q16511371",
+        "itemLabel": "Sinaja"
+    },
+    {
+        "item": "Q16511387",
+        "itemLabel": "Skoçani"
+    },
+    {
+        "item": "Q16509027",
+        "itemLabel": "Meja"
+    },
+    {
+        "item": "Q16509326",
+        "itemLabel": "Mihaliqi"
+    },
+    {
+        "item": "Q16509759",
+        "itemLabel": "Murademi"
+    },
+    {
+        "item": "Q16509785",
+        "itemLabel": "Nedakoci"
+    },
+    {
+        "item": "Q16509845",
+        "itemLabel": "Veriqi i Ri"
+    },
+    {
+        "item": "Q16509912",
+        "itemLabel": "Maxhunaj"
+    },
+    {
+        "item": "Q16510522",
+        "itemLabel": "Përçeva"
+    },
+    {
+        "item": "Q16510571",
+        "itemLabel": "Rakoshi"
+    },
+    {
+        "item": "Q16511324",
+        "itemLabel": "Shalinovica"
+    },
+    {
+        "item": "Q16511331",
+        "itemLabel": "Shalca"
+    },
+    {
+        "item": "Q16511368",
+        "itemLabel": "Siçeva"
+    },
+    {
+        "item": "Q16511386",
+        "itemLabel": "Sylevica"
+    },
+    {
+        "item": "Q16509048",
+        "itemLabel": "Manastirca"
+    },
+    {
+        "item": "Q16509081",
+        "itemLabel": "Muhazobi"
+    },
+    {
+        "item": "Q16509768",
+        "itemLabel": "Muzhevina"
+    },
+    {
+        "item": "Q16509901",
+        "itemLabel": "Obrança"
+    },
+    {
+        "item": "Q16509918",
+        "itemLabel": "Oshlani"
+    },
+    {
+        "item": "Q16510090",
+        "itemLabel": "Perani"
+    },
+    {
+        "item": "Q16510568",
+        "itemLabel": "Radulloci"
+    },
+    {
+        "item": "Q16510612",
+        "itemLabel": "Resniku"
+    },
+    {
+        "item": "Q16510632",
+        "itemLabel": "Rezniku"
+    },
+    {
+        "item": "Q16510677",
+        "itemLabel": "Rudica"
+    },
+    {
+        "item": "Q16511330",
+        "itemLabel": "Shakovica"
+    },
+    {
+        "item": "Q16509313",
+        "itemLabel": "Merdari"
+    },
+    {
+        "item": "Q16509729",
+        "itemLabel": "Mojstiri"
+    },
+    {
+        "item": "Q16510610",
+        "itemLabel": "Renoci"
+    },
+    {
+        "item": "Q16510629",
+        "itemLabel": "Repa"
+    },
+    {
+        "item": "Q16509889",
+        "itemLabel": "Okosnica"
+    },
+    {
+        "item": "Q16511798",
+        "itemLabel": "Q16511798"
+    },
+    {
+        "item": "Q16511800",
+        "itemLabel": "Q16511800"
+    },
+    {
+        "item": "Q16682993",
+        "itemLabel": "Vranoci"
+    },
+    {
+        "item": "Q17476644",
+        "itemLabel": "Q17476644"
+    },
+    {
+        "item": "Q16511434",
+        "itemLabel": "Skroma"
+    },
+    {
+        "item": "Q16511437",
+        "itemLabel": "Sllatina (Vushtrri)"
+    },
+    {
+        "item": "Q16511472",
+        "itemLabel": "Studenica"
+    },
+    {
+        "item": "Q16511481",
+        "itemLabel": "Rufca e Vjetër"
+    },
+    {
+        "item": "Q16511490",
+        "itemLabel": "Strana"
+    },
+    {
+        "item": "Q16511488",
+        "itemLabel": "Shtitarica"
+    },
+    {
+        "item": "Q16511535",
+        "itemLabel": "Llukaci i Thatë"
+    },
+    {
+        "item": "Q16511568",
+        "itemLabel": "Tomoci"
+    },
+    {
+        "item": "Q16511581",
+        "itemLabel": "Tërpeza e Poshtme"
+    },
+    {
+        "item": "Q16511685",
+        "itemLabel": "Veriqi"
+    },
+    {
+        "item": "Q16511743",
+        "itemLabel": "Vilanci"
+    },
+    {
+        "item": "Q16511784",
+        "itemLabel": "Zojzi"
+    },
+    {
+        "item": "Q16511439",
+        "itemLabel": "Smrokonica"
+    },
+    {
+        "item": "Q16511482",
+        "itemLabel": "Surdulli"
+    },
+    {
+        "item": "Q16511486",
+        "itemLabel": "Stroci"
+    },
+    {
+        "item": "Q16511484",
+        "itemLabel": "Surkishi"
+    },
+    {
+        "item": "Q16511545",
+        "itemLabel": "Taraxha"
+    },
+    {
+        "item": "Q16511569",
+        "itemLabel": "Trubuhovci"
+    },
+    {
+        "item": "Q16511634",
+        "itemLabel": "Uça"
+    },
+    {
+        "item": "Q16511647",
+        "itemLabel": "Turuçica"
+    },
+    {
+        "item": "Q16511727",
+        "itemLabel": "Vërbiçani"
+    },
+    {
+        "item": "Q16511759",
+        "itemLabel": "Zaplluxhe"
+    },
+    {
+        "item": "Q16511792",
+        "itemLabel": "Zllakuqani"
+    },
+    {
+        "item": "Q16511536",
+        "itemLabel": "Shushica"
+    },
+    {
+        "item": "Q16511475",
+        "itemLabel": "Fshati i Vjetër"
+    },
+    {
+        "item": "Q16511485",
+        "itemLabel": "Shtedimi"
+    },
+    {
+        "item": "Q16511682",
+        "itemLabel": "Krusheva e Madhe"
+    },
+    {
+        "item": "Q16511734",
+        "itemLabel": "Volljaka"
+    },
+    {
+        "item": "Q16511745",
+        "itemLabel": "Vërnica (Vushtrri)"
+    },
+    {
+        "item": "Q16511767",
+        "itemLabel": "Zaskoku"
+    },
+    {
+        "item": "Q16511770",
+        "itemLabel": "Zakuti"
+    },
+    {
+        "item": "Q16639396",
+        "itemLabel": "Vrella e Goleshit"
+    },
+    {
+        "item": "Q16648047",
+        "itemLabel": "Karaça"
+    },
+    {
+        "item": "Q16662593",
+        "itemLabel": "Shtupeqi i Vogël"
+    },
+    {
+        "item": "Q16673930",
+        "itemLabel": "Ruhoti"
+    },
+    {
+        "item": "Q16511760",
+        "itemLabel": "Zabërgja"
+    },
+    {
+        "item": "Q16511801",
+        "itemLabel": "Zhitia"
+    },
+    {
+        "item": "Q16511471",
+        "itemLabel": "Staradrani"
+    },
+    {
+        "item": "Q16511469",
+        "itemLabel": "Stupa"
+    },
+    {
+        "item": "Q16511585",
+        "itemLabel": "Torina"
+    },
+    {
+        "item": "Q16511691",
+        "itemLabel": "Vesekoci"
+    },
+    {
+        "item": "Q16673161",
+        "itemLabel": "Ramuni"
+    },
+    {
+        "item": "Q16511532",
+        "itemLabel": "Sferka"
+    },
+    {
+        "item": "Q16511586",
+        "itemLabel": "Tërbuca"
+    },
+    {
+        "item": "Q16511680",
+        "itemLabel": "Gjyrgjeviku i Madh"
+    },
+    {
+        "item": "Q16511690",
+        "itemLabel": "Velikareka"
+    },
+    {
+        "item": "Q16511688",
+        "itemLabel": "Katunishta"
+    },
+    {
+        "item": "Q16511762",
+        "itemLabel": "Zajmi"
+    },
+    {
+        "item": "Q16511763",
+        "itemLabel": "Zhakova"
+    },
+    {
+        "item": "Q16511764",
+        "itemLabel": "Zabllaqi"
+    },
+    {
+        "item": "Q25570779",
+        "itemLabel": "Bardhi i Vogël"
+    },
+    {
+        "item": "Q25570768",
+        "itemLabel": "Talinoci i Muhaxherve"
+    },
+    {
+        "item": "Q25570940",
+        "itemLabel": "Qylaga"
+    },
+    {
+        "item": "Q25570941",
+        "itemLabel": "Resinoci"
+    },
+    {
+        "item": "Q25570953",
+        "itemLabel": "Ribari i Vogël"
+    },
+    {
+        "item": "Q25571033",
+        "itemLabel": "Llabjani"
+    },
+    {
+        "item": "Q25571058",
+        "itemLabel": "Prekoci"
+    },
+    {
+        "item": "Q25571124",
+        "itemLabel": "Tërnavica"
+    },
+    {
+        "item": "Q25571144",
+        "itemLabel": "Carraleva"
+    },
+    {
+        "item": "Q25571185",
+        "itemLabel": "Topilla"
+    },
+    {
+        "item": "Q25571315",
+        "itemLabel": "Jazhinca"
+    },
+    {
+        "item": "Q25571339",
+        "itemLabel": "Dimca"
+    },
+    {
+        "item": "Q25571391",
+        "itemLabel": "Vërtomica"
+    },
+    {
+        "item": "Q25571408",
+        "itemLabel": "Madanaj"
+    },
+    {
+        "item": "Q25571422",
+        "itemLabel": "Ramoci"
+    },
+    {
+        "item": "Q25571665",
+        "itemLabel": "Jasiqi"
+    },
+    {
+        "item": "Q25571790",
+        "itemLabel": "Dabidoli"
+    },
+    {
+        "item": "Q25571788",
+        "itemLabel": "Bratotini"
+    },
+    {
+        "item": "Q25571783",
+        "itemLabel": "Skorobishti"
+    },
+    {
+        "item": "Q25571785",
+        "itemLabel": "Struzha"
+    },
+    {
+        "item": "Q25570754",
+        "itemLabel": "Nikadini"
+    },
+    {
+        "item": "Q25570887",
+        "itemLabel": "Gracka e Vogël"
+    },
+    {
+        "item": "Q25570909",
+        "itemLabel": "Kojskë"
+    },
+    {
+        "item": "Q25570972",
+        "itemLabel": "Shisharka"
+    },
+    {
+        "item": "Q25571027",
+        "itemLabel": "Kufca e Epërme"
+    },
+    {
+        "item": "Q25571039",
+        "itemLabel": "Makreshi i Epërm"
+    },
+    {
+        "item": "Q25571043",
+        "itemLabel": "Makreshi i Poshtëm"
+    },
+    {
+        "item": "Q25571054",
+        "itemLabel": "Mazgova"
+    },
+    {
+        "item": "Q25571075",
+        "itemLabel": "Zebinca"
+    },
+    {
+        "item": "Q25571073",
+        "itemLabel": "Tërniqeci"
+    },
+    {
+        "item": "Q25571164",
+        "itemLabel": "Karaçica"
+    },
+    {
+        "item": "Q25571179",
+        "itemLabel": "Pjetërshtica"
+    },
+    {
+        "item": "Q25571190",
+        "itemLabel": "Zborca"
+    },
+    {
+        "item": "Q25571203",
+        "itemLabel": "Begraca"
+    },
+    {
+        "item": "Q25571216",
+        "itemLabel": "Gërlica e Epërme"
+    },
+    {
+        "item": "Q25571237",
+        "itemLabel": "Llanishti"
+    },
+    {
+        "item": "Q25571286",
+        "itemLabel": "Beroci"
+    },
+    {
+        "item": "Q25571301",
+        "itemLabel": "Drekoci"
+    },
+    {
+        "item": "Q25571356",
+        "itemLabel": "Dromjaku"
+    },
+    {
+        "item": "Q25571359",
+        "itemLabel": "Neçaca"
+    },
+    {
+        "item": "Q25571389",
+        "itemLabel": "Seçishti"
+    },
+    {
+        "item": "Q25571426",
+        "itemLabel": "Zylfaj"
+    },
+    {
+        "item": "Q25571768",
+        "itemLabel": "Pllaneja"
+    },
+    {
+        "item": "Q25571779",
+        "itemLabel": "Randobrava"
+    },
+    {
+        "item": "Q25571782",
+        "itemLabel": "Sërbica e Poshtme"
+    },
+    {
+        "item": "Q25570784",
+        "itemLabel": "Kuzmini"
+    },
+    {
+        "item": "Q25570921",
+        "itemLabel": "Leletiqi"
+    },
+    {
+        "item": "Q25570937",
+        "itemLabel": "Plitkoviqi"
+    },
+    {
+        "item": "Q25570958",
+        "itemLabel": "Sllovia"
+    },
+    {
+        "item": "Q25571001",
+        "itemLabel": "Draganca"
+    },
+    {
+        "item": "Q25571022",
+        "itemLabel": "Kosaçi"
+    },
+    {
+        "item": "Q25571052",
+        "itemLabel": "Manishinca"
+    },
+    {
+        "item": "Q25571163",
+        "itemLabel": "Godanca e Epërme"
+    },
+    {
+        "item": "Q25571178",
+        "itemLabel": "Mollopolca"
+    },
+    {
+        "item": "Q25571238",
+        "itemLabel": "Nikoc"
+    },
+    {
+        "item": "Q25571284",
+        "itemLabel": "Bitia e Poshtme"
+    },
+    {
+        "item": "Q25571303",
+        "itemLabel": "Gotovusha"
+    },
+    {
+        "item": "Q25571321",
+        "itemLabel": "Kashtanjeva"
+    },
+    {
+        "item": "Q25571410",
+        "itemLabel": "Meqa"
+    },
+    {
+        "item": "Q25571421",
+        "itemLabel": "Pjetërshani"
+    },
+    {
+        "item": "Q25571760",
+        "itemLabel": "Lubiçeva"
+    },
+    {
+        "item": "Q25571764",
+        "itemLabel": "Malësia e Re"
+    },
+    {
+        "item": "Q25571772",
+        "itemLabel": "Fshatra ne komunen e Gjilanit"
+    },
+    {
+        "item": "Q25569958",
+        "itemLabel": "Fshatrat e Gjilanit"
+    },
+    {
+        "item": "Q25570758",
+        "itemLabel": "Nerodima e Epërme"
+    },
+    {
+        "item": "Q25570791",
+        "itemLabel": "Lismiri"
+    },
+    {
+        "item": "Q25570795",
+        "itemLabel": "Miradia e Poshtme"
+    },
+    {
+        "item": "Q25570915",
+        "itemLabel": "Kraishti"
+    },
+    {
+        "item": "Q25570920",
+        "itemLabel": "Krojmira"
+    },
+    {
+        "item": "Q25571011",
+        "itemLabel": "Jasenoviku"
+    },
+    {
+        "item": "Q25571019",
+        "itemLabel": "Koretishti"
+    },
+    {
+        "item": "Q25571068",
+        "itemLabel": "Stanishori"
+    },
+    {
+        "item": "Q25571223",
+        "itemLabel": "Gjurgjedelli"
+    },
+    {
+        "item": "Q25571221",
+        "itemLabel": "Korbliqi"
+    },
+    {
+        "item": "Q25571232",
+        "itemLabel": "Kovaçeci"
+    },
+    {
+        "item": "Q25571249",
+        "itemLabel": "Runjeva"
+    },
+    {
+        "item": "Q25571320",
+        "itemLabel": "Sevca"
+    },
+    {
+        "item": "Q25571336",
+        "itemLabel": "Vërbeshtica"
+    },
+    {
+        "item": "Q25571337",
+        "itemLabel": "Viça"
+    },
+    {
+        "item": "Q25571375",
+        "itemLabel": "Rezhanca"
+    },
+    {
+        "item": "Q25571376",
+        "itemLabel": "Pusteniku"
+    },
+    {
+        "item": "Q25571436",
+        "itemLabel": "Zhdredha"
+    },
+    {
+        "item": "Q25571692",
+        "itemLabel": "Karashëngjergji"
+    },
+    {
+        "item": "Q25571781",
+        "itemLabel": "Sërbica e Epërme"
+    },
+    {
+        "item": "Q25563542",
+        "itemLabel": "Tugjeci"
+    },
+    {
+        "item": "Q25570485",
+        "itemLabel": "Sllatina e Vogël"
+    },
+    {
+        "item": "Q25570867",
+        "itemLabel": "Bresja"
+    },
+    {
+        "item": "Q25570889",
+        "itemLabel": "Gumnasella"
+    },
+    {
+        "item": "Q25570896",
+        "itemLabel": "Hallaçi i Madh"
+    },
+    {
+        "item": "Q25571142",
+        "itemLabel": "Belinca"
+    },
+    {
+        "item": "Q25571151",
+        "itemLabel": "Davidoci"
+    },
+    {
+        "item": "Q25571199",
+        "itemLabel": "Bajnica"
+    },
+    {
+        "item": "Q25571283",
+        "itemLabel": "Bitia e Epërme"
+    },
+    {
+        "item": "Q25571355",
+        "itemLabel": "Kriveniku"
+    },
+    {
+        "item": "Q25571372",
+        "itemLabel": "Paldenica"
+    },
+    {
+        "item": "Q25571413",
+        "itemLabel": "Nivokazi"
+    },
+    {
+        "item": "Q25571687",
+        "itemLabel": "Gorozhupi"
+    },
+    {
+        "item": "Q25571762",
+        "itemLabel": "Lubizhda e Hasit"
+    },
+    {
+        "item": "Q25571763",
+        "itemLabel": "Lukinaj"
+    },
+    {
+        "item": "Q25571791",
+        "itemLabel": "Hoça e Vogël"
+    },
+    {
+        "item": "Q25571795",
+        "itemLabel": "Pataçani i Epërm"
+    },
+    {
+        "item": "Q25571802",
+        "itemLabel": "Delloci"
+    },
+    {
+        "item": "Q25571801",
+        "itemLabel": "Dobërdelani"
+    },
+    {
+        "item": "Q25571809",
+        "itemLabel": "Krushica e Epërme"
+    },
+    {
+        "item": "Q25571823",
+        "itemLabel": "Dragobili"
+    },
+    {
+        "item": "Q25571819",
+        "itemLabel": "Sllapuzhan"
+    },
+    {
+        "item": "Q25571817",
+        "itemLabel": "Sallagrazhda"
+    },
+    {
+        "item": "Q25571828",
+        "itemLabel": "Guriqi"
+    },
+    {
+        "item": "Q25571833",
+        "itemLabel": "Llapçeva"
+    },
+    {
+        "item": "Q25571951",
+        "itemLabel": "Vitanoviqi"
+    },
+    {
+        "item": "Q25572092",
+        "itemLabel": "Nagllava"
+    },
+    {
+        "item": "Q25572111",
+        "itemLabel": "Bellopaqi"
+    },
+    {
+        "item": "Q25572168",
+        "itemLabel": "Kuçishti"
+    },
+    {
+        "item": "Q25572178",
+        "itemLabel": "Lubeniqi"
+    },
+    {
+        "item": "Q25572183",
+        "itemLabel": "Nabërgjani"
+    },
+    {
+        "item": "Q25572200",
+        "itemLabel": "Pishtani"
+    },
+    {
+        "item": "Q25572241",
+        "itemLabel": "Zllapeku"
+    },
+    {
+        "item": "Q25572289",
+        "itemLabel": "Kishnapola"
+    },
+    {
+        "item": "Q25572315",
+        "itemLabel": "Zhegoci"
+    },
+    {
+        "item": "Q25572470",
+        "itemLabel": "Soponica"
+    },
+    {
+        "item": "Q25571792",
+        "itemLabel": "Kazniku"
+    },
+    {
+        "item": "Q25571793",
+        "itemLabel": "Nagaca"
+    },
+    {
+        "item": "Q25571803",
+        "itemLabel": "Dvorani"
+    },
+    {
+        "item": "Q25571798",
+        "itemLabel": "Petkoviqi"
+    },
+    {
+        "item": "Q25571805",
+        "itemLabel": "Gelanca"
+    },
+    {
+        "item": "Q25571827",
+        "itemLabel": "Garaçeva"
+    },
+    {
+        "item": "Q25571925",
+        "itemLabel": "Desetaku"
+    },
+    {
+        "item": "Q25571933",
+        "itemLabel": "Mekiniqi"
+    },
+    {
+        "item": "Q25571940",
+        "itemLabel": "Rodeli"
+    },
+    {
+        "item": "Q25571945",
+        "itemLabel": "Trikosa"
+    },
+    {
+        "item": "Q25572034",
+        "itemLabel": "Vajniku"
+    },
+    {
+        "item": "Q25572126",
+        "itemLabel": "Broliqi"
+    },
+    {
+        "item": "Q25572124",
+        "itemLabel": "Brezhaniku"
+    },
+    {
+        "item": "Q25572174",
+        "itemLabel": "Loxha"
+    },
+    {
+        "item": "Q25572212",
+        "itemLabel": "Rashiqi"
+    },
+    {
+        "item": "Q25572232",
+        "itemLabel": "Treboviqi"
+    },
+    {
+        "item": "Q25572300",
+        "itemLabel": "Poneshi"
+    },
+    {
+        "item": "Q25572336",
+        "itemLabel": "Pasjani"
+    },
+    {
+        "item": "Q25571800",
+        "itemLabel": "Zatriq"
+    },
+    {
+        "item": "Q25571811",
+        "itemLabel": "Maçiteva"
+    },
+    {
+        "item": "Q25571808",
+        "itemLabel": "Kastërca"
+    },
+    {
+        "item": "Q25571812",
+        "itemLabel": "Mohlani"
+    },
+    {
+        "item": "Q25571816",
+        "itemLabel": "Peqani"
+    },
+    {
+        "item": "Q25571825",
+        "itemLabel": "Gajraku"
+    },
+    {
+        "item": "Q25571829",
+        "itemLabel": "Kërvasari"
+    },
+    {
+        "item": "Q25571927",
+        "itemLabel": "Gnezhdani"
+    },
+    {
+        "item": "Q25571935",
+        "itemLabel": "Miokoviqi"
+    },
+    {
+        "item": "Q25571949",
+        "itemLabel": "Ullia"
+    },
+    {
+        "item": "Q25572066",
+        "itemLabel": "Binxha"
+    },
+    {
+        "item": "Q25572114",
+        "itemLabel": "Bllagaja"
+    },
+    {
+        "item": "Q25572143",
+        "itemLabel": "Jabllanica e Madhe"
+    },
+    {
+        "item": "Q25572145",
+        "itemLabel": "Kërstoci"
+    },
+    {
+        "item": "Q25572158",
+        "itemLabel": "Kliçina"
+    },
+    {
+        "item": "Q25572163",
+        "itemLabel": "Kosuriqi"
+    },
+    {
+        "item": "Q25572166",
+        "itemLabel": "Kotradiqi"
+    },
+    {
+        "item": "Q25572195",
+        "itemLabel": "Pavlani"
+    },
+    {
+        "item": "Q25572216",
+        "itemLabel": "Reka e Allagës"
+    },
+    {
+        "item": "Q25572335",
+        "itemLabel": "Budrika e Poshtme"
+    },
+    {
+        "item": "Q25571796",
+        "itemLabel": "Pataçani i Poshtëm"
+    },
+    {
+        "item": "Q25571799",
+        "itemLabel": "Senoci"
+    },
+    {
+        "item": "Q25571797",
+        "itemLabel": "Retia e Poshtme"
+    },
+    {
+        "item": "Q25571810",
+        "itemLabel": "Krushica e Poshtme"
+    },
+    {
+        "item": "Q25571814",
+        "itemLabel": "Nishori"
+    },
+    {
+        "item": "Q25571818",
+        "itemLabel": "Popolani"
+    },
+    {
+        "item": "Q25571821",
+        "itemLabel": "Tërnja"
+    },
+    {
+        "item": "Q25571831",
+        "itemLabel": "Temeçina"
+    },
+    {
+        "item": "Q25571926",
+        "itemLabel": "Bërzanca"
+    },
+    {
+        "item": "Q25571928",
+        "itemLabel": "Kostinpotoku"
+    },
+    {
+        "item": "Q25571929",
+        "itemLabel": "Llazhina"
+    },
+    {
+        "item": "Q25571939",
+        "itemLabel": "Rumanca"
+    },
+    {
+        "item": "Q25571947",
+        "itemLabel": "Tvërgjani"
+    },
+    {
+        "item": "Q25572031",
+        "itemLabel": "Pemishti"
+    },
+    {
+        "item": "Q25572048",
+        "itemLabel": "Gjurakoci"
+    },
+    {
+        "item": "Q25572140",
+        "itemLabel": "Duboçaku"
+    },
+    {
+        "item": "Q25572162",
+        "itemLabel": "Koshutani"
+    },
+    {
+        "item": "Q25572198",
+        "itemLabel": "Pepiqi"
+    },
+    {
+        "item": "Q25572305",
+        "itemLabel": "Terizijaj"
+    },
+    {
+        "item": "Q25571807",
+        "itemLabel": "Greiçeci"
+    },
+    {
+        "item": "Q25571813",
+        "itemLabel": "Nepërbishti"
+    },
+    {
+        "item": "Q25571826",
+        "itemLabel": "Joviqi"
+    },
+    {
+        "item": "Q25571820",
+        "itemLabel": "Stravuçina"
+    },
+    {
+        "item": "Q25571830",
+        "itemLabel": "Lladroci"
+    },
+    {
+        "item": "Q25571839",
+        "itemLabel": "Broboniqi"
+    },
+    {
+        "item": "Q25571844",
+        "itemLabel": "Kçiqi i Vogël"
+    },
+    {
+        "item": "Q25571948",
+        "itemLabel": "Simiçishti"
+    },
+    {
+        "item": "Q25572099",
+        "itemLabel": "Rigjeva"
+    },
+    {
+        "item": "Q25572142",
+        "itemLabel": "Gllaviçica"
+    },
+    {
+        "item": "Q25572146",
+        "itemLabel": "Jabllanica e Vogël"
+    },
+    {
+        "item": "Q25572177",
+        "itemLabel": "Llaz-Bellopaqi"
+    },
+    {
+        "item": "Q25572180",
+        "itemLabel": "Millovanca"
+    },
+    {
+        "item": "Q25572214",
+        "itemLabel": "Raushiqi"
+    },
+    {
+        "item": "Q25572227",
+        "itemLabel": "Shtupeqi i Madh"
+    },
+    {
+        "item": "Q25572229",
+        "itemLabel": "Vragoci"
+    },
+    {
+        "item": "Q25572233",
+        "itemLabel": "Zahaqi"
+    },
+    {
+        "item": "Q25572286",
+        "itemLabel": "Gadishi"
+    },
+    {
+        "item": "Q25572299",
+        "itemLabel": "Lladova"
+    },
+    {
+        "item": "Q25572303",
+        "itemLabel": "Sllakoci i Epërm"
+    },
+    {
+        "item": "Q25572304",
+        "itemLabel": "Sllakoci i Poshtëm"
+    },
+    {
+        "item": "Q25572312",
+        "itemLabel": "Vrapçiqi"
+    },
+    {
+        "item": "Q25572469",
+        "itemLabel": "Semaja"
+    },
+    {
+        "item": "Q25576155",
+        "itemLabel": "Jabllanica"
+    },
+    {
+        "item": "Q25576182",
+        "itemLabel": "Sopoti"
+    },
+    {
+        "item": "Q25576024",
+        "itemLabel": "Izvori"
+    },
+    {
+        "item": "Q25576270",
+        "itemLabel": "Drenoci"
+    },
+    {
+        "item": "Q25576157",
+        "itemLabel": "Korenica"
+    },
+    {
+        "item": "Q25576153",
+        "itemLabel": "Sushica"
+    },
+    {
+        "item": "Q25576183",
+        "itemLabel": "Stublla"
+    },
+    {
+        "item": "Q25576543",
+        "itemLabel": "Sllatina"
+    },
+    {
+        "item": "Q25576247",
+        "itemLabel": "Novosella"
+    },
+    {
+        "item": "Q25576433",
+        "itemLabel": "Gllogjani"
+    },
+    {
+        "item": "Q25576455",
+        "itemLabel": "Novosella"
+    },
+    {
+        "item": "Q25576533",
+        "itemLabel": "Novosella"
+    },
+    {
+        "item": "Q25576285",
+        "itemLabel": "Papazi"
+    },
+    {
+        "item": "Q25576268",
+        "itemLabel": "Vërmica"
+    },
+    {
+        "item": "Q25576448",
+        "itemLabel": "Lutogllava"
+    },
+    {
+        "item": "Q25576480",
+        "itemLabel": "Turjaka"
+    },
+    {
+        "item": "Q25576017",
+        "itemLabel": "Mareci"
+    },
+    {
+        "item": "Q25576140",
+        "itemLabel": "Firaja"
+    },
+    {
+        "item": "Q25576149",
+        "itemLabel": "Jashanica"
+    },
+    {
+        "item": "Q25576170",
+        "itemLabel": "Kosharja"
+    },
+    {
+        "item": "Q25576351",
+        "itemLabel": "Jashanica"
+    },
+    {
+        "item": "Q25576497",
+        "itemLabel": "Gumnishti"
+    },
+    {
+        "item": "Q25575968",
+        "itemLabel": "Dubrava"
+    },
+    {
+        "item": "Q25575965",
+        "itemLabel": "Vranishti"
+    },
+    {
+        "item": "Q25575982",
+        "itemLabel": "Uglara"
+    },
+    {
+        "item": "Q25576021",
+        "itemLabel": "Ruboci"
+    },
+    {
+        "item": "Q25576032",
+        "itemLabel": "Parallova"
+    },
+    {
+        "item": "Q25576105",
+        "itemLabel": "Dubrava"
+    },
+    {
+        "item": "Q25576114",
+        "itemLabel": "Glloboçica"
+    },
+    {
+        "item": "Q25576132",
+        "itemLabel": "Brodi"
+    },
+    {
+        "item": "Q25576180",
+        "itemLabel": "Radoniqi"
+    },
+    {
+        "item": "Q25576244",
+        "itemLabel": "Mazreku"
+    },
+    {
+        "item": "Q25576245",
+        "itemLabel": "Novaku"
+    },
+    {
+        "item": "Q25576271",
+        "itemLabel": "Bukoshi"
+    },
+    {
+        "item": "Q25576276",
+        "itemLabel": "Dubrava"
+    },
+    {
+        "item": "Q25576269",
+        "itemLabel": "Zymi"
+    },
+    {
+        "item": "Q25576354",
+        "itemLabel": "Drenova"
+    },
+    {
+        "item": "Q25576374",
+        "itemLabel": "Plluzhina"
+    },
+    {
+        "item": "Q25576446",
+        "itemLabel": "Lëvosha"
+    },
+    {
+        "item": "Q25576447",
+        "itemLabel": "Lipa"
+    },
+    {
+        "item": "Q25576449",
+        "itemLabel": "Llabjani"
+    },
+    {
+        "item": "Q25576465",
+        "itemLabel": "Osoja"
+    },
+    {
+        "item": "Q25576495",
+        "itemLabel": "Dobërçani"
+    },
+    {
+        "item": "Q25576450",
+        "itemLabel": "Llozhani"
+    },
+    {
+        "item": "Q25576301",
+        "itemLabel": "Golluboci"
+    },
+    {
+        "item": "Q25576431",
+        "itemLabel": "Katundi i Ri"
+    },
+    {
+        "item": "Q25575971",
+        "itemLabel": "Rahovica"
+    },
+    {
+        "item": "Q25576432",
+        "itemLabel": "Dubova"
+    },
+    {
+        "item": "Q25576004",
+        "itemLabel": "Gllogoci"
+    },
+    {
+        "item": "Q25576308",
+        "itemLabel": "Tërpeza"
+    },
+    {
+        "item": "Q25576424",
+        "itemLabel": "Dobërdoli"
+    },
+    {
+        "item": "Q25576142",
+        "itemLabel": "Izhanca"
+    },
+    {
+        "item": "Q25576275",
+        "itemLabel": "Leshani"
+    },
+    {
+        "item": "Q25572474",
+        "itemLabel": "Shipitulla"
+    },
+    {
+        "item": "Q25576047",
+        "itemLabel": "Braina"
+    },
+    {
+        "item": "Q25576042",
+        "itemLabel": "Teqeja"
+    },
+    {
+        "item": "Q25576098",
+        "itemLabel": "Llanishti"
+    },
+    {
+        "item": "Q25576126",
+        "itemLabel": "Reka"
+    },
+    {
+        "item": "Q25576168",
+        "itemLabel": "Qerreti"
+    },
+    {
+        "item": "Q25576291",
+        "itemLabel": "Balinca"
+    },
+    {
+        "item": "Q25576287",
+        "itemLabel": "Samadrexha"
+    },
+    {
+        "item": "Q25576425",
+        "itemLabel": "Çallapek"
+    },
+    {
+        "item": "Q25576430",
+        "itemLabel": "Haxhaj"
+    },
+    {
+        "item": "Q25576459",
+        "itemLabel": "Malaj"
+    },
+    {
+        "item": "Q25576467",
+        "itemLabel": "Shkreli"
+    },
+    {
+        "item": "Q25576483",
+        "itemLabel": "Çelik Çeliku"
+    },
+    {
+        "item": "Q25576484",
+        "itemLabel": "Demiraj"
+    },
+    {
+        "item": "Q25576499",
+        "itemLabel": "Haxhaj"
+    },
+    {
+        "item": "Q25576523",
+        "itemLabel": "Pozharani"
+    },
+    {
+        "item": "Q25576453",
+        "itemLabel": "Llugaxhia"
+    },
+    {
+        "item": "Q25576299",
+        "itemLabel": "Banja"
+    },
+    {
+        "item": "Q25576552",
+        "itemLabel": "Millosheva"
+    },
+    {
+        "item": "Q25576466",
+        "itemLabel": "Poçesta"
+    },
+    {
+        "item": "Q25576306",
+        "itemLabel": "Magjera"
+    },
+    {
+        "item": "Q25576409",
+        "itemLabel": "Babiqi"
+    },
+    {
+        "item": "Q25576167",
+        "itemLabel": "Moglica"
+    },
+    {
+        "item": "Q25576507",
+        "itemLabel": "Pogragja"
+    },
+    {
+        "item": "Q25576092",
+        "itemLabel": "Gllavica"
+    },
+    {
+        "item": "Q25575579",
+        "itemLabel": "Blinishti"
+    },
+    {
+        "item": "Q25575969",
+        "itemLabel": "Muhoci"
+    },
+    {
+        "item": "Q25575988",
+        "itemLabel": "Zllatari"
+    },
+    {
+        "item": "Q25576030",
+        "itemLabel": "Strazha"
+    },
+    {
+        "item": "Q25576099",
+        "itemLabel": "Petrova"
+    },
+    {
+        "item": "Q25576111",
+        "itemLabel": "Gajrja"
+    },
+    {
+        "item": "Q25576113",
+        "itemLabel": "Nikaj"
+    },
+    {
+        "item": "Q25576246",
+        "itemLabel": "Medveci"
+    },
+    {
+        "item": "Q25576258",
+        "itemLabel": "Shkoza"
+    },
+    {
+        "item": "Q25576257",
+        "itemLabel": "Smaçi"
+    },
+    {
+        "item": "Q25576468",
+        "itemLabel": "Tresteniku"
+    },
+    {
+        "item": "Q25576544",
+        "itemLabel": "Strazha"
+    },
+    {
+        "item": "Q25576498",
+        "itemLabel": "Godeni"
+    },
+    {
+        "item": "Q25576066",
+        "itemLabel": "Livadhia"
+    },
+    {
+        "item": "Q25576307",
+        "itemLabel": "Qypeva"
+    },
+    {
+        "item": "Q25572473",
+        "itemLabel": "Leshkoshiqi"
+    },
+    {
+        "item": "Q25576035",
+        "itemLabel": "Konjuhi"
+    },
+    {
+        "item": "Q25575981",
+        "itemLabel": "Tërni"
+    },
+    {
+        "item": "Q25576156",
+        "itemLabel": "Kodralia"
+    },
+    {
+        "item": "Q25576184",
+        "itemLabel": "Vraniqi(Gjakovë)"
+    },
+    {
+        "item": "Q25576298",
+        "itemLabel": "Berisha"
+    },
+    {
+        "item": "Q25576510",
+        "itemLabel": "Selishti"
+    },
+    {
+        "item": "Q16508174",
+        "itemLabel": "Q16508174"
+    },
+    {
+        "item": "Q16681321",
+        "itemLabel": "Q16681321"
+    },
+    {
+        "item": "Q16827796",
+        "itemLabel": "Q16827796"
+    },
+    {
+        "item": "Q18713009",
+        "itemLabel": "Q18713009"
+    },
+    {
+        "item": "Q18698367",
+        "itemLabel": "Dardani"
+    },
+    {
+        "item": "Q20575961",
+        "itemLabel": "Krysheci"
+    },
+    {
+        "item": "Q20578276",
+        "itemLabel": "Ropotova e Vogël"
+    },
+    {
+        "item": "Q20578922",
+        "itemLabel": "Sllup"
+    },
+    {
+        "item": "Q20579441",
+        "itemLabel": "Xërxe"
+    },
+    {
+        "item": "Q21140259",
+        "itemLabel": "Gjonaj"
+    },
+    {
+        "item": "Q18518892",
+        "itemLabel": "Kokaj"
+    },
+    {
+        "item": "Q20575274",
+        "itemLabel": "Idriz Rashiti"
+    },
+    {
+        "item": "Q20576219",
+        "itemLabel": "Leshani (Pejë)"
+    },
+    {
+        "item": "Q27340537",
+        "itemLabel": "Q27340537"
+    },
+    {
+        "item": "Q27341963",
+        "itemLabel": "Q27341963"
+    },
+    {
+        "item": "Q27341968",
+        "itemLabel": "Q27341968"
+    },
+    {
+        "item": "Q27341999",
+        "itemLabel": "Q27341999"
+    },
+    {
+        "item": "Q27342012",
+        "itemLabel": "Q27342012"
+    },
+    {
+        "item": "Q27342022",
+        "itemLabel": "Q27342022"
+    },
+    {
+        "item": "Q27342020",
+        "itemLabel": "Q27342020"
+    },
+    {
+        "item": "Q27342025",
+        "itemLabel": "Q27342025"
+    },
+    {
+        "item": "Q27344734",
+        "itemLabel": "Q27344734"
+    },
+    {
+        "item": "Q27344736",
+        "itemLabel": "Q27344736"
+    },
+    {
+        "item": "Q27344794",
+        "itemLabel": "Q27344794"
+    },
+    {
+        "item": "Q27344854",
+        "itemLabel": "Q27344854"
+    },
+    {
+        "item": "Q27344896",
+        "itemLabel": "Q27344896"
+    },
+    {
+        "item": "Q20574538",
+        "itemLabel": "Firiqevë"
+    },
+    {
+        "item": "Q20578260",
+        "itemLabel": "Rezistenca ish Baica"
+    },
+    {
+        "item": "Q20578880",
+        "itemLabel": "Shumadia e Re"
+    },
+    {
+        "item": "Q21984128",
+        "itemLabel": "Baqevc"
+    },
+    {
+        "item": "Q19931550",
+        "itemLabel": "Doblibara"
+    },
+    {
+        "item": "Q20310462",
+        "itemLabel": "Stantërgu"
+    },
+    {
+        "item": "Q20574849",
+        "itemLabel": "Lista e fshatrave të Gjilanit"
+    },
+    {
+        "item": "Q20576798",
+        "itemLabel": "Mirusha"
+    },
+    {
+        "item": "Q20577918",
+        "itemLabel": "Prejlep"
+    },
+    {
+        "item": "Q20578342",
+        "itemLabel": "Rufci i Ri"
+    },
+    {
+        "item": "Q26793400",
+        "itemLabel": "Bobi"
+    },
+    {
+        "item": "Q28223842",
+        "itemLabel": "Llugaxhia"
+    },
+    {
+        "item": "Q25572128",
+        "itemLabel": "Drelaj"
+    },
+    {
+        "item": "Q20576786",
+        "itemLabel": "Miganoc"
+    },
+    {
+        "item": "Q20577839",
+        "itemLabel": "Poklek i Vjetër"
+    },
+    {
+        "item": "Q20578478",
+        "itemLabel": "Shahiq"
+    },
+    {
+        "item": "Q31665717",
+        "itemLabel": "Zllashi"
+    },
+    {
+        "item": "Q31665833",
+        "itemLabel": "Skullani"
+    },
+    {
+        "item": "Q31668957",
+        "itemLabel": "Kishnica"
+    },
+    {
+        "item": "Q31682765",
+        "itemLabel": "Çagllavica"
+    },
+    {
+        "item": "Q31682896",
+        "itemLabel": "Çifllaku"
+    },
+    {
+        "item": "Q31666631",
+        "itemLabel": "Vllasali"
+    },
+    {
+        "item": "Q31682770",
+        "itemLabel": "Dobratini"
+    },
+    {
+        "item": "Q25572472",
+        "itemLabel": "Hamidia"
+    },
+    {
+        "item": "Q31665812",
+        "itemLabel": "Gushterica e Epërme"
+    },
+    {
+        "item": "Q31665824",
+        "itemLabel": "Gushterica e Poshtme"
+    },
+    {
+        "item": "Q31665832",
+        "itemLabel": "Livagja"
+    },
+    {
+        "item": "Q27345743",
+        "itemLabel": "Kozarica"
+    },
+    {
+        "item": "Q32922755",
+        "itemLabel": "Ivaja"
+    },
+    {
+        "item": "Q31665702",
+        "itemLabel": "Rimanishti"
+    },
+    {
+        "item": "Q31665721",
+        "itemLabel": "Sinidoli"
+    },
+    {
+        "item": "Q33170351",
+        "itemLabel": "Kormjani i Poshtëm"
+    },
+    {
+        "item": "Q33180210",
+        "itemLabel": "Sverka"
+    },
+    {
+        "item": "Q33181004",
+        "itemLabel": "Mirena"
+    },
+    {
+        "item": "Q33183673",
+        "itemLabel": "Bostani (Artanë)"
+    },
+    {
+        "item": "Q34630870",
+        "itemLabel": "Dejna"
+    },
+    {
+        "item": "Q37474945",
+        "itemLabel": "Retia"
+    },
+    {
+        "item": "Q37779411",
+        "itemLabel": "Duraj"
+    },
+    {
+        "item": "Q37810184",
+        "itemLabel": "Kotlina"
+    },
+    {
+        "item": "Q38040493",
+        "itemLabel": "Rosula"
+    },
+    {
+        "item": "Q38040865",
+        "itemLabel": "Duga"
+    },
+    {
+        "item": "Q38041027",
+        "itemLabel": "Ranca"
+    },
+    {
+        "item": "Q38041052",
+        "itemLabel": "Rakovina"
+    },
+    {
+        "item": "Q38041074",
+        "itemLabel": "Luzhnica"
+    },
+    {
+        "item": "Q38041130",
+        "itemLabel": "Maralia"
+    },
+    {
+        "item": "Q38041158",
+        "itemLabel": "Duboka"
+    },
+    {
+        "item": "Q38041220",
+        "itemLabel": "Gulia"
+    },
+    {
+        "item": "Q38041232",
+        "itemLabel": "Kalina"
+    },
+    {
+        "item": "Q38041243",
+        "itemLabel": "Bakshia"
+    }
+]

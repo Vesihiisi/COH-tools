@@ -329,7 +329,6 @@ def make_dataset(country, language):
     from SeArbetslSv import SeArbetslSv
     from SeBbrSv import SeBbrSv
     from SeShipSv import SeShipSv
-    from XkSq import XkSq
     from ZaEn import ZaEn
     SPECIFIC_TABLES = {
         "monuments_se-ship_(sv)": {
@@ -340,7 +339,6 @@ def make_dataset(country, language):
         "monuments_hu_(hu)": {"class": HuHu, "data_files": {}},
         "monuments_pt_(pt)": {"class": PtPt, "data_files": {}},
         "monuments_ro_(ro)": {"class": RoRo, "data_files": {}},
-        "monuments_xk_(sq)": {"class": XkSq, "data_files": {}},
         "monuments_ie_(en)": {
             "class": IeEn,
             "data_files": {"counties": "ireland_counties.json"}},
