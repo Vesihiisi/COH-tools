@@ -179,7 +179,7 @@ class Uploader(object):
         elif isinstance(value, dict) and 'time_value' in value:
             val_item = self.make_time_item(value, self.repo)
         elif isinstance(value, dict) and 'monolingual_value' in value:
-            val_item = self.make_monolingual_item(value, self.repo)
+            val_item = self.make_monolingual_item(value)
         elif prop == PROPS["commonscat"] and utils.commonscat_exists(value):
             val_item = value
         else:
