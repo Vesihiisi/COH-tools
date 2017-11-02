@@ -15,7 +15,9 @@ class BeBruNl(Monument):
                 search_term=location,
                 search_in="itemLabel")
             if len(location_match) == 1:
-                self.add_statement("located_adm", location_match)
+                self.add_statement("located_adm", location_match[0])
+            else:
+                self.add_to_report("plaats", self.plaats, "located_adm")
         else:
             self.add_statement("located_adm", brussel_region)
 
@@ -33,26 +35,41 @@ class BeBruNl(Monument):
             prot_date = self.beschermd
             try:
                 date_dict = utils.date_to_dict(prot_date, "%d/%m/%Y")
-                qualifier = {"start_time": {"time_value": date_dict}}
+                qualifier = {"start_time": utils.package_time(date_dict)}
                 heritage = self.mapping["heritage"]["item"]
                 self.add_statement("heritage_status", heritage, qualifier)
             except ValueError:
-                self.add_to_report("beschermd", self.beschermd)
+                self.add_to_report(
+                    "beschermd", self.beschermd, "heritage_status")
                 return super().set_heritage()
         else:
             return super().set_heritage()
 
-    def set_address(self):
+    def set_address_and_disambig(self):
         street_with_no = utils.remove_markup(self.adres.title()).rstrip(',')
-        whole_address = "{}, {}".format(street_with_no, self.plaats)
-        self.add_statement("located_street", whole_address)
+
+        # strip "0" as the number
+        streets = [street.partition(' 0')[0]
+                   for street in street_with_no.split(', ')]
+        street_with_non_zero_no = ', '.join(streets)
+
+        if self.has_non_empty_attribute("plaats"):
+            # w/o plaats happen
+            whole_address = "{}, {}".format(
+                street_with_non_zero_no, self.plaats)
+        else:
+            whole_address = street_with_non_zero_no
+
+        qualifier = {"language of name": "Q7411"}  # in dutch
+        self.add_statement("located_street", whole_address, qualifier)
+
+        self.add_disambiguator(street_with_non_zero_no, 'nl')
 
     def set_special_is(self):
         objtype = self.objtype.lower()
         types = self.data_files["type"]["mappings"]
         special_types = utils.get_matching_items_from_dict(objtype, types)
         if len(special_types) > 0:
-            self.remove_statement("is")
             for q in special_types:
                 self.add_statement("is", q)
 
@@ -84,14 +101,11 @@ class BeBruNl(Monument):
         dutch = "{} in {}, België".format(self.objtype.lower(), self.plaats)
         self.add_description("nl", dutch)
 
-        english = "heritage site in {}, Belgium".format(self.plaats)
-        self.add_description("en", english)
-
     def set_building_year(self):
         if self.has_non_empty_attribute("bouwjaar"):
             if utils.legit_year(self.bouwjaar):
                 self.add_statement(
-                    "inception", {"time_value": {"year": self.bouwjaar}})
+                    "inception", utils.package_time({"year": self.bouwjaar}))
             else:
                 self.add_to_report("bouwjaar", self.bouwjaar, "inception")
 
@@ -114,11 +128,11 @@ class BeBruNl(Monument):
         self.set_commonscat()
         self.set_architect()
         self.set_style()
-        self.set_is()
+        # self.set_is()
         self.set_special_is()
         self.set_coords()
         self.set_building_year()
-        self.set_address()
+        self.set_address_and_disambig()
         self.update_labels()
         self.update_descriptions()
         self.set_wd_item(self.find_matching_wikidata(mapping))

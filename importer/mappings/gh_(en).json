@@ -1,0 +1,21 @@
+{
+    "country": {
+        "item": "Q117",
+        "name": "Ghana"
+    },
+    "country_code": "gh",
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "Q5555520",
+        "name": "Material Cultural Heritage of Ghana"
+    },
+    "language": "en",
+    "table_name": "gh",
+    "unique": {
+        "comment": "WLM ID",
+        "property": "P2186"
+    }
+}
