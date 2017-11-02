@@ -1,0 +1,212 @@
+[
+  {
+    "iso_code": "RO-AB",
+    "item": "Q45868",
+    "itemLabel": "Alba County"
+  },
+  {
+    "iso_code": "RO-SM",
+    "item": "Q165459",
+    "itemLabel": "Satu Mare County"
+  },
+  {
+    "iso_code": "RO-VS",
+    "item": "Q167199",
+    "itemLabel": "Vaslui County"
+  },
+  {
+    "iso_code": "RO-BT",
+    "item": "Q178861",
+    "itemLabel": "Botoşani County"
+  },
+  {
+    "iso_code": "RO-AR",
+    "item": "Q179559",
+    "itemLabel": "Arad County"
+  },
+  {
+    "iso_code": "RO-AG",
+    "item": "Q179567",
+    "itemLabel": "Argeș County"
+  },
+  {
+    "iso_code": "RO-BH",
+    "item": "Q179588",
+    "itemLabel": "Bihor County"
+  },
+  {
+    "iso_code": "RO-B",
+    "item": "Q19660",
+    "itemLabel": "Bucharest"
+  },
+  {
+    "iso_code": "RO-BC",
+    "item": "Q179779",
+    "itemLabel": "Bacău County"
+  },
+  {
+    "iso_code": "RO-SV",
+    "item": "Q181209",
+    "itemLabel": "Suceava County"
+  },
+  {
+    "iso_code": "RO-BN",
+    "item": "Q181513",
+    "itemLabel": "Bistriţa-Năsăud County"
+  },
+  {
+    "iso_code": "RO-BV",
+    "item": "Q182614",
+    "itemLabel": "Braşov County"
+  },
+  {
+    "iso_code": "RO-CJ",
+    "item": "Q182624",
+    "itemLabel": "Cluj County"
+  },
+  {
+    "iso_code": "RO-VN",
+    "item": "Q182778",
+    "itemLabel": "Vrancea County"
+  },
+  {
+    "iso_code": "RO-IS",
+    "item": "Q182888",
+    "itemLabel": "Iași County"
+  },
+  {
+    "iso_code": "RO-SB",
+    "item": "Q184797",
+    "itemLabel": "Sibiu County"
+  },
+  {
+    "iso_code": "RO-BZ",
+    "item": "Q185309",
+    "itemLabel": "Buzău County"
+  },
+  {
+    "iso_code": "RO-TM",
+    "item": "Q185586",
+    "itemLabel": "Timiș County"
+  },
+  {
+    "iso_code": "RO-VL",
+    "item": "Q186838",
+    "itemLabel": "Vâlcea County"
+  },
+  {
+    "iso_code": "RO-CS",
+    "item": "Q187925",
+    "itemLabel": "Caraș-Severin County"
+  },
+  {
+    "iso_code": "RO-BR",
+    "item": "Q188503",
+    "itemLabel": "Brăila County"
+  },
+  {
+    "iso_code": "RO-CT",
+    "item": "Q188505",
+    "itemLabel": "Constanța County"
+  },
+  {
+    "iso_code": "RO-NT",
+    "item": "Q188661",
+    "itemLabel": "Neamț County"
+  },
+  {
+    "iso_code": "RO-PH",
+    "item": "Q188665",
+    "itemLabel": "Prahova County"
+  },
+  {
+    "iso_code": "RO-GL",
+    "item": "Q188796",
+    "itemLabel": "Galați County"
+  },
+  {
+    "iso_code": "RO-DB",
+    "item": "Q188797",
+    "itemLabel": "Dâmbovița County"
+  },
+  {
+    "iso_code": "RO-MM",
+    "item": "Q188813",
+    "itemLabel": "Maramureș County"
+  },
+  {
+    "iso_code": "RO-OT",
+    "item": "Q188945",
+    "itemLabel": "Olt County"
+  },
+  {
+    "iso_code": "RO-CL",
+    "item": "Q188948",
+    "itemLabel": "Călărași County"
+  },
+  {
+    "iso_code": "RO-CV",
+    "item": "Q188959",
+    "itemLabel": "Covasna County"
+  },
+  {
+    "iso_code": "RO-GJ",
+    "item": "Q190406",
+    "itemLabel": "Gorj County"
+  },
+  {
+    "iso_code": "RO-SJ",
+    "item": "Q190690",
+    "itemLabel": "Sălaj County"
+  },
+  {
+    "iso_code": "RO-HR",
+    "item": "Q190702",
+    "itemLabel": "Harghita County"
+  },
+  {
+    "iso_code": "RO-MS",
+    "item": "Q190711",
+    "itemLabel": "Mureș County"
+  },
+  {
+    "iso_code": "RO-DJ",
+    "item": "Q191065",
+    "itemLabel": "Dolj County"
+  },
+  {
+    "iso_code": "RO-HD",
+    "item": "Q191071",
+    "itemLabel": "Hunedoara County"
+  },
+  {
+    "iso_code": "RO-TL",
+    "item": "Q191078",
+    "itemLabel": "Tulcea County"
+  },
+  {
+    "iso_code": "RO-TR",
+    "item": "Q191653",
+    "itemLabel": "Teleorman County"
+  },
+  {
+    "iso_code": "RO-IF",
+    "item": "Q191670",
+    "itemLabel": "Ilfov County"
+  },
+  {
+    "iso_code": "RO-MH",
+    "item": "Q191717",
+    "itemLabel": "Mehedinți County"
+  },
+  {
+    "iso_code": "RO-IL",
+    "item": "Q193044",
+    "itemLabel": "Ialomița County"
+  },
+  {
+    "iso_code": "RO-GR",
+    "item": "Q193055",
+    "itemLabel": "Giurgiu County"
+  }
+]

@@ -1,0 +1,21 @@
+{
+    "country": {
+        "item": "Q399",
+        "name": "Armenia"
+    },
+    "country_code": "am",
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "Q26884649",
+        "name": "Cultural heritage m. of Armenia"
+    },
+    "language": "hy",
+    "table_name": "am",
+    "unique": {
+        "comment": "cultural heritage in Armenia ID",
+        "property": "P3170"
+    }
+}

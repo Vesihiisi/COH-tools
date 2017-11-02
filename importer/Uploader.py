@@ -21,13 +21,58 @@ class Uploader(object):
             message = "{} ADDED LABELS {}".format(t_id, labels)
             log.logit(message)
 
-    def add_descriptions(self, target_item, descriptions, log):
+    def add_descriptions(self, target_item, descriptions, log,
+                         disambiguated=None):
         """Add descriptions."""
-        self.wdstuff.add_multiple_descriptions(descriptions, target_item)
-        if log:
-            t_id = target_item.getID()
-            message = "{} ADDED DESCRIPTIONS {}".format(t_id, descriptions)
-            log.logit(message)
+        disambiguated = disambiguated or []
+        try:
+            self.wdstuff.add_multiple_descriptions(descriptions, target_item)
+        except pywikibot.exceptions.OtherPageSaveError as e:
+            new_desc = self.add_disambiguators_to_descriptions(
+                descriptions, e, disambiguated)
+            if new_desc:
+                self.add_descriptions(
+                    target_item, new_desc, log, disambiguated)
+            else:
+                raise
+        else:
+            if log:
+                t_id = target_item.getID()
+                message = "{} ADDED DESCRIPTIONS {}".format(t_id, descriptions)
+                log.logit(message)
+
+    def add_disambiguators_to_descriptions(self, descriptions, pwb_error,
+                                           disambiguated):
+        """
+        Add needed disambiguators to descriptions.
+
+        :param descriptions: pre-existing descriptions
+        :param pwb_error: the raised pywikibot.exceptions.OtherPageSaveError.
+            This error in turn contains a pywikibot.data.api.APIError as the
+            underlying reason.
+        :param disambiguated: list of previously disambiguated languages
+        :return: a new description dict or None if disambiguators could not be
+            added.
+        """
+        if (pwb_error.reason.other.get('messages')[0].get('name') !=
+                'wikibase-validator-label-with-description-conflict'):
+            # this is not a disambiguator error
+            return None
+
+        lang = pwb_error.reason.other.get('messages')[0].get('parameters')[1]
+        if lang in disambiguated:
+            # this language was already disambiguated
+            return None
+        else:
+            disambiguated.append(lang)
+
+        disambiguators = self.data["disambiguators"]
+        if lang not in disambiguators and '_default' not in disambiguators:
+            # no matching or default disambiguator found
+            return None
+        disambig_text = disambiguators.get(lang) or disambiguators['_default']
+        descriptions[lang] += ' ({0})'.format(disambig_text)
+        return descriptions
 
     def make_image_item(self, filename):
         commonssite = utils.create_site_instance("commons", "commons")
@@ -35,7 +80,7 @@ class Uploader(object):
             filename, source=commonssite, defaultNamespace=6)
         return pywikibot.FilePage(imagelink)
 
-    def make_coords_item(self, coordstuple):
+    def make_coords_item(self, coordstuple, repo):
         """
         Create a Coordinate item.
 
@@ -44,7 +89,7 @@ class Uploader(object):
         """
         DEFAULT_PREC = 0.0001
         return pywikibot.Coordinate(
-            coordstuple[0], coordstuple[1], precision=DEFAULT_PREC)
+            coordstuple[0], coordstuple[1], precision=DEFAULT_PREC, site=repo)
 
     def make_quantity_item(self, quantity, repo):
         """
@@ -59,7 +104,7 @@ class Uploader(object):
             unit = None
         return pywikibot.WbQuantity(amount=value, unit=unit, site=repo)
 
-    def make_monolingual_item(self, quantity, repo):
+    def make_monolingual_item(self, quantity):
         """
         Create claim for a monolingual text.
 
@@ -128,7 +173,7 @@ class Uploader(object):
             # Don't upload coords if item already has one.
             # Temp. until https://phabricator.wikimedia.org/T160282 is solved.
             if not self.item_has_prop("coordinates", self.wd_item):
-                val_item = self.make_coords_item(value)
+                val_item = self.make_coords_item(value, self.repo)
         elif isinstance(value, dict) and 'quantity_value' in value:
             val_item = self.make_quantity_item(value, self.repo)
         elif isinstance(value, dict) and 'time_value' in value:
@@ -138,7 +183,7 @@ class Uploader(object):
         elif prop == PROPS["commonscat"] and utils.commonscat_exists(value):
             val_item = value
         else:
-            val_item = value
+            val_item = value.strip() if value else None
         return val_item
 
     def make_statement(self, value):
@@ -164,11 +209,13 @@ class Uploader(object):
                 ref_url_prop, ref_url)
             ref = self.wdstuff.Reference(
                 source_test=[source_claim, ref_url_claim],
-                source_notest=self.wdstuff.make_simple_claim(prop_date, date_item))
+                source_notest=self.wdstuff.make_simple_claim(
+                    prop_date, date_item))
         else:
             ref = self.wdstuff.Reference(
                 source_test=[source_claim],
-                source_notest=self.wdstuff.make_simple_claim(prop_date, date_item))
+                source_notest=self.wdstuff.make_simple_claim(
+                    prop_date, date_item))
         return ref
 
     def add_claims(self, wd_item, claims, log):
@@ -293,5 +340,5 @@ class Uploader(object):
         if log is not None:
             self.log = log
         self.data = monument_object.wd_item
-        self.wdstuff = WDS(self.repo, edit_summary=self.summary)
+        self.wdstuff = WDS(self.repo, edit_summary=self.summary, no_wdss=True)
         self.set_wd_item()
