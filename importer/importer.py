@@ -79,8 +79,10 @@ def select_query(query, connection):
 def get_wd_items_using_prop(prop):
     items = {}
     print("WILL NOW DOWNLOAD WD ITEMS THAT USE " + prop)
-    query = "SELECT DISTINCT ?item ?value  WHERE {?item p:" + \
-        prop + "?statement. OPTIONAL { ?item wdt:" + prop + " ?value. }}"
+    query = (
+        "SELECT DISTINCT ?item ?value "
+        "WHERE { ?item wdt:%s ?value }" % prop
+    )
     data = lookup.make_simple_wdqs_query(query, verbose=False)
     for x in data:
         key = lookup.sanitize_wdqs_result(x['item'])
