@@ -185,8 +185,8 @@ def q_from_wikipedia(language, page_title):
     If the page has no item and is in the article
     namespace, create an item for it.
     """
-    if "[[" in page_title:
-        page_title = remove_markup(page_title)
+    if page_title.startswith("[[") and page_title.endswith("]]"):
+        page_title = get_wikilinks(page_title)[0].title
     wp_site = pywikibot.Site(language, "wikipedia")
     page = pywikibot.Page(wp_site, page_title)
     summary = "Creating item for {} on {}wp."
