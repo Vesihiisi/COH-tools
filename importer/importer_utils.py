@@ -182,6 +182,7 @@ def count_wikilinks(text):
 def q_from_wikipedia(language, page_title):
     """
     Get the ID of the WD item linked to a wp page.
+
     If the page has no item and is in the article
     namespace, create an item for it.
     """

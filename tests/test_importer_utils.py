@@ -593,6 +593,11 @@ class TestWikipedia(unittest.TestCase):
         self.assertIsNone(wiki_page)
 
     def test_q_from_wikipedia_leftover_brackets(self):
+        wiki_page = utils.q_from_wikipedia("sv", "[[Pallaskatt]]")
+        result = "Q166794"
+        self.assertEqual(wiki_page, result)
+
+    def test_q_from_wikipedia_leftover_brackets_pipe(self):
         wiki_page = utils.q_from_wikipedia("sv", "[[Pallaskatt|foo!]]")
         result = "Q166794"
         self.assertEqual(wiki_page, result)
