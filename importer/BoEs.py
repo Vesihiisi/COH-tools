@@ -43,7 +43,8 @@ class BoEs(Monument):
 
     def set_directions(self):
         if self.has_non_empty_attribute("direccion"):
-            monolingual = utils.package_monolingual(self.direccion, 'es')
+            monolingual = utils.package_monolingual(
+                utils.remove_markup(self.direccion), 'es')
             self.add_statement("directions", monolingual)
 
     def exists_with_monument_article(self, language):
