@@ -1,0 +1,21 @@
+{
+    "country": {
+        "item": "Q114",
+        "name": "Kenya"
+    },
+    "country_code": "ke",
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "Q28485740",
+        "name": "National monument of Kenya"
+    },
+    "language": "en",
+    "table_name": "ke",
+    "unique": {
+        "comment": "wlm id",
+        "property": "P2186"
+    }
+}

@@ -1,4 +1,4 @@
-import pymysql
+import pywikibot
 import argparse
 import wlmhelpers
 
@@ -31,19 +31,28 @@ def createPage(connection):
 
 
 def main(arguments):
-    connection = pymysql.connect(
-        host=arguments.host,
-        user=arguments.user,
-        password=arguments.password,
-        db=arguments.db,
-        charset="utf8")
+    connection = wlmhelpers.create_connection(arguments)
     createPage(connection)
 
-if __name__ == "__main__":
+
+def handle_args(*args):
+    """
+    Parse and handle command line arguments to get data from the database.
+
+    Also supports any pywikibot arguments, these are prefixed by a single "-"
+    and the full list can be gotten through "-help".
+    """
     parser = argparse.ArgumentParser()
-    parser.add_argument("--host", default="localhost")
-    parser.add_argument("--user", default="root")
-    parser.add_argument("--password", default="")
-    parser.add_argument("--db", default="wlm")
-    args = parser.parse_args()
-    main(args)
+    if not wlmhelpers.on_forge():
+        parser.add_argument("--host", default="localhost")
+        parser.add_argument("--db", default="wlm")
+        parser.add_argument("--user", default="root")
+        parser.add_argument("--password", default="")
+
+    # first parse args with pywikibot, send remaining args to local handler
+    return parser.parse_args(pywikibot.handle_args(args))
+
+
+if __name__ == "__main__":
+    parsed_args = handle_args()
+    main(parsed_args)

@@ -1,0 +1,21 @@
+{
+    "country": {
+        "item": "Q222",
+        "name": "Albania"
+    },
+    "country_code": "al",
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "Q30232537",
+        "name": "Cultural heritage site of Albania"
+    },
+    "language": "sq",
+    "table_name": "al",
+    "unique": {
+        "comment": "WLM id",
+        "property": "P2186"
+    }
+}

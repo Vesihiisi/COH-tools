@@ -20,7 +20,7 @@ class TestWLMStuff(unittest.TestCase):
         id_no = "SFC 9698"
         output = ("https://tools.wmflabs.org/heritage/api/api.php"
                   "?action=search&format=json&srcountry=se-ship"
-                  "&srlanguage=sv&srid=SFC%209698")
+                  "&srlang=sv&srid=SFC%209698")
         self.assertEqual(utils.create_wlm_url(dataset, lang, id_no), output)
 
 
@@ -303,6 +303,21 @@ class TestDatetimeMethods(unittest.TestCase):
 
 class TestWikitext(unittest.TestCase):
 
+    def test_get_urls_none(self):
+        text = "[[Tegera Arena]], huvudentrén"
+        output = []
+        self.assertEqual(utils.get_external_links(text), output)
+
+    def test_get_urls_one(self):
+        text = "prefix [http://www.wiki.com/Foobar.html some label] postfix"
+        output = ["http://www.wiki.com/Foobar.html"]
+        self.assertEqual(utils.get_external_links(text), output)
+
+    def test_get_urls_one_no_label(self):
+        text = "prefix [http://www.wiki.com/Foobar.html] postfix"
+        output = ["http://www.wiki.com/Foobar.html"]
+        self.assertEqual(utils.get_external_links(text), output)
+
     def test_remove_markup_simple(self):
         text = "[[Tegera Arena]], huvudentrén"
         output = "Tegera Arena, huvudentrén"
@@ -316,6 +331,16 @@ class TestWikitext(unittest.TestCase):
     def test_remove_markup_linebreak_2(self):
         text = "[[Tegera Arena]],<br/> huvudentrén"
         output = "Tegera Arena, huvudentrén"
+        self.assertEqual(utils.remove_markup(text), output)
+
+    def test_remove_markup_two_apostrophes(self):
+        text = "Poblado de Son Marc ''(Sa Talaieta)''"
+        output = "Poblado de Son Marc (Sa Talaieta)"
+        self.assertEqual(utils.remove_markup(text), output)
+
+    def test_remove_markup_three_apostrophes(self):
+        text = "'''A''' b."
+        output = "A b."
         self.assertEqual(utils.remove_markup(text), output)
 
     def test_remove_markup_pipe(self):
@@ -567,6 +592,21 @@ class TestWikipedia(unittest.TestCase):
     def test_q_from_wikipedia_disambig(self):
         wiki_page = utils.q_from_wikipedia("fi", "1 (täsmennyssivu)")
         self.assertIsNone(wiki_page)
+
+    def test_q_from_wikipedia_leftover_brackets(self):
+        wiki_page = utils.q_from_wikipedia("sv", "[[Pallaskatt]]")
+        result = "Q166794"
+        self.assertEqual(wiki_page, result)
+
+    def test_q_from_wikipedia_leftover_brackets_pipe(self):
+        wiki_page = utils.q_from_wikipedia("sv", "[[Pallaskatt|foo!]]")
+        result = "Q166794"
+        self.assertEqual(wiki_page, result)
+
+    def test_q_from_wikipedia_leftover_brackets_empty(self):
+        wiki_page = utils.q_from_wikipedia("sv", "[[]]")
+        result = None
+        self.assertEqual(wiki_page, result)
 
     def test_q_from_first_wikilink(self):
         text = ("'''Norrala socken'''"

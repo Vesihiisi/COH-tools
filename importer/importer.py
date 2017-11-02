@@ -10,6 +10,7 @@ import importer_utils as utils
 DEFAULT_SHORT = 10
 MAPPING_DIR = "mappings"
 REPORTING_DIR = "reports"
+PREVIEW_DIR = "previews"
 MONUMENTS_ALL = "monuments_all"
 
 
@@ -104,12 +105,19 @@ def get_subclasses(q_item):
     return results
 
 
-def save_reports(problem_reports, tablename, timestamp):
-    """Save the problem reports of the batch to a file."""
+def make_filenames(tablename, timestamp):
+    """Construct the problem and preview filenames."""
+    filenames = {}
     utils.create_dir(REPORTING_DIR)
-    filename = path.join(
-        REPORTING_DIR, "report_{}_{}.json".format(tablename, timestamp))
-    utils.json_to_file(filename, problem_reports)
+    filenames['reports'] = path.join(
+        REPORTING_DIR, "report_{0}_{1}.json".format(tablename, timestamp))
+
+    utils.create_dir(PREVIEW_DIR)
+    filenames['examples'] = path.join(
+        PREVIEW_DIR, "examples_{0}_{1}.wiki".format(tablename, timestamp))
+    filenames['matches'] = path.join(
+        PREVIEW_DIR, "matches_{0}_{1}.wiki".format(tablename, timestamp))
+    return filenames
 
 
 def load_data_files(dataset):
@@ -129,6 +137,7 @@ def load_data(dataset):
     Loads both offline files and online ones specified in the dataset.
     """
     data_files = load_data_files(dataset)
+    data_files["_static"] = load_static_data()
     if dataset.subclass_downloads:
         for sub_title, sub_item in dataset.subclass_downloads.items():
             data_files[sub_title] = get_subclasses(sub_item)
@@ -142,12 +151,26 @@ def load_data(dataset):
     return data_files
 
 
+def load_static_data():
+    """Get static data files shared by all countries."""
+    return {
+        "props": utils.load_json(
+            path.join(MAPPING_DIR, "props_general.json")),
+        "adm0": utils.load_json(path.join(MAPPING_DIR, "adm0.json")),
+        "sources": utils.load_json(
+            path.join(MAPPING_DIR, "data_sources.json")),
+        "common_items": utils.load_json(
+            path.join(MAPPING_DIR, "common_items.json"))
+    }
+
+
 def get_items(connection,
               dataset,
               upload,
               short=False,
               offset=None,
-              table=False):
+              table=False,
+              list_matches=False):
     """
     Retrieve data from database and process it.
 
@@ -157,8 +180,11 @@ def get_items(connection,
     :param short: Optional number of randomly selected rows to process.
     :param offset: Optional offset to retrieve rows.
     :param table: Whether to save the results as a wikitable.
+    :param list_matches: Whether to save a list of matched items and their
+        P31 values for copy/pasting to Wikidata.
     """
-    started_at = utils.get_current_timestamp()
+    filenames = make_filenames(
+        dataset.table_name, utils.get_current_timestamp())
     if upload:
         logger = Logger()
     if not utils.table_exists(connection, dataset.table_name):
@@ -177,20 +203,26 @@ def get_items(connection,
     if short:
         database_rows = utils.get_random_list_sample(database_rows, short)
         print("USING RANDOM SAMPLE OF " + str(short))
-    filename = "{0} {1}".format(
-        dataset.table_name, utils.get_current_timestamp())
+
+    matched_item_p31s = {}
     problem_reports = []
+
     wikidata_site = utils.create_site_instance("wikidata", "wikidata")
     data_files = load_data(dataset)
+    counter = 0
     for row in database_rows:
+        if not upload and counter % 100 == 0:
+            # visual feedback needed for preview runs
+            print(".", end="", flush=True)
+        counter += 1
         monument = dataset.monument_class(
             row, mapping, data_files, existing, wikidata_site)
         problem_report = monument.get_report()
         if table:
             raw_data = "<pre>" + str(row) + "</pre>\n"
             monument_table = monument.print_wd_to_table()
-            utils.append_line_to_file(raw_data, filename)
-            utils.append_line_to_file(monument_table, filename)
+            utils.append_line_to_file(raw_data, filenames['examples'])
+            utils.append_line_to_file(monument_table, filenames['examples'])
         if upload:
             live = True if upload == "live" else False
             uploader = Uploader(
@@ -209,17 +241,56 @@ def get_items(connection,
 
             uploader.upload()
             print("--------------------------------------------------")
+        if list_matches:
+            match_info = monument.get_matched_item_p31s()
+            if match_info:
+                for p31 in match_info[0]:
+                    if p31 not in matched_item_p31s:
+                        matched_item_p31s[p31] = []
+                    matched_item_p31s[p31].append(
+                        (match_info[1], match_info[2]))
         if problem_report:  # dictionary is not empty
             problem_reports.append(problem_report)
-            save_reports(problem_reports, dataset.table_name, started_at)
+            utils.json_to_file(
+                filenames['reports'], problem_reports, silent=True)
+
+    if not upload:
+        print("\n")  # linebreak needed in case of visual feedback dots
+    if problem_reports:
+        print("SAVED PROBLEM REPORTS TO {}".format(filenames['reports']))
     if table:
-        print("SAVED TEST RESULTS TO " + filename)
+        print("SAVED TEST RESULTS TO {}".format(filenames['examples']))
+    if list_matches:
+        matched_items_output = (
+            '{| class="wikitable sortable"\n'
+            "! matched item {{P|P31}} !! frequency !! wlm-id(s) [max 10] \n")
+        matched_items_output += "\n".join(
+            format_matched_p31s_rows(matched_item_p31s))
+        matched_items_output += "\n|}"
+        utils.save_to_file(filenames['matches'], matched_items_output)
+
+
+def format_matched_p31s_rows(matched_item_p31s):
+    row = "|-\n| {p31} || {freq} || {hits} "
+    rows = []
+    sorted_items = sorted(matched_item_p31s.items(), key=lambda x: len(x[1]),
+                          reverse=True)
+    for p31, hits in sorted_items:
+        # loop over matches sorted by frequency
+        hits = ["[{wlm_url} {id}]".format(wlm_url=url, id=id)
+                for url, id in hits]
+        hits_text = ", ".join(hits[:10])
+        if len(hits) > 10:
+            hits_text += ", ..."
+        rows.append(row.format(
+            p31="{{Q'|%s}}" % p31, freq=len(hits), hits=hits_text))
+    return rows
 
 
 def main(arguments, dataset=None):
     """Process the arguments and fetch data according to them"""
     arguments = vars(arguments)
-    if on_labs():
+    if on_forge():
         arguments["host"] = "tools-db"
         arguments["db"] = "s51138__heritage_p"
         credentials = get_db_credentials()
@@ -230,10 +301,11 @@ def main(arguments, dataset=None):
     offset = arguments["offset"]
     upload = arguments["upload"]
     table = arguments["table"]
+    list_matches = arguments["list_matches"]
 
     dataset = dataset or make_dataset(
         arguments["country"], arguments["language"])
-    get_items(connection, dataset, upload, short, offset, table)
+    get_items(connection, dataset, upload, short, offset, table, list_matches)
 
 
 def make_dataset(country, language):
@@ -243,7 +315,6 @@ def make_dataset(country, language):
     Only kept for backwards-compatibility with older monument classes.
     """
     from Monument import Dataset
-    from CmFr import CmFr
     from CzCs import CzCs
     from AtDe import AtDe
     from DkBygningDa import DkBygningDa
@@ -274,7 +345,6 @@ def make_dataset(country, language):
             "class": IeEn,
             "data_files": {"counties": "ireland_counties.json"}},
         "monuments_za_(en)": {"class": ZaEn, "data_files": {}},
-        "monuments_cm_(fr)": {"class": CmFr, "data_files": {}},
         "monuments_at_(de)": {
             "class": AtDe,
             "data_files": {
@@ -326,10 +396,10 @@ def make_dataset(country, language):
 
 
 def get_db_credentials():
-    """Get credentials to access the SQL db on Tolllabs."""
+    """Get credentials to access the SQL db on Toolforge."""
     credentials = {}
     credentials_path = path.expanduser("~") + "/replica.my.cnf"
-    with open(credentials_path) as f:
+    with open(credentials_path, encoding="utf-8") as f:
         lines = f.readlines()
     for line in lines:
         if line.startswith("user"):
@@ -339,14 +409,17 @@ def get_db_credentials():
     return credentials
 
 
-def on_labs():
-    """Check if running in the Toollabs environment."""
+def on_forge():
+    """Check if running in the Toolforge environment."""
     return path.isfile(path.expanduser("~") + "/replica.my.cnf")
 
 
-def handle_args():
+def handle_args(*args):
     """
     Parse and handle command line arguments to get data from the database.
+
+    Also supports any pywikibot arguments, these are prefixed by a single "-"
+    and the full list can be gotten through "-help".
 
     Options:
         --host Name of the database host.
@@ -360,9 +433,10 @@ def handle_args():
             --upload live Live upload to real Wikidata items.
         --short <int> Only fetch a random sample of <int> items.
         --table Save results of the processing to file as a wikitable.
+        --list_matches Save a list of all matching items to a file as wikitext.
     """
     parser = argparse.ArgumentParser()
-    if not on_labs():
+    if not on_forge():
         parser.add_argument("--host", default="localhost")
         parser.add_argument("--db", default="wlm")
         parser.add_argument("--user", default="root")
@@ -380,7 +454,10 @@ def handle_args():
                         type=int,
                         action='store',)
     parser.add_argument("--table", action='store_true')
-    return parser.parse_args()
+    parser.add_argument("--list_matches", action='store_true')
+
+    # first parse args with pywikibot, send remaining args to local handler
+    return parser.parse_args(pywikibot.handle_args(args))
 
 
 if __name__ == "__main__":

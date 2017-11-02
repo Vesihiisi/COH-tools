@@ -1,0 +1,21 @@
+{
+    "country": {
+        "item": "Q750",
+        "name": "bolivia"
+    },
+    "country_code": "bo",
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "Q36981690",
+        "name": "national monument of bolivia"
+    },
+    "language": "es",
+    "table_name": "bo",
+    "unique": {
+        "comment": "wlm id",
+        "property": "P2186"
+    }
+}

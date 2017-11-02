@@ -1,4 +1,5 @@
 {
+  "armenia_heritage": "P3170",
   "arbetsam": "P3426",
   "architect": "P84",
   "austria_heritage_id": "P2951",
@@ -9,6 +10,7 @@
   "cultural_heritage_sweden": "P1260",
   "czech_monument_id": "P762",
   "draft": "P2262",
+  "directions": "P2795",
   "described_at_url": "P973",
   "estonian_monument_id": "P2948",
   "has_parts_of_class": "P2670",
@@ -19,6 +21,7 @@
   "imported_from": "P143",
   "inception": "P571",
   "is": "P31",
+  "language of name": "P407",
   "kosovo_monument_id": "P3227",
   "length": "P2043",
   "listed_building_dk": "P2783",
@@ -42,5 +45,7 @@
   "wlm_id": "P2186",
   "architectural_style": "P149",
   "heritage_brussels": "P3600",
-  "heritage_georgia": "P4166"
+  "heritage_georgia": "P4166",
+  "heritage_iran": "P1369",
+  "bien_de_interes": "P808"
 }
