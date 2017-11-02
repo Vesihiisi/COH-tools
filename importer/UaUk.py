@@ -7,7 +7,7 @@ class UaUk(Monument):
 
     def set_image(self):
         """
-        Special set image case.
+        Set image if it's actually one.
 
         Ignore if image is template saying there
         will be no image because of freedom of panorama
