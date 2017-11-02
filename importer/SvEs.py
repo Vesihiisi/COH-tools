@@ -48,11 +48,15 @@ class SvEs(Monument):
                 adm_q = municip_match[0]
 
         if adm_q is None:
-            dep_match = utils.get_item_from_dict_by_key(dict_name=dep_dic,
-                                                        search_in="iso",
-                                                        search_term=iso)
+            self.add_to_report("municipio", municip_raw, "located_adm")
+            dep_match = utils.get_item_from_dict_by_key(
+                dict_name=dep_dic,
+                search_in="iso",
+                search_term=iso)
             if len(dep_match) == 1:
                 adm_q = dep_match[0]
+            else:
+                self.add_to_report("departamento_iso", iso, "located_adm")
 
         if adm_q is not None:
             self.add_statement("located_adm", adm_q)
@@ -65,12 +69,22 @@ class SvEs(Monument):
         eng = "cultural heritage site in El Salvador"
         self.add_description("en", eng)
 
+    def set_directions(self):
+        if self.has_non_empty_attribute("direccion"):
+            monolingual = utils.package_monolingual(self.direccion, 'es')
+            self.add_statement("directions", monolingual)
+
     def set_heritage_id(self):
-        wlm = self.mapping["table_name"].upper()
-        self.add_statement("wlm_id", "{}-{}".format(wlm, self.id))
+        wlm = "{}-{}".format(self.mapping["table_name"].upper(), self.id)
+        self.add_statement("wlm_id", wlm)
+        self.add_disambiguator(str(self.id))
 
     def exists_with_monument_article(self, language):
-        return super().exists_with_monument_article("es", "monumento_enlace")
+        return self.get_multi_param_monument_article(
+            raw="monumento_enlace",
+            linked="monumento",
+            blocks="enlace",
+            language=language)
 
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
@@ -85,6 +99,7 @@ class SvEs(Monument):
         self.set_heritage()
         self.set_heritage_id()
         self.set_adm_location()
+        self.set_directions()
         self.set_image()
         self.set_commonscat()
         self.update_descriptions()
@@ -97,6 +112,8 @@ if __name__ == "__main__":
     args = importer.handle_args()
     dataset = Dataset("sv", "es", SvEs)
     dataset.lookup_downloads = {"heritage_type": "sv_(es)/tipo"}
-    dataset.data_files = {"departments": "salvador_departments.json",
-                          "municipalities": "salvador_municipalities.json"}
+    dataset.data_files = {
+        "departments": "salvador_departments.json",
+        "municipalities": "salvador_municipalities.json"
+    }
     importer.main(args, dataset)
