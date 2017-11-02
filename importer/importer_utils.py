@@ -185,14 +185,14 @@ def q_from_wikipedia(language, page_title):
     If the page has no item and is in the article
     namespace, create an item for it.
     """
+    if "[[" in page_title:
+        page_title = remove_markup(page_title)
     wp_site = pywikibot.Site(language, "wikipedia")
     page = pywikibot.Page(wp_site, page_title)
     summary = "Creating item for {} on {}wp."
     summary = summary.format(page_title, language)
     wd_repo = create_site_instance("wikidata", "wikidata")
     wdstuff = wds(wd_repo, edit_summary=summary, no_wdss=True)
-    if "[[" in page_title:
-        page_title = remove_markup(page_title)
     if page.exists():
         if page.isRedirectPage():
             page = page.getRedirectTarget()
