@@ -7,20 +7,18 @@ class PaEs(Monument):
 
     def set_adm_location(self):
         """Set the Admin Location, using iso code of Province."""
-        adm_q = None
-        prov_dic = self.data_files["provinces"]
-        iso = self.prov_iso
-        prov_match = utils.get_item_from_dict_by_key(dict_name=prov_dic,
-                                                     search_term=iso,
-                                                     search_in="iso")
-        if len(prov_match) == 1:
-            adm_q = prov_match[0]
+        self.set_from_dict_match(
+            lookup_dict=self.data_files["provinces"],
+            dict_label="iso",
+            value_label="prov_iso",
+            prop="located_adm"
+        )
 
-        if adm_q is not None:
-            self.add_statement("located_adm", adm_q)
-        else:
-            self.add_to_report(
-                "province-iso", self.province_iso, "located_adm")
+    def set_directions(self):
+        if self.has_non_empty_attribute("direccion"):
+            monolingual = utils.package_monolingual(
+                utils.remove_markup(self.direccion), 'es')
+            self.add_statement("directions", monolingual)
 
     def update_labels(self):
         self.add_label("es", utils.remove_markup(self.nombre))
@@ -38,17 +36,21 @@ class PaEs(Monument):
         """
         Set the Commons cat property.
 
-        There's a number of 'weird' values
-        like 'Cultural heritage monuments in $province'
-        so detect those and don't add them!
+        There's a number of 'weird' values like
+        'Cultural heritage monuments in $province'
+        so detect those and fall back on monumento_categoria
+        in this case
         """
-        if self.commonscat.startswith("Cultural heritage monuments"):
-            return
-        else:
+        if not self.commonscat.startswith("Cultural heritage monuments"):
             super().set_commonscat()
+        elif self.has_non_empty_attribute("monumento_categoria"):
+            super().set_commonscat("monumento_categoria")
 
     def exists_with_monument_article(self, language):
-        return super().exists_with_monument_article("es", "articulo")
+        if self.has_non_empty_attribute("articulo"):
+            return super().exists_with_monument_article("es", "articulo")
+        elif self.has_non_empty_attribute("nombre"):
+            return utils.q_from_first_wikilink("es", self.nombre)
 
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
@@ -59,6 +61,7 @@ class PaEs(Monument):
         self.set_heritage()
         self.set_country()
         self.set_adm_location()
+        self.set_directions()
         self.set_heritage_id()
         self.set_is()
         self.set_commonscat()
