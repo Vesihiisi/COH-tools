@@ -81,8 +81,9 @@ class UyEs(Monument):
         Populates self.monument_article, the value then gets used in
         find_matching_wikidata() with extra precautionary logic.
         """
-        if utils.count_wikilinks(self.name) == 1:
-            self.monument_article = utils.get_wikilinks(self.name)[0].title
+        if utils.count_wikilinks(self.monumento) == 1:
+            self.monument_article = utils.get_wikilinks(
+                self.monumento)[0].title
 
     def update_labels(self):
         es_name = utils.remove_markup(self.monumento)
