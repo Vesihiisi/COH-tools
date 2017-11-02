@@ -126,5 +126,6 @@ if __name__ == "__main__":
     dataset = Dataset("uy", "es", UyEs)
     dataset.data_files = {
         "departments": "uruguay_departments.json",
-        "settlements": "uruguay_settlements.json"}
+        "settlements": "uruguay_settlements.json"
+    }
     importer.main(args, dataset)
