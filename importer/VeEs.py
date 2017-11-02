@@ -14,32 +14,43 @@ class VeEs(Monument):
             self.add_statement("location", locat_match[0]["item"])
 
     def set_adm_location(self):
-        wikilinks = utils.get_wikilinks(self.municipio)
-        # can be more than 1
-        for wl in wikilinks:
-            municip_q = utils.q_from_wikipedia("es", wl.title)
-            if municip_q:
-                self.add_statement("located_adm", municip_q)
+        """
+        Set the Admin Location.
 
-        if not self.has_statement("located_adm"):
-            state_dict = self.data_files["states"]
-            state_match = [x for x in state_dict if x[
-                "iso"] == self.estado_iso]
-            if len(state_match) == 1:
-                self.add_statement("located_adm", state_match[0]["item"])
+        Use the linked Municipality first then fall back on state iso code,
+        which is a bigger unit.
+        """
+        adm_q = utils.q_from_first_wikilink("es", self.municipio)
 
-        if not self.has_statement("located_adm"):
+        if adm_q is None:
             self.add_to_report("municipio", self.municipio, "located_adm")
+            iso_match = utils.get_item_from_dict_by_key(
+                dict_name=self.data_files["regions"],
+                search_term=self.estado_iso,
+                search_in="iso")
+            if len(iso_match) == 1:
+                adm_q = iso_match[0]
+            else:
+                self.add_to_report(
+                    "estado_iso", self.estado_iso, "located_adm")
+
+        if adm_q:
+            self.add_statement("located_adm", adm_q)
 
     def set_heritage_id(self):
-        wlm = "{}-{}".format(self.mapping["country_code"].upper(), self.id)
+        wlm = "{}-{}".format(self.mapping["table_name"].upper(), self.id)
         self.add_statement("wlm_id", wlm)
+        self.add_disambiguator(str(self.id))
+
+    def set_directions(self):
+        if self.has_non_empty_attribute("direccion"):
+            monolingual = utils.package_monolingual(
+                utils.remove_markup(self.direccion), 'es')
+            self.add_statement("directions", monolingual)
 
     def update_labels(self):
-        self.add_label("es", utils.remove_markup(self.monumento))
-
-    def set_monuments_all_id(self):
-        self.monuments_all_id = self.id
+        spanish = utils.remove_markup(self.monumento)
+        self.add_label("es", spanish)
 
     def update_descriptions(self):
         desc = "national historical monument of Venezuela"
@@ -48,15 +59,20 @@ class VeEs(Monument):
         self.add_description("en", desc)
 
     def exists_with_monument_article(self, language):
-        return super().exists_with_monument_article("es", "monumento_enlace")
+        return self.get_multi_param_monument_article(
+            raw="monumento_enlace",
+            linked="monumento",
+            blocks="enlace",
+            language=language)
 
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
                           data_files, existing, repository)
-        self.set_monuments_all_id()
+        self.set_monuments_all_id("id")
         self.set_changed()
-        self.wlm_source = self.create_wlm_source(self.monuments_all_id)
+        self.set_wlm_source()
         self.set_adm_location()
+        self.set_directions()
         self.set_location()
         self.set_is()
         self.set_country()
@@ -74,7 +90,8 @@ if __name__ == "__main__":
     """Command line entry point for importer."""
     args = importer.handle_args()
     dataset = Dataset("ve", "es", VeEs)
-    dataset.data_files = {"states": "venezuela_states.json",
-                          "settlements": "venezuela_settlements.json"}
-    dataset.lookup_downloads = {}
+    dataset.data_files = {
+        "states": "venezuela_states.json",
+        "settlements": "venezuela_settlements.json"
+    }
     importer.main(args, dataset)

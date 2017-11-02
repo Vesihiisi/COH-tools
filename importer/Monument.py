@@ -158,19 +158,6 @@ class Monument(object):
         statement = {"value": value, "quals": qualifiers, "refs": refs}
         base[prop].append(statement)
 
-    def has_statement(self, prop_name):
-        """
-        Check whether object has statement for given property.
-
-        :param prop_name: name of the property
-        """
-        base = self.wd_item["statements"]
-        prop = self.props["located_adm"]
-        if prop in base:
-            return True
-        else:
-            return False
-
     def remove_statement(self, prop_name):
         """
         Remove all statements with a given property from the data object.
