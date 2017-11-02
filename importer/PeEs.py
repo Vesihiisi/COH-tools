@@ -59,6 +59,8 @@ class PeEs(Monument):
                                                         search_in="iso")
             if len(iso_match) == 1:
                 adm_q = iso_match[0]
+            else:
+                self.add_to_report("iso", self.iso, "located_adm")
 
         if adm_q:
             self.add_statement("located_adm", adm_q)
