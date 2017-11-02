@@ -116,10 +116,6 @@
         "comment": "organization"
     },
     {
-        "item": "Q123705",
-        "comment": "neighborhood"
-    },
-    {
         "item": "Q163740",
         "comment": "nonprofit organization"
     },
@@ -134,5 +130,9 @@
     {
         "item": "Q414147",
         "comment": "academy of sciences"
+    },
+    {
+        "item": "Q233324",
+        "comment": "seminary"
     }
 ]
