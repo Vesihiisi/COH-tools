@@ -341,6 +341,7 @@ class TestWikitext(unittest.TestCase):
     def test_remove_markup_three_apostrophes(self):
         text = "'''A''' b."
         output = "A b."
+        self.assertEqual(utils.remove_markup(text), output)
 
     def test_remove_markup_pipe(self):
         text = "[[Tegera Arena|Arenan]], huvudentrén"
@@ -600,6 +601,11 @@ class TestWikipedia(unittest.TestCase):
     def test_q_from_wikipedia_leftover_brackets_pipe(self):
         wiki_page = utils.q_from_wikipedia("sv", "[[Pallaskatt|foo!]]")
         result = "Q166794"
+        self.assertEqual(wiki_page, result)
+
+    def test_q_from_wikipedia_leftover_brackets_empty(self):
+        wiki_page = utils.q_from_wikipedia("sv", "[[]]")
+        result = None
         self.assertEqual(wiki_page, result)
 
     def test_q_from_first_wikilink(self):

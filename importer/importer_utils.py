@@ -189,6 +189,8 @@ def q_from_wikipedia(language, page_title):
     if page_title.startswith("[[") and page_title.endswith("]]"):
         page_title = get_wikilinks(page_title)[0].title
     wp_site = pywikibot.Site(language, "wikipedia")
+    if not page_title:
+        return
     page = pywikibot.Page(wp_site, page_title)
     summary = "Creating item for {} on {}wp."
     summary = summary.format(page_title, language)
