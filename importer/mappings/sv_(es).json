@@ -1,0 +1,21 @@
+{
+    "country": {
+        "item": "Q792",
+        "name": "Salvador"
+    },
+    "country_code": "sv",
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "Q40428140",
+        "name": "Cultural heritage site of El Salvador"
+    },
+    "language": "es",
+    "table_name": "sv",
+    "unique": {
+        "comment": "WLM ID",
+        "property": "P2186"
+    }
+}
