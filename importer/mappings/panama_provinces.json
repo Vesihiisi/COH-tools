@@ -1,0 +1,52 @@
+[
+    {
+        "iso": "PA-1",
+        "item": "Q217138",
+        "itemLabel": "Provincia de Bocas del Toro"
+    },
+    {
+        "iso": "PA-8",
+        "item": "Q557506",
+        "itemLabel": "Provincia de Panamá"
+    },
+    {
+        "iso": "PA-9",
+        "item": "Q593137",
+        "itemLabel": "Provincia de Veraguas"
+    },
+    {
+        "iso": "PA-5",
+        "item": "Q688660",
+        "itemLabel": "Provincia de Darién"
+    },
+    {
+        "iso": "PA-4",
+        "item": "Q739651",
+        "itemLabel": "Provincia de Chiriquí"
+    },
+    {
+        "iso": "PA-3",
+        "item": "Q820514",
+        "itemLabel": "Provincia de Colón"
+    },
+    {
+        "iso": "PA-2",
+        "item": "Q825799",
+        "itemLabel": "Provincia de Coclé"
+    },
+    {
+        "iso": "PA-6",
+        "item": "Q842886",
+        "itemLabel": "Provincia de Herrera"
+    },
+    {
+        "iso": "PA-7",
+        "item": "Q911278",
+        "itemLabel": "Provincia de Los Santos"
+    },
+    {
+        "iso": "PA-10",
+        "item": "Q16250688",
+        "itemLabel": "Provincia de Panamá Oeste"
+    }
+]
