@@ -6,6 +6,13 @@ import importer as importer
 class XkSq(Monument):
 
     def set_is(self):
+        """
+        Set a more detailed value of P31.
+
+        Based on 'category' and lookup table:
+        https://www.wikidata.org/wiki/Wikidata:WikiProject_WLM/Mapping_tables/xk_(sq)/category
+        If no match, default to default.
+        """
         cat_dict = self.data_files["categories"]["mappings"]
         monument_cat = self.category.lower()
         lookup_match = utils.get_matching_items_from_dict(dict_name=cat_dict,
@@ -64,7 +71,6 @@ class XkSq(Monument):
         Monument.__init__(self, db_row_dict, mapping,
                           data_files, existing, repository)
         self.set_monuments_all_id("idno")
-        self.set_registrant_url()
         self.set_changed()
         self.set_wlm_source()
         self.set_heritage_id()
