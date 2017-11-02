@@ -54,9 +54,10 @@ class PeEs(Monument):
 
         if adm_q is None:
             iso = self.iso
-            iso_match = utils.get_item_from_dict_by_key(dict_name=reg_dic,
-                                                        search_term=iso,
-                                                        search_in="iso")
+            iso_match = utils.get_item_from_dict_by_key(
+                dict_name=reg_dic,
+                search_term=iso,
+                search_in="iso")
             if len(iso_match) == 1:
                 adm_q = iso_match[0]
             else:
@@ -72,7 +73,9 @@ class PeEs(Monument):
     def exists_with_monument_article(self, language):
         return self.get_multi_param_monument_article(
             raw="monumento_enlace",
-            linked="monumento", language=language, blocks="enlace")
+            linked="monumento",
+            blocks="enlace",
+            language=language)
 
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
