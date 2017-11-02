@@ -106,5 +106,33 @@
     {
         "item": "Q4022",
         "comment": "river"
+    },
+    {
+        "item": "Q2061186",
+        "comment": "religious order"
+    },
+    {
+        "item": "Q43229",
+        "comment": "organization"
+    },
+    {
+        "item": "Q163740",
+        "comment": "nonprofit organization"
+    },
+    {
+        "item": "Q1886688",
+        "comment": "Berd"
+    },
+    {
+        "item": "Q4671277",
+        "comment": "academic institution"
+    },
+    {
+        "item": "Q414147",
+        "comment": "academy of sciences"
+    },
+    {
+        "item": "Q233324",
+        "comment": "seminary"
     }
 ]
