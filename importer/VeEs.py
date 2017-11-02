@@ -6,12 +6,19 @@ import importer as importer
 class VeEs(Monument):
 
     def set_location(self):
-        locat_raw = self.ciudad.lower()
-        location_dic = self.data_files["settlements"]
-        locat_match = [x for x in location_dic if x[
-            "itemLabel"].lower() == locat_raw]
-        if len(locat_match) == 1:
-            self.add_statement("location", locat_match[0]["item"])
+        match_q = None
+        if self.has_non_empty_attribute("ciudad"):
+            matches = utils.get_item_from_dict_by_key(
+                dict_name=self.data_files["settlements"],
+                search_term=self.ciudad.lower(),
+                search_in="itemLabel")
+            if len(matches) == 1:
+                match_q = matches[0]
+
+            if match_q:
+                self.add_statement("location", match_q)
+            else:
+                self.add_to_report("ciudad", self.ciudad, "location")
 
     def set_adm_location(self):
         """
