@@ -1,0 +1,21 @@
+{
+    "country": {
+        "item": "Q29",
+        "name": "Spain"
+    },
+    "country_code": "es",
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "Q23712",
+        "name": "Bien de Interés Cultural"
+    },
+    "language": "es",
+    "table_name": "es",
+    "unique": {
+        "comment": "code Bien de Interés Cultural",
+        "property": "P808"
+    }
+}
