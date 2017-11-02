@@ -1,0 +1,21 @@
+{
+    "country": {
+        "item": "Q804",
+        "name": "Panama"
+    },
+    "country_code": "pa",
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "Q6023382",
+        "name": "monument of Panama"
+    },
+    "language": "es",
+    "table_name": "pa",
+    "unique": {
+        "comment": "WLM ID",
+        "property": "P2186"
+    }
+}
