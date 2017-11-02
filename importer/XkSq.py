@@ -5,6 +5,16 @@ import importer as importer
 
 class XkSq(Monument):
 
+    def set_is(self):
+        cat_dict = self.data_files["categories"]["mappings"]
+        monument_cat = self.category.lower()
+        lookup_match = utils.get_matching_items_from_dict(dict_name=cat_dict,
+                                                          value=monument_cat)
+        if len(lookup_match) == 1:
+            self.add_statement("is", lookup_match[0])
+        else:
+            super().set_is()
+
     def set_inception(self):
         """Set inception if it's a whole year."""
         if utils.legit_year(self.date_period):
@@ -40,6 +50,7 @@ class XkSq(Monument):
 
     def set_heritage_id(self):
         self.add_statement("kosovo_monument_id", str(self.idno))
+        self.add_disambiguator(str(self.idno))
 
     def update_labels(self):
         albanian = utils.remove_markup(self.name)
@@ -48,9 +59,6 @@ class XkSq(Monument):
     def update_descriptions(self):
         english = "cultural heritage monument of Kosovo"
         self.add_description("en", english)
-
-    def exists_with_monument_article(self, language):
-        return super().exists_with_monument_article("sq", "monument_article")
 
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
@@ -77,5 +85,6 @@ if __name__ == "__main__":
     args = importer.handle_args()
     dataset = Dataset("xk", "sq", XkSq)
     dataset.data_files = {"settlements": "kosovo_settlements.json"}
-    dataset.lookup_downloads = {"municipalities": "xk (sq)/municipalities"}
+    dataset.lookup_downloads = {"municipalities": "xk (sq)/municipalities",
+                                "categories": "xk (sq)/category"}
     importer.main(args, dataset)
