@@ -8,12 +8,12 @@ class VeEs(Monument):
     def set_location(self):
         match_q = None
         if self.has_non_empty_attribute("ciudad"):
-            matches = utils.get_item_from_dict_by_key(
-                dict_name=self.data_files["settlements"],
-                search_term=self.ciudad.lower(),
-                search_in="itemLabel")
-            if len(matches) == 1:
-                match_q = matches[0]
+            locat_raw = self.ciudad.lower()
+            location_dic = self.data_files["settlements"]
+            locat_match = [x["item"] for x in location_dic
+                           if x["itemLabel"].lower() == locat_raw]
+            if len(locat_match) == 1:
+                match_q = locat_match[0]
 
             if match_q:
                 self.add_statement("location", match_q)
