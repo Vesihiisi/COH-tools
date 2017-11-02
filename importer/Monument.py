@@ -3,6 +3,7 @@ import json
 import importer_utils as utils
 
 MAPPING_DIR = "mappings"
+P31_BLACKLIST = utils.load_json(path.join(MAPPING_DIR, "P31_blacklist.json"))
 
 
 class Monument(object):
@@ -20,11 +21,10 @@ class Monument(object):
         :param repository: data repository (Wikidata site)
         """
         self.raw_data = db_row_dict
-        self.props = utils.load_json(
-            path.join(MAPPING_DIR, "props_general.json"))
-        self.adm0 = utils.load_json(path.join(MAPPING_DIR, "adm0.json"))
-        self.sources = utils.load_json(
-            path.join(MAPPING_DIR, "data_sources.json"))
+        self.props = data_files["_static"]["props"]
+        self.adm0 = data_files["_static"]["adm0"]
+        self.sources = data_files["_static"]["sources"]
+        self.common_items = data_files["_static"]["common_items"]
         for k, v in db_row_dict.items():
             if not k.startswith("m_spec."):
                 setattr(self, k.replace("-", "_"), v)
@@ -45,22 +45,37 @@ class Monument(object):
                        default=utils.datetime_convert)
         )
 
+    def get_matched_item_p31s(self):
+        """Return the p31 value(s) for any matched item."""
+        if not self.wd_item["wd-item"]:
+            return None
+        qid = self.wd_item["wd-item"]
+        p31s = utils.get_P31(qid, self.repo)
+        if not p31s:
+            p31s = ['no value', ]
+        return (p31s, self.wlm_url, self.monuments_all_id)
+
     def print_wd_to_table(self):
         """Generate a wikitext preview table of the data item."""
         table = ""
         labels = self.wd_item["labels"]
         descriptions = self.wd_item["descriptions"]
         aliases = self.wd_item["aliases"]
+        disambiguators = self.wd_item["disambiguators"]
         table = table + "'''Labels'''\n\n"
-        for l in labels:
-            table = table + "* '''" + l + "''': " + labels[l] + "\n\n"
+        for k, v in labels.items():
+            table += "* '''{key}''': {val}\n\n".format(key=k, val=v)
         table = table + "'''Descriptions'''\n\n"
-        for d in descriptions:
-            table = table + "* '''" + d + "''': " + descriptions[d] + "\n\n"
+        for k, v in descriptions.items():
+            table += "* '''{key}''': {val}\n\n".format(key=k, val=v)
         table = table + "'''Aliases'''\n\n"
-        for a in aliases:
-            for single_alias in aliases[a]:
-                table = table + "* '''" + a + "''': " + single_alias + "\n\n"
+        for k, v in aliases.items():
+            for single_alias in v:
+                table += "* '''{key}''': {val}\n\n".format(
+                    key=k, val=single_alias)
+        table += "'''Disambiguators'''\n\n"
+        for k, v in disambiguators.items():
+            table += "* '''{key}''': {val}\n\n".format(key=k, val=v)
         if self.wd_item["wd-item"] is not None:
             table = table + "'''Possible item''': " + \
                 utils.wd_template("Q", self.wd_item["wd-item"]) + "\n\n"
@@ -73,6 +88,8 @@ class Monument(object):
             claims = statements[statement]
             for claim in claims:
                 value = claim["value"]
+                if value is None:
+                    continue
                 value_to_print = ""
                 if utils.string_is_q_item(value):
                     value = utils.wd_template("Q", value)
@@ -88,15 +105,20 @@ class Monument(object):
                 elif "time_value" in value:
                     value_to_print += utils.dict_to_iso_date(
                         value["time_value"])
+                elif "monolingual_value" in value:
+                    value_to_print += "({lang}) {text}".format(
+                        text=value["monolingual_value"],
+                        lang=value["lang"])
                 else:
-                    value_to_print += str(value)
+                    value_to_print += str(value).strip()
                 quals = claim["quals"]
                 refs = claim["refs"]
+                quals_to_print = ""
                 if len(quals) == 0:
-                    qual_to_print = ""
+                    quals_to_print = quals_to_print
                 else:
                     for q in quals:
-                        qual_to_print = utils.wd_template(
+                        quals_to_print = quals_to_print + "<br>" + utils.wd_template(
                             "P", q) + " : " + json.dumps(quals[q])
                 if len(refs) == 0:
                     ref_to_print = ""
@@ -107,13 +129,14 @@ class Monument(object):
                 table = table + "|-\n"
                 table = table + "| " + utils.wd_template("P", statement) + "\n"
                 table = table + "| " + value_to_print + "\n"
-                table = table + "| " + qual_to_print + "\n"
+                table = table + "| " + quals_to_print + "\n"
                 table = table + "| " + ref_to_print + "\n"
         table = table + "|}\n"
         table = table + "----------\n"
         return table
 
-    def add_statement(self, prop_name, value, quals=None, refs=None):
+    def add_statement(self, prop_name, value, quals=None, refs=None,
+                      if_empty=False):
         """
         Add a statement to the data object.
 
@@ -138,6 +161,8 @@ class Monument(object):
         :param refs: a list of references or a single reference.
             Set None/True for the default reference,
             set False to not add a reference.
+        :param if_empty: If statement should only be added if this property
+            doesn't already have a value. Defaults to False.
         """
         base = self.wd_item["statements"]
         prop = self.props[prop_name]
@@ -155,7 +180,8 @@ class Monument(object):
 
         if refs and not isinstance(refs, list):
             refs = [refs]
-        statement = {"value": value, "quals": qualifiers, "refs": refs}
+        statement = {"value": value, "quals": qualifiers, "refs": refs,
+                     "if_empty": if_empty}
         base[prop].append(statement)
 
     def remove_statement(self, prop_name):
@@ -186,6 +212,20 @@ class Monument(object):
         else:
             self.remove_statement(prop_name)
             self.add_statement(prop_name, value, quals, refs)
+
+    def get_statement_values(self, prop_name):
+        """
+        Retrieve list of all statements with given property from data object.
+
+        e.g. get_statement_values("country") → ['Q29']
+
+        :param prop_name: name of the property,
+            as stated in the props library file
+        """
+        base = self.wd_item["statements"]
+        prop = self.props[prop_name]
+        if prop in base:
+            return [x['value'] for x in base[prop]]
 
     def set_wd_item(self, wd_item):
         """Associate the data object with a Wikidata item."""
@@ -225,6 +265,21 @@ class Monument(object):
         base = self.wd_item["descriptions"]
         base[language] = text
 
+    def add_disambiguator(self, text, language=None):
+        """
+        Add a disambiguator, optionally for a specific language.
+
+        The disambiguator is added to the description in case of there being
+        identical label/description pairs, otherwise it is not used.
+
+        :param text: content of the disambiguator
+        :param language: language, in the event the disambiguator cannot be
+            used for all languages.
+        """
+        language = language or '_default'
+        base = self.wd_item["disambiguators"]
+        base[language] = text
+
     def set_country(self):
         """Set the country using the mapping file."""
         code = self.mapping["country_code"].lower()
@@ -233,9 +288,14 @@ class Monument(object):
         self.add_statement("country", country)
 
     def set_is(self):
-        """Set the P31 property using the mapping file."""
-        default_is = self.mapping["default_is"]
-        self.add_statement("is", default_is["item"])
+        """
+        Set the P31 property using the mapping file or global default.
+
+        This only gets used if there isn't already a P31 value.
+        """
+        default_is = (self.mapping.get("default_is") or
+                      self.common_items["cultural_property"])
+        self.add_statement("is", default_is["item"], if_empty=True)
 
     def set_labels(self, language, content):
         """
@@ -265,7 +325,8 @@ class Monument(object):
         coord_keywords_tuple = coord_keywords_tuple or ("lat", "lon")
         lat = coord_keywords_tuple[0]
         lon = coord_keywords_tuple[1]
-        if self.has_non_empty_attribute(lat):
+        if (self.has_non_empty_attribute(lat) and
+                self.has_non_empty_attribute(lon)):
             if self.lat == 0 and self.lon == 0:
                 return
             else:
@@ -285,7 +346,6 @@ class Monument(object):
         :param id_keyword: the name of the column to be used
         """
         self.monuments_all_id = str(getattr(self, id_keyword))
-
 
     def set_wlm_source(self):
         """
@@ -341,6 +401,33 @@ class Monument(object):
             else:
                 self.add_to_report(address_keyword, possible_address)
 
+    def get_multi_param_monument_article(self, raw, linked, language,
+                                         blocks=None):
+        """
+        Multi-tiered approach to setting exists_with_monument_article().
+
+        Get the monument_article value in a more complex case where it can
+        either be given by a special parameter or be implicitly linked from
+        another.
+
+        Common for South American datasets.
+
+        :param raw: the parameter name containing the raw article name
+        :param linked: the parameter containing the implicitly linked article
+            name (if raw is not provided).
+        :param language: language version of wikipedia
+        :param blocks: a parameter which blocks both raw and linked. E.g.
+            because it allows multiple links to be specified. (optional)
+        """
+        if blocks and getattr(self, blocks):
+            return None
+        elif getattr(self, raw):
+            return super(self.__class__, self).exists_with_monument_article(
+                language, raw)
+        else:
+            return super(self.__class__, self).exists_with_monument_article(
+                language, linked)
+
     def has_non_empty_attribute(self, attr_name):
         """
         Check whether the data object has a non-empty attribute.
@@ -356,6 +443,34 @@ class Monument(object):
                 return True
         else:
             return False
+
+    def set_from_dict_match(self, lookup_dict, dict_label, value_label, prop):
+        """
+        Look up value in dict and add statement on unique match, else report.
+
+        If the value is empty then no statement is added nor is anything
+        reported.
+
+        :param lookup_dict: list of dicts to do lookup in
+        :param dict_label: value in dict to do matching on
+        :param value_label: the label of the value we wish to match
+        :prop: the label of the property for which a statement is added
+        """
+        match_q = None
+        if self.has_non_empty_attribute(value_label):
+            value = getattr(self, value_label)
+            matches = utils.get_item_from_dict_by_key(
+                dict_name=lookup_dict,
+                search_term=value,
+                search_in=dict_label)
+            if len(matches) == 1:
+                match_q = matches[0]
+
+            if match_q:
+                self.add_statement(prop, match_q)
+            else:
+                self.add_to_report(
+                    value_label, value, prop)
 
     def set_changed(self):
         """Set the 'changed' field."""
@@ -471,12 +586,17 @@ class Monument(object):
         """
         item = self.exists_with_prop(mapping)
         if not item:
+            disallowed = [x["item"] for x in P31_BLACKLIST]
             item = self.exists_with_wd_item()
             if not item:
-                item = self.exists_with_monument_article(self.mapping["language"])
+                item = self.exists_with_monument_article(
+                    self.mapping["language"])
             if item and self.in_known_items(item):
                 self.upload = False
                 self.add_to_report("item_conflict", item)
+            elif utils.is_blacklisted_P31(item, self.repo, disallowed):
+                # the matched item is blacklisted remove match
+                item = None
             else:
                 self.add_to_known_items(item, mapping)
         return item
@@ -497,6 +617,7 @@ class Monument(object):
         self.wd_item["labels"] = {}
         self.wd_item["aliases"] = {}
         self.wd_item["descriptions"] = {}
+        self.wd_item["disambiguators"] = {}
         self.wd_item["wd-item"] = None
         self.mapping = mapping.file_content
 

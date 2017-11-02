@@ -21,18 +21,19 @@ def remove_empty_dicts_from_list(list_of_dicts):
 
 
 def save_to_file(filename, content):
-    with open(filename, 'w') as f:
+    with open(filename, 'w', encoding="utf-8") as f:
         f.write(content)
         print("SAVED FILE " + filename)
 
 
-def json_to_file(filename, json_content):
-    with open(filename, 'w') as f:
+def json_to_file(filename, json_content, silent=False):
+    with open(filename, 'w', encoding="utf-8") as f:
         json.dump(json_content, f, sort_keys=True,
                   indent=4,
                   ensure_ascii=False,
                   default=datetime_convert)
-        print("SAVED FILE " + filename)
+        if not silent:
+            print("SAVED FILE " + filename)
 
 
 def create_dir(out_path):
@@ -73,7 +74,7 @@ def table_exists(connection, tablename):
 
 def load_json(filename):
     try:
-        with open(filename) as f:
+        with open(filename, encoding="utf-8") as f:
             try:
                 return json.load(f)
             except ValueError:
@@ -95,7 +96,7 @@ def remove_markup(text):
     remove_br = re.compile('<br.*?>\W*', re.I)
     text = remove_br.sub(' ', text)
     text = " ".join(text.split())
-    if "[" in text:
+    if "[" in text or "''" in text:
         text = wparser.parse(text)
         text = text.strip_code()
     return remove_multiple_spaces(text.strip())
@@ -103,6 +104,16 @@ def remove_markup(text):
 
 def contains_digit(text):
     return any(x.isdigit() for x in text)
+
+
+def get_external_links(wikitext):
+    """Retrieve external url's from wikitext."""
+    urls = []
+    links = wparser.parse(wikitext).filter_external_links()
+    if len(links) > 0:
+        for link in links:
+            urls.append(link.url)
+    return urls
 
 
 def is_legit_house_number(text):
@@ -171,15 +182,20 @@ def count_wikilinks(text):
 def q_from_wikipedia(language, page_title):
     """
     Get the ID of the WD item linked to a wp page.
+
     If the page has no item and is in the article
     namespace, create an item for it.
     """
+    if page_title.startswith("[[") and page_title.endswith("]]"):
+        page_title = get_wikilinks(page_title)[0].title
     wp_site = pywikibot.Site(language, "wikipedia")
+    if not page_title:
+        return
     page = pywikibot.Page(wp_site, page_title)
     summary = "Creating item for {} on {}wp."
     summary = summary.format(page_title, language)
     wd_repo = create_site_instance("wikidata", "wikidata")
-    wdstuff = wds(wd_repo, edit_summary=summary)
+    wdstuff = wds(wd_repo, edit_summary=summary, no_wdss=True)
     if page.exists():
         if page.isRedirectPage():
             page = page.getRedirectTarget()
@@ -466,6 +482,18 @@ def string_is_q_item(text):
         return False
 
 
+def string_is_p_item(text):
+    pattern = re.compile("^P[0-9]+$", re.I)
+    try:
+        m = pattern.match(text)
+    except TypeError:
+        return False
+    if m:
+        return True
+    else:
+        return False
+
+
 def tuple_is_coords(sometuple):
     result = False
     if isinstance(sometuple, tuple) and len(sometuple) == 2:
@@ -524,15 +552,21 @@ def datetime_object_to_dict(datetime_object):
     return date_dict
 
 
-def date_to_dict(datestring, dateformat):
+def datetime_to_dict(date_obj, dateformat):
+    """Convert a datetime object to a dict."""
     date_dict = {}
-    date_obj = datetime.datetime.strptime(datestring, dateformat)
     date_dict["year"] = date_obj.year
     if "%m" in dateformat:
         date_dict["month"] = date_obj.month
     if "%d" in dateformat:
         date_dict["day"] = date_obj.day
     return date_dict
+
+
+def date_to_dict(datestring, dateformat):
+    """Convert a datet string to a dict."""
+    date_obj = datetime.datetime.strptime(datestring, dateformat)
+    return datetime_to_dict(date_obj, dateformat)
 
 
 def today_dict():
@@ -559,12 +593,12 @@ def dict_to_iso_date(date_dict):
 
 
 def append_line_to_file(text, filename):
-    with open(filename, 'a') as f:
+    with open(filename, 'a', encoding="utf-8") as f:
         f.write(text + "\n")
 
 
 def dump_list_to_file(some_list, filename):
-    f = open(filename, 'w')
+    f = open(filename, 'w', encoding="utf-8")
     for item in some_list:
         f.write(item + "\n")
 
@@ -612,8 +646,24 @@ def is_whitelisted_P31(q_number, site, allowed_values):
     return result
 
 
+def is_blacklisted_P31(q_number, site, dissalowed_values):
+    # Also blacklist any items which contains a P279 (sub-class) statement
+    # as these by definition cannot be unique instances
+    if len(get_value_of_property(q_number, "P279", site)) > 0:
+        return True
+
+    item_P31 = get_P31(q_number, site)
+    if len(set(dissalowed_values).intersection(set(item_P31))) > 0:
+        # this means one of this item's P31's is in the
+        # disallowed list
+        return True
+    return False
+
+
 def create_wlm_url(country, language, id):
-    url_base = "https://tools.wmflabs.org/heritage/api/api.php?action=search&format=json&srcountry={}&srlanguage={}&srid={}"
+    url_base = ("https://tools.wmflabs.org/heritage/api/api.php?"
+                "action=search&format=json&srcountry={}&srlang={}&srid={}")
+
     return url_base.format(
         country, language, quote(id))
 
@@ -626,3 +676,21 @@ def create_site_instance(language, family):
         site = pywikibot.Site(language, family)
         site_cache[site_key] = site
     return site
+
+
+def package_quantity(value, unit=None):
+    """Package a quantity value in a standardised form."""
+    quantity = {"quantity_value": value}
+    if unit:
+        quantity["unit"] = unit
+    return quantity
+
+
+def package_time(date_dict):
+    """Package a time/date statement in a standardised form."""
+    return {"time_value": date_dict}
+
+
+def package_monolingual(text, lang):
+    """Package a monolingual statement in a standardised form."""
+    return {"monolingual_value": text, "lang": lang}

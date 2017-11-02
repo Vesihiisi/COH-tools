@@ -1,0 +1,21 @@
+{
+    "country": {
+        "item": "Q739",
+        "name": "Colombia"
+    },
+    "country_code": "co",
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "Q3323399",
+        "name": "national monument of Colombia"
+    },
+    "language": "es",
+    "table_name": "co",
+    "unique": {
+        "comment": "wiki loves monuments ID",
+        "property": "P2186"
+    }
+}

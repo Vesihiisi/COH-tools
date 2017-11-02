@@ -1,0 +1,122 @@
+[
+    {
+        "iso": "TN-22",
+        "item": "Q27916",
+        "itemLabel": "Gouvernorat de Zaghouan"
+    },
+    {
+        "iso": "TN-12",
+        "item": "Q233116",
+        "itemLabel": "Gouvernorat de l'Ariana"
+    },
+    {
+        "iso": "TN-13",
+        "item": "Q238555",
+        "itemLabel": "Gouvernorat de Ben Arous"
+    },
+    {
+        "iso": "TN-23",
+        "item": "Q241129",
+        "itemLabel": "Gouvernorat de Bizerte"
+    },
+    {
+        "iso": "TN-61",
+        "item": "Q241145",
+        "itemLabel": "Gouvernorat de Sfax"
+    },
+    {
+        "iso": "TN-81",
+        "item": "Q242263",
+        "itemLabel": "Gouvernorat de Gabès"
+    },
+    {
+        "iso": "TN-71",
+        "item": "Q269968",
+        "itemLabel": "Gouvernorat de Gafsa"
+    },
+    {
+        "iso": "TN-51",
+        "item": "Q276565",
+        "itemLabel": "Gouvernorat de Sousse"
+    },
+    {
+        "iso": "TN-41",
+        "item": "Q276574",
+        "itemLabel": "Gouvernorat de Kairouan"
+    },
+    {
+        "iso": "TN-31",
+        "item": "Q276576",
+        "itemLabel": "Gouvernorat de Béja"
+    },
+    {
+        "iso": "TN-32",
+        "item": "Q276580",
+        "itemLabel": "Gouvernorat de Jendouba"
+    },
+    {
+        "iso": "TN-73",
+        "item": "Q286063",
+        "itemLabel": "Gouvernorat de Kébili"
+    },
+    {
+        "iso": "TN-52",
+        "item": "Q318102",
+        "itemLabel": "Gouvernorat de Monastir"
+    },
+    {
+        "iso": "TN-83",
+        "item": "Q327045",
+        "itemLabel": "Gouvernorat de Tataouine"
+    },
+    {
+        "iso": "TN-82",
+        "item": "Q327087",
+        "itemLabel": "Gouvernorat de Médenine"
+    },
+    {
+        "iso": "TN-43",
+        "item": "Q327097",
+        "itemLabel": "Gouvernorat de Sidi Bouzid"
+    },
+    {
+        "iso": "TN-11",
+        "item": "Q328109",
+        "itemLabel": "Gouvernorat de Tunis"
+    },
+    {
+        "iso": "TN-34",
+        "item": "Q328115",
+        "itemLabel": "Gouvernorat de Siliana"
+    },
+    {
+        "iso": "TN-21",
+        "item": "Q328145",
+        "itemLabel": "Gouvernorat de Nabeul"
+    },
+    {
+        "iso": "TN-53",
+        "item": "Q328164",
+        "itemLabel": "Gouvernorat de Mahdia"
+    },
+    {
+        "iso": "TN-33",
+        "item": "Q328199",
+        "itemLabel": "gouvernorat du Kef"
+    },
+    {
+        "iso": "TN-42",
+        "item": "Q388047",
+        "itemLabel": "Gouvernorat de Kasserine"
+    },
+    {
+        "iso": "TN-72",
+        "item": "Q388059",
+        "itemLabel": "Gouvernorat de Tozeur"
+    },
+    {
+        "iso": "TN-14",
+        "item": "Q734328",
+        "itemLabel": "Gouvernorat de la Manouba"
+    }
+]
