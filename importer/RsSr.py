@@ -7,7 +7,7 @@ class RsSr(Monument):
 
     def set_address(self):
         """
-        Set address or directions.
+        Set address / directions.
 
         Address, with attached city, if there's digits in it.
         Otherwise directions.
@@ -80,8 +80,14 @@ class RsSr(Monument):
             self.add_to_report("district", self.district, "located_adm")
 
     def update_descriptions(self):
-        eng = "cultural heritage site in Serbia"
-        self.add_description("en", eng)
+        descs = {
+            "en": "protected cultural monument in Serbia",
+            "nl": "beschermd monument in Servië",
+            "ru": "охраняемый памятник культуры в Сербии",
+            "sr": "заштићен споменик културе у Србији",
+        }
+        for lang in descs:
+            self.add_description(lang, descs[lang])
 
     def update_labels(self):
         name = utils.remove_markup(self.name)
@@ -89,6 +95,7 @@ class RsSr(Monument):
 
     def set_heritage_id(self):
         self.add_statement("serbia_heritage_id", self.id)
+        self.add_disambiguator(self.id)
 
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
