@@ -660,6 +660,14 @@ def is_blacklisted_P31(q_number, site, dissalowed_values):
     return False
 
 
+def is_right_country(q_number, site, expected_country):
+    """Ensure that the target item has the expected country."""
+    item_P17 = get_value_of_property(q_number, "P17", site)
+    if not item_P17 or expected_country in item_P17:
+        return True
+    return False
+
+
 def create_wlm_url(country, language, id):
     url_base = ("https://tools.wmflabs.org/heritage/api/api.php?"
                 "action=search&format=json&srcountry={}&srlang={}&srid={}")

@@ -574,6 +574,30 @@ class TestWikidata(unittest.TestCase):
         self.assertFalse(
             utils.is_whitelisted_P31("Q2263578", self.wikidata_site, ["Q515", "Q12813115"]))
 
+    def is_right_country_pass(self):
+        """
+        Solberg, Kungälvs kommun is in Sweden
+        """
+        self.assertTrue(
+            utils.is_right_country_pass(
+                "Q2263578", self.wikidata_site, "Q34"))
+
+    def is_right_country_fail(self):
+        """
+        Solberg, Kungälvs kommun is not in Bolivia
+        """
+        self.assertFalse(
+            utils.is_right_country_pass(
+                "Q2263578", self.wikidata_site, "Q750"))
+
+    def is_right_country_no_value(self):
+        """
+        Mons Huygens has no country
+        """
+        self.assertTrue(
+            utils.is_right_country_pass(
+                "Q500388", self.wikidata_site, "Q34"))
+
 
 class TestWikipedia(unittest.TestCase):
 
