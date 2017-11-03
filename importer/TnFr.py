@@ -99,6 +99,11 @@ class TnFr(Monument):
         self.add_statement("heritage_status", heritage_item, quals)
 
     def update_labels(self):
+        if len(self.monument) >= 250:
+            print(
+                "{} has a label which is way too long: {}".format(
+                    self.id, self.monument))
+            return
         french = utils.remove_markup(self.monument)
         self.add_label("fr", french)
 
