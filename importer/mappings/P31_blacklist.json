@@ -154,5 +154,45 @@
     {
         "item": "Q7366",
         "comment": "song"
+    },
+    {
+        "item": "Q717040",
+        "comment": "Christmas tradition"
+    },
+    {
+        "item": "Q6024226",
+        "comment": "metropolitan municipality"
+    },
+    {
+        "item": "Q13417114",
+        "comment": "noble family"
+    },
+    {
+        "item": "Q3918",
+        "comment": "university"
+    },
+    {
+        "item": "Q166280",
+        "comment": "S.A."
+    },
+    {
+        "item": "Q2160811",
+        "comment": "artistic theme"
+    },
+    {
+        "item": "Q891723",
+        "comment": "public company"
+    },
+    {
+        "item": "Q11424",
+        "comment": "film"
+    },
+    {
+        "item": "Q15177520",
+        "comment": "literary topos"
+    },
+    {
+        "item": "Q31855",
+        "comment": "research institute"
     }
 ]

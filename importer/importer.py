@@ -79,8 +79,10 @@ def select_query(query, connection):
 def get_wd_items_using_prop(prop):
     items = {}
     print("WILL NOW DOWNLOAD WD ITEMS THAT USE " + prop)
-    query = "SELECT DISTINCT ?item ?value  WHERE {?item p:" + \
-        prop + "?statement. OPTIONAL { ?item wdt:" + prop + " ?value. }}"
+    query = (
+        "SELECT DISTINCT ?item ?value "
+        "WHERE { ?item wdt:%s ?value }" % prop
+    )
     data = lookup.make_simple_wdqs_query(query, verbose=False)
     for x in data:
         key = lookup.sanitize_wdqs_result(x['item'])
@@ -325,11 +327,9 @@ def make_dataset(country, language):
     from NoNo import NoNo
     from PlPl import PlPl
     from PtPt import PtPt
-    from RoRo import RoRo
     from SeArbetslSv import SeArbetslSv
     from SeBbrSv import SeBbrSv
     from SeShipSv import SeShipSv
-    from XkSq import XkSq
     from ZaEn import ZaEn
     SPECIFIC_TABLES = {
         "monuments_se-ship_(sv)": {
@@ -339,8 +339,6 @@ def make_dataset(country, language):
         "monuments_cz_(cs)": {"class": CzCs, "data_files": {}},
         "monuments_hu_(hu)": {"class": HuHu, "data_files": {}},
         "monuments_pt_(pt)": {"class": PtPt, "data_files": {}},
-        "monuments_ro_(ro)": {"class": RoRo, "data_files": {}},
-        "monuments_xk_(sq)": {"class": XkSq, "data_files": {}},
         "monuments_ie_(en)": {
             "class": IeEn,
             "data_files": {"counties": "ireland_counties.json"}},
