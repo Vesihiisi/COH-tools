@@ -186,8 +186,11 @@ def q_from_wikipedia(language, page_title):
     If the page has no item and is in the article
     namespace, create an item for it.
     """
+    # various cleanup
     if page_title.startswith("[[") and page_title.endswith("]]"):
         page_title = get_wikilinks(page_title)[0].title
+    page_title = page_title.replace('\n', ' ')
+
     wp_site = pywikibot.Site(language, "wikipedia")
     if not page_title:
         return
