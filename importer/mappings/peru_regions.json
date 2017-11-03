@@ -1,0 +1,132 @@
+[
+    {
+        "iso": "PE-LIM",
+        "item": "Q211795",
+        "itemLabel": "Lima"
+    },
+    {
+        "iso": "PE-MOQ",
+        "item": "Q208182",
+        "itemLabel": "Departamento de Moquegua"
+    },
+    {
+        "iso": "PE-HUC",
+        "item": "Q215221",
+        "itemLabel": "Departamento de Huánuco"
+    },
+    {
+        "iso": "PE-ARE",
+        "item": "Q205068",
+        "itemLabel": "Arequipa"
+    },
+    {
+        "iso": "PE-CAL",
+        "item": "Q2071352",
+        "itemLabel": "Gobierno Regional del Callao"
+    },
+    {
+        "iso": "PE-PUN",
+        "item": "Q205104",
+        "itemLabel": "Departamento de Puno"
+    },
+    {
+        "iso": "PE-TAC",
+        "item": "Q207413",
+        "itemLabel": "Departamento de Tacna"
+    },
+    {
+        "iso": "PE-JUN",
+        "item": "Q207973",
+        "itemLabel": "Departamento de Junín"
+    },
+    {
+        "iso": "PE-SAM",
+        "item": "Q211793",
+        "itemLabel": "Departamento de San Martín"
+    },
+    {
+        "iso": "PE-LAL",
+        "item": "Q205126",
+        "itemLabel": "Departamento de La Libertad"
+    },
+    {
+        "iso": "PE-CAJ",
+        "item": "Q205078",
+        "itemLabel": "Departamento de Cajamarca"
+    },
+    {
+        "iso": "PE-ANC",
+        "item": "Q205089",
+        "itemLabel": "Departamento de Áncash"
+    },
+    {
+        "iso": "PE-UCA",
+        "item": "Q207424",
+        "itemLabel": "Departamento de Ucayali"
+    },
+    {
+        "iso": "PE-TUM",
+        "item": "Q209597",
+        "itemLabel": "Departamento de Tumbes"
+    },
+    {
+        "iso": "PE-MDD",
+        "item": "Q210896",
+        "itemLabel": "Departamento de Madre de Dios"
+    },
+    {
+        "iso": "PE-CAL",
+        "item": "Q2634400",
+        "itemLabel": "Provincia Constitucional del Callao"
+    },
+    {
+        "iso": "PE-ICA",
+        "item": "Q208186",
+        "itemLabel": "Departamento de Ica"
+    },
+    {
+        "iso": "PE-APU",
+        "item": "Q208185",
+        "itemLabel": "Departamento de Apurímac"
+    },
+    {
+        "iso": "PE-HUV",
+        "item": "Q505220",
+        "itemLabel": "Departamento de Huancavelica"
+    },
+    {
+        "iso": "PE-LOR",
+        "item": "Q200938",
+        "itemLabel": "Departamento de Loreto"
+    },
+    {
+        "iso": "PE-AMA",
+        "item": "Q201162",
+        "itemLabel": "Departamento de Amazonas"
+    },
+    {
+        "iso": "PE-CUS",
+        "item": "Q205057",
+        "itemLabel": "Departamento de Cuzco"
+    },
+    {
+        "iso": "PE-AYA",
+        "item": "Q205112",
+        "itemLabel": "Departamento de Ayacucho"
+    },
+    {
+        "iso": "PE-PIU",
+        "item": "Q208183",
+        "itemLabel": "Departamento de Piura"
+    },
+    {
+        "iso": "PE-LAM",
+        "item": "Q210061",
+        "itemLabel": "Departamento de Lambayeque"
+    },
+    {
+        "iso": "PE-PAS",
+        "item": "Q211208",
+        "itemLabel": "Departamento de Pasco"
+    }
+]

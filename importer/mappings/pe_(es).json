@@ -1,0 +1,21 @@
+{
+    "country": {
+        "item": "Q419",
+        "name": "Peru"
+    },
+    "country_code": "pe",
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "Q16617058",
+        "name": "Cultural heritage of Peru"
+    },
+    "language": "es",
+    "table_name": "pe",
+    "unique": {
+        "comment": "WLM ID",
+        "property": "P2186"
+    }
+}
