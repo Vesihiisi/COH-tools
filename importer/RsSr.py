@@ -6,46 +6,78 @@ import importer as importer
 class RsSr(Monument):
 
     def set_address(self):
+        """
+        Set address or directions.
+
+        Address, with attached city, if there's digits in it.
+        Otherwise directions.
+        """
         if self.has_non_empty_attribute("address"):
             if self.has_non_empty_attribute("city"):
                 if utils.contains_digit(self.address):
                     city_no_brackets = utils.get_rid_of_brackets(self.city)
                     address = "{}, {}".format(self.address, city_no_brackets)
                     self.add_statement("located_street", address)
+                else:
+                    dirs = utils.package_monolingual("sr", self.address)
+                    self.add_statement("directions", dirs)
 
     def set_location(self):
-        loc_q = None
-        loc_raw = self.city
-        loc_dic = self.data_files["settlements"]
+        """
+        Set location property.
 
-        loc_match = utils.get_item_from_dict_by_key(dict_name=loc_dic,
-                                                    search_in="itemLabel",
-                                                    search_term=loc_raw)
-        if len(loc_match) == 1:
-            loc_q = loc_match[0]
+        'City' is never wikilinked, so try to match
+        against list of known settlements.
+        """
+        if self.has_non_empty_attribute("city"):
+            loc_q = None
+            loc_raw = self.city
+            loc_dic = self.data_files["settlements"]
 
-        if loc_q is not None:
-            self.add_statement("location", loc_q)
+            loc_match = utils.get_item_from_dict_by_key(dict_name=loc_dic,
+                                                        search_in="itemLabel",
+                                                        search_term=loc_raw)
+            if len(loc_match) == 1:
+                loc_q = loc_match[0]
+
+            if loc_q:
+                self.add_statement("location", loc_q)
+            else:
+                self.add_to_report("city", self.city, "location")
 
     def set_adm_location(self):
+        """
+        Set administrative location.
+
+        If possible, match district / municipality.
+        Not wikilinked, and contain a mix of various
+        types, so match against list of all administrative
+        units.
+        If that doesn't work, resort to okrug via iso.
+        """
         adm_q = None
         adm_dic = self.data_files["admin"]
         okr_dic = self.data_files["okruzi"]
 
         municip_try = utils.get_item_from_dict_by_key(
-            dict_name=adm_dic, search_in="itemLabel",
+            dict_name=adm_dic,
+            search_in="itemLabel",
             search_term=self.district)
         if len(municip_try) == 1:
             adm_q = municip_try[0]
 
-        if adm_q is None:
+        if not adm_q:
             iso_try = utils.get_item_from_dict_by_key(
-                dict_name=okr_dic, search_in="iso", search_term=self.iso_okrug)
+                dict_name=okr_dic,
+                search_in="iso",
+                search_term=self.iso_okrug)
             if len(iso_try) == 1:
                 adm_q = iso_try[0]
 
-        if adm_q is not None:
+        if adm_q:
             self.add_statement("located_adm", adm_q)
+        else:
+            self.add_to_report("district", self.district, "located_adm")
 
     def update_descriptions(self):
         eng = "cultural heritage site in Serbia"
@@ -56,15 +88,7 @@ class RsSr(Monument):
         self.add_label("sr", name)
 
     def set_heritage_id(self):
-        """
-        Wait.
-
-        https://www.wikidata.org/wiki/Wikidata:Property_proposal/cultural_heritage_monument_in_Serbia_ID.
-        """
-        print("")
-
-    def exists_with_monument_article(self, language):
-        return super().exists_with_monument_article("sr", "monument_article")
+        self.add_statement("serbia_heritage_id", self.id)
 
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):
         Monument.__init__(self, db_row_dict, mapping,
@@ -85,7 +109,7 @@ class RsSr(Monument):
         self.set_coords()
         self.set_image()
         self.set_commonscat()
-        # self.set_wd_item(self.find_matching_wikidata(mapping))
+        self.set_wd_item(self.find_matching_wikidata(mapping))
 
 
 if __name__ == "__main__":
