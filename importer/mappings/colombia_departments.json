@@ -1,0 +1,167 @@
+[
+    {
+        "iso": "CO-AMA",
+        "item": "Q44724",
+        "itemLabel": "Amazonas Department"
+    },
+    {
+        "iso": "CO-ANT",
+        "item": "Q123304",
+        "itemLabel": "Antioquia Department"
+    },
+    {
+        "iso": "CO-ARA",
+        "item": "Q230223",
+        "itemLabel": "Arauca Department"
+    },
+    {
+        "iso": "CO-ATL",
+        "item": "Q230882",
+        "itemLabel": "Atlántico Department"
+    },
+    {
+        "iso": "CO-BOL",
+        "item": "Q230597",
+        "itemLabel": "Bolívar Department"
+    },
+    {
+        "iso": "CO-DC",
+        "item": "Q2841",
+        "itemLabel": "Bogotá, Distrito Capital"
+    },
+    {
+        "iso": "CO-BOY",
+        "item": "Q121233",
+        "itemLabel": "Boyacá Department"
+    },
+    {
+        "iso": "CO-CAL",
+        "item": "Q230607",
+        "itemLabel": "Caldas Department"
+    },
+    {
+        "iso": "CO-CAQ",
+        "item": "Q13985",
+        "itemLabel": "Caquetá Department"
+    },
+    {
+        "iso": "CO-CAS",
+        "item": "Q13984",
+        "itemLabel": "Casanare Department"
+    },
+    {
+        "iso": "CO-CAU",
+        "item": "Q230602",
+        "itemLabel": "Cauca Department"
+    },
+    {
+        "iso": "CO-CES",
+        "item": "Q234916",
+        "itemLabel": "Cesar Department"
+    },
+    {
+        "iso": "CO-CHO",
+        "item": "Q230584",
+        "itemLabel": "Chocó Department"
+    },
+    {
+        "iso": "CO-COR",
+        "item": "Q234912",
+        "itemLabel": "Córdoba Department"
+    },
+    {
+        "iso": "CO-CUN",
+        "item": "Q232564",
+        "itemLabel": "Cundinamarca Department"
+    },
+    {
+        "iso": "CO-GUA",
+        "item": "Q238645",
+        "itemLabel": "Guainía Department"
+    },
+    {
+        "iso": "CO-GUV",
+        "item": "Q272885",
+        "itemLabel": "Guaviare Department"
+    },
+    {
+        "iso": "CO-HUI",
+        "item": "Q234920",
+        "itemLabel": "Huila Department"
+    },
+    {
+        "iso": "CO-LAG",
+        "item": "Q272747",
+        "itemLabel": "La Guajira Department"
+    },
+    {
+        "iso": "CO-MAG",
+        "item": "Q199910",
+        "itemLabel": "Magdalena Department"
+    },
+    {
+        "iso": "CO-MET",
+        "item": "Q238629",
+        "itemLabel": "Meta"
+    },
+    {
+        "iso": "CO-NAR",
+        "item": "Q230217",
+        "itemLabel": "Nariño Department"
+    },
+    {
+        "iso": "CO-NSA",
+        "item": "Q233058",
+        "itemLabel": "Norte de Santander Department"
+    },
+    {
+        "iso": "CO-PUT",
+        "item": "Q232953",
+        "itemLabel": "Putumayo Department"
+    },
+    {
+        "iso": "CO-QUI",
+        "item": "Q13995",
+        "itemLabel": "Quindío Department"
+    },
+    {
+        "iso": "CO-RIS",
+        "item": "Q13993",
+        "itemLabel": "Risaralda Department"
+    },
+    {
+        "iso": "CO-SAN",
+        "item": "Q235166",
+        "itemLabel": "Santander Department"
+    },
+    {
+        "iso": "CO-SAP",
+        "item": "Q26855",
+        "itemLabel": "Archipelago of Saint Andréws, Providence and Saint Catalina"
+    },
+    {
+        "iso": "CO-SUC",
+        "item": "Q235188",
+        "itemLabel": "Sucre Department"
+    },
+    {
+        "iso": "CO-TOL",
+        "item": "Q234501",
+        "itemLabel": "Tolima Department"
+    },
+    {
+        "iso": "CO-VAC",
+        "item": "Q13990",
+        "itemLabel": "Valle del Cauca Department"
+    },
+    {
+        "iso": "CO-VAU",
+        "item": "Q234505",
+        "itemLabel": "Vaupés Department"
+    },
+    {
+        "iso": "CO-VID",
+        "item": "Q268729",
+        "itemLabel": "Vichada Department"
+    }
+]

@@ -1,0 +1,52 @@
+[
+    {
+        "iso": "CM-OU",
+        "item": "Q165784",
+        "itemLabel": "Région de l'Ouest"
+    },
+    {
+        "iso": "CM-AD",
+        "item": "Q351514",
+        "itemLabel": "Région de l'Adamaoua"
+    },
+    {
+        "iso": "CM-NO",
+        "item": "Q502341",
+        "itemLabel": "Région du Nord"
+    },
+    {
+        "iso": "CM-SW",
+        "item": "Q607499",
+        "itemLabel": "Région du Sud-Ouest"
+    },
+    {
+        "iso": "CM-CE",
+        "item": "Q739951",
+        "itemLabel": "Région du Centre"
+    },
+    {
+        "iso": "CM-NW",
+        "item": "Q823946",
+        "itemLabel": "Région du Nord-Ouest"
+    },
+    {
+        "iso": "CM-EN",
+        "item": "Q823976",
+        "itemLabel": "Région de l'Extrême-Nord"
+    },
+    {
+        "iso": "CM-ES",
+        "item": "Q845168",
+        "itemLabel": "Région de l'Est"
+    },
+    {
+        "iso": "CM-LT",
+        "item": "Q845172",
+        "itemLabel": "Région du Littoral"
+    },
+    {
+        "iso": "CM-SU",
+        "item": "Q857122",
+        "itemLabel": "Région du Sud"
+    }
+]
