@@ -1,0 +1,98 @@
+from Monument import Monument, Dataset
+import importer_utils as utils
+import importer as importer
+
+
+class RsSr(Monument):
+
+    def set_address(self):
+        if self.has_non_empty_attribute("address"):
+            if self.has_non_empty_attribute("city"):
+                if utils.contains_digit(self.address):
+                    city_no_brackets = utils.get_rid_of_brackets(self.city)
+                    address = "{}, {}".format(self.address, city_no_brackets)
+                    self.add_statement("located_street", address)
+
+    def set_location(self):
+        loc_q = None
+        loc_raw = self.city
+        loc_dic = self.data_files["settlements"]
+
+        loc_match = utils.get_item_from_dict_by_key(dict_name=loc_dic,
+                                                    search_in="itemLabel",
+                                                    search_term=loc_raw)
+        if len(loc_match) == 1:
+            loc_q = loc_match[0]
+
+        if loc_q is not None:
+            self.add_statement("location", loc_q)
+
+    def set_adm_location(self):
+        adm_q = None
+        adm_dic = self.data_files["admin"]
+        okr_dic = self.data_files["okruzi"]
+
+        municip_try = utils.get_item_from_dict_by_key(
+            dict_name=adm_dic, search_in="itemLabel",
+            search_term=self.district)
+        if len(municip_try) == 1:
+            adm_q = municip_try[0]
+
+        if adm_q is None:
+            iso_try = utils.get_item_from_dict_by_key(
+                dict_name=okr_dic, search_in="iso", search_term=self.iso_okrug)
+            if len(iso_try) == 1:
+                adm_q = iso_try[0]
+
+        if adm_q is not None:
+            self.add_statement("located_adm", adm_q)
+
+    def update_descriptions(self):
+        eng = "cultural heritage site in Serbia"
+        self.add_description("en", eng)
+
+    def update_labels(self):
+        name = utils.remove_markup(self.name)
+        self.add_label("sr", name)
+
+    def set_heritage_id(self):
+        """
+        Wait.
+
+        https://www.wikidata.org/wiki/Wikidata:Property_proposal/cultural_heritage_monument_in_Serbia_ID.
+        """
+        print("")
+
+    def exists_with_monument_article(self, language):
+        return super().exists_with_monument_article("sr", "monument_article")
+
+    def __init__(self, db_row_dict, mapping, data_files, existing, repository):
+        Monument.__init__(self, db_row_dict, mapping,
+                          data_files, existing, repository)
+        self.set_monuments_all_id("id")
+        self.set_registrant_url()
+        self.set_changed()
+        self.set_wlm_source()
+        self.set_country()
+        self.set_location()
+        self.set_adm_location()
+        self.set_address()
+        self.set_is()
+        self.set_heritage()
+        self.set_heritage_id()
+        self.update_labels()
+        self.update_descriptions()
+        self.set_coords()
+        self.set_image()
+        self.set_commonscat()
+        # self.set_wd_item(self.find_matching_wikidata(mapping))
+
+
+if __name__ == "__main__":
+    """Point of entrance for importer."""
+    args = importer.handle_args()
+    dataset = Dataset("rs", "sr", RsSr)
+    dataset.data_files = {"admin": "serbia_admin.json",
+                          "okruzi": "serbia_okruzi.json",
+                          "settlements": "serbia_settlements.json"}
+    importer.main(args, dataset)

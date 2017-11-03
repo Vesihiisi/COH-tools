@@ -1,0 +1,21 @@
+{
+    "country": {
+        "item": "Q403",
+        "name": "Serbia"
+    },
+    "country_code": "rs",
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "Q3323469",
+        "name": "protected cultural monument in Serbia"
+    },
+    "language": "sr",
+    "table_name": "rs",
+    "unique": {
+        "comment": "cultural heritage monument in Serbia ID",
+        "property": "P4245"
+    }
+}
