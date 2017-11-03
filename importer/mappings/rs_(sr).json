@@ -15,7 +15,7 @@
     "language": "sr",
     "table_name": "rs",
     "unique": {
-        "comment": "https://www.wikidata.org/wiki/Wikidata:Property_proposal/cultural_heritage_monument_in_Serbia_ID",
-        "property": ""
+        "comment": "cultural heritage monument in Serbia ID",
+        "property": "P4245"
     }
 }
