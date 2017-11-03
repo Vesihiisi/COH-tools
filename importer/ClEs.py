@@ -1,5 +1,6 @@
-from Monument import Monument
+from Monument import Monument, Dataset
 import importer_utils as utils
+import importer as importer
 
 
 class ClEs(Monument):
@@ -24,9 +25,11 @@ class ClEs(Monument):
             self.add_statement("heritage_status",
                                heritages[self.tipo], start_time)
 
-    def set_monuments_all_id(self):
-        """Map which column name in specific table to  ID in monuments_all."""
-        self.monuments_all_id = str(self.id)
+    def set_directions(self):
+        if self.has_non_empty_attribute("direccion"):
+            monolingual = utils.package_monolingual(
+                utils.remove_markup(self.direccion), 'es')
+            self.add_statement("directions", monolingual)
 
     def set_adm_location(self):
         adm_location_q = False
@@ -48,8 +51,17 @@ class ClEs(Monument):
         else:
             self.add_to_report("comuna", self.comuna, "located_adm")
 
+    def set_heritage_id(self):
+        wlm_code = self.mapping["table_name"].upper()
+        heritage = "{}-{}".format(wlm_code, self.id)
+        self.add_statement("wlm_id", heritage)
+
     def exists_with_monument_article(self, language):
-        return super().exists_with_monument_article("es", "monumento_enlace")
+        return self.get_multi_param_monument_article(
+            raw="monumento_enlace",
+            linked="monumento",
+            blocks="enlace",
+            language=language)
 
     def set_parts(self):
         if self.has_non_empty_attribute("enlace"):
@@ -66,22 +78,32 @@ class ClEs(Monument):
         if self.tipo == "SN":
             self.upload = False
             return
-        self.set_monuments_all_id()
+
+        self.set_monuments_all_id("id")
         self.set_changed()
-        self.wlm_source = self.create_wlm_source(self.monuments_all_id)
+        self.set_wlm_source()
         self.set_heritage()
         self.update_heritage()
+        self.set_country()
+        self.set_adm_location()
+        self.set_directions()
+        self.set_heritage_id()
+        self.set_is()
+        self.set_parts()
+        self.set_commonscat()
+        self.set_coords()
+        self.set_image("imagen")
         self.update_labels()
         self.update_descriptions()
-        self.set_country()
-        self.set_source()
-        self.set_coords(("lat", "lon"))
-        self.set_commonscat()
-        self.set_image("imagen")
-        self.set_adm_location()
-        self.set_parts()
-        # The following is commented out because
-        # we're still waiting for the ID property:
-        # https://www.wikidata.org/wiki/Wikidata:Property_proposal/Chilean_National_Monuments_ID
-        # Once it's done it'll be added to the mapping file
-        # self.set_wd_item(self.find_matching_wikidata(mapping))
+        self.set_wd_item(self.find_matching_wikidata(mapping))
+
+
+if __name__ == "__main__":
+    """Point of entrance for importer."""
+    args = importer.handle_args()
+    dataset = Dataset("cl", "es", ClEs)
+    dataset.data_files = {
+        "municipalities": "chile_municipalities.json",
+        "regions": "chile_regions.json"
+    }
+    importer.main(args, dataset)

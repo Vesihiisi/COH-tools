@@ -318,7 +318,6 @@ def make_dataset(country, language):
     """
     from Monument import Dataset
     from CzCs import CzCs
-    from ClEs import ClEs
     from AtDe import AtDe
     from DkBygningDa import DkBygningDa
     from DkFortidsDa import DkFortidsDa
@@ -338,11 +337,6 @@ def make_dataset(country, language):
             "data_files": {
                 "functions": "se-ship_(sv)_functions.json"}},
         "monuments_cz_(cs)": {"class": CzCs, "data_files": {}},
-        "monuments_cl_(es)": {
-            "class": ClEs,
-            "data_files": {
-                "municipalities": "chile_municipalities.json",
-                "regions": "chile_regions.json"}},
         "monuments_hu_(hu)": {"class": HuHu, "data_files": {}},
         "monuments_pt_(pt)": {"class": PtPt, "data_files": {}},
         "monuments_ie_(en)": {

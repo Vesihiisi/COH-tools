@@ -15,7 +15,7 @@
     "language": "es",
     "table_name": "cl",
     "unique": {
-        "comment": "",
-        "property": ""
+        "comment": "WLM ID",
+        "property": "P2186"
     }
 }
