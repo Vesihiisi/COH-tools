@@ -27,6 +27,10 @@ class GhEn(Monument):
                     "built", self.built, "inception")
 
     def set_adm_location(self):
+        # some iso entries mistakenly use underscores
+        if "_" in self.region_iso:
+            self.region_iso = self.region_iso.replace("_", "-")
+
         self.set_from_dict_match(
             lookup_dict=self.data_files["regions"],
             dict_label="iso",
@@ -35,14 +39,15 @@ class GhEn(Monument):
         )
 
     def set_location(self):
-        location_q = utils.q_from_first_wikilink("en", self.location)
-        if location_q:
-            self.add_statement("location", location_q)
-        else:
-            self.add_to_report("location", self.location, "location")
+        if self.has_non_empty_attribute("location"):
+            location_q = utils.q_from_first_wikilink("en", self.location)
+            if location_q:
+                self.add_statement("location", location_q)
+            else:
+                self.add_to_report("location", self.location, "location")
 
     def set_heritage_id(self):
-        if not self.id.startswith('GH-'):
+        if not self.id.startswith("GH-"):
             self.upload = False
             return
         self.add_statement("wlm_id", self.id)
