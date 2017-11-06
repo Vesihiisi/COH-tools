@@ -298,9 +298,14 @@ class Uploader(object):
             else:
                 disallowed = [x["item"] for x in P31_BLACKLIST]
                 item_q = self.data["wd-item"]
-                if utils.is_blacklisted_P31(item_q, self.repo, disallowed):
+                right_country = utils.is_right_country(
+                    item_q, self.repo, self.data["country"])
+                if (utils.is_blacklisted_P31(item_q, self.repo, disallowed) or
+                        not right_country):
                     if self.log:
-                        message = "{} -- SET AS WD-ITEM BUT POSSIBLY WRONG AND THUS REMOVED".format(item_q)
+                        message = (
+                            "{} -- SET AS WD-ITEM BUT POSSIBLY WRONG AND "
+                            "THUS REMOVED".format(item_q))
                         self.log.logit(message)
                     self.wd_item = self.create_new_item(self.log)
                     self.wd_item_q = self.wd_item.getID()

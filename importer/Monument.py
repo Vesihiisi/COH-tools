@@ -295,6 +295,7 @@ class Monument(object):
         country = [item["item"]
                    for item in self.adm0 if item["code"].lower() == code][0]
         self.add_statement("country", country)
+        self.wd_item["country"] = country
 
     def set_is(self):
         """
