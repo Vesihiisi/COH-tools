@@ -47,5 +47,7 @@
   "heritage_brussels": "P3600",
   "heritage_georgia": "P4166",
   "heritage_iran": "P1369",
-  "bien_de_interes": "P808"
+  "bien_de_interes": "P808",
+  "has_part": "P527",
+  "legal_citation": "P1031"
 }

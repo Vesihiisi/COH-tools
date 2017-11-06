@@ -1,0 +1,21 @@
+{
+    "country": {
+        "item": "Q298",
+        "name": "Chile"
+    },
+    "country_code": "cl",
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "Q6974386",
+        "name": "national monument of Chile"
+    },
+    "language": "es",
+    "table_name": "cl",
+    "unique": {
+        "comment": "WLM ID",
+        "property": "P2186"
+    }
+}

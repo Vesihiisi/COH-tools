@@ -47,9 +47,13 @@ class PaEs(Monument):
             super().set_commonscat("monumento_categoria")
 
     def exists_with_monument_article(self, language):
-        if self.has_non_empty_attribute("articulo"):
-            return super().exists_with_monument_article("es", "articulo")
-        elif self.has_non_empty_attribute("nombre"):
+        """
+        Set article about the object.
+
+        Note that "articulo" goes to the "main article", often one level above
+        the particular object.
+        """
+        if self.has_non_empty_attribute("nombre"):
             return utils.q_from_first_wikilink("es", self.nombre)
 
     def __init__(self, db_row_dict, mapping, data_files, existing, repository):

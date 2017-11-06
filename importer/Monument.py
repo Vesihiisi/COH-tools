@@ -3,6 +3,7 @@ import json
 import importer_utils as utils
 
 MAPPING_DIR = "mappings"
+MAX_LABEL_LENGTH = 250
 P31_BLACKLIST = utils.load_json(path.join(MAPPING_DIR, "P31_blacklist.json"))
 
 
@@ -27,6 +28,8 @@ class Monument(object):
         self.common_items = data_files["_static"]["common_items"]
         for k, v in db_row_dict.items():
             if not k.startswith("m_spec."):
+                if isinstance(v, str):
+                    v = v.strip()
                 setattr(self, k.replace("-", "_"), v)
         self.monuments_all_id = ""
         self.construct_wd_item(mapping)
@@ -240,6 +243,9 @@ class Monument(object):
         :param language: code of language, e.g. "fi"
         :param text: content of the label
         """
+        if len(text) >= MAX_LABEL_LENGTH:
+            self.add_to_report('_label', text, '_label')
+            return
         base = self.wd_item["labels"]
         base[language] = text
 
@@ -250,6 +256,9 @@ class Monument(object):
         :param language: code of language, e.g. "fi"
         :param text: content of the alias
         """
+        if len(text) >= MAX_LABEL_LENGTH:
+            self.add_to_report('_alias', text, '_alias')
+            return
         base = self.wd_item["aliases"]
         if language not in base:
             base[language] = []
@@ -366,6 +375,7 @@ class Monument(object):
         """
         if self.has_non_empty_attribute(image_keyword):
             image = getattr(self, image_keyword)
+            image = image.lstrip(':').strip()  # strip colons and any spaces
             self.add_statement("image", image, refs=False)
 
     def set_commonscat(self, keyword="commonscat"):
@@ -653,7 +663,10 @@ class Monument(object):
         """
         prop = None
         if prop_name:
-            prop = self.props.get(prop_name)
+            if prop_name.startswith('_'):
+                prop = prop_name
+            else:
+                prop = self.props.get(prop_name)
         self.problem_report[key_name] = {"value": raw_data,
                                          "target": prop}
         if "wd-item" not in self.problem_report:
