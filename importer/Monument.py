@@ -375,6 +375,7 @@ class Monument(object):
         """
         if self.has_non_empty_attribute(image_keyword):
             image = getattr(self, image_keyword)
+            image = image.lstrip(':').strip()  # strip colons and any spaces
             self.add_statement("image", image, refs=False)
 
     def set_commonscat(self, keyword="commonscat"):
