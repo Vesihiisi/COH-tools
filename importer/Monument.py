@@ -27,6 +27,8 @@ class Monument(object):
         self.common_items = data_files["_static"]["common_items"]
         for k, v in db_row_dict.items():
             if not k.startswith("m_spec."):
+                if isinstance(v, str):
+                    v = v.strip()
                 setattr(self, k.replace("-", "_"), v)
         self.monuments_all_id = ""
         self.construct_wd_item(mapping)
