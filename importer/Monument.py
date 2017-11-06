@@ -242,7 +242,7 @@ class Monument(object):
         :param text: content of the label
         """
         if len(text) >= MAX_LABEL_LENGTH:
-            self.add_to_report('', text, '_label')
+            self.add_to_report('_label', text, '_label')
             return
         base = self.wd_item["labels"]
         base[language] = text
@@ -255,7 +255,7 @@ class Monument(object):
         :param text: content of the alias
         """
         if len(text) >= MAX_LABEL_LENGTH:
-            self.add_to_report('', text, '_alias')
+            self.add_to_report('_alias', text, '_alias')
             return
         base = self.wd_item["aliases"]
         if language not in base:
@@ -660,7 +660,10 @@ class Monument(object):
         """
         prop = None
         if prop_name:
-            prop = self.props.get(prop_name)
+            if prop_name.startswith('_'):
+                prop = prop_name
+            else:
+                prop = self.props.get(prop_name)
         self.problem_report[key_name] = {"value": raw_data,
                                          "target": prop}
         if "wd-item" not in self.problem_report:
