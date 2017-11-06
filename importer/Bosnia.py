@@ -51,8 +51,17 @@ class BosniaMonument(Monument):
         self.repo = repository
         self.problem_report = {}
 
+    def create_source(self):
+        source_item = "Q42750314"
+        last_edit = "2017-09-08"
+        timestamp = utils.date_to_dict(last_edit, "%Y-%m-%d")
+        prop_stated = self.props["stated_in"]
+        prop_date = self.props["publication_date"]
+        self.source = {"source": {"prop": prop_stated, "value": source_item},
+                "published": {"prop": prop_date, "value": timestamp}, }
+
     def set_country(self):
-        self.add_statement("country", "Q225", refs=False)
+        self.add_statement("country", "Q225", refs=self.source)
 
     def set_heritage(self):
         """
@@ -69,7 +78,7 @@ class BosniaMonument(Monument):
             quals["start_time"] = {"time_value": date_dict}
 
         self.add_statement("heritage_status", heritage,
-                           quals=quals, refs=False)
+                           quals=quals, refs=self.source)
 
     def set_is(self):
         """
@@ -90,7 +99,7 @@ class BosniaMonument(Monument):
         else:
             to_add = default
 
-        self.add_statement("is", to_add, refs=False)
+        self.add_statement("is", to_add, refs=self.source)
 
     def set_described(self):
         """
@@ -103,7 +112,7 @@ class BosniaMonument(Monument):
         if self.has_non_empty_attribute("url"):
             if self.url.startswith("http"):
                 url_clean = self.url.split("?")[0]
-                self.add_statement("described_at_url", url_clean, refs=False)
+                self.add_statement("described_at_url", url_clean, refs=self.source)
 
     def set_adm_location(self):
         """
@@ -117,13 +126,13 @@ class BosniaMonument(Monument):
         municip_match = utils.get_item_from_dict_by_key(dict_name=municip_dict,
                                                         search_term=municip_raw,
                                                         search_in="itemLabel")
-        self.add_statement("located_adm", municip_match[0], refs=False)
+        self.add_statement("located_adm", municip_match[0], refs=self.source)
 
     def set_street_address(self):
         addr_raw = self.address.strip()
         if addr_raw != "N/A" and not addr_raw.startswith("http"):
             # yes this is needed
-            self.add_statement("located_street", addr_raw, refs=False)
+            self.add_statement("located_street", addr_raw, refs=self.source)
 
     def update_labels(self):
         labels = {
@@ -157,7 +166,7 @@ class BosniaMonument(Monument):
                     coord_tuple = (float(split_parts[0].strip()),
                                    float(split_parts[1].strip()[:-1].strip()))
                     self.add_statement(
-                        "coordinates", coord_tuple, refs=False)
+                        "coordinates", coord_tuple, refs=self.source)
                 except ValueError:
                     print("Nope coords: {}".format(self.coordinates))
 
@@ -176,6 +185,7 @@ class BosniaMonument(Monument):
         self.wd_item["disambiguators"] = {}
         self.wd_item["wd-item"] = None
         self.mapping = mapping
+        self.create_source()
         self.set_country()
         self.set_adm_location()
         self.set_coords()
