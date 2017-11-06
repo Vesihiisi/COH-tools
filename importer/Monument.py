@@ -3,6 +3,7 @@ import json
 import importer_utils as utils
 
 MAPPING_DIR = "mappings"
+MAX_LABEL_LENGTH = 250
 P31_BLACKLIST = utils.load_json(path.join(MAPPING_DIR, "P31_blacklist.json"))
 
 
@@ -240,6 +241,9 @@ class Monument(object):
         :param language: code of language, e.g. "fi"
         :param text: content of the label
         """
+        if len(text) >= MAX_LABEL_LENGTH:
+            self.add_to_report('', text, '_label')
+            return
         base = self.wd_item["labels"]
         base[language] = text
 
@@ -250,6 +254,9 @@ class Monument(object):
         :param language: code of language, e.g. "fi"
         :param text: content of the alias
         """
+        if len(text) >= MAX_LABEL_LENGTH:
+            self.add_to_report('', text, '_alias')
+            return
         base = self.wd_item["aliases"]
         if language not in base:
             base[language] = []
