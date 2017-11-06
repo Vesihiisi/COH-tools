@@ -13,14 +13,16 @@ class RsSr(Monument):
         Otherwise directions.
         """
         if self.has_non_empty_attribute("address"):
-            if self.has_non_empty_attribute("city"):
-                if utils.contains_digit(self.address):
+            if utils.contains_digit(self.address):
+                if self.has_non_empty_attribute("city"):
                     city_no_brackets = utils.get_rid_of_brackets(self.city)
                     address = "{}, {}".format(self.address, city_no_brackets)
-                    self.add_statement("located_street", address)
                 else:
-                    dirs = utils.package_monolingual("sr", self.address)
-                    self.add_statement("directions", dirs)
+                    address = self.address
+                self.add_statement("located_street", address)
+            else:
+                dirs = utils.package_monolingual("sr", self.address)
+                self.add_statement("directions", dirs)
 
     def set_location(self):
         """
@@ -29,21 +31,11 @@ class RsSr(Monument):
         'City' is never wikilinked, so try to match
         against list of known settlements.
         """
-        if self.has_non_empty_attribute("city"):
-            loc_q = None
-            loc_raw = self.city
-            loc_dic = self.data_files["settlements"]
-
-            loc_match = utils.get_item_from_dict_by_key(dict_name=loc_dic,
-                                                        search_in="itemLabel",
-                                                        search_term=loc_raw)
-            if len(loc_match) == 1:
-                loc_q = loc_match[0]
-
-            if loc_q:
-                self.add_statement("location", loc_q)
-            else:
-                self.add_to_report("city", self.city, "location")
+        self.set_from_dict_match(
+            lookup_dict=self.data_files["settlements"],
+            dict_label="itemLabel",
+            value_label="city",
+            prop="location")
 
     def set_adm_location(self):
         """
@@ -65,19 +57,21 @@ class RsSr(Monument):
             search_term=self.district)
         if len(municip_try) == 1:
             adm_q = municip_try[0]
+        else:
+            self.add_to_report("district", self.district, "located_adm")
 
-        if not adm_q:
+        if not adm_q and self.has_non_empty_attribute("iso_okrug"):
             iso_try = utils.get_item_from_dict_by_key(
                 dict_name=okr_dic,
                 search_in="iso",
                 search_term=self.iso_okrug)
             if len(iso_try) == 1:
                 adm_q = iso_try[0]
+            else:
+                self.add_to_report("iso_okrug", self.iso_okrug, "located_adm")
 
         if adm_q:
             self.add_statement("located_adm", adm_q)
-        else:
-            self.add_to_report("district", self.district, "located_adm")
 
     def update_descriptions(self):
         descs = {
@@ -86,8 +80,8 @@ class RsSr(Monument):
             "ru": "охраняемый памятник культуры в Сербии",
             "sr": "заштићен споменик културе у Србији",
         }
-        for lang in descs:
-            self.add_description(lang, descs[lang])
+        for lang, desc in descs.items():
+            self.add_description(lang, desc)
 
     def update_labels(self):
         name = utils.remove_markup(self.name)
