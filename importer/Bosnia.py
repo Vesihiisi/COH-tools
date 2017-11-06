@@ -1,4 +1,14 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Self-contained-ish module for Bosnia/Herzegovina.
+
+Since this data does not come from WLM,
+this module contains its own little
+importer that parses the csv data
+(in several files in a subdirectory called
+upon with --datadir).
+"""
 import argparse
 import os
 import dateparser
@@ -12,21 +22,6 @@ import importer_utils as utils
 MAPPINGS_DIR = "mappings"
 REPORTING_DIR = "reports"
 PREVIEW_DIR = "previews"
-
-
-def generate_filenames(tablename, timestamp):
-    """Construct the problem and preview filenames."""
-    filenames = {}
-    utils.create_dir(REPORTING_DIR)
-    filenames['reports'] = os.path.join(
-        REPORTING_DIR, "report_{0}_{1}.json".format(tablename, timestamp))
-
-    utils.create_dir(PREVIEW_DIR)
-    filenames['examples'] = os.path.join(
-        PREVIEW_DIR, "examples_{0}_{1}.wiki".format(tablename, timestamp))
-    filenames['matches'] = os.path.join(
-        PREVIEW_DIR, "matches_{0}_{1}.wiki".format(tablename, timestamp))
-    return filenames
 
 
 class BosniaMonument(Monument):
@@ -58,7 +53,8 @@ class BosniaMonument(Monument):
         prop_stated = self.props["stated_in"]
         prop_date = self.props["publication_date"]
         self.source = {"source": {"prop": prop_stated, "value": source_item},
-                "published": {"prop": prop_date, "value": timestamp}, }
+                "published": {"prop": prop_date,
+                "value": timestamp}, }
 
     def set_country(self):
         self.add_statement("country", "Q225", refs=self.source)
@@ -112,7 +108,9 @@ class BosniaMonument(Monument):
         if self.has_non_empty_attribute("url"):
             if self.url.startswith("http"):
                 url_clean = self.url.split("?")[0]
-                self.add_statement("described_at_url", url_clean, refs=self.source)
+                self.add_statement("described_at_url",
+                    url_clean,
+                    refs=self.source)
 
     def set_adm_location(self):
         """
@@ -197,6 +195,21 @@ class BosniaMonument(Monument):
         self.update_labels()
 
 
+def generate_filenames(tablename, timestamp):
+    """Construct the problem and preview filenames."""
+    filenames = {}
+    utils.create_dir(REPORTING_DIR)
+    filenames['reports'] = os.path.join(
+        REPORTING_DIR, "report_{0}_{1}.json".format(tablename, timestamp))
+
+    utils.create_dir(PREVIEW_DIR)
+    filenames['examples'] = os.path.join(
+        PREVIEW_DIR, "examples_{0}_{1}.wiki".format(tablename, timestamp))
+    filenames['matches'] = os.path.join(
+        PREVIEW_DIR, "matches_{0}_{1}.wiki".format(tablename, timestamp))
+    return filenames
+
+
 def load_source_data(directory):
     """Load multiple source files from directory."""
     source_data = []
@@ -271,9 +284,9 @@ def main(arguments):
     if arguments["offset"]:
         print("Using offset: {}.".format(str(arguments["offset"])))
         source_data = source_data[arguments["offset"]:]
-    if arguments["limit"]:
-        print("Using limit: {}.".format(str(arguments["limit"])))
-        source_data = source_data[:arguments["limit"]]
+    if arguments["short"]:
+        print("Using limit: {}.".format(str(arguments["short"])))
+        source_data = source_data[:arguments["short"]]
     for row in source_data:
         monument = BosniaMonument(row, mapping, data_files, existing, repo)
         if arguments["table"]:
@@ -300,7 +313,7 @@ if __name__ == "__main__":
                         nargs='?',
                         type=int,
                         action='store')
-    parser.add_argument("--limit",
+    parser.add_argument("--short",
                         nargs='?',
                         type=int,
                         action='store')
