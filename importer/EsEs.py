@@ -1,4 +1,4 @@
-"""
+r"""
 BIC monuments in Spain in Spanish.
 
 The same database holds multiple monument types incorrectly labeled as BICs
