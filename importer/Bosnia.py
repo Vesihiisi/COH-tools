@@ -7,10 +7,26 @@ import wikidataStuff.wdqsLookup as lookup
 
 from Monument import Monument
 from Uploader import Uploader
-from importer import Mapping
 import importer_utils as utils
 
 MAPPINGS_DIR = "mappings"
+REPORTING_DIR = "reports"
+PREVIEW_DIR = "previews"
+
+
+def generate_filenames(tablename, timestamp):
+    """Construct the problem and preview filenames."""
+    filenames = {}
+    utils.create_dir(REPORTING_DIR)
+    filenames['reports'] = os.path.join(
+        REPORTING_DIR, "report_{0}_{1}.json".format(tablename, timestamp))
+
+    utils.create_dir(PREVIEW_DIR)
+    filenames['examples'] = os.path.join(
+        PREVIEW_DIR, "examples_{0}_{1}.wiki".format(tablename, timestamp))
+    filenames['matches'] = os.path.join(
+        PREVIEW_DIR, "matches_{0}_{1}.wiki".format(tablename, timestamp))
+    return filenames
 
 
 class BosniaMonument(Monument):
@@ -65,8 +81,11 @@ class BosniaMonument(Monument):
         self.add_statement("is", to_add, refs=False)
 
     def set_described(self):
-        if self.url.startswith("http"):
-            self.add_statement("described_at_url", self.url, refs=False)
+        if self.has_non_empty_attribute("url"):
+            if self.url.startswith("http"):
+                url_clean = self.url.split("?")[0]
+                print(url_clean)
+                self.add_statement("described_at_url", url_clean, refs=False)
 
     def set_adm_location(self):
         """
@@ -214,7 +233,7 @@ def load_mapping_files():
 def main(arguments):
     """Process the arguments and fetch data according to them"""
     arguments = vars(arguments)
-    #current_time = utils.get_current_timestamp()
+    filenames = generate_filenames("Bosnia", utils.get_current_timestamp())
     repo = utils.create_site_instance("wikidata", "wikidata")
     source_data = load_source_data(arguments["datadir"])
     data_files = load_mapping_files()
@@ -229,12 +248,11 @@ def main(arguments):
         source_data = source_data[:arguments["limit"]]
     for row in source_data:
         monument = BosniaMonument(row, mapping, data_files, existing, repo)
-    # for area in area_data:
-    #     reserve = NatureArea(area, wikidata_site, data_files, existing_areas)
-    #     if arguments["table"]:
-    #         filename = "{}_{}.txt".format(arguments["dataset"], current_time)
-    #         preview = PreviewTable(reserve)
-    #         utils.append_line_to_file(preview.make_table(), filename)
+        if arguments["table"]:
+            raw_data = "<pre>" + str(row) + "</pre>\n"
+            monument_table = monument.print_wd_to_table()
+            utils.append_line_to_file(raw_data, filenames['examples'])
+            utils.append_line_to_file(monument_table, filenames['examples'])
         if arguments["upload"]:
             live = True if arguments["upload"] == "live" else False
             uploader = Uploader(monument,
