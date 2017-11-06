@@ -182,5 +182,53 @@
     {
         "item": "Q31855",
         "comment": "research institute"
+    },
+    {
+        "item": "Q26934845",
+        "comment": "integral overseas territory"
+    },
+    {
+        "item": "Q52371",
+        "comment": "regiment"
+    },
+    {
+        "item": "Q5973946",
+        "comment": "letrero"
+    },
+    {
+        "item": "Q749622",
+        "comment": "List of Antarctic research stations"
+    },
+    {
+        "item": "Q3957",
+        "comment": "town"
+    },
+    {
+        "item": "Q7363",
+        "comment": "nose"
+    },
+    {
+        "item": "Q48204",
+        "comment": "association"
+    },
+    {
+        "item": "Q294440",
+        "comment": "public space"
+    },
+    {
+        "item": "Q820254",
+        "comment": "mining community"
+    },
+    {
+        "item": "Q627236",
+        "comment": "company town"
+    },
+    {
+        "item": "Q532",
+        "comment": "village"
+    },
+    {
+        "item": "Q1840161",
+        "comment": "commune of Chile"
     }
 ]

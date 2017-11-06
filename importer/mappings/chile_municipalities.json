@@ -1,0 +1,1390 @@
+[
+  {
+    "item": "Q1880",
+    "itemLabel": "Concepción"
+  },
+  {
+    "item": "Q2203",
+    "itemLabel": "Arica"
+  },
+  {
+    "item": "Q2206",
+    "itemLabel": "Algarrobo"
+  },
+  {
+    "item": "Q2208",
+    "itemLabel": "Alhué"
+  },
+  {
+    "item": "Q2213",
+    "itemLabel": "Alto Bío Bío"
+  },
+  {
+    "item": "Q2215",
+    "itemLabel": "Alto del Carmen"
+  },
+  {
+    "item": "Q2217",
+    "itemLabel": "Alto Hospicio"
+  },
+  {
+    "item": "Q3597",
+    "itemLabel": "Ancud"
+  },
+  {
+    "item": "Q3602",
+    "itemLabel": "Andacollo"
+  },
+  {
+    "item": "Q3608",
+    "itemLabel": "Angol"
+  },
+  {
+    "item": "Q3612",
+    "itemLabel": "Antofagasta"
+  },
+  {
+    "item": "Q3619",
+    "itemLabel": "Antuco"
+  },
+  {
+    "item": "Q3626",
+    "itemLabel": "Chilean Antarctic Territory"
+  },
+  {
+    "item": "Q3632",
+    "itemLabel": "Arauco"
+  },
+  {
+    "item": "Q3651",
+    "itemLabel": "Aysén"
+  },
+  {
+    "item": "Q3656",
+    "itemLabel": "Buin"
+  },
+  {
+    "item": "Q3663",
+    "itemLabel": "Bulnes"
+  },
+  {
+    "item": "Q3668",
+    "itemLabel": "Cabildo"
+  },
+  {
+    "item": "Q3673",
+    "itemLabel": "Cabo de Hornos"
+  },
+  {
+    "item": "Q3678",
+    "itemLabel": "Cabrero"
+  },
+  {
+    "item": "Q3685",
+    "itemLabel": "Calama"
+  },
+  {
+    "item": "Q3691",
+    "itemLabel": "Calbuco"
+  },
+  {
+    "item": "Q3708",
+    "itemLabel": "Caldera"
+  },
+  {
+    "item": "Q3713",
+    "itemLabel": "La Calera"
+  },
+  {
+    "item": "Q3725",
+    "itemLabel": "Calera de Tango"
+  },
+  {
+    "item": "Q3728",
+    "itemLabel": "Calle Larga"
+  },
+  {
+    "item": "Q3729",
+    "itemLabel": "Camarones"
+  },
+  {
+    "item": "Q3731",
+    "itemLabel": "Camiña"
+  },
+  {
+    "item": "Q3735",
+    "itemLabel": "Canela"
+  },
+  {
+    "item": "Q3736",
+    "itemLabel": "Carahue"
+  },
+  {
+    "item": "Q3738",
+    "itemLabel": "Cartagena"
+  },
+  {
+    "item": "Q3742",
+    "itemLabel": "Casablanca"
+  },
+  {
+    "item": "Q3744",
+    "itemLabel": "Castro"
+  },
+  {
+    "item": "Q3747",
+    "itemLabel": "Catemu"
+  },
+  {
+    "item": "Q3749",
+    "itemLabel": "Cauquenes"
+  },
+  {
+    "item": "Q3753",
+    "itemLabel": "Cañete"
+  },
+  {
+    "item": "Q3755",
+    "itemLabel": "Cerrillos"
+  },
+  {
+    "item": "Q3756",
+    "itemLabel": "Cerro Navia"
+  },
+  {
+    "item": "Q3759",
+    "itemLabel": "Chaitén"
+  },
+  {
+    "item": "Q3762",
+    "itemLabel": "Chanco"
+  },
+  {
+    "item": "Q3763",
+    "itemLabel": "Chañaral"
+  },
+  {
+    "item": "Q3765",
+    "itemLabel": "Chiguayante"
+  },
+  {
+    "item": "Q3770",
+    "itemLabel": "Chile Chico"
+  },
+  {
+    "item": "Q3774",
+    "itemLabel": "Chillán"
+  },
+  {
+    "item": "Q3779",
+    "itemLabel": "Chillán Viejo"
+  },
+  {
+    "item": "Q3782",
+    "itemLabel": "Chimbarongo"
+  },
+  {
+    "item": "Q3785",
+    "itemLabel": "Cholchol"
+  },
+  {
+    "item": "Q3788",
+    "itemLabel": "Chonchi"
+  },
+  {
+    "item": "Q3790",
+    "itemLabel": "Chépica"
+  },
+  {
+    "item": "Q3793",
+    "itemLabel": "Cisnes"
+  },
+  {
+    "item": "Q3796",
+    "itemLabel": "Cobquecura"
+  },
+  {
+    "item": "Q3797",
+    "itemLabel": "Cochamó"
+  },
+  {
+    "item": "Q3800",
+    "itemLabel": "Cochrane"
+  },
+  {
+    "item": "Q3804",
+    "itemLabel": "Codegua"
+  },
+  {
+    "item": "Q3807",
+    "itemLabel": "Coelemu"
+  },
+  {
+    "item": "Q3810",
+    "itemLabel": "Coyhaique"
+  },
+  {
+    "item": "Q3814",
+    "itemLabel": "Coihueco"
+  },
+  {
+    "item": "Q3833",
+    "itemLabel": "Coínco"
+  },
+  {
+    "item": "Q3836",
+    "itemLabel": "Colbún"
+  },
+  {
+    "item": "Q3839",
+    "itemLabel": "Colchane"
+  },
+  {
+    "item": "Q3841",
+    "itemLabel": "Colina"
+  },
+  {
+    "item": "Q3843",
+    "itemLabel": "Collipulli"
+  },
+  {
+    "item": "Q3847",
+    "itemLabel": "Coltauco"
+  },
+  {
+    "item": "Q3850",
+    "itemLabel": "Combarbalá"
+  },
+  {
+    "item": "Q3851",
+    "itemLabel": "Conchalí"
+  },
+  {
+    "item": "Q3860",
+    "itemLabel": "Concón"
+  },
+  {
+    "item": "Q3862",
+    "itemLabel": "Constitución"
+  },
+  {
+    "item": "Q3864",
+    "itemLabel": "Contulmo"
+  },
+  {
+    "item": "Q3868",
+    "itemLabel": "Copiapó"
+  },
+  {
+    "item": "Q3871",
+    "itemLabel": "Coquimbo"
+  },
+  {
+    "item": "Q3873",
+    "itemLabel": "Coronel"
+  },
+  {
+    "item": "Q3875",
+    "itemLabel": "Corral"
+  },
+  {
+    "item": "Q3878",
+    "itemLabel": "Cunco"
+  },
+  {
+    "item": "Q3880",
+    "itemLabel": "Curacautín"
+  },
+  {
+    "item": "Q3885",
+    "itemLabel": "Curacaví"
+  },
+  {
+    "item": "Q3888",
+    "itemLabel": "Curaco de Vélez"
+  },
+  {
+    "item": "Q3892",
+    "itemLabel": "Curanilahue"
+  },
+  {
+    "item": "Q4469",
+    "itemLabel": "Talca"
+  },
+  {
+    "item": "Q4582",
+    "itemLabel": "Rancagua"
+  },
+  {
+    "item": "Q13025",
+    "itemLabel": "Curarrehue"
+  },
+  {
+    "item": "Q13026",
+    "itemLabel": "Curepto"
+  },
+  {
+    "item": "Q13030",
+    "itemLabel": "Curicó"
+  },
+  {
+    "item": "Q13031",
+    "itemLabel": "Dalcahue"
+  },
+  {
+    "item": "Q13033",
+    "itemLabel": "Diego de Almagro"
+  },
+  {
+    "item": "Q13035",
+    "itemLabel": "Doñihue"
+  },
+  {
+    "item": "Q13036",
+    "itemLabel": "El Bosque"
+  },
+  {
+    "item": "Q13037",
+    "itemLabel": "El Carmen"
+  },
+  {
+    "item": "Q13038",
+    "itemLabel": "El Monte"
+  },
+  {
+    "item": "Q13040",
+    "itemLabel": "El Quisco"
+  },
+  {
+    "item": "Q13041",
+    "itemLabel": "El Tabo"
+  },
+  {
+    "item": "Q13042",
+    "itemLabel": "Empedrado"
+  },
+  {
+    "item": "Q13044",
+    "itemLabel": "Ercilla"
+  },
+  {
+    "item": "Q13045",
+    "itemLabel": "Estación Central"
+  },
+  {
+    "item": "Q13048",
+    "itemLabel": "Florida"
+  },
+  {
+    "item": "Q13049",
+    "itemLabel": "Freire"
+  },
+  {
+    "item": "Q13051",
+    "itemLabel": "Freirina"
+  },
+  {
+    "item": "Q13052",
+    "itemLabel": "Fresia"
+  },
+  {
+    "item": "Q13058",
+    "itemLabel": "Frutillar"
+  },
+  {
+    "item": "Q13060",
+    "itemLabel": "Futaleufú"
+  },
+  {
+    "item": "Q13062",
+    "itemLabel": "Futrono"
+  },
+  {
+    "item": "Q13063",
+    "itemLabel": "Galvarino"
+  },
+  {
+    "item": "Q13065",
+    "itemLabel": "General Lagos"
+  },
+  {
+    "item": "Q13067",
+    "itemLabel": "Gorbea"
+  },
+  {
+    "item": "Q13068",
+    "itemLabel": "Graneros"
+  },
+  {
+    "item": "Q13069",
+    "itemLabel": "Guaitecas"
+  },
+  {
+    "item": "Q13071",
+    "itemLabel": "Hijuelas"
+  },
+  {
+    "item": "Q13072",
+    "itemLabel": "Hualaihué"
+  },
+  {
+    "item": "Q13074",
+    "itemLabel": "Hualañé"
+  },
+  {
+    "item": "Q13077",
+    "itemLabel": "Hualpén"
+  },
+  {
+    "item": "Q13079",
+    "itemLabel": "Hualqui"
+  },
+  {
+    "item": "Q13081",
+    "itemLabel": "Huara"
+  },
+  {
+    "item": "Q14422",
+    "itemLabel": "Huasco"
+  },
+  {
+    "item": "Q14433",
+    "itemLabel": "Huechuraba"
+  },
+  {
+    "item": "Q14434",
+    "itemLabel": "Illapel"
+  },
+  {
+    "item": "Q14437",
+    "itemLabel": "Independencia"
+  },
+  {
+    "item": "Q14445",
+    "itemLabel": "Isla de Maipo"
+  },
+  {
+    "item": "Q14452",
+    "itemLabel": "Easter Island"
+  },
+  {
+    "item": "Q14454",
+    "itemLabel": "Juan Fernández"
+  },
+  {
+    "item": "Q14456",
+    "itemLabel": "La Cisterna"
+  },
+  {
+    "item": "Q14457",
+    "itemLabel": "La Cruz"
+  },
+  {
+    "item": "Q14458",
+    "itemLabel": "La Estrella"
+  },
+  {
+    "item": "Q14460",
+    "itemLabel": "La Florida"
+  },
+  {
+    "item": "Q14461",
+    "itemLabel": "La Granja"
+  },
+  {
+    "item": "Q14462",
+    "itemLabel": "La Higuera"
+  },
+  {
+    "item": "Q14463",
+    "itemLabel": "La Ligua"
+  },
+  {
+    "item": "Q14464",
+    "itemLabel": "La Pintana"
+  },
+  {
+    "item": "Q14466",
+    "itemLabel": "La Reina"
+  },
+  {
+    "item": "Q14467",
+    "itemLabel": "La Serena"
+  },
+  {
+    "item": "Q14469",
+    "itemLabel": "La Unión"
+  },
+  {
+    "item": "Q14470",
+    "itemLabel": "Lago Ranco, Chile"
+  },
+  {
+    "item": "Q14471",
+    "itemLabel": "Lago Verde"
+  },
+  {
+    "item": "Q14474",
+    "itemLabel": "Laguna Blanca"
+  },
+  {
+    "item": "Q14475",
+    "itemLabel": "Laja"
+  },
+  {
+    "item": "Q14477",
+    "itemLabel": "Lampa"
+  },
+  {
+    "item": "Q14478",
+    "itemLabel": "Lanco"
+  },
+  {
+    "item": "Q14480",
+    "itemLabel": "Las Cabras"
+  },
+  {
+    "item": "Q14484",
+    "itemLabel": "Las Condes"
+  },
+  {
+    "item": "Q14486",
+    "itemLabel": "Lautaro"
+  },
+  {
+    "item": "Q14488",
+    "itemLabel": "Lebu"
+  },
+  {
+    "item": "Q14490",
+    "itemLabel": "Licantén"
+  },
+  {
+    "item": "Q14493",
+    "itemLabel": "Limache"
+  },
+  {
+    "item": "Q14494",
+    "itemLabel": "Linares"
+  },
+  {
+    "item": "Q14496",
+    "itemLabel": "Litueche"
+  },
+  {
+    "item": "Q14498",
+    "itemLabel": "Llaillay"
+  },
+  {
+    "item": "Q14500",
+    "itemLabel": "Llanquihue"
+  },
+  {
+    "item": "Q14502",
+    "itemLabel": "Lo Barnechea"
+  },
+  {
+    "item": "Q14503",
+    "itemLabel": "Lo Espejo"
+  },
+  {
+    "item": "Q14504",
+    "itemLabel": "Lo Prado"
+  },
+  {
+    "item": "Q15076",
+    "itemLabel": "Perquenco"
+  },
+  {
+    "item": "Q15084",
+    "itemLabel": "Puyehue"
+  },
+  {
+    "item": "Q16899",
+    "itemLabel": "Lolol"
+  },
+  {
+    "item": "Q16900",
+    "itemLabel": "Loncoche"
+  },
+  {
+    "item": "Q16901",
+    "itemLabel": "Longaví"
+  },
+  {
+    "item": "Q16902",
+    "itemLabel": "Lonquimay"
+  },
+  {
+    "item": "Q16903",
+    "itemLabel": "Los Andes"
+  },
+  {
+    "item": "Q16905",
+    "itemLabel": "Los Lagos"
+  },
+  {
+    "item": "Q16906",
+    "itemLabel": "Los Muermos"
+  },
+  {
+    "item": "Q16907",
+    "itemLabel": "Los Sauces"
+  },
+  {
+    "item": "Q16908",
+    "itemLabel": "Los Vilos"
+  },
+  {
+    "item": "Q16909",
+    "itemLabel": "Los Álamos"
+  },
+  {
+    "item": "Q16910",
+    "itemLabel": "Villa Los Ángeles"
+  },
+  {
+    "item": "Q16911",
+    "itemLabel": "Lota"
+  },
+  {
+    "item": "Q16914",
+    "itemLabel": "Lumaco"
+  },
+  {
+    "item": "Q16915",
+    "itemLabel": "Machalí"
+  },
+  {
+    "item": "Q16916",
+    "itemLabel": "Macul"
+  },
+  {
+    "item": "Q16918",
+    "itemLabel": "Maipú"
+  },
+  {
+    "item": "Q16919",
+    "itemLabel": "Malloa"
+  },
+  {
+    "item": "Q16921",
+    "itemLabel": "Marchigüe"
+  },
+  {
+    "item": "Q16922",
+    "itemLabel": "Mariquina"
+  },
+  {
+    "item": "Q16923",
+    "itemLabel": "María Elena"
+  },
+  {
+    "item": "Q16925",
+    "itemLabel": "María Pinto"
+  },
+  {
+    "item": "Q16926",
+    "itemLabel": "Maule"
+  },
+  {
+    "item": "Q16927",
+    "itemLabel": "Maullín"
+  },
+  {
+    "item": "Q16928",
+    "itemLabel": "Mejillones"
+  },
+  {
+    "item": "Q19344",
+    "itemLabel": "San Pedro de la Paz"
+  },
+  {
+    "item": "Q22137",
+    "itemLabel": "San Rosendo"
+  },
+  {
+    "item": "Q25304",
+    "itemLabel": "Pichilemu"
+  },
+  {
+    "item": "Q33986",
+    "itemLabel": "Valparaíso"
+  },
+  {
+    "item": "Q36214",
+    "itemLabel": "Puerto Montt"
+  },
+  {
+    "item": "Q41997",
+    "itemLabel": "Talcahuano"
+  },
+  {
+    "item": "Q49076",
+    "itemLabel": "Melipeuco"
+  },
+  {
+    "item": "Q51032",
+    "itemLabel": "Melipilla"
+  },
+  {
+    "item": "Q51033",
+    "itemLabel": "Molina"
+  },
+  {
+    "item": "Q51034",
+    "itemLabel": "Monte Patria"
+  },
+  {
+    "item": "Q51035",
+    "itemLabel": "Mostazal"
+  },
+  {
+    "item": "Q51036",
+    "itemLabel": "Mulchén"
+  },
+  {
+    "item": "Q51038",
+    "itemLabel": "Máfil"
+  },
+  {
+    "item": "Q51039",
+    "itemLabel": "Nacimiento"
+  },
+  {
+    "item": "Q51042",
+    "itemLabel": "Nancagua"
+  },
+  {
+    "item": "Q51043",
+    "itemLabel": "Natales"
+  },
+  {
+    "item": "Q51045",
+    "itemLabel": "Navidad"
+  },
+  {
+    "item": "Q51046",
+    "itemLabel": "Negrete"
+  },
+  {
+    "item": "Q51048",
+    "itemLabel": "Ninhue"
+  },
+  {
+    "item": "Q51049",
+    "itemLabel": "Nogales"
+  },
+  {
+    "item": "Q51050",
+    "itemLabel": "Nueva Imperial"
+  },
+  {
+    "item": "Q51051",
+    "itemLabel": "O'Higgins"
+  },
+  {
+    "item": "Q51053",
+    "itemLabel": "Olivar"
+  },
+  {
+    "item": "Q51055",
+    "itemLabel": "Ollagüe"
+  },
+  {
+    "item": "Q51058",
+    "itemLabel": "Olmué"
+  },
+  {
+    "item": "Q51059",
+    "itemLabel": "Osorno"
+  },
+  {
+    "item": "Q51060",
+    "itemLabel": "Ovalle"
+  },
+  {
+    "item": "Q51062",
+    "itemLabel": "Padre Hurtado"
+  },
+  {
+    "item": "Q51063",
+    "itemLabel": "Padre Las Casas"
+  },
+  {
+    "item": "Q51064",
+    "itemLabel": "Paiguano"
+  },
+  {
+    "item": "Q51069",
+    "itemLabel": "Paillaco"
+  },
+  {
+    "item": "Q51070",
+    "itemLabel": "Paine"
+  },
+  {
+    "item": "Q51073",
+    "itemLabel": "Palena"
+  },
+  {
+    "item": "Q51074",
+    "itemLabel": "Palmilla"
+  },
+  {
+    "item": "Q51076",
+    "itemLabel": "Panguipulli"
+  },
+  {
+    "item": "Q51078",
+    "itemLabel": "Panquehue"
+  },
+  {
+    "item": "Q51079",
+    "itemLabel": "Papudo"
+  },
+  {
+    "item": "Q51082",
+    "itemLabel": "Paredones"
+  },
+  {
+    "item": "Q51083",
+    "itemLabel": "Parral"
+  },
+  {
+    "item": "Q51084",
+    "itemLabel": "Pedro Aguirre Cerda"
+  },
+  {
+    "item": "Q51085",
+    "itemLabel": "Pelarco"
+  },
+  {
+    "item": "Q51086",
+    "itemLabel": "Pelluhue"
+  },
+  {
+    "item": "Q51090",
+    "itemLabel": "Pemuco"
+  },
+  {
+    "item": "Q51091",
+    "itemLabel": "Pencahue"
+  },
+  {
+    "item": "Q51093",
+    "itemLabel": "Penco"
+  },
+  {
+    "item": "Q51095",
+    "itemLabel": "Peralillo"
+  },
+  {
+    "item": "Q51096",
+    "itemLabel": "Petorca"
+  },
+  {
+    "item": "Q51097",
+    "itemLabel": "Peumo"
+  },
+  {
+    "item": "Q51098",
+    "itemLabel": "Peñaflor"
+  },
+  {
+    "item": "Q51100",
+    "itemLabel": "Peñalolén"
+  },
+  {
+    "item": "Q51102",
+    "itemLabel": "Pica"
+  },
+  {
+    "item": "Q51104",
+    "itemLabel": "Pichidegua"
+  },
+  {
+    "item": "Q51106",
+    "itemLabel": "Pinto, Chile"
+  },
+  {
+    "item": "Q51113",
+    "itemLabel": "Pirque"
+  },
+  {
+    "item": "Q51115",
+    "itemLabel": "Pitrufquén"
+  },
+  {
+    "item": "Q51117",
+    "itemLabel": "Placilla"
+  },
+  {
+    "item": "Q51119",
+    "itemLabel": "Portezuelo"
+  },
+  {
+    "item": "Q51120",
+    "itemLabel": "Porvenir"
+  },
+  {
+    "item": "Q51585",
+    "itemLabel": "Pozo Almonte"
+  },
+  {
+    "item": "Q51586",
+    "itemLabel": "Primavera"
+  },
+  {
+    "item": "Q51587",
+    "itemLabel": "Providencia"
+  },
+  {
+    "item": "Q51588",
+    "itemLabel": "Puchuncaví"
+  },
+  {
+    "item": "Q51590",
+    "itemLabel": "Pucón"
+  },
+  {
+    "item": "Q51591",
+    "itemLabel": "Pudahuel"
+  },
+  {
+    "item": "Q51594",
+    "itemLabel": "Puente Alto"
+  },
+  {
+    "item": "Q51595",
+    "itemLabel": "Puerto Octay"
+  },
+  {
+    "item": "Q51596",
+    "itemLabel": "Puerto Varas"
+  },
+  {
+    "item": "Q51598",
+    "itemLabel": "Punitaqui"
+  },
+  {
+    "item": "Q51601",
+    "itemLabel": "Purranque"
+  },
+  {
+    "item": "Q51602",
+    "itemLabel": "Purén"
+  },
+  {
+    "item": "Q51604",
+    "itemLabel": "Putaendo"
+  },
+  {
+    "item": "Q51605",
+    "itemLabel": "Putre"
+  },
+  {
+    "item": "Q51607",
+    "itemLabel": "Queilén"
+  },
+  {
+    "item": "Q51608",
+    "itemLabel": "Quellón"
+  },
+  {
+    "item": "Q51609",
+    "itemLabel": "Quemchi"
+  },
+  {
+    "item": "Q51610",
+    "itemLabel": "Quilaco"
+  },
+  {
+    "item": "Q51612",
+    "itemLabel": "Quilicura"
+  },
+  {
+    "item": "Q56107",
+    "itemLabel": "Quilleco"
+  },
+  {
+    "item": "Q56108",
+    "itemLabel": "Quillota"
+  },
+  {
+    "item": "Q56109",
+    "itemLabel": "Quillón"
+  },
+  {
+    "item": "Q56110",
+    "itemLabel": "Quilpué"
+  },
+  {
+    "item": "Q56111",
+    "itemLabel": "Quinchao"
+  },
+  {
+    "item": "Q56112",
+    "itemLabel": "Quinta de Tilcoco"
+  },
+  {
+    "item": "Q56113",
+    "itemLabel": "Quinta Normal"
+  },
+  {
+    "item": "Q56114",
+    "itemLabel": "Quintero"
+  },
+  {
+    "item": "Q56115",
+    "itemLabel": "Quirihue"
+  },
+  {
+    "item": "Q56116",
+    "itemLabel": "Rauco"
+  },
+  {
+    "item": "Q56117",
+    "itemLabel": "Recoleta"
+  },
+  {
+    "item": "Q56118",
+    "itemLabel": "Renaico"
+  },
+  {
+    "item": "Q56119",
+    "itemLabel": "Renca"
+  },
+  {
+    "item": "Q56120",
+    "itemLabel": "Rengo"
+  },
+  {
+    "item": "Q56121",
+    "itemLabel": "Requínoa"
+  },
+  {
+    "item": "Q56122",
+    "itemLabel": "Retiro"
+  },
+  {
+    "item": "Q56123",
+    "itemLabel": "Rinconada"
+  },
+  {
+    "item": "Q56124",
+    "itemLabel": "Romeral"
+  },
+  {
+    "item": "Q56125",
+    "itemLabel": "Ránquil"
+  },
+  {
+    "item": "Q56126",
+    "itemLabel": "Río Bueno"
+  },
+  {
+    "item": "Q56127",
+    "itemLabel": "Río Claro"
+  },
+  {
+    "item": "Q56128",
+    "itemLabel": "Río Hurtado"
+  },
+  {
+    "item": "Q56129",
+    "itemLabel": "Río Ibáñez, Chile"
+  },
+  {
+    "item": "Q56130",
+    "itemLabel": "Río Negro, Chile"
+  },
+  {
+    "item": "Q56131",
+    "itemLabel": "Río Verde"
+  },
+  {
+    "item": "Q56132",
+    "itemLabel": "Saavedra"
+  },
+  {
+    "item": "Q56133",
+    "itemLabel": "Sagrada Familia, Chile"
+  },
+  {
+    "item": "Q56134",
+    "itemLabel": "Salamanca"
+  },
+  {
+    "item": "Q56135",
+    "itemLabel": "San Antonio"
+  },
+  {
+    "item": "Q56136",
+    "itemLabel": "San Bernardo"
+  },
+  {
+    "item": "Q56137",
+    "itemLabel": "San Carlos, Chile"
+  },
+  {
+    "item": "Q56138",
+    "itemLabel": "San Clemente, Chile"
+  },
+  {
+    "item": "Q82128",
+    "itemLabel": "Temuco"
+  },
+  {
+    "item": "Q160687",
+    "itemLabel": "Valdivia"
+  },
+  {
+    "item": "Q174744",
+    "itemLabel": "Villa Alemana"
+  },
+  {
+    "item": "Q184345",
+    "itemLabel": "Viña del Mar"
+  },
+  {
+    "item": "Q187784",
+    "itemLabel": "San Esteban"
+  },
+  {
+    "item": "Q187795",
+    "itemLabel": "San Fabián"
+  },
+  {
+    "item": "Q187802",
+    "itemLabel": "San Felipe"
+  },
+  {
+    "item": "Q187807",
+    "itemLabel": "San Fernando"
+  },
+  {
+    "item": "Q187816",
+    "itemLabel": "San Gregorio"
+  },
+  {
+    "item": "Q187824",
+    "itemLabel": "San Ignacio (Chile)"
+  },
+  {
+    "item": "Q187831",
+    "itemLabel": "San Javiera"
+  },
+  {
+    "item": "Q187838",
+    "itemLabel": "San Joaquín"
+  },
+  {
+    "item": "Q187847",
+    "itemLabel": "San José de Maipo"
+  },
+  {
+    "item": "Q187856",
+    "itemLabel": "San Juan de la Costa"
+  },
+  {
+    "item": "Q187862",
+    "itemLabel": "San Miguel"
+  },
+  {
+    "item": "Q187866",
+    "itemLabel": "San Nicolás"
+  },
+  {
+    "item": "Q187873",
+    "itemLabel": "San Pablo"
+  },
+  {
+    "item": "Q187885",
+    "itemLabel": "San Pedro"
+  },
+  {
+    "item": "Q187893",
+    "itemLabel": "San Pedro de Atacama"
+  },
+  {
+    "item": "Q187898",
+    "itemLabel": "San Rafael"
+  },
+  {
+    "item": "Q187919",
+    "itemLabel": "San Ramón"
+  },
+  {
+    "item": "Q187936",
+    "itemLabel": "San Vicente de Tagua Tagua"
+  },
+  {
+    "item": "Q187961",
+    "itemLabel": "Santa Bárbara"
+  },
+  {
+    "item": "Q187969",
+    "itemLabel": "Santa Cruz"
+  },
+  {
+    "item": "Q187974",
+    "itemLabel": "Santa Juana"
+  },
+  {
+    "item": "Q187991",
+    "itemLabel": "Santa María"
+  },
+  {
+    "item": "Q188002",
+    "itemLabel": "commune of Santiago"
+  },
+  {
+    "item": "Q188011",
+    "itemLabel": "Santo Domingo"
+  },
+  {
+    "item": "Q188027",
+    "itemLabel": "Sierra Gorda"
+  },
+  {
+    "item": "Q188038",
+    "itemLabel": "Talagante"
+  },
+  {
+    "item": "Q188049",
+    "itemLabel": "Taltal"
+  },
+  {
+    "item": "Q188135",
+    "itemLabel": "Teodoro Schmidt"
+  },
+  {
+    "item": "Q188142",
+    "itemLabel": "Tierra Amarilla"
+  },
+  {
+    "item": "Q188170",
+    "itemLabel": "Tiltil"
+  },
+  {
+    "item": "Q188177",
+    "itemLabel": "Timaukel"
+  },
+  {
+    "item": "Q188183",
+    "itemLabel": "Tirúa"
+  },
+  {
+    "item": "Q188192",
+    "itemLabel": "Tocopilla"
+  },
+  {
+    "item": "Q200926",
+    "itemLabel": "Toltén"
+  },
+  {
+    "item": "Q200934",
+    "itemLabel": "Tomé"
+  },
+  {
+    "item": "Q200948",
+    "itemLabel": "Torres del Paine"
+  },
+  {
+    "item": "Q200961",
+    "itemLabel": "Traiguén"
+  },
+  {
+    "item": "Q200963",
+    "itemLabel": "Treguaco"
+  },
+  {
+    "item": "Q200965",
+    "itemLabel": "Tucapel"
+  },
+  {
+    "item": "Q200978",
+    "itemLabel": "Vallenar"
+  },
+  {
+    "item": "Q200992",
+    "itemLabel": "Vichuquén"
+  },
+  {
+    "item": "Q200999",
+    "itemLabel": "Victoria"
+  },
+  {
+    "item": "Q201007",
+    "itemLabel": "Vicuña"
+  },
+  {
+    "item": "Q201015",
+    "itemLabel": "Villa Alegre"
+  },
+  {
+    "item": "Q201019",
+    "itemLabel": "Villarrica"
+  },
+  {
+    "item": "Q201036",
+    "itemLabel": "Vitacura"
+  },
+  {
+    "item": "Q201046",
+    "itemLabel": "Yerbas Buenas"
+  },
+  {
+    "item": "Q201050",
+    "itemLabel": "Yumbel"
+  },
+  {
+    "item": "Q201056",
+    "itemLabel": "Yungay"
+  },
+  {
+    "item": "Q201064",
+    "itemLabel": "Zapallar"
+  },
+  {
+    "item": "Q201070",
+    "itemLabel": "Ñiquén"
+  },
+  {
+    "item": "Q201076",
+    "itemLabel": "Ñuñoa"
+  },
+  {
+    "item": "Q1643896",
+    "itemLabel": "Vilcún"
+  },
+  {
+    "item": "Q2098355",
+    "itemLabel": "Pumanque"
+  },
+  {
+    "item": "Q2118779",
+    "itemLabel": "Puqueldón"
+  },
+  {
+    "item": "Q2383688",
+    "itemLabel": "Teno"
+  },
+  {
+    "item": "Q2390232",
+    "itemLabel": "Tortel"
+  },
+  {
+    "item": "Q5691714",
+    "itemLabel": "Punta Arenas"
+  },
+  {
+    "item": "Q15050531",
+    "itemLabel": "Antártica"
+  },
+  {
+    "item": "Q23660233",
+    "itemLabel": "Iquique"
+  }
+]
