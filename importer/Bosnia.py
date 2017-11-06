@@ -55,6 +55,12 @@ class BosniaMonument(Monument):
         self.add_statement("country", "Q225", refs=False)
 
     def set_heritage(self):
+        """
+        Set heritage.
+
+        National Monument of Bosnia and Herzegovina (Q12637954)
+        with facultative start date.
+        """
         heritage = self.mapping["heritage"]["item"]
         date_parsed = dateparser.parse(self.designated)
         quals = {}
@@ -66,6 +72,12 @@ class BosniaMonument(Monument):
                            quals=quals, refs=False)
 
     def set_is(self):
+        """
+        Set P31.
+
+        Try to get a specific one via mapping file.
+        Otherwise default of cultural property.
+        """
         default = self.mapping["default_is"]["item"]
         type_dict = self.data_files["_static"]["bosnia_types"]
         type_raw = self.object_type.strip()
@@ -81,10 +93,16 @@ class BosniaMonument(Monument):
         self.add_statement("is", to_add, refs=False)
 
     def set_described(self):
+        """
+        Set described at URL.
+
+        The URL's look like
+        http://aplikacija.kons.gov.ba/kons/public/nacionalnispomenici/show/3729?return=&search=idgrad:undefined:46|
+        which is messy so the mess after ? gets removed. Same result!
+        """
         if self.has_non_empty_attribute("url"):
             if self.url.startswith("http"):
                 url_clean = self.url.split("?")[0]
-                print(url_clean)
                 self.add_statement("described_at_url", url_clean, refs=False)
 
     def set_adm_location(self):
@@ -126,6 +144,11 @@ class BosniaMonument(Monument):
         self.add_description("bs", bs_desc)
 
     def set_coords(self):
+        """
+        Set coordinates.
+
+        Try to parse the non-split text value...
+        """
         coords_raw = self.coordinates.replace("°", "")
         if "N/A" not in coords_raw and "x" not in coords_raw:
             if "N" in coords_raw and "E" in coords_raw:
@@ -165,11 +188,7 @@ class BosniaMonument(Monument):
 
 
 def load_source_data(directory):
-    """
-    Load source file with nature area data.
-
-    :param which_one: nr for reserves or np for parks.
-    """
+    """Load multiple source files from directory."""
     source_data = []
     for path, subdirs, files in os.walk(directory):
         for name in files:
@@ -226,12 +245,11 @@ def load_mapping_files():
         os.path.join(MAPPINGS_DIR, "adm0.json"))
     mapping_files["_static"]["props"] = utils.load_json(os.path.join(
         MAPPINGS_DIR, "props_general.json"))
-    print(mapping_files["_static"].keys())
     return mapping_files
 
 
 def main(arguments):
-    """Process the arguments and fetch data according to them"""
+    """Process the arguments and fetch data according to them."""
     arguments = vars(arguments)
     filenames = generate_filenames("Bosnia", utils.get_current_timestamp())
     repo = utils.create_site_instance("wikidata", "wikidata")
