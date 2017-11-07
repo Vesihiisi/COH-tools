@@ -1,0 +1,21 @@
+{
+    "country": {
+        "item": "Q77",
+        "name": "Uruguay"
+    },
+    "country_code": "uy",
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "Q39748860",
+        "name": "Cultural heritage monument of Uruguay"
+    },
+    "language": "es",
+    "table_name": "uy",
+    "unique": {
+        "comment": "WLM id",
+        "property": "P2186"
+    }
+}

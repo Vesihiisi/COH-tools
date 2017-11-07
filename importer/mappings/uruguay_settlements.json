@@ -1,0 +1,2730 @@
+[
+    {
+        "item": "Q140250",
+        "itemLabel": "Zagarzazú"
+    },
+    {
+        "item": "Q176474",
+        "itemLabel": "Cayetano"
+    },
+    {
+        "item": "Q260096",
+        "itemLabel": "San Luis"
+    },
+    {
+        "item": "Q218472",
+        "itemLabel": "25 de Mayo"
+    },
+    {
+        "item": "Q261771",
+        "itemLabel": "Las Flores"
+    },
+    {
+        "item": "Q309442",
+        "itemLabel": "Paysandú"
+    },
+    {
+        "item": "Q181267",
+        "itemLabel": "Castellanos"
+    },
+    {
+        "item": "Q395880",
+        "itemLabel": "Agraciada"
+    },
+    {
+        "item": "Q635591",
+        "itemLabel": "Q635591"
+    },
+    {
+        "item": "Q518618",
+        "itemLabel": "San Javier"
+    },
+    {
+        "item": "Q525163",
+        "itemLabel": "San Jacinto"
+    },
+    {
+        "item": "Q281754",
+        "itemLabel": "La Paloma"
+    },
+    {
+        "item": "Q489450",
+        "itemLabel": "Palmitas"
+    },
+    {
+        "item": "Q374670",
+        "itemLabel": "San Carlos"
+    },
+    {
+        "item": "Q534550",
+        "itemLabel": "Cerámicas del Sur"
+    },
+    {
+        "item": "Q582146",
+        "itemLabel": "Las Flores"
+    },
+    {
+        "item": "Q581007",
+        "itemLabel": "Rincón del Bonete"
+    },
+    {
+        "item": "Q551848",
+        "itemLabel": "Campo Militar"
+    },
+    {
+        "item": "Q429855",
+        "itemLabel": "Sauce"
+    },
+    {
+        "item": "Q569882",
+        "itemLabel": "Villa Ansina"
+    },
+    {
+        "item": "Q587656",
+        "itemLabel": "Paso Antolín"
+    },
+    {
+        "item": "Q588205",
+        "itemLabel": "Parque Batlle"
+    },
+    {
+        "item": "Q615727",
+        "itemLabel": "Ituzaingó"
+    },
+    {
+        "item": "Q624502",
+        "itemLabel": "Arachania"
+    },
+    {
+        "item": "Q624505",
+        "itemLabel": "Arachania"
+    },
+    {
+        "item": "Q630228",
+        "itemLabel": "Arbolito (Paysandú)"
+    },
+    {
+        "item": "Q389478",
+        "itemLabel": "Prado"
+    },
+    {
+        "item": "Q641627",
+        "itemLabel": "Arenas de José Ignacio"
+    },
+    {
+        "item": "Q642059",
+        "itemLabel": "Arenitas Blancas"
+    },
+    {
+        "item": "Q639340",
+        "itemLabel": "Pando"
+    },
+    {
+        "item": "Q984757",
+        "itemLabel": "Q984757"
+    },
+    {
+        "item": "Q1005259",
+        "itemLabel": "San Antonio"
+    },
+    {
+        "item": "Q1014315",
+        "itemLabel": "Santa Lucía"
+    },
+    {
+        "item": "Q833016",
+        "itemLabel": "Tacuarembó"
+    },
+    {
+        "item": "Q1023540",
+        "itemLabel": "Rosario"
+    },
+    {
+        "item": "Q842472",
+        "itemLabel": "Florida"
+    },
+    {
+        "item": "Q546964",
+        "itemLabel": "Dolores"
+    },
+    {
+        "item": "Q808953",
+        "itemLabel": "Barrio Sur (Montevideo)"
+    },
+    {
+        "item": "Q815782",
+        "itemLabel": "Bella Unión"
+    },
+    {
+        "item": "Q579754",
+        "itemLabel": "Rincón"
+    },
+    {
+        "item": "Q869403",
+        "itemLabel": "Ciudad de la Costa"
+    },
+    {
+        "item": "Q1006165",
+        "itemLabel": "Río Branco"
+    },
+    {
+        "item": "Q1023521",
+        "itemLabel": "Nueva Palmira"
+    },
+    {
+        "item": "Q577535",
+        "itemLabel": "Villa María"
+    },
+    {
+        "item": "Q1055823",
+        "itemLabel": "Cerro Chato"
+    },
+    {
+        "item": "Q1043575",
+        "itemLabel": "Carmelo"
+    },
+    {
+        "item": "Q427025",
+        "itemLabel": "Estación Las Flores"
+    },
+    {
+        "item": "Q389098",
+        "itemLabel": "Blanquillo"
+    },
+    {
+        "item": "Q1970117",
+        "itemLabel": "Salinas"
+    },
+    {
+        "item": "Q162416",
+        "itemLabel": "Montes"
+    },
+    {
+        "item": "Q2096693",
+        "itemLabel": "Tala"
+    },
+    {
+        "item": "Q1709570",
+        "itemLabel": "José Pedro Varela (Uruguay)"
+    },
+    {
+        "item": "Q335506",
+        "itemLabel": "Salto"
+    },
+    {
+        "item": "Q2439134",
+        "itemLabel": "Toledo"
+    },
+    {
+        "item": "Q1549798",
+        "itemLabel": "Atlántida"
+    },
+    {
+        "item": "Q1784539",
+        "itemLabel": "San Ramón"
+    },
+    {
+        "item": "Q585137",
+        "itemLabel": "La Barra"
+    },
+    {
+        "item": "Q121961",
+        "itemLabel": "Tapia"
+    },
+    {
+        "item": "Q147368",
+        "itemLabel": "Zapicán (Uruguay)"
+    },
+    {
+        "item": "Q166068",
+        "itemLabel": "Tres Islas"
+    },
+    {
+        "item": "Q145465",
+        "itemLabel": "González"
+    },
+    {
+        "item": "Q247843",
+        "itemLabel": "Cardona"
+    },
+    {
+        "item": "Q201755",
+        "itemLabel": "Sacachispas"
+    },
+    {
+        "item": "Q204531",
+        "itemLabel": "18 de Julio-Pueblo Nuevo"
+    },
+    {
+        "item": "Q225647",
+        "itemLabel": "Polanco Norte"
+    },
+    {
+        "item": "Q305717",
+        "itemLabel": "Abayubá (Montevideo)"
+    },
+    {
+        "item": "Q384933",
+        "itemLabel": "Estación Migues"
+    },
+    {
+        "item": "Q397958",
+        "itemLabel": "Aguas Buenas"
+    },
+    {
+        "item": "Q404803",
+        "itemLabel": "Aiguá"
+    },
+    {
+        "item": "Q455084",
+        "itemLabel": "Amarillo (Uruguay)"
+    },
+    {
+        "item": "Q615470",
+        "itemLabel": "Las Piedras"
+    },
+    {
+        "item": "Q503373",
+        "itemLabel": "Andresito (Uruguay)"
+    },
+    {
+        "item": "Q510570",
+        "itemLabel": "Chico Torino"
+    },
+    {
+        "item": "Q570722",
+        "itemLabel": "Paso de la Cadena"
+    },
+    {
+        "item": "Q603086",
+        "itemLabel": "Guichón"
+    },
+    {
+        "item": "Q625750",
+        "itemLabel": "Araminda"
+    },
+    {
+        "item": "Q855645",
+        "itemLabel": "Durazno"
+    },
+    {
+        "item": "Q475116",
+        "itemLabel": "La Floresta"
+    },
+    {
+        "item": "Q201731",
+        "itemLabel": "La Loma"
+    },
+    {
+        "item": "Q985379",
+        "itemLabel": "Manga"
+    },
+    {
+        "item": "Q1013691",
+        "itemLabel": "Lascano"
+    },
+    {
+        "item": "Q5124182",
+        "itemLabel": "Q5124182"
+    },
+    {
+        "item": "Q1020969",
+        "itemLabel": "Tupambaé"
+    },
+    {
+        "item": "Q1784710",
+        "itemLabel": "Tranqueras"
+    },
+    {
+        "item": "Q4891600",
+        "itemLabel": "Reus"
+    },
+    {
+        "item": "Q204526",
+        "itemLabel": "18 de Julio"
+    },
+    {
+        "item": "Q205621",
+        "itemLabel": "Brazo Oriental"
+    },
+    {
+        "item": "Q208905",
+        "itemLabel": "19 de Abril"
+    },
+    {
+        "item": "Q218465",
+        "itemLabel": "Veinticinco de Agosto"
+    },
+    {
+        "item": "Q281696",
+        "itemLabel": "Colonia Concordia"
+    },
+    {
+        "item": "Q370254",
+        "itemLabel": "Ciudad del Plata"
+    },
+    {
+        "item": "Q284634",
+        "itemLabel": "Bellaco"
+    },
+    {
+        "item": "Q397975",
+        "itemLabel": "Aguas Corrientes"
+    },
+    {
+        "item": "Q289379",
+        "itemLabel": "Villa del Carmen"
+    },
+    {
+        "item": "Q519177",
+        "itemLabel": "Pérez Castellanos"
+    },
+    {
+        "item": "Q541184",
+        "itemLabel": "Villa General Borges"
+    },
+    {
+        "item": "Q545655",
+        "itemLabel": "Los Titanes"
+    },
+    {
+        "item": "Q588130",
+        "itemLabel": "Chamberlain"
+    },
+    {
+        "item": "Q630016",
+        "itemLabel": "Empalme Olmos"
+    },
+    {
+        "item": "Q643320",
+        "itemLabel": "Cañada del Pueblo"
+    },
+    {
+        "item": "Q3637711",
+        "itemLabel": "Bella Italia"
+    },
+    {
+        "item": "Q849835",
+        "itemLabel": "Fray Bentos"
+    },
+    {
+        "item": "Q1055816",
+        "itemLabel": "Cerro Colorado (Flores)"
+    },
+    {
+        "item": "Q1783586",
+        "itemLabel": "Sarandí Grande"
+    },
+    {
+        "item": "Q2094894",
+        "itemLabel": "Pocitos"
+    },
+    {
+        "item": "Q2883415",
+        "itemLabel": "Conurbación Maldonado-San Carlos-Punta del Este"
+    },
+    {
+        "item": "Q177318",
+        "itemLabel": "Cerrito de la Victoria"
+    },
+    {
+        "item": "Q282394",
+        "itemLabel": "Capilla del Sauce"
+    },
+    {
+        "item": "Q383094",
+        "itemLabel": "Playa Pascual"
+    },
+    {
+        "item": "Q408664",
+        "itemLabel": "Aires Puros"
+    },
+    {
+        "item": "Q473176",
+        "itemLabel": "Puntas del Parao"
+    },
+    {
+        "item": "Q529894",
+        "itemLabel": "Javier de Viana (Uruguay)"
+    },
+    {
+        "item": "Q530827",
+        "itemLabel": "Piedras Coloradas"
+    },
+    {
+        "item": "Q551839",
+        "itemLabel": "Cruz de los Caminos"
+    },
+    {
+        "item": "Q613090",
+        "itemLabel": "La Puente"
+    },
+    {
+        "item": "Q630222",
+        "itemLabel": "Arbolito"
+    },
+    {
+        "item": "Q644348",
+        "itemLabel": "Colonia 18 de Julio"
+    },
+    {
+        "item": "Q999572",
+        "itemLabel": "Nueva Helvecia"
+    },
+    {
+        "item": "Q1532147",
+        "itemLabel": "Pan de Azúcar"
+    },
+    {
+        "item": "Q605136",
+        "itemLabel": "Castillos"
+    },
+    {
+        "item": "Q13479688",
+        "itemLabel": "Q13479688"
+    },
+    {
+        "item": "Q953667",
+        "itemLabel": "Castillos"
+    },
+    {
+        "item": "Q166455",
+        "itemLabel": "Cerros Azules"
+    },
+    {
+        "item": "Q180318",
+        "itemLabel": "Blanes Viale"
+    },
+    {
+        "item": "Q208904",
+        "itemLabel": "Diecinueve de Junio"
+    },
+    {
+        "item": "Q292835",
+        "itemLabel": "Ñangapiré"
+    },
+    {
+        "item": "Q366924",
+        "itemLabel": "City Golf"
+    },
+    {
+        "item": "Q387511",
+        "itemLabel": "Paso de Pache"
+    },
+    {
+        "item": "Q397984",
+        "itemLabel": "Aguas Dulces (Uruguay)"
+    },
+    {
+        "item": "Q423201",
+        "itemLabel": "Puntas de Valdez"
+    },
+    {
+        "item": "Q509760",
+        "itemLabel": "La Casilla"
+    },
+    {
+        "item": "Q552052",
+        "itemLabel": "Totoral del Sauce"
+    },
+    {
+        "item": "Q592790",
+        "itemLabel": "Orgoroso"
+    },
+    {
+        "item": "Q616593",
+        "itemLabel": "Palmar (Uruguay)"
+    },
+    {
+        "item": "Q1006155",
+        "itemLabel": "Piriápolis"
+    },
+    {
+        "item": "Q1508561",
+        "itemLabel": "Santa Clara de Olimar"
+    },
+    {
+        "item": "Q1784163",
+        "itemLabel": "Sarandí del Yí"
+    },
+    {
+        "item": "Q2046547",
+        "itemLabel": "Pajas Blancas (Montevideo)"
+    },
+    {
+        "item": "Q7930332",
+        "itemLabel": "Villa García"
+    },
+    {
+        "item": "Q17195955",
+        "itemLabel": "Vergara"
+    },
+    {
+        "item": "Q29378",
+        "itemLabel": "Piedra del Toro"
+    },
+    {
+        "item": "Q32453",
+        "itemLabel": "Rodríguez"
+    },
+    {
+        "item": "Q1335",
+        "itemLabel": "Montevideo"
+    },
+    {
+        "item": "Q16258",
+        "itemLabel": "Maldonado"
+    },
+    {
+        "item": "Q29382",
+        "itemLabel": "Olmos"
+    },
+    {
+        "item": "Q29585",
+        "itemLabel": "Migues"
+    },
+    {
+        "item": "Q56069",
+        "itemLabel": "Punta del Este"
+    },
+    {
+        "item": "Q29376",
+        "itemLabel": "Parada Cabrera"
+    },
+    {
+        "item": "Q56064",
+        "itemLabel": "Colonia del Sacramento"
+    },
+    {
+        "item": "Q984691",
+        "itemLabel": "Q984691"
+    },
+    {
+        "item": "Q984714",
+        "itemLabel": "Q984714"
+    },
+    {
+        "item": "Q984712",
+        "itemLabel": "Q984712"
+    },
+    {
+        "item": "Q984713",
+        "itemLabel": "Q984713"
+    },
+    {
+        "item": "Q985021",
+        "itemLabel": "Q985021"
+    },
+    {
+        "item": "Q985110",
+        "itemLabel": "Q985110"
+    },
+    {
+        "item": "Q985145",
+        "itemLabel": "Q985145"
+    },
+    {
+        "item": "Q985319",
+        "itemLabel": "Q985319"
+    },
+    {
+        "item": "Q987051",
+        "itemLabel": "Q987051"
+    },
+    {
+        "item": "Q987082",
+        "itemLabel": "Q987082"
+    },
+    {
+        "item": "Q984836",
+        "itemLabel": "Soca"
+    },
+    {
+        "item": "Q984838",
+        "itemLabel": "Santa Ana"
+    },
+    {
+        "item": "Q985053",
+        "itemLabel": "Risso"
+    },
+    {
+        "item": "Q984388",
+        "itemLabel": "Reducto"
+    },
+    {
+        "item": "Q984843",
+        "itemLabel": "Los Pinos"
+    },
+    {
+        "item": "Q984518",
+        "itemLabel": "La Unión"
+    },
+    {
+        "item": "Q984197",
+        "itemLabel": "Maroñas"
+    },
+    {
+        "item": "Q984189",
+        "itemLabel": "Neptunia"
+    },
+    {
+        "item": "Q984385",
+        "itemLabel": "Palermo"
+    },
+    {
+        "item": "Q984511",
+        "itemLabel": "Parque Rodó"
+    },
+    {
+        "item": "Q984715",
+        "itemLabel": "Cerro Pelado"
+    },
+    {
+        "item": "Q984693",
+        "itemLabel": "Playa Verde"
+    },
+    {
+        "item": "Q984722",
+        "itemLabel": "Menafra"
+    },
+    {
+        "item": "Q984844",
+        "itemLabel": "El Bosque"
+    },
+    {
+        "item": "Q984835",
+        "itemLabel": "La Teja"
+    },
+    {
+        "item": "Q984899",
+        "itemLabel": "Flor de Maroñas"
+    },
+    {
+        "item": "Q985061",
+        "itemLabel": "Valentines"
+    },
+    {
+        "item": "Q986342",
+        "itemLabel": "La Figurita"
+    },
+    {
+        "item": "Q986348",
+        "itemLabel": "Lezica"
+    },
+    {
+        "item": "Q987073",
+        "itemLabel": "Ocean Park (Uruguay)"
+    },
+    {
+        "item": "Q984723",
+        "itemLabel": "Las Toscas"
+    },
+    {
+        "item": "Q986647",
+        "itemLabel": "Mendoza"
+    },
+    {
+        "item": "Q984942",
+        "itemLabel": "Goñi"
+    },
+    {
+        "item": "Q984382",
+        "itemLabel": "Centro"
+    },
+    {
+        "item": "Q987098",
+        "itemLabel": "Punta Negra"
+    },
+    {
+        "item": "Q984926",
+        "itemLabel": "Mangrullo"
+    },
+    {
+        "item": "Q984929",
+        "itemLabel": "Villa Española"
+    },
+    {
+        "item": "Q987035",
+        "itemLabel": "Independencia"
+    },
+    {
+        "item": "Q984935",
+        "itemLabel": "El Eucalipto"
+    },
+    {
+        "item": "Q984779",
+        "itemLabel": "Pinamar"
+    },
+    {
+        "item": "Q984724",
+        "itemLabel": "La Esmeralda"
+    },
+    {
+        "item": "Q984512",
+        "itemLabel": "Carrasco Norte"
+    },
+    {
+        "item": "Q984782",
+        "itemLabel": "El Semillero"
+    },
+    {
+        "item": "Q984730",
+        "itemLabel": "Sarandí de Navarro"
+    },
+    {
+        "item": "Q984850",
+        "itemLabel": "Cainsa"
+    },
+    {
+        "item": "Q984837",
+        "itemLabel": "Colonia Rossell y Rius"
+    },
+    {
+        "item": "Q984846",
+        "itemLabel": "Polanco del Yí"
+    },
+    {
+        "item": "Q984849",
+        "itemLabel": "Playa Grande"
+    },
+    {
+        "item": "Q984941",
+        "itemLabel": "Cuchilla Alta"
+    },
+    {
+        "item": "Q984869",
+        "itemLabel": "Sarandí del Arapey"
+    },
+    {
+        "item": "Q984932",
+        "itemLabel": "Palo Solo"
+    },
+    {
+        "item": "Q987077",
+        "itemLabel": "La Sonrisa"
+    },
+    {
+        "item": "Q987087",
+        "itemLabel": "Paso Hospital"
+    },
+    {
+        "item": "Q984848",
+        "itemLabel": "Costa Azul"
+    },
+    {
+        "item": "Q984919",
+        "itemLabel": "Piedras Blancas"
+    },
+    {
+        "item": "Q984523",
+        "itemLabel": "La Comercial"
+    },
+    {
+        "item": "Q984720",
+        "itemLabel": "Paso de la Arena"
+    },
+    {
+        "item": "Q984727",
+        "itemLabel": "Las Cañas"
+    },
+    {
+        "item": "Q984193",
+        "itemLabel": "Tres Cruces"
+    },
+    {
+        "item": "Q984184",
+        "itemLabel": "Marindia"
+    },
+    {
+        "item": "Q984390",
+        "itemLabel": "Punta Carretas"
+    },
+    {
+        "item": "Q984718",
+        "itemLabel": "Cuareim (Uruguay)"
+    },
+    {
+        "item": "Q984692",
+        "itemLabel": "Puimayen"
+    },
+    {
+        "item": "Q984842",
+        "itemLabel": "Estación Atlántida"
+    },
+    {
+        "item": "Q984873",
+        "itemLabel": "Casabó"
+    },
+    {
+        "item": "Q984866",
+        "itemLabel": "Gallinal"
+    },
+    {
+        "item": "Q984852",
+        "itemLabel": "Lagomar"
+    },
+    {
+        "item": "Q984924",
+        "itemLabel": "Casavalle"
+    },
+    {
+        "item": "Q986346",
+        "itemLabel": "Capurro"
+    },
+    {
+        "item": "Q986657",
+        "itemLabel": "Paso del Cerro"
+    },
+    {
+        "item": "Q984944",
+        "itemLabel": "Achar"
+    },
+    {
+        "item": "Q987067",
+        "itemLabel": "Juan Soler"
+    },
+    {
+        "item": "Q984427",
+        "itemLabel": "La Aguada"
+    },
+    {
+        "item": "Q984433",
+        "itemLabel": "Grecco"
+    },
+    {
+        "item": "Q984425",
+        "itemLabel": "Villa Colón"
+    },
+    {
+        "item": "Q984725",
+        "itemLabel": "Los Arrayanes"
+    },
+    {
+        "item": "Q984726",
+        "itemLabel": "Villa Serrana"
+    },
+    {
+        "item": "Q984839",
+        "itemLabel": "La Paz (Colonia)"
+    },
+    {
+        "item": "Q984922",
+        "itemLabel": "Morató"
+    },
+    {
+        "item": "Q985070",
+        "itemLabel": "Piedra Sola"
+    },
+    {
+        "item": "Q987044",
+        "itemLabel": "Reboledo"
+    },
+    {
+        "item": "Q984422",
+        "itemLabel": "Villa Muñoz"
+    },
+    {
+        "item": "Q984515",
+        "itemLabel": "La Blanqueada"
+    },
+    {
+        "item": "Q984716",
+        "itemLabel": "Cerro Ejido"
+    },
+    {
+        "item": "Q984719",
+        "itemLabel": "San Luis al Medio"
+    },
+    {
+        "item": "Q984728",
+        "itemLabel": "Merinos"
+    },
+    {
+        "item": "Q984771",
+        "itemLabel": "Cuaró"
+    },
+    {
+        "item": "Q984774",
+        "itemLabel": "Topador"
+    },
+    {
+        "item": "Q984777",
+        "itemLabel": "Paso de los Mellizos"
+    },
+    {
+        "item": "Q984854",
+        "itemLabel": "Puntas de Maciel"
+    },
+    {
+        "item": "Q984915",
+        "itemLabel": "Jardines del Hipódromo"
+    },
+    {
+        "item": "Q985066",
+        "itemLabel": "Isla Patrulla"
+    },
+    {
+        "item": "Q723686",
+        "itemLabel": "Q723686"
+    },
+    {
+        "item": "Q808940",
+        "itemLabel": "Q808940"
+    },
+    {
+        "item": "Q808946",
+        "itemLabel": "Q808946"
+    },
+    {
+        "item": "Q808948",
+        "itemLabel": "Q808948"
+    },
+    {
+        "item": "Q812710",
+        "itemLabel": "Q812710"
+    },
+    {
+        "item": "Q712567",
+        "itemLabel": "Artigas"
+    },
+    {
+        "item": "Q646498",
+        "itemLabel": "Rivera"
+    },
+    {
+        "item": "Q653685",
+        "itemLabel": "Blancarena"
+    },
+    {
+        "item": "Q961792",
+        "itemLabel": "Q961792"
+    },
+    {
+        "item": "Q1005961",
+        "itemLabel": "Q1005961"
+    },
+    {
+        "item": "Q1007618",
+        "itemLabel": "San Antonio"
+    },
+    {
+        "item": "Q700226",
+        "itemLabel": "Arrocera Los Ceibos"
+    },
+    {
+        "item": "Q703834",
+        "itemLabel": "Arrozal Treinta y Tres"
+    },
+    {
+        "item": "Q719194",
+        "itemLabel": "Arévalo"
+    },
+    {
+        "item": "Q862508",
+        "itemLabel": "Trinidad"
+    },
+    {
+        "item": "Q1010378",
+        "itemLabel": "Portezuelo"
+    },
+    {
+        "item": "Q751376",
+        "itemLabel": "Nuevo París"
+    },
+    {
+        "item": "Q770683",
+        "itemLabel": "San Jorge"
+    },
+    {
+        "item": "Q771442",
+        "itemLabel": "Berrondo"
+    },
+    {
+        "item": "Q775193",
+        "itemLabel": "Mendizábal"
+    },
+    {
+        "item": "Q808938",
+        "itemLabel": "Cololó"
+    },
+    {
+        "item": "Q934594",
+        "itemLabel": "Cardozo"
+    },
+    {
+        "item": "Q796390",
+        "itemLabel": "San José de Carrasco"
+    },
+    {
+        "item": "Q808949",
+        "itemLabel": "Barrio Remanso"
+    },
+    {
+        "item": "Q812707",
+        "itemLabel": "Bañado de Medina"
+    },
+    {
+        "item": "Q868205",
+        "itemLabel": "Minas"
+    },
+    {
+        "item": "Q891703",
+        "itemLabel": "Bolívar"
+    },
+    {
+        "item": "Q855498",
+        "itemLabel": "Biassini"
+    },
+    {
+        "item": "Q1005778",
+        "itemLabel": "Centenario"
+    },
+    {
+        "item": "Q738250",
+        "itemLabel": "Melo"
+    },
+    {
+        "item": "Q893173",
+        "itemLabel": "La Paloma"
+    },
+    {
+        "item": "Q917640",
+        "itemLabel": "Brisas del Plata"
+    },
+    {
+        "item": "Q938166",
+        "itemLabel": "Horqueta"
+    },
+    {
+        "item": "Q944394",
+        "itemLabel": "Sequeira"
+    },
+    {
+        "item": "Q947532",
+        "itemLabel": "Chacras de Dolores"
+    },
+    {
+        "item": "Q950640",
+        "itemLabel": "Alejandro Gallinal"
+    },
+    {
+        "item": "Q943708",
+        "itemLabel": "Solís"
+    },
+    {
+        "item": "Q946150",
+        "itemLabel": "Libertad"
+    },
+    {
+        "item": "Q958859",
+        "itemLabel": "Cerro Chato"
+    },
+    {
+        "item": "Q969539",
+        "itemLabel": "Punta Rubia"
+    },
+    {
+        "item": "Q992675",
+        "itemLabel": "Manantiales"
+    },
+    {
+        "item": "Q1002979",
+        "itemLabel": "Gartental"
+    },
+    {
+        "item": "Q1004955",
+        "itemLabel": "Mones Quintela"
+    },
+    {
+        "item": "Q1004963",
+        "itemLabel": "Masoller"
+    },
+    {
+        "item": "Q1005765",
+        "itemLabel": "Playa Hermosa"
+    },
+    {
+        "item": "Q1005781",
+        "itemLabel": "Porvenir"
+    },
+    {
+        "item": "Q1005797",
+        "itemLabel": "Plácido Rosas"
+    },
+    {
+        "item": "Q1010338",
+        "itemLabel": "Villa del Cerro"
+    },
+    {
+        "item": "Q1010400",
+        "itemLabel": "Mendoza Chico"
+    },
+    {
+        "item": "Q997833",
+        "itemLabel": "La Paz"
+    },
+    {
+        "item": "Q940362",
+        "itemLabel": "La Cruz"
+    },
+    {
+        "item": "Q1007576",
+        "itemLabel": "Ciudad Vieja"
+    },
+    {
+        "item": "Q1004938",
+        "itemLabel": "Coronado"
+    },
+    {
+        "item": "Q1005607",
+        "itemLabel": "Young"
+    },
+    {
+        "item": "Q1005720",
+        "itemLabel": "Egaña"
+    },
+    {
+        "item": "Q1005809",
+        "itemLabel": "Joaquín Suárez"
+    },
+    {
+        "item": "Q1005240",
+        "itemLabel": "Belvedere"
+    },
+    {
+        "item": "Q657514",
+        "itemLabel": "Juan Lacaze"
+    },
+    {
+        "item": "Q681212",
+        "itemLabel": "Paso Bonilla"
+    },
+    {
+        "item": "Q733747",
+        "itemLabel": "Scavino"
+    },
+    {
+        "item": "Q747819",
+        "itemLabel": "Nueva Carrara"
+    },
+    {
+        "item": "Q808781",
+        "itemLabel": "Barra de Carrasco"
+    },
+    {
+        "item": "Q808951",
+        "itemLabel": "Barrio Los Aromos"
+    },
+    {
+        "item": "Q808981",
+        "itemLabel": "Barros Blancos"
+    },
+    {
+        "item": "Q723697",
+        "itemLabel": "Solymar"
+    },
+    {
+        "item": "Q1009497",
+        "itemLabel": "El Chorro"
+    },
+    {
+        "item": "Q984180",
+        "itemLabel": "Punta Gorda"
+    },
+    {
+        "item": "Q1004983",
+        "itemLabel": "Miguelete"
+    },
+    {
+        "item": "Q911276",
+        "itemLabel": "Feliciano"
+    },
+    {
+        "item": "Q952273",
+        "itemLabel": "Parque del Plata"
+    },
+    {
+        "item": "Q958365",
+        "itemLabel": "Cardal"
+    },
+    {
+        "item": "Q922511",
+        "itemLabel": "Costa Azul"
+    },
+    {
+        "item": "Q975553",
+        "itemLabel": "Punta Ballena"
+    },
+    {
+        "item": "Q1003589",
+        "itemLabel": "Pintadito"
+    },
+    {
+        "item": "Q1004035",
+        "itemLabel": "Conchillas"
+    },
+    {
+        "item": "Q1005003",
+        "itemLabel": "Carrasco"
+    },
+    {
+        "item": "Q1004942",
+        "itemLabel": "Sayago"
+    },
+    {
+        "item": "Q1005742",
+        "itemLabel": "Barrio Cordón"
+    },
+    {
+        "item": "Q1007603",
+        "itemLabel": "Los Cerrillos"
+    },
+    {
+        "item": "Q1007589",
+        "itemLabel": "Algorta"
+    },
+    {
+        "item": "Q816012",
+        "itemLabel": "Bello Horizonte"
+    },
+    {
+        "item": "Q830390",
+        "itemLabel": "Treinta y Tres"
+    },
+    {
+        "item": "Q700239",
+        "itemLabel": "Arrocera Zapata"
+    },
+    {
+        "item": "Q703051",
+        "itemLabel": "Arroyo Blanco (Rivera)"
+    },
+    {
+        "item": "Q753192",
+        "itemLabel": "Atahualpa (Montevideo)"
+    },
+    {
+        "item": "Q805484",
+        "itemLabel": "Balneario Buenos Aires"
+    },
+    {
+        "item": "Q808257",
+        "itemLabel": "Barker (Uruguay)"
+    },
+    {
+        "item": "Q808782",
+        "itemLabel": "Barra de Valizas"
+    },
+    {
+        "item": "Q808944",
+        "itemLabel": "Barrio Anglo"
+    },
+    {
+        "item": "Q815779",
+        "itemLabel": "Bella Vista (Maldonado)"
+    },
+    {
+        "item": "Q960508",
+        "itemLabel": "Municipio de Mataojo"
+    },
+    {
+        "item": "Q1004920",
+        "itemLabel": "Malvín"
+    },
+    {
+        "item": "Q1004930",
+        "itemLabel": "Lorenzo Geyres"
+    },
+    {
+        "item": "Q1005309",
+        "itemLabel": "Chacras de Paysandú"
+    },
+    {
+        "item": "Q1005301",
+        "itemLabel": "Mariscala"
+    },
+    {
+        "item": "Q1007597",
+        "itemLabel": "Peñarol"
+    },
+    {
+        "item": "Q1010391",
+        "itemLabel": "Raigón"
+    },
+    {
+        "item": "Q972190",
+        "itemLabel": "Florencio Sánchez"
+    },
+    {
+        "item": "Q664156",
+        "itemLabel": "Paso de los Toros"
+    },
+    {
+        "item": "Q841342",
+        "itemLabel": "Canelones"
+    },
+    {
+        "item": "Q655264",
+        "itemLabel": "General Enrique Martínez"
+    },
+    {
+        "item": "Q681463",
+        "itemLabel": "Chamizo"
+    },
+    {
+        "item": "Q691513",
+        "itemLabel": "Carreta Quemada"
+    },
+    {
+        "item": "Q700196",
+        "itemLabel": "Arrivillaga"
+    },
+    {
+        "item": "Q713012",
+        "itemLabel": "Artilleros"
+    },
+    {
+        "item": "Q723692",
+        "itemLabel": "Shangrilá"
+    },
+    {
+        "item": "Q750835",
+        "itemLabel": "Laureles (Tacuarembó)"
+    },
+    {
+        "item": "Q805486",
+        "itemLabel": "Balneario Iporá"
+    },
+    {
+        "item": "Q808783",
+        "itemLabel": "Barra del Chuy"
+    },
+    {
+        "item": "Q812539",
+        "itemLabel": "Baygorria"
+    },
+    {
+        "item": "Q815778",
+        "itemLabel": "Bella Vista (Paysandú)"
+    },
+    {
+        "item": "Q1009502",
+        "itemLabel": "Garzón"
+    },
+    {
+        "item": "Q911248",
+        "itemLabel": "Colonia Nicolich"
+    },
+    {
+        "item": "Q983435",
+        "itemLabel": "San José de Mayo"
+    },
+    {
+        "item": "Q997676",
+        "itemLabel": "Buceo (Montevideo)"
+    },
+    {
+        "item": "Q1004993",
+        "itemLabel": "Paso Campamento"
+    },
+    {
+        "item": "Q1005816",
+        "itemLabel": "Malvín Norte"
+    },
+    {
+        "item": "Q1007583",
+        "itemLabel": "Ramón Trigo"
+    },
+    {
+        "item": "Q1009696",
+        "itemLabel": "Pinares-Las Delicias"
+    },
+    {
+        "item": "Q1010384",
+        "itemLabel": "Kiyú"
+    },
+    {
+        "item": "Q646255",
+        "itemLabel": "Balneario Argentino"
+    },
+    {
+        "item": "Q735816",
+        "itemLabel": "La Montañesa"
+    },
+    {
+        "item": "Q743957",
+        "itemLabel": "Estación Capilla del Sauce"
+    },
+    {
+        "item": "Q805555",
+        "itemLabel": "Baltasar Brum (Artigas)"
+    },
+    {
+        "item": "Q814888",
+        "itemLabel": "Beisso"
+    },
+    {
+        "item": "Q816336",
+        "itemLabel": "Belén (Uruguay)"
+    },
+    {
+        "item": "Q822131",
+        "itemLabel": "Bernabé Rivera (localidad)"
+    },
+    {
+        "item": "Q855464",
+        "itemLabel": "Biarritz (Uruguay)"
+    },
+    {
+        "item": "Q888942",
+        "itemLabel": "Boca del Cufré"
+    },
+    {
+        "item": "Q928534",
+        "itemLabel": "Colón (Uruguay)"
+    },
+    {
+        "item": "Q957863",
+        "itemLabel": "Gregorio Aznárez"
+    },
+    {
+        "item": "Q1004922",
+        "itemLabel": "Chapicuy"
+    },
+    {
+        "item": "Q1004948",
+        "itemLabel": "Juanicó"
+    },
+    {
+        "item": "Q1004925",
+        "itemLabel": "Termas del Arapey"
+    },
+    {
+        "item": "Q1004971",
+        "itemLabel": "Rincón de Valentín"
+    },
+    {
+        "item": "Q1005725",
+        "itemLabel": "San Bautista"
+    },
+    {
+        "item": "Q1281233",
+        "itemLabel": "Ecilda Paullier"
+    },
+    {
+        "item": "Q1323889",
+        "itemLabel": "El Bellaco"
+    },
+    {
+        "item": "Q1324095",
+        "itemLabel": "El Edén"
+    },
+    {
+        "item": "Q1416678",
+        "itemLabel": "San Francisco de las Sierras"
+    },
+    {
+        "item": "Q1440332",
+        "itemLabel": "Fraccionamiento Sobre Ruta 74"
+    },
+    {
+        "item": "Q1470467",
+        "itemLabel": "Playa Azul"
+    },
+    {
+        "item": "Q1522467",
+        "itemLabel": "Playa Parant"
+    },
+    {
+        "item": "Q1526733",
+        "itemLabel": "Termas del Daymán"
+    },
+    {
+        "item": "Q1654136",
+        "itemLabel": "Pueblo Barceló"
+    },
+    {
+        "item": "Q1670190",
+        "itemLabel": "La Boyada"
+    },
+    {
+        "item": "Q1673970",
+        "itemLabel": "Isidoro Noblía"
+    },
+    {
+        "item": "Q1721450",
+        "itemLabel": "La Radial"
+    },
+    {
+        "item": "Q1727968",
+        "itemLabel": "Tarariras"
+    },
+    {
+        "item": "Q1749947",
+        "itemLabel": "Punta del Diablo"
+    },
+    {
+        "item": "Q1369005",
+        "itemLabel": "Estación Solís"
+    },
+    {
+        "item": "Q1274595",
+        "itemLabel": "Tambores"
+    },
+    {
+        "item": "Q1020973",
+        "itemLabel": "Pirarajá"
+    },
+    {
+        "item": "Q1022528",
+        "itemLabel": "Colonia Delta"
+    },
+    {
+        "item": "Q1110716",
+        "itemLabel": "Colonia Cosmopolita"
+    },
+    {
+        "item": "Q1184943",
+        "itemLabel": "Delta del Tigre"
+    },
+    {
+        "item": "Q1295228",
+        "itemLabel": "Edén Rock"
+    },
+    {
+        "item": "Q1324101",
+        "itemLabel": "El Ensueño"
+    },
+    {
+        "item": "Q1324139",
+        "itemLabel": "El Galeón"
+    },
+    {
+        "item": "Q1385563",
+        "itemLabel": "María Albina"
+    },
+    {
+        "item": "Q1523721",
+        "itemLabel": "Paso Ataques"
+    },
+    {
+        "item": "Q1552943",
+        "itemLabel": "Guaviyú de Arapey"
+    },
+    {
+        "item": "Q1552958",
+        "itemLabel": "Guazú-Virá"
+    },
+    {
+        "item": "Q1642369",
+        "itemLabel": "Tres Quintas"
+    },
+    {
+        "item": "Q1658795",
+        "itemLabel": "Illescas (Uruguay)"
+    },
+    {
+        "item": "Q1806010",
+        "itemLabel": "Larrañaga"
+    },
+    {
+        "item": "Q1806458",
+        "itemLabel": "Cumbres de la Ballena"
+    },
+    {
+        "item": "Q1020948",
+        "itemLabel": "Colonia Lavalleja"
+    },
+    {
+        "item": "Q1031469",
+        "itemLabel": "Campo de Todos"
+    },
+    {
+        "item": "Q1050009",
+        "itemLabel": "Casupá"
+    },
+    {
+        "item": "Q1055678",
+        "itemLabel": "Cerrillada"
+    },
+    {
+        "item": "Q1056173",
+        "itemLabel": "Los Cerros de San Juan"
+    },
+    {
+        "item": "Q1095138",
+        "itemLabel": "Clara (Uruguay)"
+    },
+    {
+        "item": "Q1108777",
+        "itemLabel": "Colinas de Solymar"
+    },
+    {
+        "item": "Q1346670",
+        "itemLabel": "Puerto de los Botes"
+    },
+    {
+        "item": "Q1514901",
+        "itemLabel": "Villa Soriano"
+    },
+    {
+        "item": "Q1542837",
+        "itemLabel": "Britópolis"
+    },
+    {
+        "item": "Q1554640",
+        "itemLabel": "Oceanía del Polonio"
+    },
+    {
+        "item": "Q1604881",
+        "itemLabel": "Jardines de Pando"
+    },
+    {
+        "item": "Q1634041",
+        "itemLabel": "Puerto Inglés"
+    },
+    {
+        "item": "Q1710515",
+        "itemLabel": "Juan José Castro (Uruguay)"
+    },
+    {
+        "item": "Q1806459",
+        "itemLabel": "Las Flores (Salto)"
+    },
+    {
+        "item": "Q1020933",
+        "itemLabel": "Q1020933"
+    },
+    {
+        "item": "Q1022302",
+        "itemLabel": "Gerona"
+    },
+    {
+        "item": "Q1022310",
+        "itemLabel": "Santa Catalina"
+    },
+    {
+        "item": "Q1055972",
+        "itemLabel": "Q1055972"
+    },
+    {
+        "item": "Q1020820",
+        "itemLabel": "Santa Rosa"
+    },
+    {
+        "item": "Q1108771",
+        "itemLabel": "Q1108771"
+    },
+    {
+        "item": "Q1136423",
+        "itemLabel": "Q1136423"
+    },
+    {
+        "item": "Q1137249",
+        "itemLabel": "Q1137249"
+    },
+    {
+        "item": "Q1128223",
+        "itemLabel": "Constitución"
+    },
+    {
+        "item": "Q1052863",
+        "itemLabel": "Celeste"
+    },
+    {
+        "item": "Q1271428",
+        "itemLabel": "Q1271428"
+    },
+    {
+        "item": "Q1304029",
+        "itemLabel": "Q1304029"
+    },
+    {
+        "item": "Q1305312",
+        "itemLabel": "Q1305312"
+    },
+    {
+        "item": "Q1238874",
+        "itemLabel": "San Vicente"
+    },
+    {
+        "item": "Q1324497",
+        "itemLabel": "Q1324497"
+    },
+    {
+        "item": "Q1231337",
+        "itemLabel": "Santa Mónica"
+    },
+    {
+        "item": "Q1021487",
+        "itemLabel": "Laureles"
+    },
+    {
+        "item": "Q1017387",
+        "itemLabel": "Rocha"
+    },
+    {
+        "item": "Q1020386",
+        "itemLabel": "Curtina"
+    },
+    {
+        "item": "Q1020402",
+        "itemLabel": "Ombúes de Lavalle"
+    },
+    {
+        "item": "Q1020807",
+        "itemLabel": "Ismael Cortinas"
+    },
+    {
+        "item": "Q1433245",
+        "itemLabel": "Q1433245"
+    },
+    {
+        "item": "Q1022313",
+        "itemLabel": "Las Toscas"
+    },
+    {
+        "item": "Q1022299",
+        "itemLabel": "Santa Bernardina"
+    },
+    {
+        "item": "Q1022308",
+        "itemLabel": "Villa Sara"
+    },
+    {
+        "item": "Q1024895",
+        "itemLabel": "Cabo Polonio"
+    },
+    {
+        "item": "Q1030198",
+        "itemLabel": "Campana"
+    },
+    {
+        "item": "Q1455608",
+        "itemLabel": "Q1455608"
+    },
+    {
+        "item": "Q1055903",
+        "itemLabel": "Cerro Pelado"
+    },
+    {
+        "item": "Q1052099",
+        "itemLabel": "Fabre"
+    },
+    {
+        "item": "Q1056030",
+        "itemLabel": "Cerro de las Cuentas"
+    },
+    {
+        "item": "Q1056180",
+        "itemLabel": "Cerro de Vera"
+    },
+    {
+        "item": "Q1470253",
+        "itemLabel": "Q1470253"
+    },
+    {
+        "item": "Q1072583",
+        "itemLabel": "Chihuahua (Uruguay)"
+    },
+    {
+        "item": "Q1368145",
+        "itemLabel": "Esperanza"
+    },
+    {
+        "item": "Q1368153",
+        "itemLabel": "Esperanza"
+    },
+    {
+        "item": "Q1143065",
+        "itemLabel": "Cuchilla de Fuego"
+    },
+    {
+        "item": "Q1143273",
+        "itemLabel": "Cufré (Uruguay)"
+    },
+    {
+        "item": "Q1583159",
+        "itemLabel": "Q1583159"
+    },
+    {
+        "item": "Q1661914",
+        "itemLabel": "Q1661914"
+    },
+    {
+        "item": "Q1313974",
+        "itemLabel": "Tomás Gomensoro"
+    },
+    {
+        "item": "Q1369753",
+        "itemLabel": "Estanzuela"
+    },
+    {
+        "item": "Q1303777",
+        "itemLabel": "José Ignacio"
+    },
+    {
+        "item": "Q1704376",
+        "itemLabel": "Santa Mónica"
+    },
+    {
+        "item": "Q1368999",
+        "itemLabel": "Estación Pedrera"
+    },
+    {
+        "item": "Q1441880",
+        "itemLabel": "Queguayar"
+    },
+    {
+        "item": "Q1289570",
+        "itemLabel": "Santa Regina"
+    },
+    {
+        "item": "Q1452089",
+        "itemLabel": "Fray Marcos"
+    },
+    {
+        "item": "Q1469181",
+        "itemLabel": "Gaetán"
+    },
+    {
+        "item": "Q1531615",
+        "itemLabel": "Lluveras"
+    },
+    {
+        "item": "Q1532835",
+        "itemLabel": "Federación"
+    },
+    {
+        "item": "Q1054447",
+        "itemLabel": "Centurión"
+    },
+    {
+        "item": "Q1740145",
+        "itemLabel": "Uruguay"
+    },
+    {
+        "item": "Q1714088",
+        "itemLabel": "Nuevo Berlín"
+    },
+    {
+        "item": "Q1047068",
+        "itemLabel": "La Pedrera"
+    },
+    {
+        "item": "Q1753541",
+        "itemLabel": "Russo"
+    },
+    {
+        "item": "Q1805150",
+        "itemLabel": "Villa María"
+    },
+    {
+        "item": "Q1020369",
+        "itemLabel": "Velázquez"
+    },
+    {
+        "item": "Q1241377",
+        "itemLabel": "Garibaldi"
+    },
+    {
+        "item": "Q1111925",
+        "itemLabel": "Migliaro"
+    },
+    {
+        "item": "Q1026307",
+        "itemLabel": "Chuy"
+    },
+    {
+        "item": "Q1020396",
+        "itemLabel": "José Enrique Rodó"
+    },
+    {
+        "item": "Q1018088",
+        "itemLabel": "Parque Carrasco"
+    },
+    {
+        "item": "Q1020376",
+        "itemLabel": "Minas de Corrales"
+    },
+    {
+        "item": "Q1020814",
+        "itemLabel": "Nuevo Paysandú"
+    },
+    {
+        "item": "Q1022303",
+        "itemLabel": "Cebollatí"
+    },
+    {
+        "item": "Q1110740",
+        "itemLabel": "Colonia Itapebí"
+    },
+    {
+        "item": "Q1166990",
+        "itemLabel": "Villa del Rosario"
+    },
+    {
+        "item": "Q1143043",
+        "itemLabel": "Cuchilla de Guaviyú"
+    },
+    {
+        "item": "Q1143052",
+        "itemLabel": "Cuchilla de Peralta"
+    },
+    {
+        "item": "Q1143068",
+        "itemLabel": "Cuchilla del Ombú"
+    },
+    {
+        "item": "Q1229079",
+        "itemLabel": "La Hilera"
+    },
+    {
+        "item": "Q1279702",
+        "itemLabel": "Radial Conchillas"
+    },
+    {
+        "item": "Q1324503",
+        "itemLabel": "El Pinar (Canelones)"
+    },
+    {
+        "item": "Q1368993",
+        "itemLabel": "Estación La Floresta"
+    },
+    {
+        "item": "Q1368997",
+        "itemLabel": "Estación Porvenir"
+    },
+    {
+        "item": "Q1369750",
+        "itemLabel": "Estanque de Pando"
+    },
+    {
+        "item": "Q1395812",
+        "itemLabel": "Pueblo de Arriba"
+    },
+    {
+        "item": "Q1407441",
+        "itemLabel": "Fernández (Uruguay)"
+    },
+    {
+        "item": "Q1411480",
+        "itemLabel": "Fortín de Santa Rosa"
+    },
+    {
+        "item": "Q1425155",
+        "itemLabel": "Perseverano"
+    },
+    {
+        "item": "Q1440500",
+        "itemLabel": "Fraile Muerto (Uruguay)"
+    },
+    {
+        "item": "Q1520136",
+        "itemLabel": "Getulio Vargas"
+    },
+    {
+        "item": "Q1566400",
+        "itemLabel": "Paso Farías"
+    },
+    {
+        "item": "Q1650936",
+        "itemLabel": "Alonso"
+    },
+    {
+        "item": "Q1047072",
+        "itemLabel": "Las Cañas"
+    },
+    {
+        "item": "Q1220484",
+        "itemLabel": "Diego Lamas"
+    },
+    {
+        "item": "Q1445630",
+        "itemLabel": "Piedras de Afilar"
+    },
+    {
+        "item": "Q1020391",
+        "itemLabel": "La Coronilla"
+    },
+    {
+        "item": "Q1020954",
+        "itemLabel": "Lomas de Solymar"
+    },
+    {
+        "item": "Q1034610",
+        "itemLabel": "Capilla de Cella"
+    },
+    {
+        "item": "Q1035207",
+        "itemLabel": "Capurro (San José)"
+    },
+    {
+        "item": "Q1046658",
+        "itemLabel": "Casa Blanca (Uruguay)"
+    },
+    {
+        "item": "Q1052104",
+        "itemLabel": "Cañada Nieto"
+    },
+    {
+        "item": "Q1056196",
+        "itemLabel": "Cerros de la Calera"
+    },
+    {
+        "item": "Q1110764",
+        "itemLabel": "Colonia Palma"
+    },
+    {
+        "item": "Q1110810",
+        "itemLabel": "Colonia Valdense"
+    },
+    {
+        "item": "Q1136477",
+        "itemLabel": "Costas de Pereira"
+    },
+    {
+        "item": "Q1142144",
+        "itemLabel": "Cuchilla de Caraguatá"
+    },
+    {
+        "item": "Q1668942",
+        "itemLabel": "José Batlle y Ordóñez"
+    },
+    {
+        "item": "Q2879995",
+        "itemLabel": "Municipio de Soca"
+    },
+    {
+        "item": "Q5657680",
+        "itemLabel": "Municipio de Pando"
+    },
+    {
+        "item": "Q6026928",
+        "itemLabel": "Municipio de Aiguá"
+    },
+    {
+        "item": "Q6027170",
+        "itemLabel": "Municipio de Barros Blancos"
+    },
+    {
+        "item": "Q6027924",
+        "itemLabel": "Municipio de Ciudad de la Costa"
+    },
+    {
+        "item": "Q6030551",
+        "itemLabel": "Municipio de Nicolich"
+    },
+    {
+        "item": "Q6030851",
+        "itemLabel": "Municipio de Paso de los Toros"
+    },
+    {
+        "item": "Q6031105",
+        "itemLabel": "Municipio de Progreso (Canelones)"
+    },
+    {
+        "item": "Q5396213",
+        "itemLabel": "Municipio de Toledo"
+    },
+    {
+        "item": "Q5690871",
+        "itemLabel": "Municipio de Villa Constitución"
+    },
+    {
+        "item": "Q6028045",
+        "itemLabel": "Municipio de Colonia Lavalleja"
+    },
+    {
+        "item": "Q6029683",
+        "itemLabel": "Municipio de La Floresta"
+    },
+    {
+        "item": "Q6030350",
+        "itemLabel": "Municipio de Montes"
+    },
+    {
+        "item": "Q6030846",
+        "itemLabel": "Municipio de Parque del Plata"
+    },
+    {
+        "item": "Q6031475",
+        "itemLabel": "Municipio de San Bautista"
+    },
+    {
+        "item": "Q6031486",
+        "itemLabel": "Municipio de San Jacinto"
+    },
+    {
+        "item": "Q6031515",
+        "itemLabel": "Municipio de Santa Lucía"
+    },
+    {
+        "item": "Q11322391",
+        "itemLabel": "Municipio de Young (Uruguay)"
+    },
+    {
+        "item": "Q12184242",
+        "itemLabel": "Municipio de Castillos"
+    },
+    {
+        "item": "Q12184488",
+        "itemLabel": "Municipio de La Paloma"
+    },
+    {
+        "item": "Q5747464",
+        "itemLabel": "Canelones (municipio)"
+    },
+    {
+        "item": "Q6029687",
+        "itemLabel": "Municipio de La Paz (Canelones)"
+    },
+    {
+        "item": "Q6029782",
+        "itemLabel": "Municipio de Las Piedras"
+    },
+    {
+        "item": "Q6030009",
+        "itemLabel": "Municipio de Los Cerrillos"
+    },
+    {
+        "item": "Q6030086",
+        "itemLabel": "Municipio de Maldonado"
+    },
+    {
+        "item": "Q6030268",
+        "itemLabel": "Municipio de Migues"
+    },
+    {
+        "item": "Q6031119",
+        "itemLabel": "Municipio de Punta del Este"
+    },
+    {
+        "item": "Q6031472",
+        "itemLabel": "Municipio de San Antonio (Canelones)"
+    },
+    {
+        "item": "Q6031483",
+        "itemLabel": "Municipio de San Gregorio de Polanco"
+    },
+    {
+        "item": "Q6031490",
+        "itemLabel": "Municipio de San Ramón"
+    },
+    {
+        "item": "Q6031951",
+        "itemLabel": "Municipio de Suárez (Canelones)"
+    },
+    {
+        "item": "Q10928764",
+        "itemLabel": "Municipio de Guichón"
+    },
+    {
+        "item": "Q10934275",
+        "itemLabel": "Municipio de Quebracho"
+    },
+    {
+        "item": "Q9044322",
+        "itemLabel": "Municipio de San Antonio (Salto)"
+    },
+    {
+        "item": "Q2884341",
+        "itemLabel": "Municipio de Tala"
+    },
+    {
+        "item": "Q6028508",
+        "itemLabel": "Municipio de Empalme Olmos"
+    },
+    {
+        "item": "Q6030814",
+        "itemLabel": "Municipio de Pan de Azúcar"
+    },
+    {
+        "item": "Q6031517",
+        "itemLabel": "Municipio de Santa Rosa"
+    },
+    {
+        "item": "Q6031526",
+        "itemLabel": "Municipio de Sauce"
+    },
+    {
+        "item": "Q12184499",
+        "itemLabel": "Municipio de Lascano"
+    },
+    {
+        "item": "Q17068756",
+        "itemLabel": "Minas de Corrales"
+    },
+    {
+        "item": "Q6027062",
+        "itemLabel": "Municipio de Atlántida"
+    },
+    {
+        "item": "Q6027264",
+        "itemLabel": "Municipio de Belén"
+    },
+    {
+        "item": "Q6028802",
+        "itemLabel": "Municipio de Garzón"
+    },
+    {
+        "item": "Q6030848",
+        "itemLabel": "Municipio de Paso Carrasco"
+    },
+    {
+        "item": "Q6030956",
+        "itemLabel": "Municipio de Piriápolis"
+    },
+    {
+        "item": "Q6031280",
+        "itemLabel": "Municipio de Rincón de Valentín"
+    },
+    {
+        "item": "Q6031460",
+        "itemLabel": "Municipio de Salinas"
+    },
+    {
+        "item": "Q6031478",
+        "itemLabel": "Municipio de San Carlos (Uruguay)"
+    },
+    {
+        "item": "Q6031722",
+        "itemLabel": "Municipio de Solís Grande"
+    },
+    {
+        "item": "Q17068420",
+        "itemLabel": "Tranqueras"
+    },
+    {
+        "item": "Q16302549",
+        "itemLabel": "Municipio de Casupá"
+    },
+    {
+        "item": "Q19896710",
+        "itemLabel": "Municipio de San Javier"
+    },
+    {
+        "item": "Q17067626",
+        "itemLabel": "Vichadero"
+    },
+    {
+        "item": "Q10934111",
+        "itemLabel": "Municipio de Porvenir"
+    },
+    {
+        "item": "Q12184263",
+        "itemLabel": "Municipio de Chuy"
+    },
+    {
+        "item": "Q9035921",
+        "itemLabel": "Municipio de 18 de Mayo"
+    },
+    {
+        "item": "Q9035949",
+        "itemLabel": "Municipio de Aguas Corrientes"
+    },
+    {
+        "item": "Q16302580",
+        "itemLabel": "Municipio de Sarandí Grande"
+    },
+    {
+        "item": "Q11313227",
+        "itemLabel": "Municipio de Nuevo Berlín"
+    },
+    {
+        "item": "Q1799165",
+        "itemLabel": "Q1799165"
+    },
+    {
+        "item": "Q1890162",
+        "itemLabel": "Q1890162"
+    },
+    {
+        "item": "Q2118579",
+        "itemLabel": "Q2118579"
+    },
+    {
+        "item": "Q2096039",
+        "itemLabel": "Toledo"
+    },
+    {
+        "item": "Q2000138",
+        "itemLabel": "Progreso"
+    },
+    {
+        "item": "Q1684143",
+        "itemLabel": "Jaureguiberry"
+    },
+    {
+        "item": "Q2219299",
+        "itemLabel": "Q2219299"
+    },
+    {
+        "item": "Q2219211",
+        "itemLabel": "San Antonio"
+    },
+    {
+        "item": "Q1798733",
+        "itemLabel": "Constancia"
+    },
+    {
+        "item": "Q2123279",
+        "itemLabel": "Quintana"
+    },
+    {
+        "item": "Q2048372",
+        "itemLabel": "Palomas"
+    },
+    {
+        "item": "Q2117317",
+        "itemLabel": "Pueblo Nuevo"
+    },
+    {
+        "item": "Q2219646",
+        "itemLabel": "San Gregorio"
+    },
+    {
+        "item": "Q1788762",
+        "itemLabel": "Mercado Modelo de Montevideo"
+    },
+    {
+        "item": "Q1799208",
+        "itemLabel": "La Tuna (Uruguay)"
+    },
+    {
+        "item": "Q1800499",
+        "itemLabel": "Lagos del Norte"
+    },
+    {
+        "item": "Q1868714",
+        "itemLabel": "Lomas de Carrasco"
+    },
+    {
+        "item": "Q1891873",
+        "itemLabel": "Nico Pérez"
+    },
+    {
+        "item": "Q2094814",
+        "itemLabel": "San Félix"
+    },
+    {
+        "item": "Q2095080",
+        "itemLabel": "Quebracho"
+    },
+    {
+        "item": "Q2117336",
+        "itemLabel": "Pueblo de Barro"
+    },
+    {
+        "item": "Q2122508",
+        "itemLabel": "Quebracho"
+    },
+    {
+        "item": "Q2153350",
+        "itemLabel": "Rincón de Pacheco"
+    },
+    {
+        "item": "Q2222751",
+        "itemLabel": "Santa Ana (Colonia)"
+    },
+    {
+        "item": "Q2223003",
+        "itemLabel": "Santa Lucía del Este"
+    },
+    {
+        "item": "Q2303870",
+        "itemLabel": "Soto Goro"
+    },
+    {
+        "item": "Q1890255",
+        "itemLabel": "Mangrullo"
+    },
+    {
+        "item": "Q1799010",
+        "itemLabel": "La Pedrera"
+    },
+    {
+        "item": "Q2525747",
+        "itemLabel": "Villa San José"
+    },
+    {
+        "item": "Q2831928",
+        "itemLabel": "Albisu"
+    },
+    {
+        "item": "Q987058",
+        "itemLabel": "El Tesoro"
+    },
+    {
+        "item": "Q1891624",
+        "itemLabel": "Punta Colorada"
+    },
+    {
+        "item": "Q4693696",
+        "itemLabel": "Q4693696"
+    },
+    {
+        "item": "Q3698900",
+        "itemLabel": "Santiago Vázquez"
+    },
+    {
+        "item": "Q4863727",
+        "itemLabel": "Q4863727"
+    },
+    {
+        "item": "Q5037136",
+        "itemLabel": "Q5037136"
+    },
+    {
+        "item": "Q5190320",
+        "itemLabel": "Q5190320"
+    },
+    {
+        "item": "Q1800382",
+        "itemLabel": "Lago Merín"
+    },
+    {
+        "item": "Q1870552",
+        "itemLabel": "Los Talas"
+    },
+    {
+        "item": "Q1964560",
+        "itemLabel": "Nando"
+    },
+    {
+        "item": "Q2093378",
+        "itemLabel": "Aceguá"
+    },
+    {
+        "item": "Q2096045",
+        "itemLabel": "Solís de Mataojo"
+    },
+    {
+        "item": "Q2148485",
+        "itemLabel": "Riachuelo (Uruguay)"
+    },
+    {
+        "item": "Q2227041",
+        "itemLabel": "Saucedo"
+    },
+    {
+        "item": "Q2153353",
+        "itemLabel": "Rincón de Pereira"
+    },
+    {
+        "item": "Q2100066",
+        "itemLabel": "Alonso"
+    },
+    {
+        "item": "Q2298580",
+        "itemLabel": "Vergara"
+    },
+    {
+        "item": "Q2100076",
+        "itemLabel": "Aramendía"
+    },
+    {
+        "item": "Q6336405",
+        "itemLabel": "Jacinto Vera"
+    },
+    {
+        "item": "Q2524812",
+        "itemLabel": "Villa Arejo"
+    },
+    {
+        "item": "Q2525104",
+        "itemLabel": "Villa Felicidad"
+    },
+    {
+        "item": "Q7128128",
+        "itemLabel": "Q7128128"
+    },
+    {
+        "item": "Q7088422",
+        "itemLabel": "Olmos"
+    },
+    {
+        "item": "Q2093578",
+        "itemLabel": "Vichadero"
+    },
+    {
+        "item": "Q7930461",
+        "itemLabel": "Q7930461"
+    },
+    {
+        "item": "Q1791090",
+        "itemLabel": "Villa Crespo y San Andrés"
+    },
+    {
+        "item": "Q1794811",
+        "itemLabel": "Paso Cementerio"
+    },
+    {
+        "item": "Q1798670",
+        "itemLabel": "La Capuera"
+    },
+    {
+        "item": "Q1943036",
+        "itemLabel": "Moirones"
+    },
+    {
+        "item": "Q1946004",
+        "itemLabel": "Montecoral"
+    },
+    {
+        "item": "Q1946193",
+        "itemLabel": "Montevideo Chico"
+    },
+    {
+        "item": "Q2055651",
+        "itemLabel": "Paso Carrasco"
+    },
+    {
+        "item": "Q2055653",
+        "itemLabel": "Paso del Parque del Daymán"
+    },
+    {
+        "item": "Q2093549",
+        "itemLabel": "San Gregorio de Polanco"
+    },
+    {
+        "item": "Q2099003",
+        "itemLabel": "Fomento"
+    },
+    {
+        "item": "Q2118562",
+        "itemLabel": "Punta de Carretera"
+    },
+    {
+        "item": "Q2118570",
+        "itemLabel": "Puntas de Cinco Sauces"
+    },
+    {
+        "item": "Q2118581",
+        "itemLabel": "Puntas de Arroyo Negro"
+    },
+    {
+        "item": "Q2389008",
+        "itemLabel": "Tajamares de la Pedrera"
+    },
+    {
+        "item": "Q2525581",
+        "itemLabel": "Villa Passano"
+    },
+    {
+        "item": "Q10540856",
+        "itemLabel": "Q10540856"
+    },
+    {
+        "item": "Q3288500",
+        "itemLabel": "Área Metropolitana de Montevideo"
+    },
+    {
+        "item": "Q1798728",
+        "itemLabel": "La Concordia (Uruguay)"
+    },
+    {
+        "item": "Q1799079",
+        "itemLabel": "La Ribiera"
+    },
+    {
+        "item": "Q1799171",
+        "itemLabel": "La Tentación"
+    },
+    {
+        "item": "Q2219573",
+        "itemLabel": "San Gabriel (Uruguay)"
+    },
+    {
+        "item": "Q2227047",
+        "itemLabel": "Sauce de Batoví"
+    },
+    {
+        "item": "Q5643564",
+        "itemLabel": "El Ombú"
+    },
+    {
+        "item": "Q2524816",
+        "itemLabel": "Villa Aeroparque"
+    },
+    {
+        "item": "Q3321889",
+        "itemLabel": "Costas del Tacuarí"
+    },
+    {
+        "item": "Q1799011",
+        "itemLabel": "La Pedrera (Rocha)"
+    },
+    {
+        "item": "Q1886592",
+        "itemLabel": "Mal Abrigo"
+    },
+    {
+        "item": "Q1891613",
+        "itemLabel": "Rafael Perazza"
+    },
+    {
+        "item": "Q2020681",
+        "itemLabel": "Olivera (Uruguay)"
+    },
+    {
+        "item": "Q2048153",
+        "itemLabel": "Palmares de la Coronilla"
+    },
+    {
+        "item": "Q2051645",
+        "itemLabel": "Parallé"
+    },
+    {
+        "item": "Q2055619",
+        "itemLabel": "Paso Espinosa"
+    },
+    {
+        "item": "Q2055627",
+        "itemLabel": "Paso Palomeque"
+    },
+    {
+        "item": "Q2097679",
+        "itemLabel": "Piñera (Uruguay)"
+    },
+    {
+        "item": "Q2118590",
+        "itemLabel": "Puntas de Valentín"
+    },
+    {
+        "item": "Q5818023",
+        "itemLabel": "Carlos Reyles"
+    },
+    {
+        "item": "Q2153361",
+        "itemLabel": "Rincón del Pino"
+    },
+    {
+        "item": "Q15696600",
+        "itemLabel": "Minuano"
+    },
+    {
+        "item": "Q17599447",
+        "itemLabel": "Q17599447"
+    },
+    {
+        "item": "Q17600622",
+        "itemLabel": "Q17600622"
+    },
+    {
+        "item": "Q17636479",
+        "itemLabel": "Las Vegas"
+    },
+    {
+        "item": "Q6092942",
+        "itemLabel": "Punta Gorda (Uruguay)"
+    },
+    {
+        "item": "Q7911864",
+        "itemLabel": "Valle Edén"
+    },
+    {
+        "item": "Q16913016",
+        "itemLabel": "Barrio histórico de la ciudad de Colonia del Sacramento"
+    }
+]
