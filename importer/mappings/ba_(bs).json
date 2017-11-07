@@ -1,0 +1,20 @@
+{
+    "country": {
+        "item": "Q225",
+        "name": "Bosnia"
+    },
+    "country_code": "ba",
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "Q12637954",
+        "name": "National Monument of Bosnia and Herzegovina"
+    },
+    "language": "bs",
+    "unique": {
+        "comment": "WLM ID",
+        "property": "P2186"
+    }
+}
