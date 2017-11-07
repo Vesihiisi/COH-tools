@@ -55,7 +55,6 @@ class BosniaMonument(Monument):
         self.source = {"source": {"prop": prop_stated, "value": source_item},
                        "retrieved": {"prop": prop_date,
                                      "value": timestamp}, }
-        print(self.source)
 
     def set_country(self):
         self.add_statement("country", "Q225", refs=self.source)
@@ -98,9 +97,9 @@ class BosniaMonument(Monument):
 
         self.add_statement("is", to_add, refs=self.source, if_empty=True)
 
-    def set_described(self):
+    def clean_url(self):
         """
-        Set described at URL.
+        Prettify reference url.
 
         The URL's look like
         http://aplikacija.kons.gov.ba/kons/public/nacionalnispomenici/show/3729?return=&search=idgrad:undefined:46|
@@ -108,10 +107,15 @@ class BosniaMonument(Monument):
         """
         if self.has_non_empty_attribute("url"):
             if self.url.startswith("http"):
-                url_clean = self.url.split("?")[0]
-                self.add_statement("described_at_url",
-                                   url_clean,
-                                   refs=self.source)
+                return self.url.split("?")[0]
+
+    def set_described(self):
+        """Set 'described at URL'."""
+        url = self.clean_url()
+        if url:
+            self.add_statement("described_at_url",
+                               url,
+                               refs=self.source)
 
     def set_adm_location(self):
         """
@@ -172,6 +176,16 @@ class BosniaMonument(Monument):
                                        self.coordinates,
                                        "coordinates")
 
+    def set_heritage_id(self):
+        url = self.clean_url()
+        if url:
+            id_no = url.rsplit('/', 1)[-1]
+            wlm_prefix = self.mapping["country_code"].upper()
+            wlm_id = "{}-{}".format(wlm_prefix, id_no)
+            self.add_statement("wlm_id", wlm_id, refs=False)
+        else:
+            self.upload = False
+
     def construct_wd_item(self, mapping, data_files=None):
         """
         Create the empty structure of the data object.
@@ -188,6 +202,7 @@ class BosniaMonument(Monument):
         self.wd_item["wd-item"] = None
         self.mapping = mapping
         self.create_source()
+        self.set_heritage_id()
         self.set_country()
         self.set_adm_location()
         self.set_coords()
@@ -197,6 +212,7 @@ class BosniaMonument(Monument):
         self.set_street_address()
         self.update_descriptions()
         self.update_labels()
+        # self.set_wd_item(self.find_matching_wikidata(mapping))
 
 
 def generate_filenames(tablename, timestamp):
@@ -303,7 +319,7 @@ def main(arguments):
             uploader = Uploader(monument,
                                 repo=repo,
                                 live=live,
-                                tablename="test")
+                                tablename="ba")
             uploader.upload()
 
 
