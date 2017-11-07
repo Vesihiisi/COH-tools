@@ -51,10 +51,11 @@ class BosniaMonument(Monument):
         last_edit = "2017-09-08"
         timestamp = utils.date_to_dict(last_edit, "%Y-%m-%d")
         prop_stated = self.props["stated_in"]
-        prop_date = self.props["publication_date"]
+        prop_date = self.props["retrieved"]
         self.source = {"source": {"prop": prop_stated, "value": source_item},
-                "published": {"prop": prop_date,
-                "value": timestamp}, }
+                       "retrieved": {"prop": prop_date,
+                                     "value": timestamp}, }
+        print(self.source)
 
     def set_country(self):
         self.add_statement("country", "Q225", refs=self.source)
@@ -71,7 +72,7 @@ class BosniaMonument(Monument):
         quals = {}
         if date_parsed:
             date_dict = utils.datetime_object_to_dict(date_parsed)
-            quals["start_time"] = {"time_value": date_dict}
+            quals["start_time"] = utils.package_time(date_dict)
 
         self.add_statement("heritage_status", heritage,
                            quals=quals, refs=self.source)
@@ -95,7 +96,7 @@ class BosniaMonument(Monument):
         else:
             to_add = default
 
-        self.add_statement("is", to_add, refs=self.source)
+        self.add_statement("is", to_add, refs=self.source, if_empty=True)
 
     def set_described(self):
         """
@@ -109,8 +110,8 @@ class BosniaMonument(Monument):
             if self.url.startswith("http"):
                 url_clean = self.url.split("?")[0]
                 self.add_statement("described_at_url",
-                    url_clean,
-                    refs=self.source)
+                                   url_clean,
+                                   refs=self.source)
 
     def set_adm_location(self):
         """
@@ -167,6 +168,9 @@ class BosniaMonument(Monument):
                         "coordinates", coord_tuple, refs=self.source)
                 except ValueError:
                     print("Nope coords: {}".format(self.coordinates))
+                    self.add_to_report("coordinates",
+                                       self.coordinates,
+                                       "coordinates")
 
     def construct_wd_item(self, mapping, data_files=None):
         """
