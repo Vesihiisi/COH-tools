@@ -1,0 +1,117 @@
+[
+    {
+        "item": "Q41144",
+        "itemLabel": "Táchira",
+        "iso": "VE-S"
+    },
+    {
+        "item": "Q41146",
+        "itemLabel": "Apure",
+        "iso": "VE-C"
+    },
+    {
+        "item": "Q43269",
+        "itemLabel": "Zulia",
+        "iso": "VE-V"
+    },
+    {
+        "item": "Q43271",
+        "itemLabel": "Barinas",
+        "iso": "VE-E"
+    },
+    {
+        "item": "Q165582",
+        "itemLabel": "Mérida",
+        "iso": "VE-L"
+    },
+    {
+        "item": "Q170453",
+        "itemLabel": "Amazonas",
+        "iso": "VE-Z"
+    },
+    {
+        "item": "Q190687",
+        "itemLabel": "Aragua",
+        "iso": "VE-D"
+    },
+    {
+        "item": "Q190922",
+        "itemLabel": "Anzoátegui",
+        "iso": "VE-B"
+    },
+    {
+        "item": "Q191164",
+        "itemLabel": "Bolívar",
+        "iso": "VE-F"
+    },
+    {
+        "item": "Q191174",
+        "itemLabel": "Miranda",
+        "iso": "VE-M"
+    },
+    {
+        "item": "Q191186",
+        "itemLabel": "Carabobo",
+        "iso": "VE-G"
+    },
+    {
+        "item": "Q201121",
+        "itemLabel": "Yaracuy",
+        "iso": "VE-U"
+    },
+    {
+        "item": "Q201137",
+        "itemLabel": "Delta Amacuro",
+        "iso": "VE-Y"
+    },
+    {
+        "item": "Q202068",
+        "itemLabel": "Trujillo",
+        "iso": "VE-T"
+    },
+    {
+        "item": "Q202071",
+        "itemLabel": "Falcón",
+        "iso": "VE-I"
+    },
+    {
+        "item": "Q202075",
+        "itemLabel": "Guárico",
+        "iso": "VE-J"
+    },
+    {
+        "item": "Q204876",
+        "itemLabel": "Nueva Esparta",
+        "iso": "VE-O"
+    },
+    {
+        "item": "Q205460",
+        "itemLabel": "Cojedes",
+        "iso": "VE-H"
+    },
+    {
+        "item": "Q205776",
+        "itemLabel": "Monagas",
+        "iso": "VE-N"
+    },
+    {
+        "item": "Q205784",
+        "itemLabel": "Portuguesa",
+        "iso": "VE-P"
+    },
+    {
+        "item": "Q205796",
+        "itemLabel": "Lara",
+        "iso": "VE-K"
+    },
+    {
+        "item": "Q205824",
+        "itemLabel": "Sucre",
+        "iso": "VE-R"
+    },
+    {
+        "item": "Q205843",
+        "itemLabel": "Vargas",
+        "iso": "VE-X"
+    }
+]

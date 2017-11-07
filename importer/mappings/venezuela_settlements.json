@@ -1,0 +1,3142 @@
+[
+    {
+        "item": "Q147782",
+        "itemLabel": "Zaraza"
+    },
+    {
+        "item": "Q167974",
+        "itemLabel": "Táriba"
+    },
+    {
+        "item": "Q319476",
+        "itemLabel": "Cumaná"
+    },
+    {
+        "item": "Q338059",
+        "itemLabel": "Acarigua"
+    },
+    {
+        "item": "Q391221",
+        "itemLabel": "Barcelona"
+    },
+    {
+        "item": "Q433758",
+        "itemLabel": "Altagracia de Orituco"
+    },
+    {
+        "item": "Q580968",
+        "itemLabel": "Cabudare"
+    },
+    {
+        "item": "Q641706",
+        "itemLabel": "Ejido"
+    },
+    {
+        "item": "Q615707",
+        "itemLabel": "Pedernales"
+    },
+    {
+        "item": "Q163464",
+        "itemLabel": "Charallave"
+    },
+    {
+        "item": "Q664402",
+        "itemLabel": "Aragüita"
+    },
+    {
+        "item": "Q820235",
+        "itemLabel": "San Cristóbal"
+    },
+    {
+        "item": "Q549002",
+        "itemLabel": "Lagunillas"
+    },
+    {
+        "item": "Q695623",
+        "itemLabel": "Barinas"
+    },
+    {
+        "item": "Q695631",
+        "itemLabel": "Los Teques"
+    },
+    {
+        "item": "Q728412",
+        "itemLabel": "Sabaneta"
+    },
+    {
+        "item": "Q742445",
+        "itemLabel": "Queniquea"
+    },
+    {
+        "item": "Q743316",
+        "itemLabel": "Fortín Solano"
+    },
+    {
+        "item": "Q770309",
+        "itemLabel": "Cúa"
+    },
+    {
+        "item": "Q1018781",
+        "itemLabel": "San Diego"
+    },
+    {
+        "item": "Q842779",
+        "itemLabel": "Maturín"
+    },
+    {
+        "item": "Q379509",
+        "itemLabel": "Puerto La Cruz"
+    },
+    {
+        "item": "Q1020297",
+        "itemLabel": "El Tigre"
+    },
+    {
+        "item": "Q171632",
+        "itemLabel": "Maracaibo"
+    },
+    {
+        "item": "Q976847",
+        "itemLabel": "Santa Rita"
+    },
+    {
+        "item": "Q985991",
+        "itemLabel": "Dabajuro"
+    },
+    {
+        "item": "Q995695",
+        "itemLabel": "Puerto Cabello"
+    },
+    {
+        "item": "Q1002638",
+        "itemLabel": "Rubio"
+    },
+    {
+        "item": "Q1007275",
+        "itemLabel": "San Juan de Payara"
+    },
+    {
+        "item": "Q1008963",
+        "itemLabel": "Mamporal"
+    },
+    {
+        "item": "Q1010367",
+        "itemLabel": "Valera"
+    },
+    {
+        "item": "Q1027004",
+        "itemLabel": "Santa Rita"
+    },
+    {
+        "item": "Q1026987",
+        "itemLabel": "Guatire"
+    },
+    {
+        "item": "Q723588",
+        "itemLabel": "Cabimas"
+    },
+    {
+        "item": "Q1134454",
+        "itemLabel": "Coro"
+    },
+    {
+        "item": "Q979808",
+        "itemLabel": "Cagua"
+    },
+    {
+        "item": "Q996478",
+        "itemLabel": "Guarenas"
+    },
+    {
+        "item": "Q1324317",
+        "itemLabel": "El Limón"
+    },
+    {
+        "item": "Q1677956",
+        "itemLabel": "Maiquetía"
+    },
+    {
+        "item": "Q1023631",
+        "itemLabel": "Sanare"
+    },
+    {
+        "item": "Q525193",
+        "itemLabel": "Cabure"
+    },
+    {
+        "item": "Q1817441",
+        "itemLabel": "Los Guayos"
+    },
+    {
+        "item": "Q1897488",
+        "itemLabel": "Anaco"
+    },
+    {
+        "item": "Q333928",
+        "itemLabel": "Maracay"
+    },
+    {
+        "item": "Q3007525",
+        "itemLabel": "Q3007525"
+    },
+    {
+        "item": "Q2882735",
+        "itemLabel": "Tovar"
+    },
+    {
+        "item": "Q153511",
+        "itemLabel": "Carúpano"
+    },
+    {
+        "item": "Q179007",
+        "itemLabel": "Tucupita"
+    },
+    {
+        "item": "Q3472806",
+        "itemLabel": "Santa Lucía"
+    },
+    {
+        "item": "Q2841091",
+        "itemLabel": "Barrio Unión"
+    },
+    {
+        "item": "Q363828",
+        "itemLabel": "Yagua"
+    },
+    {
+        "item": "Q372920",
+        "itemLabel": "Puerto Ayacucho"
+    },
+    {
+        "item": "Q397689",
+        "itemLabel": "Agua Blanca (Portuguesa)"
+    },
+    {
+        "item": "Q2916708",
+        "itemLabel": "Cordero"
+    },
+    {
+        "item": "Q2919593",
+        "itemLabel": "Cantaura"
+    },
+    {
+        "item": "Q430374",
+        "itemLabel": "La Esmeralda"
+    },
+    {
+        "item": "Q452706",
+        "itemLabel": "Morón"
+    },
+    {
+        "item": "Q442095",
+        "itemLabel": "Timotes"
+    },
+    {
+        "item": "Q3472573",
+        "itemLabel": "Santa Bárbara"
+    },
+    {
+        "item": "Q507080",
+        "itemLabel": "Ciudad Guayana"
+    },
+    {
+        "item": "Q590133",
+        "itemLabel": "La Victoria"
+    },
+    {
+        "item": "Q3134346",
+        "itemLabel": "La Grita"
+    },
+    {
+        "item": "Q3134431",
+        "itemLabel": "Michelena"
+    },
+    {
+        "item": "Q778540",
+        "itemLabel": "San Joaquín"
+    },
+    {
+        "item": "Q3356822",
+        "itemLabel": "Ortiz"
+    },
+    {
+        "item": "Q3213480",
+        "itemLabel": "La Vela de Coro"
+    },
+    {
+        "item": "Q3236167",
+        "itemLabel": "Machiques"
+    },
+    {
+        "item": "Q913356",
+        "itemLabel": "Tocuyito"
+    },
+    {
+        "item": "Q940912",
+        "itemLabel": "Araira"
+    },
+    {
+        "item": "Q953449",
+        "itemLabel": "Porlamar"
+    },
+    {
+        "item": "Q3552274",
+        "itemLabel": "Ureña"
+    },
+    {
+        "item": "Q1008368",
+        "itemLabel": "San José de Barlovento"
+    },
+    {
+        "item": "Q1021748",
+        "itemLabel": "Quíbor"
+    },
+    {
+        "item": "Q1026185",
+        "itemLabel": "Calabozo (Venezuela)"
+    },
+    {
+        "item": "Q1269422",
+        "itemLabel": "San Carlos de Río Negro"
+    },
+    {
+        "item": "Q1324653",
+        "itemLabel": "El Tocuyo"
+    },
+    {
+        "item": "Q685198",
+        "itemLabel": "Maroa"
+    },
+    {
+        "item": "Q631483",
+        "itemLabel": "Punta de Mata"
+    },
+    {
+        "item": "Q2290080",
+        "itemLabel": "Puerto Ordaz"
+    },
+    {
+        "item": "Q3068588",
+        "itemLabel": "San Sebastián de los Reyes"
+    },
+    {
+        "item": "Q2843183",
+        "itemLabel": "Barrio San Vicente"
+    },
+    {
+        "item": "Q2895437",
+        "itemLabel": "San Antonio de Los Altos"
+    },
+    {
+        "item": "Q2975618",
+        "itemLabel": "Clarines"
+    },
+    {
+        "item": "Q2981942",
+        "itemLabel": "Cojedes (Cojedes)"
+    },
+    {
+        "item": "Q515240",
+        "itemLabel": "Macuto"
+    },
+    {
+        "item": "Q599527",
+        "itemLabel": "Barrancas"
+    },
+    {
+        "item": "Q3132040",
+        "itemLabel": "Puerto Píritu"
+    },
+    {
+        "item": "Q733005",
+        "itemLabel": "Guanare"
+    },
+    {
+        "item": "Q816330",
+        "itemLabel": "Belén (Carabobo)"
+    },
+    {
+        "item": "Q3472626",
+        "itemLabel": "Santa Elena de Arenales"
+    },
+    {
+        "item": "Q626670",
+        "itemLabel": "Araure"
+    },
+    {
+        "item": "Q1020279",
+        "itemLabel": "Punto Fijo"
+    },
+    {
+        "item": "Q803784",
+        "itemLabel": "Bailadores"
+    },
+    {
+        "item": "Q1552562",
+        "itemLabel": "Guacara"
+    },
+    {
+        "item": "Q1552906",
+        "itemLabel": "Guasdualito"
+    },
+    {
+        "item": "Q1517139",
+        "itemLabel": "Tinaquillo"
+    },
+    {
+        "item": "Q5410028",
+        "itemLabel": "Villa del Rosario"
+    },
+    {
+        "item": "Q592609",
+        "itemLabel": "Lechería"
+    },
+    {
+        "item": "Q371223",
+        "itemLabel": "San Fernando de Atabapo"
+    },
+    {
+        "item": "Q5963243",
+        "itemLabel": "La Encrucijada"
+    },
+    {
+        "item": "Q2938844",
+        "itemLabel": "Caripito"
+    },
+    {
+        "item": "Q519026",
+        "itemLabel": "Higuerote"
+    },
+    {
+        "item": "Q1044689",
+        "itemLabel": "Carora"
+    },
+    {
+        "item": "Q3049816",
+        "itemLabel": "El Consejo"
+    },
+    {
+        "item": "Q5720362",
+        "itemLabel": "Barrio Democracia"
+    },
+    {
+        "item": "Q3067441",
+        "itemLabel": "San José de Guanipa"
+    },
+    {
+        "item": "Q665865",
+        "itemLabel": "Marigüitar"
+    },
+    {
+        "item": "Q3132654",
+        "itemLabel": "Onoto"
+    },
+    {
+        "item": "Q953490",
+        "itemLabel": "Ciudad Ojeda"
+    },
+    {
+        "item": "Q3471566",
+        "itemLabel": "San Mateo (Aragua)"
+    },
+    {
+        "item": "Q990764",
+        "itemLabel": "San Fernando de Apure"
+    },
+    {
+        "item": "Q997084",
+        "itemLabel": "Turmero"
+    },
+    {
+        "item": "Q742128",
+        "itemLabel": "Achaguas"
+    },
+    {
+        "item": "Q1390081",
+        "itemLabel": "Santa Teresa del Tuy"
+    },
+    {
+        "item": "Q2223185",
+        "itemLabel": "Santa María de Ipire"
+    },
+    {
+        "item": "Q2602785",
+        "itemLabel": "San Antonio del Táchira"
+    },
+    {
+        "item": "Q430981",
+        "itemLabel": "Villa Bruzual"
+    },
+    {
+        "item": "Q9000978",
+        "itemLabel": "Guama"
+    },
+    {
+        "item": "Q498998",
+        "itemLabel": "Choroní"
+    },
+    {
+        "item": "Q3010762",
+        "itemLabel": "Cúpira"
+    },
+    {
+        "item": "Q3041568",
+        "itemLabel": "Pampatar"
+    },
+    {
+        "item": "Q683553",
+        "itemLabel": "Isla Ratón"
+    },
+    {
+        "item": "Q3131511",
+        "itemLabel": "Juan Griego"
+    },
+    {
+        "item": "Q814976",
+        "itemLabel": "Bejuma"
+    },
+    {
+        "item": "Q860689",
+        "itemLabel": "La Asunción"
+    },
+    {
+        "item": "Q873405",
+        "itemLabel": "La Guaira"
+    },
+    {
+        "item": "Q986288",
+        "itemLabel": "Socopó"
+    },
+    {
+        "item": "Q1000143",
+        "itemLabel": "Güigüe"
+    },
+    {
+        "item": "Q1023493",
+        "itemLabel": "Yaritagua"
+    },
+    {
+        "item": "Q1972757",
+        "itemLabel": "Ocumare del Tuy"
+    },
+    {
+        "item": "Q7419262",
+        "itemLabel": "Santa Bárbara del Zulia"
+    },
+    {
+        "item": "Q10859337",
+        "itemLabel": "Bruzual"
+    },
+    {
+        "item": "Q2568748",
+        "itemLabel": "Santa Elena de Uairén"
+    },
+    {
+        "item": "Q2937166",
+        "itemLabel": "Capacho Viejo"
+    },
+    {
+        "item": "Q3133884",
+        "itemLabel": "Palo Negro"
+    },
+    {
+        "item": "Q5725369",
+        "itemLabel": "Belén (Mérida)"
+    },
+    {
+        "item": "Q5915138",
+        "itemLabel": "Independencia (Yaracuy)"
+    },
+    {
+        "item": "Q3499515",
+        "itemLabel": "Chivacoa"
+    },
+    {
+        "item": "Q22350840",
+        "itemLabel": "Q22350840"
+    },
+    {
+        "item": "Q22350865",
+        "itemLabel": "Q22350865"
+    },
+    {
+        "item": "Q22350804",
+        "itemLabel": "Peribeca"
+    },
+    {
+        "item": "Q17516382",
+        "itemLabel": "Guanape"
+    },
+    {
+        "item": "Q23551",
+        "itemLabel": "Mérida"
+    },
+    {
+        "item": "Q54880",
+        "itemLabel": "Valencia"
+    },
+    {
+        "item": "Q26906",
+        "itemLabel": "Ciudad Bolívar"
+    },
+    {
+        "item": "Q1533",
+        "itemLabel": "Caracas"
+    },
+    {
+        "item": "Q30588",
+        "itemLabel": "San Rafael de El Moján"
+    },
+    {
+        "item": "Q4709",
+        "itemLabel": "Barquisimeto"
+    },
+    {
+        "item": "Q3346074",
+        "itemLabel": "Nueva Bolivia"
+    },
+    {
+        "item": "Q888907",
+        "itemLabel": "Bobures"
+    },
+    {
+        "item": "Q3458581",
+        "itemLabel": "Río Chico (Venezuela)"
+    },
+    {
+        "item": "Q3471512",
+        "itemLabel": "San José de Bolívar"
+    },
+    {
+        "item": "Q985989",
+        "itemLabel": "Churuguara"
+    },
+    {
+        "item": "Q986043",
+        "itemLabel": "Caicara de Maturín"
+    },
+    {
+        "item": "Q986159",
+        "itemLabel": "Duaca"
+    },
+    {
+        "item": "Q1005022",
+        "itemLabel": "San Carlos del Zulia"
+    },
+    {
+        "item": "Q3517441",
+        "itemLabel": "Temblador (Monagas)"
+    },
+    {
+        "item": "Q3542070",
+        "itemLabel": "Tunapuy"
+    },
+    {
+        "item": "Q3553845",
+        "itemLabel": "Valle de Guanape"
+    },
+    {
+        "item": "Q1290928",
+        "itemLabel": "Caicara del Orinoco"
+    },
+    {
+        "item": "Q985998",
+        "itemLabel": "Quiriquire"
+    },
+    {
+        "item": "Q1585330",
+        "itemLabel": "Paraíso de Chabasquén"
+    },
+    {
+        "item": "Q1945561",
+        "itemLabel": "Montalbán (Carabobo)"
+    },
+    {
+        "item": "Q5165804",
+        "itemLabel": "Río Grande de la Costa"
+    },
+    {
+        "item": "Q2884528",
+        "itemLabel": "Barinitas"
+    },
+    {
+        "item": "Q2859447",
+        "itemLabel": "Aragua de Maturín"
+    },
+    {
+        "item": "Q2893927",
+        "itemLabel": "Boca de Uchire"
+    },
+    {
+        "item": "Q2919041",
+        "itemLabel": "Güiria"
+    },
+    {
+        "item": "Q3050154",
+        "itemLabel": "El Palmar (Bolívar)"
+    },
+    {
+        "item": "Q3050199",
+        "itemLabel": "El Playón (Venezuela)"
+    },
+    {
+        "item": "Q5746162",
+        "itemLabel": "Camunare Rojo"
+    },
+    {
+        "item": "Q5748510",
+        "itemLabel": "Capitanejo (Barinas)"
+    },
+    {
+        "item": "Q3316054",
+        "itemLabel": "Mirimire"
+    },
+    {
+        "item": "Q3365067",
+        "itemLabel": "Pariaguán"
+    },
+    {
+        "item": "Q948605",
+        "itemLabel": "Vigirima"
+    },
+    {
+        "item": "Q3471356",
+        "itemLabel": "San Antonio de Maturín"
+    },
+    {
+        "item": "Q3472567",
+        "itemLabel": "Santa Ana del Táchira"
+    },
+    {
+        "item": "Q1028164",
+        "itemLabel": "Caucagua (Miranda)"
+    },
+    {
+        "item": "Q1034218",
+        "itemLabel": "Capatárida"
+    },
+    {
+        "item": "Q3542009",
+        "itemLabel": "Tumeremo"
+    },
+    {
+        "item": "Q2219775",
+        "itemLabel": "San Luis (Venezuela)"
+    },
+    {
+        "item": "Q2271735",
+        "itemLabel": "Amuay"
+    },
+    {
+        "item": "Q2825491",
+        "itemLabel": "Adícora"
+    },
+    {
+        "item": "Q2858134",
+        "itemLabel": "Apartaderos"
+    },
+    {
+        "item": "Q3050296",
+        "itemLabel": "El Valle del Espíritu Santo"
+    },
+    {
+        "item": "Q3071358",
+        "itemLabel": "Nuestra Señora del Rosario de Baruta"
+    },
+    {
+        "item": "Q3072016",
+        "itemLabel": "Río Caribe"
+    },
+    {
+        "item": "Q5660268",
+        "itemLabel": "Aguada Grande"
+    },
+    {
+        "item": "Q5674489",
+        "itemLabel": "Anare"
+    },
+    {
+        "item": "Q5733186",
+        "itemLabel": "Bramon (Venezuela)"
+    },
+    {
+        "item": "Q5745732",
+        "itemLabel": "Campo Lara"
+    },
+    {
+        "item": "Q3327385",
+        "itemLabel": "Mucurubá"
+    },
+    {
+        "item": "Q3471565",
+        "itemLabel": "San Mateo (Anzoátegui)"
+    },
+    {
+        "item": "Q3471616",
+        "itemLabel": "San Rafael del Piñal"
+    },
+    {
+        "item": "Q3471637",
+        "itemLabel": "San Simón (Táchira)"
+    },
+    {
+        "item": "Q3472563",
+        "itemLabel": "Santa Ana (Nueva Esparta)"
+    },
+    {
+        "item": "Q5642426",
+        "itemLabel": "La Petrolia"
+    },
+    {
+        "item": "Q5651105",
+        "itemLabel": "1.º de Enero"
+    },
+    {
+        "item": "Q965754",
+        "itemLabel": "San Felipe"
+    },
+    {
+        "item": "Q866274",
+        "itemLabel": "Biscucuy"
+    },
+    {
+        "item": "Q927527",
+        "itemLabel": "Naguanagua"
+    },
+    {
+        "item": "Q930297",
+        "itemLabel": "Cabruta"
+    },
+    {
+        "item": "Q964729",
+        "itemLabel": "El Pao"
+    },
+    {
+        "item": "Q984943",
+        "itemLabel": "Cariaco"
+    },
+    {
+        "item": "Q985518",
+        "itemLabel": "Nueva Cádiz"
+    },
+    {
+        "item": "Q985996",
+        "itemLabel": "Mene de Mauroa"
+    },
+    {
+        "item": "Q986162",
+        "itemLabel": "Guayabal"
+    },
+    {
+        "item": "Q1023656",
+        "itemLabel": "San Juan de Manapiare"
+    },
+    {
+        "item": "Q1006617",
+        "itemLabel": "Parapara"
+    },
+    {
+        "item": "Q1144524",
+        "itemLabel": "Curiapo"
+    },
+    {
+        "item": "Q985378",
+        "itemLabel": "Tucupido"
+    },
+    {
+        "item": "Q986156",
+        "itemLabel": "Siquisique"
+    },
+    {
+        "item": "Q1409152",
+        "itemLabel": "Nirgua"
+    },
+    {
+        "item": "Q1111533",
+        "itemLabel": "Sarare"
+    },
+    {
+        "item": "Q1999202",
+        "itemLabel": "Gibraltar"
+    },
+    {
+        "item": "Q1938002",
+        "itemLabel": "Miranda (Carabobo)"
+    },
+    {
+        "item": "Q1998750",
+        "itemLabel": "Tabay"
+    },
+    {
+        "item": "Q2096142",
+        "itemLabel": "Urumaco"
+    },
+    {
+        "item": "Q2835848",
+        "itemLabel": "Concepción"
+    },
+    {
+        "item": "Q2475168",
+        "itemLabel": "Santa Cruz de Mora"
+    },
+    {
+        "item": "Q2499920",
+        "itemLabel": "Uracoa"
+    },
+    {
+        "item": "Q3362765",
+        "itemLabel": "Q3362765"
+    },
+    {
+        "item": "Q3363214",
+        "itemLabel": "Q3363214"
+    },
+    {
+        "item": "Q2940279",
+        "itemLabel": "Carrizal"
+    },
+    {
+        "item": "Q3472926",
+        "itemLabel": "Santo Domingo"
+    },
+    {
+        "item": "Q2821482",
+        "itemLabel": "Abejales"
+    },
+    {
+        "item": "Q2868761",
+        "itemLabel": "Atamo"
+    },
+    {
+        "item": "Q2883879",
+        "itemLabel": "Barbacoas (Aragua)"
+    },
+    {
+        "item": "Q2891452",
+        "itemLabel": "Tamare"
+    },
+    {
+        "item": "Q3472652",
+        "itemLabel": "Santa Isabel"
+    },
+    {
+        "item": "Q2940807",
+        "itemLabel": "Casanay"
+    },
+    {
+        "item": "Q3471521",
+        "itemLabel": "San Juan Bautista"
+    },
+    {
+        "item": "Q3472580",
+        "itemLabel": "Santa Bárbara"
+    },
+    {
+        "item": "Q3051658",
+        "itemLabel": "Elorza"
+    },
+    {
+        "item": "Q3072164",
+        "itemLabel": "San Juan de Colón"
+    },
+    {
+        "item": "Q3160403",
+        "itemLabel": "Jadacaquiva"
+    },
+    {
+        "item": "Q3259725",
+        "itemLabel": "Los Cerritos"
+    },
+    {
+        "item": "Q3274531",
+        "itemLabel": "Machurucuto"
+    },
+    {
+        "item": "Q3349025",
+        "itemLabel": "Ocumare de la Costa"
+    },
+    {
+        "item": "Q865928",
+        "itemLabel": "Biruaca"
+    },
+    {
+        "item": "Q3529140",
+        "itemLabel": "Tinaco"
+    },
+    {
+        "item": "Q940082",
+        "itemLabel": "Upata"
+    },
+    {
+        "item": "Q3546422",
+        "itemLabel": "Parroquia Tácata"
+    },
+    {
+        "item": "Q3575046",
+        "itemLabel": "Zea (Mérida)"
+    },
+    {
+        "item": "Q983946",
+        "itemLabel": "Petare"
+    },
+    {
+        "item": "Q985753",
+        "itemLabel": "Sierra Imataca"
+    },
+    {
+        "item": "Q1027964",
+        "itemLabel": "Camaguán"
+    },
+    {
+        "item": "Q1033503",
+        "itemLabel": "Canoabo"
+    },
+    {
+        "item": "Q1058829",
+        "itemLabel": "Chaguaramas"
+    },
+    {
+        "item": "Q1142951",
+        "itemLabel": "Cubiro"
+    },
+    {
+        "item": "Q3373995",
+        "itemLabel": "Pedregal"
+    },
+    {
+        "item": "Q986297",
+        "itemLabel": "San Juan de los Cayos"
+    },
+    {
+        "item": "Q1007242",
+        "itemLabel": "Puerto Cumarebo"
+    },
+    {
+        "item": "Q3049962",
+        "itemLabel": "El Hatillo"
+    },
+    {
+        "item": "Q5351031",
+        "itemLabel": "Q5351031"
+    },
+    {
+        "item": "Q1822978",
+        "itemLabel": "Libertad (Cojedes)"
+    },
+    {
+        "item": "Q2094682",
+        "itemLabel": "Tucacas"
+    },
+    {
+        "item": "Q2908241",
+        "itemLabel": "Boca del Río"
+    },
+    {
+        "item": "Q2499917",
+        "itemLabel": "Urachiche"
+    },
+    {
+        "item": "Q2890142",
+        "itemLabel": "Tacarigua"
+    },
+    {
+        "item": "Q5660231",
+        "itemLabel": "Agua de Vaca"
+    },
+    {
+        "item": "Q2935816",
+        "itemLabel": "Canagua"
+    },
+    {
+        "item": "Q5672060",
+        "itemLabel": "El Dividive"
+    },
+    {
+        "item": "Q2964518",
+        "itemLabel": "Parroquia Choroní"
+    },
+    {
+        "item": "Q2974855",
+        "itemLabel": "Ciudad Bolivia"
+    },
+    {
+        "item": "Q2974861",
+        "itemLabel": "Ciudad Piar"
+    },
+    {
+        "item": "Q5732098",
+        "itemLabel": "Boraure"
+    },
+    {
+        "item": "Q5745872",
+        "itemLabel": "Campo de oro"
+    },
+    {
+        "item": "Q5756140",
+        "itemLabel": "Casigua-El Cubo"
+    },
+    {
+        "item": "Q5411186",
+        "itemLabel": "Los Dos Caminos"
+    },
+    {
+        "item": "Q3154288",
+        "itemLabel": "Irapa"
+    },
+    {
+        "item": "Q3206321",
+        "itemLabel": "La Azulita"
+    },
+    {
+        "item": "Q889344",
+        "itemLabel": "Boconó"
+    },
+    {
+        "item": "Q3412143",
+        "itemLabel": "Píritu (Falcón)"
+    },
+    {
+        "item": "Q3471357",
+        "itemLabel": "San Antonio del Golfo"
+    },
+    {
+        "item": "Q3472617",
+        "itemLabel": "Santa Cruz de Aragua"
+    },
+    {
+        "item": "Q964130",
+        "itemLabel": "Colonia Tovar"
+    },
+    {
+        "item": "Q999117",
+        "itemLabel": "San Juan de Los Morros"
+    },
+    {
+        "item": "Q3530218",
+        "itemLabel": "Tocuyo de la Costa"
+    },
+    {
+        "item": "Q3532371",
+        "itemLabel": "Torondoy"
+    },
+    {
+        "item": "Q3571301",
+        "itemLabel": "Yaguaraparo"
+    },
+    {
+        "item": "Q1090013",
+        "itemLabel": "Chuspa"
+    },
+    {
+        "item": "Q1323899",
+        "itemLabel": "El Baúl"
+    },
+    {
+        "item": "Q3947886",
+        "itemLabel": "San Rafael de Mucuchíes"
+    },
+    {
+        "item": "Q1816684",
+        "itemLabel": "Mariara"
+    },
+    {
+        "item": "Q2438308",
+        "itemLabel": "Tocópero"
+    },
+    {
+        "item": "Q5350826",
+        "itemLabel": "El Bochinche"
+    },
+    {
+        "item": "Q2827320",
+        "itemLabel": "Aguasay"
+    },
+    {
+        "item": "Q2859442",
+        "itemLabel": "Aragua de Barcelona"
+    },
+    {
+        "item": "Q2859596",
+        "itemLabel": "Araya (Venezuela)"
+    },
+    {
+        "item": "Q2885485",
+        "itemLabel": "Barrancas del Orinoco"
+    },
+    {
+        "item": "Q2934642",
+        "itemLabel": "Camatagua"
+    },
+    {
+        "item": "Q2894047",
+        "itemLabel": "Lobatera"
+    },
+    {
+        "item": "Q5667364",
+        "itemLabel": "Perque"
+    },
+    {
+        "item": "Q3007503",
+        "itemLabel": "Cumanacoa"
+    },
+    {
+        "item": "Q3049768",
+        "itemLabel": "El Callao (Bolívar)"
+    },
+    {
+        "item": "Q3067120",
+        "itemLabel": "Guanta"
+    },
+    {
+        "item": "Q5887233",
+        "itemLabel": "Guarame"
+    },
+    {
+        "item": "Q2069301",
+        "itemLabel": "Sucre"
+    },
+    {
+        "item": "Q2180802",
+        "itemLabel": "Miranda"
+    },
+    {
+        "item": "Q2135040",
+        "itemLabel": "Municipio Sucre"
+    },
+    {
+        "item": "Q2181142",
+        "itemLabel": "Municipio Sucre"
+    },
+    {
+        "item": "Q2198075",
+        "itemLabel": "Río Negro"
+    },
+    {
+        "item": "Q2078261",
+        "itemLabel": "Carrizal"
+    },
+    {
+        "item": "Q1943448",
+        "itemLabel": "Municipio Campo Elías"
+    },
+    {
+        "item": "Q1939178",
+        "itemLabel": "Municipio Bolívar"
+    },
+    {
+        "item": "Q2352951",
+        "itemLabel": "Municipio Sucre"
+    },
+    {
+        "item": "Q2207830",
+        "itemLabel": "Municipio Libertador"
+    },
+    {
+        "item": "Q1974420",
+        "itemLabel": "Municipio Urachiche"
+    },
+    {
+        "item": "Q1998574",
+        "itemLabel": "Municipio Simón Bolívar"
+    },
+    {
+        "item": "Q1929212",
+        "itemLabel": "Municipio Cedeño"
+    },
+    {
+        "item": "Q2011270",
+        "itemLabel": "Municipio Camatagua"
+    },
+    {
+        "item": "Q2012193",
+        "itemLabel": "Municipio Aguasay"
+    },
+    {
+        "item": "Q2014715",
+        "itemLabel": "Municipio Bolívar"
+    },
+    {
+        "item": "Q2029662",
+        "itemLabel": "Municipio García"
+    },
+    {
+        "item": "Q2043020",
+        "itemLabel": "Municipio Piar"
+    },
+    {
+        "item": "Q2049377",
+        "itemLabel": "Municipio José Rafael Revenga"
+    },
+    {
+        "item": "Q2095488",
+        "itemLabel": "Municipio Andrés Mata"
+    },
+    {
+        "item": "Q2093831",
+        "itemLabel": "Municipio Andrés Bello"
+    },
+    {
+        "item": "Q2148353",
+        "itemLabel": "Municipio Jesús Enrique Lossada"
+    },
+    {
+        "item": "Q2171229",
+        "itemLabel": "Municipio Andrés Bello"
+    },
+    {
+        "item": "Q2218644",
+        "itemLabel": "Municipio Machiques de Perijá"
+    },
+    {
+        "item": "Q2230534",
+        "itemLabel": "Municipio Valdez"
+    },
+    {
+        "item": "Q2250084",
+        "itemLabel": "Municipio Andrés Bello"
+    },
+    {
+        "item": "Q2239704",
+        "itemLabel": "Municipio Península de Macanao"
+    },
+    {
+        "item": "Q2255048",
+        "itemLabel": "Municipio Autónomo Naguanagua"
+    },
+    {
+        "item": "Q2096564",
+        "itemLabel": "Pueblo Llano"
+    },
+    {
+        "item": "Q2310580",
+        "itemLabel": "Municipio Fernando de Peñalver"
+    },
+    {
+        "item": "Q2328156",
+        "itemLabel": "Municipio Democracia"
+    },
+    {
+        "item": "Q2354199",
+        "itemLabel": "Municipio Caroní"
+    },
+    {
+        "item": "Q2370436",
+        "itemLabel": "Municipio Catatumbo"
+    },
+    {
+        "item": "Q2184913",
+        "itemLabel": "Municipio Zamora"
+    },
+    {
+        "item": "Q2259169",
+        "itemLabel": "Municipio Zamora"
+    },
+    {
+        "item": "Q1891642",
+        "itemLabel": "Municipio Miranda"
+    },
+    {
+        "item": "Q1910828",
+        "itemLabel": "Municipio Miranda"
+    },
+    {
+        "item": "Q2208173",
+        "itemLabel": "Villalba"
+    },
+    {
+        "item": "Q1933341",
+        "itemLabel": "Municipio Arístides Bastidas"
+    },
+    {
+        "item": "Q2015236",
+        "itemLabel": "Seboruco"
+    },
+    {
+        "item": "Q2023615",
+        "itemLabel": "Municipio Diego Bautista Urbaneja"
+    },
+    {
+        "item": "Q2105291",
+        "itemLabel": "Julio César Salas"
+    },
+    {
+        "item": "Q2161707",
+        "itemLabel": "Municipio Cocorote"
+    },
+    {
+        "item": "Q2181367",
+        "itemLabel": "Municipio Samuel Darío Maldonado"
+    },
+    {
+        "item": "Q2204930",
+        "itemLabel": "Municipio Juan Vicente Campos Elías"
+    },
+    {
+        "item": "Q2254362",
+        "itemLabel": "Municipio Escuque"
+    },
+    {
+        "item": "Q2255063",
+        "itemLabel": "Municipio Esteller"
+    },
+    {
+        "item": "Q2269268",
+        "itemLabel": "Municipio Urdaneta"
+    },
+    {
+        "item": "Q2280536",
+        "itemLabel": "Municipio Atanasio Girardot"
+    },
+    {
+        "item": "Q2306582",
+        "itemLabel": "Municipio Almirante Padilla"
+    },
+    {
+        "item": "Q2318412",
+        "itemLabel": "Municipio Los Taques"
+    },
+    {
+        "item": "Q2328759",
+        "itemLabel": "Municipio Jacura"
+    },
+    {
+        "item": "Q2061267",
+        "itemLabel": "Municipio Ezequiel Zamora"
+    },
+    {
+        "item": "Q2098386",
+        "itemLabel": "Municipio Independencia"
+    },
+    {
+        "item": "Q1943693",
+        "itemLabel": "Municipio Monte Carmelo"
+    },
+    {
+        "item": "Q1956852",
+        "itemLabel": "Municipio Rojas"
+    },
+    {
+        "item": "Q1960062",
+        "itemLabel": "Municipio Tinaquillo"
+    },
+    {
+        "item": "Q1925791",
+        "itemLabel": "Municipio Arismendi"
+    },
+    {
+        "item": "Q2202157",
+        "itemLabel": "Municipio Píritu"
+    },
+    {
+        "item": "Q2071710",
+        "itemLabel": "Municipio San Diego"
+    },
+    {
+        "item": "Q2084824",
+        "itemLabel": "Municipio Atabapo"
+    },
+    {
+        "item": "Q2092931",
+        "itemLabel": "Municipio Tucupita"
+    },
+    {
+        "item": "Q2112101",
+        "itemLabel": "Municipio Cristóbal Rojas"
+    },
+    {
+        "item": "Q2183400",
+        "itemLabel": "Municipio Arismendi"
+    },
+    {
+        "item": "Q2215868",
+        "itemLabel": "Municipio Manuel Monge"
+    },
+    {
+        "item": "Q2226100",
+        "itemLabel": "Municipio Santiago Mariño"
+    },
+    {
+        "item": "Q2262088",
+        "itemLabel": "Municipio Francisco Javier Pulgar"
+    },
+    {
+        "item": "Q2263307",
+        "itemLabel": "Municipio José Felipe Márquez Cañizalez"
+    },
+    {
+        "item": "Q2271833",
+        "itemLabel": "Municipio Colón"
+    },
+    {
+        "item": "Q2291411",
+        "itemLabel": "Rivas Dávila"
+    },
+    {
+        "item": "Q2309810",
+        "itemLabel": "Manapiare"
+    },
+    {
+        "item": "Q1891862",
+        "itemLabel": "Municipio Benítez"
+    },
+    {
+        "item": "Q1912111",
+        "itemLabel": "Caripe"
+    },
+    {
+        "item": "Q1958023",
+        "itemLabel": "Municipio Mejía"
+    },
+    {
+        "item": "Q1968614",
+        "itemLabel": "Municipio José Antonio Páez"
+    },
+    {
+        "item": "Q1996591",
+        "itemLabel": "Municipio Rosario de Perijá"
+    },
+    {
+        "item": "Q2064667",
+        "itemLabel": "Punceres"
+    },
+    {
+        "item": "Q2068516",
+        "itemLabel": "Municipio Antonio Díaz"
+    },
+    {
+        "item": "Q2096987",
+        "itemLabel": "La Cañada de Urdaneta"
+    },
+    {
+        "item": "Q2218342",
+        "itemLabel": "Municipio Ricaurte"
+    },
+    {
+        "item": "Q2224320",
+        "itemLabel": "Municipio Heres"
+    },
+    {
+        "item": "Q2309997",
+        "itemLabel": "Municipio Bermúdez"
+    },
+    {
+        "item": "Q1905292",
+        "itemLabel": "Municipio San Rafael de Carvajal"
+    },
+    {
+        "item": "Q1913811",
+        "itemLabel": "Municipio Crespo"
+    },
+    {
+        "item": "Q1964146",
+        "itemLabel": "Municipio Montalbán"
+    },
+    {
+        "item": "Q2024872",
+        "itemLabel": "Municipio Unión"
+    },
+    {
+        "item": "Q2046275",
+        "itemLabel": "Municipio Cruz Paredes"
+    },
+    {
+        "item": "Q2074983",
+        "itemLabel": "Autana"
+    },
+    {
+        "item": "Q2100029",
+        "itemLabel": "Municipio Roscio"
+    },
+    {
+        "item": "Q2102962",
+        "itemLabel": "Municipio Tubores"
+    },
+    {
+        "item": "Q2124390",
+        "itemLabel": "Municipio Alberto Adriani"
+    },
+    {
+        "item": "Q2135709",
+        "itemLabel": "Municipio Pedraza"
+    },
+    {
+        "item": "Q2146204",
+        "itemLabel": "Municipio Antonio Pinto Salinas"
+    },
+    {
+        "item": "Q2162569",
+        "itemLabel": "Municipio Panamericano"
+    },
+    {
+        "item": "Q2173884",
+        "itemLabel": "Municipio Juan Antonio Sotillo"
+    },
+    {
+        "item": "Q2201316",
+        "itemLabel": "Municipio Baralt"
+    },
+    {
+        "item": "Q2203040",
+        "itemLabel": "Municipio Cruz Salmerón Acosta"
+    },
+    {
+        "item": "Q2251237",
+        "itemLabel": "Municipio José Ángel Lamas"
+    },
+    {
+        "item": "Q2295357",
+        "itemLabel": "Municipio Atures"
+    },
+    {
+        "item": "Q2307377",
+        "itemLabel": "Municipio Palavecino"
+    },
+    {
+        "item": "Q2421017",
+        "itemLabel": "Municipio Sucre"
+    },
+    {
+        "item": "Q2375805",
+        "itemLabel": "Municipio Libertador"
+    },
+    {
+        "item": "Q2441787",
+        "itemLabel": "Municipio Libertador"
+    },
+    {
+        "item": "Q2662721",
+        "itemLabel": "Municipio Sucre"
+    },
+    {
+        "item": "Q2674191",
+        "itemLabel": "Municipio Sucre"
+    },
+    {
+        "item": "Q2569928",
+        "itemLabel": "Urdaneta"
+    },
+    {
+        "item": "Q2651190",
+        "itemLabel": "Dabajuro"
+    },
+    {
+        "item": "Q2453851",
+        "itemLabel": "Municipio Simón Bolívar"
+    },
+    {
+        "item": "Q2408036",
+        "itemLabel": "Municipio Páez"
+    },
+    {
+        "item": "Q2408734",
+        "itemLabel": "Municipio Colina"
+    },
+    {
+        "item": "Q2475688",
+        "itemLabel": "Municipio Piar"
+    },
+    {
+        "item": "Q2436120",
+        "itemLabel": "Municipio Papelón"
+    },
+    {
+        "item": "Q2520836",
+        "itemLabel": "Municipio Simón Bolívar"
+    },
+    {
+        "item": "Q2448257",
+        "itemLabel": "Municipio Cedeño"
+    },
+    {
+        "item": "Q2457287",
+        "itemLabel": "Municipio Tulio Febres Cordero"
+    },
+    {
+        "item": "Q2483236",
+        "itemLabel": "Municipio Páez"
+    },
+    {
+        "item": "Q2471594",
+        "itemLabel": "Municipio Santa Rita"
+    },
+    {
+        "item": "Q2511946",
+        "itemLabel": "Municipio Morán"
+    },
+    {
+        "item": "Q2615175",
+        "itemLabel": "Municipio Bolívar"
+    },
+    {
+        "item": "Q2536391",
+        "itemLabel": "Municipio Mario Briceño Iragorry"
+    },
+    {
+        "item": "Q2537345",
+        "itemLabel": "Municipio Muñoz"
+    },
+    {
+        "item": "Q2847018",
+        "itemLabel": "Lagunillas"
+    },
+    {
+        "item": "Q2635750",
+        "itemLabel": "Municipio Biruaca"
+    },
+    {
+        "item": "Q2673923",
+        "itemLabel": "Municipio Antonio José de Sucre"
+    },
+    {
+        "item": "Q2674106",
+        "itemLabel": "Municipio Pedro María Freites"
+    },
+    {
+        "item": "Q2677085",
+        "itemLabel": "Ciudad de San Francisco"
+    },
+    {
+        "item": "Q2827311",
+        "itemLabel": "Municipio Agua Blanca"
+    },
+    {
+        "item": "Q2843795",
+        "itemLabel": "Municipio Francisco Linares Alcántara"
+    },
+    {
+        "item": "Q2849019",
+        "itemLabel": "Municipio Andrés Eloy Blanco (Sucre)"
+    },
+    {
+        "item": "Q2856316",
+        "itemLabel": "Municipio Aricagua"
+    },
+    {
+        "item": "Q2909562",
+        "itemLabel": "Municipio Bolívar (Trujillo)"
+    },
+    {
+        "item": "Q2878264",
+        "itemLabel": "Municipio Miranda"
+    },
+    {
+        "item": "Q2665199",
+        "itemLabel": "Municipio Rómulo Gallegos"
+    },
+    {
+        "item": "Q2388919",
+        "itemLabel": "Municipio Urdaneta"
+    },
+    {
+        "item": "Q2403741",
+        "itemLabel": "Municipio Torbes"
+    },
+    {
+        "item": "Q2404225",
+        "itemLabel": "Municipio Simón Rodríguez"
+    },
+    {
+        "item": "Q2430839",
+        "itemLabel": "Municipio Urdaneta"
+    },
+    {
+        "item": "Q2421221",
+        "itemLabel": "Municipio Tovar"
+    },
+    {
+        "item": "Q2461440",
+        "itemLabel": "Municipio Juan Manuel Cajigal"
+    },
+    {
+        "item": "Q2565242",
+        "itemLabel": "Municipio Carache"
+    },
+    {
+        "item": "Q2608254",
+        "itemLabel": "Municipio Jáuregui"
+    },
+    {
+        "item": "Q2627020",
+        "itemLabel": "Pedro María Ureña"
+    },
+    {
+        "item": "Q2629942",
+        "itemLabel": "Municipio Michelena"
+    },
+    {
+        "item": "Q2706815",
+        "itemLabel": "Municipio Cardenal Quintero"
+    },
+    {
+        "item": "Q2772652",
+        "itemLabel": "Municipio Simón Rodríguez"
+    },
+    {
+        "item": "Q2779125",
+        "itemLabel": "Municipio Lobatera"
+    },
+    {
+        "item": "Q2772399",
+        "itemLabel": "Municipio Falcón"
+    },
+    {
+        "item": "Q2849001",
+        "itemLabel": "Municipio Andrés Bello (Trujillo)"
+    },
+    {
+        "item": "Q2673918",
+        "itemLabel": "Maroa"
+    },
+    {
+        "item": "Q2613916",
+        "itemLabel": "Municipio Santa Ana"
+    },
+    {
+        "item": "Q2777221",
+        "itemLabel": "Municipio Independencia"
+    },
+    {
+        "item": "Q2435584",
+        "itemLabel": "Municipio Iribarren"
+    },
+    {
+        "item": "Q2464893",
+        "itemLabel": "Municipio Tocópero"
+    },
+    {
+        "item": "Q2475546",
+        "itemLabel": "Municipio San Casimiro"
+    },
+    {
+        "item": "Q2527737",
+        "itemLabel": "Municipio Cacique Manaure"
+    },
+    {
+        "item": "Q2530307",
+        "itemLabel": "Municipio Libertad"
+    },
+    {
+        "item": "Q2552137",
+        "itemLabel": "Municipio Pedernales"
+    },
+    {
+        "item": "Q2607465",
+        "itemLabel": "Municipio Arismendi"
+    },
+    {
+        "item": "Q2557299",
+        "itemLabel": "Municipio San Genaro de Boconoíto"
+    },
+    {
+        "item": "Q2623246",
+        "itemLabel": "Municipio Caracciolo Parra Olmedo"
+    },
+    {
+        "item": "Q2625145",
+        "itemLabel": "Municipio Acevedo"
+    },
+    {
+        "item": "Q2635389",
+        "itemLabel": "Municipio San Francisco"
+    },
+    {
+        "item": "Q2636713",
+        "itemLabel": "Municipio José Laurencio Silva"
+    },
+    {
+        "item": "Q2673296",
+        "itemLabel": "Municipio San José de Guanipa"
+    },
+    {
+        "item": "Q2673928",
+        "itemLabel": "Municipio Francisco del Carmen Carvajal"
+    },
+    {
+        "item": "Q2606907",
+        "itemLabel": "Obispos"
+    },
+    {
+        "item": "Q2786560",
+        "itemLabel": "Municipio Lima Blanco"
+    },
+    {
+        "item": "Q2797691",
+        "itemLabel": "Municipio José María Vargas"
+    },
+    {
+        "item": "Q2823425",
+        "itemLabel": "Municipio Acosta (Monagas)"
+    },
+    {
+        "item": "Q2866132",
+        "itemLabel": "Municipio Arzobispo Chacón"
+    },
+    {
+        "item": "Q2413769",
+        "itemLabel": "Municipio Mariño"
+    },
+    {
+        "item": "Q2621527",
+        "itemLabel": "Municipio Cárdenas"
+    },
+    {
+        "item": "Q2450334",
+        "itemLabel": "Municipio El Callao"
+    },
+    {
+        "item": "Q2451657",
+        "itemLabel": "Municipio Gómez"
+    },
+    {
+        "item": "Q2479642",
+        "itemLabel": "Municipio Monseñor José Vicente de Unda"
+    },
+    {
+        "item": "Q2545115",
+        "itemLabel": "Municipio José Gregorio Monagas"
+    },
+    {
+        "item": "Q2545745",
+        "itemLabel": "Municipio Anzoátegui"
+    },
+    {
+        "item": "Q2554123",
+        "itemLabel": "Municipio Cajigal"
+    },
+    {
+        "item": "Q2574354",
+        "itemLabel": "Municipio Pedro Camejo"
+    },
+    {
+        "item": "Q2584430",
+        "itemLabel": "Municipio La Trinidad"
+    },
+    {
+        "item": "Q2593210",
+        "itemLabel": "Municipio Guajira"
+    },
+    {
+        "item": "Q2596580",
+        "itemLabel": "Municipio Pampanito"
+    },
+    {
+        "item": "Q2635968",
+        "itemLabel": "Municipio Uracoa"
+    },
+    {
+        "item": "Q2674109",
+        "itemLabel": "Municipio San Juan de Capistrano"
+    },
+    {
+        "item": "Q2674477",
+        "itemLabel": "Municipio Padre Noguera"
+    },
+    {
+        "item": "Q2749319",
+        "itemLabel": "Motatán"
+    },
+    {
+        "item": "Q2856992",
+        "itemLabel": "Municipio Antolín del Campo"
+    },
+    {
+        "item": "Q2874853",
+        "itemLabel": "Municipio de Ayacucho"
+    },
+    {
+        "item": "Q2884525",
+        "itemLabel": "Municipio Barinas"
+    },
+    {
+        "item": "Q2381428",
+        "itemLabel": "Municipio Guanta"
+    },
+    {
+        "item": "Q2388590",
+        "itemLabel": "Municipio Pedro Gual"
+    },
+    {
+        "item": "Q2465345",
+        "itemLabel": "Municipio Rafael Rangel"
+    },
+    {
+        "item": "Q2497712",
+        "itemLabel": "Municipio Peña"
+    },
+    {
+        "item": "Q2526746",
+        "itemLabel": "Municipio Zea"
+    },
+    {
+        "item": "Q2607198",
+        "itemLabel": "Guaraque"
+    },
+    {
+        "item": "Q2664224",
+        "itemLabel": "Municipio Córdoba"
+    },
+    {
+        "item": "Q2741347",
+        "itemLabel": "Municipio Araure"
+    },
+    {
+        "item": "Q2745788",
+        "itemLabel": "Municipio Acosta"
+    },
+    {
+        "item": "Q2803774",
+        "itemLabel": "Municipio Santos Marquina"
+    },
+    {
+        "item": "Q2909567",
+        "itemLabel": "Municipio Bolívar (Barinas)"
+    },
+    {
+        "item": "Q431008",
+        "itemLabel": "Zaraza"
+    },
+    {
+        "item": "Q373198",
+        "itemLabel": "Municipio Sifontes"
+    },
+    {
+        "item": "Q400079",
+        "itemLabel": "Municipio Sucre"
+    },
+    {
+        "item": "Q428957",
+        "itemLabel": "Municipio Manuel Ezequiel Bruzual"
+    },
+    {
+        "item": "Q507132",
+        "itemLabel": "Palmasola"
+    },
+    {
+        "item": "Q524054",
+        "itemLabel": "Municipio Andrés Eloy Blanco (Lara)"
+    },
+    {
+        "item": "Q615843",
+        "itemLabel": "Municipio Sucre"
+    },
+    {
+        "item": "Q577335",
+        "itemLabel": "Municipio Casacoima"
+    },
+    {
+        "item": "Q538798",
+        "itemLabel": "Municipio Libertador"
+    },
+    {
+        "item": "Q659748",
+        "itemLabel": "Municipio Urumaco"
+    },
+    {
+        "item": "Q383833",
+        "itemLabel": "Municipio Bolívar"
+    },
+    {
+        "item": "Q530214",
+        "itemLabel": "Municipio Bolívar"
+    },
+    {
+        "item": "Q1020535",
+        "itemLabel": "Trujillo"
+    },
+    {
+        "item": "Q887222",
+        "itemLabel": "Municipio Libertador de Caracas"
+    },
+    {
+        "item": "Q922530",
+        "itemLabel": "Municipio Girardot"
+    },
+    {
+        "item": "Q943822",
+        "itemLabel": "Municipio Anaco"
+    },
+    {
+        "item": "Q1149242",
+        "itemLabel": "Municipio Ambrosio Plaza"
+    },
+    {
+        "item": "Q1149232",
+        "itemLabel": "Paz Castillo"
+    },
+    {
+        "item": "Q1308380",
+        "itemLabel": "Municipio Ortiz"
+    },
+    {
+        "item": "Q1006441",
+        "itemLabel": "El Socorro"
+    },
+    {
+        "item": "Q1581813",
+        "itemLabel": "Municipio Santa María de Ipire"
+    },
+    {
+        "item": "Q1651292",
+        "itemLabel": "Municipio Bolivariano Angostura"
+    },
+    {
+        "item": "Q1886710",
+        "itemLabel": "Municipio Mauroa"
+    },
+    {
+        "item": "Q1822992",
+        "itemLabel": "Municipio Libertador (Carabobo)"
+    },
+    {
+        "item": "Q1862679",
+        "itemLabel": "Municipio Petit"
+    },
+    {
+        "item": "Q1129558",
+        "itemLabel": "Municipio Zamora"
+    },
+    {
+        "item": "Q1450597",
+        "itemLabel": "Las Mercedes"
+    },
+    {
+        "item": "Q1090454",
+        "itemLabel": "Guaicaipuro"
+    },
+    {
+        "item": "Q388004",
+        "itemLabel": "Municipio Antonio Rómulo Costa"
+    },
+    {
+        "item": "Q535057",
+        "itemLabel": "Municipio Padre Pedro Chien"
+    },
+    {
+        "item": "Q583005",
+        "itemLabel": "Municipio San Rafael de Onoto"
+    },
+    {
+        "item": "Q592803",
+        "itemLabel": "Municipio Andrés Eloy Blanco"
+    },
+    {
+        "item": "Q601873",
+        "itemLabel": "Municipio Antonio Díaz (Delta Amacuro)"
+    },
+    {
+        "item": "Q639423",
+        "itemLabel": "Municipio San Gerónimo de Guayabal"
+    },
+    {
+        "item": "Q649153",
+        "itemLabel": "Municipio Achaguas"
+    },
+    {
+        "item": "Q744445",
+        "itemLabel": "Municipio Rómulo Gallegos"
+    },
+    {
+        "item": "Q748134",
+        "itemLabel": "Municipio Marcano"
+    },
+    {
+        "item": "Q761148",
+        "itemLabel": "Municipio Baruta"
+    },
+    {
+        "item": "Q827414",
+        "itemLabel": "Los Salias"
+    },
+    {
+        "item": "Q968095",
+        "itemLabel": "José Tadeo Monagas"
+    },
+    {
+        "item": "Q1042713",
+        "itemLabel": "Municipio Carlos Arvelo"
+    },
+    {
+        "item": "Q1058857",
+        "itemLabel": "Chaguaramas"
+    },
+    {
+        "item": "Q1817681",
+        "itemLabel": "Municipio Francisco de Miranda"
+    },
+    {
+        "item": "Q1839865",
+        "itemLabel": "Municipio Miranda"
+    },
+    {
+        "item": "Q1833236",
+        "itemLabel": "Municipio Rafael Urdaneta"
+    },
+    {
+        "item": "Q1581038",
+        "itemLabel": "José Félix Ribas"
+    },
+    {
+        "item": "Q1864734",
+        "itemLabel": "Municipio Ocumare de la Costa de Oro"
+    },
+    {
+        "item": "Q1869244",
+        "itemLabel": "Municipio Pao de San Juan Bautista"
+    },
+    {
+        "item": "Q1811782",
+        "itemLabel": "Lander"
+    },
+    {
+        "item": "Q262132",
+        "itemLabel": "Municipio Carirubana"
+    },
+    {
+        "item": "Q429692",
+        "itemLabel": "Municipio Ezequiel Zamora"
+    },
+    {
+        "item": "Q443529",
+        "itemLabel": "Municipio Alto Orinoco"
+    },
+    {
+        "item": "Q585676",
+        "itemLabel": "Municipio General Sir Arthur McGregor"
+    },
+    {
+        "item": "Q591314",
+        "itemLabel": "Municipio Junín"
+    },
+    {
+        "item": "Q607774",
+        "itemLabel": "Municipio Independencia"
+    },
+    {
+        "item": "Q1827306",
+        "itemLabel": "José Joaquín Veroes"
+    },
+    {
+        "item": "Q814978",
+        "itemLabel": "Municipio Bejuma"
+    },
+    {
+        "item": "Q965270",
+        "itemLabel": "Municipio Píritu"
+    },
+    {
+        "item": "Q974559",
+        "itemLabel": "Municipio Fernández Feo"
+    },
+    {
+        "item": "Q1220474",
+        "itemLabel": "Municipio Diego Ibarra"
+    },
+    {
+        "item": "Q1581132",
+        "itemLabel": "Municipio Juan Germán Roscio"
+    },
+    {
+        "item": "Q1831978",
+        "itemLabel": "Municipio Independencia"
+    },
+    {
+        "item": "Q1823071",
+        "itemLabel": "Municipio Montes"
+    },
+    {
+        "item": "Q260682",
+        "itemLabel": "Municipio Brión"
+    },
+    {
+        "item": "Q642788",
+        "itemLabel": "Municipio San Sebastián"
+    },
+    {
+        "item": "Q704971",
+        "itemLabel": "Municipio Alberto Arvelo Torrealba"
+    },
+    {
+        "item": "Q952348",
+        "itemLabel": "Municipio Jiménez"
+    },
+    {
+        "item": "Q1027967",
+        "itemLabel": "Municipio Camaguán"
+    },
+    {
+        "item": "Q1446171",
+        "itemLabel": "Municipio Guacara"
+    },
+    {
+        "item": "Q1454811",
+        "itemLabel": "Municipio Leonardo Infante"
+    },
+    {
+        "item": "Q1581019",
+        "itemLabel": "Julián Mellado"
+    },
+    {
+        "item": "Q1581067",
+        "itemLabel": "Municipio San José de Guaribe"
+    },
+    {
+        "item": "Q1710527",
+        "itemLabel": "Municipio Juan José Mora"
+    },
+    {
+        "item": "Q1820462",
+        "itemLabel": "Municipio Mara"
+    },
+    {
+        "item": "Q374734",
+        "itemLabel": "Municipio Chacao"
+    },
+    {
+        "item": "Q606975",
+        "itemLabel": "Municipio Aragua"
+    },
+    {
+        "item": "Q751150",
+        "itemLabel": "Municipio Buroz"
+    },
+    {
+        "item": "Q770422",
+        "itemLabel": "Municipio García de Hevia"
+    },
+    {
+        "item": "Q929490",
+        "itemLabel": "Municipio Rangel"
+    },
+    {
+        "item": "Q950989",
+        "itemLabel": "Municipio Jesús María Semprún (Zulia)"
+    },
+    {
+        "item": "Q975765",
+        "itemLabel": "Municipio El Hatillo"
+    },
+    {
+        "item": "Q1631420",
+        "itemLabel": "Municipio San Joaquín"
+    },
+    {
+        "item": "Q1814869",
+        "itemLabel": "Buchivacoa"
+    },
+    {
+        "item": "Q40767",
+        "itemLabel": "Municipio Francisco de Miranda"
+    },
+    {
+        "item": "Q3134312",
+        "itemLabel": "Municipio Sucre"
+    },
+    {
+        "item": "Q3071710",
+        "itemLabel": "Municipio Libertador"
+    },
+    {
+        "item": "Q3553547",
+        "itemLabel": "Valencia"
+    },
+    {
+        "item": "Q3087978",
+        "itemLabel": "Municipio Páez"
+    },
+    {
+        "item": "Q3071700",
+        "itemLabel": "Municipio Ribero"
+    },
+    {
+        "item": "Q3072321",
+        "itemLabel": "Municipio Guásimos"
+    },
+    {
+        "item": "Q3089926",
+        "itemLabel": "Municipio Monseñor Iturriza"
+    },
+    {
+        "item": "Q3471417",
+        "itemLabel": "Municipio San Fernando"
+    },
+    {
+        "item": "Q3646838",
+        "itemLabel": "Los Guayos"
+    },
+    {
+        "item": "Q4827917",
+        "itemLabel": "Municipio Sucre"
+    },
+    {
+        "item": "Q5116306",
+        "itemLabel": "Municipio Cabimas"
+    },
+    {
+        "item": "Q3071840",
+        "itemLabel": "Municipio Francisco de Miranda"
+    },
+    {
+        "item": "Q5413768",
+        "itemLabel": "Municipio Valera"
+    },
+    {
+        "item": "Q2916834",
+        "itemLabel": "Municipio Guanarito"
+    },
+    {
+        "item": "Q2927131",
+        "itemLabel": "Bruzual"
+    },
+    {
+        "item": "Q3071565",
+        "itemLabel": "Municipio Santa Rosalía"
+    },
+    {
+        "item": "Q3132001",
+        "itemLabel": "Municipio Torres"
+    },
+    {
+        "item": "Q3132009",
+        "itemLabel": "Municipio Tinaco"
+    },
+    {
+        "item": "Q6063555",
+        "itemLabel": "Parroquia San Juan (Caracas)"
+    },
+    {
+        "item": "Q3471395",
+        "itemLabel": "Municipio San Cristóbal (Táchira)"
+    },
+    {
+        "item": "Q3650762",
+        "itemLabel": "Municipio Vargas"
+    },
+    {
+        "item": "Q2909570",
+        "itemLabel": "Municipio Bolívar (Falcón)"
+    },
+    {
+        "item": "Q2936242",
+        "itemLabel": "Municipio Candelaria (Trujillo)"
+    },
+    {
+        "item": "Q2938835",
+        "itemLabel": "Municipio Caripe"
+    },
+    {
+        "item": "Q3072345",
+        "itemLabel": "Municipio Libertad"
+    },
+    {
+        "item": "Q3038839",
+        "itemLabel": "Municipio Turén"
+    },
+    {
+        "item": "Q3055381",
+        "itemLabel": "Municipio Obispo Ramos de Lora"
+    },
+    {
+        "item": "Q3113406",
+        "itemLabel": "Municipio Gran Sabana"
+    },
+    {
+        "item": "Q6026898",
+        "itemLabel": "Municipio Trujillo (Trujillo)"
+    },
+    {
+        "item": "Q9298782",
+        "itemLabel": "Municipio Valmore Rodríguez"
+    },
+    {
+        "item": "Q3071960",
+        "itemLabel": "Municipio Mariño"
+    },
+    {
+        "item": "Q10801437",
+        "itemLabel": "Municipio Nirgua"
+    },
+    {
+        "item": "Q3120448",
+        "itemLabel": "Municipio José Félix Ribas"
+    },
+    {
+        "item": "Q3067852",
+        "itemLabel": "Municipio Federación"
+    },
+    {
+        "item": "Q3088394",
+        "itemLabel": "Municipio Simón Planas"
+    },
+    {
+        "item": "Q3089933",
+        "itemLabel": "Municipio Sosa"
+    },
+    {
+        "item": "Q3472583",
+        "itemLabel": "Municipio Santa Bárbara"
+    },
+    {
+        "item": "Q6063601",
+        "itemLabel": "Parroquia Tacarigua de la Laguna"
+    },
+    {
+        "item": "Q3471383",
+        "itemLabel": "Municipio Ezequiel Zamora (Cojedes)"
+    },
+    {
+        "item": "Q10052643",
+        "itemLabel": "Municipio Motatán"
+    },
+    {
+        "item": "Q3042211",
+        "itemLabel": "Municipio Santos Michelena"
+    },
+    {
+        "item": "Q3066174",
+        "itemLabel": "Municipio Maneiro"
+    },
+    {
+        "item": "Q3070900",
+        "itemLabel": "Municipio Sotillo"
+    },
+    {
+        "item": "Q3071847",
+        "itemLabel": "Municipio San Judas Tadeo"
+    },
+    {
+        "item": "Q3072187",
+        "itemLabel": "Municipio Uribante"
+    },
+    {
+        "item": "Q3087224",
+        "itemLabel": "Municipio Ospino"
+    },
+    {
+        "item": "Q3088418",
+        "itemLabel": "Municipio Justo Briceño"
+    },
+    {
+        "item": "Q3118730",
+        "itemLabel": "Municipio Guanare"
+    },
+    {
+        "item": "Q3300002",
+        "itemLabel": "Municipio Maturín"
+    },
+    {
+        "item": "Q3410570",
+        "itemLabel": "Municipio Puerto Cabello"
+    },
+    {
+        "item": "Q9035899",
+        "itemLabel": "Municipio La Ceiba (Trujillo)"
+    },
+    {
+        "item": "Q6063382",
+        "itemLabel": "Parroquia El Cafetal"
+    },
+    {
+        "item": "Q6063597",
+        "itemLabel": "Parroquia Santa Teresa (Caracas)"
+    },
+    {
+        "item": "Q11694014",
+        "itemLabel": "Municipio San Felipe (Yaracuy)"
+    },
+    {
+        "item": "Q9035906",
+        "itemLabel": "Municipio Pampán"
+    },
+    {
+        "item": "Q10324879",
+        "itemLabel": "Municipio Maracaibo"
+    },
+    {
+        "item": "Q5766719",
+        "itemLabel": "Chirgua"
+    },
+    {
+        "item": "Q5822558",
+        "itemLabel": "El Morro (Mérida)"
+    },
+    {
+        "item": "Q5964834",
+        "itemLabel": "La Piedra (Venezuela)"
+    },
+    {
+        "item": "Q5969375",
+        "itemLabel": "Lagunillas de Agua"
+    },
+    {
+        "item": "Q5979869",
+        "itemLabel": "Los Jovitos"
+    },
+    {
+        "item": "Q6058913",
+        "itemLabel": "Palito Blanco Cabimas"
+    },
+    {
+        "item": "Q6058992",
+        "itemLabel": "Palmarito (Mérida)"
+    },
+    {
+        "item": "Q6065812",
+        "itemLabel": "Paso El Caballo"
+    },
+    {
+        "item": "Q6090936",
+        "itemLabel": "Pueblo Nuevo (Baralt)"
+    },
+    {
+        "item": "Q6092945",
+        "itemLabel": "Punta Gorda (Venezuela)"
+    },
+    {
+        "item": "Q6092960",
+        "itemLabel": "Punta Iguana"
+    },
+    {
+        "item": "Q6173985",
+        "itemLabel": "Área metropolitana de Maracay"
+    },
+    {
+        "item": "Q6174030",
+        "itemLabel": "Área metropolitana de San Cristóbal"
+    },
+    {
+        "item": "Q11697496",
+        "itemLabel": "Pampán"
+    },
+    {
+        "item": "Q9060606",
+        "itemLabel": "Playa Caribe"
+    },
+    {
+        "item": "Q9064301",
+        "itemLabel": "Pueblo Nuevo de la Sierra"
+    },
+    {
+        "item": "Q6462978",
+        "itemLabel": "La Guardia (Nueva Esparta)"
+    },
+    {
+        "item": "Q17633266",
+        "itemLabel": "Gran Barcelona"
+    },
+    {
+        "item": "Q10319806",
+        "itemLabel": "Los Puertos de Altagracia"
+    },
+    {
+        "item": "Q10394768",
+        "itemLabel": "Yumare"
+    },
+    {
+        "item": "Q16675611",
+        "itemLabel": "Santa Ana de Trujillo"
+    },
+    {
+        "item": "Q10985039",
+        "itemLabel": "Santa Apolonia (Mérida)"
+    },
+    {
+        "item": "Q8347407",
+        "itemLabel": "Cocorote"
+    },
+    {
+        "item": "Q8960935",
+        "itemLabel": "Farriar"
+    },
+    {
+        "item": "Q19406793",
+        "itemLabel": "Cantarrana"
+    },
+    {
+        "item": "Q22340715",
+        "itemLabel": "Espino"
+    },
+    {
+        "item": "Q19397549",
+        "itemLabel": "El Peñón"
+    },
+    {
+        "item": "Q17986595",
+        "itemLabel": "Borotá (Coloncito)"
+    },
+    {
+        "item": "Q16488392",
+        "itemLabel": "Altagracia"
+    },
+    {
+        "item": "Q18360381",
+        "itemLabel": "Tacarigua de Mamporal"
+    },
+    {
+        "item": "Q16623407",
+        "itemLabel": "Punta de Leiva"
+    },
+    {
+        "item": "Q19406808",
+        "itemLabel": "El Tacal"
+    },
+    {
+        "item": "Q11683998",
+        "itemLabel": "Isnotú"
+    },
+    {
+        "item": "Q17162646",
+        "itemLabel": "San Joaquin de la Vega"
+    },
+    {
+        "item": "Q25406881",
+        "itemLabel": "Q25406881"
+    },
+    {
+        "item": "Q25406374",
+        "itemLabel": "Boca de Pozo"
+    },
+    {
+        "item": "Q22704038",
+        "itemLabel": "Santa Rita de Manapire"
+    },
+    {
+        "item": "Q16300999",
+        "itemLabel": "Caja Seca"
+    },
+    {
+        "item": "Q16623409",
+        "itemLabel": "Punta de Piedra"
+    },
+    {
+        "item": "Q16637520",
+        "itemLabel": "Tacalito"
+    },
+    {
+        "item": "Q19366430",
+        "itemLabel": "Área metropolitana de Cumaná"
+    },
+    {
+        "item": "Q27987662",
+        "itemLabel": "Peribeca"
+    },
+    {
+        "item": "Q17624701",
+        "itemLabel": "Cayetano Redondo Moreno"
+    },
+    {
+        "item": "Q18643884",
+        "itemLabel": "Birongo"
+    },
+    {
+        "item": "Q29982367",
+        "itemLabel": "Santa Inés (Lara)"
+    },
+    {
+        "item": "Q37885967",
+        "itemLabel": "Q37885967"
+    },
+    {
+        "item": "Q24306685",
+        "itemLabel": "San José de Areocuar"
+    },
+    {
+        "item": "Q3218245",
+        "itemLabel": "Q3218245"
+    },
+    {
+        "item": "Q2937176",
+        "itemLabel": "Palmira"
+    },
+    {
+        "item": "Q3293699",
+        "itemLabel": "Maripa"
+    },
+    {
+        "item": "Q3118721",
+        "itemLabel": "Guanaguana"
+    },
+    {
+        "item": "Q5351162",
+        "itemLabel": "El Dorado"
+    },
+    {
+        "item": "Q3021647",
+        "itemLabel": "Delicias"
+    },
+    {
+        "item": "Q5796766",
+        "itemLabel": "Puerto Escondido"
+    },
+    {
+        "item": "Q5813054",
+        "itemLabel": "San Félix"
+    },
+    {
+        "item": "Q6464710",
+        "itemLabel": "Q6464710"
+    },
+    {
+        "item": "Q5671176",
+        "itemLabel": "Altos Mirandinos"
+    },
+    {
+        "item": "Q596781",
+        "itemLabel": "San Francisco de Yare"
+    },
+    {
+        "item": "Q5821154",
+        "itemLabel": "El Calvario (Venezuela)"
+    },
+    {
+        "item": "Q5822083",
+        "itemLabel": "El Hato de Las Pérez"
+    },
+    {
+        "item": "Q5822722",
+        "itemLabel": "El Pao (Bolívar)"
+    },
+    {
+        "item": "Q5851065",
+        "itemLabel": "La Mulera"
+    },
+    {
+        "item": "Q5870414",
+        "itemLabel": "Fuentidueño"
+    },
+    {
+        "item": "Q6063367",
+        "itemLabel": "Parroquia Chacopata"
+    },
+    {
+        "item": "Q6118742",
+        "itemLabel": "San Francisco (Mocotíes)"
+    },
+    {
+        "item": "Q6120254",
+        "itemLabel": "Santa Apolonia (Trujillo)"
+    },
+    {
+        "item": "Q6120578",
+        "itemLabel": "Santa María de Heras"
+    },
+    {
+        "item": "Q7258564",
+        "itemLabel": "Q7258564"
+    },
+    {
+        "item": "Q6138804",
+        "itemLabel": "Tapipa"
+    },
+    {
+        "item": "Q6173790",
+        "itemLabel": "Área Metropolitana de Barquisimeto"
+    },
+    {
+        "item": "Q6173819",
+        "itemLabel": "Área Metropolitana de Valencia / Gran Tacarigua (Venezuela)"
+    },
+    {
+        "item": "Q7673675",
+        "itemLabel": "Q7673675"
+    },
+    {
+        "item": "Q7853656",
+        "itemLabel": "Q7853656"
+    },
+    {
+        "item": "Q6725843",
+        "itemLabel": "Macuro"
+    },
+    {
+        "item": "Q6119740",
+        "itemLabel": "San Tomé"
+    },
+    {
+        "item": "Q2828298",
+        "itemLabel": "Área metropolitana de Mérida (Venezuela)"
+    },
+    {
+        "item": "Q525112",
+        "itemLabel": "La Fría"
+    },
+    {
+        "item": "Q6117379",
+        "itemLabel": "Salmerón"
+    },
+    {
+        "item": "Q5665904",
+        "itemLabel": "Tacarigua de la Laguna"
+    },
+    {
+        "item": "Q5702234",
+        "itemLabel": "Araguabisi"
+    },
+    {
+        "item": "Q3134438",
+        "itemLabel": "Pregonero"
+    },
+    {
+        "item": "Q5794883",
+        "itemLabel": "Curarigua"
+    },
+    {
+        "item": "Q5822360",
+        "itemLabel": "El Maco"
+    },
+    {
+        "item": "Q5848300",
+        "itemLabel": "Escuque"
+    },
+    {
+        "item": "Q8247238",
+        "itemLabel": "Betijoque"
+    },
+    {
+        "item": "Q5964723",
+        "itemLabel": "La Paz (Zulia)"
+    },
+    {
+        "item": "Q6063634",
+        "itemLabel": "Parroquia Urimare"
+    },
+    {
+        "item": "Q6114879",
+        "itemLabel": "Río Bobo"
+    },
+    {
+        "item": "Q6118798",
+        "itemLabel": "San Francisco de Wayo"
+    },
+    {
+        "item": "Q6132575",
+        "itemLabel": "Soro (Sucre)"
+    },
+    {
+        "item": "Q6148131",
+        "itemLabel": "Tolosa Santa Rita"
+    },
+    {
+        "item": "Q6174059",
+        "itemLabel": "Área metropolitana de Valera"
+    },
+    {
+        "item": "Q6816754",
+        "itemLabel": "Mendoza del Valle del Momboy"
+    },
+    {
+        "item": "Q10569838",
+        "itemLabel": "Los Cortijos"
+    },
+    {
+        "item": "Q6139148",
+        "itemLabel": "Tasajeras"
+    },
+    {
+        "item": "Q10271130",
+        "itemLabel": "El Cobre"
+    },
+    {
+        "item": "Q8204791",
+        "itemLabel": "Aroa"
+    },
+    {
+        "item": "Q2861319",
+        "itemLabel": "Arismendi"
+    },
+    {
+        "item": "Q5964885",
+        "itemLabel": "La Playa"
+    },
+    {
+        "item": "Q5703981",
+        "itemLabel": "Arichuna"
+    },
+    {
+        "item": "Q5779953",
+        "itemLabel": "Complejo de Refinería El Palito"
+    },
+    {
+        "item": "Q5821833",
+        "itemLabel": "El Empedrado (Lara)"
+    },
+    {
+        "item": "Q3211753",
+        "itemLabel": "Paraguachí"
+    },
+    {
+        "item": "Q5958702",
+        "itemLabel": "Kavanayen"
+    },
+    {
+        "item": "Q5964963",
+        "itemLabel": "La Puerta (Trujillo)"
+    },
+    {
+        "item": "Q5970795",
+        "itemLabel": "Las Tunitas"
+    },
+    {
+        "item": "Q5979542",
+        "itemLabel": "Los Chucos"
+    },
+    {
+        "item": "Q5979704",
+        "itemLabel": "Los Fermines"
+    },
+    {
+        "item": "Q9660066",
+        "itemLabel": "Boca del Río"
+    },
+    {
+        "item": "Q6058978",
+        "itemLabel": "Palmarejo"
+    },
+    {
+        "item": "Q3471597",
+        "itemLabel": "San Pedro de Coche"
+    },
+    {
+        "item": "Q6119469",
+        "itemLabel": "San Miguel del Batey"
+    },
+    {
+        "item": "Q6119500",
+        "itemLabel": "San Pablo (Yaracuy)"
+    },
+    {
+        "item": "Q6120336",
+        "itemLabel": "Santa Cruz (Venezuela)"
+    },
+    {
+        "item": "Q6137876",
+        "itemLabel": "Tacarigua (Zulia)"
+    },
+    {
+        "item": "Q6159215",
+        "itemLabel": "Valle del Espíritu Santo"
+    },
+    {
+        "item": "Q6173983",
+        "itemLabel": "Área metropolitana de Maracaibo"
+    },
+    {
+        "item": "Q6174116",
+        "itemLabel": "Áreas Metropolitanas del Orituco"
+    },
+    {
+        "item": "Q6402317",
+        "itemLabel": "Campo de Carabobo"
+    },
+    {
+        "item": "Q14229009",
+        "itemLabel": "Q14229009"
+    },
+    {
+        "item": "Q6157412",
+        "itemLabel": "Urica"
+    },
+    {
+        "item": "Q15077656",
+        "itemLabel": "Q15077656"
+    },
+    {
+        "item": "Q10918874",
+        "itemLabel": "Guanoco"
+    },
+    {
+        "item": "Q11168979",
+        "itemLabel": "Región de Acequias"
+    },
+    {
+        "item": "Q3118818",
+        "itemLabel": "Guasipati"
+    },
+    {
+        "item": "Q5770712",
+        "itemLabel": "Ciudad Sucre"
+    },
+    {
+        "item": "Q5862059",
+        "itemLabel": "Gran Caracas"
+    },
+    {
+        "item": "Q5940808",
+        "itemLabel": "Laguna de Tacarigua"
+    },
+    {
+        "item": "Q5964350",
+        "itemLabel": "La Mesa Cabimas"
+    },
+    {
+        "item": "Q5970460",
+        "itemLabel": "Las Guevaras (Nueva Esparta)"
+    },
+    {
+        "item": "Q6037059",
+        "itemLabel": "Nabasanuka"
+    },
+    {
+        "item": "Q6058837",
+        "itemLabel": "Palenque (Venezuela)"
+    },
+    {
+        "item": "Q6059109",
+        "itemLabel": "Palo Seco (Venezuela)"
+    },
+    {
+        "item": "Q6117414",
+        "itemLabel": "Salom (Yaracuy)"
+    },
+    {
+        "item": "Q6118807",
+        "itemLabel": "San Félix (Venezuela)"
+    },
+    {
+        "item": "Q6119350",
+        "itemLabel": "San Martín de Turumbán"
+    },
+    {
+        "item": "Q6138773",
+        "itemLabel": "Taparito"
+    },
+    {
+        "item": "Q6148383",
+        "itemLabel": "Tomoporo"
+    },
+    {
+        "item": "Q16304737",
+        "itemLabel": "Q16304737"
+    },
+    {
+        "item": "Q9064318",
+        "itemLabel": "Pueblo de Potosí"
+    },
+    {
+        "item": "Q9072438",
+        "itemLabel": "Sabana de Parra"
+    },
+    {
+        "item": "Q16508218",
+        "itemLabel": "Q16508218"
+    },
+    {
+        "item": "Q16508986",
+        "itemLabel": "Q16508986"
+    },
+    {
+        "item": "Q17629475",
+        "itemLabel": "Santa Fe"
+    },
+    {
+        "item": "Q16560016",
+        "itemLabel": "El Nula"
+    },
+    {
+        "item": "Q5742525",
+        "itemLabel": "Campamento Canaima"
+    },
+    {
+        "item": "Q5752712",
+        "itemLabel": "Carmen de Uria"
+    }
+]

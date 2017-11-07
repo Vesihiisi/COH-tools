@@ -183,14 +183,24 @@ def q_from_wikipedia(language, page_title):
     """
     Get the ID of the WD item linked to a wp page.
 
-    If the page has no item and is in the article
+    If the page exists, has no item and is in the article
     namespace, create an item for it.
     """
+    # various cleanup
     if page_title.startswith("[[") and page_title.endswith("]]"):
-        page_title = get_wikilinks(page_title)[0].title
-    wp_site = pywikibot.Site(language, "wikipedia")
+        internal_links = get_wikilinks(page_title)
+        if not internal_links:
+            return
+        page_title = internal_links[0].title
+
+    if isinstance(page_title, str):
+        # get_wikilinks()[0].title does not return a str
+        page_title = page_title.replace('\n', ' ')
+
     if not page_title:
         return
+
+    wp_site = pywikibot.Site(language, "wikipedia")
     page = pywikibot.Page(wp_site, page_title)
     summary = "Creating item for {} on {}wp."
     summary = summary.format(page_title, language)

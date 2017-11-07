@@ -608,8 +608,11 @@ class TestWikipedia(unittest.TestCase):
         self.assertEqual(
             utils.q_from_wikipedia("sv", "Norrala socken"), "Q10602691")
 
-    def test_q_from_wikipedia_none(self):
-        self.assertIsNone(utils.q_from_wikipedia("sv", "Användare:Vesihiisi"))
+    def test_q_from_wikipedia_not_mainspace(self):
+        self.assertIsNone(
+            utils.q_from_wikipedia("sv", "Användare:Vesihiisi"))
+
+    def test_q_from_wikipedia_missing_page(self):
         self.assertIsNone(
             utils.q_from_wikipedia("sv", "This page does not exist"))
 
@@ -630,6 +633,11 @@ class TestWikipedia(unittest.TestCase):
     def test_q_from_wikipedia_leftover_brackets_empty(self):
         wiki_page = utils.q_from_wikipedia("sv", "[[]]")
         result = None
+        self.assertEqual(wiki_page, result)
+
+    def test_q_from_wikipedia_linebreak(self):
+        wiki_page = utils.q_from_wikipedia("sv", "Norrala\nsocken")
+        result = "Q10602691"
         self.assertEqual(wiki_page, result)
 
     def test_q_from_first_wikilink(self):
