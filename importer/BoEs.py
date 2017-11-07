@@ -15,8 +15,14 @@ class BoEs(Monument):
         """
         match = None
         if self.has_non_empty_attribute("municipio"):
-            match = utils.q_from_first_wikilink("es", self.municipio)
-            if not match:
+            try_match = utils.q_from_first_wikilink("es", self.municipio)
+            link_match = utils.get_item_from_dict_by_key(
+                dict_name=self.data_files["admin"],
+                search_term=try_match,
+                search_in="item")
+            if len(link_match) == 1:
+                match = link_match[0]
+            else:
                 self.add_to_report("municipio", self.municipio, "located_adm")
         if not match:
             dep_match = utils.get_item_from_dict_by_key(
@@ -78,6 +84,7 @@ if __name__ == "__main__":
     args = importer.handle_args()
     dataset = Dataset("bo", "es", BoEs)
     dataset.data_files = {
+        "admin": "bolivia_admin.json",  # http://tinyurl.com/y7ffsgou
         "departments": "bolivia_department.json"  # http://tinyurl.com/y9oenz78
     }
     importer.main(args, dataset)
