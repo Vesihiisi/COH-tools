@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8  -*-
 import json
+import csv
 import re
 import os
 import mwparserfromhell as wparser
@@ -712,3 +713,11 @@ def package_time(date_dict):
 def package_monolingual(text, lang):
     """Package a monolingual statement in a standardised form."""
     return {"monolingual_value": text, "lang": lang}
+
+
+def get_data_from_csv_file(filename):
+    """Load data from csv file into a list."""
+    with open(filename, "r") as f_obj:
+        reader = csv.DictReader(f_obj, delimiter=',')
+        csv_data = list(reader)
+    return csv_data

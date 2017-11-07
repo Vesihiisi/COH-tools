@@ -197,8 +197,12 @@ class Uploader(object):
 
     def make_stated_in_reference(self, ref_dict):
         prop = ref_dict["source"]["prop"]
-        prop_date = ref_dict["published"]["prop"]
-        date = ref_dict["published"]["value"]
+        if ref_dict.get("published"):
+            prop_date = ref_dict["published"]["prop"]
+            date = ref_dict["published"]["value"]
+        elif ref_dict.get("retrieved"):
+            prop_date = ref_dict["retrieved"]["prop"]
+            date = ref_dict["retrieved"]["value"]
         date_item = pywikibot.WbTime(**date)
         source_item = self.wdstuff.QtoItemPage(ref_dict["source"]["value"])
         source_claim = self.wdstuff.make_simple_claim(prop, source_item)
