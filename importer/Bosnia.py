@@ -59,23 +59,6 @@ class BosniaMonument(Monument):
     def set_country(self):
         self.add_statement("country", "Q225", refs=self.source)
 
-    def set_heritage(self):
-        """
-        Set heritage.
-
-        National Monument of Bosnia and Herzegovina (Q12637954)
-        with facultative start date.
-        """
-        heritage = self.mapping["heritage"]["item"]
-        date_parsed = dateparser.parse(self.designated)
-        quals = {}
-        if date_parsed:
-            date_dict = utils.datetime_object_to_dict(date_parsed)
-            quals["start_time"] = utils.package_time(date_dict)
-
-        self.add_statement("heritage_status", heritage,
-                           quals=quals, refs=self.source)
-
     def set_is(self):
         """
         Set P31.
@@ -109,13 +92,26 @@ class BosniaMonument(Monument):
             if self.url.startswith("http"):
                 return self.url.split("?")[0]
 
-    def set_described(self):
-        """Set 'described at URL'."""
+    def set_heritage(self):
+        """
+        Set heritage.
+
+        National Monument of Bosnia and Herzegovina (Q12637954)
+        with facultative start date and
+        'described at url'.
+        """
+        heritage = self.mapping["heritage"]["item"]
         url = self.clean_url()
+        date_parsed = dateparser.parse(self.designated)
+        quals = {}
+        if date_parsed:
+            date_dict = utils.datetime_object_to_dict(date_parsed)
+            quals["start_time"] = utils.package_time(date_dict)
         if url:
-            self.add_statement("described_at_url",
-                               url,
-                               refs=self.source)
+            quals["described_at_url"] = url
+
+        self.add_statement("heritage_status", heritage,
+                           quals=quals, refs=self.source)
 
     def set_adm_location(self):
         """
@@ -208,12 +204,11 @@ class BosniaMonument(Monument):
         self.mapping = mapping
         self.create_source()
         self.set_heritage_id()
+        self.set_heritage()
         self.set_country()
         self.set_adm_location()
         self.set_coords()
         self.set_is()
-        self.set_heritage()
-        self.set_described()
         self.set_street_address()
         self.update_descriptions()
         self.update_labels()
