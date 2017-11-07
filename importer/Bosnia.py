@@ -41,8 +41,8 @@ class BosniaMonument(Monument):
         for k, v in db_row_dict.items():
             setattr(self, k.lower().strip().replace(" ", "_"), v)
         self.data_files = data_files
-        self.construct_wd_item(mapping)
         self.existing = existing
+        self.construct_wd_item(mapping)
         self.repo = repository
         self.problem_report = {}
 
@@ -186,6 +186,11 @@ class BosniaMonument(Monument):
         else:
             self.upload = False
 
+    def get_matching_existing(self):
+        wlm = self.get_statement_values("wlm_id")
+        if wlm and wlm[0] in self.existing:
+            return self.existing.get(wlm[0])
+
     def construct_wd_item(self, mapping, data_files=None):
         """
         Create the empty structure of the data object.
@@ -212,7 +217,7 @@ class BosniaMonument(Monument):
         self.set_street_address()
         self.update_descriptions()
         self.update_labels()
-        # self.set_wd_item(self.find_matching_wikidata(mapping))
+        self.set_wd_item(self.get_matching_existing())
 
 
 def generate_filenames(tablename, timestamp):
