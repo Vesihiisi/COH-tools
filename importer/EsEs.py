@@ -1,7 +1,25 @@
+r"""
+BIC monuments in Spain in Spanish.
+
+The same database holds multiple monument types incorrectly labeled as BICs
+these can be identified using the following patterns in their ids.
+
+"bic": {
+    "prop": "P808",
+    "status": "Q23712",
+    "pattern": r"(ARI|RI)-(AR|BI|MU|51|52|53|54|55|56)-\d{7}(|-000\d|-000\d\d)"
+},
+"IGCPV": {
+    "prop": "P2473",
+    "status": "Q11910247",
+    "pattern": r"\d{2}\.\d{2}\.\d{3}\-\d{3}"
+}
+"""
 from Monument import Monument, Dataset
 import importer_utils as utils
 import importer as importer
 import dateparser
+import re
 
 
 class EsEs(Monument):
@@ -12,6 +30,12 @@ class EsEs(Monument):
 
         Optionally, with start date qualifier.
         """
+        pattern = r"(ARI|RI)-(AR|BI|MU|51|52|53|54|55|56)-\d{7}(|-000\d|-000\d\d)"
+        if not re.fullmatch(pattern, self.bic):
+            self.upload = False
+            return
+
+        # it is a proper bic
         heritage = self.mapping["heritage"]["item"]
         if self.has_non_empty_attribute("fecha"):
             # 20 de febrero de 1985
