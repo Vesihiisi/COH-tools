@@ -266,7 +266,7 @@ def get_items(connection,
     if problem_reports:
         print("SAVED PROBLEM REPORTS TO {}".format(filenames['reports']))
     if skipped_uploads:
-        skipped_items_output += "\n".join(
+        skipped_items_output = "\n".join(
             format_skipped_items(skipped_uploads))
         utils.save_to_file(
             filenames['skipped'], skipped_items_output, silent=True)
