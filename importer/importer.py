@@ -289,7 +289,7 @@ def format_skipped_items(skipped_items):
     for monument in skipped_items:
         wd_item = monument.wd_item.get("wd_item")
         wlm_id = monument.monuments_all_id
-        row.append("{0} | {1}".format(wd_item, wlm_id))
+        rows.append("{0} | {1}".format(wd_item, wlm_id))
     return rows
 
 
