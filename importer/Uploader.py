@@ -276,7 +276,7 @@ class Uploader(object):
         return pywikibot.config.usernames["wikidata"]["wikidata"]
 
     def upload(self):
-        if not self.upload or self.data["upload"] is False:
+        if not self.upload or not self.data["upload"]:
             print("SKIPPING ITEM")
             return
         claims = self.data["statements"]
