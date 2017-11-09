@@ -37,6 +37,7 @@ class Monument(object):
         self.existing = existing
         self.repo = repository
         self.problem_report = {}
+        self.upload = True  # assume that upload of this monument is ok
 
     def print_wd(self):
         """Print the data object dictionary on screen."""
