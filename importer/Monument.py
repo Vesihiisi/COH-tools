@@ -624,7 +624,6 @@ class Monument(object):
     def construct_wd_item(self, mapping, data_files=None):
         """Create the empty structure of the data object."""
         self.wd_item = {}
-        self.wd_item["upload"] = True
         self.wd_item["statements"] = {}
         self.wd_item["labels"] = {}
         self.wd_item["aliases"] = {}

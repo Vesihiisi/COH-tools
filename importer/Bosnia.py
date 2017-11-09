@@ -194,7 +194,6 @@ class BosniaMonument(Monument):
         Like Monument.py but simplify mapping loading.
         """
         self.wd_item = {}
-        self.wd_item["upload"] = True
         self.wd_item["statements"] = {}
         self.wd_item["labels"] = {}
         self.wd_item["aliases"] = {}
