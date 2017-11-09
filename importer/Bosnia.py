@@ -45,6 +45,7 @@ class BosniaMonument(Monument):
         self.construct_wd_item(mapping)
         self.repo = repository
         self.problem_report = {}
+        self.upload = True
 
     def create_source(self):
         source_item = "Q42750314"
