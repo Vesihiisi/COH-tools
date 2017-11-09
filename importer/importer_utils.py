@@ -21,10 +21,11 @@ def remove_empty_dicts_from_list(list_of_dicts):
     return [i for i in list_of_dicts if i]
 
 
-def save_to_file(filename, content):
+def save_to_file(filename, content, silent=False):
     with open(filename, 'w', encoding="utf-8") as f:
         f.write(content)
-        print("SAVED FILE " + filename)
+        if not silent:
+            print("SAVED FILE " + filename)
 
 
 def json_to_file(filename, json_content, silent=False):
