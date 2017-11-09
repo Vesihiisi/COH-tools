@@ -113,6 +113,8 @@ def make_filenames(tablename, timestamp):
     utils.create_dir(REPORTING_DIR)
     filenames['reports'] = path.join(
         REPORTING_DIR, "report_{0}_{1}.json".format(tablename, timestamp))
+    filenames['skipped'] = path.join(
+        REPORTING_DIR, "skipped_{0}_{1}.json".format(tablename, timestamp))
 
     utils.create_dir(PREVIEW_DIR)
     filenames['examples'] = path.join(
@@ -208,6 +210,7 @@ def get_items(connection,
 
     matched_item_p31s = {}
     problem_reports = []
+    skipped_uploads = []
 
     wikidata_site = utils.create_site_instance("wikidata", "wikidata")
     data_files = load_data(dataset)
@@ -220,6 +223,8 @@ def get_items(connection,
         monument = dataset.monument_class(
             row, mapping, data_files, existing, wikidata_site)
         problem_report = monument.get_report()
+        if not monument.upload:
+            skipped_uploads.append(monument)
         if table:
             raw_data = "<pre>" + str(row) + "</pre>\n"
             monument_table = monument.print_wd_to_table()
@@ -260,6 +265,13 @@ def get_items(connection,
         print("\n")  # linebreak needed in case of visual feedback dots
     if problem_reports:
         print("SAVED PROBLEM REPORTS TO {}".format(filenames['reports']))
+    if skipped_uploads:
+        skipped_items_output = "\n".join(
+            format_skipped_items(skipped_uploads))
+        utils.save_to_file(
+            filenames['skipped'], skipped_items_output, silent=True)
+        print("SAVED {0} SKIPPED UPLOADS TO {1}".format(
+            len(skipped_uploads), filenames['skipped']))
     if table:
         print("SAVED TEST RESULTS TO {}".format(filenames['examples']))
     if list_matches:
@@ -270,6 +282,15 @@ def get_items(connection,
             format_matched_p31s_rows(matched_item_p31s))
         matched_items_output += "\n|}"
         utils.save_to_file(filenames['matches'], matched_items_output)
+
+
+def format_skipped_items(skipped_items):
+    rows = []
+    for monument in skipped_items:
+        wd_item = monument.wd_item.get("wd-item")
+        wlm_id = monument.monuments_all_id
+        rows.append("{0} | {1}".format(wd_item, wlm_id))
+    return rows
 
 
 def format_matched_p31s_rows(matched_item_p31s):
