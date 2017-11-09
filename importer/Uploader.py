@@ -276,7 +276,7 @@ class Uploader(object):
         return pywikibot.config.usernames["wikidata"]["wikidata"]
 
     def upload(self):
-        if self.data["upload"] is False:
+        if not self.upload:
             print("SKIPPING ITEM")
             return
         claims = self.data["statements"]
@@ -295,6 +295,9 @@ class Uploader(object):
         and if it doesn't edit it. Otherwise, create a new WD item.
         In sandbox mode, all edits are done on the WD Sandbox item.
         """
+        if not self.upload:
+            self.wd_item = None
+            self.wd_item_q = None
         if self.live:
             if self.data["wd-item"] is None:
                 self.wd_item = self.create_new_item(self.log)
@@ -348,6 +351,7 @@ class Uploader(object):
         print("---------------")
         if log is not None:
             self.log = log
+        self.upload = monument_object.upload
         self.data = monument_object.wd_item
         self.wdstuff = WDS(self.repo, edit_summary=self.summary, no_wdss=True)
         self.set_wd_item()

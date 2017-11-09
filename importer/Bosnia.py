@@ -45,6 +45,7 @@ class BosniaMonument(Monument):
         self.construct_wd_item(mapping)
         self.repo = repository
         self.problem_report = {}
+        self.upload = True
 
     def create_source(self):
         source_item = "Q42750314"
@@ -194,7 +195,6 @@ class BosniaMonument(Monument):
         Like Monument.py but simplify mapping loading.
         """
         self.wd_item = {}
-        self.wd_item["upload"] = True
         self.wd_item["statements"] = {}
         self.wd_item["labels"] = {}
         self.wd_item["aliases"] = {}
