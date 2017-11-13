@@ -298,7 +298,7 @@ class Uploader(object):
         if not self.allow_upload:
             self.wd_item = None
             self.wd_item_q = None
-        if self.live:
+        elif self.live:
             if self.data["wd-item"] is None:
                 self.wd_item = self.create_new_item(self.log)
                 self.wd_item_q = self.wd_item.getID()
