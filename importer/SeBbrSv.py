@@ -1,5 +1,6 @@
-from Monument import Monument
+from Monument import Monument, Dataset
 import importer_utils as utils
+import importer as importer
 import requests
 from os import path
 
@@ -407,3 +408,13 @@ class SeBbrSv(Monument):
         self.set_function()
         self.set_wd_item(self.find_matching_wikidata(mapping))
         self.check_wd_item()
+
+
+if __name__ == "__main__":
+    """Point of entrance for importer."""
+    args = importer.handle_args()
+    dataset = Dataset("se-bbr", "sv", SeBbrSv)
+    dataset.data_files = {
+        "functions": "se-bbr_(sv)_functions.json",
+        "settlements": "sweden_settlements.json"}
+    importer.main(args, dataset)

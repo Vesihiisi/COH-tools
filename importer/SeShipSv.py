@@ -1,5 +1,6 @@
-from Monument import Monument
+from Monument import Monument, Dataset
 import importer_utils as utils
+import importer as importer
 
 
 class SeShipSv(Monument):
@@ -163,3 +164,12 @@ class SeShipSv(Monument):
         self.set_homeport()
         self.set_dimensions()
         self.exists_with_prop(mapping)
+
+
+if __name__ == "__main__":
+    """Command line entry point for importer."""
+    args = importer.handle_args()
+    dataset = Dataset("se-ship", "sv", SeShipSv)
+    dataset.data_files = {
+        "functions": "se-ship_(sv)_functions.json"}
+    importer.main(args, dataset)

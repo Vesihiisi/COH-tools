@@ -1,5 +1,6 @@
-from Monument import Monument
+from Monument import Monument, Dataset
 import importer_utils as utils
+import importer as importer
 
 
 class PlPl(Monument):
@@ -80,3 +81,13 @@ class PlPl(Monument):
         self.set_location()
         self.set_address()
         self.exists_with_prop(mapping)
+
+
+if __name__ == "__main__":
+    """Command line entry point for importer."""
+    args = importer.handle_args()
+    dataset = Dataset("pl", "pl", PlPl)
+    dataset.data_files = {
+        "settlements": "poland_settlements.json"
+    }
+    importer.main(args, dataset)

@@ -139,7 +139,8 @@ if __name__ == "__main__":
     dataset = Dataset("ee", "et", EeEt)
     dataset.data_files = {
         "municipalities": "estonia_municipalities.json",
-        "settlements": "estonia_settlements.json"
+        "settlements": "estonia_settlements.json",
+        "counties": "estonia_counties.json"
     }
     dataset.lookup_downloads = {
         "heritage_types": "ee (et)/types"

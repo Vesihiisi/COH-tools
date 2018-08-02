@@ -1,5 +1,6 @@
-from Monument import Monument
+from Monument import Monument, Dataset
 import importer_utils as utils
+import importer as importer
 
 
 class PtPt(Monument):
@@ -37,3 +38,10 @@ class PtPt(Monument):
         # self.set_location()
         self.exists_with_prop(mapping)
         # self.print_wd()
+
+
+if __name__ == "__main__":
+    """Point of entrance for importer."""
+    args = importer.handle_args()
+    dataset = Dataset("pt", "pt", PtPt)
+    importer.main(args, dataset)

@@ -1,5 +1,6 @@
-from Monument import Monument
+from Monument import Monument, Dataset
 import importer_utils as utils
+import importer as importer
 
 
 MAPPING_DIR = "mappings"
@@ -138,8 +139,8 @@ class AtDe(Monument):
             if len(match) == 1:
                 self.add_statement("located_adm", match[0])
             else:
-                self.add_to_report("gemeindekennzahl",
-                    municip_code, "located_adm")     
+                self.add_to_report(
+                    "gemeindekennzahl", municip_code, "located_adm")
 
     def exists_with_monument_article(self, language):
         return super().exists_with_monument_article("de", "artikel")
@@ -163,3 +164,12 @@ class AtDe(Monument):
         self.set_coords(("lat", "lon"))
         self.set_commonscat()
         self.set_wd_item(self.find_matching_wikidata(mapping))
+
+
+if __name__ == "__main__":
+    """Point of entrance for importer."""
+    args = importer.handle_args()
+    dataset = Dataset("at", "de", AtDe)
+    dataset.data_files = {"municipalities": "austria_municipalities.json"}
+    dataset.lookup_downloads = {"types": "at_(de)/types"}
+    importer.main(args, dataset)

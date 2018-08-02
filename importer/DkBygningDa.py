@@ -1,5 +1,6 @@
-from Monument import Monument
+from Monument import Monument, Dataset
 import importer_utils as utils
+import importer as importer
 
 
 class DkBygningDa(Monument):
@@ -83,3 +84,11 @@ class DkBygningDa(Monument):
         self.set_inception()
         self.exists_with_prop(mapping)
         self.print_wd()
+
+
+if __name__ == "__main__":
+    """Point of entrance for importer."""
+    args = importer.handle_args()
+    dataset = Dataset("dk-bygninger", "da", DkBygningDa)
+    dataset.subclass_downloads = {"settlement": "Q486972"}
+    importer.main(args, dataset)

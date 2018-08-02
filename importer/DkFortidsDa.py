@@ -1,5 +1,6 @@
-from Monument import Monument
+from Monument import Monument, Dataset
 import importer_utils as utils
+import importer as importer
 
 
 class DkFortidsDa(Monument):
@@ -76,7 +77,6 @@ class DkFortidsDa(Monument):
                                 for x in table
                                 if x == self.type]
                 special_type = special_type[0][0]
-                ref = self.wlm_source
                 self.substitute_statement("is", special_type)
             except IndexError:
                 self.add_to_report("type", self.type)
@@ -113,3 +113,13 @@ class DkFortidsDa(Monument):
         self.set_type()
         self.set_id()
         self.set_wd_item(self.find_matching_wikidata(mapping))
+
+
+if __name__ == "__main__":
+    """Point of entrance for importer."""
+    args = importer.handle_args()
+    dataset = Dataset("dk-fortidsminder", "da", DkFortidsDa)
+    dataset.data_files = {
+        "types": "dk-fortidsminder_(da)_types.json",
+        "municipalities": "denmark_municipalities.json"}
+    importer.main(args, dataset)

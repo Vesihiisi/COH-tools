@@ -1,5 +1,6 @@
-from Monument import Monument
+from Monument import Monument, Dataset
 import importer_utils as utils
+import importer as importer
 
 
 class SeArbetslSv(Monument):
@@ -154,3 +155,14 @@ class SeArbetslSv(Monument):
         self.set_coords(("lat", "lon"))
         self.set_wd_item(self.find_matching_wikidata(mapping))
         # self.print_wd()
+
+
+if __name__ == "__main__":
+    """Point of entrance for importer."""
+    args = importer.handle_args()
+    dataset = Dataset("se-arbetsl", "sv", SeArbetslSv)
+    dataset.data_files = {
+        "municipalities": "sweden_municipalities.json",
+        "types": "se-arbetsl_(sv)_types.json",
+        "settlements": "sweden_settlements.json"}
+    importer.main(args, dataset)

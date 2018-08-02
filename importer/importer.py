@@ -310,8 +310,8 @@ def format_matched_p31s_rows(matched_item_p31s):
     return rows
 
 
-def main(arguments, dataset=None):
-    """Process the arguments and fetch data according to them"""
+def main(arguments, dataset):
+    """Process the arguments and fetch data for the provided dataset."""
     arguments = vars(arguments)
     if on_forge():
         arguments["host"] = "tools-db"
@@ -326,92 +326,7 @@ def main(arguments, dataset=None):
     table = arguments["table"]
     list_matches = arguments["list_matches"]
 
-    dataset = dataset or make_dataset(
-        arguments["country"], arguments["language"])
     get_items(connection, dataset, upload, short, offset, table, list_matches)
-
-
-def make_dataset(country, language):
-    """
-    Construct a dataset instance for the provided country and language codes.
-
-    Only kept for backwards-compatibility with older monument classes.
-    """
-    from Monument import Dataset
-    from CzCs import CzCs
-    from AtDe import AtDe
-    from DkBygningDa import DkBygningDa
-    from DkFortidsDa import DkFortidsDa
-    from EeEt import EeEt
-    from HuHu import HuHu
-    from IeEn import IeEn
-    from NoNo import NoNo
-    from PlPl import PlPl
-    from PtPt import PtPt
-    from SeArbetslSv import SeArbetslSv
-    from SeBbrSv import SeBbrSv
-    from SeShipSv import SeShipSv
-    from ZaEn import ZaEn
-    SPECIFIC_TABLES = {
-        "monuments_se-ship_(sv)": {
-            "class": SeShipSv,
-            "data_files": {
-                "functions": "se-ship_(sv)_functions.json"}},
-        "monuments_cz_(cs)": {"class": CzCs, "data_files": {}},
-        "monuments_hu_(hu)": {"class": HuHu, "data_files": {}},
-        "monuments_pt_(pt)": {"class": PtPt, "data_files": {}},
-        "monuments_ie_(en)": {
-            "class": IeEn,
-            "data_files": {"counties": "ireland_counties.json"}},
-        "monuments_za_(en)": {"class": ZaEn, "data_files": {}},
-        "monuments_at_(de)": {
-            "class": AtDe,
-            "data_files": {
-                "municipalities": "austria_municipalities.json"},
-            "lookup_downloads": {
-                "types": "at_(de)/types"}},
-        "monuments_dk-bygninger_(da)": {
-            "class": DkBygningDa,
-            "data_files": {},
-            "subclass_downloads": {"settlement": "Q486972"}},
-        "monuments_pl_(pl)": {
-            "class": PlPl,
-            "data_files": {"settlements": "poland_settlements.json"}},
-        "monuments_dk-fortidsminder_(da)": {
-            "class": DkFortidsDa,
-            "data_files": {
-                "types": "dk-fortidsminder_(da)_types.json",
-                "municipalities": "denmark_municipalities.json"}},
-        "monuments_no_(no)": {"class": NoNo, "data_files": {}},
-        "monuments_se-bbr_(sv)": {
-            "class": SeBbrSv,
-            "data_files": {
-                "functions": "se-bbr_(sv)_functions.json",
-                "settlements": "sweden_settlements.json"}},
-        "monuments_ee_(et)": {
-            "class": EeEt,
-            "data_files": {"counties": "estonia_counties.json"}},
-        "monuments_se-arbetsl_(sv)": {
-            "class": SeArbetslSv,
-            "data_files": {
-                "municipalities": "sweden_municipalities.json",
-                "types": "se-arbetsl_(sv)_types.json",
-                "settlements": "sweden_settlements.json"}}
-        }
-    specific_table_name = utils.get_specific_table_name(country, language)
-    specific_table = None
-    if specific_table_name in SPECIFIC_TABLES:
-        specific_table = SPECIFIC_TABLES[specific_table_name]
-    else:
-        print("No class defined for {0}.".format(specific_table_name))
-        exit()
-
-    dataset = Dataset(country, language, specific_table["class"])
-    dataset.data_files = specific_table.get("data_files")
-    dataset.lookup_downloads = specific_table.get("lookup_downloads")
-    dataset.subclass_downloads = specific_table.get("subclass_downloads")
-
-    return dataset
 
 
 def get_db_credentials():
@@ -445,8 +360,6 @@ def handle_args(*args):
         --db Name of the database to connect to.
         --user Username to connect to the database.
         --password Password to connect to the database.
-        --language Language code of the table to fetch, eg. "sv".
-        --country Country of the table to fetch, eg. "se-fornmin".
         --upload Whether to upload the processed items. Two options:
             --upload sandbox Upload to the Wikidata sandbox item.
             --upload live Live upload to real Wikidata items.
@@ -460,8 +373,6 @@ def handle_args(*args):
         parser.add_argument("--db", default="wlm")
         parser.add_argument("--user", default="root")
         parser.add_argument("--password", default="")
-    parser.add_argument("--language", default="sv")
-    parser.add_argument("--country", default="se-ship")
     parser.add_argument("--upload", action='store')
     parser.add_argument("--short",
                         const=DEFAULT_SHORT,

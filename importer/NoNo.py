@@ -1,5 +1,6 @@
-from Monument import Monument
+from Monument import Monument, Dataset
 import importer_utils as utils
+import importer as importer
 
 
 class NoNo(Monument):
@@ -51,3 +52,10 @@ class NoNo(Monument):
         # self.set_inception()
         self.exists_with_prop(mapping)
         self.print_wd()
+
+
+if __name__ == "__main__":
+    """Command line entry point for importer."""
+    args = importer.handle_args()
+    dataset = Dataset("no", "no", NoNo)
+    importer.main(args, dataset)
