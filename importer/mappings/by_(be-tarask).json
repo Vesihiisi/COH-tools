@@ -1,0 +1,21 @@
+{
+    "country": {
+        "item": "Q184",
+        "name": "Belarus"
+    },
+    "country_code": "by",
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "Q2079150",
+        "name": "cultural property of Belarus"
+    },
+    "language": "be-tarask",
+    "table_name": "by",
+    "unique": {
+        "comment": "cultural properties of Belarus reference number ",
+        "property": "P632"
+    }
+}
