@@ -1,0 +1,252 @@
+[
+    {
+        "iso": "US-LA",
+        "item": "Q1588",
+        "itemLabel": "Louisiana"
+    },
+    {
+        "iso": "US-CT",
+        "item": "Q779",
+        "itemLabel": "Connecticut"
+    },
+    {
+        "iso": "US-HI",
+        "item": "Q782",
+        "itemLabel": "Hawaii"
+    },
+    {
+        "iso": "US-MT",
+        "item": "Q1212",
+        "itemLabel": "Montana"
+    },
+    {
+        "iso": "US-ID",
+        "item": "Q1221",
+        "itemLabel": "Idaho"
+    },
+    {
+        "iso": "US-NV",
+        "item": "Q1227",
+        "itemLabel": "Nevada"
+    },
+    {
+        "iso": "US-VA",
+        "item": "Q1370",
+        "itemLabel": "Virginia"
+    },
+    {
+        "iso": "US-WV",
+        "item": "Q1371",
+        "itemLabel": "West Virginia"
+    },
+    {
+        "iso": "US-SC",
+        "item": "Q1456",
+        "itemLabel": "South Carolina"
+    },
+    {
+        "iso": "US-NM",
+        "item": "Q1522",
+        "itemLabel": "New Mexico"
+    },
+    {
+        "iso": "US-TN",
+        "item": "Q1509",
+        "itemLabel": "Tennessee"
+    },
+    {
+        "iso": "US-MN",
+        "item": "Q1527",
+        "itemLabel": "Minnesota"
+    },
+    {
+        "iso": "US-NE",
+        "item": "Q1553",
+        "itemLabel": "Nebraska"
+    },
+    {
+        "iso": "US-MO",
+        "item": "Q1581",
+        "itemLabel": "Missouri"
+    },
+    {
+        "iso": "US-OK",
+        "item": "Q1649",
+        "itemLabel": "Oklahoma"
+    },
+    {
+        "iso": "US-AL",
+        "item": "Q173",
+        "itemLabel": "Alabama"
+    },
+    {
+        "iso": "US-WA",
+        "item": "Q1223",
+        "itemLabel": "Washington"
+    },
+    {
+        "iso": "US-OR",
+        "item": "Q824",
+        "itemLabel": "Oregon"
+    },
+    {
+        "iso": "US-GA",
+        "item": "Q1428",
+        "itemLabel": "Georgia"
+    },
+    {
+        "iso": "US-MI",
+        "item": "Q1166",
+        "itemLabel": "Michigan"
+    },
+    {
+        "iso": "US-WY",
+        "item": "Q1214",
+        "itemLabel": "Wyoming"
+    },
+    {
+        "iso": "US-NC",
+        "item": "Q1454",
+        "itemLabel": "North Carolina"
+    },
+    {
+        "iso": "US-IN",
+        "item": "Q1415",
+        "itemLabel": "Indiana"
+    },
+    {
+        "iso": "US-FL",
+        "item": "Q812",
+        "itemLabel": "Florida"
+    },
+    {
+        "iso": "US-TX",
+        "item": "Q1439",
+        "itemLabel": "Texas"
+    },
+    {
+        "iso": "US-MD",
+        "item": "Q1391",
+        "itemLabel": "Maryland"
+    },
+    {
+        "iso": "US-AZ",
+        "item": "Q816",
+        "itemLabel": "Arizona"
+    },
+    {
+        "iso": "US-NH",
+        "item": "Q759",
+        "itemLabel": "New Hampshire"
+    },
+    {
+        "iso": "US-MA",
+        "item": "Q771",
+        "itemLabel": "Massachusetts"
+    },
+    {
+        "iso": "US-NJ",
+        "item": "Q1408",
+        "itemLabel": "New Jersey"
+    },
+    {
+        "iso": "US-CA",
+        "item": "Q99",
+        "itemLabel": "California"
+    },
+    {
+        "iso": "US-KS",
+        "item": "Q1558",
+        "itemLabel": "Kansas"
+    },
+    {
+        "iso": "US-WI",
+        "item": "Q1537",
+        "itemLabel": "Wisconsin"
+    },
+    {
+        "iso": "US-UT",
+        "item": "Q829",
+        "itemLabel": "Utah"
+    },
+    {
+        "iso": "US-MS",
+        "item": "Q1494",
+        "itemLabel": "Mississippi"
+    },
+    {
+        "iso": "US-IA",
+        "item": "Q1546",
+        "itemLabel": "Iowa"
+    },
+    {
+        "iso": "US-DE",
+        "item": "Q1393",
+        "itemLabel": "Delaware"
+    },
+    {
+        "iso": "US-AK",
+        "item": "Q797",
+        "itemLabel": "Alaska"
+    },
+    {
+        "iso": "US-KY",
+        "item": "Q1603",
+        "itemLabel": "Kentucky"
+    },
+    {
+        "iso": "US-OH",
+        "item": "Q1397",
+        "itemLabel": "Ohio"
+    },
+    {
+        "iso": "US-PA",
+        "item": "Q1400",
+        "itemLabel": "Pennsylvania"
+    },
+    {
+        "iso": "US-CO",
+        "item": "Q1261",
+        "itemLabel": "Colorado"
+    },
+    {
+        "iso": "US-VT",
+        "item": "Q16551",
+        "itemLabel": "Vermont"
+    },
+    {
+        "iso": "US-RI",
+        "item": "Q1387",
+        "itemLabel": "Rhode Island"
+    },
+    {
+        "iso": "US-IL",
+        "item": "Q1204",
+        "itemLabel": "Illinois"
+    },
+    {
+        "iso": "US-NY",
+        "item": "Q1384",
+        "itemLabel": "New York"
+    },
+    {
+        "iso": "US-ME",
+        "item": "Q724",
+        "itemLabel": "Maine"
+    },
+    {
+        "iso": "US-AR",
+        "item": "Q1612",
+        "itemLabel": "Arkansas"
+    },
+    {
+        "iso": "US-ND",
+        "item": "Q1207",
+        "itemLabel": "North Dakota"
+    },
+    {
+        "iso": "US-SD",
+        "item": "Q1211",
+        "itemLabel": "South Dakota"
+    }
+]

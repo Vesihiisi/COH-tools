@@ -1,0 +1,21 @@
+{
+    "country": {
+        "item": "Q30",
+        "name": "US"
+    },
+    "country_code": "us",
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "Q19558910",
+        "name": "place listed on the National Register of Historic Places"
+    },
+    "language": "en",
+    "table_name": "us",
+    "unique": {
+        "comment": "NRHP reference number",
+        "property": "P649"
+    }
+}
