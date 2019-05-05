@@ -1,0 +1,21 @@
+{
+    "country": {
+        "item": "Q869",
+        "name": "Thailand"
+    },
+    "country_code": "th",
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "Q40545534",
+        "name": "cultural heritage site in Thailand"
+    },
+    "language": "th",
+    "table_name": "th",
+    "unique": {
+        "comment": "WLM ID",
+        "property": "P2186"
+    }
+}
