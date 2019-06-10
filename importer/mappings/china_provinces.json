@@ -1,0 +1,117 @@
+[
+    {
+        "iso": "CN-13",
+        "item": "Q21208",
+        "itemLabel": "Hebei"
+    },
+    {
+        "iso": "CN-62",
+        "item": "Q42392",
+        "itemLabel": "Gansu"
+    },
+    {
+        "iso": "CN-14",
+        "item": "Q46913",
+        "itemLabel": "Shanxi"
+    },
+    {
+        "iso": "CN-44",
+        "item": "Q15175",
+        "itemLabel": "Guangdong"
+    },
+    {
+        "iso": "CN-51",
+        "item": "Q19770",
+        "itemLabel": "Sichuan"
+    },
+    {
+        "iso": "CN-34",
+        "item": "Q40956",
+        "itemLabel": "Anhui"
+    },
+    {
+        "iso": "CN-37",
+        "item": "Q43407",
+        "itemLabel": "Shandong"
+    },
+    {
+        "iso": "CN-21",
+        "item": "Q43934",
+        "itemLabel": "Liaoning"
+    },
+    {
+        "iso": "CN-71",
+        "item": "Q57251",
+        "itemLabel": "Taiwan Province"
+    },
+    {
+        "iso": "CN-22",
+        "item": "Q45208",
+        "itemLabel": "Jilin"
+    },
+    {
+        "iso": "CN-32",
+        "item": "Q16963",
+        "itemLabel": "Jiangsu"
+    },
+    {
+        "iso": "CN-33",
+        "item": "Q16967",
+        "itemLabel": "Zhejiang"
+    },
+    {
+        "iso": "CN-46",
+        "item": "Q42200",
+        "itemLabel": "Hainan"
+    },
+    {
+        "iso": "CN-42",
+        "item": "Q46862",
+        "itemLabel": "Hubei"
+    },
+    {
+        "iso": "CN-36",
+        "item": "Q57052",
+        "itemLabel": "Jiangxi"
+    },
+    {
+        "iso": "CN-35",
+        "item": "Q41705",
+        "itemLabel": "Fujian"
+    },
+    {
+        "iso": "CN-53",
+        "item": "Q43194",
+        "itemLabel": "Yunnan"
+    },
+    {
+        "iso": "CN-41",
+        "item": "Q43684",
+        "itemLabel": "Henan"
+    },
+    {
+        "iso": "CN-63",
+        "item": "Q45833",
+        "itemLabel": "Qinghai"
+    },
+    {
+        "iso": "CN-61",
+        "item": "Q47974",
+        "itemLabel": "Shaanxi"
+    },
+    {
+        "iso": "CN-52",
+        "item": "Q47097",
+        "itemLabel": "Guizhou"
+    },
+    {
+        "iso": "CN-23",
+        "item": "Q19206",
+        "itemLabel": "Heilongjiang"
+    },
+    {
+        "iso": "CN-43",
+        "item": "Q45761",
+        "itemLabel": "Hunan"
+    }
+]
