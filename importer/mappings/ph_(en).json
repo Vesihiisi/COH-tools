@@ -1,0 +1,21 @@
+{
+    "country": {
+        "item": "Q928",
+        "name": "Philippines"
+    },
+    "country_code": "ph",
+    "default_is": {
+        "item": "Q2065736",
+        "name": "cultural property"
+    },
+    "heritage": {
+        "item": "Q39599172",
+        "name": "Declared Cultural Property in the Philippines"
+    },
+    "language": "en",
+    "table_name": "ph",
+    "unique": {
+        "comment": "WLM ID",
+        "property": "P2186"
+    }
+}

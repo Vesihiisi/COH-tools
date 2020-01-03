@@ -1,0 +1,326 @@
+[
+    {
+        "item": "Q3656379",
+        "itemLabel": "Davao Occidental"
+    },
+    {
+        "item": "Q13723",
+        "itemLabel": "Aklan"
+    },
+    {
+        "item": "Q13728",
+        "itemLabel": "Apayao"
+    },
+    {
+        "item": "Q13730",
+        "itemLabel": "Aurora"
+    },
+    {
+        "item": "Q13744",
+        "itemLabel": "Batangas"
+    },
+    {
+        "item": "Q13755",
+        "itemLabel": "Bulacan"
+    },
+    {
+        "item": "Q13753",
+        "itemLabel": "Bukidnon"
+    },
+    {
+        "item": "Q13763",
+        "itemLabel": "Camarines Norte"
+    },
+    {
+        "item": "Q13767",
+        "itemLabel": "Camarines Sur"
+    },
+    {
+        "item": "Q13810",
+        "itemLabel": "Guimaras"
+    },
+    {
+        "item": "Q13841",
+        "itemLabel": "Lanao del Norte"
+    },
+    {
+        "item": "Q13845",
+        "itemLabel": "Maguindanao"
+    },
+    {
+        "item": "Q13861",
+        "itemLabel": "Mountain Province"
+    },
+    {
+        "item": "Q13862",
+        "itemLabel": "Negros Occidental"
+    },
+    {
+        "item": "Q13866",
+        "itemLabel": "Nueva Vizcaya"
+    },
+    {
+        "item": "Q13864",
+        "itemLabel": "Northern Samar"
+    },
+    {
+        "item": "Q13871",
+        "itemLabel": "Pangasinan"
+    },
+    {
+        "item": "Q13872",
+        "itemLabel": "Quezon"
+    },
+    {
+        "item": "Q13874",
+        "itemLabel": "Rizal"
+    },
+    {
+        "item": "Q13873",
+        "itemLabel": "Quirino"
+    },
+    {
+        "item": "Q13875",
+        "itemLabel": "Romblon"
+    },
+    {
+        "item": "Q13844",
+        "itemLabel": "Leyte"
+    },
+    {
+        "item": "Q13826",
+        "itemLabel": "Isabela"
+    },
+    {
+        "item": "Q13876",
+        "itemLabel": "Samar"
+    },
+    {
+        "item": "Q13877",
+        "itemLabel": "Sarangani"
+    },
+    {
+        "item": "Q13759",
+        "itemLabel": "Cagayan"
+    },
+    {
+        "item": "Q13847",
+        "itemLabel": "Masbate"
+    },
+    {
+        "item": "Q13825",
+        "itemLabel": "Iloilo"
+    },
+    {
+        "item": "Q13739",
+        "itemLabel": "Bataan"
+    },
+    {
+        "item": "Q13829",
+        "itemLabel": "La Union"
+    },
+    {
+        "item": "Q13769",
+        "itemLabel": "Camiguin"
+    },
+    {
+        "item": "Q13879",
+        "itemLabel": "Siquijor"
+    },
+    {
+        "item": "Q13751",
+        "itemLabel": "Biliran"
+    },
+    {
+        "item": "Q13711",
+        "itemLabel": "Abra"
+    },
+    {
+        "item": "Q13772",
+        "itemLabel": "Capiz"
+    },
+    {
+        "item": "Q13786",
+        "itemLabel": "Cebu"
+    },
+    {
+        "item": "Q13752",
+        "itemLabel": "Bohol"
+    },
+    {
+        "item": "Q13846",
+        "itemLabel": "Marinduque"
+    },
+    {
+        "item": "Q13813",
+        "itemLabel": "Ilocos Norte"
+    },
+    {
+        "item": "Q13827",
+        "itemLabel": "Kalinga"
+    },
+    {
+        "item": "Q13807",
+        "itemLabel": "Dinagat Islands"
+    },
+    {
+        "item": "Q13778",
+        "itemLabel": "Catanduanes"
+    },
+    {
+        "item": "Q13789",
+        "itemLabel": "Compostela Valley"
+    },
+    {
+        "item": "Q13785",
+        "itemLabel": "Cavite"
+    },
+    {
+        "item": "Q13809",
+        "itemLabel": "Eastern Samar"
+    },
+    {
+        "item": "Q13812",
+        "itemLabel": "Ifugao"
+    },
+    {
+        "item": "Q13860",
+        "itemLabel": "Misamis Oriental"
+    },
+    {
+        "item": "Q13868",
+        "itemLabel": "Oriental Mindoro"
+    },
+    {
+        "item": "Q13882",
+        "itemLabel": "South Cotabato"
+    },
+    {
+        "item": "Q13727",
+        "itemLabel": "Antique"
+    },
+    {
+        "item": "Q13840",
+        "itemLabel": "Laguna"
+    },
+    {
+        "item": "Q13740",
+        "itemLabel": "Batanes"
+    },
+    {
+        "item": "Q13737",
+        "itemLabel": "Basilan"
+    },
+    {
+        "item": "Q13869",
+        "itemLabel": "Palawan"
+    },
+    {
+        "item": "Q13895",
+        "itemLabel": "Zambales"
+    },
+    {
+        "item": "Q13791",
+        "itemLabel": "Cotabato"
+    },
+    {
+        "item": "Q13721",
+        "itemLabel": "Agusan del Sur"
+    },
+    {
+        "item": "Q13806",
+        "itemLabel": "Davao Oriental"
+    },
+    {
+        "item": "Q13843",
+        "itemLabel": "Lanao del Sur"
+    },
+    {
+        "item": "Q13867",
+        "itemLabel": "Occidental Mindoro"
+    },
+    {
+        "item": "Q13885",
+        "itemLabel": "Sultan Kudarat"
+    },
+    {
+        "item": "Q13881",
+        "itemLabel": "Sorsogon"
+    },
+    {
+        "item": "Q13870",
+        "itemLabel": "Pampanga"
+    },
+    {
+        "item": "Q13714",
+        "itemLabel": "Agusan del Norte"
+    },
+    {
+        "item": "Q13794",
+        "itemLabel": "Davao del Sur"
+    },
+    {
+        "item": "Q13857",
+        "itemLabel": "Misamis Occidental"
+    },
+    {
+        "item": "Q13865",
+        "itemLabel": "Nueva Ecija"
+    },
+    {
+        "item": "Q13884",
+        "itemLabel": "Southern Leyte"
+    },
+    {
+        "item": "Q13887",
+        "itemLabel": "Sulu"
+    },
+    {
+        "item": "Q13889",
+        "itemLabel": "Surigao del Norte"
+    },
+    {
+        "item": "Q13892",
+        "itemLabel": "Tarlac"
+    },
+    {
+        "item": "Q13899",
+        "itemLabel": "Zamboanga del Norte"
+    },
+    {
+        "item": "Q13902",
+        "itemLabel": "Zamboanga Sibugay"
+    },
+    {
+        "item": "Q13900",
+        "itemLabel": "Zamboanga del Sur"
+    },
+    {
+        "item": "Q13726",
+        "itemLabel": "Albay"
+    },
+    {
+        "item": "Q12741",
+        "itemLabel": "Ilocos Sur"
+    },
+    {
+        "item": "Q13750",
+        "itemLabel": "Benguet"
+    },
+    {
+        "item": "Q13792",
+        "itemLabel": "Davao del Norte"
+    },
+    {
+        "item": "Q13863",
+        "itemLabel": "Negros Oriental"
+    },
+    {
+        "item": "Q13891",
+        "itemLabel": "Surigao del Sur"
+    },
+    {
+        "item": "Q13893",
+        "itemLabel": "Tawi-Tawi"
+    }
+]

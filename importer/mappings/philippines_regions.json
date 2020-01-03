@@ -1,0 +1,87 @@
+[
+    {
+        "iso": "PH-01",
+        "item": "Q12933",
+        "itemLabel": "Ilocos Region"
+    },
+    {
+        "iso": "PH-00",
+        "item": "Q13580",
+        "itemLabel": "Metro Manila"
+    },
+    {
+        "iso": "PH-15",
+        "item": "Q13606",
+        "itemLabel": "Cordillera Administrative Region"
+    },
+    {
+        "iso": "PH-02",
+        "item": "Q13615",
+        "itemLabel": "Cagayan Valley"
+    },
+    {
+        "iso": "PH-03",
+        "item": "Q13617",
+        "itemLabel": "Central Luzon"
+    },
+    {
+        "iso": "PH-40",
+        "item": "Q13650",
+        "itemLabel": "Calabarzon"
+    },
+    {
+        "iso": "PH-41",
+        "item": "Q13658",
+        "itemLabel": "Mimaropa"
+    },
+    {
+        "iso": "PH-05",
+        "item": "Q13662",
+        "itemLabel": "Bicol Region"
+    },
+    {
+        "iso": "PH-06",
+        "item": "Q13665",
+        "itemLabel": "Western Visayas"
+    },
+    {
+        "iso": "PH-07",
+        "item": "Q13669",
+        "itemLabel": "Central Visayas"
+    },
+    {
+        "iso": "PH-08",
+        "item": "Q13675",
+        "itemLabel": "Eastern Visayas"
+    },
+    {
+        "iso": "PH-09",
+        "item": "Q13682",
+        "itemLabel": "Zamboanga Peninsula"
+    },
+    {
+        "iso": "PH-10",
+        "item": "Q13690",
+        "itemLabel": "Northern Mindanao"
+    },
+    {
+        "iso": "PH-11",
+        "item": "Q13694",
+        "itemLabel": "Davao Region"
+    },
+    {
+        "iso": "PH-12",
+        "item": "Q13701",
+        "itemLabel": "SOCCSKSARGEN"
+    },
+    {
+        "iso": "PH-13",
+        "item": "Q13704",
+        "itemLabel": "Caraga"
+    },
+    {
+        "iso": "PH-14",
+        "item": "Q13708",
+        "itemLabel": "Autonomous Region in Muslim Mindanao"
+    }
+]
