@@ -1,0 +1,237 @@
+[
+    {
+        "iso": "JP-46",
+        "item": "Q15701",
+        "itemLabel": "Kagoshima Prefecture"
+    },
+    {
+        "iso": "JP-20",
+        "item": "Q127877",
+        "itemLabel": "Nagano Prefecture"
+    },
+    {
+        "iso": "JP-11",
+        "item": "Q128186",
+        "itemLabel": "Saitama Prefecture"
+    },
+    {
+        "iso": "JP-24",
+        "item": "Q128196",
+        "itemLabel": "Mie Prefecture"
+    },
+    {
+        "iso": "JP-45",
+        "item": "Q130300",
+        "itemLabel": "Miyazaki Prefecture"
+    },
+    {
+        "iso": "JP-17",
+        "item": "Q131281",
+        "itemLabel": "Ishikawa Prefecture"
+    },
+    {
+        "iso": "JP-25",
+        "item": "Q131358",
+        "itemLabel": "Shiga Prefecture"
+    },
+    {
+        "iso": "JP-34",
+        "item": "Q617375",
+        "itemLabel": "Hiroshima Prefecture"
+    },
+    {
+        "iso": "JP-01",
+        "item": "Q1037393",
+        "itemLabel": "Hokkaidō Prefecture"
+    },
+    {
+        "iso": "JP-12",
+        "item": "Q80011",
+        "itemLabel": "Chiba Prefecture"
+    },
+    {
+        "iso": "JP-27",
+        "item": "Q122723",
+        "itemLabel": "Ōsaka Prefecture"
+    },
+    {
+        "iso": "JP-06",
+        "item": "Q125863",
+        "itemLabel": "Yamagata Prefecture"
+    },
+    {
+        "iso": "JP-35",
+        "item": "Q127264",
+        "itemLabel": "Yamaguchi Prefecture"
+    },
+    {
+        "iso": "JP-14",
+        "item": "Q127513",
+        "itemLabel": "Kanagawa Prefecture"
+    },
+    {
+        "iso": "JP-10",
+        "item": "Q129499",
+        "itemLabel": "Gunma Prefecture"
+    },
+    {
+        "iso": "JP-43",
+        "item": "Q130308",
+        "itemLabel": "Kumamoto Prefecture"
+    },
+    {
+        "iso": "JP-15",
+        "item": "Q132705",
+        "itemLabel": "Niigata Prefecture"
+    },
+    {
+        "iso": "JP-32",
+        "item": "Q132751",
+        "itemLabel": "Shimane Prefecture"
+    },
+    {
+        "iso": "JP-04",
+        "item": "Q47896",
+        "itemLabel": "Miyagi Prefecture"
+    },
+    {
+        "iso": "JP-02",
+        "item": "Q71699",
+        "itemLabel": "Aomori Prefecture"
+    },
+    {
+        "iso": "JP-23",
+        "item": "Q80434",
+        "itemLabel": "Aichi Prefecture"
+    },
+    {
+        "iso": "JP-26",
+        "item": "Q120730",
+        "itemLabel": "Kyōto Prefecture"
+    },
+    {
+        "iso": "JP-38",
+        "item": "Q123376",
+        "itemLabel": "Ehime Prefecture"
+    },
+    {
+        "iso": "JP-33",
+        "item": "Q132936",
+        "itemLabel": "Okayama Prefecture"
+    },
+    {
+        "iso": "JP-16",
+        "item": "Q132929",
+        "itemLabel": "Toyama Prefecture"
+    },
+    {
+        "iso": "JP-44",
+        "item": "Q133924",
+        "itemLabel": "Ōita Prefecture"
+    },
+    {
+        "iso": "JP-39",
+        "item": "Q134093",
+        "itemLabel": "Kōchi Prefecture"
+    },
+    {
+        "iso": "JP-05",
+        "item": "Q81863",
+        "itemLabel": "Akita Prefecture"
+    },
+    {
+        "iso": "JP-08",
+        "item": "Q83273",
+        "itemLabel": "Ibaraki Prefecture"
+    },
+    {
+        "iso": "JP-28",
+        "item": "Q130290",
+        "itemLabel": "Hyōgo Prefecture"
+    },
+    {
+        "iso": "JP-21",
+        "item": "Q131277",
+        "itemLabel": "Gifu Prefecture"
+    },
+    {
+        "iso": "JP-19",
+        "item": "Q132720",
+        "itemLabel": "Yamanashi Prefecture"
+    },
+    {
+        "iso": "JP-47",
+        "item": "Q766445",
+        "itemLabel": "Okinawa Prefecture"
+    },
+    {
+        "iso": "JP-36",
+        "item": "Q160734",
+        "itemLabel": "Tokushima Prefecture"
+    },
+    {
+        "iso": "JP-09",
+        "item": "Q44843",
+        "itemLabel": "Tochigi Prefecture"
+    },
+    {
+        "iso": "JP-03",
+        "item": "Q48326",
+        "itemLabel": "Iwate Prefecture"
+    },
+    {
+        "iso": "JP-13",
+        "item": "Q1490",
+        "itemLabel": "Tokyo"
+    },
+    {
+        "iso": "JP-07",
+        "item": "Q71707",
+        "itemLabel": "Fukushima Prefecture"
+    },
+    {
+        "iso": "JP-40",
+        "item": "Q123258",
+        "itemLabel": "Fukuoka Prefecture"
+    },
+    {
+        "iso": "JP-29",
+        "item": "Q131287",
+        "itemLabel": "Nara Prefecture"
+    },
+    {
+        "iso": "JP-22",
+        "item": "Q131320",
+        "itemLabel": "Shizuoka Prefecture"
+    },
+    {
+        "iso": "JP-30",
+        "item": "Q131314",
+        "itemLabel": "Wakayama Prefecture"
+    },
+    {
+        "iso": "JP-18",
+        "item": "Q133879",
+        "itemLabel": "Fukui Prefecture"
+    },
+    {
+        "iso": "JP-31",
+        "item": "Q133935",
+        "itemLabel": "Tottori Prefecture"
+    },
+    {
+        "iso": "JP-41",
+        "item": "Q160420",
+        "itemLabel": "Saga Prefecture"
+    },
+    {
+        "iso": "JP-37",
+        "item": "Q161454",
+        "itemLabel": "Kagawa Prefecture"
+    },
+    {
+        "iso": "JP-42",
+        "item": "Q169376",
+        "itemLabel": "Nagasaki Prefecture"
+    }
+]
